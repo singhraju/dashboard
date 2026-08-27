@@ -1,0 +1,293 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_1_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH DSNP acute hospital spend is concentrated in two hospitals",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "cesarean_policy_relevance",
+          "label": "Cesarean Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "assistant_surgery_rules",
+          "label": "Assistant Surgery",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "cesarean_policy_relevance": "-",
+          "assistant_surgery_rules": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "cesarean_policy_relevance": "-",
+          "assistant_surgery_rules": "Humana applies assistant surgery rules via modifier interactions on CPT/HCPCS claims only."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00074",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Modifier 22",
+        "tags": [],
+        "effective_date": "2024-09-06",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2022.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00126",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "10/23/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00128",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Delivery Services",
+        "tags": [],
+        "effective_date": "2024-07-17",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Multiple%20Delivery%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00133",
+        "payer_name": "Humana",
+        "policy_title": "Common CPT and HCPCS Modifiers",
+        "tags": [],
+        "effective_date": "01/2026",
+        "evidence": "Off-topic for the requested DRG spend pattern. This policy addresses CPT and HCPCS modifier usage for Medicare Advantage claims and does not provide DRG-specific inpatient hospital spend or concentration rules.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": "For California cesarean delivery, Elevance has reimbursement policies for Maternity Services, Multiple Delivery Services, and Modifier 22 that directly govern payment for obstetric and delivery-related claims. This policy set supports classifying the cesarean delivery cost pattern as reimbursement-policy explainable.",
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: OH DSNP acute hospital spend is concentrated in two hospitals",
+    "pattern_rank": 1,
+    "pattern_title": "OH DSNP acute hospital spend is concentrated in two hospitals",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for clear scope drift because it does not match the Ohio DSNP acute hospital hospital-spend pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/6 policies quarantined (33%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00014:Professional Anesthesia Services, RP_GBD_HUM_00137:Assistant at Surgery Reimbursement]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 44472,
+    "output": 9170,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 230,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 328,
+        "output": 316,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 38668,
+        "output": 4762,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1235,
+        "output": 746,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 952,
+        "output": 793,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 244,
+        "output": 186,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 369,
+        "output": 872,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1451,
+        "output": 1099,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 705,
+        "output": 166,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:33:35.905375+00:00",
+    "end_time": "2026-08-23T19:34:26.620869+00:00",
+    "duration_ms": 50715,
+    "version": "2.0.0"
+  }
+}

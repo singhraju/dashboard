@@ -1,0 +1,522 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "partial_success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA, IN, and TN auth code distribution shifts require reconciliation",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_mentioned",
+          "label": "DRG Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "auth_requirements",
+          "label": "Auth Requirements",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mentioned": "-",
+          "auth_requirements": "No prior authorization required; sepsis claims may undergo pre/post-pay review for DRG validation."
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mentioned": "-",
+          "auth_requirements": "No prior authorization requirements are stated for this DRG."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mentioned": "-",
+          "auth_requirements": "No DRG-specific authorization requirement stated; authorization may apply for supplies exceeding benefit limits."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mentioned": "-",
+          "auth_requirements": "No prior authorization, notification, or state-specific authorization requirements stated."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Tracheostomy Supplies RETIRED",
+        "tags": [],
+        "effective_date": "11/07/06",
+        "evidence": "No adjudication rule for this DRG was found. The policy is limited to tracheostomy care supplies and does not address inpatient DRG reimbursement or CA/IN/TN authorization code distribution for cirrhosis or alcoholic hepatitis cases.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "first two weeks post-op",
+            "beginning two weeks post-op"
+          ],
+          "utilization_limits": [
+            "1 care kit/day"
+          ],
+          "prior_auth_thresholds": [
+            "auth when benefit limit exceeded"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DME and Supplies"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "ordered by physician",
+            "incident to physician services"
+          ],
+          "exemptions": [
+            "additional documentation supports additional kits",
+            "authorized through medical necessity"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00052",
+        "payer_name": "Cigna",
+        "policy_title": "Respiratory Services and Supplies",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "The policy addresses general respiratory service reimbursement and does not contain a DRG-specific rule, prior authorization requirement, or CA/IN/TN distribution instruction for this DRG.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "24 units/day combined total"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "both reported in hourly units <=24 hours"
+          ],
+          "action_types": [
+            "limit",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "10/30/2018",
+        "evidence": "No adjudication rule was identified for this inpatient DRG pattern. The policy is a physician reimbursement policy for the global surgical package and related modifiers, not a DRG-based inpatient authorization or state distribution policy.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00045",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The requested DRG/auth reconciliation pattern is not addressed. This policy governs professional global surgical package reimbursement on CMS-1500 claims and does not provide DRG-specific inpatient authorization or CA/IN/TN reconciliation rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "No DRG-specific reimbursement, bundling, or authorization rule is stated for this inpatient DRG description. The policy applies only general ICD-10-CM principal-diagnosis validation and may deny the entire inpatient claim when the principal diagnosis is inappropriate or the discharge reports MS-DRG 998.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [
+            "R65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient UB-04 claim",
+            "principal diagnosis in Box 67"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2024-12-01",
+        "evidence": "This policy does not mention this DRG or any CA, IN, or TN authorization reconciliation rule. It broadly applies to UB04 inpatient and outpatient facility claims and bundles routine supplies, nursing, equipment, and many surgical or ventilator-related components into room and board, facility, ancillary, or surgical room reimbursement. Ventilator or CPAP management is separately considered only at 1 unit per day when owned by the facility.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260",
+            "260-269",
+            "270",
+            "270-279",
+            "279",
+            "300",
+            "300-370",
+            "309",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit/day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Pre- and Post-Anesthesia Recovery Room"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00101",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis - CC.PP.073",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No code-specific adjudication rule was identified for this DRG in this policy. The policy is limited to inpatient claims billed with a sepsis diagnosis and does not state CA-, IN-, or TN-specific authorization distribution requirements for this DRG.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "710",
+            "720",
+            "853",
+            "854",
+            "855",
+            "870",
+            "872",
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A41.9",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient claim with sepsis diagnosis",
+            "adult member or enrollee"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "APR-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician documentation required",
+            "licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Unlisted or Miscellaneous Codes",
+        "tags": [],
+        "effective_date": "2024-11-04",
+        "evidence": "This policy governs reimbursement for unlisted or miscellaneous codes and does not provide DRG-specific adjudication, bundling, or authorization rules for this inpatient DRG pattern.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 8,
+    "policies_failed": 3
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA, IN, and TN auth code distribution shifts require reconciliation",
+    "pattern_rank": 3,
+    "pattern_title": "CA, IN, and TN auth code distribution shifts require reconciliation",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cirrhosis and Alcoholic Hepatitis with CC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 8,
+    "failed_extractions": 3,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN', 'CA', 'TN'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/8 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 out of 11 policies failed extraction. Check logs for details."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 50508,
+    "output": 58545,
+    "breakdown": {
+      "search_keywords": {
+        "input": 574,
+        "output": 482,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 722,
+        "output": 2957,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 42078,
+        "output": 52817,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 1134,
+        "output": 1118,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 913,
+        "output": 561,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 425,
+        "output": 307,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4662,
+        "output": 303,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-26T14:14:17.923158+00:00",
+    "end_time": "2026-08-26T14:17:01.366796+00:00",
+    "duration_ms": 163443,
+    "version": "2.0.0"
+  }
+}

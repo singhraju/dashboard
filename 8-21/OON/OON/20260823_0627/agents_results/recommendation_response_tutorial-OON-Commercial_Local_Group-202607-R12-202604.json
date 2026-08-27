@@ -1,0 +1,194 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a joint CA HMO acute inpatient policy audit at UCI MEDICAL CENTER: review UM approvals, prior authorization, denial enforcement, reimbursement methodology, manual-adjudication overrides, and contract compliance; validate DRG payment for Cesarean Section without Sterilization with MCC and Intracranial Hemorrhage or Cerebral Infarction with MCC; assess contract remediation and site-of-care options.",
+        "evidence": [
+          "CA HMO acute hospital spend increased.",
+          "UCI MEDICAL CENTER drove the increase.",
+          "Claims increased at UCI MEDICAL CENTER.",
+          "Paid per admit increased at UCI MEDICAL CENTER.",
+          "Cesarean Section and stroke DRGs also increased."
+        ],
+        "peer_benchmarking": [
+          "Cigna global maternity bundles prenatal, delivery, postpartum, labor, and admission; delivery-only cesarean separately reimbursable.",
+          "Elevance external and internal policies include cesarean delivery in the global obstetrical package, not separately reimbursable."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a retrospective clinical and program-integrity review of CA IP Med/Surg catastrophic admissions at UCI Medical Center and Santa Clara Medical Center involving C7951, Z433, K5732, and K56600 to validate DRG severity, confirm case-level necessity, and route confirmed provider outliers for contract or site-of-care remediation.",
+        "evidence": [
+          "Pattern is concentrated in rare inpatient events, not broad inpatient growth.",
+          "One UCI Medical Center malignancy-related admission created the largest isolated spike.",
+          "Major bowel procedure outliers were tied to Z433 and K5732.",
+          "Gastrointestinal obstruction code K56600 was another targeted inpatient outlier."
+        ],
+        "peer_benchmarking": [
+          "Humana reimbursement summary shows no applicable inpatient policy rule documented."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused contract and utilization-management audit for MO Commercial Local Group PPO Intracranial Hemorrhage or Cerebral Infarction with MCC episodes discharged to SNF - FREE STANDING, prioritizing SSM SELECT REHAB ST LOUIS LLC, to review alternate discharge routing, concurrent review, discharge planning, and contract-compliant reimbursement across SNF and acute hospital claims.",
+        "evidence": [
+          "MO PPO free-standing SNF spend increased for stroke-related care.",
+          "SNF claim volume increased and paid per admit increased.",
+          "Acute hospital stroke stays added cost without claim growth.",
+          "Repeated delta concentration flagged in SNF and acute hospital.",
+          "SSM SELECT REHAB ST LOUIS LLC appears in drill context."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC payer policy summary shows no documented pattern-specific stroke SNF policy benchmark."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a case-level payment-integrity and contract-compliance review for CA acute hospital Cesarean Section without Sterilization with MCC claims associated with O1404, O114, and O42113, prioritizing Cedars-Sinai Medical Center and PPO Commercial Local Group claims, and validate MCC severity coding, global maternity bundling, modifier use, and contractual reimbursement.",
+        "evidence": [
+          "Spend concentrated in severe CA C-section admissions within one MCC DRG.",
+          "Diagnoses O1404, O114, and O42113 drive the maternity increase.",
+          "CA PPO acute hospital paid per admit increased despite fewer claims.",
+          "Provider context includes Cedars-Sinai Medical Center."
+        ],
+        "peer_benchmarking": [
+          "Cigna uses global maternity bundling; assistant surgeon reimbursed only on non-global cesarean delivery-only code.",
+          "United Health bundles global OB services; modifier 22 and assistant surgeon need documentation.",
+          "Elevance notes overlapping maternity claims may deny or recoup; cesarean assistant requires modifier."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused NY EPO acute hospital IP Med/Surg payment integrity review for Intracranial Hemorrhage or Cerebral Infarction with MCC, Major Small and Large Bowel Procedures without CC/MCC, and Bronchitis and Asthma without CC/MCC to isolate provider concentration, validate reimbursement methodology and final adjudication against contract terms, and determine whether diagnosis-specific management changes are needed.",
+        "evidence": [
+          "NY EPO acute hospital spend increased.",
+          "Intracranial Hemorrhage or Cerebral Infarction with MCC was unit-cost-led.",
+          "Bowel surgery and bronchitis/asthma showed mixed volume and price pressure.",
+          "Pattern is low-volume, concentrated, and requires validation."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA PPO acute hospital inpatient utilization review for Major Small and Large Bowel Procedures without CC/MCC, Gastrointestinal Obstruction without CC/MCC, and Bronchitis and Asthma without CC/MCC, prioritizing Santa Clara Medical Center and Baldwin Park Medical Center, to assess root causes of added admissions and identify preventive opportunities.",
+        "evidence": [
+          "CA PPO acute hospital spend increased about $170K.",
+          "Major bowel procedures added about $108K with three more claims.",
+          "GI obstruction and bronchitis/asthma added about $62K across five more claims.",
+          "Impact centers on Santa Clara Medical Center and Baldwin Park Medical Center."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "MO IP Med/Surg has rare high-cost stroke and hemorrhage cases",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 8,
+        "pattern": "Prime Surgical Center growth is mixed with Not Mapped outpatient claims and needs validation first",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 34,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is overwhelmingly concentrated at a single provider, UCI Medical Center, which drove about $5.3M or roughly 95% of the total acute inpatient increase.; IP MedSurg (DNE) Trend 10: Paid per admit increased by about $19K at UCI, and the recommended next step explicitly calls for contract payment performance review, making reimbursement method a key parent rule.; IP MedSurg (DNE) Trend 6: This is a mixed utilization and unit-cost pattern with inpatient claims up materially, so reviewing UM KPIs and level-of-care management is directly aligned to the observed variance.; IP MedSurg (DNE) Trend 3: Beyond the provider spike, smaller inpatient increases were tied to diagnoses/DRGs such as stroke, GI obstruction, and bronchitis/asthma, so diagnosis-level isolation remains relevant.; IP OB Dlvry Well NB (DNE) Trend 10: Cesarean Section without Sterilization with MCC was a secondary driver, and the reimbursement summary specifically flags maternity global bundling and cesarean payment rules, pointing to reimbursement method review in OB."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Most directly aligned: the increase is concentrated in a small set of diagnoses/DRGs, including C7951 malignancy-related admission, bowel procedure diagnoses Z433 and K5732, and GI obstruction K56600, indicating diagnosis-driven inpatient case-mix change rather than broad utilization growth.; IP MedSurg (DNE) Trend 1: Provider concentration is material because one UCI Medical Center malignancy-related admission drove about $268K of the delta, with additional concentration at Santa Clara Medical Center, so provider-level isolation should be investigated.; IP MedSurg (DNE) Trend 2: The pattern is driven by a handful of rare catastrophic admissions with very low claim volume and very high paid per admit, implying the variance is isolated to a very small subset of members/cases and supports case-level member review.; IP MedSurg (DNE) Trend 4: Secondary relevance: the outliers cluster in narrow inpatient clinical service/DRG areas such as malignancy-related Med/Surg, major bowel procedures, GI obstruction, and respiratory admissions, making service-level review useful after diagnosis and provider review."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: Most directly matches the pattern\u2019s acute-to-post-acute site-of-care shift; the recommended next step is to review discharge-to-SNF routing, which aligns with admission/discharge source/location research.; IP MedSurg (DNE) Trend 4: Variance is concentrated in a specific service/site of care combination, especially free-standing SNF, with a smaller related acute hospital component, making service-driver review highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially in both SNF and acute hospital settings, and the pattern explicitly calls out post-acute reimbursement and payment terms, fitting reimbursement method review.; IP MedSurg (DNE) Trend 1: The spend increase appears concentrated in a subset of providers, with named provider context and repeated delta concentration flags, supporting provider-driver and contract-behavior analysis.; IP MedSurg (DNE) Trend 6: SNF claim growth and the focus on utilization, length of stay, and post-acute management suggest utilization management KPIs and potentially avoidable variance should be reviewed."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: Spend growth is concentrated in a few severe maternal diagnoses (O1404, O114, O42113) within the C-section MCC DRG, making diagnosis-level review the strongest parent rule.; IP OB Dlvry Well NB (DNE) Trend 10: A separate CA PPO acute hospital signal shows paid per admit up despite fewer claims, and the recommendation explicitly calls for reviewing payment performance on the C-section MCC DRG, aligning with reimbursement method review.; IP OB Dlvry Well NB (DNE) Trend 1: The cases are concentrated in CA acute hospital C-section episodes, with provider context including Cedars-Sinai Medical Center, so provider concentration and possible contractual differences are relevant.; IP OB Dlvry Well NB (DNE) Trend 4: The variance is focused on one inpatient maternity service/DRG\u2014Cesarean Section without Sterilization with MCC\u2014rather than broad OB utilization, fitting a service-driver review.; IP OB Dlvry Well NB (DNE) Trend 2: The increase comes from only a few rare high-cost maternal admissions, so checking whether a small set of mothers/members is driving the variance is also relevant."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is concentrated in a small set of inpatient DRGs/diagnoses\u2014stroke with MCC, bowel surgery, and bronchitis/asthma\u2014making diagnosis-level isolation the clearest fit.; IP MedSurg (DNE) Trend 10: A major part of the increase is paid-per-admit growth with no claim growth for stroke, and the recommended next step explicitly calls for review of contract terms, outlier reimbursement, and per-admission pricing.; IP MedSurg (DNE) Trend 9: Because the pattern is low-volume, concentrated, and flagged for validation and data quality review, claims processing or reprocessing against contractual standards is highly relevant before broader action.; IP MedSurg (DNE) Trend 1: The pattern looks like a concentrated inpatient pricing pocket, so checking whether the variance is isolated to a subset of providers is important for distinguishing provider-specific behavior or contract effects.; IP MedSurg (DNE) Trend 6: Two of the three drivers include claim growth, and the pattern is mixed volume plus unit cost, so utilization management KPI review is relevant to assess whether avoidable inpatient use contributed."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern is explicitly utilization-led, with more inpatient claims/admissions driving most of the spend increase, so reviewing UM KPIs and the PAV waterfall is the closest parent rule match.; IP MedSurg (DNE) Trend 3: The variance is concentrated in specific clinical buckets\u2014bowel, GI obstruction, and bronchitis/asthma\u2014so diagnosis-level driver analysis is highly relevant.; IP MedSurg (DNE) Trend 4: The increase is isolated to a narrow set of inpatient DRGs/services rather than broad Med/Surg growth, matching a service-driver review.; IP MedSurg (DNE) Trend 7: The recommended action is to confirm whether added admissions were clinically necessary and appropriately routed, which aligns with reviewing admission source/location and elective vs non-elective mix.; IP MedSurg (DNE) Trend 1: The source cards show concentrated impact tied to specific acute hospital providers, so provider-level behavior or localized contracting/utilization patterns may explain part of the targeted growth."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T06:44:37.535919+00:00"
+  }
+}

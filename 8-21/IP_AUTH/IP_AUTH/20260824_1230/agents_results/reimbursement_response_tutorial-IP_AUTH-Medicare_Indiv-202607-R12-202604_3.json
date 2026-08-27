@@ -1,0 +1,340 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R12-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R12-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX authorization and facility mapping issues must be fixed before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Requirement",
+          "type": "badge"
+        },
+        {
+          "id": "site_of_care",
+          "label": "Site of Care",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "site_of_care": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "Requires Auth",
+          "site_of_care": "Facility Only"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00004",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Genetic Tests Once per Lifetime",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Laboratory%20and%20Pathology/Genetic%20Tests%20Once%20per%20Lifetime.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00019",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Parathyroid Hormone, Phosphorus, Calcium and Magnesium Testing",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "Ionized calcium testing is denied when the primary diagnosis is a general encounter without abnormal findings. General authorization and referral requirements may also apply. The policy does not state any facility mapping rule.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29bd",
+        "edit_rule_facts": {
+          "target_codes": [
+            "82330",
+            "82340",
+            "83735",
+            "83970",
+            "84105"
+          ],
+          "related_codes": [
+            "82340",
+            "83735",
+            "83970",
+            "84105",
+            "82330"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim diagnosis"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "Commercial",
+            "Original Medicare"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "First Coast Service Options",
+            "Noridian Healthcare Solutions, LLC.",
+            "Palmetto GBA"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00032",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Cardiovascular Disease Risk Assessment in Adults",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9e4b",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00061",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Oral Screening Lesion Identification Systems",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390d",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00097",
+        "payer_name": "Humana",
+        "policy_title": "Observation Services",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The requested Texas-specific authorization and facility-mapping fix pattern is not stated in this policy. The policy only provides general observation-services billing rules, states that claims remain subject to applicable referral or authorization requirements, and limits the policy to facility observation services.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092982a0acfa",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "facility services only",
+            "ordered observation services",
+            "direct referral for observation",
+            "beyond standard recovery period"
+          ],
+          "utilization_limits": [
+            "typically <=48 hours",
+            "4-6 hour recovery excluded"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "Commercial",
+            "Medicaid"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "ordered by qualified healthcare professional",
+            "under physician or qualified nonphysician practitioner"
+          ],
+          "exemptions": [
+            "not permissible by state Medicaid guidelines"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: TX authorization and facility mapping issues must be fixed before action",
+    "pattern_rank": 3,
+    "pattern_title": "TX authorization and facility mapping issues must be fixed before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/5 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 69996,
+    "output": 20460,
+    "breakdown": {
+      "triage_policies": {
+        "input": 369,
+        "output": 552,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 64945,
+        "output": 18294,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 880,
+        "output": 530,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 862,
+        "output": 588,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 250,
+        "output": 132,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 318,
+        "output": 126,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2372,
+        "output": 238,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T14:06:20.393351+00:00",
+    "end_time": "2026-08-24T14:08:33.198580+00:00",
+    "duration_ms": 132805,
+    "version": "2.0.0"
+  }
+}

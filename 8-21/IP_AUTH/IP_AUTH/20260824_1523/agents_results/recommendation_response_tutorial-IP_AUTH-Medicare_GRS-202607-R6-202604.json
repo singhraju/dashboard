@@ -1,0 +1,214 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Pause CA authorization denial enforcement and claims reprocessing actions tied to AUTH_CODE_DISTRIBUTION until auth-to-claim mapping is validated for Kidney and Urinary Tract Infections without MCC, Other Disorders of Nervous System with CC, Cellulitis without MCC, and Other Digestive System Diagnoses with CC, then rerun the corrected inpatient review.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION drives +$2.4M across four validation findings.",
+          "Kidney and Urinary Tract Infections without MCC contributes +$1.1M.",
+          "Other Disorders of Nervous System with CC adds +$0.6M.",
+          "All supporting findings require validation before action."
+        ],
+        "peer_benchmarking": [
+          "Elevance external summary focuses on never events and HAC-related inpatient reimbursement edits.",
+          "Elevance internal summary applies POA-related preventable condition reductions on inpatient DRG claims.",
+          "Humana and United Health show no documented auth requirement details in the summary."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Correct VA AUTH_CODE_DISTRIBUTION to pa_required_code mapping for Medicare GRS PPO Local IP Med/Surg claims, then reprocess affected claims to apply authorization denial edits and contractual claims-processing rules before any provider or facility intervention.",
+        "evidence": [
+          "VA authorization code distribution accounts for +$1.4M.",
+          "The issue is state-specific to VA and should be corrected first.",
+          "Finding is flagged requires_validation_before_action.",
+          "Driver type is coding_or_mapping_validation.",
+          "facility_type is Not Mapped in claim context."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted CA PPO Local inpatient authorization and reimbursement compliance audit for ACUTE HOSPITAL admissions at UCI MEDICAL CENTER and ADVENTIST HEALTH SIMI VALLEY, including Kidney and Urinary Tract Infections without MCC, and for SNF - FREE STANDING neurologic admissions in Other Disorders of Nervous System with CC to confirm prior authorization, enforce denials, and verify claim payment to contract terms.",
+        "evidence": [
+          "CA operational facility-mix groups total +$1.9M.",
+          "UCI Medical Center drove +$0.7M with 45 more admissions.",
+          "Adventist Health Simi Valley added +$0.4M with higher paid per admit.",
+          "SNF neurologic admissions rose with about +$8.0K paid per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a VA PPO Local policy audit on PA-required IP Med/Surg admissions in ACUTE HOSPITAL, SNF - FREE STANDING, and Not Mapped to validate authorization-to-claim matching, enforce denial edits, review provider concentration including MARY WASHINGTON HOSPITAL INC, and implement acute-to-SNF site-of-care controls with contractual reimbursement validation.",
+        "evidence": [
+          "VA PPO Local site-of-care groups increased by $1.7M.",
+          "ACUTE HOSPITAL admissions increased by 45.",
+          "SNF - FREE STANDING admissions increased by 37.",
+          "Not Mapped admissions increased by 34 with higher paid per admit.",
+          "All three drivers are prior-authorization required."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a GA PPO Local PA-required inpatient contract-compliance and authorization-to-actual audit for Piedmont Cartersville Medical Center acute admissions, focused on Cellulitis without MCC and Kidney and Urinary Tract Infections without MCC, and validate Not Mapped and CRITICAL ACCESS reimbursement classification.",
+        "evidence": [
+          "Main driver is Piedmont Cartersville Medical Center in GA acute authorized admissions.",
+          "Driver type at Piedmont Cartersville Medical Center is mixed volume and unit cost.",
+          "Cellulitis without MCC and Kidney and Urinary Tract Infections without MCC were key drivers.",
+          "Not Mapped carries unmapped_or_unknown_value flag.",
+          "CRITICAL ACCESS shows low baseline and repeated delta concentration flags."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal policy broadly denies separate reimbursement for related unplanned 30-day inpatient readmissions, excluding OB.",
+          "United Health limits readmission policy to acute IPPS hospitals and excludes Critical Access Hospitals."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a PPO Local Medicare GRS IP Med/Surg claims-processing and auth-to-claim validation review across CA, CT, GA, IN, OH, PA, and NY that remediates Not Mapped facility rows to ACUTE HOSPITAL or SNF - FREE STANDING, separates PA SNF from mapped acute claims, and performs provider-level contractual review on LEHIGH VALLEY HOSPITAL - CEDAR CREST before any site-of-care intervention.",
+        "evidence": [
+          "Secondary operational groups total +$1.7M.",
+          "Not Mapped facilities across CA, CT, GA, IN, OH, PA added +$0.5M.",
+          "Lehigh Valley Hospital Cedar Crest added +$0.4M with 14 more admissions.",
+          "PA SNF added +$0.1M.",
+          "GA sepsis acute hospital utilization added +$0.2M.",
+          "All cited cards show pa_required_code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a CA pathway-specific clinical and UM redesign review for IP Med/Surg and NF admissions tied to UTI SITE NOT SPECIFIED, SEPSIS UNSPECIFIED ORGANISM, and Other Disorders of Nervous System with CC, with audit of admission-review KPIs and acute-to-NF transfer and discharge routing.",
+        "evidence": [
+          "CA clinical groups total paid increased by $1.9M.",
+          "CA IP Med/Surg increased $1.1M.",
+          "UTI SITE NOT SPECIFIED drove IP Med/Surg paid increase.",
+          "SEPSIS UNSPECIFIED ORGANISM recurs across acute and NF settings.",
+          "NF added $0.4M from UTI and neurologic cases."
+        ],
+        "peer_benchmarking": [
+          "Molina reviews inpatient hospital claims pre- and post-payment, including clinical validation review.",
+          "Centene reviews adult inpatient facility claims post-receipt and can deny.",
+          "United Health reviews UB-04 and CMS-1500 claims; denials may affect entire or linked lines."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "Rare high-cost inpatient outliers need targeted case review, not broad policy changes",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the pattern: the core issue is CA authorization code distribution and the recommended action is to validate auth-to-claim mapping before taking UM or provider action; most impacted DRGs are inpatient Med/Surg.; IP NF (DNE) Trend 8: Also a direct match for the nervous-system-related inpatient finding in NF, which is explicitly flagged as an auth_or_mapping_shift requiring validation before action.; IP MedSurg (DNE) Trend 9: Highly relevant secondary rule because the increase may reflect claim mapping, processing, or reprocessing behavior rather than a true utilization or unit-cost change.; IP MedSurg (DNE) Trend 3: Relevant because the signal is concentrated in a small subset of inpatient medical DRGs such as kidney/urinary infections, cellulitis, and digestive diagnoses, fitting a diagnosis-isolated variance pattern.; IP NF (DNE) Trend 3: Relevant because the NF portion of the variance is concentrated in a specific nervous system DRG, making diagnosis-focused review appropriate after mapping validation is completed."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 5,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the pattern: this is explicitly an authorization code distribution and auth-to-claim validation issue in VA, flagged as an auth_or_mapping_shift that requires validation before action.; IP MedSurg (DNE) Trend 9: Secondary fit because the problem may stem from claim classification, processing, or reprocessing issues that are inflating paid amounts and distorting state-level comparisons.; IP MedSurg (DNE) Trend 10: Relevant as a follow-on check since authorization classification can affect reimbursement handling, and reimbursement policy is a downstream route after mapping is corrected."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 35,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The acute hospital increase is highly concentrated in specific providers, especially UCI Medical Center and Adventist Health Simi Valley, matching a provider-driver rule.; IP MedSurg (DNE) Trend 6: Acute authorized admissions are up materially, especially at UCI, and the recommended actions include targeted UM and discharge planning, aligning to utilization management KPI review.; IP MedSurg (DNE) Trend 10: Adventist shows meaningful per-admit cost pressure and the pattern calls for provider-specific contract action rather than a statewide rate issue, fitting reimbursement method review.; IP NF (DNE) Trend 3: The SNF component is concentrated in neurologic cases such as Other Disorders of Nervous System with CC / critical illness myopathy, making diagnosis-driver review highly relevant.; IP NF (DNE) Trend 10: SNF free-standing admits show a large paid-per-admit increase, suggesting reimbursement or payment-structure review for the high-cost neuro SNF cases."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: Best fit for the core issue: acute hospital and SNF admissions are both rising, and the recommended next step is an acute-to-SNF pathway and site-of-care review.; IP MedSurg (DNE) Trend 6: The increase is primarily volume-led in authorized inpatient stays, so reviewing utilization management KPIs and admission control effectiveness is highly relevant.; IP MedSurg (DNE) Trend 8: All key drivers are PA-required authorized admits and the source cards explicitly reference auth-to-claim validation, making authorization enforcement directly relevant.; IP MedSurg (DNE) Trend 1: A material share is in a Not Mapped bucket and the drill context points to a specific hospital, so provider concentration should be evaluated once mapping is corrected.; IP MedSurg (DNE) Trend 10: The Not Mapped bucket shows higher paid per admit, so reimbursement method review is relevant after remapping to determine whether unit-cost pressure is real or classification-driven."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 27,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The largest driver is highly concentrated at one provider, Piedmont Cartersville Medical Center, which added about +$0.6M with both admissions and paid per admit rising, making provider-level investigation the top priority.; IP MedSurg (DNE) Trend 10: The main acute hospital pressure is mixed volume and unit cost, and the pattern explicitly recommends reviewing reimbursement terms; this aligns with a reimbursement method review.; IP MedSurg (DNE) Trend 3: A meaningful share of the increase comes from specific inpatient diagnoses/DRGs such as cellulitis, kidney and urinary tract infections, and neurologic disorders, so diagnosis mix is a key parent driver.; IP MedSurg (DNE) Trend 8: All key segments are in PA-required authorized admissions, and the pattern explicitly calls for validating PA/auth movement before assigning ownership, which fits auth-to-claim matching review.; IP NF (DNE) Trend 10: The smaller CRITICAL ACCESS spillover shows new admissions with very high paid per admit from a near-zero baseline, making reimbursement method review relevant for this secondary inpatient component."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Growth is partly concentrated at specific providers, especially Lehigh Valley Hospital - Cedar Crest in PA, and the recommended next step explicitly calls for provider-level review on validated claims.; IP MedSurg (DNE) Trend 4: The main pattern is a site-of-care/facility-mix issue across ACUTE HOSPITAL, SNF - FREE STANDING, and a large Not Mapped bucket, so service-setting drivers must be separated before action.; IP MedSurg (DNE) Trend 8: All key cards are auth-required PPO Local claims and include auth-to-claim validation as a business term, making auth-to-claim review highly relevant to confirm whether the observed increase is operationally valid.; IP MedSurg (DNE) Trend 9: The sizable Not Mapped facility spend and explicit validation-needed flag suggest claim classification/processing review is needed before interpreting the utilization change as a true facility shift.; IP MedSurg (DNE) Trend 10: Unit cost is mixed, with notable paid-per-admit increase at Lehigh Valley, and the pattern routes to reimbursement and network review, so reimbursement method is a relevant secondary check after mapping cleanup."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The largest CA increase is concentrated in a narrow diagnosis set within IP Med/Surg\u2014especially UTI, sepsis, cystitis, pyonephrosis, and neurologic diagnoses\u2014directly matching the diagnosis-driver rule.; IP NF (DNE) Trend 3: NF pressure is also diagnosis-concentrated, especially UTI and neurologic/cord compression cases, so the NF diagnosis-driver rule is highly relevant.; IP MedSurg (DNE) Trend 6: IP Med/Surg admissions are up with mixed unit cost, and the recommended action is a joint clinical/UM review focused on avoidable admits and pathway performance, aligning to UM KPI/PAV review.; IP NF (DNE) Trend 6: NF growth appears tied to case-mix and increased admissions across the acute-to-NF continuum, supporting UM KPI/PAV review for post-acute utilization management.; IP NF (DNE) Trend 7: The pattern explicitly highlights acute-to-NF transitions, transfer timing, and discharge planning, which aligns with reviewing admission/discharge source and location for NF flow."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T16:22:38.764671+00:00"
+  }
+}

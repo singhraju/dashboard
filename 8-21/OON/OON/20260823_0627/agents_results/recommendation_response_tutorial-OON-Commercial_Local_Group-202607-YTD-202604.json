@@ -1,0 +1,215 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a joint contract remediation and inpatient payment-policy audit for CA HMO acute admissions at UCI Medical Center, validating reimbursement methodology, contractual claims processing, prior authorization where required, and denial enforcement, and launch focused utilization management review for Chest Pain and Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC to identify site-of-care and discharge-planning actions.",
+        "evidence": [
+          "CA HMO acute hospital spend increased about $5.1M.",
+          "About 95% of the increase was concentrated at UCI Medical Center.",
+          "UCI Medical Center showed about 236 more claims.",
+          "UCI Medical Center paid per admission increased about $20K.",
+          "Chest Pain utilization increase added about $16K."
+        ],
+        "peer_benchmarking": [
+          "United Health accepts facility claims on UB-04 when criteria are met and limits coverage to listed conditions."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Conduct a targeted claim-pathway audit of the NY EPO acute hospital appendix case at STONY BROOK UNIVERSITY MEDICAL CENTER for K3532 / Appendix Procedures with CC to verify interim or first bills are zeroed to the final claim, adjudication follows contract terms, and any authorization denials were enforced.",
+        "evidence": [
+          "Single appendix admission drives both clinical and operational NY signals.",
+          "Variance is concentrated in K3532 and Appendix Procedures with CC.",
+          "Provider on the case is STONY BROOK UNIVERSITY MEDICAL CENTER.",
+          "Claim count increased by one with paid per admission up."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health uses ASC grouper assignments; group 0 procedures receive no separate reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Conduct a claim-level contract and coding compliance audit for Cedars-Sinai Medical Center CA PPO acute-hospital IP OB Dlvry/Well NB claims coded O480 under \"Vaginal Delivery without Sterilization or D&C with MCC,\" and remediate unsupported DRG severity or noncontractual reimbursement.",
+        "evidence": [
+          "Clinical review shows higher-cost vaginal delivery cases tied to O480.",
+          "Operational pricing increased with no claim growth.",
+          "Both source cards reference Cedars-Sinai Medical Center.",
+          "Driver types include clinical_case_mix_validation and unit_cost_led."
+        ],
+        "peer_benchmarking": [
+          "Cigna separates delivery-only billing from global maternity bundles and requires maternity component documentation.",
+          "Elevance pays additional vaginal deliveries at 50% and requires Modifier 59.",
+          "United Health requires appropriate OB global or delivery code selection and documentation for Modifier 22."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused CA PPO review of Not Mapped facility and DRG claims by provider, diagnosis, and service for BILLIONTOONE LABORATORY, LABORATORY CORPORATION OF AMERICA, and VIRTUAL RADIOLOGIC PROFESSIONALS, prioritizing Pathology and Laboratory, Radiology, and diagnoses Z3481, Z3491, Z3401, and Z0001 to determine whether management design or contractual changes are warranted.",
+        "evidence": [
+          "Not Mapped flags appear across operational and clinical views.",
+          "BILLIONTOONE LABORATORY and LABORATORY CORPORATION OF AMERICA drive CA PPO lab variance.",
+          "Pathology and Laboratory recurs in OP Lab/Pthlgy and OP Mgmt Oth Misc.",
+          "Z3481, Z3491, Z3401, and Z0001 recur in clinical drivers.",
+          "VIRTUAL RADIOLOGIC PROFESSIONALS appears in CA PPO Not Mapped radiology claims."
+        ],
+        "peer_benchmarking": [
+          "No relevant peer benchmark; listed payer summaries were off-topic or lacked adjudication guidance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Audit the isolated CA PPO IP Med/Surg inpatient claims for Chest Pain at ST. FRANCIS MEDICAL CENTER and Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC at HUNTINGTON BEACH HOSPITAL to verify authorization and denial enforcement, authorization-to-actual inpatient alignment, and contractual claims adjudication or reprocessing accuracy.",
+        "evidence": [
+          "Low-volume single-claim admissions drove both identified inpatient DRG increases.",
+          "Chest Pain is linked to ST. FRANCIS MEDICAL CENTER.",
+          "Digestive MCC is linked to HUNTINGTON BEACH HOSPITAL.",
+          "Both drivers carry low_baseline and low_volume flags."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "LOW",
+        "category": "Policy",
+        "description": "Perform a focused NH HMO audit of VIRTUAL RADIOLOGIC PROFESSIONALS OP Hgh Tech Rdlgy radiology claims classified as Not Mapped; validate provider and facility routing, confirm authorization alignment, and reprocess any claim not meeting contractual standards.",
+        "evidence": [
+          "VIRTUAL RADIOLOGIC PROFESSIONALS is the only impacted provider in the source group.",
+          "Facility type and DRG are both classified as Not Mapped.",
+          "Service context is OP Hgh Tech Rdlgy with Radiology procedure.",
+          "Validation is required because the signal sits in an unmapped classification."
+        ],
+        "peer_benchmarking": [
+          "Point32Health reimbursement data shows no documented policy relevance or rule scope."
+        ],
+        "citation": [
+          "Policy: Point32Health - N/A"
+        ]
+      },
+      {
+        "rank": 8,
+        "priority": "LOW",
+        "category": "Policy",
+        "description": "Perform a narrow provider-and-service policy review for Not Mapped ancillary claims involving LABORATORY CORPORATION OF AMERICA in CO EPO Pathology and Laboratory and VIRTUAL RADIOLOGIC PROFESSIONALS in MO PPO Radiology, validate provider classification, and reserve any contract or management-design changes until recurrence is confirmed.",
+        "evidence": [
+          "CO EPO Labcorp signal is a single low-baseline Not Mapped ancillary claim.",
+          "MO PPO Virtual Radiologic added Not Mapped Radiology claims.",
+          "Both signals are flagged low baseline and unmapped.",
+          "Recommended next step is validation before broader policy action."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC and Cigna summaries show no relevant policy, appeals process, or effective-date support."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "CA rare high-cost inpatient Med/Surg cases are driving a focused outlier pattern",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is overwhelmingly concentrated at a single inpatient provider, with about 95% of the spend increase tied to UCI Medical Center, making provider-specific behavior and contract review the clearest parent rule match.; IP MedSurg (DNE) Trend 10: Paid per admission increased by about $20K at the concentrated provider, and the recommended next step explicitly calls for contract and reimbursement review, aligning strongly to reimbursement method evaluation.; IP MedSurg (DNE) Trend 6: Claim volume also rose sharply, and the pattern narrative points to inpatient management and utilization levers, so reviewing UM KPIs and potentially avoidable variance is highly relevant.; IP MedSurg (DNE) Trend 3: The pattern includes diagnosis-level signals such as chest pain and digestive DRG activity, indicating the increase may also be concentrated in specific diagnoses that warrant management review.; IP MedSurg (DNE) Trend 9: The unusually large year-over-year jump from a very low baseline, combined with data quality routing and paid ratio change, makes it reasonable to assess claim frequency/status and possible processing or reprocessing effects."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is fully concentrated in diagnosis K3532, so diagnosis-level isolation is one of the clearest parent explanations for this single-case emergence.; IP MedSurg (DNE) Trend 4: The entire signal is tied to a single service cluster/DRG, Appendix Procedures with CC, making service-level concentration highly relevant.; IP MedSurg (DNE) Trend 1: The case is tied to one provider, STONY BROOK UNIVERSITY MEDICAL CENTER, indicating the increase may be provider-specific rather than a broad NY EPO trend.; IP MedSurg (DNE) Trend 10: Pattern details explicitly call for validating severity, routing, and reimbursement, which aligns directly to reviewing reimbursement method.; IP MedSurg (DNE) Trend 9: Because this is a one-claim, low-baseline emergence that needs claim-pathway validation, reviewing claim frequency/status and processing integrity is also relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: The pattern is explicitly concentrated in diagnosis O480, making diagnosis-level isolation the clearest clinical parent rule match.; IP OB Dlvry Well NB (DNE) Trend 10: Unit cost is up with no claim growth, and the recommended action is to review payment terms and whether reimbursement exceeds expected delivery complexity.; IP OB Dlvry Well NB (DNE) Trend 1: Both clinical and operational signals point to Cedars-Sinai Medical Center, suggesting the variance may be concentrated within a specific provider or contract arrangement.; IP OB Dlvry Well NB (DNE) Trend 4: The increase is centered on a narrow delivery subtype/DRG, so a service-level review is relevant in addition to diagnosis review.; IP OB Dlvry Well NB (DNE) Trend 9: Because the pattern is driven by very few claims and is routed for data-quality review, validating claim processing or reprocessing against contract standards is highly relevant."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 27,
+        "categories": [
+          "OP HTR (DNE)",
+          "OP Lab Pathology (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Lab Pathology (DNE) Trend 4: The strongest signal is Pathology and Laboratory claims landing in Not Mapped DRG and facility buckets, so a service-driver review is the closest parent rule to the core mapping/classification issue.; OP Lab Pathology (DNE) Trend 1: Variance is highly concentrated in a small provider set, especially BILLIONTOONE LABORATORY and LABORATORY CORPORATION OF AMERICA, making provider-driver isolation a key first step.; OP Lab Pathology (DNE) Trend 3: Clinical growth is clustered in prenatal and screening-related diagnoses such as Z3481, Z3491, Z3401, and Z0001, so diagnosis-level review is directly relevant.; OP Oth (DNE) Trend 4: Pathology and Laboratory claims are also appearing in OP Mgmt Oth Misc with Not Mapped classification, indicating likely service-category misassignment that fits service-driver review.; OP HTR (DNE) Trend 1: A smaller but distinct ancillary component is isolated to VIRTUAL RADIOLOGIC PROFESSIONALS in Not Mapped PPO claims, which aligns with provider-driver investigation in high-tech radiology."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is concentrated in two inpatient diagnoses/DRGs\u2014Chest Pain and a digestive MCC DRG\u2014so diagnosis-level isolation is the strongest parent rule match.; IP MedSurg (DNE) Trend 1: The variance comes from single claims tied to specific hospitals, so provider-level concentration should be tested before treating this as a broad acute hospital trend.; IP MedSurg (DNE) Trend 9: Because the pattern is driven by a few low-baseline one-claim cases and explicitly requires validation, claim frequency/status and possible reprocessing issues are highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit is the key unit-cost driver and the recommended next step includes payment accuracy review, making reimbursement method review very relevant.; IP MedSurg (DNE) Trend 8: The next step calls for confirming level of care on isolated inpatient admissions, so authorization-to-claim matching is a relevant check even without evidence yet of a systemic auth issue."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP HTR (DNE)"
+        ],
+        "relevance_reason": "OP HTR (DNE) Trend 1: Primary signal is concentrated in a single provider, VIRTUAL RADIOLOGIC PROFESSIONALS, so a provider-driver review is the best first parent rule match.; OP HTR (DNE) Trend 4: The variance is narrowly tied to radiology/high-tech radiology services, making the service-driver rule highly relevant.; IP MedSurg (DNE) Trend 9: The increase sits in a Not Mapped classification and may reflect routing or classification change rather than true utilization, which aligns with reviewing claims processing or reprocessing issues.; OP HTR (DNE) Trend 9: Paid per admit is also up, and provider/facility mapping changes can alter reimbursement logic, so reimbursement method review is relevant.; OP HTR (DNE) Trend 7: If these radiology claims are appearing under a new unmapped route or site, auth-to-claim matching can help validate whether billed claims align to authorized services and settings."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "OP HTR (DNE)",
+          "OP Lab Pathology (DNE)"
+        ],
+        "relevance_reason": "OP Lab Pathology (DNE) Trend 1: The CO signal is entirely concentrated in a single provider, LABORATORY CORPORATION OF AMERICA, so provider-level isolation is the most relevant first branch.; OP HTR (DNE) Trend 1: The MO increase is concentrated in VIRTUAL RADIOLOGIC PROFESSIONALS, making provider-driver review the clearest parent rule for that portion of the pattern.; OP Lab Pathology (DNE) Trend 4: The CO activity is specifically tied to Pathology and Laboratory services within OP Lab/Pthlgy, so service-driver review is relevant to determine whether this is true emergence or a mapping issue.; OP HTR (DNE) Trend 4: The MO activity is tied to Radiology within OP Hgh Tech Rdlgy, so reviewing service-level drivers is appropriate to confirm whether the rise reflects recurring radiology utilization versus classification noise."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T07:37:55.278391+00:00"
+  }
+}

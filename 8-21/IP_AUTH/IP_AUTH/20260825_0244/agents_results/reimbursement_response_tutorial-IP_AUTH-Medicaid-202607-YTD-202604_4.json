@@ -1,0 +1,246 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-YTD-202604_4_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-YTD-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Behavioral health admissions and acuity are rising across NC, GA, VA, NY, IA, and WV",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "coverage_limits",
+          "label": "Coverage Limits",
+          "type": "text"
+        },
+        {
+          "id": "billing_rules",
+          "label": "Billing Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "coverage_limits": "Adults 18+, outpatient severe MDD only; reimbursement requires TMS reported within seven days.",
+          "billing_rules": "Subsequent TMS codes include delivery/management and require another TMS code within seven days."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "coverage_limits": "-",
+          "billing_rules": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_AHC_00238",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Transcranial Magnetic Stimulation",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Initial rTMS is reimbursable only for adults 18 and older in an outpatient setting, and only for severe major depressive disorder. Prior authorization may be required.",
+        "policy_url": "https://www.amerihealthcaritasnc.com/content/dam/amerihealth-caritas/acnc/pdf/provider/resources/reimbursement-policies/policies-202601/Transcranial%20Magnetic%20Stimulation%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "90867",
+            "90868",
+            "90869"
+          ],
+          "related_codes": [
+            "90868",
+            "90869",
+            "90867"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "outpatient setting",
+            "adult 18 and older",
+            "reported within previous seven days"
+          ],
+          "utilization_limits": [
+            "subsequent TMS within 7 days",
+            "one subsequent TMS session per prior seven days"
+          ],
+          "prior_auth_thresholds": [
+            "PA may be required for 90867",
+            "PA may be required for 90868",
+            "PA may be required for 90869"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_01068",
+        "payer_name": "Centene",
+        "policy_title": "Attention Deficit Hyperactivity Disorder Assessment and Treatment",
+        "tags": [],
+        "effective_date": "02/23",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CP.BH.124.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Behavioral health admissions and acuity are rising across NC, GA, VA, NY, IA, and WV",
+    "pattern_rank": 4,
+    "pattern_title": "Behavioral health admissions and acuity are rising across NC, GA, VA, NY, IA, and WV",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Depressive Neuroses",
+      "Neuroses Except Depressive",
+      "Psychoses"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NC', 'VA', 'GA', 'WV'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 21949,
+    "output": 5932,
+    "breakdown": {
+      "search_keywords": {
+        "input": 533,
+        "output": 303,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 523,
+        "output": 982,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 17274,
+        "output": 3320,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 479,
+        "output": 143,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 836,
+        "output": 588,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 281,
+        "output": 250,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 2023,
+        "output": 346,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-25T13:20:58.773687+00:00",
+    "end_time": "2026-08-25T13:22:47.524861+00:00",
+    "duration_ms": 108751,
+    "version": "2.0.0"
+  }
+}

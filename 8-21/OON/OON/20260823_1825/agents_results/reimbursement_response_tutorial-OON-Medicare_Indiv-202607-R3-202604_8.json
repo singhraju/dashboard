@@ -1,0 +1,312 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R3-202604_8_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R3-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Medicare HMO acute hospital increases are emerging in CO, IN, and CA but remain low volume",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "obstetrical_delivery_exclusion",
+          "label": "OB Delivery Excl.",
+          "type": "badge"
+        },
+        {
+          "id": "readmission_bundling_rule",
+          "label": "Readmit Bundling",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_delivery_exclusion": "Excludes OB",
+          "readmission_bundling_rule": "Unplanned 30-day related readmissions are bundled into the original admission; planned returns receive one DRG."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "General inpatient readmission policy applies broadly to inpatient DRG claims, but the requested DRG label is not specifically named. Separate reimbursement is not allowed for unplanned readmissions to the same hospital for the same, similar, or related condition within 30 days, unless an exemption applies.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days",
+            "same hospital",
+            "same hospital system"
+          ],
+          "utilization_limits": [
+            "30 days from discharge"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "CO Medicaid not subject to this policy",
+            "CA: 30 days same or related condition",
+            "IN: 3 days same or related problem"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or CMS contracts",
+            "cancer",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "transfers from one acute care hospital to another",
+            "member discharged against medical advice"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The requested DRG is not explicitly listed. This is not a DRG pricing or rate-increase policy; it applies a general inpatient readmission reimbursement rule to acute inpatient claims paid under DRG methodology. Separate reimbursement is generally not allowed for unplanned same, similar, or related readmissions. For the states highlighted in the request, Colorado is exempt from this policy, Indiana uses a 3-day same-or-related standard tied to the first three digits of the principal diagnosis and treats specified-day readmissions as one admission, and California uses a 30-day GBD Standard. Medicare Advantage uses a 30-day same-or-related condition standard.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same hospital",
+            "same or related condition",
+            "same date of service",
+            "within 30 days of discharge",
+            "within 3 days of discharge",
+            "within 24 hours from discharge",
+            "same UB-04 claim form"
+          ],
+          "utilization_limits": [
+            "30-day readmission window",
+            "3-day readmission window in IN",
+            "1 DRG per planned readmission episode"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "discharge status 81 (planned readmission)"
+          ],
+          "program_scope": [
+            "DRG",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "CO: market not subject to this policy",
+            "IN: 3-day window; same or related condition based on first three digits of principal diagnosis; specified-day readmissions treated as one admission",
+            "CA: 30-day window; GBD Standard",
+            "Medicare Advantage: 30-day same or related condition standard; same day defined as within 24 hours from discharge to readmission for participating providers",
+            "NY: readmissions for multiple trauma treatment excluded",
+            "OH: readmissions associated with major trauma excluded",
+            "TN: readmissions associated with burns or major trauma excluded"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Colorado market not subject to policy",
+            "cancer treatment",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "transfer to another acute care hospital",
+            "discharge against medical advice",
+            "multiple trauma treatment",
+            "major trauma"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: In CA Medicare Advantage DRG readmission editing, keep cesarean/OB delivery admissions carved out from the \"30-day window; GBD Standard\" because \"obstetrical deliveries\" are exempt; do not bundle a return stay into the index admission or apply \"1 DRG per planned readmission episode\" to this OB category. Apply to CA. Exempt: obstetrical deliveries.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"Medicare Advantage\" [program_scope]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"CA: 30-day window; GBD Standard\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"obstetrical deliveries\" [exemptions]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"1 DRG per planned readmission episode\" [utilization_limits]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Medicare HMO acute hospital increases are emerging in CO, IN, and CA but remain low volume",
+    "pattern_rank": 8,
+    "pattern_title": "Medicare HMO acute hospital increases are emerging in CO, IN, and CA but remain low volume",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Major Esophageal Disorders with MCC",
+      "Not Mapped",
+      "Other O.R. Procedures for Multiple Significant Trauma with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO', 'IN', 'CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 28539,
+    "output": 25635,
+    "breakdown": {
+      "search_keywords": {
+        "input": 541,
+        "output": 531,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 20375,
+        "output": 21557,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 957,
+        "output": 510,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 1014,
+        "output": 854,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 555,
+        "output": 232,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 378,
+        "output": 299,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3320,
+        "output": 1336,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1399,
+        "output": 316,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:00:56.356349+00:00",
+    "end_time": "2026-08-23T19:04:00.007211+00:00",
+    "duration_ms": 183650,
+    "version": "2.0.0"
+  }
+}

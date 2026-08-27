@@ -1,0 +1,228 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization and facility mapping shifts are obscuring part of the inpatient trend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "key_rule_summary",
+          "label": "Key Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "key_rule_summary": "Organ transport, procurement, and retrieval are included in transplant reimbursement, not separately paid."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "key_rule_summary": "Immune cell function assays never meet Point32Health coverage criteria."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00041",
+        "payer_name": "Cigna",
+        "policy_title": "Omnibus Reimbursement Policy",
+        "tags": [],
+        "effective_date": "11/01/2014",
+        "evidence": "This policy only partially relates to transplant inpatient claims. It states that organ transport, procurement, and retrieval are integral to the primary transplant and are not separately reimbursed. It does not establish a DRG-specific payment rule for the requested inpatient pattern.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R24_Omnibus_Reimbursement_Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "transplant"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595780209",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "Off-topic for the requested inpatient DRG pattern. This policy addresses immune cell function assay coverage and states those tests do not meet coverage criteria in all situations.",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-immune-cell-function-assay-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: Authorization and facility mapping shifts are obscuring part of the inpatient trend",
+    "pattern_rank": 2,
+    "pattern_title": "Authorization and facility mapping shifts are obscuring part of the inpatient trend",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures",
+      "Liver Transplant without MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO', 'GA', 'ME'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 19162,
+    "output": 6800,
+    "breakdown": {
+      "search_keywords": {
+        "input": 554,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 370,
+        "output": 385,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 14650,
+        "output": 4420,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 914,
+        "output": 344,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 727,
+        "output": 705,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 459,
+        "output": 232,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 1488,
+        "output": 183,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T08:17:36.924193+00:00",
+    "end_time": "2026-08-24T08:18:20.398746+00:00",
+    "duration_ms": 43474,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-R3-202604_3_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-R3-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Not Mapped and unattributed claims are a gating validation issue",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_mention",
+          "label": "Policy Mention",
+          "type": "badge"
+        },
+        {
+          "id": "maternity_payment_rule",
+          "label": "Payment Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "No payment rule; policy addresses global obstetrical services and does not mention this code."
+        },
+        {
+          "payer_org": "CareFirst_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "-"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "-"
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "-"
+        },
+        {
+          "payer_org": "Medica",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "No Medica payment rule found for this HCPCS code in the obstetrical policy."
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "-"
+        },
+        {
+          "payer_org": "Premera Blue Cross",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_mention": "-",
+          "maternity_payment_rule": "No code-specific payment or bundling rule found in Premera Blue Cross maternity policy."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082140001",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Global Obstetrical/OB Maternity Services Policy",
+        "tags": [],
+        "effective_date": "2026-05-22",
+        "evidence": "This policy addresses global obstetrical maternity services and does not mention this code. No adjudication rule is described for it.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/rp044-5-22-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': The policy is specifically about global obstetrical/maternity services, while the pattern is a claims-mapping/gating issue with codes that do not clearly indicate an obstetric clinical area, so the policy is not plausibly topical."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_COM_CAREFIRST_BCBS_MD_DC_NV_28594150225",
+        "payer_name": "CareFirst_BCBS",
+        "policy_title": "Global Obstetrical Services - Professional",
+        "tags": [],
+        "effective_date": "2024-07-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://secure.compliance360.com/Common/ViewUploadedFile.aspx?PD=PbRt%2bA78MS6aX4gyyJkuJqrCy4gPVZqkKZNPXMk8dFAFqOsTmIMBEJLes1MexKXhvLlp5sXnWTzfTFt90%2bQpeDp3TTwx8ai0F8eKDVspyNqZX8WH%2flcglEIR6Jc6NJSqLTVx%2fjio4KLLhxW3JMcfFpQ9tOWZJyGNakZc2Qszx%2bEiKdxj6RA9Yllq1rESek5aOLX0qfe7l09zu9vfcIzMmfPzE8uIKSbiSb9rHG9W8qFW%2fMzyddz%2bst%2fV55CL5xmOZWFsOvZQ%2bgNJUEa84rCZdS20vXIfOO2DF5uYfoXNQvo%3d",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500119",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services",
+        "tags": [],
+        "effective_date": "January 29, 2018",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-023.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595910106",
+        "payer_name": "Moda Health",
+        "policy_title": "Maternity Care",
+        "tags": [],
+        "effective_date": "2026-02-11",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM020.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960322580003",
+        "payer_name": "Medica",
+        "policy_title": "Obstetrical",
+        "tags": [],
+        "effective_date": "1/1/2002",
+        "evidence": "This obstetrical policy does not mention this HCPCS code and contains no adjudication rule for it; no mapping or reimbursement guidance found.",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/obstetrical-services-policy.pdf?la=en&hash=EF3E65B71B7242F2039F7EE820456616",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': This is an obstetrical policy, but the pattern is a generic claims-mapping/gating validation issue and the listed codes do not plausibly indicate obstetric care, so the policy is not topically applicable."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00049",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "10/07/25",
+        "evidence": "This code is not mentioned in the maternity services policy and no adjudication rule is provided for it.",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_129382.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "C9000",
+            "F1020",
+            "F4310",
+            "Z5112"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': The policy is obstetrics-specific (maternity services), while the pattern\u2019s codes/claims appear unrelated and unmapped rather than tied to maternity care, so the policy would not plausibly govern these claims."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00088",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Modifier TH - Obstetrical treatment/services",
+        "tags": [],
+        "effective_date": "04/02/26",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_131217.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 15,
+    "policies_successful": 15,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 In the CA cesarean-delivery workstream, route any claim carrying Premera Blue Cross Maternity Services target_codes C9000, F1020, F4310, or Z5112 to manual mapping and payer-attribution review, and suppress automated deny/bundle logic on those claims until the code-to-program mapping is validated. (CA)",
+      "evidence": [
+        "Premera Blue Cross \u00b7 Maternity Services: \"C9000\" [target_codes]",
+        "Premera Blue Cross \u00b7 Maternity Services: \"F1020\" [target_codes]",
+        "Premera Blue Cross \u00b7 Maternity Services: \"F4310\" [target_codes]",
+        "Premera Blue Cross \u00b7 Maternity Services: \"Z5112\" [target_codes]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Premera Blue Cross \u00b7 Maternity Services \u2014 https://www.premera.com/paymentpolicies/cmi_129382.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: Not Mapped and unattributed claims are a gating validation issue",
+    "pattern_rank": 3,
+    "pattern_title": "Not Mapped and unattributed claims are a gating validation issue",
+    "cpt_codes_requested": [
+      "C9000",
+      "F1020",
+      "F4310",
+      "Z5112"
+    ],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 15,
+    "successful_extractions": 15,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 15 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "15 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 2 of 4 source card(s) attest no state (segment scope: CA, UNATTRIBUTED, ME, NY, CO); searched without it rather than narrowing to ['ME', 'NY']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "5/15 policies quarantined (33%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "3/15 policies warning-flagged (20%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "5 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_BCBS_IL_IL_28593800306:Global Obstetrical_OB Maternity Services Policy, RP_COM_HORIZON_BCBS_NJ_28593980207:Maternity Reimbursement, RP_COM_PH_00017:RM-039 Maternity Care, RP_COM_REGENCE_BCBS_ID_OR_UT_28593680007:Maternity Care, RP_COM_UHC_00071:Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "3 policy/ies flagged with contamination warnings (kept in output): [RP_COM_BCBS_TX_TX_29082140001:Global Obstetrical/OB Maternity Services Policy, RP_COM_MEDICA_WI_2960322580003:Obstetrical, RP_COM_PBC_WA_00049:Maternity Services]."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 109381,
+    "output": 48561,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 287,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 453,
+        "output": 4063,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 727,
+        "output": 4429,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 99048,
+        "output": 33799,
+        "calls": 15
+      },
+      "relevance_judge": {
+        "input": 3786,
+        "output": 2913,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 921,
+        "output": 593,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 584,
+        "output": 436,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 359,
+        "output": 120,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2008,
+        "output": 1424,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 975,
+        "output": 497,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T06:53:22.387559+00:00",
+    "end_time": "2026-08-23T06:55:12.372775+00:00",
+    "duration_ms": 109985,
+    "version": "2.0.0"
+  }
+}

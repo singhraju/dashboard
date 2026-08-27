@@ -1,0 +1,560 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_8_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Small but recurring high-cost infection, sepsis, and musculoskeletal episodes need targeted clinical review, not broad policy changes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "clinical_review_rules",
+          "label": "Clinical Review Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Case Review",
+          "clinical_review_rules": "Requires sepsis evidence, supporting documentation, appropriate treatment, and correct infection-first code sequencing."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Clinical Validation",
+          "clinical_review_rules": "Requires documented sepsis with organ dysfunction, SOFA \u22652, and treatment; excludes SIRS/SEP-1/qSOFA."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Limited Coverage",
+          "clinical_review_rules": "Requires covered diagnosis; ESR not reimbursed when billed with CRP tests."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Clinical Validation",
+          "clinical_review_rules": "Requires Sepsis-3/SOFA \u22652 documentation supporting sepsis diagnosis and related treatment services."
+        },
+        {
+          "payer_org": "Parkland Community Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "clinical_review_rules": "Requires documentation supporting sepsis-related services per Sepsis-3 with SOFA score \u22652."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "clinical_review_rules": "Enforces correct principal diagnosis and ICD-10-CM sequencing, manifestation, code-first, sequela, and Excludes1 rules."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082130000",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Sepsis Policy",
+        "tags": [],
+        "effective_date": "2026-04-30",
+        "evidence": "Outside the scope of this sepsis policy; no musculoskeletal DRG rule is stated.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp041-4-30-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.21",
+            "T81.12"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "case-by-case review",
+            "same claim affecting DRG"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082280000",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "General Inflammation Testing",
+        "tags": [],
+        "effective_date": "2025-11-07",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/cpcplab049-11-7-2025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00859",
+        "payer_name": "Centene",
+        "policy_title": "Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073)",
+        "tags": [],
+        "effective_date": "09/2024",
+        "evidence": "Inpatient sepsis claims for adults are subject to pre- or post-pay clinical validation. Payment may be adjusted or denied if the medical record does not support the sepsis diagnosis or DRG assignment.",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [
+            "710",
+            "720",
+            "853",
+            "854",
+            "855"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "pre- or post-pay review",
+            "same inpatient claim",
+            "medical records requested"
+          ],
+          "utilization_limits": [
+            "review within at least 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "APR-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Physician or licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00013",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - General Inflammation Testing",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "The policy reimburses ESR only for listed inflammatory diagnoses and symptoms at set frequencies; otherwise ESR is not reimbursable.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+        "edit_rule_facts": {
+          "target_codes": [
+            "85651",
+            "85652",
+            "86140",
+            "86141"
+          ],
+          "related_codes": [
+            "85652",
+            "86140",
+            "86141",
+            "85651"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "billed with CRP",
+            "billed with ESR"
+          ],
+          "utilization_limits": [
+            "as needed",
+            "one every month",
+            "one every three months",
+            "once every two days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00029",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00129",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "1/7/2022",
+        "evidence": "This policy subjects sepsis-related inpatient claims to DRG clinical validation review and payment adjustment when the record does not support Sepsis-3 criteria.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "same medical record review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_PRK_00012",
+        "payer_name": "Parkland Community Health Plan",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "5/15/2025",
+        "evidence": "Off-topic. The policy addresses sepsis-related DRG clinical validation and does not provide a rule for this musculoskeletal DRG.",
+        "policy_url": "https://providers.parklandhealthplan.com/Uploads/Public/Documents/Provider/sepsis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01280",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-07-12",
+        "evidence": "This policy is an ICD-10 diagnosis placement policy. It does not create a DRG-specific reimbursement rule for this episode; it only requires correct primary/principal diagnosis reporting and ICD-10-CM sequencing on applicable claims.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 11,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement pre- or post-pay review within at least 60 days for inpatient DRG, MS-DRG, or APR-DRG claims when R65.2, R65.21, or T81.12 appears on the same claim affecting DRG, or when MS-DRG 870, 871, or 872 is billed on the same inpatient claim; request medical records, require Physician or licensed independent practitioner documentation, apply case-by-case review, and exempt sepsis screening. BCBS_TX and Centene both apply sepsis review in MS-DRG, while Molina and Parkland Community Health Plan apply DRG review for R65.2.. Exempt: sepsis screening.",
+      "evidence": [
+        "Molina \u00b7 Sepsis: \"R65.2\" [target_codes]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Sepsis Policy: \"R65.21\" [target_codes]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Sepsis Policy: \"T81.12\" [target_codes]",
+        "Molina \u00b7 Sepsis: \"same claim\" [pairing_conditions]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Sepsis Policy: \"same claim affecting DRG\" [pairing_conditions]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"870\" [target_codes]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"871\" [target_codes]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"872\" [target_codes]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"pre- or post-pay review\" [pairing_conditions]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"same inpatient claim\" [pairing_conditions]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"medical records requested\" [pairing_conditions]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"review within at least 60 days\" [utilization_limits]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"Physician or licensed independent practitioner documentation\" [provider_role_restrictions]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"sepsis screening\" [exemptions]",
+        "Molina \u00b7 Sepsis: \"DRG\" [program_scope]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Sepsis Policy: \"MS-DRG\" [program_scope]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"MS-DRG\" [program_scope]",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073): \"APR-DRG\" [program_scope]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Sepsis Policy: \"case-by-case review\" [pairing_conditions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "BCBS_TX and Centene both apply sepsis review in MS-DRG, while Molina and Parkland Community Health Plan apply DRG review for R65.2."
+      ],
+      "citation": [
+        "Molina \u00b7 Sepsis \u2014 https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Sepsis Policy \u2014 https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp041-4-30-2026.pdf",
+        "Centene \u00b7 Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073) \u2014 https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/CC.PP.073.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Small but recurring high-cost infection, sepsis, and musculoskeletal episodes need targeted clinical review, not broad policy changes",
+    "pattern_rank": 8,
+    "pattern_title": "Small but recurring high-cost infection, sepsis, and musculoskeletal episodes need targeted clinical review, not broad policy changes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Amputation for Musculoskeletal System and Connective Tissue Disorders with CC",
+      "Bone Diseases and Arthropathies with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 11,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "11 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX', 'VA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/11 policies quarantined (18%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/11 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_ELV_INTERNAL_00139:Lifetime Procedures RETIRED, RP_COM_BCBS_TX_TX_29082290004:Pathogen Panel Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 89259,
+    "output": 57285,
+    "breakdown": {
+      "search_keywords": {
+        "input": 558,
+        "output": 318,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 764,
+        "output": 2770,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 75536,
+        "output": 48034,
+        "calls": 11
+      },
+      "relevance_judge": {
+        "input": 4029,
+        "output": 1345,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 890,
+        "output": 597,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1821,
+        "output": 1221,
+        "calls": 12
+      },
+      "policy_recommendations": {
+        "input": 3505,
+        "output": 2329,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2156,
+        "output": 671,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T13:35:48.091664+00:00",
+    "end_time": "2026-08-24T13:38:11.908714+00:00",
+    "duration_ms": 143817,
+    "version": "2.0.0"
+  }
+}

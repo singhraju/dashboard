@@ -1,0 +1,229 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R3-202604_4_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R3-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Texas DSNP acute hospital spend is rising mainly on price, with rare inpatient cases adding pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "rule_summary",
+          "label": "Rule Summary",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "rule_summary": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "rule_summary": "Requires correct principal diagnosis sequencing per ICD-10-CM; no DRG reimbursement rule established."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00029",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00116",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "5/1/2026",
+        "evidence": "Off-topic for this DRG. The policy is limited to ICD-10-CM principal or primary diagnosis reporting and does not establish DRG reimbursement rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Texas DSNP acute hospital spend is rising mainly on price, with rare inpatient cases adding pressure",
+    "pattern_rank": 4,
+    "pattern_title": "Texas DSNP acute hospital spend is rising mainly on price, with rare inpatient cases adding pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Disorders of the Biliary Tract with MCC",
+      "Gastrointestinal Obstruction with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/4 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_HUM_00013:Laboratory - General Inflammation Testing, RP_GBD_HUM_00043:Laboratory - Diagnostic Testing of Iron Homeostasis and Metabolism]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 43018,
+    "output": 12081,
+    "breakdown": {
+      "search_keywords": {
+        "input": 554,
+        "output": 391,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 415,
+        "output": 565,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 38144,
+        "output": 9506,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1476,
+        "output": 508,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 739,
+        "output": 552,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 214,
+        "output": 164,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1476,
+        "output": 395,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T18:56:13.665264+00:00",
+    "end_time": "2026-08-23T18:56:57.464797+00:00",
+    "duration_ms": 43799,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY acute hospital pressure is tied to digestive MCC and postpartum episodes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_ob_bundle",
+          "label": "Global OB Bundle",
+          "type": "text"
+        },
+        {
+          "id": "overlap_claim_edits",
+          "label": "Overlap Claim Edits",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundle": "Routine antepartum, delivery, and postpartum care are globally bundled; overlapping postpartum services aren\u2019t separately payable.",
+          "overlap_claim_edits": "Overlapping maternity claims for the same pregnancy are denied once per pregnancy, including postpartum overlaps."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundle": "Postpartum care is bundled for 42 days post-delivery; certain gestation-age coding combinations are denied.",
+          "overlap_claim_edits": "Maternity claims limited by age, 42-day postpartum window, and incompatible gestation-age/outcome combinations."
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundle": "Antepartum/postpartum included with delivery; abortion exceptions separate; otherwise separately reimbursed from global obstetrical care.",
+          "overlap_claim_edits": "Itemized antepartum/postpartum codes bundle into one qualifying delivery/global obstetrical allowance."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundle": "42-day global OB bundles related day-of-delivery and postpartum E/M services.",
+          "overlap_claim_edits": "Professional global period edits only; modifier-based exceptions, no DRG/diagnosis overlap interactions."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "Global obstetrical service is reimbursable once per pregnancy when antepartum, delivery, and postpartum care are all furnished by one provider or same-TIN group; overlapping maternity claims may be denied or recouped.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59430"
+          ],
+          "related_codes": [
+            "59510",
+            "59430",
+            "59400"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "duplicate services",
+            "same postpartum period",
+            "overlapping claim"
+          ],
+          "utilization_limits": [
+            "once per pregnancy",
+            "90-day postpartum period",
+            "one postpartum-only episode"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Global obstetrical package",
+            "Postpartum care"
+          ],
+          "state_specific_rules": [
+            "Georgia: ultrasounds and two NSTs included",
+            "Georgia: >2 NSTs need problem-oriented diagnosis",
+            "Kentucky: ultrasounds included unless problem-oriented",
+            "Ohio/Virginia: >2 ultrasounds need problem-oriented"
+          ],
+          "provider_role_restrictions": [
+            "single provider or same-TIN group"
+          ],
+          "exemptions": [
+            "problem-oriented diagnosis"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No explicit DRG, MCC, or inpatient acute hospital reimbursement rule was identified for this digestive-system DRG pattern. This policy is a coding edit policy centered on professional and outpatient facility claims, so it does not provide a DRG-specific adjudication rule for digestive MCC inpatient episodes.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "O00-O08",
+            "Z33.2",
+            "0500F",
+            "0502F",
+            "0503F",
+            "59400-59410",
+            "59510-59515",
+            "59610-59622"
+          ],
+          "related_codes": [],
+          "required_modifiers": [
+            "U7",
+            "U8",
+            "U9"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "with gestation age diagnosis category Z3A",
+            "within 42 days of delivery",
+            "same Tax ID and specialty",
+            "when billing global obstetric codes"
+          ],
+          "utilization_limits": [
+            "42 days (6 weeks) postpartum"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "New York Medicaid: 59400-59410, 59510-59515, 59610-59622 require U7, U8, or U9",
+            "New York Medicaid: global obstetric claims must include 0500F, 0502F, 0503F"
+          ],
+          "provider_role_restrictions": [
+            "same Tax ID and specialty that performed delivery"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500119",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services",
+        "tags": [],
+        "effective_date": "2018-01-29",
+        "evidence": "Global obstetrical delivery codes are bundled with antepartum and postpartum care when itemized together on the same claim.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-023.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59414",
+            "59510",
+            "59514",
+            "59515",
+            "59525",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "59425",
+            "59426",
+            "59020",
+            "59025",
+            "59050",
+            "59051",
+            "99460",
+            "99462",
+            "99463",
+            "99464",
+            "99465"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59430",
+            "59400",
+            "59409",
+            "59410",
+            "59412",
+            "59414",
+            "59510",
+            "59514",
+            "59515",
+            "59525",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "31500",
+            "99221-99223",
+            "99231-99233",
+            "99238",
+            "99239",
+            "99464",
+            "99465",
+            "99460",
+            "99462",
+            "99463"
+          ],
+          "required_modifiers": [
+            "22",
+            "59",
+            "25"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same day of service",
+            "multiple births",
+            "pregnancy terminated by abortion",
+            "distinct and separate services",
+            "during labor",
+            "after delivery",
+            "same delivery session"
+          ],
+          "utilization_limits": [
+            "single antepartum/postpartum period",
+            "one attendance per newborn"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "NY applicable"
+          ],
+          "provider_role_restrictions": [
+            "Other than attending physician"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593510104",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Delivery Payment Equivalency",
+        "tags": [],
+        "effective_date": "2020-06-30",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-056.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00045",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Off-topic for the requested inpatient DRG pattern. The policy governs professional global days and global surgical package billing on CMS-1500 claims, not acute inpatient DRG reimbursement for digestive MCC admissions.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2/1/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: NY acute hospital pressure is tied to digestive MCC and postpartum episodes",
+    "pattern_rank": 3,
+    "pattern_title": "NY acute hospital pressure is tied to digestive MCC and postpartum episodes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other Digestive System Diagnoses with MCC",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they address professional obstetrical/cesarean billing rather than the pattern's NY acute-hospital digestive/postpartum episode scenario; item 0 also includes cited sources that explicitly disclaim the inpatient digestive DRG topic."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 206884,
+    "output": 56141,
+    "breakdown": {
+      "search_keywords": {
+        "input": 540,
+        "output": 456,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 608,
+        "output": 1705,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 192043,
+        "output": 45372,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 1898,
+        "output": 1184,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 958,
+        "output": 468,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1266,
+        "output": 1289,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 359,
+        "output": 235,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 6323,
+        "output": 4958,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2889,
+        "output": 474,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T10:11:04.205638+00:00",
+    "end_time": "2026-08-23T10:14:37.813864+00:00",
+    "duration_ms": 213608,
+    "version": "2.0.0"
+  }
+}

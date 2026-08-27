@@ -1,0 +1,199 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a joint utilization management, program integrity, and reimbursement compliance audit of FL Medicaid prior-authorized SNF - FREE STANDING admissions for LTSS Dual Eligible and LTSS Non Dual, focused on Degenerative Nervous System Disorders with MCC and Medical Back Problems without MCC, to review diagnosis concentration, site-of-care controls, denial enforcement, auth-to-claim matching, and contractual claims processing.",
+        "evidence": [
+          "FL LTSS Dual Eligible free-standing SNF added +$61.3M.",
+          "FL LTSS Non Dual free-standing SNF added +$8.1M.",
+          "Admissions increased across both LTSS SNF segments.",
+          "Prior authorization required code is Y across key SNF drivers.",
+          "Degenerative Nervous System Disorders with MCC contributed +$3.0M.",
+          "Medical Back Problems without MCC showed mixed volume and unit-cost pressure."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit FL Medicaid AUTH_CODE_DISTRIBUTION claims to confirm authorization denial enforcement and contractual claims processing/reprocessing, and place Tampa General Hospital in a separate provider-focused review track.",
+        "evidence": [
+          "FL AUTH_CODE_DISTRIBUTION accounts for +$55.7M state delta.",
+          "Tampa General Hospital adds +$2.4M within the same authorization issue.",
+          "Both source cards are flagged requires_validation_before_action."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) requires auth for physician-directed tracheostomy care supplies, subject to medical necessity and benefit limits.",
+          "Centene, Cigna, and United Health show broad bundling or no-auth policies, not Florida authorization-movement guidance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a CA Medicaid AUTH_CODE_DISTRIBUTION auth-to-claim validation and contractual claims reprocessing audit, verify authorization denial enforcement, and defer DRG-specific UM or reimbursement changes until Degenerative Nervous System Disorders with MCC and Medical Back Problems without MCC are reviewed separately.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION shows +$18.3M delta requiring validation before action.",
+          "Degenerative Nervous System Disorders with MCC account for +$12.3M inside the issue.",
+          "Medical Back Problems without MCC add +$6.0M inside the same classification shift."
+        ],
+        "peer_benchmarking": [
+          "Humana reports no code-specific authorization; claims remain subject to applicable referral and authorization requirements.",
+          "Elevance Health internal summary shows no documented pattern-specific authorization notes."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct an auth-to-claim and claims reprocessing validation of AUTH_CODE_DISTRIBUTION Y/N across IN, MD, and MO for Riley's Children's Health, Vaginal Delivery with O.R. Procedures Except Sterilization and/or D&C, and Depressive Neuroses before market-level policy action.",
+        "evidence": [
+          "IN, MD, MO AUTH_CODE_DISTRIBUTION totals +$12.6M.",
+          "Riley's Children's Health contributes +$8.3M within the authorization classification issue.",
+          "MD vaginal delivery claims add +$2.6M under the same pattern.",
+          "MO depressive behavioral health claims add +$1.7M under the same pattern.",
+          "Cards are flagged auth_or_mapping_shift and requires_validation_before_action."
+        ],
+        "peer_benchmarking": [
+          "CareFirst BCBS maternity doula services show No Auth with specified billing requirements.",
+          "Centene global maternity package uses CPT-based bundling with No Auth."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a Tampa General Hospital FL Medicaid ABD Non Dual acute inpatient audit to confirm prior authorization, contract-rate compliance, acute level-of-care appropriateness, and manual adjudication overrides, and redirect admissions failing acute criteria to alternative management or site-of-care pathways.",
+        "evidence": [
+          "Tampa General ABD Non Dual acute claims increased by $2.2M.",
+          "Paid per admit at Tampa General rose about $9.9K.",
+          "FL ABD Non Dual acute utilization added $5.9M with 422 more admissions.",
+          "Tampa General TANF Standard acute claims added $336K with 63 more admissions.",
+          "Source cards show pa_required_code equals Y."
+        ],
+        "peer_benchmarking": [
+          "Molina covers inpatient and outpatient hospital settings and bundles routine services.",
+          "United Health applies to inpatient and outpatient hospital facilities and bundles routine services."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a joint contract, claims, and utilization management audit of Riley's Children's Health for IN Medicaid PA-required non-ER IP Med/Surg CHILDRENS admissions in TANF Standard and Family Care to confirm prior-authorization-to-claim matching, enforce authorization denials, validate reimbursement to contractual terms, and assess site-of-care opportunities.",
+        "evidence": [
+          "Riley's Children's Health is the dominant pediatric provider signal in IN.",
+          "Increase reflects more admissions and higher paid per admit.",
+          "PA-required CHILDRENS admissions appear in both TANF Standard and Family Care.",
+          "Separate authorization validation pattern also identifies the same provider."
+        ],
+        "peer_benchmarking": [
+          "Centene denies claims with PA, PB, and PC modifiers; never-event services are non-reimbursable."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 3,
+        "pattern": "CA nursing facility growth is concentrated in neurologic and back-related members",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 8,
+        "pattern": "NC behavioral health shows both admission growth and sharp cost intensity",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 26,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 6: The pattern is overwhelmingly volume-led, with large increases in admissions and claims in FL free-standing SNF, making utilization management KPI review and PAV analysis the most direct parent rule match.; IP NF (DNE) Trend 8: All major drivers are prior-authorized SNF services (pa_required_code = Y), and the pattern explicitly flags auth-to-claim validation and recommends UM review, so auth denial enforcement/auth-to-claim matching is highly relevant.; IP NF (DNE) Trend 3: Specific diagnosis groups contribute meaningfully within the broader surge, especially Degenerative Nervous System Disorders with MCC and Medical Back Problems without MCC, indicating diagnosis-level concentration.; IP NF (DNE) Trend 4: The increase is tightly concentrated in one service setting\u2014SNF free-standing\u2014so reviewing service/site-of-care drivers is directly aligned with the observed pattern.; IP NF (DNE) Trend 10: Although the surge is mainly volume-driven, paid per admit also increased and the recommended next step includes reimbursement policy review, making reimbursement method an important secondary parent rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 8: The dominant FL delta is explicitly flagged as an auth_or_mapping_shift requiring validation before action, which directly matches the Auth to Claim review rule for the NF-context card.; IP MedSurg (DNE) Trend 8: The Tampa General Hospital card sits in IP Med/Surg and shows the same AUTH_CODE_DISTRIBUTION issue, making Auth to Claim match the most direct parent rule.; IP NF (DNE) Trend 9: Because the pattern may reflect authorization-to-claim linkage or reprocessing artifacts rather than true utilization, claim frequency/status review is a strong secondary fit in the NF category.; IP MedSurg (DNE) Trend 9: For the acute hospital/IP Med/Surg component, the observed paid increase under an unstable auth classification could stem from claims processing or reprocessing behavior, aligning with claim frequency/status review.; IP MedSurg (DNE) Trend 1: Tampa General Hospital is specifically called out in the audit scope, so a provider-driver rule is relevant as a follow-on to determine whether the variance is concentrated in a provider-specific pattern after mapping is validated."
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 8: Best direct match to the pattern: the variance is explicitly an authorization code distribution and auth-to-claim mapping issue flagged for validation before action.; IP NF (DNE) Trend 9: Highly relevant because an apparent shift into AUTH_CODE_DISTRIBUTION may reflect claims processing, reprocessing, or claim status behavior rather than true utilization change.; IP NF (DNE) Trend 3: The signal is concentrated in specific DRG/diagnosis groupings (degenerative nervous system disorders and medical back problems), so diagnosis-level isolation is relevant after mapping is validated.; IP NF (DNE) Trend 10: Relevant because reimbursement policy changes are a downstream route, and authorization classification errors could distort interpretation of reimbursement method effects.; IP NF (DNE) Trend 6: Relevant as a gated secondary rule: the pattern warns that unvalidated auth movement can distort UM priorities and KPIs, so PAV/UM review should occur only after the mapping issue is resolved."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: The largest component of the pattern is the IN Riley's Children's Health IP Med/Surg delta, and it is explicitly an AUTH_CODE_DISTRIBUTION shift flagged as auth_or_mapping_shift and requires_validation_before_action, which directly matches Auth-to-Claim review.; IP OB Dlvry Well NB (DNE) Trend 8: The MD maternity variance for vaginal delivery claims is driven by pa_required_code distribution rather than a clean utilization signal, making Auth-to-Claim match the most direct parent rule.; IP BH (DNE) Trend 7: The MO Depressive Neuroses behavioral health increase is also an AUTH_CODE_DISTRIBUTION shift with Y/N reclassification behavior, aligning directly to authorization enforcement and Auth-to-Claim validation.; IP MedSurg (DNE) Trend 9: Because the pattern shows redistribution between authorization categories rather than clear volume or unit-cost change, claim processing or reprocessing at the largest affected Med/Surg provider is a strong secondary explanation to test.; IP OB Dlvry Well NB (DNE) Trend 9: For the maternity DRG segment, the authorization distribution swing may reflect processing/status remapping instead of true operational change, so claim frequency/status review is a relevant secondary parent rule."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is clearly concentrated at a single provider, Tampa General Hospital, rather than reflecting a broad statewide acute hospital shift, so provider-specific behavior and contract dynamics are the most direct parent driver to investigate.; IP MedSurg (DNE) Trend 10: Paid per admit at Tampa General rose by about $9.9K with only modest admission growth, and the recommended next step explicitly calls for rate compliance and contract review, making reimbursement method highly relevant.; IP MedSurg (DNE) Trend 4: The pattern calls for testing level of care and inpatient intensity, which aligns with reviewing whether a subset of services or service mix within acute admissions is driving the higher paid per admit.; IP MedSurg (DNE) Trend 3: The case-mix question is central here because materially higher paid per admit could reflect a shift toward more severe DRGs or diagnoses within Tampa General\u2019s ABD Non Dual acute admissions.; IP MedSurg (DNE) Trend 6: Admissions are up and the pattern recommends coordination with UM on medical-necessity levers, so reviewing utilization-management KPI changes through a PAV-style waterfall is relevant to the utilization component."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly a single-provider concentration issue, with Riley's Children's Health driving most of the IN pediatric inpatient spend increase across both TANF Standard and Family Care.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially in both products, and the recommended next step calls for reimbursement and payment rate alignment review, making reimbursement method highly relevant.; IP MedSurg (DNE) Trend 8: Both source cards are PA-required with an auth_dimension_present flag, and the evidence notes a separate authorization validation pattern for the same provider, directly supporting auth-to-claim review.; IP MedSurg (DNE) Trend 6: Admissions are up alongside higher unit cost, and the recommendation includes a joint UM review, which aligns with investigating utilization management KPI or PAV-related variance.; IP MedSurg (DNE) Trend 7: The pattern calls for review of admission growth and level of care, and the non-ER inpatient context suggests admission source/location dynamics may be contributing to the increased utilization."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-26T09:40:06.074750+00:00"
+  }
+}

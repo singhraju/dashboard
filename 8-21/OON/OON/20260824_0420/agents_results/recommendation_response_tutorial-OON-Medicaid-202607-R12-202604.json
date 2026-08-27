@@ -1,0 +1,221 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a joint case-level review of VCU Medical Center - Transplant VA TANF Standard ACUTE HOSPITAL IP Med/Surg acute leukemia admissions coded C9201 and C9250 to validate authorization enforcement, final claim adjudication, reimbursement methodology, contract compliance, and itemized billing, and initiate provider-specific contract remediation for confirmed variances.",
+        "evidence": [
+          "One VA IP Med/Surg C9201 claim added about $1.9M.",
+          "Two VA leukemia-related C9250 claims added about $357K.",
+          "Largest episode sits in TANF Standard at ACUTE HOSPITAL.",
+          "Rendering provider on drill context is VCU Medical Center - Transplant.",
+          "Validation needed because increase is concentrated in a few low-baseline claims."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles same-date services for listed conditions only.",
+          "United Health summary shows no documented appeals process."
+        ],
+        "citation": [
+          "Policy: United Health - N/A"
+        ]
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review Medicaid ACUTE HOSPITAL IP Med/Surg claims in OH TANF Standard, KS ABD Non Dual, CA TANF Standard, and CA LTSS Non Dual for Acute Leukemia with MCC, Other Musculoskeletal System and Connective Tissue O.R. Procedures with CC, and Connective Tissue Disorders with MCC at VCU Medical Center - Transplant, OU Health University of Oklahoma Medical Center, and UCI Medical Center to confirm contractual adjudication, interim and first claim zeroing, final bill processing, authorization denial enforcement, and outlier itemized bill accuracy.",
+        "evidence": [
+          "OH acute hospital increase includes Acute Leukemia with MCC at VCU Medical Center Transplant.",
+          "KS acute hospital increase includes musculoskeletal O.R. procedures at OU Health University of Oklahoma.",
+          "CA acute hospital increase repeats for Connective Tissue Disorders with MCC at UCI Medical Center.",
+          "Validation needed because few episodes with low historical baseline drive the increase."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement targeted case-level clinical and payment validation for rare IP Med/Surg admissions at UCI Medical Center and OU Health University of Oklahoma Medical Center involving M952, M3110, M3119, and S32461A, including itemized bill review, DRG and severity documentation validation, and authorization and documentation enforcement.",
+        "evidence": [
+          "Single KS M952 admission at OU Health drove about +$260K.",
+          "Single CA M3110 admission at UCI Medical Center added about +$159K.",
+          "Single CA M3119 admission at UCI Medical Center added about +$156K.",
+          "Single KS S32461A admission at OU Health added about +$59K.",
+          "Flags include low baseline and repeated delta concentration."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles and requires supported abnormal findings; denies systemic lupus or connective tissue diagnoses.",
+          "Elevance internal requires compliant codes with full medical record or office note support."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted NY Medicaid free-standing SNF placement and payment review for MAYFAIR CARE CENTER, INC., with diagnosis-triggered NF/SNF authorization, alternate-discharge review, length-of-stay oversight, and contract/claims validation for T148XXS, M069, and M0579 cases.",
+        "evidence": [
+          "NY ABD Non Dual SNF - FREE STANDING added about +$161K across 10 claims.",
+          "NY TANF Standard at the same SNF setting added another +$18K.",
+          "CA / NY NF traumatic injury T148XXS added about +$180K across 11 claims.",
+          "CA / NY NF connective tissue M069 added about +$110K across 5 claims.",
+          "Validation needed because one invalid procedure value appears in the cohort."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement targeted authorization-to-actual and discharge-location review for Indiana Medicaid LTSS Dual Eligible hip fracture cases linked to RIVERVIEW HOSPITAL and placed in SNF - FREE STANDING/NF, limited to S72044A and S72002A, with denial enforcement for mismatched or unauthorized post-acute placement.",
+        "evidence": [
+          "IN LTSS Dual Eligible at SNF - FREE STANDING added about +$101K across 20 claims.",
+          "IN NF diagnosis S72044A added about +$63K across 14 claims.",
+          "IN NF diagnosis S72002A added about +$38K across 6 claims.",
+          "Claims up and paid per admit up in the impacted SNF segment.",
+          "RIVERVIEW HOSPITAL appears in drill context for the implicated pathway."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a provider-specific audit of VERACYTE Medicaid OP Lab/Pthlgy Pathology and Laboratory claims coded as Not Mapped across NC, IA, MO, TN, and WA to validate service classification, authorization-to-actual matching, and manual adjudication and coverage edits for diagnoses E042, E041, and D440.",
+        "evidence": [
+          "VERACYTE spend is appearing under Not Mapped facility or service classification.",
+          "The same provider also appears in operational Not Mapped buckets.",
+          "The current classification can hide authorization pathway.",
+          "All contributing groups carry Not Mapped or unmapped flags."
+        ],
+        "peer_benchmarking": [
+          "Carolina Complete Health, Centene, and Molina show no documented pattern-specific policy relevance.",
+          "Listed payers show no documented appeals process or policy effective date."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a contractual payment audit and claim reprice review for TX Medicaid TANF Standard CHILDRENS Connective Tissue Disorders with MCC admissions, validating reimbursement methodology, outlier handling, and final adjudication; reprocess any noncompliant claim and escalate provider-specific contract remediation if terms were misapplied.",
+        "evidence": [
+          "TX TANF Standard at CHILDRENS added about +$91K.",
+          "Claim volume fell by 1 while paid per admit increased about $125K.",
+          "Signal concentrated in Connective Tissue Disorders with MCC."
+        ],
+        "peer_benchmarking": [
+          "Centene reimbursement summary shows no documented policy scope or appeals process details."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Implement a targeted post-acute policy review for VA Medicaid LTSS Dual Eligible free-standing SNF claims with Connective Tissue Disorders with MCC to validate SNF placement, confirm whether prior authorization was required and obtained, enforce denials where applicable, review manual-adjudication edit bypasses, and escalate concentrated facilities for site-of-care or contract remediation.",
+        "evidence": [
+          "Increase is concentrated in Connective Tissue Disorders with MCC.",
+          "VA LTSS Dual Eligible free-standing SNF added about +$58K.",
+          "Paid per admit increased by about $7K.",
+          "Validation needed because this is a small low-baseline cluster."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spike is explicitly concentrated in leukemia diagnoses C9201 and C9250 under Acute Leukemia with MCC, matching a diagnosis-isolated variance rather than a broad IP Med/Surg trend.; IP MedSurg (DNE) Trend 1: The largest episode is tied to VCU MEDICAL CENTER - TRANSPLANT, indicating provider concentration that warrants review of provider-specific behavior and contract terms.; IP MedSurg (DNE) Trend 10: The pattern calls for review of catastrophic payment handling, level of care, and contract terms, which aligns closely with reimbursement method review for an ultra-high-cost inpatient admission.; IP MedSurg (DNE) Trend 9: Validation is specifically needed for coding and payment accuracy on a few large claims, making claims processing/reprocessing review highly relevant.; IP MedSurg (DNE) Trend 2: The increase comes from only a handful of catastrophic admissions, so the variance is isolated to a very small subset of members/episodes and supports case-level member review."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is clearly concentrated in a small set of inpatient DRGs/diagnoses such as Acute Leukemia with MCC, Connective Tissue Disorders with MCC, and Musculoskeletal O.R. procedures, making diagnosis-level variation a primary lens.; IP MedSurg (DNE) Trend 10: Paid per admit is rising alongside total paid, and the recommended next step explicitly calls for review of outlier payment treatment and contract terms, which aligns directly to reimbursement method review.; IP MedSurg (DNE) Trend 1: Several source cards point to specific acute hospital providers, including VCU Medical Center - Transplant, OU Health University of Oklahoma Medical Center, and UCI Medical Center, suggesting possible provider-specific behavior or contract effects.; IP MedSurg (DNE) Trend 6: This is a mixed utilization and unit-cost pattern with claims up across multiple Medicaid products and states, and the action plan emphasizes validating admission necessity, which fits utilization management KPI and PAV review.; IP MedSurg (DNE) Trend 9: Most of the increase is concentrated in a small number of episodes with low historical baseline, and the pattern explicitly requires claim accuracy validation, making claim processing/reprocessing review highly relevant."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Strongest fit: the increase is explicitly concentrated in a small set of rare diagnoses (M952, M3110, M3119, S32461A and related musculoskeletal/connective tissue cases) with near-zero baseline, making diagnosis-driver review the primary parent rule.; IP MedSurg (DNE) Trend 10: Highly relevant because the pattern calls for case-specific payment validation and review of outlier reimbursement logic; the very high paid-per-admit values suggest reimbursement method review on these rare admissions.; IP MedSurg (DNE) Trend 1: Relevant because the variance appears concentrated in a narrow provider subset, including specific acute hospitals such as UCI Medical Center and OU Health University of Oklahoma Medical Center, which supports provider-driver investigation.; IP MedSurg (DNE) Trend 4: Relevant because the change is not broad IP Med/Surg growth; it is isolated to a few inpatient case types/DRGs such as musculoskeletal O.R. procedures, connective tissue disorders with MCC, and fractures of hip/pelvis with MCC.; IP MedSurg (DNE) Trend 2: Secondarily relevant because the pattern is driven by very small numbers of mostly single-claim, high-cost admissions, indicating concentration in a limited member/admission subset that merits case-level review before broader action."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: Most directly matches the pattern's site-of-care shift into NF/SNF, especially the recommendation to audit discharge placement, post-acute destination, and length-of-stay management in NY free-standing SNF.; IP NF (DNE) Trend 1: Variance is operationally concentrated in NY free-standing SNF and a named provider (MAYFAIR CARE CENTER, INC.), making provider/provider-mix review highly relevant.; IP NF (DNE) Trend 3: The increase is driven by a narrow diagnosis set\u2014traumatic injury and connective tissue codes such as T148XXS, M069, and M0579\u2014so diagnosis-level investigation is a strong fit.; IP NF (DNE) Trend 10: The pattern explicitly calls out post-acute reimbursement management and shows mixed unit-cost pressure in SNF, aligning well with reimbursement method review.; IP NF (DNE) Trend 6: Claims are up and the next step highlights avoidable post-acute intensity and LOS management, which fits utilization management KPI and avoidable variance review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: Most directly fits the site-of-care shift: hip fracture discharges are moving into NF/free-standing SNF, so admission/discharge source and location review is the primary parent rule.; IP NF (DNE) Trend 3: Variance is tightly concentrated in a small diagnosis cluster\u2014hip/pelvic fracture cases, especially S72044A and S72002A\u2014matching the diagnosis-driver rule.; IP NF (DNE) Trend 8: The recommended next step explicitly calls for SNF authorization review and placement appropriateness, making auth-to-claim enforcement highly relevant.; IP NF (DNE) Trend 6: Claims and paid per admit are both up, and the pattern points to avoidable post-acute cost through placement, length of stay, and care transitions, which aligns with UM KPI/PAV review.; IP NF (DNE) Trend 1: The pattern appears concentrated in a specific discharge pathway and named provider context (RIVERVIEW HOSPITAL to free-standing SNF), so subset provider behavior may be contributing to variance."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "OP Lab Pathology (DNE)"
+        ],
+        "relevance_reason": "OP Lab Pathology (DNE) Trend 4: Most directly relevant because the pattern is fundamentally a service/facility classification issue: VERACYTE pathology and laboratory claims are landing in Not Mapped buckets, obscuring the true outpatient lab/pathology service category and site of care.; OP Lab Pathology (DNE) Trend 1: The variance is highly concentrated in a single provider, VERACYTE, across multiple Medicaid states, making provider-level setup, routing, and contract interpretation a key parent lens.; OP Lab Pathology (DNE) Trend 3: There is clear diagnosis concentration in E042, E041, and D440 within the OP lab/pathology pattern, so diagnosis drivers remain relevant after mapping is corrected.; OP Lab Pathology (DNE) Trend 7: The pattern explicitly states that incorrect mapping may hide the authorization pathway and recommends re-running authorization review after cleanup, aligning well with auth-to-claim matching.; OP Lab Pathology (DNE) Trend 8: The current Not Mapped classification can distort reimbursement interpretation and unit-cost review, so validating the reimbursement method after remapping is directly relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Most directly aligned because the pattern is explicitly reimbursement-driven: claim volume fell while paid per admit rose sharply, indicating a reimbursement method, case-rate, or outlier pricing issue.; IP MedSurg (DNE) Trend 9: Highly relevant because the recommended next step is to review claim pricing, reprocessing, and contractual payment logic, which maps to claims processing/reprocessing per contractual standards.; IP MedSurg (DNE) Trend 3: Relevant because the increase is concentrated in a single diagnosis grouping, Connective Tissue Disorders with MCC, indicating diagnosis-level concentration rather than broad utilization growth.; IP MedSurg (DNE) Trend 1: Relevant because the variance is isolated to a narrow provider/facility slice (TX CHILDRENS), which supports investigating provider-specific reimbursement terms or contract changes.; IP MedSurg (DNE) Trend 4: Somewhat relevant because a single inpatient admission with extreme paid-per-admit movement may warrant service-level review to determine whether a specific billed service component or outlier structure drove the spike."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is explicitly concentrated in Connective Tissue Disorders with MCC, so diagnosis-level isolation is the strongest parent rule match.; IP MedSurg (DNE) Trend 4: The pattern is tightly tied to a specific service/site of care\u2014SNF - FREE STANDING\u2014and the recommended follow-up is to validate placement appropriateness in that post-acute setting.; IP MedSurg (DNE) Trend 6: Pattern details describe this as an early post-acute management issue, and the next step focuses on tighter placement and stay management, which aligns with utilization management KPI/PAV review.; IP MedSurg (DNE) Trend 1: Because this is a small emerging VA pocket across only 8 claims, the variance could be concentrated in a limited number of free-standing SNF providers or facilities, making provider-driver review relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased by about $7K, so part of the variance may reflect reimbursement method or payment configuration issues in addition to higher utilization."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T04:40:19.170258+00:00"
+  }
+}

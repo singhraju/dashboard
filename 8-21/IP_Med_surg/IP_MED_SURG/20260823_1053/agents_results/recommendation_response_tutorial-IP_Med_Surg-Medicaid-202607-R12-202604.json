@@ -1,0 +1,229 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a joint policy audit for Medicaid TANF Standard prior-authorized ACUTE HOSPITAL admissions, starting in MO and extending to CA, FL, KS, MD, OH, NC, LA, and NY, to review UM KPI performance, validate authorization-to-claim matching and denial enforcement, and confirm claims are processing per contractual obligation for postpartum/postabortion, pneumothorax, major bowel, and cranial/peripheral nerve DRGs at provider level.",
+        "evidence": [
+          "MO authorized acute hospital claims increased about $28.6M.",
+          "MO admissions increased by 887 and paid per admit rose about $1.4K.",
+          "CA, FL, KS, MD, and OH added about $3.9M.",
+          "Postpartum, pneumothorax, bowel, and nerve DRGs recur across affected markets.",
+          "All source groups show pa_required_code equals Y.",
+          "Mercy Hospital Saint Louis appears in MO drill context."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC: conditional separate postpartum payment for OB codes 59400, 59510, 59610, 59618, 59410, 59515, 59614, 59622.",
+          "Centene: no applicable OB code interactions identified for the requested postpartum DRG pattern."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a claims-processing audit to reclassify prior-authorization IP MedSurg claims coded Not Mapped, starting with MO and DC TANF Standard, then DC ABD Non Dual and CHIP Standard, and clean provider attribution for SENTARA NORFOLK GENERAL HOSPITAL, SAINT THOMAS WEST HOSPITAL, and NY Physical Rehab before any UM, site-of-care, reimbursement, or contracting action.",
+        "evidence": [
+          "MO Not Mapped TANF Standard claims increased about $7.6M, with 446 more admissions.",
+          "DC Not Mapped TANF Standard claims increased about $5.2M, with 119 more admissions.",
+          "DC ABD Non Dual and CHIP Standard added about $0.9M combined.",
+          "SENTARA NORFOLK GENERAL HOSPITAL and SAINT THOMAS WEST HOSPITAL appear in provider-concentrated settings."
+        ],
+        "peer_benchmarking": [
+          "Centene bundles many ancillary institutional items into high-acuity inpatient stay charges.",
+          "Molina applies all-inclusive room, panel, and operating-room billing rules.",
+          "United Health bundles routine facility services with no separate reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate an auth-to-claim validation and claims-processing audit for pa_required_code AUTH_CODE_DISTRIBUTION across IN, NY, TX, CA, FL, and VA, isolating Rehabilitation with CC/MCC, Postpartum and Postabortion Diagnoses without O.R. Procedures, Major Small and Large Bowel Procedures with CC, Cranial and Peripheral Nerve Disorders without MCC, Pneumothorax with CC, and the flagged providers RILEY'S CHILDREN'S HEALTH, THE KECK HOSPITAL OF USC, SENTARA NORFOLK GENERAL HOSPITAL, and ASCENSION ST. VINCENT'S SOUTHSIDE HOSPITAL, and defer authorization denial enforcement until prior-authorization flag logic and upstream file feeds are reconciled.",
+        "evidence": [
+          "Pattern is driven by AUTH_CODE_DISTRIBUTION shifts across CA, FL, IN, NY, TX, and VA.",
+          "Flags include auth_or_mapping_shift and requires_validation_before_action.",
+          "Recommended next step is reconciling prior-authorization flag logic and upstream file feeds.",
+          "Provider-level shifts include SENTARA NORFOLK GENERAL HOSPITAL and ASCENSION ST. VINCENT'S SOUTHSIDE HOSPITAL.",
+          "Impacted DRGs span rehabilitation, postpartum, bowel surgery, nerve disorders, and pneumothorax."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch an IN Rehabilitation with CC/MCC review for PA-required Physical Rehab and CHILDRENS admissions tied to aftercare, weakness, other malaise, and traumatic subarachnoid hemorrhage; confirm prior authorization was obtained and matched actual claims, audit CUMG nurse and MD approval and denial pathways plus initial and concurrent review KPIs, and validate contractually correct reimbursement with itemized bill review for pediatric rehab claims.",
+        "evidence": [
+          "IN aftercare rehab at Riley's Children's Health added $2.9M and 104 admissions.",
+          "WEAKNESS rehab in IN added 46 admissions despite lower paid per admit.",
+          "Aftercare admissions were PA-required Y and non-ER in Physical Rehab.",
+          "LTSS Non Dual Physical Rehab in IN showed volume and unit-cost pressure.",
+          "ABD Non Dual CHILDRENS rehab in IN had $120.8K paid per admission."
+        ],
+        "peer_benchmarking": [
+          "UnitedHealth limits same-specialty outpatient timed therapy reimbursement to four daily codes, excluding home and rehab.",
+          "Molina has no DRG rehab rule; outpatient rehab requires GN/GO/GP modifiers and correct place-of-service."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open provider-specific contract compliance and claims-processing audits for MAIMONIDES MEDICAL CTR NY Not Mapped PA-required claims and SENTARA NORFOLK GENERAL HOSPITAL VA ACUTE HOSPITAL claims, including site-of-care classification, authorization-to-actual matching, and Rehabilitation with CC/MCC review.",
+        "evidence": [
+          "MAIMONIDES MEDICAL CTR drove NY Not Mapped growth across three Medicaid products.",
+          "NY TANF Standard admissions increased by 36 at MAIMONIDES MEDICAL CTR.",
+          "SENTARA NORFOLK GENERAL HOSPITAL spend increased as admissions declined by 21.",
+          "Rehabilitation with CC/MCC appears in NY mixed volume-unit-cost groups.",
+          "All reviewed cards show PA required equals Y."
+        ],
+        "peer_benchmarking": [
+          "Fidelis Care (Centene) reimburses pharmaceuticals, devices, and therapies only for FDA-approved indications."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a DC Medicaid site-of-care, authorization, and claims payment policy audit for OTHER, LONG TERM CARE HOSPITAL, Physical Rehab, and COMMUNITY MENTAL HEALTH CENTER admissions in TANF Standard and ABD Non Dual, validating prior authorization obtained, authorized versus actual setting and level of care, denial enforcement, alternate discharge leakage, and contractual facility claims processing.",
+        "evidence": [
+          "All highlighted DC settings show pa_required_code Y.",
+          "DC TANF Standard OTHER claims rose with 104 more admissions.",
+          "DC ABD Non Dual OTHER claims rose with 54 more admissions.",
+          "DC TANF Standard LONG TERM CARE HOSPITAL paid per admission increased about $23.8K.",
+          "DC ABD Non Dual COMMUNITY MENTAL HEALTH CENTER had very high paid per admission.",
+          "DC TANF Standard Physical Rehab added 15 admissions."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine room, board, and integral services across UB-04 facility claims."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct single-case itemized bill and contractual adjudication audits for catastrophic inpatient admissions at CHILDRENS HOSPITAL, MAIMONIDES MEDICAL CTR, and SAINT THOMAS WEST HOSPITAL in Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures, Craniotomy and Endovascular Intracranial Procedures with MCC, Spinal Fusion Except Cervical with Spinal Curvature, Malignancy, Infection or Extensive Fusions with MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC, and Not Mapped DRGs; verify final claim adjudication, authorization enforcement, and DRG assignment.",
+        "evidence": [
+          "One tracheostomy ventilation admission at CHILDRENS HOSPITAL added about $1.3M.",
+          "Single craniotomy with MCC case at CHILDRENS HOSPITAL added about $667K.",
+          "MAIMONIDES MEDICAL CTR sepsis subset added about $336K across eight admissions.",
+          "TN Not Mapped case at SAINT THOMAS WEST HOSPITAL added about $44K."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a focused CA maternity inpatient utilization policy review for TANF Standard acute-hospital episodes in Postpartum and Postabortion Diagnoses without O.R. Procedures, centered on UNIVERSITY OF MARYLAND MEDICAL CENTER and diagnoses SEVERE PRE-ECLAMP COMP PUERPERIUM, OTH MENTAL D/O COMP PUERPERIUM, and PUERPERAL SEPSIS, to confirm prior authorization, reconcile authorized versus paid level of care, screen for repeat postpartum admissions, test provider unit-cost variation, and route affected members to targeted postpartum case management.",
+        "evidence": [
+          "CA maternity complications increased total paid by about $2.4M.",
+          "SEVERE PRE-ECLAMP COMP PUERPERIUM had more admissions and higher paid per admit.",
+          "OTH MENTAL D/O COMP PUERPERIUM showed sharply higher paid per admit.",
+          "PUERPERAL SEPSIS admissions increased in CA postpartum acute hospital cases.",
+          "Postpartum source cards show pa_required_code Y and er_admit_indicator Y.",
+          "Top postpartum source cards share UNIVERSITY OF MARYLAND MEDICAL CENTER context."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: This is the strongest fit because the pattern is driven by authorized inpatient admission growth plus higher paid per admit, especially in MO (+887 admissions), which directly points to utilization management KPI review and a PAV-style assessment.; IP MedSurg (DNE) Trend 10: Paid per admission and allowed per admission increased alongside volume, and the pattern explicitly calls out reimbursement pressure, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 8: All major source groups are prior-authorization required (pa_required_code = Y), and the pattern includes auth-to-claim validation as a business term, so reviewing whether authorization controls are translating correctly to paid claims is important.; IP MedSurg (DNE) Trend 3: The increase is concentrated in specific inpatient diagnosis/DRG subsets such as postpartum/postabortion, pneumothorax, bowel procedures, and cranial/peripheral nerve disorders, so diagnosis-level driver analysis is directly indicated.; IP MedSurg (DNE) Trend 1: MO is the dominant market and named hospitals appear in drill context, suggesting the variance may be concentrated in a subset of providers and potentially tied to provider behavior or contractual changes."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned because the pattern is centered on prior-authorization claims with a large Not Mapped facility bucket, so auth-to-claim matching must be validated before UM action.; IP MedSurg (DNE) Trend 9: Highly relevant because unmapped facility records suggest a claims processing or reprocessing classification issue, and the recommended next step is to audit and reclassify claims before acting.; IP MedSurg (DNE) Trend 10: Relevant because incorrect facility setting can distort reimbursement method comparisons and paid-per-admit signals, making reimbursement conclusions unreliable until mapping is corrected.; IP MedSurg (DNE) Trend 1: Relevant because the variance appears in provider-concentrated settings such as SENTARA NORFOLK GENERAL HOSPITAL and SAINT THOMAS WEST HOSPITAL, but provider attribution is currently obscured by the mapping gap.; IP MedSurg (DNE) Trend 4: Relevant because the core business risk is misclassification of site-of-care and facility setting, which can misstate which inpatient service setting is actually driving the spend increase."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best direct match: the pattern is explicitly driven by AUTH_CODE_DISTRIBUTION shifts, is labeled auth-to-claim/coding validation, and recommends reconciling prior-authorization flag logic before any action.; IP OB Dlvry Well NB (DNE) Trend 8: NY postpartum/postabortion inpatient episodes show the same authorization code distribution movement, making the OB inpatient auth-to-claim match rule directly relevant.; IP MedSurg (DNE) Trend 1: Several signals are localized to specific facilities/providers, including provider-level shifts in FL and VA and named hospitals in the drill cards, so provider isolation is an important secondary rule after auth validation.; IP MedSurg (DNE) Trend 4: The movement is concentrated in a subset of inpatient DRG/service episodes such as rehabilitation, bowel surgery, pneumothorax, and nerve disorder cases, so service-level isolation is relevant once coding movement is explained.; IP MedSurg (DNE) Trend 9: The pattern description cites possible upstream file-feed movement or reclassification, which can overlap with claim processing/reprocessing issues and makes claim-status validation a useful secondary check."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is highly concentrated in a subset of rehab-related diagnoses within the inpatient DRG, especially aftercare, weakness, other malaise, and traumatic subarachnoid hemorrhage, making diagnosis-level review the clearest parent rule.; IP MedSurg (DNE) Trend 4: The pattern spans specific rehab-oriented services/settings of care\u2014Physical Rehab, CHILDRENS, and some ACUTE HOSPITAL activity\u2014so service-driver review is directly relevant to the site-of-care expansion described.; IP MedSurg (DNE) Trend 8: Multiple operational source groups include PA required = Y and route to UM/data-quality review, so checking whether authorization controls are matching to paid inpatient rehab claims is highly relevant.; IP MedSurg (DNE) Trend 10: The pattern has mixed unit-cost pressure, especially pediatric/CHILDRENS rehab pricing and higher paid per admission in some segments, which aligns with reviewing reimbursement method and payment mechanics.; IP MedSurg (DNE) Trend 6: Admissions are up across rehab segments and the recommended next step explicitly calls for review of admission criteria, aftercare placement, and physical rehab utilization, which fits a utilization-management KPI/PAV style parent rule."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small number of named hospitals\u2014MAIMONIDES MEDICAL CTR and SENTARA NORFOLK GENERAL HOSPITAL\u2014making provider-level behavior and contracting review the primary parent rule.; IP MedSurg (DNE) Trend 10: SENTARA NORFOLK GENERAL HOSPITAL shows a clear unit-cost-led increase with admissions declining, which strongly aligns to reviewing reimbursement method and contractual payment mechanics.; IP MedSurg (DNE) Trend 8: All key cards carry PA required = Y and include auth-to-claim validation as a business term, so authorization enforcement and matching are directly relevant, especially for the NY Not Mapped claims.; IP MedSurg (DNE) Trend 9: The NY spend growth is concentrated in Not Mapped facility claims and the pattern itself calls for validation before attributing performance, indicating potential claims processing, reprocessing, or classification issues.; IP MedSurg (DNE) Trend 4: The pattern spans Acute Hospital versus Not Mapped facility types and includes DRG/service-specific signals such as Rehabilitation with CC/MCC, so service/site-of-care mix review is relevant to explain misclassified or shifted inpatient spend."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The pattern is primarily a site-of-care and facility-mix shift across OTHER, LONG TERM CARE HOSPITAL, Physical Rehab, and COMMUNITY MENTAL HEALTH CENTER, making service/facility driver review the closest parent rule.; IP MedSurg (DNE) Trend 8: All major source cards are prior-auth required (pa_required_code = Y) and explicitly flagged for auth-to-claim validation, so enforcement of authorization controls is highly relevant.; IP MedSurg (DNE) Trend 10: Long-term care hospital and community mental health center episodes show meaningful paid-per-admission increases, and the recommended next step specifically calls for review of setting-specific payment rules and reimbursement method.; IP MedSurg (DNE) Trend 7: This is a non-acute placement shift, so reviewing admission/discharge source and location is relevant to determine whether members are being directed into LTCH, rehab, or other settings appropriately.; IP MedSurg (DNE) Trend 6: Admissions are up across multiple settings and the issue is framed as a utilization management and redirectable-care problem, so a PAV/UM KPI review is a strong parent investigation path."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The increase is concentrated in a narrow set of high-cost inpatient DRGs/services such as tracheostomy with prolonged ventilation, craniotomy, spinal fusion, sepsis DRGs, and other rare inpatient episodes, so service-level isolation is a primary fit.; IP MedSurg (DNE) Trend 3: The pattern is also tied to specific rare catastrophic diagnoses and case-mix shifts, including malignant cerebellar neoplasm, sepsis, refractory seizure-related diagnosis, and metastatic bone disease, making diagnosis-level review highly relevant.; IP MedSurg (DNE) Trend 1: Spend is concentrated in a limited set of providers and locations, including CHILDRENS HOSPITAL, MAIMONIDES MEDICAL CTR, and SAINT THOMAS WEST HOSPITAL, so provider-driver analysis is directly applicable.; IP MedSurg (DNE) Trend 10: The pattern shows paid per admit sharply up with little material volume change, and the recommended next step explicitly calls for payment accuracy review, so reimbursement method and outlier payment logic should be checked.; IP MedSurg (DNE) Trend 9: Several drivers are single-admission or very low-volume outlier claims, including Not Mapped DRGs, so claim-level validation for processing, status, or reprocessing issues is relevant before generalizing the trend."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: Strongest fit. The variance is clearly concentrated in a narrow set of postpartum complication diagnoses within the maternity inpatient DRG, especially severe pre-eclampsia, puerperal sepsis, postpartum mental health complications, pre-existing HTN with pre-eclampsia, and endometritis.; IP OB Dlvry Well NB (DNE) Trend 6: Highly relevant because both admissions and paid per admit increased, suggesting the need to test utilization management and potentially avoidable variance drivers for postpartum complication admissions rather than treating the increase as generic inpatient growth.; IP OB Dlvry Well NB (DNE) Trend 5: Relevant because postpartum complication episodes can involve repeat maternal admissions after delivery, and the recommended postpartum care pathway assessment aligns with reviewing readmission patterns.; IP OB Dlvry Well NB (DNE) Trend 1: Relevant because the high-delta postpartum cases appear concentrated in a specific provider context, making provider-level practice, coding, or contractual behavior an important parent investigation path.; IP OB Dlvry Well NB (DNE) Trend 2: Relevant because this is a mother-focused inpatient maternity pattern, and rising postpartum complication admissions may reflect a concentrated subset of members needing targeted maternity case management and engagement."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T11:46:55.877771+00:00"
+  }
+}

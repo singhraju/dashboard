@@ -1,0 +1,643 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_8_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Low-volume local pockets are emerging but need targeted market review, not broad policy changes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "ob_bundling",
+          "label": "OB Bundle",
+          "type": "text"
+        },
+        {
+          "id": "separate_billing_limits",
+          "label": "Separate Billing",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_bundling": "Cesarean single-gestation maternity care is reimbursed globally when provided by one provider/TIN.",
+          "separate_billing_limits": "Overlapping maternity packages are denied; assistant cesarean delivery-only services may be separately reimbursed."
+        },
+        {
+          "payer_org": "Medica",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_bundling": "Medica pays either global OB package or individual maternity components, not both.",
+          "separate_billing_limits": "Same-day E/M, 99116/99135, and Medicare qualifying circumstances are not separately reimbursed."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_bundling": "Separately reimbursable, except with 01968; primary labor neuraxial code required for add-on cesarean anesthesia.",
+          "separate_billing_limits": "Required with 01967-01969; not reimbursed alone, with 01960, or with 01968."
+        },
+        {
+          "payer_org": "Providence Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_bundling": "No OB-specific bundle; cesarean anesthesia paid separately under base-plus-time, integral services bundled.",
+          "separate_billing_limits": "Separate billing limited to 01968/01969 with 01967; integral, standby, modifiers, and qualifying codes denied."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_bundling": "United bundles routine delivery, global OB, postpartum, and included cesarean services; limited separate reimbursement.",
+          "separate_billing_limits": "Included OB antepartum, delivery, and postpartum services are not separately reimbursable."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "2022-09-08",
+        "evidence": "Maternity services are reimbursed as a global obstetric package when antepartum, delivery, and postpartum components are provided by one provider or TIN. Cesarean delivery of a single gestation is included in the global package, and duplicate or overlapping maternity claims may be denied or recouped. Separate reimbursement is limited to specific exceptions, including assistant-surgeon delivery-only services for cesarean deliveries when properly billed.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59430"
+          ],
+          "related_codes": [],
+          "required_modifiers": [
+            "25"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "same claim"
+          ],
+          "utilization_limits": [
+            "once per pregnancy",
+            "13 routine prenatal visits",
+            "90-day postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [
+            "GA: ultrasound and two NSTs included",
+            "KY: ultrasound included",
+            "OH: >2 ultrasounds limited",
+            "VA: >2 ultrasounds limited"
+          ],
+          "provider_role_restrictions": [
+            "assistant surgeon cesarean only"
+          ],
+          "exemptions": [
+            "problem-oriented diagnosis",
+            "high-risk active pregnancy with Modifier 25",
+            "conditions unrelated to pregnancy",
+            "maternal or fetal echocardiography",
+            "amniocentesis"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960319580006",
+        "payer_name": "Medica",
+        "policy_title": "Anesthesia",
+        "tags": [],
+        "effective_date": "10/01/1998",
+        "evidence": "Cesarean-related anesthesia is reimbursed under anesthesia coding rules rather than by DRG name. The policy allows cesarean delivery anesthesia to be billed with 01967 and 01968 when neuraxial labor analgesia continues into cesarean delivery, and it disallows separate surgical use of epidural insertion-only codes.",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/anesthesia-policy.pdf?la=en&hash=2CDDB76A6EE42EA5DF0B1C5C855D6B26",
+        "edit_rule_facts": {
+          "target_codes": [
+            "01967",
+            "01968"
+          ],
+          "related_codes": [
+            "62320-62327",
+            "01996",
+            "99100",
+            "99116",
+            "99135",
+            "99140",
+            "00100-01999",
+            "99100-99140"
+          ],
+          "required_modifiers": [
+            "AA",
+            "AD",
+            "QK",
+            "QX",
+            "QY",
+            "QZ",
+            "P3",
+            "P4",
+            "P5"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same anesthesia session",
+            "same claim line"
+          ],
+          "utilization_limits": [
+            "15-minute rounding",
+            "900 minute units review threshold",
+            "01996 inpatient only"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Anesthesia"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician supervision required",
+            "CRNA direction rules apply"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960322580003",
+        "payer_name": "Medica",
+        "policy_title": "Obstetrical",
+        "tags": [],
+        "effective_date": "1/1/2002",
+        "evidence": "The policy does not cite this DRG label, but it is on-topic for cesarean obstetrical claims and adjudicates them through CPT global and component OB codes. Medica reimburses either a global OB code or individual component OB codes, but not both; postpartum care and certain routine services are included, assistant surgeon billing is limited to cesarean delivery-only codes with the appropriate modifier, and home delivery is excluded.",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/obstetrical-services-policy.pdf?la=en&hash=EF3E65B71B7242F2039F7EE820456616",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59200",
+            "59409",
+            "59612",
+            "11981",
+            "57170",
+            "58300",
+            "81000",
+            "81002",
+            "81001",
+            "81003",
+            "99354",
+            "99355",
+            "99356",
+            "99357",
+            "99358",
+            "99359",
+            "99415",
+            "99416",
+            "99417"
+          ],
+          "required_modifiers": [
+            "22",
+            "25",
+            "AS",
+            "80",
+            "81",
+            "82"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service as delivery",
+            "during postpartum period"
+          ],
+          "utilization_limits": [
+            "42 days postpartum",
+            "approximately 13 routine prenatal visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon on 59514 or 59620 only"
+          ],
+          "exemptions": [
+            "11981",
+            "57170",
+            "58300"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595710207",
+        "payer_name": "Point32Health",
+        "policy_title": "Anesthesia",
+        "tags": [],
+        "effective_date": "04/01/2026",
+        "evidence": "Separate anesthesia code for planned cesarean delivery; payable for cesarean cases, but not when 01968 is used.",
+        "policy_url": "https://wwwassets.point32health.org/documents/anesthesia-pp",
+        "edit_rule_facts": {
+          "target_codes": [
+            "01961",
+            "01967",
+            "01968",
+            "01969"
+          ],
+          "related_codes": [
+            "01968",
+            "01967",
+            "01969",
+            "01960"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "planned cesarean section",
+            "not with 01968",
+            "planned vaginal delivery",
+            "same labor episode",
+            "in addition to 01967"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595780200",
+        "payer_name": "Point32Health",
+        "policy_title": "Obstetrics/Gynecology",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "Cesarean global obstetrical package is paid as one all-inclusive professional rate; included antepartum, delivery, and postpartum services are not separately reimbursed.",
+        "policy_url": "https://wwwassets.point32health.org/documents/obstetrics-gynecology-pp",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622",
+            "59510"
+          ],
+          "required_modifiers": [
+            "AS",
+            "80",
+            "81",
+            "82"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "submit one claim following delivery",
+            "assistant surgeon claim",
+            "another provider rendered other components"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Public",
+            "Senior"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00003",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Anesthesia Services",
+        "tags": [],
+        "effective_date": "6/1/2026",
+        "evidence": "The policy does not establish DRG-level payment for this cesarean DRG, but it does contain obstetric anesthesia adjudication rules relevant to cesarean encounters. Cesarean anesthesia is reimbursed under anesthesia CPT rules using base-plus-time methodology, with non-Medicaid continuous obstetric anesthesia capped at 480 minutes and add-on cesarean anesthesia codes allowed with the primary labor anesthesia code even across midnight or when care transfers to another qualified provider.",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp26.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "01961",
+            "01968",
+            "01969",
+            "00100-01999"
+          ],
+          "related_codes": [
+            "01967",
+            "00100-01999",
+            "99100",
+            "99116",
+            "99135",
+            "99140",
+            "01953"
+          ],
+          "required_modifiers": [
+            "AA",
+            "AD",
+            "GC",
+            "QK",
+            "QX",
+            "QY",
+            "QZ"
+          ],
+          "excluded_modifiers": [
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "P6"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "with 01967",
+            "may cross midnight",
+            "different provider allowed",
+            "same date separate encounter",
+            "one provider per patient"
+          ],
+          "utilization_limits": [
+            "480 minutes max non-Medicaid",
+            "1 unit/15 minutes",
+            "AD limited to 3 base units",
+            "no AD time units"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "Oregon/OHP: OAR 410-130-0368 for 01967",
+            "OHP bundles 99100-99140 and P1-P6"
+          ],
+          "provider_role_restrictions": [
+            "one provider except obstetric transfer",
+            "modifier reflects physician or CRNA role",
+            "one provider except CRNA direction",
+            "teaching physician physically present"
+          ],
+          "exemptions": [
+            "01968/01969 different provider allowed",
+            "cross-midnight obstetric encounter allowed",
+            ">480 minutes with documentation",
+            "59 separate encounter",
+            "XE separate encounter",
+            "AD one time-unit on appeal"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Cesarean delivery-only professional claims are reimbursable when billed as non-global cesarean services, with included delivery services bundled and assistant-surgeon reimbursement limited to the non-global cesarean code.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59514",
+            "59510",
+            "59515"
+          ],
+          "related_codes": [
+            "59620",
+            "59618",
+            "59622"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "same group physician/QHP",
+            "global OB episode",
+            "same gestation",
+            "limited antepartum care"
+          ],
+          "utilization_limits": [
+            "single gestation",
+            "one global OB package"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon only",
+            "same group physician/QHP"
+          ],
+          "exemptions": [
+            "appropriate assistant surgeon modifier",
+            "duplicate OB services paid one provider",
+            "limited antepartum care"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Low-volume local pockets are emerging but need targeted market review, not broad policy changes",
+    "pattern_rank": 8,
+    "pattern_title": "Low-volume local pockets are emerging but need targeted market review, not broad policy changes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cesarean Section without Sterilization without CC/MCC",
+      "Other Disorders of Nervous System with MCC"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['WI', 'NH', 'VA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they address California cesarean reimbursement, while the pattern is limited to NH, ME, WI, VA, and KY."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 75887,
+    "output": 91164,
+    "breakdown": {
+      "search_keywords": {
+        "input": 539,
+        "output": 532,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 470,
+        "output": 1061,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 57353,
+        "output": 82522,
+        "calls": 9
+      },
+      "relevance_judge": {
+        "input": 3364,
+        "output": 1224,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 1041,
+        "output": 647,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 2140,
+        "output": 1978,
+        "calls": 10
+      },
+      "elevance_summary": {
+        "input": 342,
+        "output": 143,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 7839,
+        "output": 2738,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2799,
+        "output": 319,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:26:41.640374+00:00",
+    "end_time": "2026-08-24T11:31:22.143854+00:00",
+    "duration_ms": 280503,
+    "version": "2.0.0"
+  }
+}

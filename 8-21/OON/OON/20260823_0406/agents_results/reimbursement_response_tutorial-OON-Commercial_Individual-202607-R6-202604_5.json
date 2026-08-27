@@ -1,0 +1,496 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_5_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX HMO non-residential behavioral health growth is utilization-led",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "bundling_status",
+          "label": "Bundling",
+          "type": "badge"
+        },
+        {
+          "id": "volume_controls",
+          "label": "Volume Controls",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "bundling_status": "Bundles",
+          "volume_controls": "Definitive testing limited to seven classes, three monthly tests, with risk-based monitoring frequencies."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "bundling_status": "Bundles Readmissions",
+          "volume_controls": "Only original admission reimbursed for unplanned same or related readmissions within 30 days."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "bundling_status": "30-Day Bundling",
+          "volume_controls": "Enforces 30-day documentation/signature timeliness and reviews unplanned or related readmissions."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "bundling_status": "-",
+          "volume_controls": "No DRG-based volume controls identified for United Health."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082190006",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Psychological and Neuropsychological Testing",
+        "tags": [],
+        "effective_date": "2026-03-02",
+        "evidence": "Off-topic for this DRG description. The policy governs psychological and neuropsychological testing CPT billing, not inpatient DRG reimbursement or substance-use DRG payment rules.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp008-3-2-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082210005",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Prescription Medication and Illicit Drug Testing in the Outpatient Setting",
+        "tags": [],
+        "effective_date": "2026-04-24",
+        "evidence": "The policy is on-topic for substance use and dependence care, but it does not establish a DRG-specific reimbursement rule. It governs urine/oral fluid drug testing for individuals with substance abuse or dependence, with limited reimbursable scenarios and explicit frequency limits; otherwise testing is noncovered or bundled.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab070-4-24-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "80305",
+            "80306",
+            "80307",
+            "80320-80377",
+            "0007U",
+            "0011U",
+            "0051U",
+            "0054U",
+            "0079U",
+            "0082U",
+            "0093U",
+            "0227U",
+            "0328U",
+            "0517U",
+            "0518U",
+            "0519U",
+            "0520U",
+            "0587U",
+            "0603U",
+            "G0480",
+            "G0481",
+            "G0482",
+            "G0483",
+            "G0659"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same specimen",
+            "same drug/metabolites"
+          ],
+          "utilization_limits": [
+            "up to 7 drug classes",
+            "max 3 definitive/month",
+            "0-90 days 1-2/week",
+            ">90 days 1-3/month",
+            "anuric CRF blood only"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "TX"
+          ],
+          "provider_role_restrictions": [
+            "patient-specific written order",
+            "ordering physician signature",
+            "lab requisition required",
+            "treating physician rationale required"
+          ],
+          "exemptions": [
+            "state-mandated testing",
+            "commercial driver testing",
+            "urgent/emergency component",
+            "anuric Chronic Renal Failure blood specimens"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_01165",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Documentation Standards for Episodes of Care",
+        "tags": [],
+        "effective_date": "01/01/2025",
+        "evidence": "This commercial policy is a general documentation standard and does not address the requested DRG or behavioral health utilization criteria. It sets broad recordkeeping requirements for episodes of care rather than DRG-specific payment rules.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-067367-24-SRS66354 Doc Standards Episodes of Care.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [
+            "FL",
+            "MD",
+            "TX",
+            "WA"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_01198",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "The health plan generally bundles unplanned same or related diagnosis readmissions within 30 days to the original admission for DRG or case-rate inpatient facilities, but admissions for medical treatment of substance abuse are excluded from this readmission policy.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-inpatient-readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge",
+            "same or related diagnoses",
+            "same facility agreement",
+            "same tax identification number",
+            "common ownership"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Case rate"
+          ],
+          "state_specific_rules": [
+            "Maryland not subject"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "substance abuse"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00044",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Standards for Episodes of Care C-20003",
+        "tags": [],
+        "effective_date": "2025-07-23",
+        "evidence": "This is a general documentation standards policy, not a DRG-specific reimbursement rule. It applies across episodes of care in professional and facility settings, including behavioral health claims, and requires documentation that is complete, legible, dated, timely, and supportive of the services billed.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Documentation%20Standards%20for%20Episodes%20of%20Care%20C-20003.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "California: recorded start and stop times required for time-based procedures due to delayed implementation",
+            "Virginia: recorded start and stop times required for time-based procedures due to delayed implementation; facility providers not subject"
+          ],
+          "provider_role_restrictions": [
+            "Each entry must identify the physician, qualified provider, or supervising provider"
+          ],
+          "exemptions": [
+            "California recorded start and stop times delayed implementation",
+            "Virginia recorded start and stop times delayed implementation; facility providers exempt"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00085",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions C-17002",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "Substance abuse admissions are excluded from this inpatient readmissions policy, so the 30-day unplanned readmission bundling rule does not apply to these admissions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Inpatient%20Readmissions%20C-17002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge",
+            "same or related diagnosis"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Case Rate"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "cancer",
+            "substance abuse",
+            "rehabilitation",
+            "transplants",
+            "transfer",
+            "against medical advice",
+            "planned readmission",
+            "leave of absence"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00040",
+        "payer_name": "United Health",
+        "policy_title": "Drug Testing Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Off-topic for the requested DRG pattern. The policy governs presumptive drug testing, definitive drug testing, and specimen validity testing on professional claims, not DRG-based inpatient reimbursement for alcohol or drug abuse/dependence cases.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Drug-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00069",
+        "payer_name": "United Health",
+        "policy_title": "Nonphysician Health Care Professionals Billing Evaluation and Management Codes Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-01-12",
+        "evidence": "Off-topic for this DRG pattern. The policy addresses reimbursement for E/M CPT codes billed by nonphysician health care professionals and does not provide DRG-specific adjudication for alcohol or drug abuse dependence cases.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Nonphysician-Healthcare-Professionals-Billing-EM-Codes-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 8,
+    "policies_successful": 8,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: TX HMO non-residential behavioral health growth is utilization-led",
+    "pattern_rank": 5,
+    "pattern_title": "TX HMO non-residential behavioral health growth is utilization-led",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+    ],
+    "total_policies_found": 8,
+    "successful_extractions": 8,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 8 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/8 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 66266,
+    "output": 26787,
+    "breakdown": {
+      "search_keywords": {
+        "input": 529,
+        "output": 217,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 585,
+        "output": 841,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 54344,
+        "output": 22206,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 3568,
+        "output": 1606,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 1015,
+        "output": 521,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1154,
+        "output": 855,
+        "calls": 7
+      },
+      "elevance_summary": {
+        "input": 390,
+        "output": 173,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4681,
+        "output": 368,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:23:22.725807+00:00",
+    "end_time": "2026-08-23T05:24:20.911013+00:00",
+    "duration_ms": 58185,
+    "version": "2.0.0"
+  }
+}

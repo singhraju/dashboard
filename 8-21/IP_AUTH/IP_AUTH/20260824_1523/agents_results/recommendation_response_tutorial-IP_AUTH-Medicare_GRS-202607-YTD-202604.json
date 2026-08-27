@@ -1,0 +1,201 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a claims-processing correction for inpatient AUTH_CODE_DISTRIBUTION and Not Mapped facility claims in CA, VA, GA, OH, and PA by reconciling authorizations to paid actuals, fixing facility crosswalks, reprocessing misclassified claims, and refreshing provider and DRG views for HUNTINGTON HEALTH, Other Disorders of Nervous System with MCC, Kidney and Urinary Tract Infections without MCC, and Cellulitis without MCC before any denial-enforcement, site-of-care, or contract action.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION contributed +$2.2M.",
+          "VA AUTH_CODE_DISTRIBUTION added +$1.0M.",
+          "VA Not Mapped claims added +$375K on 25 more admissions.",
+          "GA Not Mapped added about +$180K across UTI and Ungroupable drivers.",
+          "OH and PA Not Mapped added +$101K in high-paid cases.",
+          "Cards are flagged requires_validation_before_action and auth_or_mapping_shift."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA PPO Local acute-hospital provider action plan that audits auth-to-claim matching and denial enforcement, reviews site-of-care and preventive opportunities for UCI Medical Center and Huntington Health admission growth, and performs contract remediation plus contractual claims-processing compliance review for Hoag Hospital Newport Beach, prioritizing Kidney and Urinary Tract Infections without MCC and Other Disorders of Nervous System with MCC.",
+        "evidence": [
+          "Spend is concentrated in UCI Medical Center, Huntington Health, and Hoag Hospital Newport Beach.",
+          "UCI Medical Center is volume-led with more admissions.",
+          "Huntington Health is volume-led with more admissions.",
+          "Hoag Hospital Newport Beach is mixed volume and unit cost.",
+          "Kidney and Urinary Tract Infections without MCC is a recurring driver.",
+          "Other Disorders of Nervous System with MCC is a recurring driver.",
+          "All source cards include pa_required_code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a focused CA IP Med/Surg case-review policy at HUNTINGTON HEALTH, UCI MEDICAL CENTER, HOAG HOSPITAL NEWPORT BEACH, METHODIST HOSPITAL OF SO CA - PHYSICAL REH, and STARBURST HEALTHCARE, INC. requiring diagnosis- and DRG-specific UM review, prior-authorization verification, level-of-care review, and DRG-coding validation for SEPSIS UNSPECIFIED ORGANISM, UTI SITE NOT SPECIFIED, CRITICAL ILLNESS MYOPATHY, OTHER TOXIC ENCEPHALOPATHY, ACUTE RESPIRATORY FAIL W/HYPOXIA, tracheostomy/mechanical ventilation, and Infectious and Parasitic Diseases with O.R. Procedures with MCC admissions.",
+        "evidence": [
+          "CA IP Med/Surg total paid increased about $1.7M.",
+          "UTI SITE NOT SPECIFIED added about $261K on 31 more admissions.",
+          "CRITICAL ILLNESS MYOPATHY added about $160K with paid per admit up.",
+          "HUNTINGTON HEALTH tracheostomy ventilation case paid about $131K.",
+          "UCI MEDICAL CENTER sepsis O.R. MCC cases added about $103K."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA PPO Local post-acute authorization and discharge-disposition policy for PA-required SNF - FREE STANDING, Physical Rehab, and NF cases that requires diagnosis-specific and service-specific level-of-care review, alternate discharge location review, and auth-to-claim reconciliation for Other Disorders of Nervous System with MCC, Cellulitis with MCC, SEPSIS UNSPECIFIED ORGANISM, OTHER TOXIC ENCEPHALOPATHY, and UTI SITE NOT SPECIFIED.",
+        "evidence": [
+          "CA SNF - FREE STANDING added volume across major driver cells.",
+          "CA Physical Rehab growth centered on Other Disorders of Nervous System with MCC.",
+          "CA NF added new or rare neurologic and sepsis-related stays.",
+          "CA NF intensity increased for cellulitis and OTHER TOXIC ENCEPHALOPATHY.",
+          "Key driver cells were PA-required Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a focused policy audit for LEHIGH VALLEY HOSPITAL - CEDAR CREST and LEE MEMORIAL HOSPITAL to verify prior authorization and contract-compliant payment on IP Med/Surg admissions, and apply site-of-care and discharge step-down review for Kidney and Urinary Tract Infections without MCC, NON-ST ELEVATION MYOCARDIAL INFARCT, Heart Failure and Shock with MCC, respiratory failure, and sepsis cases.",
+        "evidence": [
+          "OH acute hospital added +$0.5M, led by Lehigh Valley and Lee Memorial.",
+          "PA Lehigh Valley added +$305K with paid per admit up about $6.2K.",
+          "Rare IP Med/Surg cases added +$306K, including myocardial infarct and heart failure.",
+          "Main operational drivers occur in pa_required_code = Y settings."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a VA PPO Local Medicare GRS policy review that establishes acute-to-SNF leakage controls from ACUTE HOSPITAL to SNF - FREE STANDING, tightens initial and concurrent review KPIs for these prior-auth services, and audits prior-auth-to-claim matching, denial enforcement, and SNF claims processing against contractual obligations.",
+        "evidence": [
+          "VA ACUTE HOSPITAL PPO Local added 46 admissions with essentially flat paid per admit.",
+          "VA free-standing SNF PPO Local added 37 admissions and higher paid per admit.",
+          "Both services are prior-auth required and tagged for auth-to-claim validation."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Perform case-level authorization enforcement, auth-to-claim matching, and contractual payment audit for PA-required low-volume outliers in OH/IN/ME SNF, CT acute Ungroupable, ME CRITICAL ACCESS Cellulitis without MCC, and CA/PA craniotomy stroke admissions at UCI Medical Center and Lehigh Valley Hospital - Cedar Crest.",
+        "evidence": [
+          "OH SNF Cellulitis with MCC is PA-required and auth_dimension_present.",
+          "CT acute Ungroupable outlier is a single admission.",
+          "ME CRITICAL ACCESS Cellulitis without MCC came from two admissions.",
+          "Craniotomy stroke outliers occurred at UCI Medical Center and Lehigh Valley Hospital."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 7,
+        "pattern": "GA shows a recurring cellulitis and UTI pathway problem across acute and post-acute care",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly driven by AUTH_CODE_DISTRIBUTION shifts, multiple cards are flagged auth_or_mapping_shift, and the recommended action is to audit auth-to-claim mapping before any business intervention.; IP MedSurg (DNE) Trend 9: Highly relevant because a material share of the increase sits in Not Mapped facility buckets, indicating claims processing, reprocessing, or facility crosswalk/classification issues rather than confirmed true utilization change.; IP MedSurg (DNE) Trend 3: The variance is concentrated in specific inpatient DRGs/diagnosis groupings such as Other Disorders of Nervous System with MCC, Kidney and Urinary Tract Infections without MCC, and Cellulitis without MCC, so diagnosis-level isolation is clearly part of the pattern.; IP MedSurg (DNE) Trend 1: There is notable provider concentration, including HUNTINGTON HEALTH and named hospital examples in the source cards, making provider-isolation a relevant secondary parent rule once mapping issues are corrected.; IP MedSurg (DNE) Trend 4: Facility/site-of-care classification is central to the issue because Not Mapped, Physical Rehab, and Acute Hospital settings are involved; this means service/setting isolation is relevant after reclassification validates the data."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in three acute hospital providers in CA PPO Local, with UCI, Huntington, and Hoag driving most of the spend increase, making provider-level variation the primary parent rule.; IP MedSurg (DNE) Trend 3: Recurring DRG/diagnosis drivers are called out directly, especially Kidney and Urinary Tract Infections without MCC and Other Disorders of Nervous System with MCC, so diagnosis concentration is highly relevant.; IP MedSurg (DNE) Trend 7: The increase is mainly admissions-led for UCI and Huntington, and the recommended next step specifically calls for admission source and level-of-care review, aligning with admission/discharge source-location research.; IP MedSurg (DNE) Trend 10: Hoag shows a meaningful increase in paid per admit alongside more admissions, and the pattern recommends contract and reimbursement review, making reimbursement method a strong fit.; IP MedSurg (DNE) Trend 8: All source cards include pa_required_code = Y and auth-related flags/business terms, so reviewing whether authorization denials are being enforced through auth-to-claim matching is relevant."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is explicitly concentrated in a narrow set of diagnoses and DRG-linked conditions, especially sepsis, UTI, critical illness myopathy, toxic encephalopathy, and acute respiratory failure, which makes diagnosis-level investigation the primary parent rule.; IP MedSurg (DNE) Trend 1: The spend increase is also concentrated at a small number of named CA providers such as Huntington Health, UCI Medical Center, Hoag Hospital Newport Beach, Methodist Hospital rehab, and Starburst Healthcare, supporting provider-driver review.; IP MedSurg (DNE) Trend 6: The pattern narrative directly calls for utilization management review of admission appropriateness, ICU escalation, and potential avoidable severity progression, which aligns closely to reviewing UM KPIs and PAV waterfall drivers.; IP MedSurg (DNE) Trend 4: Several major contributors are specific high-intensity inpatient services/DRGs, including tracheostomy with prolonged mechanical ventilation and infectious/parasitic disease cases with O.R. procedures and MCC, so service-level review is relevant.; IP MedSurg (DNE) Trend 7: The recommendation to review transfer patterns and the presence of ER-admit and facility-type differences suggest admission source/location and escalation pathway analysis is relevant, even if the issue is not primarily elective volume."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 4: The pattern is explicitly a post-acute site-of-care shift across SNF, NF, and rehab, so service-level review is highly relevant to level-of-care selection and post-acute placement.; IP MedSurg (DNE) Trend 7: Pattern details and next steps specifically call for review of discharge disposition rules and post-acute management, which aligns with admission/discharge source/location research.; IP NF (DNE) Trend 3: NF spend is concentrated in neurologic, sepsis, cellulitis, and UTI diagnoses, making diagnosis-level drivers a core parent trend for this pattern.; IP NF (DNE) Trend 8: Many key driver cells are authorization-required (Y), and the recommendation directly calls for reviewing SNF and rehab authorization criteria and enforcement.; IP MedSurg (DNE) Trend 4: Physical Rehab is a major driver with admissions and paid per admit rising, so service/site-of-care review is relevant for rehab use and placement decisions."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is strongly concentrated in a small set of providers, especially Lehigh Valley Hospital - Cedar Crest and Lee Memorial Hospital, which the pattern explicitly identifies as the main spend drivers.; IP MedSurg (DNE) Trend 3: The pattern includes a meaningful high-cost case-mix tail tied to specific inpatient diagnoses/DRGs such as NON-ST ELEVATION MYOCARDIAL INFARCT, Heart Failure and Shock with MCC, respiratory failure, sepsis, and Kidney and Urinary Tract Infections without MCC.; IP MedSurg (DNE) Trend 10: PA shows clear paid-per-admit pressure at Lehigh Valley, and the recommended action explicitly includes reviewing reimbursement terms, making reimbursement method/contractual review highly relevant.; IP MedSurg (DNE) Trend 6: OH acute hospital spend is volume-led with admissions up, and the recommendation calls for review of admission drivers and case management, which aligns with utilization management KPI/PAV review.; IP MedSurg (DNE) Trend 8: The main operational drivers all occur in authorization-required settings (pa_required_code = Y) and include auth-to-claim validation as a business term, so checking enforcement of authorization controls is a reasonable secondary rule."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: Most directly matches the pattern's inpatient-to-SNF site-of-care shift; the recommended next step is to trace inpatient discharges to SNF and review discharge planning/admission-discharge pathways.; IP MedSurg (DNE) Trend 6: Acute hospital and SNF spend both rose mainly from more admissions in auth-required services, pointing to utilization management performance and potentially avoidable variance across the continuum.; IP MedSurg (DNE) Trend 8: Both source cards are flagged as authorization-required and include auth-to-claim validation as a business term, making enforcement of authorization decisions highly relevant.; IP MedSurg (DNE) Trend 10: SNF paid per admit increased materially, so reimbursement method or payment logic may be contributing to the post-acute unit-cost increase in addition to utilization.; IP MedSurg (DNE) Trend 4: The variance is concentrated in specific service settings\u2014acute hospital and free-standing SNF\u2014so reviewing service/site-of-care drivers is relevant to explain the cross-continuum cost growth."
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The acute hospital, critical access, and rare craniotomy increases are concentrated in a small set of hospitals/providers such as UCI Medical Center and Lehigh Valley Hospital, which fits provider-isolated variance needing targeted review.; IP MedSurg (DNE) Trend 3: The IP Med/Surg portion is tightly tied to specific diagnoses/DRGs, especially rare craniotomy stroke cases and cellulitis without MCC, supporting diagnosis-level triage rather than broad policy action.; IP NF (DNE) Trend 3: The SNF/NF pressure is concentrated in a narrow set of DRGs such as Cellulitis with MCC and Ungroupable across small markets, making diagnosis/DRG-specific review highly relevant.; IP NF (DNE) Trend 8: Most operational outliers are PA-required with explicit auth_dimension_present flags and business terms calling for auth-to-claim validation, so targeted authorization enforcement review is a strong fit for the SNF/NF exceptions.; IP MedSurg (DNE) Trend 9: The one-case Ungroupable acute outlier and other low-baseline paid spikes warrant claims processing/reprocessing validation to rule out coding, grouping, or payment artifacts before escalation."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T20:28:42.717514+00:00"
+  }
+}

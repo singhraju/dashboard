@@ -1,0 +1,150 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_2_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA acute hospital spend is rising through both provider mix and authorization mix",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_relevance",
+          "label": "DRG Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CA acute hospital spend is rising through both provider mix and authorization mix",
+    "pattern_rank": 2,
+    "pattern_title": "CA acute hospital spend is rising through both provider mix and authorization mix",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System without MCC",
+      "Intracranial Vascular Procedures with Principal Diagnosis of Hemorrhage with MCC",
+      "Medical Back Problems without MCC",
+      "Ungroupable"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/1 policies quarantined (100%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00016:Emergency Room Services]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 9820,
+    "output": 4113,
+    "breakdown": {
+      "search_keywords": {
+        "input": 558,
+        "output": 326,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 342,
+        "output": 209,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 7718,
+        "output": 3000,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 493,
+        "output": 203,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 709,
+        "output": 375,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T08:48:45.866222+00:00",
+    "end_time": "2026-08-23T08:49:15.649306+00:00",
+    "duration_ms": 29783,
+    "version": "2.0.0"
+  }
+}

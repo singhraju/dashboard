@@ -1,0 +1,205 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R6-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R6-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA PPO Local spend is rising through a concentrated acute and SNF facility mix",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00027",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Lyme Disease",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9e54",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00060",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Hepatitis Testing",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390c",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01835",
+        "payer_name": "United Health",
+        "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA PPO Local spend is rising through a concentrated acute and SNF facility mix",
+    "pattern_rank": 3,
+    "pattern_title": "CA PPO Local spend is rising through a concentrated acute and SNF facility mix",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Other Disorders of Nervous System with CC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 21911,
+    "output": 2566,
+    "breakdown": {
+      "search_keywords": {
+        "input": 542,
+        "output": 309,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 442,
+        "output": 669,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 19701,
+        "output": 1346,
+        "calls": 3
+      },
+      "policy_recommendations": {
+        "input": 1226,
+        "output": 242,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T16:11:40.314205+00:00",
+    "end_time": "2026-08-24T16:12:00.962135+00:00",
+    "duration_ms": 20647,
+    "version": "2.0.0"
+  }
+}

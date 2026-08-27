@@ -1,0 +1,205 @@
+{
+  "job_id": "tutorial-OON-Medicaid-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-OON-Medicaid-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Children's hospital admissions in TX and NJ are a small but concentrated cost pocket",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CNC_00679",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "GI Pathogen Nucleic Acid Detection Panel Testing Policy: CP.MP.209",
+        "tags": [],
+        "effective_date": "06/21",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/Prov/policies/NJ_CP.MP.209%20GI%20Pathogen%20Nucleic%20Acid%20Detection%20Panel%20Testing_Policy_2022.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HORIZON_BCBS_NJ_28593990305",
+        "payer_name": "Horizon NJ Health - New Jersey",
+        "policy_title": "Daily Maximum Units for Surgical Pathology and Microscopic Examination",
+        "tags": [],
+        "effective_date": "2019-10-14",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.horizonnjhealth.com/for-providers/resources/policies/reimbursement-policies-guidelines/daily-maximum-units-for-surgical",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_NJ_28594111000",
+        "payer_name": "United Health",
+        "policy_title": "Diagnostic Testing for Inflammatory Bowel Disease Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-DT-Inflammatory-Bowel-Disease.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Children's hospital admissions in TX and NJ are a small but concentrated cost pocket",
+    "pattern_rank": 7,
+    "pattern_title": "Children's hospital admissions in TX and NJ are a small but concentrated cost pocket",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Inflammatory Bowel Disease without CC/MCC",
+      "Other Injury, Poisoning and Toxic Effect Diagnoses with MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX', 'NJ'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 15082,
+    "output": 5195,
+    "breakdown": {
+      "search_keywords": {
+        "input": 541,
+        "output": 887,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 572,
+        "output": 1502,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 12806,
+        "output": 2677,
+        "calls": 3
+      },
+      "policy_recommendations": {
+        "input": 1163,
+        "output": 129,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T05:06:48.638062+00:00",
+    "end_time": "2026-08-24T05:07:13.613990+00:00",
+    "duration_ms": 24975,
+    "version": "2.0.0"
+  }
+}

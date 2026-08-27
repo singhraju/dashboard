@@ -1,0 +1,229 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Reprocess PPO Local claims and reconcile authorizations to actuals for GA, CA, CT, ME, NY, and UNATTRIBUTED records with Not Mapped, Null or Blank, or -3 facility, DRG, or procedure values, prioritizing CT IP Med/Surg and NF cases tied to G9340, D6489, and CARDIAC RMS LLC.",
+        "evidence": [
+          "GA Not Mapped facility claims added 3,535 claims.",
+          "CA Not Mapped facility claims added 2,922 claims.",
+          "CT includes Not Mapped facility, Not Mapped DRG, Null or Blank procedure.",
+          "NF findings show G9340, D6489, -3, and Null or Blank values.",
+          "Clinical buckets recur in NF, OP Mgmt Oth Misc, and OP Surg."
+        ],
+        "peer_benchmarking": [
+          "Humana: General modifier review documented; no pattern-specific mapping policy cited."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a GA PPO Local ACUTE HOSPITAL provider-and-claims audit for Not Mapped, Other Circulatory System Diagnoses with CC, and Nonspecific Cerebrovascular Disorders with CC to verify interim, first, and final bill handling, final-claim contractual adjudication and reimbursement methodology, provider-specific concentration, elective admission growth, and authorization denial enforcement.",
+        "evidence": [
+          "Validation is needed because growth is overwhelmingly in Not Mapped acute claims.",
+          "Pattern impact is rising on both volume and unit cost.",
+          "Recommended next step is a major hospital and claim-type drilldown.",
+          "Smaller mapped signals appear in circulatory and cerebrovascular cases."
+        ],
+        "peer_benchmarking": [
+          "Humana summary table has no pattern relevance, policy focus, or appeals documentation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a contractual claims-processing review of OH PPO Local ACUTE HOSPITAL Not Mapped claims and targeted cases from DEACONESS ILLINOIS MEDICAL CENTER and CONEMAUGH MEMORIAL MEDICAL CENTER to confirm DRG and diagnosis assignment, reimbursement methodology, authorization-denial enforcement, and manual-adjudication edits, then pursue contract remediation for confirmed outlier providers.",
+        "evidence": [
+          "OH acute hospital spend added +$2.6M, mainly in Not Mapped claims.",
+          "The main OH acute bucket had 4,400 more claims.",
+          "DEACONESS ILLINOIS MEDICAL CENTER added about +$61K on 2 claims.",
+          "CONEMAUGH MEMORIAL MEDICAL CENTER contributed about +$24K in PA."
+        ],
+        "peer_benchmarking": [
+          "United Health requires correct primary diagnosis reporting and ICD-10-CM sequencing.",
+          "Humana lists no documented DRG rule, appeals process, or diagnosis-reporting requirement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement targeted outpatient management review for GA OP Mgmt Oth Misc claims with N186/Medicine and Z5112/Chemotherapy Drugs, enforce authorization denials on these pathways, and conduct provider-level review of SOUTH AUGUSTA DIALYSIS CLINIC LLC.",
+        "evidence": [
+          "GA OP Mgmt Oth Misc added +$1.6M overall.",
+          "N186 with Medicine added +$912K on 216 more claims.",
+          "Z5112 with Chemotherapy Drugs added +$648K on 37 more claims.",
+          "SOUTH AUGUSTA DIALYSIS CLINIC LLC added about +$26K in this area.",
+          "Recurring Not Mapped classification requires coding confirmation."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a GA PPO Local non-acute audit that isolates provider outliers, compares referral destinations, matches authorizations to paid claims, and validates contract-based reimbursement across DIALYSIS, SNF - FREE STANDING, Physical Rehab, and CRITICAL ACCESS, starting with SOUTH AUGUSTA DIALYSIS CLINIC LLC and the Aftercare, Musculoskeletal System and Connective Tissue with CC and Nonspecific Cerebrovascular Disorders with CC pathways.",
+        "evidence": [
+          "GA dialysis added +$917K on 216 more claims.",
+          "GA SNF added +$252K, mainly in musculoskeletal aftercare.",
+          "GA physical rehab added +$129K across musculoskeletal aftercare and cerebrovascular recovery cases.",
+          "GA critical access added +$116K, concentrated in musculoskeletal aftercare.",
+          "SOUTH AUGUSTA DIALYSIS CLINIC LLC is the named impacted dialysis provider."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a focused IP Med/Surg payment-integrity review of catastrophic claims tied to MERITUS MEDICAL CENTER INC, DEACONESS ILLINOIS MEDICAL CENTER, CONEMAUGH MEMORIAL MEDICAL CENTER, and COMMONSPIRIT - PENROSE HOSPITAL, requiring itemized bill review plus validation of DRG assignment, primary diagnosis sequencing, procedure completeness for Null or Blank/-3 fields, claim processing, and authorization status where applicable for ECMO/tracheostomy ventilation, severe sepsis ventilation, and major bowel procedure admissions.",
+        "evidence": [
+          "Rare IP Med/Surg cases added about +$510K from a small number of claims.",
+          "MERITUS MEDICAL CENTER INC had an ECMO/tracheostomy claim with Null or Blank procedure.",
+          "DEACONESS ILLINOIS MEDICAL CENTER severe sepsis ventilation claim used Null or Blank procedure.",
+          "COMMONSPIRIT - PENROSE HOSPITAL blood-forming organs surgical claim used procedure -3.",
+          "CONEMAUGH MEMORIAL MEDICAL CENTER bowel procedure claim used Null or Blank procedure."
+        ],
+        "peer_benchmarking": [
+          "Buckeye Health Plan validates inpatient sepsis DRGs; unsupported records may trigger denial or adjustment.",
+          "Premera Blue Cross requires infection and organ dysfunction documentation for inpatient sepsis DRG payment.",
+          "United Health applies primary diagnosis coding and sequencing edits at claim level."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a CT Medicare GRS PPO Local reimbursement audit for ACUTE HOSPITAL and HOME HEALTH - FREESTANDING claims, beginning with MERITUS MEDICAL CENTER INC, to confirm contractual adjudication, reimbursement methodology or case-rate changes, and authorization-denial enforcement.",
+        "evidence": [
+          "CT acute hospital added +$308K with 6 fewer claims.",
+          "Acute hospital paid per admit increased about +$2.3K.",
+          "CT home health added +$71K with 33 fewer claims.",
+          "Home health paid per admit increased about +$1.1K.",
+          "Repeated delta concentration flag on both mapped facilities.",
+          "Rendering provider shown: MERITUS MEDICAL CENTER INC."
+        ],
+        "peer_benchmarking": [
+          "Humana reduces technical CT payment 15% for noncompliant equipment and requires modifier CT."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted PPO Local SNF - FREE STANDING policy audit in CA, PA, NY, and OH for Aftercare, Musculoskeletal System and Connective Tissue with CC, Nonspecific Cerebrovascular Disorders with CC, and Other Circulatory System Diagnoses with CC to confirm contract-compliant payment, review SNF authorization denial enforcement, and assess alternate-discharge routing criteria.",
+        "evidence": [
+          "SNF - FREE STANDING is the isolated service setting.",
+          "CA SNF added spend despite fewer claims and higher paid per claim.",
+          "PA SNF added claims with higher paid per claim.",
+          "NY SNF volume was flat with higher paid per claim.",
+          "CA/OH SNF pressure includes circulatory and cerebrovascular recovery cases."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 4: The dominant outpatient signal is recurring OP Mgmt Oth Misc spend in Not Mapped and blank procedure/DRG buckets, so service-driver review is the closest parent rule for validating whether the increase is real utilization versus classification error.; IP MedSurg (DNE) Trend 9: The CT pattern includes Not Mapped facility, Not Mapped DRG, and Null or Blank procedure values in an inpatient Med/Surg context, which strongly fits a claims processing or reprocessing validation path rather than a pure clinical trend.; OP Oth (DNE) Trend 7: The pattern explicitly states that wrong classification can distort authorization targeting and recommends rerunning authorization reports after mapping fixes, which directly aligns to auth-to-claim match review.; IP NF (DNE) Trend 4: NF clinical findings show recurring unknown procedure values (-3, Null or Blank) tied to diagnoses such as G9340 and D6489, so service-level validation is needed before treating the NF increase as a true case-mix change.; IP MedSurg (DNE) Trend 4: A meaningful share of spend growth sits in CT inpatient-style Not Mapped/blank service buckets, making service-driver review highly relevant for confirming whether misclassification is inflating IP Med/Surg variance."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 9: The increase is overwhelmingly concentrated in a Not Mapped acute hospital bucket, and the recommended next step is to validate claim type/classification first. That makes claim frequency/status and possible claims processing or reprocessing issues highly relevant.; IP MedSurg (DNE) Trend 10: This is a mixed volume and unit-cost pattern, with paid per admit up materially in the main GA acute bucket. The pattern explicitly calls for review of reimbursement changes, so reimbursement method is a top parent rule.; IP MedSurg (DNE) Trend 1: The pattern recommends a GA acute hospital drilldown by major hospital, and downstream routing includes network financial review. That aligns closely with testing whether variance is isolated to a subset of providers and/or contractual arrangements.; IP MedSurg (DNE) Trend 7: Claims are up substantially, and the next step includes reviewing admission drivers and inpatient status. That directly fits the rule focused on admission/discharge source-location and elective versus nonelective volume shifts.; IP MedSurg (DNE) Trend 3: Although Not Mapped dominates, there are additional mapped signals in circulatory and cerebrovascular DRGs. This supports diagnosis-level review to determine whether part of the increase reflects true case-mix or management changes."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: The pattern shows paid per admit rising alongside volume, and the recommended next step explicitly calls for separating utilization growth from pricing and contracting effects, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 1: Provider touchpoints are specifically identified, including DEACONESS ILLINOIS MEDICAL CENTER and CONEMAUGH MEMORIAL MEDICAL CENTER, so assessing whether variance is concentrated in a subset of providers is a direct fit.; IP MedSurg (DNE) Trend 3: The pattern includes DRG and diagnosis signals such as Not Mapped, septicemia/severe sepsis, bowel procedures, and Other Circulatory System Diagnoses with CC, supporting diagnosis-level review for coding or case-severity shifts.; IP MedSurg (DNE) Trend 9: The dominant OH increase is concentrated in a Not Mapped acute bucket and requires classification validation before intervention, which aligns with checking claims processing or reprocessing against contractual standards.; IP MedSurg (DNE) Trend 6: Claims are materially up in OH and the pattern is routed to UM operations, so evaluating whether the increase reflects utilization-management KPI changes or avoidable utilization is important."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 26,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 3: The variance is highly concentrated in a small diagnosis set\u2014especially N186 (renal) and Z5112 (chemotherapy encounter)\u2014which matches a diagnosis-driver investigation.; OP Oth (DNE) Trend 4: The increase is also isolated to specific outpatient services/procedures, mainly Medicine and Chemotherapy Drugs, with both claim volume and paid per claim rising.; OP Oth (DNE) Trend 1: A named provider signal at SOUTH AUGUSTA DIALYSIS CLINIC LLC suggests the variance may be concentrated in a subset of providers and warrants provider-level review.; OP Oth (DNE) Trend 7: The recommended next step explicitly calls for UM review and authorization refinement, making auth-to-claim enforcement a relevant parent rule for this outpatient specialty pattern.; OP IV Thrpy - Oncly (DNE) Trend 4: The chemotherapy-related subpattern is specifically tied to Chemotherapy Drugs in the outpatient setting, so the oncology IV therapy service-driver rule is directly relevant to that component."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 1: The pattern is a broad GA non-acute facility cost increase, so the first priority is isolating which dialysis, SNF, rehab, and critical access providers are driving the higher utilization and higher paid amounts.; IP NF (DNE) Trend 4: This is fundamentally a site-of-care and service-setting mix issue across multiple non-acute facility types, making service-driver review directly relevant.; IP NF (DNE) Trend 7: The recommended action explicitly calls for reviewing referral flow; admission/discharge source and location are the closest parent-rule lens for understanding changing routing into SNF, rehab, and other non-acute settings.; IP NF (DNE) Trend 8: A coordinated UM response and comparison of authorization criteria are central to the pattern, so reviewing auth-to-claim matching is highly relevant.; IP NF (DNE) Trend 10: Paid per admit/claim increased across several facility types, so reimbursement method and contract payment mechanics are a key parent-rule area to test."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The increase is concentrated in a narrow set of catastrophic IP Med/Surg services/DRGs such as ECMO/tracheostomy with prolonged ventilation, severe sepsis with ventilation, and major bowel procedures, with paid per admit sharply up and volume not material.; IP MedSurg (DNE) Trend 3: Specific diagnosis codes (S06331A, A419, K6389, D649) are repeatedly identified as key drivers, so diagnosis-level severity and coding validation is central to understanding the spike.; IP MedSurg (DNE) Trend 1: Several of the severe high-cost cases are linked to a small subset of facilities/providers, indicating provider-level concentration rather than a broad network-wide utilization pattern.; IP MedSurg (DNE) Trend 9: The pattern explicitly recommends case-level financial and coding review, including validation of high-cost single claims and handling of blank or unknown procedure values, which aligns with checking claim processing/reprocessing.; IP MedSurg (DNE) Trend 10: Recommended review includes stop-loss or other high-cost claim handling, making reimbursement method review relevant for isolated catastrophic inpatient claims."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP HH DME (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Most relevant for the acute hospital portion of the pattern because spend increased by about $308K despite 6 fewer claims, with avg paid per admit up about $2.3K. That points directly to reimbursement method, contract terms, or case-rate/payment logic rather than utilization.; IP MedSurg (DNE) Trend 9: Highly relevant because the recommended next step explicitly calls for review of payment edits and possible claims processing or reprocessing issues. Acute hospital unit-cost inflation with lower volume fits a claim status/frequency or contractual adjudication review.; OP HH DME (DNE) Trend 8: Most relevant for the home health portion of the pattern because home health spend increased by about $71K even with 33 fewer claims, and avg paid per admit rose by about $1.1K. That is a classic reimbursement-method signal rather than a volume-driven pattern.; IP MedSurg (DNE) Trend 1: Relevant because the acute hospital variance may be concentrated in a smaller provider subset or provider-specific contract arrangement. The repeated delta concentration flag and reimbursement focus make provider-level concentration an important parent rule.; OP HH DME (DNE) Trend 1: Relevant because the home health increase may also be isolated to a subset of freestanding providers or a specific contract setup. Provider-level concentration is a practical next lens after confirming reimbursement pressure."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 10: Most aligned with the pattern\u2019s strong paid-per-admit increases in SNF across CA, NY, PA, and CA/OH, indicating reimbursement methodology or contract payment terms are a primary hypothesis.; IP NF (DNE) Trend 7: Directly fits the stated post-acute discharge-routing issue; the pattern calls out SNF care-routing after inpatient discharge and emerging volume in some states.; IP NF (DNE) Trend 3: Variance is clearly concentrated in a subset of diagnoses, especially musculoskeletal aftercare, cerebrovascular recovery, and circulatory cases named as key driver codes.; IP NF (DNE) Trend 4: The increase is tightly isolated to the SNF - FREE STANDING service setting, and the pattern explicitly says this should be handled separately from acute hospital work.; IP NF (DNE) Trend 6: Relevant because the pattern is mixed volume and unit cost in several states and routes to UM operations, suggesting review of post-acute utilization management controls and avoidable SNF use."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T02:21:19.189560+00:00"
+  }
+}

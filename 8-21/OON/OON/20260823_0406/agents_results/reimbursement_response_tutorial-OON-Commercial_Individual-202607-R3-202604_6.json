@@ -1,0 +1,271 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA IP Med/Surg increase comes from a few new high-cost admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "mention_status": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Not relevant; applies same-day MPPR for certain procedures and does not mention I2109.",
+          "mention_status": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Not relevant; addresses same-day diagnostic cardiovascular and ophthalmology reductions on CMS-1500, not DRG reimbursement.",
+          "mention_status": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00024",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Multiple Procedure Payment Reduction",
+        "tags": [],
+        "effective_date": "10/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23003-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00137",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Procedure Payment Reduction C-23003",
+        "tags": [],
+        "effective_date": "04/12/2023",
+        "evidence": "Off-topic for the requested DRG/inpatient high-cost admission pattern. This policy addresses professional multiple procedure payment reduction for same-day procedures and does not mention I2109.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Procedure%20Payment%20Reduction%20C-23003.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00063",
+        "payer_name": "United Health",
+        "policy_title": "Multiple Procedure Payment Reduction (MPPR) for Diagnostic Cardiovascular and Ophthalmology Procedures Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Off-topic for this diagnosis/inpatient DRG pattern. The policy governs same-day multiple diagnostic cardiovascular and ophthalmology procedure reductions on CMS-1500 claims, not DRG payment or diagnosis-based reimbursement for this code.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-MPPR-Cardiovascular-Ophthalmology-Procedures-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: CA IP Med/Surg increase comes from a few new high-cost admissions",
+    "pattern_rank": 6,
+    "pattern_title": "CA IP Med/Surg increase comes from a few new high-cost admissions",
+    "cpt_codes_requested": [
+      "I2109"
+    ],
+    "drg_codes_requested": [
+      "Other Major Cardiovascular Procedures with MCC",
+      "Otitis Media and Upper Respiratory Infection without MCC"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/5 policies quarantined (40%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_ELV_INTERNAL_00015:Multiple Dx Cardiovascular - Professional, RP_GBD_UHC_00136:Multiple Procedure Payment Reduction (MPPR) for Diagnostic Cardiovascular and Ophthalmology Procedures, Professional]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 29719,
+    "output": 19345,
+    "breakdown": {
+      "search_keywords": {
+        "input": 536,
+        "output": 338,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 2000,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 395,
+        "output": 387,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 23472,
+        "output": 13220,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 1889,
+        "output": 2074,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 762,
+        "output": 385,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 457,
+        "output": 407,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 370,
+        "output": 240,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1400,
+        "output": 294,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:02:53.910455+00:00",
+    "end_time": "2026-08-23T05:03:47.908029+00:00",
+    "duration_ms": 53997,
+    "version": "2.0.0"
+  }
+}

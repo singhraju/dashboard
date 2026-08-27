@@ -1,0 +1,634 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-YTD-202604_1_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-YTD-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Auth code distribution shifts must be validated before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Rule",
+          "type": "badge"
+        },
+        {
+          "id": "childbirth_exception",
+          "label": "Childbirth Exception",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "childbirth_exception": "-"
+        },
+        {
+          "payer_org": "BCBS_LA",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "Requires Auth",
+          "childbirth_exception": "Inpatient hospital admissions for childbirth do not require authorization."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "childbirth_exception": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "Requires Auth",
+          "childbirth_exception": "No childbirth-specific exception; standard nonparticipating provider reimbursement rules apply."
+        },
+        {
+          "payer_org": "Florida Blue",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "childbirth_exception": "-"
+        },
+        {
+          "payer_org": "L.A. Care Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "childbirth_exception": "-"
+        },
+        {
+          "payer_org": "Premera Blue Cross",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "childbirth_exception": "-"
+        },
+        {
+          "payer_org": "State FFS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "Requires Auth",
+          "childbirth_exception": "No childbirth-specific exception stated; standard authorization and exemption rules apply."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "childbirth_exception": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589950003",
+        "payer_name": "BCBS_KC",
+        "policy_title": "COVID 19 Billing and Coding",
+        "tags": [],
+        "effective_date": "12/1/2021",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/covid-19-billing-coding.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_BCBS_LA_LA_28589730008",
+        "payer_name": "BCBS_LA",
+        "policy_title": "Appendix II: Forms",
+        "tags": [],
+        "effective_date": "2026-01",
+        "evidence": "No specific procedure code rule is stated for auth code distribution shifts. The appendix requires authorization requests to be submitted before services are rendered, with retrospective review available only when permitted and with limited exceptions to the no-phone/no-fax rule.",
+        "policy_url": "https://providers.lablue.com/-/media/Files/Providers/Professional%20Provider%20Office%20Manual/2026/Prof%20Prov%20Manual%20Section%20Appendix%20II%20-%20Forms%20pdf.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "prior authorization",
+            "retrospective review"
+          ],
+          "state_specific_rules": [
+            "LA"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "transplants",
+            "dental services covered under medical",
+            "newborn sick babies",
+            "temporary members",
+            "most out-of-state services",
+            "Carelon inpatient authorization extensions and discharges",
+            "inpatient hospital admissions in connection with childbirth"
+          ],
+          "action_types": [
+            "require_auth"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00177",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Reimbursement by Code Definition RETIRED",
+        "tags": [],
+        "effective_date": "10/24/06",
+        "evidence": "The policy does not address validation of authorization code distribution shifts. It sets Tennessee reimbursement rules for medically necessary services, including when lack of prior authorization will not cause denial because the member could not have known enrollment status, and when prior authorization is required for non-emergency services from non-participating providers.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Reimbursement%20by%20Code%20Definition%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Tennessee: reimbursement is not denied for lack of prior authorization when the member could not have known enrollment at the time of service and assignment was unknown",
+            "Tennessee: non-emergency services from a non-participating provider require prior authorization unless referred by a participating provider or required by TennCare or an Administrative Law Judge",
+            "Tennessee: referred non-participating provider reimbursement is no less than 80% of the fee schedule or contracted/negotiated rate"
+          ],
+          "provider_role_restrictions": [
+            "Health Plan Medical Director review required",
+            "participating provider referral to non-participating provider"
+          ],
+          "exemptions": [
+            "member could not have known enrollment",
+            "assignment is unknown",
+            "referred by a participating provider",
+            "service is prior authorized",
+            "directive from TennCare",
+            "Administrative Law Judge directive"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FLBL_FL_28206690003",
+        "payer_name": "Florida Blue",
+        "policy_title": "Never Event \u2013 Hospital Acquired Condition (HAC) in Inpatient Setting",
+        "tags": [],
+        "effective_date": "08/01/2021",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://files.guidewell.com/m/754fbe6b1ffe9759/original/providers-payment-policies-never-event-hospital-acquired-conditions-hac-in-inpatient-settings.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00033",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Serious Adverse Events - Inpatient Facility Services",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_114821.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_00664",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Genetic Tests Once Per Lifetime",
+        "tags": [],
+        "effective_date": "01/01/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/texas/government/Medicaid-rp/TX_WLP_CAID_RP_GeneticTests.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_00839",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Genetic Testing: Once per Lifetime",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://provider.summitcommunitycare.com/docs/gpp/AR_CAID_RP_GeneticTests.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00004",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Genetic Tests Once per Lifetime",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Laboratory%20and%20Pathology/Genetic%20Tests%20Once%20per%20Lifetime.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_LACHP_00002",
+        "payer_name": "L.A. Care Health Plan",
+        "policy_title": "Clean Claim Billing Requirements CMS 1500",
+        "tags": [],
+        "effective_date": "2025-08-12",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.lacare.org/sites/default/files/la7204_cms_1500_v2_clean_claim_edits_202511.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_LACHP_00003",
+        "payer_name": "L.A. Care Health Plan",
+        "policy_title": "Clean Claim Billing Requirements UB 04",
+        "tags": [],
+        "effective_date": "08/12/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.lacare.org/sites/default/files/la7204_ub_04_v2_clean_claim_edits_202511.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_STATE_FFS_FL_28206640003",
+        "payer_name": "State FFS",
+        "policy_title": "Medicaid Providers Who Bill on the UB-04",
+        "tags": [],
+        "effective_date": "July 2008",
+        "evidence": "The handbook does not use the phrase 'auth code distribution shifts,' but it does require prior authorization data to be validated before billing or payment. Florida Medicaid ties payment to a valid authorization number, correct payer placement of that number, and matching provider and recipient identifiers on the authorization request and claim.",
+        "policy_url": "https://ahca.myflorida.com/content/download/7032/file/RH_08_080701_UB-04_ver1_3.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "99281"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0451"
+          ],
+          "pairing_conditions": [
+            "auth number in 63A or 63B",
+            "NPI and recipient must match auth request",
+            "within 24 hours of admission",
+            "24 hours before last approved day",
+            "24 hours prior to admission",
+            "inpatient admission",
+            "primary diagnosis in same range",
+            "within 2 hours of admission",
+            "separate admission after psych transfer",
+            "same claim",
+            "delivery event",
+            "with diagnosis 630.0-677",
+            "EMTALA screening only",
+            "outpatient encounter"
+          ],
+          "utilization_limits": [
+            "3 days per psych authorization",
+            "45 inpatient days/fiscal year HMO",
+            "120 days auth validity",
+            "365 days transplant auth validity",
+            "3 days per authorization"
+          ],
+          "prior_auth_thresholds": [
+            "auth required for 290-314.9",
+            "auth required for 648.30-648.44",
+            "auth required for 630.0-677 with 72.0-74.9",
+            "no MediPass auth for 0451 with 99281",
+            "continued stay review before day 4"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MediPass",
+            "HMO",
+            "PSN",
+            "CMS Network",
+            "Florida Medicaid"
+          ],
+          "state_specific_rules": [
+            "Florida: claim denied for auth NPI mismatch",
+            "Florida: enter 10-digit auth number on UB-04",
+            "Florida: enter psych auth in 63A-63C",
+            "Florida: effective February 1 2008"
+          ],
+          "provider_role_restrictions": [
+            "treating provider requests inpatient auth",
+            "Florida physician initiates out-of-state request",
+            "transplant physician requests transplant auth",
+            "physician provider must obtain authorization",
+            "hospital must obtain inpatient authorization"
+          ],
+          "exemptions": [
+            "Medicare covered crossovers",
+            "recipient in PSN",
+            "recipient in CMS Network",
+            "EMTALA screening with 0451 and 99281",
+            "type of admission 1 or 5",
+            "recipient enrolled in HMO",
+            "recipient dually eligible for Medicare and Medicaid",
+            "alcohol or drug detoxification services"
+          ],
+          "action_types": [
+            "require_auth",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00337",
+        "payer_name": "United Health",
+        "policy_title": "Appropriate Patient Discharge Status for Type of Bill Policy, Facility",
+        "tags": [],
+        "effective_date": "2025-09-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Appropriate-Patient-Discharge-Status-Type-Bill-Policy-(F7010).pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 14,
+    "policies_successful": 14,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: Auth code distribution shifts must be validated before action",
+    "pattern_rank": 1,
+    "pattern_title": "Auth code distribution shifts must be validated before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [],
+    "total_policies_found": 14,
+    "successful_extractions": 14,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 14 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "14 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 2 source card(s) attest no state (segment scope: TX, UNATTRIBUTED, VA); searched without it rather than narrowing to ['TX']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they focus on California cesarean/childbirth authorization rules instead of the pattern's TX/UNATTRIBUTED/VA/WI authorization-distribution validation scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/14 policies quarantined (14%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/14 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_P32_CT_MA_ME_NH_28595790206:Serious Reportable Events, Serious Reportable Adverse Events and Provider Preventable Conditions, RP_GBD_UHC_00178:Appropriate Patient Discharge Status for Type of Bill Policy, Facility for Louisiana]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 208557,
+    "output": 64577,
+    "breakdown": {
+      "triage_policies": {
+        "input": 2083,
+        "output": 13683,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 195413,
+        "output": 44984,
+        "calls": 17
+      },
+      "relevance_judge": {
+        "input": 2172,
+        "output": 1163,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 988,
+        "output": 570,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1309,
+        "output": 482,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 373,
+        "output": 126,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4649,
+        "output": 2988,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1570,
+        "output": 581,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:47:26.784932+00:00",
+    "end_time": "2026-08-23T15:52:24.375676+00:00",
+    "duration_ms": 297590,
+    "version": "2.0.0"
+  }
+}

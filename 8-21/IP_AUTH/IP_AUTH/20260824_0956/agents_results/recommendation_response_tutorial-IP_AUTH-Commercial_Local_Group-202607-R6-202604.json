@@ -1,0 +1,214 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a targeted AUTH_CODE_DISTRIBUTION auth-to-claim and claims-processing audit for Commercial Local Group inpatient claims in CA, VA, NY, and OH; reprocess misclassified PA-required claims and verify authorization denial enforcement for Stanford Hospital, HENRICO DOCTORS' HOSPITAL, OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER, THE CLEVELAND CLINIC MAIN CAMPUS, and impacted DRGs including Ungroupable, Cervical Spinal Fusion with CC, and Postpartum and Postabortion Diagnoses without O.R. Procedures.",
+        "evidence": [
+          "Pattern flagged auth_or_mapping_shift and requires_validation_before_action.",
+          "AUTH_CODE_DISTRIBUTION impacts Commercial Local Group inpatient claims across CA, VA, NY, and OH.",
+          "CA affected DRGs include Ungroupable, Cervical Spinal Fusion with CC, and postpartum claims.",
+          "VA issue is concentrated at HENRICO DOCTORS' HOSPITAL.",
+          "OH and NY issues include OHIO STATE and CLEVELAND CLINIC providers."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a Yale New Haven Hospital-specific CT Commercial Local Group PPO acute inpatient policy review across authorization-required and non-authorization stays to confirm prior authorization when required, reconcile auth-to-claim matches, enforce authorization denial processing, assess initial and concurrent acute review KPIs, and validate reimbursement against contractual payment terms.",
+        "evidence": [
+          "Yale New Haven Hospital concentrates CT PPO acute inpatient spend growth.",
+          "Authorization-required CT PPO acute claims added about $4.2M with higher admissions and paid/admit.",
+          "Non-authorization CT PPO acute claims added about $1.1M with higher admissions and paid/admit.",
+          "Pattern flags include auth_dimension_present and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles inpatient and outpatient facility settings.",
+          "Cigna policy scope is professional claims only, not inpatient facility payment rules.",
+          "Point32Health observation policy applies at contracted acute care hospitals.",
+          "Emblem Health has no DRG-specific acute inpatient site-of-service policy identified."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a provider-specific OH PPO acute IP Med/Surg review for THE CLEVELAND CLINIC MAIN CAMPUS and OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER to verify prior authorization, enforce denial edits, validate contract-based claim payment, and assess site-of-care or admission management for Medical Back Problems without MCC.",
+        "evidence": [
+          "Cleveland Clinic added about +$2.3M on 47 more admissions; paid per admit fell.",
+          "Ohio State added about +$1.7M on 22 more admissions; paid per admit rose.",
+          "Medical Back Problems without MCC added about +$0.2M on 8 more admissions.",
+          "Both provider cards have pa_required_code Y and auth-to-claim validation business terms."
+        ],
+        "peer_benchmarking": [
+          "Cigna broadly bundles routine room, board, nursing, supplies, and many ancillaries into facility payment.",
+          "United Health bundles routine services, ancillary components, supplies, and equipment into facility reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a CA Commercial Local Group acute inpatient policy audit that reviews UM KPI changes and admission root causes for PPO Postpartum and Postabortion Diagnoses without O.R. Procedures and Medical Back Problems without MCC, and validates PA-to-claim matching, denial enforcement, contractual processing, itemized bills, and step-down discharge planning for PPO Ungroupable, PPO Cervical Spinal Fusion with CC, and HMO Aftercare with CC/MCC.",
+        "evidence": [
+          "CA PPO acute mixed pressure was led by Ungroupable and cervical spinal fusion.",
+          "PPO postpartum and back increases were mostly volume-led.",
+          "HMO Aftercare with CC/MCC rose from much higher paid per admit.",
+          "PPO acute cards show PA-required claims; HMO aftercare shows non-PA claims."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles global maternity care and restricts CPT 59430 to postpartum-only care."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a claim-level contract compliance and itemized-bill audit for CA IP Med/Surg ungroupable admissions at Stanford Hospital and targeted review of Cervical Spinal Fusion with CC and Acute and Subacute Endocarditis with MCC cases at Los Angeles General Medical Center and Lucile Packard Childrens Hospital Stanford to confirm DRG grouping, reimbursement methodology, final adjudication, and any stop-loss or special payment provisions.",
+        "evidence": [
+          "Two ungroupable CA IP Med/Surg cases added about $5.3M.",
+          "Ungroupable claims were at Stanford Hospital and coded PA required Y.",
+          "Cervical Spinal Fusion with CC increased at Los Angeles General Medical Center.",
+          "Endocarditis outlier occurred at Lucile Packard Childrens Hospital Stanford."
+        ],
+        "peer_benchmarking": [
+          "Cigna requires documentation confirming at least 50% vertebral body resection for separate reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit prior-auth-to-claim matching, level-of-care approvals, and contractual payment for Commercial Local Group LTCH and Physical Rehab admissions in GA, VA, and WI, starting with GA POS LTCH Ungroupable, VA POS/PPO LTCH, and WI POS Physical Rehab Aftercare with CC/MCC; require itemized bill review on outlier claims.",
+        "evidence": [
+          "GA POS LTCH Ungroupable had no admission growth and sharply higher paid per admit.",
+          "VA POS LTCH Aftercare with CC/MCC added six admissions with high paid per admit.",
+          "VA PPO LTCH added two admissions from a small baseline.",
+          "WI POS Physical Rehab Aftercare with CC/MCC added four admissions from zero baseline.",
+          "Pattern recommends reviewing authorization criteria, level-of-care decisions, and contract terms."
+        ],
+        "peer_benchmarking": [
+          "Cigna: pattern not mentioned; no appeals process documented."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct claim re-adjudication and itemized bill review for YALE NEW HAVEN HOSPITAL and THE CLEVELAND CLINIC MAIN CAMPUS IP Med/Surg admissions under Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures tied to SEPSIS UNSPECIFIED ORGANISM, ACUTE CHRONIC RESP FAIL W/HYPOXIA, and LUNG TRANSPLANT INFECTION, verifying contractual DRG payment, diagnosis coding, and prior-authorization enforcement.",
+        "evidence": [
+          "All deltas roll to the same tracheostomy/prolonged ventilation DRG.",
+          "YALE NEW HAVEN HOSPITAL drove tracheostomy cases with sepsis and respiratory failure.",
+          "THE CLEVELAND CLINIC MAIN CAMPUS had a lung transplant infection case.",
+          "PA required code is Y across the cited admissions."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles routine room, nursing, and supplies within inpatient facility DRGs.",
+          "United Health does not separately pay routine tracheostomy, respiratory, nursing, and supply components.",
+          "Elevance Health relies on standard coding and regulatory requirements for inpatient DRG processing."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "Maternity and NICU complications are creating small-volume, high-cost spikes in CA and VA",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best direct match: the pattern is explicitly an authorization coding/mapping issue flagged as auth_or_mapping_shift and recommends validating PA-required coding via auth-to-claim matching before action.; IP MedSurg (DNE) Trend 9: Highly relevant because the increase may reflect claim classification or processing/reprocessing issues rather than true utilization or rate change, especially with ungroupable and redistributed AUTH_CODE_DISTRIBUTION claims.; IP MedSurg (DNE) Trend 1: Relevant secondary rule because the pattern is concentrated in specific providers and states, including Stanford Hospital, Henrico Doctors' Hospital, Ohio State University Wexner Medical Center, and Cleveland Clinic, which helps target validation.; IP MedSurg (DNE) Trend 4: Relevant because the apparent spend shift is concentrated in specific inpatient DRG/service buckets such as cervical spinal fusion, postpartum claims, and ungroupable classifications.; IP OB Dlvry Well NB (DNE) Trend 8: Included because postpartum and postabortion claims are explicitly called out as impacted, making the OB auth-to-claim validation rule relevant for that portion of the pattern."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated in a single provider, Yale New Haven Hospital, so provider-specific behavior and contract changes are the clearest parent driver.; IP MedSurg (DNE) Trend 6: Admissions increased in both authorization-required and non-authorization cohorts, making UM KPI and PAV review relevant for avoidable utilization, level of care, and pathway performance.; IP MedSurg (DNE) Trend 10: Paid per admit rose materially, indicating reimbursement method and contract performance are likely contributing to the unit-cost increase.; IP MedSurg (DNE) Trend 8: Authorization is an explicit dimension in the pattern and auth-to-claim validation is flagged, so denial enforcement and matching logic should be reviewed.; IP MedSurg (DNE) Trend 4: The pattern includes higher acute inpatient spend and a recommendation to review level of care, which fits service-driver investigation around service intensity within inpatient med/surg stays."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Most directly aligned because the spend increase is explicitly concentrated in two providers, Cleveland Clinic Main Campus and Ohio State Wexner, and the pattern should be handled as a provider concentration issue rather than a broad market trend.; IP MedSurg (DNE) Trend 10: Highly relevant because Ohio State shows paid-per-admit pressure and the recommended next step includes contract and payment performance review, pointing to reimbursement method and provider-specific contractual effects.; IP MedSurg (DNE) Trend 8: Relevant because both source cards are in prior-auth-required inpatient acute settings (pa_required_code = Y) and include auth-to-claim validation as a business term, making authorization enforcement worth reviewing.; IP MedSurg (DNE) Trend 6: Relevant because the overall spend increase is driven materially by higher admissions, especially at Cleveland Clinic, so utilization management KPI review is appropriate for the volume-led component.; IP MedSurg (DNE) Trend 3: Secondarily relevant because a diagnosis/DRG signal is present through Medical Back Problems without MCC, which contributed additional spend within the same OH PPO acute setting."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in a narrow set of DRGs/diagnoses: Ungroupable, Cervical Spinal Fusion with CC, Medical Back Problems without MCC, Postpartum/Postabortion Diagnoses, and Aftercare with CC/MCC.; IP MedSurg (DNE) Trend 10: Unit-cost pressure is material, especially PPO ungroupable claims and HMO aftercare cases with very large increases in average paid per admit, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 6: Admissions are up overall, with PPO postpartum and back cases described as primarily volume-led, so utilization management KPI review is directly aligned to the pattern.; IP MedSurg (DNE) Trend 8: Authorization is prominent in the source cards and business terms include auth-to-claim validation; PPO acute drivers are specifically tied to PA-required claims, so auth enforcement review is relevant.; IP MedSurg (DNE) Trend 9: The very large ungroupable claim increase and the recommendation for focused claim review suggest possible claims processing, reprocessing, or coding integrity issues that fit claim frequency/status review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: The pattern explicitly points to stop-loss, contract terms, and transplant-like payment provisions, making reimbursement method review highly relevant for these catastrophic outlier payments.; IP MedSurg (DNE) Trend 9: Two ungroupable claims account for most of the increase, so claim classification, processing/reprocessing, and payment accuracy are central issues to validate.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow set of DRGs/diagnoses\u2014especially ungroupable cases, cervical spinal fusion, and endocarditis\u2014rather than broad IP Med/Surg utilization.; IP MedSurg (DNE) Trend 1: Several major outlier cases are tied to specific providers such as Stanford Hospital, Lucile Packard Children's Hospital Stanford, and Los Angeles General, suggesting provider-specific behavior or contract effects.; IP MedSurg (DNE) Trend 4: The spike is not broad across the service line and includes concentrated procedural/service components like cervical spinal fusion, supporting targeted service-driver review."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Strongest fit because the pattern is primarily a paid-per-admit and contract/reimbursement issue, and the recommended next step explicitly calls for reviewing contract terms and reimbursement in LTCH and rehab.; IP MedSurg (DNE) Trend 8: All major drivers are prior-auth required and the pattern specifically recommends reviewing authorization criteria and level-of-care decisions, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 1: Spend appears concentrated in a small number of very expensive post-acute providers/facilities, especially LTCH settings, which points to provider-specific behavior or contracting variance.; IP MedSurg (DNE) Trend 4: The variance is isolated to a narrow set of post-acute services/facility types\u2014LONG TERM CARE HOSPITAL and Physical Rehab\u2014and a small set of DRGs, aligning with service-driver review.; IP MedSurg (DNE) Trend 6: The site-of-care shift and level-of-care concerns suggest utilization management review to assess whether avoidable post-acute placement or management KPI changes contributed to the variance."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is concentrated in a very small set of providers\u2014mainly Yale New Haven Hospital and Cleveland Clinic\u2014so provider-level behavior, case mix, and contract/payment specifics are highly relevant.; IP MedSurg (DNE) Trend 3: The pattern is tightly tied to a narrow diagnosis set: sepsis, acute on chronic respiratory failure with hypoxia, and lung transplant infection, making diagnosis-level isolation a core parent driver.; IP MedSurg (DNE) Trend 4: All major deltas roll up to the same catastrophic tracheostomy/prolonged ventilation DRG within IP Med/Surg, so service/DRG concentration is one of the clearest parent rules.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly calls for review of transplant or outlier payment provisions, which aligns closely with reimbursement method review for these extreme-cost inpatient cases.; IP MedSurg (DNE) Trend 9: Because the impact is driven by only a few very high-paid claims, claim-level payment validation and possible processing/reprocessing review are relevant to confirm amounts were paid per contractual standards."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T10:58:09.844628+00:00"
+  }
+}

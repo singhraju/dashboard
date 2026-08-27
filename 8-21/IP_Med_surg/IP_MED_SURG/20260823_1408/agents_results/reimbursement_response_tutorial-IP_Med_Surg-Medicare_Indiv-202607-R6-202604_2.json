@@ -1,0 +1,346 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_2_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX authorization code movement must be validated before business action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth_status",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "coverage_limits",
+          "label": "Coverage Limits",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth_status": "-",
+          "coverage_limits": "No coverage for asymptomatic urinary/prostatitis screening, prostate biopsy assessment, or post-resolution follow-up cultures."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth_status": "-",
+          "coverage_limits": "Only limited asymptomatic bacteriuria scenarios supported; all other indications, including molecular/multiplex UTI panels, denied."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth_status": "-",
+          "coverage_limits": "No reimbursement for primary diagnoses of routine general encounters without abnormal findings."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082140004",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "2026-01-03",
+        "evidence": "Urine culture testing is reimbursable only when medical-necessity criteria are met, including pregnancy, certain urologic procedures that breach mucosa, signs or symptoms of UTI or bacteriuria, or evaluation for pyelonephritis. Asymptomatic cases outside those scenarios, follow-up cultures after uncomplicated UTI resolution, and screening or prognosis related to asymptomatic prostatitis or prostate biopsy are not reimbursable.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab050-1-3-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87077",
+            "87086",
+            "87088",
+            "87140",
+            "87147",
+            "87149",
+            "87181",
+            "87186"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "prior to the procedure",
+            "clinical resolution of infection"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "pregnant individuals",
+            "urological interventions which breach the mucosa",
+            "at least one sign or symptom",
+            "pyelonephritis"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082290004",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "2026-04-24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab045-4-24-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00882",
+        "payer_name": "Centene",
+        "policy_title": "Genitourinary Lab Testing (TX.CP.MP.307)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "Centene-affiliated health plan allows urine culture for asymptomatic bacteriuria only when the member is pregnant or before an endoscopic urologic procedure with mucosal trauma; otherwise the service is not supported.",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.307.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87086",
+            "87088",
+            "0321U",
+            "0371U",
+            "0372U",
+            "0374U",
+            "0416U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "when pregnant",
+            "before endoscopic urologic procedure"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00025",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "For Medicare Advantage claims, urine culture testing codes are not reimbursable when billed for a primary diagnosis representing a general encounter without abnormal findings or a similar examination. The rule applies to several urine culture and susceptibility-related CPT codes, with a contractor-specific exception for CPT 87149 under certain Original Medicare LCDs.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87076",
+            "87077",
+            "87140",
+            "87147",
+            "87149",
+            "87181",
+            "87186"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "primary diagnosis general encounter"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "87149 CGS Administrators",
+            "87149 Noridian Healthcare",
+            "87149 Palmetto GBA",
+            "87149 Wisconsin Physicians"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: TX authorization code movement must be validated before business action",
+    "pattern_rank": 2,
+    "pattern_title": "TX authorization code movement must be validated before business action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Kidney and Urinary Tract Infections with MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped for scope drift because they address urine-culture reimbursement edits rather than the pattern's TX authorization code movement validation scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 44834,
+    "output": 22468,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 451,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 444,
+        "output": 883,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 33486,
+        "output": 14382,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1404,
+        "output": 531,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 902,
+        "output": 493,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 677,
+        "output": 692,
+        "calls": 6
+      },
+      "policy_recommendations": {
+        "input": 3070,
+        "output": 4719,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4323,
+        "output": 317,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:18:43.715632+00:00",
+    "end_time": "2026-08-23T15:20:21.128296+00:00",
+    "duration_ms": 97412,
+    "version": "2.0.0"
+  }
+}

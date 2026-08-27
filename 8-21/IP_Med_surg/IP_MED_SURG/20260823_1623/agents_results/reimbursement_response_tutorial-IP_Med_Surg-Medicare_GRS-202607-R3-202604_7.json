@@ -1,0 +1,653 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare high-cost inpatient outliers are inflating spend across several providers",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "payment_validation_rule",
+          "label": "Payment Validation",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Denies Unsupported",
+          "payment_validation_rule": "Validates sepsis payment using documentation, SOFA criteria, treatment evidence, coding, and DRG review."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Clinical Validation",
+          "payment_validation_rule": "Validates sepsis payment using physician documentation, SOFA-supported organ dysfunction, and documented treatment."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_validation_rule": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_validation_rule": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Clinical Validation",
+          "payment_validation_rule": "Validates sepsis claims using Sepsis-3/SOFA evidence, treatment support, and admission/discharge coding details."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Not Relevant",
+          "payment_validation_rule": "Validates principal diagnosis coding/placement per ICD-10-CM rules; invalid sequencing may trigger DRG 998."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00047",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "CAT Scan RETIRED",
+        "tags": [],
+        "effective_date": "08/16/06",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/CAT%20Scan%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "This policy does not name the requested DRGs individually; it instead enforces diagnosis coding rules for inpatient and outpatient claims. For inpatient UB-04 claims, an invalid principal diagnosis maps to DRG 998 and results in denial.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [
+            "Z51.89",
+            "Q21.0",
+            "I51.0",
+            "R65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "UB-04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00027",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing (PDF)",
+        "tags": [],
+        "effective_date": "03/23",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CP.MP.209.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00067",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Sepsis Diagnosis (PDF)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The Health Plan validates inpatient sepsis-coded claims pre- or post-pay and may deny unsupported coding or incorrect DRG assignment after medical record review.",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "710",
+            "720",
+            "853",
+            "854",
+            "855",
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [
+            "A41.9",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "APR-DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00250",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": "09/2024",
+        "evidence": "MS-DRG sepsis and septicemia claims are subject to medical record review, with payment denied or adjusted if the sepsis diagnosis or DRG assignment is not supported.",
+        "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "853",
+            "854",
+            "855",
+            "870",
+            "871",
+            "872",
+            "710",
+            "720",
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A41.9",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "medical records requested for review"
+          ],
+          "utilization_limits": [
+            "inpatient claims only",
+            "age 18 and older",
+            "review within 60 days of records receipt"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "DRG",
+            "APR-DRG",
+            "ICD-10-CM"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00059",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "Off-topic for this policy. The policy governs biomarker laboratory testing and does not establish DRG payment rules, inpatient outlier logic, or DRG-specific reimbursement for this category.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00085",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2022-01-07",
+        "evidence": "Inpatient sepsis claims using this diagnosis are subject to DRG clinical validation under Sepsis-3 criteria; payment may be adjusted if the record does not support sepsis or sepsis treatment services.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00973",
+        "payer_name": "Molina",
+        "policy_title": "Clinical Diagnostic Laboratory Services",
+        "tags": [],
+        "effective_date": "10/11/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Clinical-Diagnostic-Laboratory-Services-03282025.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00982",
+        "payer_name": "Molina",
+        "policy_title": "General Billing and Coding Policy",
+        "tags": [],
+        "effective_date": "2020-11-20",
+        "evidence": "No DRG-specific outlier payment rule found. The policy is a general coding and claims review policy that focuses on correct coding, documentation, and claim audit requirements.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Generalandbillingpolicy12182024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01383",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Off-topic for DRG/outlier reimbursement. The policy only addresses correct ICD-10-CM primary/principal diagnosis reporting and state-specific diagnosis-code exceptions.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01821",
+        "payer_name": "United Health",
+        "policy_title": "Chronic Heart Failure Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Chronic-Heart-Failure-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 15,
+    "policies_successful": 15,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Add a deny edit for UB-04 MS-DRG 998 when claims contain the related diagnosis scenarios flagged with Z51.89, Q21.0, I51.0, or R65. Apply to all states.\n\nIA \u2014 Implement clinical validation review for inpatient 710, 720, 853, 854, 855, 870, 871, and 872 when they appear on the same inpatient claim; use medical records requested for review, require physician or licensed independent practitioner documentation, limit to inpatient claims only for age 18 and older, complete review within 60 days of records receipt, and exempt sepsis screening. (all states) Buckeye Health Plan (WellCare) and Centene both apply inpatient sepsis guardrails to 710, 720, 853, 854, 855, 870, 871, and 872 on the same inpatient claim, with sepsis screening exempted.. Exempt: sepsis screening.",
+      "evidence": [
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"710\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"720\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"853\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"854\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"855\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"870\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"871\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"872\" [target_codes]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"same inpatient claim\" [pairing_conditions]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"sepsis screening\" [exemptions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"medical records requested for review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"inpatient claims only\" [utilization_limits]",
+        "Centene \u00b7 Sepsis Diagnosis: \"age 18 and older\" [utilization_limits]",
+        "Centene \u00b7 Sepsis Diagnosis: \"review within 60 days of records receipt\" [utilization_limits]",
+        "Centene \u00b7 Sepsis Diagnosis: \"physician or licensed independent practitioner documentation\" [provider_role_restrictions]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"998\" [target_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Z51.89\" [related_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Q21.0\" [related_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"I51.0\" [related_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"R65\" [related_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"MS-DRG\" [program_scope]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB-04\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Buckeye Health Plan (WellCare) and Centene both apply inpatient sepsis guardrails to 710, 720, 853, 854, 855, 870, 871, and 872 on the same inpatient claim, with sepsis screening exempted."
+      ],
+      "citation": [
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF) \u2014 https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+        "Centene \u00b7 Sepsis Diagnosis \u2014 https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Rare high-cost inpatient outliers are inflating spend across several providers",
+    "pattern_rank": 7,
+    "pattern_title": "Rare high-cost inpatient outliers are inflating spend across several providers",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Endovascular Cardiac Valve Replacement and Supplement Procedures without MCC",
+      "Heart Failure and Shock with MCC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 15,
+    "successful_extractions": 15,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 15 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "15 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['VA', 'GA', 'OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "4/15 policies quarantined (27%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/15 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "4 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_UHC_00140:Chronic Heart Failure Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange, RP_GBD_BHP_OH_2953170300000:Infectious Disease: Multisystem Testing (PDF), RP_GBD_CNC_01069:Cardiac Biomarker Testing, RP_GBD_UHC_VA_2960675880300:Clinical Diagnostic Lab Policy, Professional]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 135930,
+    "output": 56035,
+    "breakdown": {
+      "search_keywords": {
+        "input": 571,
+        "output": 992,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 943,
+        "output": 1940,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 118841,
+        "output": 44894,
+        "calls": 15
+      },
+      "relevance_judge": {
+        "input": 5524,
+        "output": 2065,
+        "calls": 11
+      },
+      "dynamic_columns": {
+        "input": 998,
+        "output": 596,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1724,
+        "output": 1163,
+        "calls": 9
+      },
+      "elevance_summary": {
+        "input": 386,
+        "output": 104,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4458,
+        "output": 3232,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2485,
+        "output": 1049,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:10:10.529670+00:00",
+    "end_time": "2026-08-23T17:12:17.801554+00:00",
+    "duration_ms": 127271,
+    "version": "2.0.0"
+  }
+}

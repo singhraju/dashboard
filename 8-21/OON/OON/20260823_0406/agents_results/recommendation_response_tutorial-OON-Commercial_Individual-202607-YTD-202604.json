@@ -1,0 +1,219 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review IU Health Ball Memorial Hospital IN Commercial Individual HMO acute IP NICU claims for DRG Prematurity without Major Problems and diagnosis Z3800 to confirm newborn/NICU revenue-code matching, verify the authorized level was the level paid, ensure manual adjudication did not override newborn revenue-code edits, and remediate any contract-processing variance.",
+        "evidence": [
+          "IU Health Ball Memorial Hospital accounted for the measured increase.",
+          "Claim count increased in IN HMO acute hospital activity.",
+          "Average paid per admit increased.",
+          "Drill context shows IP NICU newborn claims.",
+          "DRG Prematurity without Major Problems with diagnosis Z3800.",
+          "Elevance requires newborn DRG and revenue-code match.",
+          "Missing NICU code blocks sick newborn grouping."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) pays newborn DRGs only when revenue codes align; missing NICU code blocks sick newborn grouping."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a targeted provider review for Texas Health Presbyterian Hospital Rockwall covering TX Commercial Individual HMO acute IP Med/Surg claims, with K7469 diagnosis-mix analysis, UM KPI review, and contract-methodology and claims-processing validation.",
+        "evidence": [
+          "Texas Health Presbyterian Hospital Rockwall drove about 85% of grouped positive change.",
+          "TX HMO acute hospital total paid increased about $225K.",
+          "Claim count increased and average paid per admit increased.",
+          "Drill context shows IP Med/Surg with primary diagnosis code K7469."
+        ],
+        "peer_benchmarking": [
+          "Cigna permits Modifier 22 on 0/10/90-day procedures only with supporting documentation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a focused adjudication-leakage audit for CORAM CVS SPECIALTY INFUSION SERVICES CO Commercial Individual HMO outpatient drug claims classified as Not Mapped, using E8801 and OP Mgmt Oth Misc to isolate the subset and confirm authorization denials are being enforced.",
+        "evidence": [
+          "Coram CVS Specialty Infusion Services drives both operational and clinical signals.",
+          "Facility type and DRG are both labeled Not Mapped.",
+          "Clinical subset is Drugs with OP Mgmt Oth Misc and E8801.",
+          "Validation is required before operational or network action."
+        ],
+        "peer_benchmarking": [
+          "Cigna requires substantial documentation for extra payment and notes modifier 22 reimbursement guidance.",
+          "United Health shows no documented extra payment criteria in the summary table."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a case-level review of Texas Health Presbyterian Hospital Rockwall TX IP Med/Surg admissions for Cirrhosis and Alcoholic Hepatitis with MCC (K7469), Poisoning and Toxic Effects of Drugs with MCC (T40411A), and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC (A409) to verify inpatient authorization enforcement, claim adjudication or reprocessing, and reimbursement per contractual standards.",
+        "evidence": [
+          "Texas Health Presbyterian Hospital Rockwall drove the identified TX IP Med/Surg outliers.",
+          "Four incremental inpatient cases accounted for the spend increase.",
+          "Top drivers included K7469, T40411A, and A409.",
+          "Flags show low baseline value and repeated delta concentration."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX and United Health have no documented policy mentions in the supplied reimbursement data.",
+          "No documented appeals processes were listed for BCBS_TX or United Health."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused audit of the IU HEALTH BALL MEMORIAL HOSPITAL inpatient delivery claim for Vaginal Delivery without Sterilization or D&C with CC and O99892 to verify DRG coding, contract-compliant reimbursement, and case-level clinical management needs.",
+        "evidence": [
+          "One-claim low-baseline emergence in IN.",
+          "Single maternity delivery claim at IU HEALTH BALL MEMORIAL HOSPITAL.",
+          "DRG: Vaginal Delivery without Sterilization or D&C with CC.",
+          "Diagnosis code O99892 drove the emergence."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles global maternity packages; delivery-only or partial-care codes apply for limited services.",
+          "United Health uses standard global OB codes; modifier 22 requires records for severe lacerations.",
+          "Centene bundles maternity; document global OB care, with modifier 22 for added complexity."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a claim-level audit at IU HEALTH BALL MEMORIAL HOSPITAL to validate Q Codes (Temporary), D509 diagnosis alignment, and Not Mapped OP IV Thrpy/Oncology category placement, then apply AI Acceleration Engine coverage, benefit-limit, authorization, and adjudication edit rules before reimbursement action.",
+        "evidence": [
+          "IU HEALTH BALL MEMORIAL HOSPITAL drove OP IV Thrpy/Oncology activity in IN.",
+          "Claim was classified as Not Mapped.",
+          "Procedure used Q Codes (Temporary).",
+          "Primary diagnosis code was D509.",
+          "Flags include small_n_rows and unmapped_or_unknown_value."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal): no documented pattern mention, appeals process, or policy effective date.",
+          "Humana: no documented pattern mention, appeals process, or policy effective date."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Conduct a provider-, diagnosis-, and service-level mapping audit for Texas Health Presbyterian Hospital Rockwall TX OP ER claims in the Not Mapped bucket with diagnosis O034 and procedure Maternity Care/Delivery, and reclassify to the appropriate obstetric category if validated before any utilization intervention.",
+        "evidence": [
+          "TX OP ER maternity claims are classified as Not Mapped.",
+          "Diagnosis O034 pairs with procedure Maternity Care/Delivery.",
+          "Activity is concentrated at Texas Health Presbyterian Hospital Rockwall.",
+          "Pattern flags include small_n_rows and unmapped_or_unknown_value."
+        ],
+        "peer_benchmarking": [
+          "Cigna shows OB bundling and ER/Obs validation in the payer summary.",
+          "Elevance external and Moda Health indicate maternity-related bundling."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 4,
+        "pattern": "IN NICU spend spike is driven by a single very high-cost prematurity case",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP NICU (DNE)"
+        ],
+        "relevance_reason": "IP NICU (DNE) Trend 1: The spend increase is fully concentrated at a single provider, IU Health Ball Memorial Hospital, making provider-level behavior and contract terms the clearest first parent driver to investigate.; IP NICU (DNE) Trend 10: Paid per admit increased sharply, and the reimbursement notes reference newborn DRG/revenue-code rules and missing NICU coding, which directly supports a reimbursement-method or payment-logic review.; IP NICU (DNE) Trend 6: This is a mixed utilization and unit-cost pattern with claim volume up and a recommended UM review focused on level-of-care decisions, matching a PAV/utilization-management KPI investigation.; IP NICU (DNE) Trend 3: The drill context is narrowed to a specific neonatal diagnosis/DRG combination (Z3800, Prematurity without Major Problems), so diagnosis-level concentration is relevant to understanding whether the increase is tied to a specific clinical cohort.; IP NICU (DNE) Trend 4: The issue may reflect service or level-of-care mix within the admission, especially given the NICU revenue-code considerations and the recommendation to review level-of-care decisions."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated in a single provider, Texas Health Presbyterian Hospital Rockwall, which directly matches the provider-isolated variance rule.; IP MedSurg (DNE) Trend 10: Paid per admit and paid ratio both increased, and the recommended next step includes a contract/reimbursement check, making reimbursement method a strong fit.; IP MedSurg (DNE) Trend 9: Because the pattern includes higher payment levels at one hospital, claims processing or reprocessing against contractual standards is relevant to rule out payment integrity issues.; IP MedSurg (DNE) Trend 6: Claim volume increased materially, so utilization management KPI changes could be contributing to the utilization portion of this mixed volume and unit-cost pattern.; IP MedSurg (DNE) Trend 3: The recommendation to review claim mix, case severity, and diagnosis context suggests diagnosis-level concentration may explain part of the increase beyond pure provider pricing."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "Retail RX_Specialty",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 1: The variance is highly concentrated in a single provider, CORAM CVS SPECIALTY INFUSION SERVICES, so provider-driver review is the most direct first step.; OP Oth (DNE) Trend 4: The increase is tied to a narrow outpatient service pattern involving specialty infusion/drugs and site-of-care questions, making service-driver review highly relevant.; OP Oth (DNE) Trend 3: The clinical signal is concentrated in OP Mgmt Oth Misc with diagnosis code E8801 and an unmapped DRG, so diagnosis-level review fits the pattern.; Retail RX_Specialty Trend 3: Because specialty drug infusion activity is appearing under Not Mapped classifications, claims adjudication or classification leakage is a strong parallel rule for this validation issue.; OP Oth (DNE) Trend 8: Once mapping is confirmed, reimbursement-method review is relevant because the spend increase may reflect reimbursement pressure rather than true utilization growth."
+      },
+      {
+        "rank": 4,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is concentrated at a single facility, Texas Health Presbyterian Hospital Rockwall, so provider-level behavior or contract/payment differences are a primary parent driver to test.; IP MedSurg (DNE) Trend 3: Spend is isolated to a small set of severe inpatient diagnoses/DRGs, which directly fits a diagnosis-driver review for case-mix change.; IP MedSurg (DNE) Trend 10: Paid per admit increased and the recommendation explicitly calls for payment accuracy validation, making reimbursement method review highly relevant for these rare high-cost admissions.; IP MedSurg (DNE) Trend 9: Because the pattern rests on only a handful of outlier claims with low baseline volume, claim status/frequency or reprocessing issues should be checked as part of payment accuracy review.; IP MedSurg (DNE) Trend 8: The next step includes validating inpatient appropriateness; auth-to-claim matching is relevant to confirm these admissions were appropriately authorized and aligned to paid inpatient claims."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 1: The entire increase is concentrated in a single provider, IU Health Ball Memorial Hospital, making provider-level review the most direct parent rule match.; IP OB Dlvry Well NB (DNE) Trend 2: This is a one-claim maternity emergence, so member/case-level review of the mother-delivery episode is highly relevant and aligns with the recommended case validation.; IP OB Dlvry Well NB (DNE) Trend 3: The outlier is tied to a specific diagnosis code, O99892, so diagnosis-driven review is important to confirm clinical severity and coding appropriateness.; IP OB Dlvry Well NB (DNE) Trend 4: The variance is isolated to a specific maternity service/DRG, Vaginal Delivery without Sterilization or D&C with CC, which supports service-level review rather than broad maternity utilization action.; IP OB Dlvry Well NB (DNE) Trend 10: The pattern explicitly calls for billing accuracy review, and maternity reimbursement can depend on delivery-specific reimbursement logic and bundling rules, making reimbursement method review relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)"
+        ],
+        "relevance_reason": "OP IV Thrpy - Oncly (DNE) Trend 4: Most directly relevant because the variance is tied to a specific service/procedure pattern: temporary Q codes and a Not Mapped classification in outpatient oncology infusion, indicating service-level coding/classification review is needed first.; OP IV Thrpy - Oncly (DNE) Trend 3: Relevant because the claim is anchored to diagnosis code D509, and diagnosis-level validation may affect whether the infusion activity is appropriately classified within oncology versus another category.; OP IV Thrpy - Oncly (DNE) Trend 1: Relevant because the increase is isolated to a single provider, IU Health Ball Memorial Hospital, making provider-specific billing or coding behavior a key first-line research path.; OP IV Thrpy - Oncly (DNE) Trend 9: Relevant due to the stated downstream implications for reimbursement and category placement; temporary Q code usage and unmapped status can affect how the claim is reimbursed.; OP IV Thrpy - Oncly (DNE) Trend 2: Secondarily relevant because this is a single-claim, low-volume event, so confirming whether it is isolated to one member helps avoid misreading it as a broader utilization trend."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "OP ER (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "OP ER (DNE) Trend 3: The variance is tightly tied to a single diagnosis code (O034) within OP ER, and the pattern explicitly calls for validating whether the maternity-related diagnosis is categorized correctly rather than treating it as a broad ER utilization issue.; OP ER (DNE) Trend 4: The increase is isolated to a specific service/procedure assignment (Maternity Care/Delivery), making the OP ER service-driver rule highly relevant for checking whether the service was mapped into the correct clinical bucket.; OP ER (DNE) Trend 1: The spend increase is concentrated at one provider, Texas Health Presbyterian Hospital Rockwall, so provider-level isolation is relevant to determine whether this is a localized coding or billing pattern.; IP OB Dlvry Well NB (DNE) Trend 3: Because the claim is maternity-related and currently sits in a Not Mapped classification, the OB diagnosis-driver rule is relevant as a potential alternative parent path if the diagnosis should roll into an obstetric category instead of OP ER.; IP OB Dlvry Well NB (DNE) Trend 4: The maternity/delivery procedure label suggests possible OB service-line misclassification, so the OB service-driver rule is relevant as a secondary parent rule for remapping validation."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T05:56:32.757608+00:00"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a joint utilization-management, claims-processing, and contract-compliance review for DARTMOUTH HITCHCOCK MEDICAL CENTER NH Commercial Local Group HMO acute-hospital inpatient claims with pa_required_code=Y, confirming prior authorization was obtained, authorization matched actual admits, denial edits were enforced, and reimbursement processed per contractual terms; escalate confirmed variances to provider-specific contract remediation and elective site-of-care management.",
+        "evidence": [
+          "Dartmouth drove about +$4.5M of the NH HMO acute-hospital increase.",
+          "Admissions increased by 85 in authorization-required inpatient claims.",
+          "Paid per admit increased about $51.6K.",
+          "er_admit_indicator is N within IP Med/Surg context."
+        ],
+        "peer_benchmarking": [
+          "Point32Health had no relevant acute-hospital DRG reimbursement benchmark in available policy data."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a Yale New Haven Hospital CT Commercial Local Group PPO acute inpatient payment policy audit by authorization status, validate prior-authorization and denial enforcement, and apply contract-compliance review for reimbursement methodology on Major Chest Procedures with CC and Other Digestive System Diagnoses with MCC.",
+        "evidence": [
+          "Yale New Haven Hospital is the clear focal provider.",
+          "Authorization-required Yale admissions and paid per admit increased.",
+          "Non-authorization Yale admissions also increased.",
+          "Growth is concentrated in Major Chest Procedures with CC.",
+          "Other Digestive System Diagnoses with MCC show very high paid per admit."
+        ],
+        "peer_benchmarking": [
+          "Point32Health shows vent exclusion and DRG bundling in inpatient policy design.",
+          "United Health shows DRG bundling in inpatient policy design."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct targeted policy remediation for Commercial Local Group CHILDRENS admissions in CA and KY, focused on LUCILE PACKARD CHILDRENS HOSPITAL STANFORD and the KY PPO outlier, to verify site-of-care appropriateness, enforce PPO/Y authorization edits, confirm HMO/N and PPO/N admissions are allowed per contract, and correct any claims processing inconsistent with contractual obligation.",
+        "evidence": [
+          "CA PPO/Y CHILDRENS at Lucile Packard added about +$1.7M on 20 admissions.",
+          "CA HMO/N CHILDRENS added about +$1.0M; paid per admit up about $82.3K.",
+          "KY PPO/N CHILDRENS digestive cases added about +$0.4M with 3 admissions.",
+          "Signal is concentrated in children's settings, not broad across all hospital types."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Create a multi-state acute inpatient policy audit for Commercial Local Group acute-hospital PPO, POS, and EPO claims in GA, OH, VA, and NY to confirm prior authorization was obtained for auth-required claims, verify denial enforcement and authorization-to-actual matching, and confirm contractual payment compliance at IU Health Methodist University and Ohio State University Wexner Medical Center, with focused DRG review for Acute Myocardial Infarction, Major Chest Procedures with CC, and Postpartum and Postabortion Diagnoses without O.R. Procedures.",
+        "evidence": [
+          "GA POS IU Health Methodist has auth-required acute admissions with higher paid per admit.",
+          "OH PPO Ohio State acute claims show recurring admission growth.",
+          "VA POS Major Chest Procedures with CC recurs in acute hospital claims.",
+          "NY EPO Inflammatory Bowel Disease with CC shows higher paid per admit.",
+          "Acute-hospital source cards repeatedly flag auth_dimension_present and auth-to-claim validation."
+        ],
+        "peer_benchmarking": [
+          "Cigna, Emblem Health, Highmark_BCBS, and United Health show no documented DRG-specific guidance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit authorization denial enforcement and contractual claims processing for AUTH_CODE_DISTRIBUTION claims in NH, IN, CA, and OH and Not Mapped facility claims in CA and GA, starting with DARTMOUTH HITCHCOCK MEDICAL CENTER, IU HEALTH METHODIST UNIVERSITY, and OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER; reclassify or reprocess affected claims, rerun paid-claims slices, and defer UM or reimbursement policy changes until validation is complete.",
+        "evidence": [
+          "Dartmouth auth-code distribution movement affected about $1.6M before interpretation.",
+          "IU Health Methodist auth-code distribution movement affected about $1.5M.",
+          "CA and OH showed roughly $1.0M of offsetting authorization-code movement.",
+          "Unmapped facility buckets in CA and GA should be reclassified before action."
+        ],
+        "peer_benchmarking": [
+          "United Health: no DRG-specific authorization; facility-inclusive charges are bundled, not separately reimbursed."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct case-level clinical and payment-integrity review of Yale New Haven Hospital and IU Health Methodist University IP Med/Surg admissions under DRG Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures, validating SEPSIS UNSPECIFIED ORGANISM and HTN HRT CKD W/HF STAGE 1-4/UNS CKD coding, prior-authorization enforcement, final contractual adjudication, itemized billing, and stop-loss exposure, and escalate confirmed variances for provider-specific contract remediation.",
+        "evidence": [
+          "Two providers drive the pattern: Yale New Haven Hospital and IU Health Methodist University.",
+          "Recurring DRG is tracheostomy with mechanical ventilation >96 hours.",
+          "Diagnoses are sepsis unspecified organism and HTN heart CKD with HF.",
+          "Flags include small_n_admissions, low_baseline_value, and repeated_delta_concentration.",
+          "Next step requests severity validation, stop-loss review, and contract payment verification."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles routine tracheostomy care and supplies into facility payment with no separate reimbursement.",
+          "Elevance uses case-by-case review for unlisted or miscellaneous tracheostomy-related reimbursement.",
+          "United Health does not separately reimburse routine tracheostomy care; facility-owned management is reimbursed once daily."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a targeted contract and claims audit on Dartmouth Hitchcock Medical Center, Yale New Haven Hospital, Ohio State University Wexner Medical Center, IU Health Methodist University, and NY Major Chest Procedures with CC claims for Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC, Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC, Kidney Transplant, SECONDARY MALIGNANT NEOPLASM BONE, OTHER SPECIFIED PLEURAL CONDITIONS, and SADDLE EMBOL PA W/AC COR PULMONALE to confirm final-bill adjudication, contract-compliant reimbursement, itemized bill support, and DRG coding integrity, then pursue remediation for noncompliant payments.",
+        "evidence": [
+          "Rare adult IP Med/Surg outliers concentrated across CT, IN, NH, OH, and NY.",
+          "Dartmouth Hitchcock and Yale New Haven are named outlier sources.",
+          "Major Chest Procedures with CC and Kidney Transplant are key drivers.",
+          "Validation needed for repeated six-figure paid-per-admit movement."
+        ],
+        "peer_benchmarking": [
+          "Fidelis Care: no DRG-specific inpatient outlier, bundling, payment, or limit rule documented.",
+          "Healthfirst: no DRG-specific reimbursement policy documented for these inpatient outliers."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "Pediatric complex inpatient concentration led by Lucile Packard",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in one provider, Dartmouth Hitchcock Medical Center, which drove about +$4.5M and ~94% of the positive delta. This makes provider-specific behavior and contracting changes the strongest parent rule.; IP MedSurg (DNE) Trend 8: The claims are explicitly authorization-required (pa_required_code=Y), and the pattern narrative plus business terms call for auth-to-claim validation. This directly aligns with reviewing whether authorization denials are being appropriately enforced.; IP MedSurg (DNE) Trend 10: Paid per admit and allowed per admit increased sharply, and the recommended next step includes reviewing contract terms driving higher reimbursement. That maps directly to the reimbursement method parent rule.; IP MedSurg (DNE) Trend 6: Admissions increased materially, and the pattern explicitly recommends a joint UM review focused on authorization-required cases and admission criteria. This fits investigation of utilization management KPI changes and PAV-related drivers.; IP MedSurg (DNE) Trend 7: The spike is in inpatient acute hospital admissions with er_admit_indicator=N, suggesting non-ER/scheduled admissions may be part of the utilization change. Reviewing admission source/location and elective case mix is therefore relevant."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is heavily concentrated at a single provider, Yale New Haven Hospital, which accounts for most of the total increase and makes provider-specific behavior and contract dynamics the primary lens.; IP MedSurg (DNE) Trend 8: The pattern explicitly separates authorization-required and non-authorization admissions, and the recommended action is to audit admissions by authorization status, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially, especially in the authorization-required Yale slice, so reimbursement method or payment-rule variation is a key likely parent driver.; IP MedSurg (DNE) Trend 3: The increase is partly concentrated in specific DRG/diagnosis groupings, especially Major Chest Procedures with CC and Other Digestive System Diagnoses with MCC, supporting diagnosis-level investigation.; IP MedSurg (DNE) Trend 6: Admissions rose in both auth and non-auth pockets and the pattern calls for medical-necessity and UM action, so utilization management KPI review is relevant to explain the volume component."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated in a small set of children's hospital providers, especially Lucile Packard in CA, with a smaller KY outlier, making provider-level driver review the strongest fit.; IP MedSurg (DNE) Trend 8: Authorization is a key dimension in the pattern: the largest PPO slice is auth-required, auth flags are present across cards, and the recommended next step explicitly calls for review of authorization policy and enforcement.; IP MedSurg (DNE) Trend 10: Unit-cost pressure is present in the HMO children's slice and the pattern recommends reviewing contract terms for children's facilities, which aligns with reimbursement method as a likely contributor.; IP MedSurg (DNE) Trend 3: The variance is also concentrated in specific diagnoses/DRGs such as Tetralogy of Fallot, Other Digestive System Diagnoses with MCC, and postpartum-related cases, supporting diagnosis-driver review.; IP MedSurg (DNE) Trend 4: This is fundamentally a site-of-care shift into CHILDRENS facilities rather than a broad all-hospital trend, so reviewing whether a specific service/setting subset is driving the variance is relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern is recurring acute inpatient growth with admissions up across states/products, and the recommended next step is a multi-state UM worklist focused on admission appropriateness, which directly aligns to reviewing utilization management KPI/PAV shifts.; IP MedSurg (DNE) Trend 8: Authorization is central to the pattern: cards repeatedly flag auth_dimension_present, the narrative calls out a repeatable authorization issue, and business terms include auth-to-claim validation.; IP MedSurg (DNE) Trend 1: Variance is clearly concentrated in provider pockets such as IU Health Methodist and Ohio State, and the pattern explicitly references provider-mix and provider payment hot spots.; IP MedSurg (DNE) Trend 3: Specific inpatient DRGs/diagnoses are named as key drivers, especially Acute Myocardial Infarction, Major Chest Procedures, and Postpartum/Postabortion diagnoses, making diagnosis-level isolation highly relevant.; IP MedSurg (DNE) Trend 10: Unit cost is mixed but meaningful in several pockets, especially POS/PPO acute hospital segments, and the recommendation includes provider payment hot spots, supporting reimbursement method review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is driven by AUTH_CODE_DISTRIBUTION shifts and explicitly calls for reconciling authorization-required coding to paid claims before any action.; IP MedSurg (DNE) Trend 9: Unmapped facility buckets and possible classification changes suggest a claims processing/reprocessing or status issue that could distort apparent paid variance.; IP MedSurg (DNE) Trend 10: Reimbursement interpretation is specifically called out as unreliable until auth coding and facility mapping are fixed, making reimbursement-method review highly relevant after validation.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a subset of providers and markets, especially Dartmouth, IU Health Methodist, and Ohio State, so provider-level isolation is important for targeted validation.; IP MedSurg (DNE) Trend 4: Facility mapping to 'Not Mapped' can misstate service/site-of-care attribution, so service-driver review is relevant once mapping cleanup is completed."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is tightly concentrated in a single recurring inpatient service/DRG: catastrophic tracheostomy with prolonged mechanical ventilation, which makes service-level review the strongest parent rule fit.; IP MedSurg (DNE) Trend 1: The pattern is isolated to a very small subset of providers\u2014Yale New Haven Hospital and IU Health Methodist University\u2014so provider-specific behavior, case severity, contract terms, and payment handling are central.; IP MedSurg (DNE) Trend 3: The high-cost emergence is also concentrated in a narrow diagnosis subset, specifically sepsis and HTN/heart/CKD-related diagnoses, supporting diagnosis-driver review rather than a broad Med/Surg trend conclusion.; IP MedSurg (DNE) Trend 9: The recommended next step explicitly calls for contract payment verification and case-level validation, which aligns with reviewing whether claims were processed or reprocessed per contractual standards.; IP MedSurg (DNE) Trend 10: These six-figure catastrophic admissions may reflect reimbursement-method or payment-structure issues at the case level, especially given the need to validate stop-loss exposure and how tracheostomy-related payment was adjudicated."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The pattern is driven by a narrow set of rare high-cost Med/Surg DRGs and procedures such as cardiac valve surgery, wound debridement/skin graft, kidney transplant, and major chest procedures, making service-level isolation highly relevant.; IP MedSurg (DNE) Trend 3: The outlier spend is also concentrated in specific severe diagnoses including metastatic bone disease, pleural conditions, and saddle pulmonary embolism, so diagnosis-driver review directly fits the pattern.; IP MedSurg (DNE) Trend 1: Variance is clustered within a limited set of hospitals/providers across CT, IN, NH, OH, and NY rather than system-wide, matching the provider-driver rule.; IP MedSurg (DNE) Trend 10: The recommended action explicitly calls for contract or billing challenge and stop-loss/payment validation for unusually high paid-per-admit cases, which aligns with reviewing reimbursement method.; IP MedSurg (DNE) Trend 9: Case-level coding and payment validation for repeated six-figure admissions suggests possible claim processing or reprocessing issues that should be checked against contractual standards."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T10:27:50.773413+00:00"
+  }
+}

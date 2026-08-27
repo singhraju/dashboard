@@ -1,0 +1,450 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_4_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Facility mapping and auth-code movement are masking true utilization signals",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "ob_global_bundling",
+          "label": "OB Bundle Rule",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth_status",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_bundling": "Not addressed; no DRG interaction rules found.",
+          "prior_auth_status": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_bundling": "-",
+          "prior_auth_status": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_bundling": "Global OB package bundles maternity care; overlapping antepartum, delivery, or postpartum claims may deny/recoup.",
+          "prior_auth_status": "-"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_bundling": "Denies separate payment when Z3A is paired with O00-O08, Z33.2, or postpartum diagnoses.",
+          "prior_auth_status": "-"
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_bundling": "-",
+          "prior_auth_status": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00034",
+        "payer_name": "Cigna",
+        "policy_title": "Modifier Reference Guide",
+        "tags": [],
+        "effective_date": "11/30/2017",
+        "evidence": "General modifier reimbursement guide; no DRG-specific utilization, authorization, or payment rule found for this DRG.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/MRG_Modifier_Reference_Guide.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "Policy governs multiple-birth maternity delivery billing with CPT and ICD-10 codes. It is unrelated to this requested DRG code, so no adjudication rule applies.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "Off-topic. This maternity services policy does not mention or govern this DRG, and no adjudication rule was found for it.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "Global obstetrical care is reimbursable once per pregnancy when antepartum, delivery, and postpartum services are all furnished by the same provider or group under the same TIN. Overlapping maternity claims can be denied or recouped. This is professional maternity reimbursement, not facility DRG adjudication.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59430"
+          ],
+          "related_codes": [
+            "59430",
+            "59400",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN"
+          ],
+          "utilization_limits": [
+            "once per pregnancy",
+            "90-day postpartum period",
+            "one postpartum-only package per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global obstetric package",
+            "Maternity services",
+            "Postpartum-only maternity services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider or group under same TIN"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Diagnosis combination edit: gestation-age diagnoses paired with abortive outcome or postpartum diagnoses are denied on the claim.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "O00-O08",
+            "Z33.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500119",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services",
+        "tags": [],
+        "effective_date": "2018-01-29",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-023.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593510104",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Delivery Payment Equivalency",
+        "tags": [],
+        "effective_date": "2020-06-30",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-056.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 11,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Facility mapping and auth-code movement are masking true utilization signals",
+    "pattern_rank": 4,
+    "pattern_title": "Facility mapping and auth-code movement are masking true utilization signals",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies",
+      "Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 11,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "11 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO', 'CA', 'NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it targets professional maternity package adjudication rather than the pattern's facility mapping/auth-code signal distortion."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "3/11 policies quarantined (27%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/11 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00047:Procedure and Place of Service, RP_COM_UHC_00045:Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange, RP_COM_UHC_00071:Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 163640,
+    "output": 36094,
+    "breakdown": {
+      "search_keywords": {
+        "input": 564,
+        "output": 532,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 696,
+        "output": 2156,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 152403,
+        "output": 28091,
+        "calls": 11
+      },
+      "relevance_judge": {
+        "input": 3891,
+        "output": 2350,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 884,
+        "output": 600,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 731,
+        "output": 547,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 389,
+        "output": 117,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2295,
+        "output": 1334,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1787,
+        "output": 367,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T10:14:43.392958+00:00",
+    "end_time": "2026-08-23T10:16:20.040867+00:00",
+    "duration_ms": 96647,
+    "version": "2.0.0"
+  }
+}

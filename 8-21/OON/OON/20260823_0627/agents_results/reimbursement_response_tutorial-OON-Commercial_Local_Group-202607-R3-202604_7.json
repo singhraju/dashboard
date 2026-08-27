@@ -1,0 +1,514 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-R3-202604_7_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-R3-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CO, GA, IN, and OH have rare inpatient Med/Surg cases, not a broad trend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "claim_action",
+          "label": "Claim Action",
+          "type": "badge"
+        },
+        {
+          "id": "support_needed",
+          "label": "Support Needed",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_action": "Clinical Validation",
+          "support_needed": "Requires physician-documented sepsis, SOFA increase, cultures, antibiotics, fluids, and supporting diagnosis/procedure evidence."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_action": "Diagnosis Validation",
+          "support_needed": "Requires physician-documented sepsis with organ dysfunction, SOFA \u22652 increase, and sepsis treatment."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_action": "-",
+          "support_needed": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_action": "Clinical Validation",
+          "support_needed": "Requires medical records supporting Sepsis-3 sepsis diagnosis and corresponding sepsis treatment services."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_action": "Denies",
+          "support_needed": "Ensure a valid principal diagnosis in Box 67 with correct ICD-10-CM coding for DRG assignment."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "Inpatient claims with MS-DRG 998 are treated as invalid principal-diagnosis cases and denied; the submitted principal diagnosis must be valid and sequenced per ICD-10-CM rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00067",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Sepsis Diagnosis (PDF)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Inpatient sepsis DRG is subject to clinical validation; payment may be adjusted or denied if sepsis documentation is unsupported.",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [
+            "871",
+            "872",
+            "A41.9",
+            "R65.20",
+            "R65.21",
+            "870"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or LIP documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_OH_2953170300000",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Infectious Disease: Multisystem Testing (PDF)",
+        "tags": [],
+        "effective_date": "01/26",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CG.CP.MP.02.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00250",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This inpatient sepsis DRG is subject to medical record validation. Payment may be adjusted after review if the sepsis diagnosis is not supported; supported claims may be paid or reinstated after review.",
+        "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "A41.9",
+            "R65.20",
+            "R65.21"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "medical record review",
+            "sepsis diagnosis present"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "Inpatient facility claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation required"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00013",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - General Inflammation Testing",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00029",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00085",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2022-01-07",
+        "evidence": "Diagnosis code R65.2 is explicitly subject to sepsis clinical validation review. Inpatient hospital payments may be adjusted when the medical record does not support sepsis and sepsis treatment services under Sepsis-3 criteria.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "after medical record review",
+            "pre-payment and post-payment"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_CO_2960679860200",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2024-05-01",
+        "evidence": "No code-specific adjudication rule found. This policy is diagnosis-code focused and does not name this DRG item.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 8,
+    "policies_successful": 8,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Require medical record review for MS-DRG 871 on the same inpatient claim when paired with 870, 872, A41.9, R65.20, or R65.21, and allow only when physician or licensed independent practitioner documentation shows a sepsis diagnosis is present. Buckeye Health Plan (WellCare) and Centene both apply MS-DRG 871 validation on the same inpatient claim when paired with 870, 872, A41.9, R65.20, or R65.21.. Exempt: sepsis screening.\nIA \u2014 Implement DRG clinical validation for R65.2 after medical record review, with review applied at both pre-payment and post-payment.",
+      "evidence": [
+        "Centene \u00b7 Sepsis Diagnosis: \"871\" [target_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"870\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"872\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A41.9\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"R65.20\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"R65.21\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"same inpatient claim\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"medical record review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"sepsis diagnosis present\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"MS-DRG\" [program_scope]",
+        "Centene \u00b7 Sepsis Diagnosis: \"physician or licensed independent practitioner documentation required\" [provider_role_restrictions]",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF): \"sepsis screening\" [exemptions]",
+        "Molina \u00b7 Sepsis: \"R65.2\" [target_codes]",
+        "Molina \u00b7 Sepsis: \"R65.2\" [related_codes]",
+        "Molina \u00b7 Sepsis: \"after medical record review\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"pre-payment and post-payment\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"DRG\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Buckeye Health Plan (WellCare) and Centene both apply MS-DRG 871 validation on the same inpatient claim when paired with 870, 872, A41.9, R65.20, or R65.21."
+      ],
+      "citation": [
+        "Centene \u00b7 Sepsis Diagnosis \u2014 https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+        "Buckeye Health Plan (WellCare) \u00b7 Sepsis Diagnosis (PDF) \u2014 https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+        "Molina \u00b7 Sepsis \u2014 https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: CO, GA, IN, and OH have rare inpatient Med/Surg cases, not a broad trend",
+    "pattern_rank": 7,
+    "pattern_title": "CO, GA, IN, and OH have rare inpatient Med/Surg cases, not a broad trend",
+    "cpt_codes_requested": [
+      "A4150",
+      "K8050"
+    ],
+    "drg_codes_requested": [
+      "Disorders of the Biliary Tract with CC",
+      "Poisoning and Toxic Effects of Drugs without MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 8,
+    "successful_extractions": 8,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 8 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'GA', 'CO'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 2 for scope drift because it addresses a generic MS-DRG 998 denial rather than the pattern's rare inpatient Med/Surg and sepsis-related cases."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/8 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 70819,
+    "output": 40773,
+    "breakdown": {
+      "search_keywords": {
+        "input": 557,
+        "output": 267,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 4088,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 724,
+        "output": 1834,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 59204,
+        "output": 28826,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 2509,
+        "output": 711,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 951,
+        "output": 592,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1307,
+        "output": 965,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 2965,
+        "output": 2704,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2159,
+        "output": 786,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T06:59:53.595585+00:00",
+    "end_time": "2026-08-23T07:01:25.818291+00:00",
+    "duration_ms": 92222,
+    "version": "2.0.0"
+  }
+}

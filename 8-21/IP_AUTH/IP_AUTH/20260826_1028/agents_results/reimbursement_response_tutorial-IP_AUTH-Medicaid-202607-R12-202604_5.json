@@ -1,0 +1,621 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-R12-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-R12-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Delivery-related episodes are rising across multiple states, with added obstetric acuity in IN",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_ob_bundling",
+          "label": "Global OB Bundle",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Centene bundles routine OB care; separate pregnancy E/M excluded, second twin billable with modifier 51.",
+          "prior_auth": "-"
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Global OB bundle CPTs are not recognized after 1/1/2027; same-day postpartum is bundled to delivery.",
+          "prior_auth": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "01967 primary; 01968/01969 reimbursed separately as add-ons with separate time, not combined.",
+          "prior_auth": "No Auth"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CNC_00277",
+        "payer_name": "Centene",
+        "policy_title": "Global Maternity Billing",
+        "tags": [],
+        "effective_date": "01/01/2013",
+        "evidence": "Routine global obstetric care is bundled when the same physician or group provides antepartum, delivery, and postpartum services. For vaginal twin delivery, the policy allows a higher-complexity global maternity claim with modifier 22.",
+        "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59510",
+            "59514",
+            "12041-12047",
+            "96365-96367"
+          ],
+          "related_codes": [
+            "59409",
+            "59510",
+            "59514",
+            "59400",
+            "13131-13133"
+          ],
+          "required_modifiers": [
+            "22",
+            "51"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "multiple gestation vaginal delivery",
+            "vaginal delivery of twins",
+            "same physician or group provides global care",
+            "both twins delivered via cesarean",
+            "third- or fourth-degree laceration at delivery",
+            "same delivery claim"
+          ],
+          "utilization_limits": [
+            "approximately 13 antepartum visits",
+            "6 weeks postpartum"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global obstetrical package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "state, contractual, or health plan policy exception",
+            "modifier 22 may be warranted if documented"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00045",
+        "payer_name": "Healthfirst",
+        "policy_title": "Obstetric Billing Guidelines",
+        "tags": [],
+        "effective_date": "10/01/2025",
+        "evidence": "Healthfirst's obstetric billing policy is on-topic for delivery episodes but does not adjudicate this DRG label directly. It requires delivery modifiers U7/U8/U9, treats same-day postpartum care as part of delivery, separates labor management from delivery, and retires global/bundled obstetric CPTs after 1/1/2027.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-132-Obstetric-Billing-Guidelines.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59409",
+            "59514",
+            "59612",
+            "59410",
+            "59515",
+            "59614",
+            "59430"
+          ],
+          "related_codes": [
+            "59080-59083",
+            "59051",
+            "59802",
+            "59300",
+            "59412",
+            "59414",
+            "59431",
+            "59432",
+            "59433",
+            "59434",
+            "59502",
+            "59503",
+            "59504",
+            "59623",
+            "59898",
+            "59899"
+          ],
+          "required_modifiers": [
+            "U7",
+            "U8",
+            "U9"
+          ],
+          "excluded_modifiers": [
+            "P"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same calendar date",
+            "same labor episode"
+          ],
+          "utilization_limits": [
+            "84-day postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "NYS Medicaid MMC/HARP: 0500F and 0503F informational claims"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00092",
+        "payer_name": "Healthfirst",
+        "policy_title": "Anesthesia Services",
+        "tags": [],
+        "effective_date": "7/1/2025",
+        "evidence": "This anesthesia policy is on-topic for delivery-related episodes because it explicitly includes obstetric anesthesia CPT codes for vaginal delivery, cesarean delivery, cesarean hysterectomy, urgent hysterectomy following delivery, external cephalic version, and neuraxial labor analgesia. Reimbursement is time-based under the standard anesthesia formula, and claims missing the required anesthesia modifier or anesthesia time are rejected or denied.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-095-Anesthesia-Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "01958",
+            "01960",
+            "01961",
+            "01962",
+            "01963",
+            "01967",
+            "01968",
+            "01969"
+          ],
+          "related_codes": [],
+          "required_modifiers": [
+            "AA",
+            "QK",
+            "QS",
+            "QY",
+            "QX",
+            "QZ"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "with anesthesia modifier",
+            "same claim line",
+            "actual anesthesia time reported"
+          ],
+          "utilization_limits": [
+            "15-minute units"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Anesthesia"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00437",
+        "payer_name": "United Health",
+        "policy_title": "Anesthesia Policy, Professional",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This is a professional anesthesia policy rather than a DRG payment policy. For delivery-related professional claims, neuraxial labor analgesia/anesthesia for planned vaginal delivery is reimbursed using base units plus time units with a required anesthesia modifier. Obstetric add-on codes 01968 and 01969 may also be reimbursed when applicable, with state-specific limits in Florida and special time-unit handling in Indiana.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Anesthesia-Policy-R0032.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "01967",
+            "01968",
+            "01969",
+            "01960"
+          ],
+          "related_codes": [
+            "01968",
+            "01969",
+            "01960",
+            "00851",
+            "01967"
+          ],
+          "required_modifiers": [
+            "AA",
+            "AD",
+            "QK",
+            "QX",
+            "QY",
+            "QZ"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same individual member",
+            "same or different physician",
+            "separate operative session",
+            "time reported separately from 01967"
+          ],
+          "utilization_limits": [
+            "360 minutes (24 units) FL",
+            "1 time unit/15 min first hour IN",
+            "1 unit/60 min subsequent hours IN",
+            "360 minutes (24 units) with 01967 in FL"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "FL: 01967 and 01967+01968 capped at 360 minutes (24 units) for vaginal or cesarean delivery",
+            "IN: modifiers may be in any position",
+            "IN: QY claim lines denied",
+            "IN: 01967 time units are 15-minute blocks in first hour then 60-minute blocks thereafter",
+            "FL: combined 01967 and 01968 capped at 360 minutes (24 units)",
+            "IN: 01960 time units are 15-minute blocks in first hour then 60-minute blocks thereafter"
+          ],
+          "provider_role_restrictions": [
+            "anesthesia professional billing only"
+          ],
+          "exemptions": [
+            "01968 and 01969 add-on exception",
+            "59/76/77/78/79/XE separate session",
+            "01968 add-on exception to highest-base rule",
+            "01969 add-on exception to highest-base rule"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00446",
+        "payer_name": "United Health",
+        "policy_title": "Cesarean Delivery Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "Global cesarean obstetrical care is reimbursable when billed with an appropriate ICD-10 diagnosis from the policy list; elective cesarean without a high-risk diagnosis is not denied but paid below the allowable amount.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "diagnosis in any position",
+            "assistant surgeon modifier present"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "IN uses own diagnosis list",
+            "MS uses own diagnosis list",
+            "NM: U1 required for 59510",
+            "NY: U7 U8 U9 required",
+            "TX: U1 U2 U3 required",
+            "TX: U3 not reimbursable",
+            "NM: U1 required for 59514",
+            "NM: U1 required for 59515"
+          ],
+          "provider_role_restrictions": [
+            "assistant surgeon required"
+          ],
+          "exemptions": [
+            "Colorado",
+            "Idaho",
+            "Rhode Island"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00490",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "In Indiana, global obstetrical bundle codes are not covered. OB care must be unbundled, with prenatal care billed separately from delivery and postpartum care.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59425",
+            "59426"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59400",
+            "59510",
+            "59610",
+            "59618"
+          ],
+          "required_modifiers": [
+            "U1",
+            "U2",
+            "U3"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "up to 14 prenatal visits",
+            "3 first trimester",
+            "3 second trimester",
+            "8 third trimester"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "IN: global OB codes not covered",
+            "IN: prenatal care billed separately",
+            "IN: trimester modifiers required"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny",
+            "limit"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Apply a professional cesarean edit to 59510, 59514, and 59515: require diagnosis in any position and assistant surgeon modifier present, with assistant surgeon required; otherwise deny. Apply to CA. Peer: Centene, Healthfirst, and United Health all recognize 59510/59514, but United Health applies the strongest cesarean-specific guardrail by requiring assistant surgeon modifier present..\n\nRecommendation 2: Bundle routine obstetrical care into 59510 or 59514 when the same physician or group provides global care, using approximately 13 antepartum visits and 6 weeks postpartum as the default global obstetrical package window; allow exceptions only for a state, contractual, or health plan policy exception. Apply to CA. Exempt: state, contractual, or health plan policy exception. Peer: Centene, Healthfirst, and United Health all recognize 59510/59514, and Centene plus United Health pair these cesarean delivery codes with global OB episode logic rather than separate routine prenatal/postpartum reimbursement..\n\nRecommendation 3: For anesthesia around cesarean delivery, reimburse 01968 and 01969 separately only as add-ons to 01967 when billed on the same date of service or same labor episode with modifier AA, QK, QX, QY, or QZ, and with actual anesthesia time reported separately from 01967. Apply to CA. Exempt: 01968 and 01969 add-on exception. Peer: Healthfirst and United Health both require AA/QK/QX/QY/QZ on 01967/01968/01969 with time-based reporting, and United Health treats 01968/01969 as separate add-ons rather than combined anesthesia time..",
+      "evidence": [
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"59510\" [target_codes]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"59514\" [target_codes]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"59515\" [target_codes]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"diagnosis in any position\" [pairing_conditions]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"assistant surgeon modifier present\" [pairing_conditions]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"assistant surgeon required\" [provider_role_restrictions]",
+        "Centene \u00b7 Global Maternity Billing: \"59510\" [target_codes]",
+        "Centene \u00b7 Global Maternity Billing: \"59514\" [target_codes]",
+        "Centene \u00b7 Global Maternity Billing: \"same physician or group provides global care\" [pairing_conditions]",
+        "Centene \u00b7 Global Maternity Billing: \"approximately 13 antepartum visits\" [utilization_limits]",
+        "Centene \u00b7 Global Maternity Billing: \"6 weeks postpartum\" [utilization_limits]",
+        "Centene \u00b7 Global Maternity Billing: \"Global obstetrical package\" [program_scope]",
+        "Centene \u00b7 Global Maternity Billing: \"state, contractual, or health plan policy exception\" [exemptions]",
+        "Healthfirst \u00b7 Anesthesia Services: \"01967\" [target_codes]",
+        "Healthfirst \u00b7 Anesthesia Services: \"01968\" [target_codes]",
+        "Healthfirst \u00b7 Anesthesia Services: \"01969\" [target_codes]",
+        "Healthfirst \u00b7 Anesthesia Services: \"AA\" [required_modifiers]",
+        "Healthfirst \u00b7 Anesthesia Services: \"QK\" [required_modifiers]",
+        "Healthfirst \u00b7 Anesthesia Services: \"QY\" [required_modifiers]",
+        "Healthfirst \u00b7 Anesthesia Services: \"QX\" [required_modifiers]",
+        "Healthfirst \u00b7 Anesthesia Services: \"QZ\" [required_modifiers]",
+        "Healthfirst \u00b7 Anesthesia Services: \"actual anesthesia time reported\" [pairing_conditions]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"01967\" [target_codes]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"01968\" [target_codes]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"01969\" [target_codes]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"AA\" [required_modifiers]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"QK\" [required_modifiers]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"QX\" [required_modifiers]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"QY\" [required_modifiers]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"QZ\" [required_modifiers]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"same date of service\" [pairing_conditions]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"time reported separately from 01967\" [pairing_conditions]",
+        "United Health \u00b7 Anesthesia Policy, Professional: \"01968 and 01969 add-on exception\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Centene, Healthfirst, and United Health all recognize 59510/59514, but United Health applies the strongest cesarean-specific guardrail by requiring assistant surgeon modifier present.",
+        "Centene, Healthfirst, and United Health all recognize 59510/59514, and Centene plus United Health pair these cesarean delivery codes with global OB episode logic rather than separate routine prenatal/postpartum reimbursement.",
+        "Healthfirst and United Health both require AA/QK/QX/QY/QZ on 01967/01968/01969 with time-based reporting, and United Health treats 01968/01969 as separate add-ons rather than combined anesthesia time."
+      ],
+      "citation": [
+        "United Health \u00b7 Cesarean Delivery Policy, Professional \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "Centene \u00b7 Global Maternity Billing \u2014 https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "Healthfirst \u00b7 Anesthesia Services \u2014 https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-095-Anesthesia-Services.pdf",
+        "United Health \u00b7 Anesthesia Policy, Professional \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Anesthesia-Policy-R0032.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Delivery-related episodes are rising across multiple states, with added obstetric acuity in IN",
+    "pattern_rank": 5,
+    "pattern_title": "Delivery-related episodes are rising across multiple states, with added obstetric acuity in IN",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Full Term Neonate with Major Problems",
+      "Vaginal Delivery with O.R. Procedures Except Sterilization and/or D&C"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN', 'TN', 'NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 80938,
+    "output": 64300,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 385,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 557,
+        "output": 1182,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 63985,
+        "output": 55631,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2907,
+        "output": 851,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 976,
+        "output": 568,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 951,
+        "output": 688,
+        "calls": 6
+      },
+      "policy_recommendations": {
+        "input": 6810,
+        "output": 4399,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4209,
+        "output": 596,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-26T10:51:32.007387+00:00",
+    "end_time": "2026-08-26T10:55:22.823828+00:00",
+    "duration_ms": 230816,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement an OH SNF - FREE STANDING policy remediation for LTSS Dual Eligible and TANF Standard that targets concentrated provider subsets with contract and site-of-care review, audits utilization management KPI changes, validates PA-required and non-PA authorization-to-claim enforcement, and confirms claims are processing to contractual reimbursement methodology.",
+        "evidence": [
+          "OH LTSS Dual Eligible / SNF - FREE STANDING added $50.3M.",
+          "Admissions and paid per admit rose for LTSS Dual Eligible in N and Y.",
+          "OH TANF Standard / SNF - FREE STANDING added another $9.1M.",
+          "TANF Standard growth was mostly admission-led.",
+          "Source cards flag auth_dimension_present and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit OH Medicaid TANF Standard PA-required claims in the Not Mapped facility bucket for auth-to-claim matching and claims-processing accuracy, correct facility and site-of-care attribution, then rerun the bucket by true facility and provider before UM or contract action.",
+        "evidence": [
+          "OH TANF Standard / Not Mapped / Y increased $10.1M.",
+          "Admissions rose by 408.",
+          "Paid per admit increased about $21.6K.",
+          "Flags include auth_dimension_present and unmapped_or_unknown_value."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Institute a temporary hold on reimbursement and UM decisions tied to AUTH_CODE_DISTRIBUTION, and complete targeted auth-to-claim reconciliation plus claim reclassification/reprocessing across CA, IN, and TN for Riley's Children's Health, Fresno Heart & Surgical Hospital, Methodist University Hospital, and the affected California DRGs before any authorization denial enforcement or downstream policy use.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION changes are a gating data issue across CA, IN, and TN.",
+          "Flags include auth_or_mapping_shift and requires_validation_before_action.",
+          "Riley's Children's Health, Fresno Heart & Surgical Hospital, and Methodist University Hospital are concentrated sites.",
+          "CA impact touches Cirrhosis, Kidney/Urinary, and Poisoning DRGs.",
+          "Reconcile logic and reclassify affected claims and admissions before downstream business action."
+        ],
+        "peer_benchmarking": [
+          "Centene: no prior authorization required; sepsis claims may receive pre/post-pay DRG validation review.",
+          "United Health: no prior authorization, notification, or state-specific authorization requirements stated."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a RILEY'S CHILDREN'S HEALTH targeted policy review for IN Medicaid CHILDRENS PA-required non-ER IP Med/Surg admissions in TANF Standard and ABD Non Dual to confirm prior authorization was obtained and matched to actual claims, enforce authorization denials, validate contractual claims processing, and pursue contract, site-of-care, and step-down discharge remediation where indicated.",
+        "evidence": [
+          "RILEY'S CHILDREN'S HEALTH concentrates the IN CHILDRENS admission increase.",
+          "Both source cards are PA-required with auth code Y.",
+          "TANF Standard at Riley is volume-led.",
+          "ABD Non Dual at Riley shows higher paid per admit.",
+          "Both cards flag auth-to-claim validation."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine services, supplies, equipment, nursing, and ventilator/CPAP management."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit Fresno Heart & Surgical Hospital CA Medicaid ACUTE HOSPITAL admissions with auth=Y under TANF Standard and ABD Non Dual for PA-to-claim match, denial enforcement, and contract-compliant payment, focusing on Cirrhosis and Alcoholic Hepatitis with CC, Other Kidney and Urinary Tract Diagnoses with CC, and Poisoning and Toxic Effects of Drugs without MCC; route persistent outlier volume or payment to site-of-care and contract remediation review.",
+        "evidence": [
+          "Fresno Heart & Surgical Hospital represented $1.2M of CA TANF Standard growth.",
+          "PA-required CA TANF Standard acute utilization growth added $1.7M.",
+          "Cirrhosis/hepatitis and kidney/urinary diagnoses drove mixed volume and unit-cost pressure.",
+          "ABD Non Dual showed 13 admissions with about $24.2K higher paid per admit."
+        ],
+        "peer_benchmarking": [
+          "Molina summary shows no inpatient rule scope and no prior authorization requirement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Reconcile prior authorizations, denials, and paid claim actuals for Medicaid TANF Standard PA-required acute hospital admissions in MO and VA at diagnosis level, prioritizing Depressive Neuroses, Neuroses Except Depressive, Cirrhosis and Alcoholic Hepatitis with CC, and Poisoning and Toxic Effects of Drugs without MCC, and in MO validate claims adjudication against contractual reimbursement obligations.",
+        "evidence": [
+          "MO mixed pressure is led by Depressive Neuroses and cirrhosis/hepatitis.",
+          "VA contributes additional volume-led acute hospital cirrhosis/hepatitis growth.",
+          "MO and VA source cards carry auth_dimension_present flags.",
+          "MO has higher paid per admit in key diagnoses."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 6,
+        "pattern": "NC behavioral health acuity and acute psych growth",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 7,
+        "pattern": "Ridgeview Institute Monroe drives GA behavioral health growth",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 28,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 1: The spend surge is concentrated in OH free-standing SNF relationships, so provider-level behavior and contract changes are a primary research path.; IP NF (DNE) Trend 4: Variance is tightly isolated to the SNF - FREE STANDING site of care, making service/site-of-care specific review highly relevant.; IP NF (DNE) Trend 6: Admissions increased materially, especially for LTSS Dual Eligible, and the recommended next step includes level-of-care appropriateness and utilization review, aligning to UM KPI/PAV analysis.; IP NF (DNE) Trend 8: The pattern spans both PA-required and non-PA claims and explicitly includes auth-to-claim validation as a business term, so authorization enforcement should be reviewed.; IP NF (DNE) Trend 10: Paid per admit rose significantly for LTSS Dual Eligible, and the recommendation calls for reviewing reimbursement terms, directly matching reimbursement method analysis."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 8: Most directly aligned because the spike sits in PA-required claims and the pattern explicitly says PA attribution/auth reliability is questionable; auth-to-claim matching should be validated before any UM action.; IP NF (DNE) Trend 10: Highly relevant because paid per admit increased sharply and the pattern warns against reimbursement action until site-of-care mapping is corrected; reimbursement method should be reviewed after remapping.; IP NF (DNE) Trend 9: Relevant because an unmapped facility bucket can reflect claims processing, routing, or reprocessing issues that place claims into the wrong classification, so claim status/frequency review is appropriate.; IP NF (DNE) Trend 4: Relevant because the core issue is uncertainty about the true site of care/service category; service-driver review fits the recommendation to rerun spend by the corrected facility/site bucket.; IP NF (DNE) Trend 1: Useful follow-on rule once mapping is fixed, since any remaining increase may be concentrated in specific facilities/providers and would then inform contracting or provider-behavior review."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most direct fit: the pattern is explicitly an AUTH_CODE_DISTRIBUTION / pa_required_code validation issue, flagged as auth_or_mapping_shift and auth-to-claim validation requiring reconciliation before action.; IP MedSurg (DNE) Trend 9: Highly relevant because the recommendation is to reclassify affected claims and admissions, which aligns with reviewing claims processing/reprocessing logic and claim status handling.; IP MedSurg (DNE) Trend 1: Relevant because the variance is concentrated in a subset of providers and hospitals, especially Riley's Children's Health, Fresno Heart & Surgical Hospital, and Methodist University Hospital.; IP MedSurg (DNE) Trend 3: Relevant because part of the CA impact is isolated to specific inpatient DRGs/diagnostic groupings, including Cirrhosis and Alcoholic Hepatitis with CC, Other Kidney and Urinary Tract Diagnoses with CC, and Poisoning and Toxic Effects of Drugs without MCC."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated in a single provider, Riley's Children's Health, which directly matches the provider-driver rule and supports targeted provider/network review rather than broad statewide action.; IP MedSurg (DNE) Trend 6: The largest component is volume-led growth in admissions, and the recommended next step specifically calls for review of avoidable admissions and length-of-stay controls, aligning with utilization management KPI/PAV analysis.; IP MedSurg (DNE) Trend 8: All identified growth is in PA-required admissions (auth = Y), and the cards explicitly flag auth-to-claim validation, making authorization enforcement a core parent rule.; IP MedSurg (DNE) Trend 10: ABD Non Dual shows higher paid per admit and the pattern calls for contract performance review, so reimbursement method/contractual payment mechanics are relevant to the higher-cost component.; IP MedSurg (DNE) Trend 7: The recommendation includes referral source review, and the admissions are non-ER in the drill context, making admission/discharge source-location review relevant for understanding directed or planned admission patterns."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a single provider, Fresno Heart & Surgical Hospital, making provider-specific behavior, case intake, and contractual review the primary parent driver.; IP MedSurg (DNE) Trend 3: A meaningful share of the increase is isolated to specific diagnoses/DRGs, especially cirrhosis/alcoholic hepatitis, kidney and urinary tract diagnoses, and poisoning-related admissions, indicating diagnosis-level concentration.; IP MedSurg (DNE) Trend 8: The admissions are repeatedly flagged as PA-required (auth=Y), and the recommended next step includes review of PA-required acute hospital admissions, directly aligning with auth-to-claim enforcement review.; IP MedSurg (DNE) Trend 10: The pattern includes mixed unit-cost pressure and specifically calls for contract performance review by product, which makes reimbursement method and payment mechanics highly relevant.; IP MedSurg (DNE) Trend 6: Admissions volume is the main growth signal, and the downstream routing to UM operations suggests the need to assess whether utilization management KPI changes contributed to the inpatient increase."
+      },
+      {
+        "rank": 6,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is concentrated in specific inpatient med/surg diagnoses, especially Cirrhosis and Alcoholic Hepatitis with CC and Poisoning/Toxic Effects, and the recommended action is diagnosis-level acute hospital UM review.; IP BH (DNE) Trend 3: A large share of the increase is concentrated in behavioral health diagnoses such as Depressive Neuroses and Neuroses Except Depressive, making diagnosis-specific BH review highly relevant.; IP MedSurg (DNE) Trend 8: All key slices are PA-required (auth=Y), the cards are flagged with auth_dimension_present, and business terms include auth-to-claim validation, so enforcement of authorization requirements is directly relevant.; IP MedSurg (DNE) Trend 10: MO shows unit-cost pressure and a notable paid-ratio increase for cirrhosis/hepatitis admissions, matching the recommendation for reimbursement follow-up and making reimbursement method review highly relevant.; IP BH (DNE) Trend 7: The BH acute hospital growth is also in PA-required inpatient settings, so checking whether authorization denials are being appropriately enforced is relevant for the MO depressive/neuroses admission increase."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-26T14:25:07.019483+00:00"
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "partial_success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX acute hospital costs rose on both more admissions and concentrated provider cost pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mentioned",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "obstetric_scope",
+          "label": "Obstetric Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "Readmission Bundles",
+          "obstetric_scope": "Obstetrical deliveries are excluded from this general 30-day readmission policy."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "obstetric_scope": "Not applicable; policy addresses vector-borne laboratory testing, not inpatient obstetric DRG reimbursement."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "POA Required",
+          "obstetric_scope": "No obstetric-specific inpatient DRG rule; selected HACs require valid POA reporting."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "Off-topic for the requested DRG pattern. This policy is a general inpatient readmissions reimbursement policy for DRG-paid facilities, including Texas program variations, and does not identify or adjudicate the requested infectious/parasitic DRG specifically.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The policy bundles or denies separate payment for unplanned inpatient readmissions within 30 days when the second stay is for the same, similar, or related condition or procedure. It applies to DRG-reimbursed inpatient facilities and does not carve out this DRG category specifically.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days of discharge"
+          ],
+          "utilization_limits": [
+            "30 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "81 (planned readmission)"
+          ],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "TX: same day within 24 hours",
+            "WA: 14-day clinically related",
+            "WI: first admission not paid",
+            "Medicare: same day within 24 hours",
+            "CAH exempt in some states"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Cancer",
+            "Neonatal/Newborn",
+            "Obstetrical deliveries",
+            "Behavioral Health",
+            "Rehabilitation care",
+            "Sickle Cell Anemia",
+            "Transplants",
+            "Transfers",
+            "Against medical advice"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00022",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Testing for Vector-Borne Infections",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "Off-topic for the requested DRG pattern. This policy governs reimbursement for laboratory testing related to vector-borne infections, not inpatient DRG payment or acute hospital cost patterns.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c1",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00058",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Testing for Diagnosis of Active or Latent Tuberculosis",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea9a",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00060",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Hepatitis Testing",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390c",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00125",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Acquired Conditions Policy, Facility",
+        "tags": [],
+        "effective_date": "2008-10-01",
+        "evidence": "No DRG-specific payment rule is stated; the policy limits inpatient acute hospital payment for selected hospital acquired conditions when they were not present on admission. Valid POA reporting is required for applicable inpatient claims, and missing or invalid POA data can cause the claim to be returned.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Acquired-Conditions-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "present on admission",
+            "inpatient admission"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "IPPS",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "CAHs",
+            "LTCHs",
+            "Maryland Waiver Hospitals",
+            "Cancer Hospitals",
+            "Childrens Inpatient Facilities",
+            "Religious Non-Medical Health Care Institutions",
+            "Inpatient Psychiatric Hospitals",
+            "Inpatient Rehabilitation Facilities",
+            "VA/DoD Hospitals",
+            "POA-exempt diagnosis codes"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01824",
+        "payer_name": "United Health",
+        "policy_title": "Diagnostic Testing for Influenza Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-09-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Diagnostic-Testing-Influenza-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01835",
+        "payer_name": "United Health",
+        "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "Off-topic for DRG inpatient reimbursement. This policy governs molecular syndromic infectious disease panel laboratory billing on UB04 and CMS 1500 claims, not DRG-based hospital inpatient payment rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 10,
+    "policies_successful": 9,
+    "policies_failed": 1
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: TX acute hospital costs rose on both more admissions and concentrated provider cost pressure",
+    "pattern_rank": 3,
+    "pattern_title": "TX acute hospital costs rose on both more admissions and concentrated provider cost pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 9,
+    "failed_extractions": 1,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "9 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it addresses California cesarean delivery readmission policy rather than the Texas acute hospital cost pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/9 policies quarantined (11%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/9 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00120:Abortion]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons.",
+      "1 out of 10 policies failed extraction. Check logs for details."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 87498,
+    "output": 39585,
+    "breakdown": {
+      "search_keywords": {
+        "input": 532,
+        "output": 529,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 526,
+        "output": 1134,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 77168,
+        "output": 33064,
+        "calls": 12
+      },
+      "relevance_judge": {
+        "input": 2750,
+        "output": 1584,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 1024,
+        "output": 556,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1094,
+        "output": 637,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 374,
+        "output": 270,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2719,
+        "output": 1563,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1311,
+        "output": 248,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T13:28:26.675003+00:00",
+    "end_time": "2026-08-24T13:31:20.203206+00:00",
+    "duration_ms": 173528,
+    "version": "2.0.0"
+  }
+}

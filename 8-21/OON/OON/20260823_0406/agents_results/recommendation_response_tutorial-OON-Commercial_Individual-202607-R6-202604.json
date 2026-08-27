@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 3,
+      "patterns_skipped": 5,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Institute a validation gate for Not Mapped or UNATTRIBUTED outpatient records by requiring provider-, diagnosis-, and service-level remapping review for MEDEX BIOCARE PHARMACY, CORAM CVS SPECIALTY INFUSION SERVICES, THREE RIVERS DIAGNOSTICS, SHIELD HEALTHCARE - VALENCIA, and IU HEALTH BALL MEMORIAL HOSPITAL across D66, E8801, E119, F1020/F1120, and D509 before management-design or contractual review.",
+        "evidence": [
+          "UNATTRIBUTED OP Mgmt Oth Misc D66 drugs added +$679K on 2 claims.",
+          "ME PPO Not Mapped spend added +$513K on 119 claims.",
+          "CO CORAM CVS SPECIALTY INFUSION SERVICES drug activity added +$94.8K.",
+          "GA THREE RIVERS DIAGNOSTICS showed high-claim Not Mapped lab activity.",
+          "CA SHIELD HEALTHCARE VALENCIA supplies were tagged Not Mapped.",
+          "IN D509 Q-code oncology activity appeared under Not Mapped classification."
+        ],
+        "peer_benchmarking": [
+          "Elevance, Horizon BCBS, Premera Blue Cross, and Regence BCBS show no documented policy relevance.",
+          "No listed payer shows a documented appeals process or effective policy date."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Before any contract action, perform provider-level contractual repricing and final-adjudication audit for ME Commercial Individual HMO ACUTE HOSPITAL claims, then audit ME Commercial Individual PPO Physical Rehab authorization-to-actual matching and reimbursement compliance.",
+        "evidence": [
+          "ME facility cost pressure totaled +$643K across HMO acute hospital and PPO physical rehab.",
+          "Acute hospital HMO contributed +$485K with no claim growth, indicating pure unit cost pressure.",
+          "Validation needed because acute hospital is a small-base unit-cost spike with no claim growth.",
+          "PPO physical rehab added +$158K on +99 claims with higher paid per case."
+        ],
+        "peer_benchmarking": [
+          "Reimbursement table lists only Elevance Health (internal) with no documented DRG scope, billing rules, or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a claim-level itemized bill review, interim and first-bill zeroing check, final-claim contractual adjudication audit, and authorization enforcement review for the Liver Transplant without MCC/K7031 claim and the IU HEALTH BALL MEMORIAL HOSPITAL Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC/K5720 admission.",
+        "evidence": [
+          "IN / UNATTRIBUTED IP Med/Surg rare outliers totaled +$505K.",
+          "A single Liver Transplant without MCC case drove +$486K.",
+          "Digestive disorder case at IU HEALTH BALL MEMORIAL HOSPITAL added +$19K.",
+          "Volume not material; paid per admit up."
+        ],
+        "peer_benchmarking": [
+          "No payer in the summary documented an appeals process for comparable outlier policies.",
+          "Buckeye Health Plan requires diagnosis and transplant criteria for certain GI testing coverage."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 1,
+        "pattern": "CT PPO residential behavioral health is rising through higher volume and higher paid per case",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 2,
+        "pattern": "CT inpatient behavioral health growth is concentrated in substance-use diagnoses",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 5,
+        "pattern": "TX HMO non-residential behavioral health growth is utilization-led",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 6,
+        "pattern": "IN acute hospital HMO growth is concentrated at IU Health Ball Memorial Hospital",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 8,
+        "pattern": "IN NICU and maternity emergence is small-volume but high-cost at IU Health Ball Memorial Hospital",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 24,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)",
+          "OP Lab Pathology (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 4: This is the strongest fit because the largest dollars sit in OP Mgmt Oth Misc with Not Mapped drugs, supplies, and miscellaneous outpatient services; the core issue is unclear service categorization that must be validated before action.; OP Oth (DNE) Trend 1: The variance is highly concentrated in a small set of providers such as MEDEX BIOCARE PHARMACY, CORAM CVS SPECIALTY INFUSION SERVICES, and SHIELD HEALTHCARE, which points to provider-level mapping or attribution review.; OP Oth (DNE) Trend 3: Repeated diagnosis concentration around D66, E8801, and E119 suggests the Not Mapped outpatient specialty drug and supply activity should also be checked at the diagnosis level before interpreting it as a true clinical trend.; OP Lab Pathology (DNE) Trend 4: GA activity at THREE RIVERS DIAGNOSTICS is tied to Not Mapped OP Lab/Pthlgy and temporary/professional lab services, making service classification review directly relevant for the lab portion of the pattern.; OP IV Thrpy - Oncly (DNE) Trend 4: The IN oncology component involves Not Mapped OP IV therapy/oncology Q-code activity, so service-driver review is needed to validate whether the outpatient infusion categorization is correct."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP PT OT ST (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: The largest driver is a single acute hospital HMO unit-cost spike with no claim growth, so reimbursement method and contractual pricing validation are the most direct parent rule match.; IP MedSurg (DNE) Trend 9: The pattern explicitly calls for claim-level pricing validation on a very small base, making claims processing/reprocessing review highly relevant to rule out status or repricing issues.; IP MedSurg (DNE) Trend 1: The acute hospital variance is highly concentrated and likely tied to a very small number of provider events, so provider-level isolation is important before broader network conclusions.; OP PT OT ST (DNE) Trend 8: The PPO physical rehab component includes higher paid per case, so reimbursement method review is relevant for the unit-cost portion of the increase.; OP PT OT ST (DNE) Trend 7: Physical rehab also shows substantial claim growth, and the recommended follow-up includes utilization controls, making auth-to-claim matching a relevant parent rule for the volume-driven component."
+      },
+      {
+        "rank": 5,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 6,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow set of diagnoses/DRGs, especially a single Liver Transplant without MCC case plus one digestive disorder admission, matching diagnosis-level isolation.; IP MedSurg (DNE) Trend 2: The spend increase is driven by essentially one catastrophic member-level event and one additional single admission, indicating variance isolated to a very small subset of members rather than broad utilization.; IP MedSurg (DNE) Trend 10: Paid per admit spiked materially with minimal volume, and the recommended next step explicitly calls for reimbursement and stop-loss validation, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 9: Because this is a rare, one-claim-driven pattern flagged for claim-level validation and data quality review, claims processing/reprocessing accuracy should be checked before treating it as true trend.; IP MedSurg (DNE) Trend 1: One of the two outlier admissions is tied to a specific hospital provider, so provider-level review can help confirm whether the variance is isolated to a provider subset versus a broader inpatient issue."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T05:35:05.863198+00:00"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic inpatient Med/Surg cases remain a separate high-cost lever",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_mentioned",
+          "label": "DRG Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_applicability",
+          "label": "Policy Applicability",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Fallon Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mentioned": "-",
+          "policy_applicability": "-"
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mentioned": "-",
+          "policy_applicability": "Not addressed; no DRG-specific carve-out or payment rule is stated."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_FH_00026",
+        "payer_name": "Fallon Health",
+        "policy_title": "Drugs and biologicals payment policy",
+        "tags": [],
+        "effective_date": "03/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/DrugsBio030126.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500106",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Advanced Gene and Cellular Therapies",
+        "tags": [],
+        "effective_date": "2026-04-06",
+        "evidence": "The policy is about advanced gene and cellular therapies, not this DRG pattern. This DRG is not explicitly addressed; no DRG-specific carve-out or payment rule is stated for it.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-053.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Rare catastrophic inpatient Med/Surg cases remain a separate high-cost lever",
+    "pattern_rank": 6,
+    "pattern_title": "Rare catastrophic inpatient Med/Surg cases remain a separate high-cost lever",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies",
+      "Craniotomy and Endovascular Intracranial Procedures with MCC",
+      "Spinal Fusion Except Cervical with Spinal Curvature, Malignancy, Infection or Extensive Fusions with CC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 4 source card(s) attest no state (segment scope: CT, IN, TX, UNATTRIBUTED, CA); searched without it rather than narrowing to ['CT', 'CA']"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 24545,
+    "output": 6908,
+    "breakdown": {
+      "search_keywords": {
+        "input": 574,
+        "output": 488,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 492,
+        "output": 1132,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 20753,
+        "output": 4307,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 517,
+        "output": 162,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 616,
+        "output": 482,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 202,
+        "output": 132,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1391,
+        "output": 205,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T11:09:02.501987+00:00",
+    "end_time": "2026-08-22T11:09:41.779526+00:00",
+    "duration_ms": 39277,
+    "version": "2.0.0"
+  }
+}

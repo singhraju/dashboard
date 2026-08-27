@@ -1,0 +1,1023 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Authorization and facility mapping shifts must be validated before action",
+    "pattern_description": "A large share of the observed spend change appears tied to authorization code redistribution and claims falling into unmapped facility buckets, especially in FL and secondarily in NY, TN, and IA. Because these shifts can change where dollars appear without reflecting a true care change, business action on utilization, provider performance, or reimbursement should wait until coding and mapping are reconciled. This is a gating issue for the rest of the analysis.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorization and facility mapping shifts must be validated before action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_relevance",
+              "label": "DRG Relevance",
+              "type": "text"
+            },
+            {
+              "id": "auth_site_guidance",
+              "label": "Auth/Site Guidance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Healthfirst",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_relevance": "Not mentioned; this policy is unrelated to DRG payment rules.",
+              "auth_site_guidance": "No prior authorization or site-of-service guidance stated for this DRG."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HF_00020",
+            "payer_name": "Healthfirst",
+            "policy_title": "Serum Biomarker Testing for Multiple Sclerosis and Related Neurological Diseases",
+            "tags": [],
+            "effective_date": "02/01/2026",
+            "evidence": "Off-topic for this policy. The policy addresses biomarker testing for multiple sclerosis and related neurologic diseases, not DRG payment rules, authorization shifts, or facility mapping for this DRG.",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-061-Multiple-Sclerosis.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00028",
+            "payer_name": "Healthfirst",
+            "policy_title": "Biochemical Markers Alzheimer",
+            "tags": [],
+            "effective_date": "02/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-043-Biochemical-Markers-Alzheimer.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "FL authorization code redistribution accounts for about +$127.5M and is flagged for validation before action. NY / TN authorization code redistribution adds about +$5.5M, concentrated in a delivery-related inpatient DRG and two hospitals. IA LTSS Dual Eligible claims in Not Mapped facilities add about +$11.1M in volume-led change, with another +$4.7M showing mixed volume and unit-cost pressure. A smaller FL Not Mapped TANF Standard spike adds about +$105K and reinforces the facility classification issue."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "FL authorized SNF growth is the largest true utilization story",
+    "pattern_description": "FL authorized SNF spend rose sharply across both LTSS Dual Eligible and LTSS Non Dual products, with the increase driven mainly by more admissions and claims rather than pure pricing. Neurologic degeneration and musculoskeletal aftercare are the main clinical contributors, and the related NF aftercare pattern supports a sustained post-acute demand story. This is the clearest operational utilization increase after removing the validation noise.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "FL LTSS Dual Eligible authorized SNF spend increased about +$136.1M, including roughly +13,000 admissions and +22,577 claims. FL LTSS Non Dual authorized SNF spend added about +$17.7M with roughly +1,880 admissions and +5,759 claims. The largest clinical drivers are degenerative nervous system disorders and musculoskeletal aftercare, including about +$13.1M from Degenerative Nervous System Disorders without MCC. Related FL NF orthopedic aftercare adds about +$1.5M, supporting continued post-acute care intensity rather than a one-time spike."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA, IN, and KS show durable neurologic NF/SNF case-mix expansion",
+    "pattern_description": "Across CA, IN, and KS, spend growth is concentrated in SNF and NF care for neurologic and post-stroke populations rather than a broad inpatient trend. IN and KS are heavily concentrated in Alzheimer's, stroke sequelae, hemiplegia, and Parkinson's diagnoses, while the operational SNF patterns show materially higher admissions across LTSS products. The combined picture points to durable long-stay care demand and case-mix pressure.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA / IN / KS LTSS Dual Eligible free-standing SNF spend increased about +$41.7M and was volume-led. IN NF case-mix growth totals about +$38.0M when combining the two IN NF groupings, centered in Alzheimer's and post-stroke hemiplegia diagnoses. KS NF case-mix growth adds about +$12.0M, again concentrated in post-stroke hemiplegia and Parkinson's diagnoses. CA LTSS Non Dual free-standing SNF adds about +$9.6M, showing that the broader SNF pattern extends beyond one product."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "FL acute hospital spend is concentrated in a few authorized provider and product combinations",
+    "pattern_description": "FL acute hospital spend growth is concentrated in a small set of authorized products and hospitals, which creates a clear provider-mix story. ABD Non Dual shows both more admissions and higher paid per admit, with Tampa General standing out on unit cost, while TANF Standard is mainly a volume story across Tampa General, AdventHealth Orlando, and Lakeland. CHIP Standard adds a smaller but similar acute hospital increase at AdventHealth Orlando.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "FL acute hospital spend is concentrated in a few authorized provider and product combinations",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_addressed",
+              "label": "Pattern Addressed",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Florida Blue",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_addressed": "-",
+              "policy_scope": "Professional surgical services billed on CMS-1500 in hospitals, ASCs, or offices, including standard global package."
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_addressed": "Bundles",
+              "policy_scope": "Molina bundles routine inpatient and outpatient facility services into room charges, with no separate reimbursement."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_addressed": "Bundles",
+              "policy_scope": "Routine services on UB-04 facility claims are bundled into room, facility, or ancillary reimbursement."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_FLBL_FL_28206710003",
+            "payer_name": "Florida Blue",
+            "policy_title": "Global Surgery Package",
+            "tags": [],
+            "effective_date": "02/24/2010",
+            "evidence": "The requested inpatient DRG pattern is not addressed by this policy. The policy governs professional global surgery package reimbursement and bundling on CMS-1500 claims, not acute inpatient hospital DRG payment, provider/product concentration, or authorization rules for these DRGs.",
+            "policy_url": "https://files.guidewell.com/m/7d2f2f7eb720f5f0/original/providers-payment-policies-global-surgery-package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00273",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2023-06-15",
+            "evidence": "This policy does not name the DRG, but it applies broad hospital-facility bundling rules: routine supplies, services, equipment, nursing/technical services, critical care items, and many surgical-room items are included in room-and-board or procedure payment and are generally not separately reimbursable; limited separate payment may apply to medically necessary discharge DME when home discharge is documented.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "during facility stay",
+                "same room or care area",
+                "same surgery or procedure"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "facility must bill all-inclusive services",
+                "third-party facility services may be denied"
+              ],
+              "exemptions": [
+                "discharge home DME with documentation",
+                "diabetes treatment testing supplies"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01750",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": "2026-01-01",
+            "evidence": "The policy is a broad facility reimbursement rule that bundles routine hospital services, supplies, equipment, and certain ancillary components into room and board, facility, surgical suite, or other service charges. No DRG-specific exception is stated for this pattern.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "250",
+                "260-269",
+                "270-279",
+                "300-370",
+                "300",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [
+                "same claim line",
+                "same facility charge"
+              ],
+              "utilization_limits": [
+                "1 unit per day ventilator/CPAP"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "UB-04"
+              ],
+              "state_specific_rules": [
+                "Hawaii: OC 74-76",
+                "Virginia: J0401,J0578,J2315,J2426,J2794,J2798,Q9991,Q9992"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Colorado",
+                "Kentucky",
+                "Maryland",
+                "Minnesota",
+                "Mississippi",
+                "Missouri",
+                "Nebraska",
+                "New Mexico",
+                "North Carolina",
+                "Texas"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "FL ABD Non Dual acute hospital spend increased about +$21.1M with roughly +1,169 admissions and higher paid per admit. Tampa General alone added about +$3.7M in FL ABD Non Dual acute hospital spend, with paid per admit up about $8K. FL TANF Standard acute hospital spend increased about +$15.4M with roughly +2,263 admissions, while paid per admit declined, confirming a volume-led provider mix shift. A smaller FL acute hospital increase remains in ABD Non Dual and CHIP Standard at AdventHealth Orlando and Lakeland, adding about +$940K combined."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "Delivery-related episodes are rising across multiple states, with added obstetric acuity in IN",
+    "pattern_description": "Maternity-related inpatient spend is rising across several states around the same delivery DRG, indicating a recurring episode pattern rather than isolated claims. Indiana adds a more clinical acuity signal through post-term pregnancy, severe preeclampsia, and gestational hypertension, while the operational growth in TN, NC, MD, NY, OH, and KS is primarily more admissions. This is a focused maternity story with both utilization and episode-severity implications.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Delivery-related episodes are rising across multiple states, with added obstetric acuity in IN",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "global_ob_bundling",
+              "label": "Global OB Bundle",
+              "type": "text"
+            },
+            {
+              "id": "prior_auth",
+              "label": "Prior Auth",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_bundling": "Centene bundles routine OB care; separate pregnancy E/M excluded, second twin billable with modifier 51.",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Healthfirst",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_bundling": "Global OB bundle CPTs are not recognized after 1/1/2027; same-day postpartum is bundled to delivery.",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_bundling": "01967 primary; 01968/01969 reimbursed separately as add-ons with separate time, not combined.",
+              "prior_auth": "No Auth"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00277",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "Routine global obstetric care is bundled when the same physician or group provides antepartum, delivery, and postpartum services. For vaginal twin delivery, the policy allows a higher-complexity global maternity claim with modifier 22.",
+            "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59510",
+                "59514",
+                "12041-12047",
+                "96365-96367"
+              ],
+              "related_codes": [
+                "59409",
+                "59510",
+                "59514",
+                "59400",
+                "13131-13133"
+              ],
+              "required_modifiers": [
+                "22",
+                "51"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "multiple gestation vaginal delivery",
+                "vaginal delivery of twins",
+                "same physician or group provides global care",
+                "both twins delivered via cesarean",
+                "third- or fourth-degree laceration at delivery",
+                "same delivery claim"
+              ],
+              "utilization_limits": [
+                "approximately 13 antepartum visits",
+                "6 weeks postpartum"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Global obstetrical package"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "state, contractual, or health plan policy exception",
+                "modifier 22 may be warranted if documented"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "bundle",
+                "pay_separately"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00045",
+            "payer_name": "Healthfirst",
+            "policy_title": "Obstetric Billing Guidelines",
+            "tags": [],
+            "effective_date": "10/01/2025",
+            "evidence": "Healthfirst's obstetric billing policy is on-topic for delivery episodes but does not adjudicate this DRG label directly. It requires delivery modifiers U7/U8/U9, treats same-day postpartum care as part of delivery, separates labor management from delivery, and retires global/bundled obstetric CPTs after 1/1/2027.",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-132-Obstetric-Billing-Guidelines.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59409",
+                "59514",
+                "59612",
+                "59410",
+                "59515",
+                "59614",
+                "59430"
+              ],
+              "related_codes": [
+                "59080-59083",
+                "59051",
+                "59802",
+                "59300",
+                "59412",
+                "59414",
+                "59431",
+                "59432",
+                "59433",
+                "59434",
+                "59502",
+                "59503",
+                "59504",
+                "59623",
+                "59898",
+                "59899"
+              ],
+              "required_modifiers": [
+                "U7",
+                "U8",
+                "U9"
+              ],
+              "excluded_modifiers": [
+                "P"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same calendar date",
+                "same labor episode"
+              ],
+              "utilization_limits": [
+                "84-day postpartum period"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "NYS Medicaid MMC/HARP: 0500F and 0503F informational claims"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00092",
+            "payer_name": "Healthfirst",
+            "policy_title": "Anesthesia Services",
+            "tags": [],
+            "effective_date": "7/1/2025",
+            "evidence": "This anesthesia policy is on-topic for delivery-related episodes because it explicitly includes obstetric anesthesia CPT codes for vaginal delivery, cesarean delivery, cesarean hysterectomy, urgent hysterectomy following delivery, external cephalic version, and neuraxial labor analgesia. Reimbursement is time-based under the standard anesthesia formula, and claims missing the required anesthesia modifier or anesthesia time are rejected or denied.",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-095-Anesthesia-Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "01958",
+                "01960",
+                "01961",
+                "01962",
+                "01963",
+                "01967",
+                "01968",
+                "01969"
+              ],
+              "related_codes": [],
+              "required_modifiers": [
+                "AA",
+                "QK",
+                "QS",
+                "QY",
+                "QX",
+                "QZ"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "with anesthesia modifier",
+                "same claim line",
+                "actual anesthesia time reported"
+              ],
+              "utilization_limits": [
+                "15-minute units"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Anesthesia"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00437",
+            "payer_name": "United Health",
+            "policy_title": "Anesthesia Policy, Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "This is a professional anesthesia policy rather than a DRG payment policy. For delivery-related professional claims, neuraxial labor analgesia/anesthesia for planned vaginal delivery is reimbursed using base units plus time units with a required anesthesia modifier. Obstetric add-on codes 01968 and 01969 may also be reimbursed when applicable, with state-specific limits in Florida and special time-unit handling in Indiana.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Anesthesia-Policy-R0032.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "01967",
+                "01968",
+                "01969",
+                "01960"
+              ],
+              "related_codes": [
+                "01968",
+                "01969",
+                "01960",
+                "00851",
+                "01967"
+              ],
+              "required_modifiers": [
+                "AA",
+                "AD",
+                "QK",
+                "QX",
+                "QY",
+                "QZ"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "same individual member",
+                "same or different physician",
+                "separate operative session",
+                "time reported separately from 01967"
+              ],
+              "utilization_limits": [
+                "360 minutes (24 units) FL",
+                "1 time unit/15 min first hour IN",
+                "1 unit/60 min subsequent hours IN",
+                "360 minutes (24 units) with 01967 in FL"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "FL: 01967 and 01967+01968 capped at 360 minutes (24 units) for vaginal or cesarean delivery",
+                "IN: modifiers may be in any position",
+                "IN: QY claim lines denied",
+                "IN: 01967 time units are 15-minute blocks in first hour then 60-minute blocks thereafter",
+                "FL: combined 01967 and 01968 capped at 360 minutes (24 units)",
+                "IN: 01960 time units are 15-minute blocks in first hour then 60-minute blocks thereafter"
+              ],
+              "provider_role_restrictions": [
+                "anesthesia professional billing only"
+              ],
+              "exemptions": [
+                "01968 and 01969 add-on exception",
+                "59/76/77/78/79/XE separate session",
+                "01968 add-on exception to highest-base rule",
+                "01969 add-on exception to highest-base rule"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "limit"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00446",
+            "payer_name": "United Health",
+            "policy_title": "Cesarean Delivery Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "Global cesarean obstetrical care is reimbursable when billed with an appropriate ICD-10 diagnosis from the policy list; elective cesarean without a high-risk diagnosis is not denied but paid below the allowable amount.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59510",
+                "59514",
+                "59515",
+                "59618",
+                "59620",
+                "59622"
+              ],
+              "related_codes": [
+                "59514",
+                "59515",
+                "59618",
+                "59620",
+                "59622",
+                "59510"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "diagnosis in any position",
+                "assistant surgeon modifier present"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "IN uses own diagnosis list",
+                "MS uses own diagnosis list",
+                "NM: U1 required for 59510",
+                "NY: U7 U8 U9 required",
+                "TX: U1 U2 U3 required",
+                "TX: U3 not reimbursable",
+                "NM: U1 required for 59514",
+                "NM: U1 required for 59515"
+              ],
+              "provider_role_restrictions": [
+                "assistant surgeon required"
+              ],
+              "exemptions": [
+                "Colorado",
+                "Idaho",
+                "Rhode Island"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00490",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Services Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "In Indiana, global obstetrical bundle codes are not covered. OB care must be unbundled, with prenatal care billed separately from delivery and postpartum care.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "59425",
+                "59426"
+              ],
+              "related_codes": [
+                "59425",
+                "59426",
+                "59400",
+                "59510",
+                "59610",
+                "59618"
+              ],
+              "required_modifiers": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service"
+              ],
+              "utilization_limits": [
+                "up to 14 prenatal visits",
+                "3 first trimester",
+                "3 second trimester",
+                "8 third trimester"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "IN: global OB codes not covered",
+                "IN: prenatal care billed separately",
+                "IN: trimester modifiers required"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny",
+                "limit"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Indiana obstetric clinical groups add about +$810K, centered in post-term pregnancy, severe preeclampsia, and gestational hypertension. MD / NC / TN TANF Standard acute hospital utilization adds about +$1.5M, led by Ascension Saint Thomas Rutherford Hospital in TN at about +$814K. NY Family Care, OH TANF Standard, and KS TANF Standard together add about +$1.6M around the same delivery DRG. The shared delivery DRG across operational and clinical views suggests a repeatable maternity episode pattern rather than a single hospital anomaly."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "FL has rare catastrophic inpatient outliers that need case-level review",
+    "pattern_description": "A very small number of FL inpatient cases are driving disproportionate spend, including CAR-T therapy, ECMO or tracheostomy-level care, and NICU extreme immaturity or respiratory distress admissions. These are not broad utilization trends; they are catastrophic or highly specialized cases with very high cost per admission. The right response is case-level validation and high-cost case management, not broad policy edits.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "FL has rare catastrophic inpatient outliers that need case-level review",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00171",
+            "payer_name": "Centene",
+            "policy_title": "Sepsis Diagnosis",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.sunshinehealth.com/content/dam/centene/policies/payment-policies/CP.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "One CAR-T leukemia admission at Tampa General added about +$771K. Two ECMO or tracheostomy-level admissions at AdventHealth Orlando added about +$857K, or about $428K per admission. A separate FL NICU pattern at AdventHealth Orlando added about +$981K across 12 admissions, with paid per admit up about $29K. All drivers are low-volume and high-severity, so case-level review is more appropriate than broad utilization action."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "NC behavioral health and acute psych spend is emerging in a small but expensive foster care cohort",
+    "pattern_description": "NC shows a small-number but high-cost behavioral health spike centered in foster care acute psych and related inpatient behavioral health diagnoses. Paid per admit increased sharply, and the clinical pattern is concentrated in PTSD, adjustment disorder, and stress-reaction diagnoses rather than broad psychiatric utilization. This looks like a focused vulnerable-member cohort that needs targeted intervention.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "NC acute psych TANF Foster Care spend increased about +$1.9M across 46 admissions, with paid per admit up about $41K. The NC IP BH clinical pattern adds about +$1.8M across PTSD, adjustment disorder, stress reaction, and OCD-related admissions. Clinical paid per admit ranges from about $33K to $100K in the top cases. The pattern is small in count but concentrated enough to warrant immediate case-management and pricing review."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "NY, TN, and IN have smaller authorized provider-specific cost spikes that merit narrow intervention",
+    "pattern_description": "Outside the major markets, a small set of authorized episodes in NY, TN, and IN shows concentrated provider-level cost pressure. NY LTSS Dual SNF looks like a reimbursement issue because paid per admit increased while allowed per admit fell, while NY TANF Standard and IN Family Care include very small-count acute hospital spikes and TN ABD Non Dual reflects localized hospital admission growth. These are targeted exceptions rather than broad market trends.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "NY, TN, and IN have smaller authorized provider-specific cost spikes that merit narrow intervention",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_mention",
+              "label": "DRG Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_focus",
+              "label": "Policy Focus",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Fidelis Care (Centene)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mention": "-",
+              "policy_focus": "Broad facility-charge unbundling policy; routine or integral services bundled, with no DRG-specific rule."
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mention": "-",
+              "policy_focus": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mention": "-",
+              "policy_focus": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00730",
+            "payer_name": "Fidelis Care (Centene)",
+            "policy_title": "Unbundling Adjustments on Clean Claim Reviews",
+            "tags": [],
+            "effective_date": "09/2022",
+            "evidence": "Off-topic for the requested DRG pattern. This policy is a broad institutional facility-charge unbundling review and does not provide DRG-specific adjudication for the listed pattern.",
+            "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.038-Unbundling-Adjustments-on-Clean-Claim-Reviews.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00026",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2024-08-26",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00463",
+            "payer_name": "United Health",
+            "policy_title": "Global Days Policy, Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Global-Days-Policy-(R0005).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00465",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "NY LTSS Dual Eligible free-standing SNF adds about +$2.0M with roughly +241 admissions and paid per admit up while allowed per admit declined. TN ABD Non Dual acute hospital adds about +$559K at Ascension Saint Thomas Rutherford Hospital with roughly +63 admissions. IN Family Care acute hospital includes one admission adding about +$435K. NY TANF Standard acute hospital adds about +$464K across two admissions, or about $114K per admission."
+      }
+    }
+  }
+]

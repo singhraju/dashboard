@@ -1,0 +1,530 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic cases are driving a distinct CO / MO / UNATTRIBUTED / WI spike",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "carve_out_status",
+          "label": "Carve-out Status",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Needed",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_IL",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "Covered separately when criteria are met; otherwise not covered or reimbursable.",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "Not addressed in policy; not reimbursable for all other indications.",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "-",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Fallon Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "Separately reimbursed carve-out, excluding DRG payments; Fallon does not pay the drug claim.",
+          "auth_requirement": "Requires Auth"
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "-",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "Outpatient drugs are carved out; inpatient drug charges excluded; fractionated services not reimbursed.",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "-",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "carve_out_status": "-",
+          "auth_requirement": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_IL_IL_28593830312",
+        "payer_name": "BCBS_IL",
+        "policy_title": "Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "Reimbursable only when used to monitor and predict immune function after solid organ transplantation; not reimbursable for all other indications.",
+        "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/cpcplab/2026/cpcplab028-5-1-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81560",
+            "86352",
+            "0018M"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "after solid organ transplantation"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "lab management"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082190001",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "Not addressed by this policy. The policy is limited to immune cell function assay reimbursement after solid organ transplantation and does not establish DRG-specific adjudication rules for CAR T-cell or other immunotherapy cases.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab028-5-1-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00061",
+        "payer_name": "Emblem Health",
+        "policy_title": "Co-Surgeon/Team Surgeon-Modifiers 62/66",
+        "tags": [],
+        "effective_date": "1/1/2021",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/co-surgeon-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00129",
+        "payer_name": "Emblem Health",
+        "policy_title": "Immune Cell Function Assay (LBM)",
+        "tags": [],
+        "effective_date": "3/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/immune-cell-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FH_00016",
+        "payer_name": "Fallon Health",
+        "policy_title": "Co-surgeon and team surgeon payment policy",
+        "tags": [],
+        "effective_date": "03/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/CoSurgTeamSurg030126.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FH_00026",
+        "payer_name": "Fallon Health",
+        "policy_title": "Drugs and biologicals payment policy",
+        "tags": [],
+        "effective_date": "03/01/2026",
+        "evidence": "MassHealth ACO APAD/APEC carve-out drugs currently include CAR T-cell and gene therapies. These drugs are excluded from the episode-specific all-inclusive outpatient payment, require prior authorization through the MassHealth DUR Program before administration, and are paid directly by MassHealth while Fallon continues to review and pay related hospital and professional services.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/DrugsBio030126.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [
+            "before administration for APAD/APEC carve-out drugs"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MassHealth ACO",
+            "MassHealth DUR"
+          ],
+          "state_specific_rules": [
+            "Massachusetts"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "related hospital and professional services"
+          ],
+          "action_types": [
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500106",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Advanced Gene and Cellular Therapies",
+        "tags": [],
+        "effective_date": "2026-04-06",
+        "evidence": "Inpatient CAR-T and related gene/cellular therapy drug charges are excluded from DRG cost outlier calculation and paid under outpatient reimbursement logic; facility inpatient payment is handled through the negotiated case rate.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-053.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "38228"
+          ],
+          "related_codes": [
+            "38225",
+            "38226",
+            "38227",
+            "38228"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "LU"
+          ],
+          "revenue_codes": [
+            "0871",
+            "0872",
+            "0873",
+            "0874",
+            "0875",
+            "0891",
+            "0892"
+          ],
+          "pairing_conditions": [
+            "inpatient claim",
+            "HOPD administration claim",
+            "same outpatient claim",
+            "same date of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "OPPS",
+            "case rate",
+            "hospital outpatient"
+          ],
+          "state_specific_rules": [
+            "PA",
+            "WV",
+            "DE",
+            "NY"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "pay_separately",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595780209",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-immune-cell-function-assay-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00106",
+        "payer_name": "Healthfirst",
+        "policy_title": "Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "05/01/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-036-Immune-Cell-Function-Assay.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 10,
+    "policies_successful": 10,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Rare catastrophic cases are driving a distinct CO / MO / UNATTRIBUTED / WI spike",
+    "pattern_rank": 6,
+    "pattern_title": "Rare catastrophic cases are driving a distinct CO / MO / UNATTRIBUTED / WI spike",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies",
+      "Heart Transplant or Implant of Heart Assist System without MCC"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "10 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 2 of 2 source card(s) attest no state (segment scope: CO, MO, UNATTRIBUTED, WI); searched without it rather than narrowing to []"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/10 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/10 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 83761,
+    "output": 32443,
+    "breakdown": {
+      "search_keywords": {
+        "input": 547,
+        "output": 530,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 811,
+        "output": 3116,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 75696,
+        "output": 26238,
+        "calls": 10
+      },
+      "relevance_judge": {
+        "input": 1923,
+        "output": 888,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 918,
+        "output": 596,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 963,
+        "output": 861,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 2903,
+        "output": 214,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T09:22:58.573206+00:00",
+    "end_time": "2026-08-23T09:24:32.290629+00:00",
+    "duration_ms": 93717,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 5,
+      "patterns_skipped": 3,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit Medicaid AUTH_CODE_DISTRIBUTION claims in IN, CO, MD, CA, and VA for authorization denial enforcement and claims processing or reprocessing accuracy, reconciling PA-required coding to paid claims for Major Small and Large Bowel Procedures with CC, Cirrhosis and Alcoholic Hepatitis with CC, Other Disorders of Nervous System with MCC, and Depressive Neuroses before any UM or reimbursement changes.",
+        "evidence": [
+          "All source groups flagged requires_validation_before_action.",
+          "CO shift lacked supporting utilization or unit-cost measures.",
+          "IN increase tied to Major Small and Large Bowel Procedures with CC.",
+          "VA validation bucket concentrated in Depressive Neuroses."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a provider-specific policy review in CA TANF Standard prior-authorized acute IP Med/Surg for Major Small and Large Bowel Procedures with CC, Cirrhosis and Alcoholic Hepatitis with CC, and Other Disorders of Nervous System with MCC to audit authorization-to-claim matching, enforce denials, confirm claims process per contract, and pursue contract or site-of-care remediation with THE KECK HOSPITAL OF USC and MERCY SAN JUAN MEDICAL CENTER.",
+        "evidence": [
+          "CA TANF Standard acute hospital added +$1.9M overall.",
+          "Admissions up and paid per admit up in CA acute hospital.",
+          "Major bowel procedures added +$1.1M with 37 more admissions.",
+          "Cirrhosis and alcoholic hepatitis added +$0.5M with 35 more admissions.",
+          "Neurologic admissions added +$0.4M with 11 more admissions.",
+          "Drivers are pa_required_code Y and include auth-to-claim validation.",
+          "Clinical detail centers on alcoholic cirrhosis with ascites and attention ileostomy.",
+          "Provider context names THE KECK HOSPITAL OF USC and MERCY SAN JUAN MEDICAL CENTER."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct targeted claims-processing and itemized-bill review for CA neurologic outlier claims across IP Med/Surg, NF, and SNF - FREE STANDING and TX Physical Rehab claims, validating authorized versus actual level of care, discharge placement, and contractual payment for ANOXIC BRAIN DAMAGE NEC, AV MALFORMATION CEREBRAL VESSELS, and LOCKED-IN STATE.",
+        "evidence": [
+          "CA ANOXIC BRAIN DAMAGE NEC added $0.5M from 2 admissions.",
+          "CA NF AV MALFORMATION CEREBRAL VESSELS paid about $62.3K per admit.",
+          "CA NF LOCKED-IN STATE paid about $33.2K per admit.",
+          "CA SNF - FREE STANDING added $0.4M with 22 admissions.",
+          "TX Physical Rehab added $0.5M from 2 admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a provider-specific policy audit for PA-required Medicaid CHILDRENS admissions at Riley's Children's Health and John R. Oishei Childrens Hospital to verify prior authorization, enforce denial policy, review utilization-management KPI changes, and clinically review John R. Oishei Childrens Hospital NY IP NICU cases coded Extreme Immaturity or Respiratory Distress Syndrome, Neonate / SINGLE LIVEBORN INFANT DELIV C-SECT.",
+        "evidence": [
+          "Riley's Children's Health TANF Standard added 86 admissions under PA-required Medicaid CHILDRENS.",
+          "John R. Oishei Childrens Hospital TANF Standard added 89 admissions under PA-required Medicaid CHILDRENS.",
+          "John R. Oishei Childrens Hospital CHIP Standard paid per admit increased about $7.1K.",
+          "NY IP NICU outlier involved two C-section liveborn admissions at John R. Oishei."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Create a cross-market Medicaid acute hospital prior-authorization, reimbursement, and utilization worklist: confirm contract-obligation claim processing and denial enforcement for MO and TN outliers, including ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL, and perform diagnosis-focused management review for Major Small and Large Bowel Procedures with CC, Cirrhosis and Alcoholic Hepatitis with CC, Depressive Neuroses, and Neuroses Except Depressive across IN, OH, NC, MD, and MO.",
+        "evidence": [
+          "All cited acute hospital segments show pa_required_code Y.",
+          "TN variance is concentrated at ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL.",
+          "MO pressure concentrates in Depressive Neuroses and Neuroses Except Depressive.",
+          "Major Small and Large Bowel Procedures with CC recurs in IN, OH, and NC.",
+          "Cirrhosis and Alcoholic Hepatitis with CC recurs in MO and MD."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "Inpatient behavioral health growth is concentrated in a narrow set of psychiatric diagnoses",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 3,
+        "pattern": "Acute psych facility spend is rising across multiple Medicaid products",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 8,
+        "pattern": "Unmapped facility values are creating a second validation gate",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the pattern\u2019s stated issue: large paid increases are tied to AUTH_CODE_DISTRIBUTION shifts in IP Med/Surg states and the recommended next step is to reconcile PA-required coding and auth-to-claim mapping before taking action.; IP BH (DNE) Trend 7: Highly relevant for the behavioral health portion of the pattern (notably CO and VA), where psych/depression-related IP BH shifts are explicitly flagged as auth or mapping validation issues requiring auth-to-claim review.; IP MedSurg (DNE) Trend 9: Relevant because the variance appears to be a classification or reprocessing artifact rather than confirmed utilization change; movement into AUTH_CODE_DISTRIBUTION without supporting volume or unit-cost signals can reflect claim status/frequency or processing issues.; IP BH (DNE) Trend 8: Relevant for the same reason in IP BH: the observed increases may be driven by claim processing or reclassification behavior tied to PA coding rather than real admissions or reimbursement change."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is explicitly concentrated in a narrow diagnosis set within IP Med/Surg, especially alcoholic cirrhosis with ascites, ileostomy-related admissions, and neurologic diagnoses rather than broad hospital inflation.; IP MedSurg (DNE) Trend 4: The largest spend growth is tied to specific inpatient service lines/DRGs, notably major bowel procedures, cirrhosis and alcoholic hepatitis, and neurologic admissions, making service-driver review highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially across the leading drivers, and the pattern calls for reimbursement action, so reviewing reimbursement method is directly aligned to the unit-cost component.; IP MedSurg (DNE) Trend 8: All major operational drivers are prior-auth related (pa_required_code = Y) and include auth-to-claim validation as a business term, so authorization enforcement is an important parent rule.; IP MedSurg (DNE) Trend 1: High-impact cards point to specific hospitals such as The Keck Hospital of USC and Mercy San Juan Medical Center, suggesting the increase may be concentrated among a subset of providers and warrant provider/contract review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 26,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The CA IP Med/Surg portion is driven by a very small number of rare, severe neurologic diagnoses such as anoxic brain damage, making diagnosis-level isolation the clearest first parent rule.; IP NF (DNE) Trend 3: The CA NF spike is also highly diagnosis-concentrated, especially AV malformation of cerebral vessels and locked-in state, so diagnosis drivers are central in NF as well.; IP MedSurg (DNE) Trend 4: The pattern is concentrated in post-acute/service settings like SNF - FREE STANDING and Physical Rehab, and the recommended next step explicitly calls for validating placement and site-of-care.; IP MedSurg (DNE) Trend 8: Operational source cards show PA required = Y and auth_dimension_present, with auth-to-claim validation called out, so confirming that authorized level of care matched the paid claims is highly relevant.; IP MedSurg (DNE) Trend 10: The outlier cases have extremely high paid per admit and the pattern summary explicitly raises payment accuracy concerns, making reimbursement method review a strong parent rule."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP NICU (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is concentrated in a small set of children's hospitals, especially Riley's Children's Health and John R. Oishei Childrens Hospital, so provider-level behavior, referral flow, and contract effects are the primary hypotheses.; IP MedSurg (DNE) Trend 10: The pattern includes unit-cost pressure in Family Care and CHIP Standard and explicitly calls out provider terms and negotiating leverage, which aligns with reviewing reimbursement method/contract structure.; IP MedSurg (DNE) Trend 7: The narrative points to referral concentration and site-of-care shift into children's hospitals rather than a broad pediatric trend, making admission/discharge source and location review highly relevant.; IP MedSurg (DNE) Trend 6: The largest contributors are volume-led admission increases under PA-required Medicaid products, so utilization-management KPI/PAV review is relevant to test whether management changes contributed to higher inpatient use.; IP NICU (DNE) Trend 3: The NY spillover is a focused high-cost NICU outlier tied to a specific neonatal DRG/diagnosis pair, so diagnosis-driven clinical case-mix review is the best fit for that component of the pattern."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 35,
+        "categories": [
+          "IP NICU (DNE)",
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: A large share of the pattern is concentrated in specific inpatient medical/surgical DRGs\u2014Major Small and Large Bowel Procedures with CC and Cirrhosis and Alcoholic Hepatitis with CC\u2014across IN, OH, NC, MD, and MO, making diagnosis-level concentration a primary parent rule.; IP BH (DNE) Trend 3: MO acute hospital pressure is materially driven by behavioral health DRGs such as Depressive Neuroses and Neuroses Except Depressive, so the diagnosis-driver rule is directly relevant for the BH portion of the pattern.; IP NICU (DNE) Trend 1: TN variance is heavily concentrated at a single provider, ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL, and the cited source card is in an IP NICU context, so provider concentration is a key parent rule for that segment.; IP MedSurg (DNE) Trend 6: The overall pattern is admissions-led in several markets and mixed in others, with recommended next steps focused on volume management; this aligns closely with reviewing utilization management KPI shifts via the PAV waterfall.; IP MedSurg (DNE) Trend 10: MO and TN are specifically called out for reimbursement review, and several markets show higher paid per admit, making reimbursement method review one of the most relevant parent rules for the unit-cost component."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-25T06:23:01.818214+00:00"
+  }
+}

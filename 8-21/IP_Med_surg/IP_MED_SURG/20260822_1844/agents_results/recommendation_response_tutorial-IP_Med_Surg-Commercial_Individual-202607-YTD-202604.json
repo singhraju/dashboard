@@ -1,0 +1,222 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a joint UM, claims, and reimbursement policy audit for CT Commercial Individual PPO prior-authorized acute hospital inpatient admissions, stratified by facility and focused on Craniotomy and Endovascular Intracranial Procedures with MCC and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, to verify prior authorization, level-of-care match, denial enforcement, and contractual pricing.",
+        "evidence": [
+          "CT PPO authorized acute hospital activity added about +$23.2M.",
+          "174 more claims and 370 more admissions.",
+          "Paid per admit increased about $4.4K.",
+          "Craniotomy with MCC added about +$0.9M.",
+          "Chemotherapy with CC paid per admit up about $14.1K."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine facility services and supplies into hospital payment.",
+          "Cigna policy addresses pharmacy and infusion reimbursement, not DRG-based acute inpatient payment."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform claims processing/reprocessing and auth-to-claim validation for Commercial Individual inpatient claims in CA, CT, GA, KY, TX, VA, and WI that carry AUTH_CODE_DISTRIBUTION or Not Mapped facility values, prioritizing CT PPO Not Mapped claims and the provider and DRG pockets at Yale New Haven Hospital, Santa Clara Valley Medical Center, Aurora St. Luke's Medical Center, Parkland Health and Hospital System, Craniotomy and Endovascular Intracranial Procedures with MCC, and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC; restate the affected trend before any UM, reimbursement, contract, or site-of-care action.",
+        "evidence": [
+          "CT PPO authorized Not Mapped facilities drove about +$4.7M.",
+          "CA AUTH_CODE_DISTRIBUTION added about +$1.3M before business action.",
+          "WI AUTH_CODE_DISTRIBUTION added about +$1.1M before business action.",
+          "KY HMO Not Mapped facility spend added about +$1.1M.",
+          "All authorization-code groups are flagged for validation before action."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a provider- and DRG-specific exception review for AURORA MEDICAL CENTER - SHEBOYGAN COUNTY and for Craniotomy and Endovascular Intracranial Procedures with MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC admissions in WI, GA, CO, CA, and TX to validate prior authorization on Y-coded cases, enforce authorization-denial edits, confirm contract-compliant inpatient reimbursement, and route large-dollar inpatient claims to itemized bill review.",
+        "evidence": [
+          "AURORA MEDICAL CENTER - SHEBOYGAN COUNTY in WI is a named provider pocket.",
+          "Craniotomy with MCC drives named growth pockets in GA, CO, and CA.",
+          "TX sepsis admissions are a named high-growth service pocket.",
+          "Admissions up and paid per admit up across HMO acute hospital.",
+          "Source cards are flagged auth_dimension_present with pa_required_code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused claims, authorization, and contract audit for Commercial Individual KY HMO PA-required acute inpatient admissions at TRISTAR SKYLINE MEDICAL CENTER, prioritizing Degenerative Nervous System Disorders without MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, and if claims are contractually accurate, initiate targeted provider remediation or site-of-care steerage.",
+        "evidence": [
+          "KY HMO authorized acute spend is concentrated at TRISTAR SKYLINE MEDICAL CENTER.",
+          "Broader KY authorized acute hospital spend rose with admissions up and unit cost up.",
+          "Tristar added spend on more admissions with exceptionally high paid per admission.",
+          "PA-required code is Y for impacted KY HMO acute hospital inpatient claims.",
+          "Degenerative nervous system disorders and sepsis were identified as main contributors."
+        ],
+        "peer_benchmarking": [
+          "United Health policy reviewed was not applicable to DRG-based acute inpatient reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA catastrophic inpatient policy review for Craniotomy and Endovascular Intracranial Procedures with MCC, Major Chest Procedures with CC, and Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization without CC/MCC at Santa Clara Valley Medical Center and Adventist Health Saint Helena: require itemized bill and coding validation, confirm authorization enforcement, and pursue provider-specific contract or site-of-care remediation for tertiary outlier cases.",
+        "evidence": [
+          "CA rare high-cost findings total about $5.5M across two related clusters.",
+          "Santa Clara Valley Medical Center concentrated multiple craniotomy MCC outlier diagnoses.",
+          "Traumatic subdural hematoma cases averaged $479K paid per admit on two admissions.",
+          "Benign cerebral meninges admissions rose with higher paid per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a TX focused inpatient utilization-management review for PARKLAND HEALTH AND HOSPITAL SYSTEM and BAYLOR UNIVERSITY MEDICAL CENTER across ACUTE HOSPITAL and Physical Rehab stays tied to HEMIPLG FLW CEREB INFARCT LT N-DOM, HEMIPLG NONTRM INTRCEREB HEM RT DOM, ENC ORTHOPED AFTERCARE FLW SURG AMP, and Acute Myocardial Infarction, Discharged Alive with CC to verify prior authorization, initial and concurrent review, site-of-care selection, and alternate discharge location planning.",
+        "evidence": [
+          "HEMIPLG FLW CEREB INFARCT LT N-DOM concentrated at PARKLAND HEALTH AND HOSPITAL SYSTEM.",
+          "HEMIPLG NONTRM INTRCEREB HEM RT DOM surfaced in TX ACUTE HOSPITAL admissions.",
+          "ENC ORTHOPED AFTERCARE FLW SURG AMP occurred in Physical Rehab with pa_required_code Y.",
+          "BAYLOR UNIVERSITY MEDICAL CENTER surfaced for Acute Myocardial Infarction, Discharged Alive with CC."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX lists outpatient-only cardiac biomarker restrictions; no inpatient neuro or rehab policy detail provided.",
+          "Humana lists limited ACS testing coverage; no inpatient site-of-care restriction appears in the summary."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit KY Commercial Individual PPO ACUTE HOSPITAL inpatient claims with pa_required_code N for contract-standard adjudication, auth-to-claim status, payment policy edits, and provider/DRG outlier pricing; reprocess or remediate any identified contract exceptions.",
+        "evidence": [
+          "KY PPO non-authorized acute hospital spend increased about +$2.1M.",
+          "Claims fell by 4 and admissions fell by 6.",
+          "Paid per admit increased about $21.1K.",
+          "Allowed per admit increased about $21.2K.",
+          "Paid ratio increased from 0.9418 to 0.9646."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require oncology UM and claims operations to review WI inpatient chemotherapy admissions at AURORA ST. LUKE'S MEDICAL CENTER for DRG Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC and diagnosis ENCOUNTER FOR ANTINEOPLASTIC CHEMO, validate PA-to-claim alignment, enforce denials for mismatched authorizations, and redirect planned non-ER cases to alternative sites of care when medically appropriate.",
+        "evidence": [
+          "WI inpatient chemotherapy added about +$1.1M.",
+          "Admissions increased by 42 at AURORA ST. LUKE'S MEDICAL CENTER.",
+          "PA required code Y on non-ER acute hospital admissions.",
+          "ENCOUNTER FOR ANTINEOPLASTIC CHEMO drove DRG Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health internal bundles inpatient hospital DRG chemotherapy administration; Wisconsin and some exempt facilities are excluded.",
+          "United Health denies chemotherapy administration on facility and professional claims, not inpatient DRG adjudication.",
+          "Humana lists laboratory-only scope with no separate chemotherapy administration reimbursement."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: This pattern is explicitly concentrated in authorized inpatient acute hospital claims (pa_required_code=Y) and the business terms include auth-to-claim validation, making authorization enforcement and matching the most direct parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit and allowed per admit both increased materially, and the recommended next step calls for review of contracted payment terms and reimbursement, aligning strongly to reimbursement method review.; IP MedSurg (DNE) Trend 6: The surge is driven by more admissions plus higher cost per admission, and the pattern details call for joint utilization management review of medical necessity and level of care, which fits UM KPI/PAV investigation.; IP MedSurg (DNE) Trend 1: The pattern recommends provider and network review, and the inpatient increase may be concentrated in specific hospitals or systems, so provider-driver analysis is highly relevant.; IP MedSurg (DNE) Trend 3: Named DRG drivers include high-acuity craniotomy/endovascular cases and chemotherapy admissions, indicating the variance is meaningfully concentrated in a subset of diagnoses/DRGs."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned because the pattern is driven by AUTH_CODE_DISTRIBUTION shifts and explicitly calls for validation of authorization flag assignment before any UM or reimbursement action; this is an auth-to-claim match issue.; IP MedSurg (DNE) Trend 9: Highly relevant because 'Not Mapped' facility values and restatement needs suggest claims processing, reprocessing, or mapping/classification problems rather than true utilization change.; IP MedSurg (DNE) Trend 1: The variance is concentrated in specific provider/facility pockets such as Yale New Haven Hospital, Santa Clara Valley Medical Center, Aurora St. Luke's, and Parkland, so provider-level isolation is useful once data quality is validated.; IP MedSurg (DNE) Trend 3: The pattern is localized to specific inpatient DRGs/diagnostic groupings like craniotomy and chemotherapy, making diagnosis-level review relevant to confirm whether the issue is concentrated within certain clinical categories or reflects miscoding.; IP MedSurg (DNE) Trend 10: Secondarily relevant because reimbursement and network teams are downstream users of this signal; reimbursement method review may be needed after auth and facility mapping validation confirms the trend is real."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is explicitly concentrated in a small number of provider pockets, especially AURORA MEDICAL CENTER - SHEBOYGAN COUNTY in WI, and the recommended action includes provider-specific contract review.; IP MedSurg (DNE) Trend 4: The growth is concentrated in a few high-acuity inpatient service/DRG pockets, especially Craniotomy with MCC and Sepsis DRGs across GA, CO, CA, and TX.; IP MedSurg (DNE) Trend 6: This is a mixed volume and unit-cost pattern with admissions up and paid per admit up, so reviewing utilization management KPIs is relevant to determine whether UM changes contributed to inpatient growth.; IP MedSurg (DNE) Trend 8: Authorization is directly in scope: the cards are flagged with auth_dimension_present, PA-required codes are present, and business terms include auth-to-claim validation for these high-cost admissions.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the next step calls for provider-specific contract and reimbursement review, making reimbursement method a key parent rule."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated at TRISTAR SKYLINE MEDICAL CENTER, making provider-level behavior, pricing, and contract terms the clearest parent driver.; IP MedSurg (DNE) Trend 10: Exceptionally high paid per admit at Tristar and the recommendation to review contract terms and outlier payment triggers align directly to reimbursement method review.; IP MedSurg (DNE) Trend 8: The pattern is explicitly within authorized inpatient cases and calls for UM compliance review, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 3: Degenerative nervous system disorders and sepsis are named clinical contributors, so diagnosis-level concentration should be evaluated as a parent driver.; IP MedSurg (DNE) Trend 6: The broader KY increase includes materially higher admissions in the authorization pathway, suggesting potential utilization management KPI or avoidable variance review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow set of diagnoses, including benign cerebral meningeal tumors, cranial nerve neoplasms, cerebral aneurysm, and other rare neuro/cardiothoracic conditions, making diagnosis-level isolation central to this pattern.; IP MedSurg (DNE) Trend 4: The pattern is driven by a small set of very high-cost inpatient services/DRGs such as craniotomy, major chest procedures, and cardiac valve/cardiothoracic procedures, so service-level review is directly relevant.; IP MedSurg (DNE) Trend 1: The cases appear concentrated in specific tertiary providers/facilities, and the recommended next step includes complex tertiary-care contracting review, which strongly aligns to provider-driver investigation.; IP MedSurg (DNE) Trend 10: The pattern explicitly calls for assessing whether complex tertiary-case contracting and outlier protections are adequate, which maps closely to reviewing reimbursement method for these catastrophic inpatient cases.; IP MedSurg (DNE) Trend 2: The spend increase is coming from only a few catastrophic admissions, implying concentration in a very small number of members/cases and supporting member-level case review even though this is not a broad population trend."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is overwhelmingly concentrated in a narrow set of diagnoses and DRG-linked clinical pockets, especially post-stroke hemiplegia, intracerebral hemorrhage with hemiplegia, and orthopedic aftercare following amputation.; IP MedSurg (DNE) Trend 1: Specific providers are visible in the spike, including Baylor and Parkland, indicating the increase may be concentrated among a subset of facilities and should be evaluated for provider-level practice, severity, or contract dynamics.; IP MedSurg (DNE) Trend 4: The pattern is limited to distinct inpatient service/settings such as acute hospital neurologic and cardiac admissions plus physical rehab aftercare, making service-driver and site-of-care review highly relevant.; IP MedSurg (DNE) Trend 6: Both admissions and paid per admit increased, and the recommended actions focus on clinical criteria, discharge planning, and complex-case management, which aligns with reviewing utilization management and potentially avoidable variance drivers.; IP MedSurg (DNE) Trend 7: The mix of ER acute admissions for neuro/cardiac cases and non-ER rehab aftercare, along with the recommendation to validate setting choices and post-acute planning, makes admission/discharge source and location review relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Most directly aligned because spend rose despite lower admissions and claims, while allowed and paid per admit increased materially, indicating reimbursement method or contract pricing pressure.; IP MedSurg (DNE) Trend 9: Highly relevant to the stated payment integrity concern; rising paid ratio and higher paid amounts with declining volume warrant review of claims processing, reprocessing, and contract-standard adjudication.; IP MedSurg (DNE) Trend 1: Provider-level concentration is plausible because the drill context points to a specific acute hospital provider, and the recommendation explicitly calls for contract review in KY PPO inpatient care.; IP MedSurg (DNE) Trend 4: Service-level review is relevant because the variance may be concentrated in specific high-cost inpatient services or DRGs, consistent with the outlier pricing signal in acute hospital stays.; IP MedSurg (DNE) Trend 8: Secondary but relevant because the pattern is explicitly tied to non-authorized inpatient care; auth-to-claim validation can confirm these stays were correctly outside the authorization pathway and not misclassified."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Variance is concentrated at a named acute hospital provider, AURORA ST. LUKE'S MEDICAL CENTER, making provider-specific practice patterns or contract dynamics a key research path.; IP MedSurg (DNE) Trend 3: The increase is tightly isolated to chemotherapy-related inpatient episodes and the diagnosis ENCOUNTER FOR ANTINEOPLASTIC CHEMO, not broad inpatient medical-surgical growth.; IP MedSurg (DNE) Trend 4: This is a service-line specific chemotherapy spike, so reviewing service drivers is directly relevant to whether inpatient chemo administration is the appropriate setting.; IP MedSurg (DNE) Trend 7: The episodes are non-ER inpatient admissions, which points to planned/elective admission patterns and supports review of admission source/location and alternative site-of-care opportunities.; IP MedSurg (DNE) Trend 8: PA required code is Y and the recommended action is UM review of clinical necessity, making authorization-to-claim enforcement highly relevant."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T21:01:39.875649+00:00"
+  }
+}

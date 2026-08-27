@@ -1,0 +1,227 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a joint UM operations and claims policy audit for Commercial Local Group OH PPO claims in facility_type=Not Mapped and AUTH_CODE_DISTRIBUTION; validate pa_required_code Y versus N against authorization records, correct facility mapping, and reprocess claims that missed denial or contractual edits before any provider contract or site-of-care action, then extend the same control to CA, CO, MO, NY, and WI recurrence pockets.",
+        "evidence": [
+          "OH PPO Not Mapped facility claims added +$7.4M.",
+          "OH PA=Y Not Mapped slice contributed +$5.9M.",
+          "OH AUTH_CODE_DISTRIBUTION shifts added +$1.9M.",
+          "CA and CO also show Not Mapped spend increases.",
+          "MO, NY, and WI show recurring AUTH_CODE_DISTRIBUTION shifts."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal): Requires Auth; facility setting not specifically restricted.",
+          "Cigna: Allowed in office, outpatient, or hospital settings; no special site restriction stated."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a joint CA Commercial Local Group PPO acute-hospital contract and claims-processing review at Harborview Medical Center and UC Irvine Medical Center for Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC, Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC, and Pulmonary Embolism with MCC or Acute Cor Pulmonale to validate prior-authorization-to-claim matching, contractual reimbursement, and site-of-care or contract-remediation actions.",
+        "evidence": [
+          "Spend is clustered in complex cardiothoracic, vascular, digestive, and pulmonary embolism cases.",
+          "Pressure is tied to PPO acute hospital admissions.",
+          "Harborview Medical Center and UC Irvine Medical Center are repeatedly present.",
+          "PA-required acute hospital PPO admissions include auth_dimension_present."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Stand up a cross-market PPO/POS/EPO acute hospital audit in VA, MO, CT, NY, GA, and WI for Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC, Major Chest Procedures with CC, Other Digestive System Diagnoses with MCC, Postpartum and Postabortion Diagnoses without O.R. Procedures, and Pulmonary Embolism with MCC or Acute Cor Pulmonale to validate prior-auth-to-claim matching, enforce denied-authorization edits, audit CUMG nurse/MD approval pathways, confirm contract-compliant reimbursement, and escalate provider outliers such as SSM Health Saint Mary's Hospital - Jefferson City and Harborview Medical Center for contract remediation or site-of-care review.",
+        "evidence": [
+          "Secondary-state acute hospital segments added about +$5.9M.",
+          "VA PPO cardiothoracic cases had flat admissions and higher paid per admit.",
+          "MO PPO and CT PPO mixed pressure repeated chest and digestive admissions.",
+          "GA/WI POS and VA POS show recurring cross-product acute hospital pressure.",
+          "Auth dimension present and auth-to-claim validation flagged on source cards.",
+          "SSM Health Saint Mary's Hospital Jefferson City appears in MO PPO impacted entities.",
+          "Harborview Medical Center appears in NY EPO impacted entities."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC bundles services and restricts select cardiac imaging combinations and contrast use."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Reprice and itemized-bill review recent CO Commercial Local Group PPO and EPO ACUTE HOSPITAL inpatient claims, starting with UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, validate authorization-to-claim matching and final adjudication to contract terms, escalate confirmed overrides or reimbursement-methodology changes to contract remediation, and extend the same review to CHILDRENS and CRITICAL ACCESS claims.",
+        "evidence": [
+          "CO PPO acute hospital spend rose with four fewer admissions; paid per admit increased.",
+          "CO EPO acute hospital spend rose with four fewer admissions; paid per admit increased.",
+          "Children's and Critical Access added spend, showing the unit-cost issue extends beyond acute.",
+          "Auth dimension present and repeated delta concentration flagged on acute inpatient outliers."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles same-facility 30-day related readmissions and excludes chemotherapy/immunotherapy admissions."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch separate NY and CA inpatient management-design review lanes for Major Chest Procedures with CC and Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC versus Postpartum and Postabortion Diagnoses without O.R. Procedures, assessing diagnosis-level admission growth, episodic distribution, UM/P.A.V. opportunities, Program Integrity review for DRG assignment, and confirmation that required prior authorization was obtained for severe or unspecified pre-eclampsia complicating puerperium and related thoracic episodes.",
+        "evidence": [
+          "NY rare chest, pleural, pulmonary embolism, and lung cases added +$1.5M.",
+          "SEVERE PRE-ECLAMP COMP PUERPERIUM added +$0.3M with admissions up in NY.",
+          "CA/NY valve, lung, and puerperium cases added +$1.1M.",
+          "Major Chest Procedures with CC and cardiothoracic valve DRGs drove concentrated spend.",
+          "Highlighted thoracic and maternal cards required prior authorization."
+        ],
+        "peer_benchmarking": [
+          "Cigna covers cesarean add-on codes only with 01967, never standalone.",
+          "Highmark_BCBS allows 01967 with 01968/01969; rejects unsupported obstetric add-ons."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted case-level inpatient policy audit for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL and smaller provider outliers involving Heart Transplant or Implant of Heart Assist System without MCC, Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies, Disorders of Pancreas Except Malignancy with CC, and Major Small and Large Bowel Procedures with MCC to verify diagnosis and DRG assignment, confirm member-level isolation, and ensure first and interim claims were zeroed and final bills adjudicated per contract.",
+        "evidence": [
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL appears on both top catastrophic CO inpatient cases.",
+          "Heart transplant/assist system and CAR-T immunotherapy are the leading driver codes.",
+          "Pattern flags include small_n_admissions, low_baseline_value, and repeated_delta_concentration.",
+          "Major bowel, pancreas, spinal, respiratory, and cellulitis cases are one-off."
+        ],
+        "peer_benchmarking": [
+          "BCBS_IL: separately covered when criteria are met; otherwise not covered or reimbursable.",
+          "Fallon Health: separately reimbursed carve-out and requires authorization.",
+          "Highmark_BCBS: outpatient drugs carved out; inpatient drug charges excluded."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit OH Commercial Local Group PPO acute hospital PA=Y admissions for Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC and Postpartum and Postabortion Diagnoses without O.R. Procedures by reviewing initial and concurrent UM KPIs, confirming prior authorization was obtained, assessing elective and site-of-care routing, and sending any authorization-to-claim mismatches or unenforced denials to claims processing.",
+        "evidence": [
+          "OH PPO acute hospital increase is admissions-driven with flat paid per admit.",
+          "PA=Y appears across both acute hospital source cards.",
+          "Cardiothoracic CC admissions are a concentrated driver in the mixed-volume group.",
+          "Postpartum/postabortion diagnoses without O.R. procedures also contribute to admission growth."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Confirm authorization-to-claim matching and claims processing per contractual obligation, then standardize Commercial Local Group HMO acute hospital reimbursement rules across CA, OH, CO, and NH for Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC and Pulmonary Embolism with MCC or Acute Cor Pulmonale, with provider-level contract and site-of-care review at UCHealth Yampa Valley Medical Center.",
+        "evidence": [
+          "The CA / CO / NH / OH HMO acute hospital segment added +$1.9M overall.",
+          "OH PA=Y HMO acute hospital admissions contributed about +$0.8M.",
+          "CA non-PA HMO cardiothoracic admissions contributed about +$0.8M.",
+          "Smaller contributions came from NH pulmonary embolism.",
+          "CO provider concentration at UCHealth Yampa Valley Medical Center."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the pattern because the increase is heavily tied to AUTH_CODE_DISTRIBUTION shifts and PA Y/N differences, and the recommended action is to reconcile auth coding before interpreting utilization or cost.; IP MedSurg (DNE) Trend 9: Highly relevant because 'Not Mapped' facility values and coding/mapping issues suggest claims may not be processing or classifying per expected contractual standards, making claim status/frequency review important.; IP MedSurg (DNE) Trend 10: Relevant because the pattern shows very large paid-per-admit changes in misclassified facility buckets, so reimbursement method review is needed after mapping is corrected to determine whether payment logic is distorting spend.; IP MedSurg (DNE) Trend 6: Relevant as a secondary step since admissions are up, but the pattern explicitly warns that utilization conclusions are unreliable until auth and facility classification issues are validated; UM KPI review should follow cleanup.; IP MedSurg (DNE) Trend 1: Relevant because the variance is concentrated in specific markets and facilities/providers, especially OH PPO Not Mapped claims, so provider-level concentration analysis can help separate localized behavior from broader mapping issues."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small set of acute hospitals, especially Harborview Medical Center and UC Irvine Medical Center, making provider-level driver review the top parent rule.; IP MedSurg (DNE) Trend 3: Variance is tightly tied to a narrow set of inpatient diagnoses/DRGs, including cardiothoracic, vascular, digestive, mitral insufficiency, endocarditis, aneurysm, and pulmonary embolism cases.; IP MedSurg (DNE) Trend 10: Paid per admit is up and the recommended next step calls for reimbursement review, so reimbursement method is highly relevant to the observed unit-cost pressure.; IP MedSurg (DNE) Trend 8: The operational source group includes PA-required acute hospital PPO admissions with auth_dimension_present, indicating auth-to-claim enforcement should be checked.; IP MedSurg (DNE) Trend 4: Spend is concentrated in specific high-cost inpatient services/procedures such as major cardiothoracic and other complex O.R. cases, supporting service-level review."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is concentrated in a recurring set of inpatient DRGs/diagnoses across markets and products, especially cardiothoracic, major chest, digestive MCC, pulmonary embolism, and postpartum pathways.; IP MedSurg (DNE) Trend 10: Several segments are unit-cost-led or mixed, with large increases in paid per admit and explicit recommendation for reimbursement review where paid per admit jumped.; IP MedSurg (DNE) Trend 1: The pattern is described as a provider-mix issue spreading across products and providers, and multiple source groups show provider-level concentration that warrants provider and contract review.; IP MedSurg (DNE) Trend 6: Admissions are up across several states and products, and the recommended next step calls for UM review of admission growth, aligning to a PAV/UM KPI investigation.; IP MedSurg (DNE) Trend 8: Authorization dimensions are repeatedly present on the source cards and auth-to-claim validation is flagged as a business term, making prior authorization enforcement a relevant cross-market check."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Highest fit because the pattern is explicitly reimbursement and unit-cost led: CO inpatient spend increased while admissions declined, and the recommended next step is claim repricing and contract performance review.; IP MedSurg (DNE) Trend 1: Variance may be concentrated in a subset of inpatient providers or facilities, with repeated delta concentration and drill context pointing toward provider-specific review for contractual or billing changes.; IP MedSurg (DNE) Trend 9: Claims processing or reprocessing review is relevant because paid per admit increased sharply, paid ratio increased in some segments, and the downstream routing includes reimbursement and data quality investigation.; IP MedSurg (DNE) Trend 8: Authorization enforcement is relevant because auth status is a key dimension in the pattern, the cards are flagged for auth dimension presence, and business terms explicitly include auth-to-claim validation.; IP MedSurg (DNE) Trend 4: Service-level drivers are relevant because a subset of high-cost inpatient services or DRGs could be raising paid per stay even as admission volume softens across acute settings."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Thoracic, pleural, pulmonary embolism, lung cancer, and valve-related spend is concentrated in a narrow diagnosis set, so diagnosis-level variance is the clearest parent rule for the MedSurg portion.; IP OB Dlvry Well NB (DNE) Trend 3: The maternal component is specifically driven by severe and unspecified pre-eclampsia complicating puerperium, making diagnosis-driver review the primary OB parent rule.; IP MedSurg (DNE) Trend 4: The increase is isolated to specific inpatient services/DRGs such as Major Chest Procedures and major cardiothoracic valve procedures, indicating concentrated service-line pressure rather than broad inpatient growth.; IP OB Dlvry Well NB (DNE) Trend 4: Postpartum and postabortion diagnoses without O.R. procedures represent a distinct maternal service pathway that should be reviewed separately from general inpatient activity.; IP OB Dlvry Well NB (DNE) Trend 6: OB admissions rose materially for postpartum hypertensive complications, and the pattern explicitly calls for confirming admission severity and episode management opportunities, aligning with UM KPI/PAV review."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The spike is primarily driven by a narrow set of inpatient services/DRGs, especially heart transplant/heart assist system, CAR-T immunotherapy, and major bowel procedures, so service-level isolation is the strongest parent rule fit.; IP MedSurg (DNE) Trend 3: Variance is concentrated in a small set of diagnoses and clinical scenarios rather than broad utilization, matching the diagnosis-driver rule for rare catastrophic cases.; IP MedSurg (DNE) Trend 1: The pattern is concentrated in a limited provider subset, most notably UCHEALTH UNIVERSITY OF COLORADO HOSPITAL plus a few other facilities, making provider-driver review highly relevant.; IP MedSurg (DNE) Trend 2: The increase is coming from very few admissions and likely very few members, so member-level case review is relevant to confirm these are isolated catastrophic cases rather than a stable trend.; IP MedSurg (DNE) Trend 9: The recommended next step explicitly includes data-quality and claim-handling validation; for million-dollar one-off inpatient cases, claim frequency/status and reprocessing review are important to rule out administrative inflation."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 36,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Best fit for the core story: OH PPO acute hospital spend growth is primarily admissions/utilization-driven under PA=Y, so the highest-value parent rule is to review utilization management KPIs and the PAV waterfall.; IP MedSurg (DNE) Trend 8: Repeated PA=Y and auth_dimension_present flags make authorization enforcement highly relevant; the recommended next step explicitly calls for auditing admission growth under authorization and auth-to-claim alignment.; IP MedSurg (DNE) Trend 4: Variance is concentrated in specific inpatient service/DRG subsets, especially major cardiothoracic procedures, so service-driver review is directly applicable.; IP MedSurg (DNE) Trend 7: Because the increase is driven by more admissions rather than pricing, it is important to test whether elective mix, admission source, or routing/location changes are contributing to the higher admit volume.; IP OB Dlvry Well NB (DNE) Trend 3: A meaningful subcomponent is postpartum/postabortion admissions, which points to an OB-specific diagnosis cluster that should be investigated separately from the broader med-surg inpatient pattern."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Authorization is a central signal in this pattern: the source cards explicitly segment by PA required code, OH authorized HMO acute admissions are a major contributor, and the recommended next step calls for comparing HMO authorization rules across states.; IP MedSurg (DNE) Trend 10: Unit cost escalation is material, with paid per admit rising sharply in OH and especially CA cardiothoracic cases, so reimbursement method and market-specific payment outcomes are highly relevant.; IP MedSurg (DNE) Trend 6: This is a mixed volume and unit cost pattern with admissions up across multiple states, indicating the variance may reflect utilization management KPI changes or avoidable variance rather than a one-time anomaly.; IP MedSurg (DNE) Trend 3: The increase is concentrated in specific inpatient DRG/diagnosis cohorts, especially cardiothoracic valve procedures and pulmonary embolism, making diagnosis-level review directly relevant.; IP MedSurg (DNE) Trend 1: There is evidence of provider concentration, particularly in CO at UCHealth Yampa Valley Medical Center, and named hospital-level contributors in OH and CA suggest provider behavior or contractual differences may be part of the driver."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T09:27:45.944181+00:00"
+  }
+}

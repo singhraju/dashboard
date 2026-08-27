@@ -1,0 +1,360 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Children's hospital spend is concentrated at two providers in IN and NY",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_ob_bundling",
+          "label": "Global OB Bundle",
+          "type": "text"
+        },
+        {
+          "id": "separate_billing_exceptions",
+          "label": "Separate Billing Exceptions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Global OB bundle includes antepartum, delivery, postpartum; routine pregnancy-related E/M not separately reimbursed.",
+          "separate_billing_exceptions": "Separate billing allowed for severe laceration repair and unrelated/complication services with supporting documentation."
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Not a global OB bundle; delivery/partial postpartum only, one delivery modifier, deleted after 1/1/2027.",
+          "separate_billing_exceptions": "Same-day immediate postpartum care is included in delivery and not separately billable; use U7/U8/U9."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "-",
+          "separate_billing_exceptions": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CNC_00277",
+        "payer_name": "Centene",
+        "policy_title": "Global Maternity Billing",
+        "tags": [],
+        "effective_date": "01/01/2013",
+        "evidence": "Off-topic for this policy. The policy is limited to global maternity/obstetrical package reimbursement and does not provide adjudication rules for cardiac valve or major cardiothoracic inpatient DRG services.",
+        "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409"
+          ],
+          "related_codes": [
+            "59510",
+            "59514",
+            "96365-96367",
+            "12041-12047",
+            "13131-13133"
+          ],
+          "required_modifiers": [
+            "22",
+            "51"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "services billed separately from global service",
+            "same physician or group practice",
+            "calendar day prior to delivery",
+            "calendar day of delivery",
+            "vaginal delivery of twins",
+            "one vaginal and one cesarean",
+            "both delivered via cesarean"
+          ],
+          "utilization_limits": [
+            "approximately 13 antepartum visits",
+            "6 weeks following delivery",
+            "after 20 weeks 0 days",
+            "prior to 20 weeks 0 days",
+            "60 days history reviewed"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same physician provides total care",
+            "same group practice provides total care"
+          ],
+          "exemptions": [
+            "state, contractual or health plan exception",
+            "diagnosis unrelated to maternity services",
+            "pregnancy complications needing higher complexity",
+            "tubal ligation procedure",
+            "IUD procedure",
+            "problem-oriented visit pregnancy confirmation",
+            "preventative visit pregnancy confirmation",
+            "patient transfers into or out",
+            "delivery by another physician",
+            "patient changes insurers during pregnancy"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00045",
+        "payer_name": "Healthfirst",
+        "policy_title": "Obstetric Billing Guidelines",
+        "tags": [],
+        "effective_date": "10/01/2025",
+        "evidence": "Healthfirst treats vaginal delivery-only obstetric billing as a limited delivery code that requires a U7, U8, or U9 modifier and is deleted for dates of service on or after January 1, 2027.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-132-Obstetric-Billing-Guidelines.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59409",
+            "59410"
+          ],
+          "related_codes": [
+            "59400",
+            "59410",
+            "59430",
+            "59431",
+            "59432",
+            "59409"
+          ],
+          "required_modifiers": [
+            "U7",
+            "U8",
+            "U9"
+          ],
+          "excluded_modifiers": [
+            "P"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "delivery service date"
+          ],
+          "utilization_limits": [
+            "deleted on/after 2027-01-01"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00446",
+        "payer_name": "United Health",
+        "policy_title": "Cesarean Delivery Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00490",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Off-topic policy. This obstetrical services reimbursement policy does not address cardiac DRG reimbursement or pediatric hospital spend patterns.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Children's hospital spend is concentrated at two providers in IN and NY",
+    "pattern_rank": 5,
+    "pattern_title": "Children's hospital spend is concentrated at two providers in IN and NY",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC",
+      "Vaginal Delivery without Sterilization or D&C without CC/MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN', 'NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it addresses maternity/cesarean professional billing rather than the provided children's hospital spend pattern in IN and NY."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 46411,
+    "output": 33614,
+    "breakdown": {
+      "search_keywords": {
+        "input": 553,
+        "output": 534,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 598,
+        "output": 1683,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 36762,
+        "output": 25387,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 1437,
+        "output": 602,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 1070,
+        "output": 763,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 731,
+        "output": 685,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 3027,
+        "output": 3475,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2233,
+        "output": 485,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-25T15:37:28.388514+00:00",
+    "end_time": "2026-08-25T15:41:21.788944+00:00",
+    "duration_ms": 233400,
+    "version": "2.0.0"
+  }
+}

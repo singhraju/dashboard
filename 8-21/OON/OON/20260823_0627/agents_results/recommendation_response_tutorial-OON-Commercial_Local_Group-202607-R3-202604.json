@@ -1,0 +1,195 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 7,
+      "recommendations_generated": 6,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Prioritize a CA HMO acute hospital provider-specific claims-processing review at UCI MEDICAL CENTER for inpatient Med/Surg and OB claims tied to digestive disorders, degenerative nervous system disorders, and vaginal delivery with CC to confirm contractual processing and isolate diagnosis-specific drivers, then complete the same focused PPO review at OLYMPIC MEDICAL HOSPITAL.",
+        "evidence": [
+          "CA HMO acute hospital added about $506K total.",
+          "Digestive disorders at UCI MEDICAL CENTER added about $239K on more HMO claims.",
+          "A single degenerative nervous system HMO case at UCI MEDICAL CENTER added about $185K.",
+          "Vaginal delivery with CC at UCI MEDICAL CENTER showed higher paid per admit.",
+          "CA PPO increase was concentrated at OLYMPIC MEDICAL HOSPITAL."
+        ],
+        "peer_benchmarking": [
+          "Elevance: subsequent vaginal deliveries reimbursed at 50% with modifier 59; contracts may override.",
+          "Cigna: include multiple gestation diagnosis and documentation when significant complexity or time is requested."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused case-level payment and clinical audit for CA IP Med/Surg admissions at UCI MEDICAL CENTER tied to K529, R1013, G7001, and G7000, verifying contractual adjudication, final-bill sequencing, itemized charges, authorization enforcement, and whether provider-specific remediation is warranted.",
+        "evidence": [
+          "CA IP Med/Surg increase driven by new or rare high-cost admissions.",
+          "Top drivers concentrated at UCI MEDICAL CENTER acute hospital.",
+          "Digestive disorder cases tied to K529 and R1013.",
+          "Degenerative nervous system cases tied to G7001 and G7000.",
+          "Flags include repeated_delta_concentration, low_baseline_value, and low_volume_run."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a targeted remapping audit on Not Mapped and UNATTRIBUTED outpatient claims to confirm provider, diagnosis, and service attribution for BIOSCRIP INFUSION SRVCS, LABORATORY CORPORATION OF AMERICA, THREE RIVERS DIAGNOSTICS, Q812, F1020, F4310, C9000, Z5112, Drugs, Chemotherapy Drugs, Temporary National Codes, and Pathology and Laboratory before any contract or management-design intervention.",
+        "evidence": [
+          "ME PPO Not Mapped showed higher paid dollars despite fewer claims.",
+          "Q812 drug claims sit in Not Mapped outpatient misc.",
+          "UNATTRIBUTED behavioral claims are led by F1020 and F4310.",
+          "Lab increases tie to LABORATORY CORPORATION OF AMERICA and THREE RIVERS DIAGNOSTICS."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX, Medica, and Premera summaries show no code-specific payment rule.",
+          "No documented appeals process or policy mention appears in the payer summary."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a targeted ME Commercial Local Group PPO Physical Rehab policy audit, beginning with BIOSCRIP INFUSION SRVCS and the Drugs procedure grouping, and remediate any site-of-care, authorization-match, benefit-limit, or contract-payment variance identified.",
+        "evidence": [
+          "ME PPO Physical Rehab added about $111K total.",
+          "Claims increased by 69.",
+          "Paid per claim increased by about $1.6K.",
+          "Business terms include site-of-care, unit cost, and utilization.",
+          "Drill context shows BIOSCRIP INFUSION SRVCS and procedure Drugs."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health and United Health payer rows show no documented rehab policy scope or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit UCI Medical Center CA HMO IP OB Dlvry/Well NB claims in Vaginal Delivery without Sterilization or D&C with CC for diagnoses O368130 and O480 to verify contractual adjudication, reprocessing status, reimbursement methodology, and provider-specific contract compliance.",
+        "evidence": [
+          "CA IP OB Dlvry/Well NB added about $99K total.",
+          "One delivery diagnosis O368130 added about $88K from a single claim.",
+          "O480 added about $11K from one claim.",
+          "Both source cards list UCI MEDICAL CENTER.",
+          "Pattern concentrated in vaginal delivery with CC."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine vaginal delivery; separate payment requires specified itemization or documented extra work.",
+          "Cigna globally bundles delivery; additional vaginal deliveries are reimbursed at 50%.",
+          "Elevance reimburses delivery-only selectively and reviews modifier 22 multiple-birth cesareans case-by-case."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Perform targeted acute hospital claim, reimbursement, and authorization audits for OH HMO FAIRFIELD MEDICAL CENTER, GA EPO WELLSTAR COBB MEDICAL CENTER, MO PPO Degenerative Nervous System Disorders without MCC, CO EPO Disorders of the Biliary Tract with CC, WI POS Vaginal Delivery without Sterilization or D&C with CC, and IN FFS Hip Replacement with Principal Diagnosis of Hip Fracture without MCC; escalate confirmed provider outliers for contract remediation or site-of-care review.",
+        "evidence": [
+          "OH HMO acute hospital variance is concentrated at FAIRFIELD MEDICAL CENTER.",
+          "GA EPO acute hospital variance is led by WELLSTAR COBB MEDICAL CENTER.",
+          "MO PPO variance centers on Degenerative Nervous System Disorders without MCC.",
+          "WI POS variance includes Vaginal Delivery without Sterilization or D&C with CC.",
+          "Claims are up and paid per admit is up.",
+          "Most contributing groups are low-volume and concentrated in one provider or DRG."
+        ],
+        "peer_benchmarking": [
+          "United Health emphasizes correct principal diagnosis reporting under ICD-10-CM guidelines."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 7,
+        "pattern": "CO, GA, IN, and OH have rare inpatient Med/Surg cases, not a broad trend",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 24,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The largest HMO acute hospital increase is concentrated at UCI Medical Center across the top Med/Surg drivers, making provider-specific behavior and contract review the clearest parent rule.; IP MedSurg (DNE) Trend 3: The variance is concentrated in a small set of inpatient diagnoses/DRGs, especially digestive disorders and a high-cost degenerative nervous system case, rather than a broad hospital trend.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended action includes reimbursement and network review, so reimbursement method is a strong match for the unit-cost component.; IP OB Dlvry Well NB (DNE) Trend 10: The vaginal delivery contributor shows a sharp increase in average paid per admit, making an OB-specific reimbursement method review relevant for this secondary inpatient spike.; OP Oth (DNE) Trend 1: The smaller PPO tail is highly concentrated at OLYMPIC MEDICAL HOSPITAL, indicating a provider-specific driver rather than a broad PPO acute hospital pattern."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is clearly isolated to a narrow set of diagnoses/DRGs (K529, R1013, G7001, G7000; digestive and degenerative nervous system cases), making diagnosis-level review the strongest fit.; IP MedSurg (DNE) Trend 1: Top driver cards are concentrated at UCI Medical Center, suggesting the variance may be isolated to a specific provider and may require provider-specific clinical/payment review.; IP MedSurg (DNE) Trend 2: The pattern is driven by only a handful of rare high-cost admissions, implying concentration in very few members/cases and supporting member-level case review.; IP MedSurg (DNE) Trend 10: Paid per admit is unusually high and the recommended next step includes reviewing stop-loss, transplant-type considerations, and provider negotiation, which aligns with reimbursement method review.; IP MedSurg (DNE) Trend 9: The pattern calls for focused payment and coding completeness review on a very small number of expensive cases, making claim processing/reprocessing validation relevant."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 27,
+        "categories": [
+          "OP BH (DNE)",
+          "OP Lab Pathology (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 1: The largest dollars sit in OP Mgmt Oth Misc and ME PPO Not Mapped outpatient/facility buckets, and the pattern explicitly says provider and facility attribution is unreliable. This rule best fits the need to confirm whether variance is truly concentrated in a subset of providers once records are remapped.; OP Oth (DNE) Trend 3: The biggest outpatient misc increase is concentrated in specific diagnoses, especially Q812, with additional oncology-related codes C9000 and Z5112 appearing in Not Mapped claims. Diagnosis-level isolation is a key validation step before treating this as a real clinical trend.; OP Oth (DNE) Trend 4: Key driver services include Drugs and Chemotherapy Drugs inside Not Mapped outpatient categories. This rule is highly relevant because the pattern may reflect service-line mapping/classification issues rather than true utilization change.; OP BH (DNE) Trend 3: The UNATTRIBUTED behavioral health increase is specifically led by F1020 and F4310 in Not Mapped categories. That makes BH diagnosis-driver review the most relevant parent rule for this portion of the pattern.; OP Lab Pathology (DNE) Trend 1: Smaller but explicit lab increases are tied to named providers such as LABORATORY CORPORATION OF AMERICA and THREE RIVERS DIAGNOSTICS, while still flagged as Not Mapped. This makes provider-driver validation highly relevant for the lab/pathology component."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "OP PT OT ST (DNE)"
+        ],
+        "relevance_reason": "OP PT OT ST (DNE) Trend 1: Physical rehab most closely aligns to PT/OT/ST services, and the increase may be concentrated in a subset of rehab providers due to referral shifts, provider behavior, or contracted rate changes.; OP PT OT ST (DNE) Trend 4: The variance is explicitly tied to Physical Rehab, so service-driver review is relevant to determine whether the increase comes from different rehab modalities, intensity, or level-of-care mix.; OP PT OT ST (DNE) Trend 6: The pattern calls out referral patterns and a site-of-care signal, making source/location review relevant to test whether members are moving into higher-cost rehab settings.; OP PT OT ST (DNE) Trend 7: With claims rising and UM called out as a next step, auth-to-claim review is relevant to confirm rehab authorization rules and denials are being enforced appropriately.; OP PT OT ST (DNE) Trend 8: Paid per claim/admit increased materially, so reimbursement method review is directly relevant for identifying fee schedule, contract, or payment methodology changes driving unit-cost pressure."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: The increase is overwhelmingly diagnosis-concentrated: O368130 drives about $88K from a single claim, with O480 contributing another smaller high-cost episode.; IP OB Dlvry Well NB (DNE) Trend 10: The pattern is explicitly described as a payment/reimbursement accuracy issue, so reviewing reimbursement method is critical for these unusually expensive delivery stays.; IP OB Dlvry Well NB (DNE) Trend 9: Because the variance is concentrated in one to two claims and requires validation, claims processing or reprocessing status should be checked for contractual accuracy and claim anomalies.; IP OB Dlvry Well NB (DNE) Trend 1: Both highlighted episodes are tied to UCI Medical Center, suggesting the variance may be concentrated in a specific provider rather than reflecting a broad CA maternity trend.; IP OB Dlvry Well NB (DNE) Trend 4: The pattern is concentrated in a single delivery service/DRG, Vaginal Delivery without Sterilization or D&C with CC, rather than across maternity services more broadly."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The largest contributors are highly concentrated in specific acute hospital providers, especially FAIRFIELD MEDICAL CENTER in OH and WELLSTAR COBB MEDICAL CENTER in GA, matching a provider-isolated variance rule.; IP MedSurg (DNE) Trend 3: Several increases are explicitly single-DRG or diagnosis pockets, including septicemia/sepsis, degenerative nervous system disorders, biliary tract disorders, and hip fracture replacement, which aligns with diagnosis-isolated variance.; IP MedSurg (DNE) Trend 10: Paid per admit is up and the recommended action is provider- and contract-level review with reimbursement policy and network finance routing, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 9: The pattern calls for targeted claim review and includes data quality routing; for low-volume, high-dollar acute claims, checking claim frequency/status or reprocessing against contract standards is relevant.; IP OB Dlvry Well NB (DNE) Trend 3: One of the smaller outlier pockets is WI POS acute hospital spend driven by the DRG 'Vaginal Delivery without Sterilization or D&C with CC,' so the OB delivery diagnosis-driver rule is relevant for that component."
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T07:04:05.595557+00:00"
+  }
+}

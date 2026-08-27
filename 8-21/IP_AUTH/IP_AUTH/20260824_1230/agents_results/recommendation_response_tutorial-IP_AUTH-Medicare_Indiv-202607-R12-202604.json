@@ -1,0 +1,220 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted prior-auth-to-claim, denial-enforcement, and contract-compliance audit for VA pa_required_code Y acute hospital admissions at SENTARA NORFOLK GENERAL HOSPITAL, SENTARA LEIGH HOSPITAL, VCU MEDICAL CENTER, CARILION ROANOKE MEMORIAL HOSPITAL, and CHIPPENHAM HOSPITAL across DSNP HMO, Medicare HMO, and CSNP HMO, and implement provider-specific contract remediation or site-of-care controls for confirmed outliers.",
+        "evidence": [
+          "VA DSNP HMO acute spend rose +$99.0M with 6,177 more admissions.",
+          "VA Medicare HMO acute added +$64.3M with 3,834 more admissions.",
+          "VA CSNP HMO acute added +$26.3M on 1,740 more admissions.",
+          "Sentara Norfolk General Hospital DSNP HMO delta +$7.6M; admissions +363.",
+          "VCU Medical Center and Carilion each contributed about +$6.2M to +$6.6M.",
+          "Chippenham Hospital Medicare HMO paid per admit increased +$1.4K.",
+          "All cited acute hospital source cards have pa_required_code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement TX ACUTE HOSPITAL prior-auth-to-claim match edits and denial enforcement for DSNP HMO and CSNP HMO IP Med/Surg ER admissions, with CTI discharge-planning escalation for repeat same-facility members at BEN TAUB HOSPITAL.",
+        "evidence": [
+          "Prior auth required code Y across TX DSNP HMO and CSNP HMO acute hospital claims.",
+          "DSNP HMO added 3,685 admissions with average paid per admit essentially flat.",
+          "CSNP HMO added 449 admissions while average paid per admit fell.",
+          "Drill context shows IP Med/Surg ER admits at BEN TAUB HOSPITAL."
+        ],
+        "peer_benchmarking": [
+          "Humana bills only medically necessary observation time, generally limited to 48 hours."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Pause TX DSNP HMO IP Med/Surg prior-authorization or provider actions until a claims-processing validation review reconciles AUTH_CODE_DISTRIBUTION to actual authorizations, remaps facility_type Not Mapped, confirms contractual reprocessing, and blocks manual adjudication overrides of key edits.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION movement accounts for about +$53.8M of change.",
+          "TX DSNP HMO Not Mapped adds about +$9.3M on 252 admissions.",
+          "Validation flags show auth_or_mapping_shift and requires_validation_before_action."
+        ],
+        "peer_benchmarking": [
+          "Humana requires auth and uses facility-only site of care."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a provider-level auth-to-claim validation and claims reprocessing audit for VA Medicare Indiv IP Med/Surg acute hospital claims mapped to AUTH_CODE_DISTRIBUTION at VCU Medical Center, Chippenham Hospital, Carilion Roanoke Memorial Hospital, Sentara Norfolk General Hospital, and Sentara Leigh Hospital, and correct authorization-denial enforcement before any UM or contract remediation.",
+        "evidence": [
+          "VA AUTH_CODE_DISTRIBUTION movement totals +$45.5M.",
+          "VCU Medical Center and Chippenham Hospital lead the shift.",
+          "Cards are flagged auth_or_mapping_shift and requires_validation_before_action.",
+          "Driver type is coding_or_mapping_validation across VA acute hospitals."
+        ],
+        "peer_benchmarking": [
+          "Molina performs pre-payment and post-payment DRG clinical validation on hospital claims.",
+          "United Health reviews inpatient UB-04 claims and denies the claim for invalid principal diagnosis."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "In VA, implement a SNF/NF payment integrity policy that enforces auth-to-claim matching and denial edits, validates contract exceptions and manual adjudication for DSNP HMO SNF - FREE STANDING claims, and requires alternate-discharge leakage review for Bone Diseases and Arthropathies with MCC, BILATERAL PRIM OSTEOARTHRITIS KNEE, and OSTEOMYELITIS UNSPECIFIED NF episodes.",
+        "evidence": [
+          "VA DSNP HMO SNF without authorization added +$50.9M on 5,828 admissions.",
+          "Bone Diseases and Arthropathies with MCC added +$833.9K in SNF.",
+          "BILATERAL PRIM OSTEOARTHRITIS KNEE added +$345.5K in NF.",
+          "OSTEOMYELITIS UNSPECIFIED added +$111.1K across 10 NF admissions."
+        ],
+        "peer_benchmarking": [
+          "Humana and United Health have no supplied SNF/NF policy details for benchmarking."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a combined clinical-policy and reimbursement audit for OH Medicare HMO acute-hospital inpatient concomitant left atrial appendage closure and cardiac ablation admissions at Bethesda North Hospital, limited to paroxysmal and persistent atrial fibrillation cases with PA-required code Y, to validate diagnosis-specific appropriateness criteria, authorization-to-claim matching and denial enforcement, contract-compliant payment, and provider-specific contract or site-of-care remediation.",
+        "evidence": [
+          "Concentrated inpatient spike centers on concomitant left atrial appendage closure and cardiac ablation.",
+          "Diagnosis cluster is paroxysmal and persistent atrial fibrillation.",
+          "Bethesda North Hospital is the rendering provider in the drill context.",
+          "Operational card shows PA-required code Y with auth_dimension_present.",
+          "Impact reflects admissions up and paid per admit up."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a BEN TAUB HOSPITAL-focused TX IP Med/Surg review for Other Digestive System Diagnoses with MCC and Amputation for Musculoskeletal System and Connective Tissue Disorders with CC admissions involving OTH POSTPROC COMP D/O DIGESTIVE SYS, VASCULAR DISORDER INTESTINE UNS, and OTHER ACUTE OSTEOMYELITIS LEFT HAND; confirm prior authorization, review same-member repeat returns, and activate CTI and care-navigation outreach.",
+        "evidence": [
+          "OTH POSTPROC COMP D/O DIGESTIVE SYS added the largest highlighted inpatient complication delta.",
+          "VASCULAR DISORDER INTESTINE UNS showed increased admissions within TX IP Med/Surg.",
+          "OTHER ACUTE OSTEOMYELITIS LEFT HAND was a new small-n high-cost admission.",
+          "Highlighted cards share BEN TAUB HOSPITAL, ACUTE HOSPITAL, and pa_required_code Y."
+        ],
+        "peer_benchmarking": [
+          "Centene, Elevance, and Moda show no documented inpatient DRG policy in summary.",
+          "Molina documents outpatient routine foot care only, with no inpatient DRG reimbursement rule."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit WA DSNP HMO AUTH_CODE_DISTRIBUTION=Y auth-to-claim matching, denial enforcement, and claims processing for CRITICAL ACCESS, SNF - FREE STANDING, and Physical Rehab; if validated, initiate provider-level site-of-care and alternate-discharge leakage review.",
+        "evidence": [
+          "WA authorization classification movement adds about +$1.3M.",
+          "WA critical access adds +$374K on 17 admissions.",
+          "WA SNF adds +$340K on 11 admissions.",
+          "Physical rehab adds +$195K on 3 admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Spend growth is explicitly concentrated in a small set of hospital systems and named providers (Sentara, VCU, Carilion, Chippenham), making provider-level behavior and contract review the strongest fit.; IP MedSurg (DNE) Trend 6: The increase is primarily admission-driven across authorized acute inpatient products, so a utilization management KPI/PAV review is directly relevant to medical-necessity and avoidable-admit questions.; IP MedSurg (DNE) Trend 8: All major drivers are prior-auth required (Y), and the source cards repeatedly reference auth-to-claim validation, so authorization enforcement is highly relevant.; IP MedSurg (DNE) Trend 10: Some hospitals show higher paid per admit and the recommendation calls for contract performance review, aligning well to reimbursement method evaluation.; IP MedSurg (DNE) Trend 9: Rising paid ratio and concentration at a few hospitals mean claims processing or reprocessing against contractual standards should also be ruled out as a secondary driver."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern is explicitly volume-led, with acute inpatient admissions rising sharply while paid per admit is flat/down, which aligns directly to reviewing utilization management KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 8: The key drivers are all prior-auth-required (pa_required_code = Y), and the recommended next step includes front-end authorization review, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 7: This is an acute inpatient admission spike, and the drill context includes ER admit indicator = Y, so admission/discharge source and elective versus emergent mix are important to assess.; IP MedSurg (DNE) Trend 5: The admission increase could be coming from repeat admits among the same members, and the recommendation to focus on high-admit members supports a readmission-rate review.; IP MedSurg (DNE) Trend 2: The suggested actions emphasize care coordination for high-admit members, indicating the variance may be concentrated in a subset of members rather than broad-based across the population."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best fit to the pattern because the largest driver is AUTH_CODE_DISTRIBUTION movement with explicit auth-to-claim validation and validation-before-action flags.; IP MedSurg (DNE) Trend 9: Highly relevant because the 'Not Mapped' facility bucket suggests claims processing, reprocessing, or mapping defects that can create artificial spend shifts.; IP MedSurg (DNE) Trend 4: Relevant secondary rule since the pattern can masquerade as a service or site-of-care shift due to facility attribution instability.; IP MedSurg (DNE) Trend 10: Relevant because the unresolved authorization and facility mapping issues could be misread as reimbursement-method change if not validated first.; IP MedSurg (DNE) Trend 3: Secondary relevance because specific DRGs are named in the signal, but diagnosis review should follow resolution of the core auth and mapping issues."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 6,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the pattern: the issue is an AUTH_CODE_DISTRIBUTION shift flagged as auth-to-claim/coding validation, and the recommended next step is to audit authorization feed logic before taking UM action.; IP MedSurg (DNE) Trend 1: The variance is highly concentrated in a small set of VA acute hospitals (VCU, Chippenham, Carilion, Sentara Norfolk General, Sentara Leigh), making provider-level isolation a core parent rule.; IP MedSurg (DNE) Trend 9: The pattern explicitly points to unstable attribution from coding/classification movement and provider submission/feed logic, which fits claims processing or reprocessing review.; IP MedSurg (DNE) Trend 10: Authorization classification changes may also affect how reimbursement is applied or enforced, making reimbursement-method review relevant after auth mapping is validated."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: The pattern is explicitly a post-acute site-of-care shift into SNF/NF in VA, so reviewing admission/discharge source and placement location is highly relevant to understand why more care is landing in nursing facilities rather than remaining in other settings.; IP NF (DNE) Trend 8: The largest driver is DSNP HMO SNF spending without authorization (+$50.9M, +5,828 admissions), making auth-to-claim matching and denial enforcement one of the clearest parent-rule fits.; IP NF (DNE) Trend 6: The overall increase is strongly volume-led, with rapid SNF/NF admission growth and recommended tighter placement/concurrent review, which aligns with reviewing utilization management KPIs and the PAV waterfall.; IP NF (DNE) Trend 3: The increase is concentrated in specific diagnoses/DRGs, especially Bone Diseases and Arthropathies with MCC, bilateral primary knee osteoarthritis, and osteomyelitis-related NF cases, so diagnosis-level concentration is a key explanatory branch.; IP NF (DNE) Trend 10: Although volume is the main driver, the pattern also includes mixed unit-cost pressure and pockets of higher paid per admit in musculoskeletal and osteomyelitis SNF/NF stays, which supports reviewing reimbursement method."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in a narrow diagnosis cluster\u2014paroxysmal and persistent atrial fibrillation\u2014making diagnosis-level investigation the strongest parent rule match.; IP MedSurg (DNE) Trend 4: The pattern is driven by a specific high-cost inpatient service/procedure combination, namely concomitant left atrial appendage closure and cardiac ablation, which aligns directly to service-driver review.; IP MedSurg (DNE) Trend 1: The spike appears concentrated at a specific rendering provider, Bethesda North Hospital, suggesting the need to assess provider-specific practice patterns and/or contractual effects.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended next step explicitly includes provider payment terms and reimbursement policy review, matching reimbursement method investigation.; IP MedSurg (DNE) Trend 8: The operational signal includes pa_required_code = Y and an auth_dimension_present flag, so verifying whether authorization controls were matched and enforced is relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow set of diagnoses: post-procedure digestive complications, vascular intestine disorders, osteomyelitis, and amputation-related cases. Diagnosis-level review is the strongest fit.; IP MedSurg (DNE) Trend 6: The pattern is described as complication-driven and best addressed through case management, infection management, and clinical pathways, which aligns with reviewing potentially avoidable variance and UM KPI changes.; IP MedSurg (DNE) Trend 1: The highlighted source cards are concentrated in the same acute hospital/provider context, suggesting provider-specific practice patterns or localized care delivery issues may be contributing.; IP MedSurg (DNE) Trend 2: Rare high-cost amputation and osteomyelitis admissions, along with the recommendation for targeted case review, suggest the increase may be driven by a small subset of members needing focused clinical engagement.; IP MedSurg (DNE) Trend 5: Because the pattern is centered on complications and post-procedure/infection-related admissions, repeat episodes for the same members and readmissions are an important parent trend to test."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned because the pattern explicitly shows a material AUTH_CODE_DISTRIBUTION shift, is flagged for validation, and recommends validating WA authorization coding before taking action.; IP MedSurg (DNE) Trend 4: The emerging variance is concentrated in specific non-acute facility/service settings\u2014CRITICAL ACCESS, SNF - FREE STANDING, and Physical Rehab\u2014matching a service/site-of-care driver review.; IP MedSurg (DNE) Trend 7: The pattern narrative specifically questions whether referrals are shifting into higher-cost non-acute settings, which fits review of admission/discharge source and location movement.; IP MedSurg (DNE) Trend 10: Paid per admit and paid ratio rose across these facilities, so reimbursement method may be contributing to the higher unit cost signal alongside higher admissions.; IP MedSurg (DNE) Trend 1: As an early WA cluster across a few facility types, the variance may be concentrated in a subset of critical access, SNF, or rehab providers, making provider-level behavior or contract review relevant."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T14:17:08.761017+00:00"
+  }
+}

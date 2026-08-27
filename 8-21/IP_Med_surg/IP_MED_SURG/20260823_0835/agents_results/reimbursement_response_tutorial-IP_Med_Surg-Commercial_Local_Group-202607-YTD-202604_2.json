@@ -1,0 +1,312 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_2_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic inpatient outliers in CO / OH / UNATTRIBUTED need case-level validation",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "vad_auth_rules",
+          "label": "VAD Auth Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "vad_auth_rules": "No special auth rules for requested DRGs; TAVR/TAVI requires approved clinical trial participation."
+        },
+        {
+          "payer_org": "Fallon Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "vad_auth_rules": "Prior authorization required for Ventricular Assist Devices; see Clinical Coverage Criteria."
+        },
+        {
+          "payer_org": "Providence Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "vad_auth_rules": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_FH_00087",
+        "payer_name": "Fallon Health",
+        "policy_title": "Ventricular assist devices payment policy",
+        "tags": [],
+        "effective_date": "09/01/2019",
+        "evidence": "Policy covers VAD procedure billing with prior authorization; it does not provide DRG-specific inpatient outlier adjudication rules for the requested pattern.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/VentricularAssistDevices0919.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "33975",
+            "33976",
+            "33977",
+            "33978",
+            "33979",
+            "33980",
+            "33981",
+            "33982",
+            "33983",
+            "33990",
+            "33991",
+            "33992",
+            "33993",
+            "33999"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [
+            "Prior authorization required for VADs"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "require_auth"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00016",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Inpatient Acuity Level",
+        "tags": [],
+        "effective_date": "10/1/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp19.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_AHC_00092",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Cardiology Services .pdf",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The policy is focused on cardiology testing, monitoring, ECGs, device services, and TAVR/TAVI billing requirements. It does not address DRG outlier adjudication, rare catastrophic inpatient cases, or the requested DRG descriptions.",
+        "policy_url": "https://www.amerihealthcaritasdc.com/content/dam/amerihealth-caritas/acdc/pdf/provider/resources/reimbursement-policies/20260112/Cardiology%20Services%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement prior authorization for Ventricular Assist Device codes 33975, 33976, 33977, 33978, 33979, 33980, 33981, 33982, 33983, and 33990, consistent with Fallon Health's rule that 'Prior authorization required for VADs,' to control rare catastrophic heart-assist inpatient outliers at case level.",
+      "evidence": [
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33975\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33976\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33977\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33978\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33979\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33980\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33981\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33982\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33983\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"33990\" [target_codes]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"Prior authorization required for VADs\" [prior_auth_thresholds]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Fallon Health \u00b7 Ventricular assist devices payment policy \u2014 https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/VentricularAssistDevices0919.ashx"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: Rare catastrophic inpatient outliers in CO / OH / UNATTRIBUTED need case-level validation",
+    "pattern_rank": 2,
+    "pattern_title": "Rare catastrophic inpatient outliers in CO / OH / UNATTRIBUTED need case-level validation",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System without MCC",
+      "Other Heart Assist System Implant",
+      "Pulmonary Edema and Respiratory Failure"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 3 source card(s) attest no state (segment scope: CO, OH, UNATTRIBUTED); searched without it rather than narrowing to ['OH']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 18590,
+    "output": 16394,
+    "breakdown": {
+      "search_keywords": {
+        "input": 545,
+        "output": 856,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 953,
+        "output": 3562,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 11655,
+        "output": 8977,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 908,
+        "output": 318,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 808,
+        "output": 595,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 439,
+        "output": 316,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 1909,
+        "output": 1358,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1373,
+        "output": 412,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T10:09:40.506808+00:00",
+    "end_time": "2026-08-23T10:10:59.237715+00:00",
+    "duration_ms": 78730,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_1_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA rare catastrophic and unclassifiable inpatient outliers",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00151",
+        "payer_name": "Humana",
+        "policy_title": "Modifier 62",
+        "tags": [],
+        "effective_date": "06/2010 commercial; 01/2008 Medicare",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement pre-pay medical director review for California inpatient admissions with paid per admit at or above about +$1.4M, including any heart transplant or heart assist episode, before final payment.\nIA \u2014 Implement diagnosis-and-medical-necessity review for the rare and unclassifiable inpatient cohort that added about +$16.0M, with mandatory second-level coding validation when the admission is reported as cervical cord lesion at C2 (+$2.7M), other cirrhosis of liver (+$2.6M), or dilated cardiomyopathy (+$1.9M), which together drove about +$7.2M.",
+      "evidence": [],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": []
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CA rare catastrophic and unclassifiable inpatient outliers",
+    "pattern_rank": 1,
+    "pattern_title": "CA rare catastrophic and unclassifiable inpatient outliers",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System without MCC",
+      "Ungroupable"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 13440,
+    "output": 6005,
+    "breakdown": {
+      "search_keywords": {
+        "input": 533,
+        "output": 529,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 338,
+        "output": 370,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 10507,
+        "output": 2958,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1219,
+        "output": 1893,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 843,
+        "output": 255,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T08:48:03.136513+00:00",
+    "end_time": "2026-08-23T08:48:42.592963+00:00",
+    "duration_ms": 39456,
+    "version": "2.0.0"
+  }
+}

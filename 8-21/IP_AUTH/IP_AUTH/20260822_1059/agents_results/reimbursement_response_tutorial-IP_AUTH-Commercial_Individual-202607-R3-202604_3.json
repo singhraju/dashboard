@@ -1,0 +1,193 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R3-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R3-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization coding shifts and unmapped facilities must be cleaned up before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "authorization_status",
+          "label": "Authorization",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "authorization_status": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00056",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "Off-topic for this policy. The policy addresses microsurgical technique reimbursement for specific CPT codes on CMS-1500 claims, not this DRG description.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Microsurgery-Policy-Professional.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: Authorization coding shifts and unmapped facilities must be cleaned up before action",
+    "pattern_rank": 3,
+    "pattern_title": "Authorization coding shifts and unmapped facilities must be cleaned up before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Coronary Bypass with Cardiac Catheterization or Open Ablation with MCC",
+      "Craniotomy and Endovascular Intracranial Procedures with MCC",
+      "Degenerative Nervous System Disorders without MCC",
+      "Multiple Level Combined Anterior and Posterior Spinal Fusion Except Cervical with MCC or Custom-made Anatomically Designed Interbody Fusion Device"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['ME', 'CA', 'TX', 'KY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 8087,
+    "output": 6669,
+    "breakdown": {
+      "search_keywords": {
+        "input": 587,
+        "output": 362,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 383,
+        "output": 220,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 4369,
+        "output": 4685,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 528,
+        "output": 508,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 678,
+        "output": 533,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 231,
+        "output": 62,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1311,
+        "output": 299,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T11:07:33.443260+00:00",
+    "end_time": "2026-08-22T11:08:16.026802+00:00",
+    "duration_ms": 42583,
+    "version": "2.0.0"
+  }
+}

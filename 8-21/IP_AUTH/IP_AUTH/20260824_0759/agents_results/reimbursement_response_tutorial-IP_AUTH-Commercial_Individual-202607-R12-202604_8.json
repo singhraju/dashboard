@@ -1,0 +1,545 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_8_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Smaller acute hospital pockets are emerging across CA, CT, OH, TX, VA, and WI",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Rule",
+          "type": "badge"
+        },
+        {
+          "id": "reimbursement_summary",
+          "label": "Payment Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "reimbursement_summary": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "reimbursement_summary": "Always bundled into facility or primary service payment; no separate reimbursement."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "reimbursement_summary": "Facility bundling applies; chemotherapy administration and integral facility services generally not separately reimbursable."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "reimbursement_summary": "No DRG-specific payment rule identified."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "reimbursement_summary": "No DRG-specific payment rule identified."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "reimbursement_summary": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00042",
+        "payer_name": "Cigna",
+        "policy_title": "Pharmacy and Infusion Services",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R14_Pharmacy_and_Infusion_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00007",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Bundled Services and Supplies",
+        "tags": [],
+        "effective_date": "04/01/2026",
+        "evidence": "Always bundled in facility claims; removal of sutures or staples requiring anesthesia is not separately reimbursable.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/CA-08003-CA1.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "15851",
+            "87913",
+            "97010",
+            "99070",
+            "99072",
+            "G0498",
+            "G2211",
+            "K1034",
+            "T1040"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "during a Public Health Emergency",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "one test count",
+            "per diem only"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "facility provider billing"
+          ],
+          "exemptions": [
+            "provider/state/federal/CMS requirements"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "This policy does not name the DRG directly. It is a general facility bundling policy that denies separate reimbursement for services and supplies integral to the facility fee, including chemotherapy administration in certain circumstances, with state-specific exceptions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility reimbursement"
+          ],
+          "state_specific_rules": [
+            "CA: delayed implementation and temporary exemptions noted",
+            "OH: routine ECG and pump maintenance codes exempted",
+            "VA: not subject to this policy",
+            "WI: chemotherapy administration allowed separately",
+            "TX: policy entered, no specific exemption stated",
+            "WI: routine supplies and feeding kits have separate reimbursement exceptions"
+          ],
+          "provider_role_restrictions": [
+            "facility provider"
+          ],
+          "exemptions": [
+            "Colorado allows separate reimbursement for Chemotherapy administration and Infusion Drug administration",
+            "Wisconsin allows separate reimbursement for Chemotherapy administration and Infusion administration",
+            "Virginia is not subject to this policy"
+          ],
+          "action_types": [
+            "null"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00077",
+        "payer_name": "Emblem Health",
+        "policy_title": "Therapeutic Drug Monitoring of 5-Fluorouracil (LBM)",
+        "tags": [],
+        "effective_date": "6/13/2025",
+        "evidence": "Off-topic for DRG payment adjudication. The policy addresses lab benefit coverage for 5-FU therapeutic drug monitoring and does not provide DRG-specific reimbursement rules for this inpatient DRG.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/5-fluorouracil-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00096",
+        "payer_name": "Emblem Health",
+        "policy_title": "In Vitro Chemoresistance and Chemosensitivity Assays (LBM)",
+        "tags": [],
+        "effective_date": "3/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/invitro-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00140",
+        "payer_name": "Emblem Health",
+        "policy_title": "Serum Tumor Markers for Malignancies (LBM)",
+        "tags": [],
+        "effective_date": "3/01/2023",
+        "evidence": "Off-topic to this serum biomarker policy; no DRG-specific adjudication rule identified.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/serum-tumor-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595710208",
+        "payer_name": "Point32Health",
+        "policy_title": "Chemotherapy Oncology",
+        "tags": [],
+        "effective_date": "10/01/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/chemotherapy-oncology-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595740200",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Serum Tumor Markers for Malignancies",
+        "tags": [],
+        "effective_date": "Nov. 1, 2025",
+        "evidence": "Off-topic. This laboratory policy addresses serum tumor markers for malignancies and does not provide adjudication rules for this DRG.",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-serum-tumor-markers-malignancies-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595760202",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: In Vitro Chemoresistance and Chemosensitivity Assays",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-vitro-chemoresistance-and-chemosensitivity-assays-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595790200",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Therapeutic Drug Monitoring for 5-Fluorouracil",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-therapeutic-drug-monitoring-5-fluorouracil-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00160",
+        "payer_name": "United Health",
+        "policy_title": "In Vitro Chemotherapy Assays Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-In-Vitro-Chemotherapy-Assays-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 11,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Smaller acute hospital pockets are emerging across CA, CT, OH, TX, VA, and WI",
+    "pattern_rank": 8,
+    "pattern_title": "Smaller acute hospital pockets are emerging across CA, CT, OH, TX, VA, and WI",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC",
+      "Coronary Bypass without Cardiac Catheterization with MCC"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 11,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "11 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA', 'CT', 'OH', 'WI'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item because it reflects broad facility bundling logic rather than a scenario aligned to the California cesarean-delivery pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/11 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/11 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 112785,
+    "output": 32036,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 819,
+        "output": 2073,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 102082,
+        "output": 23380,
+        "calls": 11
+      },
+      "relevance_judge": {
+        "input": 2352,
+        "output": 1332,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 858,
+        "output": 510,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 902,
+        "output": 422,
+        "calls": 7
+      },
+      "elevance_summary": {
+        "input": 403,
+        "output": 183,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2881,
+        "output": 3107,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1945,
+        "output": 498,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T08:26:16.943029+00:00",
+    "end_time": "2026-08-24T08:28:23.926415+00:00",
+    "duration_ms": 126983,
+    "version": "2.0.0"
+  }
+}

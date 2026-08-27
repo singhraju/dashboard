@@ -1,0 +1,215 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused post-payment review of the INTERMOUNTAIN MEDICAL CENTER NV TANF Standard IP Med/Surg admission for DRG Aortic and Heart Assist Procedures Except Pulsation Balloon with MCC and diagnosis I5043, including claim adjudication, coding and classification, and itemized bill validation against contract terms, and if confirmed, apply provider-specific reimbursement remediation or site-of-care controls for similar cases.",
+        "evidence": [
+          "INTERMOUNTAIN MEDICAL CENTER captured the full acute hospital paid increase in NV.",
+          "One new IP Med/Surg heart-assist admission created the outlier.",
+          "DRG Aortic and Heart Assist Procedures Except Pulsation Balloon with MCC matched diagnosis I5043.",
+          "Low-volume, low-baseline, and repeated-delta concentration flags were present."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted contract compliance and program integrity review of KS ABD Non Dual acute hospital inpatient claims from OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER for Other Musculoskeletal System and Connective Tissue O.R. Procedures with CC tied to diagnosis M952, including adjudication or reprocessing validation, authorization enforcement, DRG and coding support review, reimbursement methodology confirmation, and itemized bill review.",
+        "evidence": [
+          "Variance concentrated in OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER.",
+          "Diagnosis M952 drove the matching IP Med/Surg increase.",
+          "Single musculoskeletal DRG concentrated most inpatient paid increase.",
+          "Paid per admit increased with minimal claim growth.",
+          "Procedure detail is Null or Blank."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a provider- and diagnosis-specific LTCH policy review for MO TANF Standard and IN LTSS Non Dual Medicaid Complications of Treatment with CC episodes, starting with KINDRED HOSPITAL NORTHLAND and diagnoses T8183XA and T8131XA, to confirm contract-compliant claims processing, LTCH admission appropriateness, and discharge to alternate locations when appropriate.",
+        "evidence": [
+          "MO LTCH TANF Standard added about $112K in Complications of Treatment with CC.",
+          "IN LTCH LTSS Non Dual added about $25K in the same DRG.",
+          "MO T8183XA and T8131XA drove focused complication growth.",
+          "Claims rose and paid per admit rose.",
+          "KINDRED HOSPITAL NORTHLAND is the named MO LTCH provider."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Conduct case-level clinical and data-quality review of rare IP Med/Surg admissions in FL, KS, NJ, and TX tied to T7612XA, S32461A, K51314, and K4090 at TEXAS CHILDREN'S HOSPITAL, OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER, and THE CHILDRENS HOSPITAL OF PHILADELPHIA; validate Null or Blank procedure fields and DRG assignment, escalate unsupported coding to program integrity, and apply targeted member case management only for confirmed repeats.",
+        "evidence": [
+          "Rare IP Med/Surg cases across FL, KS, NJ, and TX added about $249K.",
+          "T7612XA at TEXAS CHILDREN'S HOSPITAL was the largest contributor.",
+          "OU Health musculoskeletal outlier had Null or Blank procedure detail.",
+          "Several diagnoses were one-case events with missing procedure detail."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX, Emblem Health, and Humana policies were off-topic for inpatient DRG outliers.",
+          "Centene and United Health showed no documented pattern mention or appeals guidance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit, correct, and reprocess VERACYTE Medicaid OP Lab/Pthlgy claims in NC, IA, KS, and OH that are assigned Not Mapped facility or DRG values and tied to Pathology and Laboratory, including diagnosis codes E042 and E041; then rerun authorization-to-actual, provider, and site-of-care reporting before reimbursement or utilization changes.",
+        "evidence": [
+          "VERACYTE appears across repeated Not Mapped Medicaid claim buckets.",
+          "NC clinical lab claims are tagged to Not Mapped DRG.",
+          "Pathology and Laboratory services align with E042 and E041.",
+          "Not Mapped facility reporting spans IA, KS, NC, and OH.",
+          "Validation is required before authorization reporting is trusted."
+        ],
+        "peer_benchmarking": [
+          "AmeriHealth Caritas, Molina, and United Health show no documented relevant policy or appeals detail."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Run a targeted UM and claims-payment audit for TANF Standard acute hospital IP Med/Surg admissions in OH, FL, DC, MO, VA, and CA covering Other Musculoskeletal System and Connective Tissue O.R. Procedures with CC, Inguinal and Femoral Hernia Procedures without CC/MCC, and Inflammatory Bowel Disease without CC/MCC to verify prior authorization, authorization-to-actual alignment, initial and concurrent review performance, discharge planning, and contractual payment accuracy, escalating reimbursement review for materially elevated paid-per-stay cases.",
+        "evidence": [
+          "Scattered one-off admissions drive TANF Standard acute hospital growth across six states.",
+          "OH single musculoskeletal surgical admission drove a high-paid inpatient increase.",
+          "CA increase was volume-led with lower paid per admit.",
+          "Multiple cards flagged low baseline and repeated delta concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Audit reimbursement methodology, claims processing, and authorization enforcement for Medicaid TANF Standard pediatric IP Med/Surg admissions at TEXAS CHILDREN'S HOSPITAL in TX and THE CHILDRENS HOSPITAL OF PHILADELPHIA for NJ members tied to Other Injury, Poisoning and Toxic Effect Diagnoses with MCC and Inflammatory Bowel Disease without CC/MCC, then pursue children's-hospital contract remediation or site-of-care redirection where contractually supported.",
+        "evidence": [
+          "Facility type CHILDRENS concentrates the inpatient increase in TX and NJ.",
+          "TX drill context identifies TEXAS CHILDREN'S HOSPITAL.",
+          "NJ drill context identifies THE CHILDRENS HOSPITAL OF PHILADELPHIA.",
+          "Diagnoses are injury/toxic-effect with MCC and inflammatory bowel disease without CC/MCC.",
+          "Pattern is flagged repeated_delta_concentration and validation_needed."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Implement targeted inpatient UM and care-navigation review for NC and VA Medicaid TANF Foster Care ACUTE HOSPITAL cases in Other Injury, Poisoning and Toxic Effect Diagnoses with MCC and NC Inguinal and Femoral Hernia Procedures without CC/MCC, with standardized nurse-to-MD medical-necessity referral, repeat-utilizer root-cause assessment, and audit of prior-authorization requirements, authorization-to-actual matching, and denial enforcement.",
+        "evidence": [
+          "NC and VA TANF Foster Care acute hospital paid increased about $51K.",
+          "Other Injury, Poisoning and Toxic Effect Diagnoses with MCC drove about $41K.",
+          "NC Inguinal and Femoral Hernia Procedures without CC/MCC added about $10K.",
+          "Volume is low and spend is concentrated in few admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is fully concentrated at a single provider, INTERMOUNTAIN MEDICAL CENTER, so provider-specific behavior and contractual terms are the most direct parent rule to test.; IP MedSurg (DNE) Trend 3: The variance is tied to a specific diagnosis context (I5043) and is described as a focused clinical case-mix outlier rather than a broad inpatient trend.; IP MedSurg (DNE) Trend 4: The increase is isolated to a specific high-cost inpatient service/DRG, Aortic and Heart Assist Procedures Except Pulsation Balloon with MCC, making service-level review highly relevant.; IP MedSurg (DNE) Trend 9: The recommended action is to validate the claim and case classification, which aligns closely with reviewing whether claims were processed or reprocessed correctly.; IP MedSurg (DNE) Trend 10: The case shows very high paid per admit and the next step includes review of reimbursement terms, matching the reimbursement-method parent rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Most directly matches the pattern: total paid rose with essentially flat claim volume and a large increase in paid per admit, pointing to reimbursement method, pricing terms, or outlier payment behavior.; IP MedSurg (DNE) Trend 1: The variance appears highly concentrated in a single rendering provider, suggesting provider-specific billing, contracting, or payment behavior should be reviewed.; IP MedSurg (DNE) Trend 3: The increase is tightly linked to diagnosis code M952, making diagnosis-level review relevant for case-mix, coding, or management-design changes.; IP MedSurg (DNE) Trend 4: The cost increase is concentrated in one musculoskeletal surgical DRG/service line, so service-level review is important to confirm whether the issue is isolated to this procedure category.; IP MedSurg (DNE) Trend 9: Because the spike is concentrated in a very small number of claims with low baseline history and missing procedure detail, claim status, reprocessing, or adjudication accuracy should be checked."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: This is the strongest fit because the pattern is explicitly a site-of-care shift into LTCH, and the recommended next step calls for reviewing discharge planning and LTCH admission appropriateness, which aligns to admission/discharge source/location.; IP MedSurg (DNE) Trend 4: Variance is concentrated in the LONG TERM CARE HOSPITAL setting, indicating a service/site-of-care driver rather than a broad inpatient utilization change.; IP MedSurg (DNE) Trend 3: The increase is isolated to a narrow diagnosis cluster within Complications of Treatment with CC, especially T8183XA and T8131XA, making diagnosis-driver review highly relevant.; IP MedSurg (DNE) Trend 1: The spend appears concentrated in a small provider footprint, including a named LTCH provider in MO, so provider-level behavior or contract dynamics should be assessed.; IP MedSurg (DNE) Trend 10: Paid per admit is up and the pattern specifically recommends reimbursement review, so reimbursement method is relevant to explain the high-cost LTCH claims."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is concentrated in a small set of diagnoses/DRGs such as injury/toxic effect, musculoskeletal surgery, inflammatory bowel disease, and hernia admissions, which directly matches diagnosis-level isolation.; IP MedSurg (DNE) Trend 1: The outliers appear at specific hospitals/providers across the affected states, indicating provider-level concentration rather than a broad network-wide pattern.; IP MedSurg (DNE) Trend 2: This is a low-baseline emergence driven by one-off or few-case admissions, so member-level review and targeted case management are appropriate.; IP MedSurg (DNE) Trend 4: Several cases have missing procedure detail ('Null or Blank') and the recommendation explicitly calls for coding/procedure validation, making service-level review highly relevant."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP Lab Pathology (DNE)"
+        ],
+        "relevance_reason": "OP Lab Pathology (DNE) Trend 1: The variance is highly concentrated in a single provider, VERACYTE, across multiple states and repeated unmapped buckets, so provider-level isolation is a primary parent signal.; OP Lab Pathology (DNE) Trend 4: The spend is narrowly tied to OP Lab/Pthlgy and Pathology and Laboratory services, making service-level review and mapping validation directly relevant.; OP Lab Pathology (DNE) Trend 3: NC clinical findings are concentrated in diagnoses E042 and E041 under Not Mapped DRG, so diagnosis-level validation is relevant to determine whether the apparent case-mix shift is real or a coding artifact.; OP Lab Pathology (DNE) Trend 7: The pattern explicitly states that authorization reporting may be misclassified until mapping is fixed, which aligns closely to auth-to-claim match review.; IP MedSurg (DNE) Trend 9: Repeated Not Mapped facility and DRG assignments across states point to a claims classification or reprocessing issue; this is the closest available parent rule that directly addresses processing standards."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is concentrated in a small set of inpatient DRGs/services across acute hospital stays, so service-level review best matches the pattern of scattered one-off admissions.; IP MedSurg (DNE) Trend 6: The recommended action is targeted UM review of medical necessity and discharge planning, which aligns directly to reviewing utilization management KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 10: Most contributing states show elevated paid per stay, and the pattern explicitly recommends reimbursement review where unit cost is materially high, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 8: Because these are isolated inpatient admissions needing UM validation, checking whether required authorizations matched claims and denials were enforced is an appropriate parent rule.; IP MedSurg (DNE) Trend 9: The pattern routes to reimbursement and data quality review, and isolated high-cost inpatient claims should be checked for claims processing or reprocessing issues under contractual standards."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Most of the increase is isolated to a very small provider subset\u2014Texas Children's Hospital in TX and The Children's Hospital of Philadelphia for NJ members\u2014so provider/network and site-of-care concentration is the primary research path.; IP MedSurg (DNE) Trend 3: The variance is concentrated in a narrow diagnosis/DRG subset: injury/toxic-effect with MCC in TX and inflammatory bowel disease without CC/MCC in NJ, making diagnosis-level review directly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially at children's hospitals, and the pattern explicitly highlights pediatric reimbursement dynamics, so reimbursement method review is highly relevant.; IP MedSurg (DNE) Trend 8: These are a few high-cost inpatient admissions with UM follow-up recommended, so checking authorization-to-claim alignment is relevant before broadening controls.; IP MedSurg (DNE) Trend 9: Because the increase comes from only 5 admissions off a zero baseline and requires validation, claim frequency/status and possible reprocessing should be ruled out as contributors."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend increase is highly concentrated in specific inpatient diagnosis/DRG groupings, especially Other Injury, Poisoning and Toxic Effect Diagnoses with MCC, making diagnosis-level isolation the strongest parent rule fit.; IP MedSurg (DNE) Trend 2: The pattern is driven by only a few TANF Foster Care admissions with low baseline volume, so member-level concentration and targeted case management review are highly relevant.; IP MedSurg (DNE) Trend 6: The recommended action is targeted UM follow-up to confirm medical necessity, discharge support, and avoidable utilization, which aligns directly with reviewing inpatient UM KPI and PAV-related drivers.; IP MedSurg (DNE) Trend 4: A smaller but meaningful portion of the increase is tied to a specific procedural service signal, Inguinal and Femoral Hernia Procedures without CC/MCC, supporting service-level review.; IP MedSurg (DNE) Trend 8: Because these are acute inpatient admissions with rising paid per admit and a need to validate medical necessity, authorization-to-claim matching and denial enforcement are relevant secondary checks."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T05:10:57.407114+00:00"
+  }
+}

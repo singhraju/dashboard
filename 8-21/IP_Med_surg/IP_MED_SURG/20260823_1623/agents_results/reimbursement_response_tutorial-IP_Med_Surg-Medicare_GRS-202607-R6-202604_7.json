@@ -1,0 +1,786 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare high-cost clinical outliers are emerging across multiple segments and need targeted case review",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_relevance",
+          "label": "Pattern Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "case_review_requirements",
+          "label": "Case Review Needs",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "Sepsis Review",
+          "case_review_requirements": "May request pre/post-pay records to validate sepsis/DRG and supporting documentation."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "Sepsis Validation",
+          "case_review_requirements": "No prior authorization; records may be requested to validate sepsis, organ dysfunction, SOFA, and treatment."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "case_review_requirements": "-"
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "case_review_requirements": "-"
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "case_review_requirements": "No specific case review requirements stated."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "case_review_requirements": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "Clinical Validation",
+          "case_review_requirements": "Requires supporting medical records, correct coding, and sepsis evidence, including possible SOFA scores."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "Diagnosis Rules",
+          "case_review_requirements": "No prior authorization or case review requirements stated; accurate ICD-10-CM diagnosis coding required."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_00059",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coronavirus Testing in the Outpatient Setting (LBM)",
+        "tags": [],
+        "effective_date": "5/12/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/coronavirus-testing-outpatient-setting-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "No DRG-specific outlier, payment, or case-review rule is stated for this segment. The policy instead applies general diagnosis-code sequencing rules; aftercare-type Z diagnoses may be principal or secondary depending the encounter, and reimbursement is conditioned on correct principal or primary diagnosis reporting.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Z51.89",
+            "998",
+            "T86",
+            "C80.2",
+            "T51-T65",
+            "R65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "Box 67 principal diagnosis",
+            "Box 24E primary diagnosis",
+            "secondary diagnosis when required",
+            "underlying condition sequenced first"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00027",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing (PDF)",
+        "tags": [],
+        "effective_date": "03/23",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CP.MP.209.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00037",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Infectious Disease: Respiratory Testing (PDF)",
+        "tags": [],
+        "effective_date": "01/26",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CG.CP.MP.01.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00067",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Sepsis Diagnosis (PDF)",
+        "tags": [],
+        "effective_date": "11/2025",
+        "evidence": "APR-DRG sepsis-related inpatient claims are subject to pre- or post-pay medical record review to validate diagnosis coding and DRG assignment; unsupported coding may be adjusted or denied.",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "710",
+            "720",
+            "853-855",
+            "870-872"
+          ],
+          "related_codes": [
+            "A41.9",
+            "R65.20",
+            "R65.21",
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "pre- or post-pay review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "APR-DRG",
+            "Inpatient facility",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician",
+            "licensed independent practitioner"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_OH_2953170300000",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Infectious Disease: Multisystem Testing (PDF)",
+        "tags": [],
+        "effective_date": "01/26",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CG.CP.MP.02.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00101",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis - CC.PP.073",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "APR-DRG sepsis-related inpatient claims are subject to clinical validation of the sepsis diagnosis and may be adjusted if documentation does not support the billed DRG.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "710",
+            "720",
+            "853",
+            "854",
+            "855",
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim"
+          ],
+          "utilization_limits": [
+            "members 18+ only",
+            "review within 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "APR-DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or LIP documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00250",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Inpatient sepsis-related APR-DRG claims are subject to pre- or post-pay medical record review. Payment depends on documentation supporting the diagnosis and DRG assignment; unsupported claims may be denied or adjusted.",
+        "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "710",
+            "720",
+            "853",
+            "854",
+            "855",
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "medical record review",
+            "same inpatient claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "APR-DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00703",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Infectious Disease Respiratory Testing",
+        "tags": [],
+        "effective_date": "11/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.CG.PP.01-Infectious-Disease-Respiratory-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00039",
+        "payer_name": "Healthfirst",
+        "policy_title": "\u03b2-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "Policy addresses hemolytic streptococcus testing only and does not govern DRG reimbursement or rare high-cost outlier review for this requested pattern.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-016-Hemolytic-Streptococcus-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00043",
+        "payer_name": "Healthfirst",
+        "policy_title": "Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "This Healthfirst policy addresses outpatient pathogen panel testing only and does not include DRG-based inpatient reimbursement rules for this category.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-012-Pathogen-Panel-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00061",
+        "payer_name": "Healthfirst",
+        "policy_title": "General Inflammation Testing",
+        "tags": [],
+        "effective_date": "10/15/2025",
+        "evidence": "Off-topic. This policy addresses medical necessity and frequency limits for CRP/ESR testing in inflammatory conditions, not DRG reimbursement or outlier review for the requested DRG.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-063-Inflammation-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00029",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00202",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "1/7/2022",
+        "evidence": "Hospital sepsis claims with ICD-10 code R65.2 are subject to pre- and post-payment DRG clinical validation. Sepsis must be supported by Sepsis-3 criteria, including SOFA score 2+ as an adjunct. Unsupported sepsis diagnoses or treatment may trigger payment adjustment.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00944",
+        "payer_name": "Molina",
+        "policy_title": "General Billing and Coding Policy",
+        "tags": [],
+        "effective_date": "2020-11-20",
+        "evidence": "This general billing policy does not contain a DRG-specific adjudication rule for this DRG description. It only states broad correct-coding, NCCI, MUE, documentation, and claim review requirements.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Generalandbillingpolicy12182024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01074",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-07-12",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 23,
+    "policies_successful": 23,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Rare high-cost clinical outliers are emerging across multiple segments and need targeted case review",
+    "pattern_rank": 7,
+    "pattern_title": "Rare high-cost clinical outliers are emerging across multiple segments and need targeted case review",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare, Musculoskeletal System and Connective Tissue with CC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Respiratory System Diagnosis with Ventilator Support < = 96 Hours",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 23,
+    "successful_extractions": 23,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 23 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "23 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'CA', 'NY', 'GA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "6/23 policies quarantined (26%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/23 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "6 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00078:B-Hemolytic Streptococcus Testing (LBM), RP_COM_EMB_00134:Pathogen Panel Testing (LBM), RP_GBD_CNC_00214:Infectious Disease: Respiratory Lab Testing, RP_GBD_CNC_00812:Infectious Disease: Respiratory Testing, RP_GBD_HF_00060:Coronavirus Testing in the Outpatient Setting, RP_GBD_MOH_00971:NF Ventilator Pre-Payment Medical Necessity Review]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 412385,
+    "output": 87707,
+    "breakdown": {
+      "search_keywords": {
+        "input": 580,
+        "output": 1469,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 1178,
+        "output": 5737,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 394697,
+        "output": 74223,
+        "calls": 24
+      },
+      "relevance_judge": {
+        "input": 7753,
+        "output": 4224,
+        "calls": 15
+      },
+      "dynamic_columns": {
+        "input": 1085,
+        "output": 652,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 2061,
+        "output": 1185,
+        "calls": 10
+      },
+      "policy_recommendations": {
+        "input": 5031,
+        "output": 217,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:31:53.993411+00:00",
+    "end_time": "2026-08-23T17:35:07.282136+00:00",
+    "duration_ms": 193288,
+    "version": "2.0.0"
+  }
+}

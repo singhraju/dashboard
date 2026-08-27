@@ -1,0 +1,1348 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "GA and PA authorization and facility mapping issues need validation before action",
+    "pattern_description": "The largest issue is not a clear utilization or reimbursement trend but a validation problem. In GA, a major share of the increase sits in authorization code redistribution, and both GA and PA also show additional spend in a Not Mapped facility bucket for authorized inpatient claims. These signals should be treated as data and classification issues first, because business action on utilization management or provider economics could be misdirected until the mapping is confirmed.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "GA authorization code redistribution accounts for about $1.8M, concentrated in hip/femur, UTI, metabolic disorder, and sepsis admissions. GA PPO Local claims in the Not Mapped facility bucket add about $213K, led by about $89K in metabolic disorders and about $80K in hip/femur cases. PA PPO Local claims in the Not Mapped facility bucket add about $113K, including about $79K at ATLANTICARE REGIONAL MEDICAL CTR and about $34K in sepsis cases."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "GA authorized acute hospital admissions are up, with added cost pressure at DCH",
+    "pattern_description": "GA acute hospital spend is rising because authorized admissions increased and some cases also cost more per stay. The increase is concentrated at DCH REGIONAL MEDICAL CENTER and in a small set of inpatient DRGs, especially UTI, cellulitis, hip/femur, and sepsis. This is a direct UM and provider-performance issue rather than a broad statewide pricing change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "GA authorized acute hospital admissions are up, with added cost pressure at DCH",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "DRG Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance": "Humana policy is off-topic, addressing urine culture testing rather than inpatient DRG admission rules."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance": "Policy addresses separate reimbursement for molecular syndromic panel codes, not inpatient DRG admissions."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "Off-topic for this DRG pattern. The policy addresses urine culture CPT codes and a diagnosis-based noncoverage rule for a general encounter, but it does not mention inpatient DRG admissions or this DRG label.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00060",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Hepatitis Testing",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390c",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01835",
+            "payer_name": "United Health",
+            "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "The authoring payer policy is a molecular syndromic panel laboratory policy and does not address inpatient DRG admission reimbursement for this requested DRG.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "DCH REGIONAL MEDICAL CENTER drives about $193K, with 12 more admissions and about $16K higher paid per admit. UTI and cellulitis admissions add about $185K and $176K, each with roughly 24 more admissions. Hip/femur and sepsis add about $325K more, with 14 to 17 additional admissions in GA acute hospitals."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "GA inpatient growth is concentrated in infection, sepsis, cellulitis, and femur fracture cases",
+    "pattern_description": "GA clinical pressure is not broad-based. It is concentrated in a small set of infection, sepsis, cellulitis, and femur fracture presentations that are driving inpatient use and, in some cases, higher paid per admit. This clinical concentration helps explain why GA authorized acute hospital costs are rising and gives UM and clinical teams a focused set of pathways to review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "GA inpatient growth is concentrated in infection, sepsis, cellulitis, and femur fracture cases",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "review_adjustment",
+              "label": "Review & Adjustment",
+              "type": "text"
+            },
+            {
+              "id": "documentation_needed",
+              "label": "Documentation Needed",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "review_adjustment": "Reviews sepsis claims pre/post-pay and may deny, adjust, or reinstate based on documentation.",
+              "documentation_needed": "Requires physician-documented sepsis with organ dysfunction, SOFA increase, cultures, antibiotics, fluids, and SEP-1 screening."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "review_adjustment": "-",
+              "documentation_needed": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00250",
+            "payer_name": "Centene",
+            "policy_title": "Sepsis Diagnosis",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Listed APR-DRG and MS-DRG septicemia/infectious disease claims are subject to inpatient sepsis diagnosis validation. Payment may be denied, adjusted, or reinstated after medical record review if the documented diagnosis supports or does not support sepsis.",
+            "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "710",
+                "720",
+                "853",
+                "854",
+                "855",
+                "870",
+                "871",
+                "872"
+              ],
+              "related_codes": [
+                "A02.1",
+                "A20.7",
+                "A22.7",
+                "A26.7",
+                "A32.7",
+                "A39.1",
+                "A39.2",
+                "A39.3",
+                "A39.4",
+                "A39.89",
+                "A39.9",
+                "A40.0",
+                "A40.1",
+                "A40.3",
+                "A40.8",
+                "A40.9",
+                "A41.01",
+                "A41.02",
+                "A41.1",
+                "A41.2",
+                "A41.3",
+                "A41.4",
+                "A41.50",
+                "A41.51",
+                "A41.52",
+                "A41.53",
+                "A41.54",
+                "A41.59",
+                "A41.81",
+                "A41.89",
+                "A41.9",
+                "A42.7",
+                "A54.86",
+                "B00.7",
+                "B37.7",
+                "R57.1",
+                "R57.8",
+                "R65.20",
+                "R65.21",
+                "R78.81"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "medical record review",
+                "pre-pay or post-pay review"
+              ],
+              "utilization_limits": [
+                "review completed within 60 days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "APR-DRG",
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician or licensed independent practitioner documentation required"
+              ],
+              "exemptions": [
+                "sepsis screening"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00013",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - General Inflammation Testing",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00029",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "UTI site not specified adds about $245K with 30 more admissions in kidney and urinary infection stays. Sepsis unspecified organism adds about $196K with 21 more admissions. Cellulitis of the left lower limb adds about $119K with 12 more admissions and about $2.7K higher paid per admit. Left femur fracture adds about $198K with 15 more admissions."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Authorized acute hospital admission growth is recurring outside GA",
+    "pattern_description": "Outside GA, the recurring operational theme is straightforward admission growth in authorized acute hospital cases, not broad reimbursement inflation. CA and the CT / MO / NY / PA cluster both show higher inpatient volume in a short list of DRGs, including hip/femur, UTI, metabolic disorders, and sepsis. This points to utilization management and provider engagement as the main levers.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorized acute hospital admission growth is recurring outside GA",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589920013",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "10/1/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/urine-culture-testing-for-bacteria.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "In CA, hip/femur admissions add about $173K with 10 more admissions, even as paid per admit declined slightly. In CA, UTI admissions add about $127K with 13 more admissions. In CT / MO / NY / PA, SSM HEALTH DEPAUL HOSPITAL - ST. LOUIS adds about $76K with 6 more admissions. NY hip/femur and metabolic disorder clusters add about $195K combined, with 6 more admissions in each cluster."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "OH acute hospital growth is volume-led, with smaller added unit-cost pockets",
+    "pattern_description": "OH shows a primarily volume-driven rise in authorized acute hospital spending, with a smaller added unit-cost signal in UTI and cellulitis. The increase is concentrated in metabolic disorder, UTI, hip/femur, and cellulitis stays, and MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL is a notable provider concentration point. This pattern needs both utilization management and a limited reimbursement check on the cases showing higher paid per admit.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "OH acute hospital growth is volume-led, with smaller added unit-cost pockets",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "site_and_bundling",
+              "label": "Site & Bundling",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Limited to myocardial infarction and chronic heart failure cardiac biomarker testing; unrelated conditions not mentioned.",
+              "site_and_bundling": "No DRG bundling rule identified; biomarker reimbursement is restricted and conditional."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Not mentioned; policy only addresses heart failure biomarker testing and denies code 83006.",
+              "site_and_bundling": "Applies to professional and facility claims only; no site-of-service or DRG bundling rule."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00059",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No direct rule in this policy for cellulitis. The policy is limited to cardiac biomarker testing for myocardial infarction and chronic heart failure.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+            "edit_rule_facts": {
+              "target_codes": [
+                "83880"
+              ],
+              "related_codes": [
+                "84484",
+                "84512",
+                "83006",
+                "82553",
+                "82554",
+                "82550",
+                "82552",
+                "83625",
+                "83874",
+                "84588",
+                "86140"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "conjunction with troponin",
+                "outpatient setting",
+                "independent laboratory"
+              ],
+              "utilization_limits": [
+                "4 times every 365 days",
+                "max four serial troponins"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01821",
+            "payer_name": "United Health",
+            "policy_title": "Chronic Heart Failure Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "Off-topic for this DRG label. The policy only addresses chronic heart failure biomarker testing and states procedure code 83006 is not reimbursable.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Chronic-Heart-Failure-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "OH metabolic disorder admissions add about $117K with 10 more admissions. MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL adds about $63K with 7 more admissions despite lower paid per admit. OH UTI cases add about $71K with 8 more admissions and about $1K higher paid per admit. NY cellulitis adds about $34K with 3 more admissions and about $2K higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "OH inpatient case mix is concentrated in metabolic and electrolyte admissions",
+    "pattern_description": "OH clinical growth is concentrated inside one inpatient category: metabolic and electrolyte conditions. Most of the pressure comes from more admissions, with some additional payment intensity in hypernatremia-related stays. This is a focused clinical management opportunity rather than a broad change across inpatient services.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "OH inpatient case mix is concentrated in metabolic and electrolyte admissions",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "care_setting",
+              "label": "Care Setting",
+              "type": "badge"
+            },
+            {
+              "id": "payment_bundling",
+              "label": "Bundling",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "AmeriHealth Caritas",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "care_setting": "-",
+              "payment_bundling": "Not Bundled"
+            },
+            {
+              "payer_org": "Buckeye Health Plan (WellCare)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "care_setting": "Inpatient Only",
+              "payment_bundling": "Bundles"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "care_setting": "Inpatient",
+              "payment_bundling": "Denies"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "care_setting": "-",
+              "payment_bundling": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_AHC_00329",
+            "payer_name": "AmeriHealth Caritas",
+            "policy_title": "Thyroid Testing",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Covered when billed with an approved diagnosis supporting thyroid/endocrine or related medically necessary evaluation. Claims without an approved diagnosis are not reimbursed. Stable patients are limited to two tests per year unless therapy changes or symptoms/signs justify additional testing.",
+            "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Thyroid%20Testing%20.pdf.coredownload.inline.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "84436",
+                "84443",
+                "84439",
+                "84479"
+              ],
+              "related_codes": [
+                "84443",
+                "84439",
+                "84479",
+                "84436"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "approved diagnosis on claim",
+                "therapy altered",
+                "symptoms or signs noted"
+              ],
+              "utilization_limits": [
+                "2 tests/year stable patient"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "Ohio"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_BHP_OH_28594260200",
+            "payer_name": "Buckeye Health Plan (WellCare)",
+            "policy_title": "Malnutrition (PDF)",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Severe malnutrition on inpatient claims is subject to retrospective review. DRG payment increases tied to malnutrition MCC are payable only when severe malnutrition criteria and hospital treatment documentation are clinically validated.",
+            "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.145.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "E43",
+                "E44.0",
+                "E44.1"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "non-primary diagnosis position"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "MS-DRG",
+                "IPPS"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician or licensed independent practitioner"
+              ],
+              "exemptions": [
+                "hospice minimal or no treatment"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00843",
+            "payer_name": "Centene",
+            "policy_title": "Severe Malnutrition",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Inpatient claims with unspecified severe protein-calorie malnutrition are retrospectively reviewed to confirm documentation supports the diagnosis. When severe malnutrition is billed as an MCC in a non-primary diagnosis position, the DRG payment increase is denied unless clinical documentation criteria are met.",
+            "policy_url": "https://buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PP.145_06.24.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "E43"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "non-primary diagnosis position",
+                "same inpatient claim"
+              ],
+              "utilization_limits": [
+                "retrospective review only"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "MS-DRG",
+                "Inpatient Prospective Payment System"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician or licensed independent practitioner documentation"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00973",
+            "payer_name": "Molina",
+            "policy_title": "Clinical Diagnostic Laboratory Services",
+            "tags": [],
+            "effective_date": "10/11/2024",
+            "evidence": "Off-topic. This laboratory services policy does not address inpatient DRG case mix or Ohio metabolic and electrolyte admission patterns.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Clinical-Diagnostic-Laboratory-Services-03282025.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Hyponatremia adds about $109K with 10 more admissions. Fluid overload adds about $38K with 6 more admissions. Hypokalemia adds about $75K with 6 more admissions. Hyperosmolality and hypernatremia adds about $55K with 5 more admissions and about $2.7K higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "Rare high-cost inpatient outliers are inflating spend across several providers",
+    "pattern_description": "A meaningful share of remaining spend is driven by rare, high-cost inpatient cases across multiple providers rather than recurring volume. Most of these signals come from one to three admissions at a time, often with very high paid per admit and unusual clinical presentations. These cases should be handled through case-level review and payment validation, not broad utilization or network policy changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare high-cost inpatient outliers are inflating spend across several providers",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "payment_validation_rule",
+              "label": "Payment Validation",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Buckeye Health Plan (WellCare)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "Denies Unsupported",
+              "payment_validation_rule": "Validates sepsis payment using documentation, SOFA criteria, treatment evidence, coding, and DRG review."
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "Clinical Validation",
+              "payment_validation_rule": "Validates sepsis payment using physician documentation, SOFA-supported organ dysfunction, and documented treatment."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "payment_validation_rule": "-"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "payment_validation_rule": "-"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "Clinical Validation",
+              "payment_validation_rule": "Validates sepsis claims using Sepsis-3/SOFA evidence, treatment support, and admission/discharge coding details."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "Not Relevant",
+              "payment_validation_rule": "Validates principal diagnosis coding/placement per ICD-10-CM rules; invalid sequencing may trigger DRG 998."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00047",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "CAT Scan RETIRED",
+            "tags": [],
+            "effective_date": "08/16/06",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/CAT%20Scan%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00118",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-03-01",
+            "evidence": "This policy does not name the requested DRGs individually; it instead enforces diagnosis coding rules for inpatient and outpatient claims. For inpatient UB-04 claims, an invalid principal diagnosis maps to DRG 998 and results in denial.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "998"
+              ],
+              "related_codes": [
+                "Z51.89",
+                "Q21.0",
+                "I51.0",
+                "R65"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MS-DRG",
+                "UB-04"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_BHP_00027",
+            "payer_name": "Buckeye Health Plan (WellCare)",
+            "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing (PDF)",
+            "tags": [],
+            "effective_date": "03/23",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CP.MP.209.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_BHP_00067",
+            "payer_name": "Buckeye Health Plan (WellCare)",
+            "policy_title": "Sepsis Diagnosis (PDF)",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "The Health Plan validates inpatient sepsis-coded claims pre- or post-pay and may deny unsupported coding or incorrect DRG assignment after medical record review.",
+            "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "710",
+                "720",
+                "853",
+                "854",
+                "855",
+                "870",
+                "871",
+                "872"
+              ],
+              "related_codes": [
+                "A41.9",
+                "R65.20",
+                "R65.21",
+                "R78.81"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "APR-DRG",
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "sepsis screening"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00250",
+            "payer_name": "Centene",
+            "policy_title": "Sepsis Diagnosis",
+            "tags": [],
+            "effective_date": "09/2024",
+            "evidence": "MS-DRG sepsis and septicemia claims are subject to medical record review, with payment denied or adjusted if the sepsis diagnosis or DRG assignment is not supported.",
+            "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "853",
+                "854",
+                "855",
+                "870",
+                "871",
+                "872",
+                "710",
+                "720",
+                "A02.1",
+                "A20.7",
+                "A22.7",
+                "A26.7",
+                "A32.7",
+                "A39.1",
+                "A39.2",
+                "A39.3",
+                "A39.4",
+                "A39.89",
+                "A39.9",
+                "A40.0",
+                "A40.1",
+                "A40.3",
+                "A40.8",
+                "A40.9",
+                "A41.01",
+                "A41.02",
+                "A41.1",
+                "A41.2",
+                "A41.3",
+                "A41.4",
+                "A41.50",
+                "A41.51",
+                "A41.52",
+                "A41.53",
+                "A41.54",
+                "A41.59",
+                "A41.81",
+                "A41.89",
+                "A41.9",
+                "A42.7",
+                "A54.86",
+                "B00.7",
+                "B37.7",
+                "R57.1",
+                "R57.8",
+                "R65.20",
+                "R65.21",
+                "R78.81"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "medical records requested for review"
+              ],
+              "utilization_limits": [
+                "inpatient claims only",
+                "age 18 and older",
+                "review within 60 days of records receipt"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MS-DRG",
+                "DRG",
+                "APR-DRG",
+                "ICD-10-CM"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician or licensed independent practitioner documentation"
+              ],
+              "exemptions": [
+                "sepsis screening"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00059",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "Off-topic for this policy. The policy governs biomarker laboratory testing and does not establish DRG payment rules, inpatient outlier logic, or DRG-specific reimbursement for this category.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00085",
+            "payer_name": "Molina",
+            "policy_title": "Sepsis",
+            "tags": [],
+            "effective_date": "2022-01-07",
+            "evidence": "Inpatient sepsis claims using this diagnosis are subject to DRG clinical validation under Sepsis-3 criteria; payment may be adjusted if the record does not support sepsis or sepsis treatment services.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+            "edit_rule_facts": {
+              "target_codes": [
+                "R65.2"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00973",
+            "payer_name": "Molina",
+            "policy_title": "Clinical Diagnostic Laboratory Services",
+            "tags": [],
+            "effective_date": "10/11/2024",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Clinical-Diagnostic-Laboratory-Services-03282025.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00982",
+            "payer_name": "Molina",
+            "policy_title": "General Billing and Coding Policy",
+            "tags": [],
+            "effective_date": "2020-11-20",
+            "evidence": "No DRG-specific outlier payment rule found. The policy is a general coding and claims review policy that focuses on correct coding, documentation, and claim audit requirements.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Generalandbillingpolicy12182024_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01383",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Off-topic for DRG/outlier reimbursement. The policy only addresses correct ICD-10-CM primary/principal diagnosis reporting and state-specific diagnosis-code exceptions.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01821",
+            "payer_name": "United Health",
+            "policy_title": "Chronic Heart Failure Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Chronic-Heart-Failure-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MARY WASHINGTON HOSPITAL INC in VA shows multiple single-case spikes, including cardiac valve replacement at about $35K and an unrelated major O.R. procedure at about $35K. DCH REGIONAL MEDICAL CENTER in GA has rare infection and surgical outliers, including candidal sepsis at about $38K and a dialysis catheter complication surgery at about $29K. MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL in OH and MARY WASHINGTON HOSPITAL INC in VA also show rare sepsis and heart failure outliers ranging from about $14K to $29K per case. These groups are dominated by one to three admissions each."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Smaller provider and site-specific inpatient spikes are emerging in VA, ME, and MO",
+    "pattern_description": "Several smaller operational spikes are concentrated in individual providers or sites with low starting volumes. The largest is MARY WASHINGTON HOSPITAL INC in VA, while ME CRITICAL ACCESS and MO Medicare HMO show small but high-cost inpatient episodes. These look more like emerging provider mix changes or isolated site-level events than broad product-wide trends.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Smaller provider and site-specific inpatient spikes are emerging in VA, ME, and MO",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_policy_status",
+              "label": "DRG Policy Status",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope_note",
+              "label": "Scope Note",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_policy_status": "-",
+              "policy_scope_note": "No DRG-specific rule; policy only addresses echocardiography CPT coding, not this inpatient DRG."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589970007",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Echocardiography",
+            "tags": [],
+            "effective_date": "11/1/2020",
+            "evidence": "Blue KC's echocardiography policy is off-topic for this inpatient DRG pattern and does not contain a DRG-specific adjudication rule for this code.",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/echocardiography.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MARY WASHINGTON HOSPITAL INC in VA adds about $298K from 20 more authorized acute hospital admissions. ME CRITICAL ACCESS cellulitis cases add about $44K across 2 admissions, with about $21.8K higher paid per admit. SSM HEALTH DEPAUL HOSPITAL - ST. LOUIS in MO Medicare HMO adds about $20K from 1 additional admission with about $20.3K paid per admit."
+      }
+    }
+  }
+]

@@ -1,0 +1,194 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_6_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "DSNP acute hospital admissions are rising across CT, FL, LA, NJ, TN, VA, and WI",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "policy_scope": "Laboratory biomarker billing policy for myocardial infarction and heart failure; not inpatient DRG adjudication."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00059",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "Off-topic for DRG adjudication: this policy governs laboratory biomarker billing for myocardial infarction and chronic heart failure, not inpatient DRG payment or discharge-status logic.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: DSNP acute hospital admissions are rising across CT, FL, LA, NJ, TN, VA, and WI",
+    "pattern_rank": 6,
+    "pattern_title": "DSNP acute hospital admissions are rising across CT, FL, LA, NJ, TN, VA, and WI",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Acute Myocardial Infarction, Discharged Alive with MCC",
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['VA', 'CT'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/2 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_HUM_00012:Laboratory - Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 26700,
+    "output": 10136,
+    "breakdown": {
+      "search_keywords": {
+        "input": 569,
+        "output": 467,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 456,
+        "output": 541,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 22381,
+        "output": 7931,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 1043,
+        "output": 376,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 644,
+        "output": 358,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 279,
+        "output": 179,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1328,
+        "output": 284,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:26:16.031202+00:00",
+    "end_time": "2026-08-23T15:27:05.884548+00:00",
+    "duration_ms": 49853,
+    "version": "2.0.0"
+  }
+}

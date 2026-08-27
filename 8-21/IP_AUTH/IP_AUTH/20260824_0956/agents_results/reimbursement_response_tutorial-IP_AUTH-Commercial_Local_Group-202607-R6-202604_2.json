@@ -1,0 +1,397 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT PPO acute spend is concentrated at Yale New Haven with both more admits and higher paid per admit",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "bundling_status",
+          "label": "Bundling Status",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Applies only to professional claims with specified POS restrictions, not inpatient/facility payment rules.",
+          "bundling_status": "Bundles"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "No DRG-specific acute inpatient site-of-service policy identified.",
+          "bundling_status": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Applies to observation services at contracted acute care hospitals; not limited by DRG.",
+          "bundling_status": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Applies to inpatient and outpatient facility settings, including various procedural and diagnostic rooms.",
+          "bundling_status": "Bundles"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "Routine tracheostomy and invasive mechanical-ventilation related supplies, nursing care, and equipment are bundled into room-and-board or the primary facility payment; separate reimbursement is generally denied.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "A4483",
+            "A4481",
+            "A4605",
+            "A4618",
+            "A4623",
+            "A4624",
+            "A4625",
+            "A4626",
+            "A4629",
+            "A7501",
+            "A7502",
+            "A7503",
+            "A7504",
+            "A7505",
+            "A7506",
+            "A7507",
+            "A7508",
+            "A7509",
+            "A7520",
+            "A7521",
+            "A7522",
+            "A7523",
+            "A7524",
+            "A7525",
+            "A7526",
+            "A7527"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "facility claim",
+            "room and board"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00047",
+        "payer_name": "Cigna",
+        "policy_title": "Procedure and Place of Service",
+        "tags": [],
+        "effective_date": "08/12/2023",
+        "evidence": "No DRG-level acute inpatient reimbursement rule is stated for this tracheostomy/mechanical ventilation pattern. This policy is limited to professional CPT/HCPCS reimbursement based on appropriate place of service on CMS-1500 claims; related ventilation management CPT codes are listed separately.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R43_Procedure_and_Place_of_Service.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "94002",
+            "94003"
+          ],
+          "related_codes": [
+            "94002",
+            "94003"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "appropriate POS required"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No explicit DRG-specific adjudication rule was identified for this tracheostomy with prolonged mechanical ventilation inpatient pattern. The policy is a broad coding-edit policy and does not provide Connecticut PPO acute inpatient DRG reimbursement logic, hospital-specific payment direction, or provider-concentration guidance for this DRG.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595770204",
+        "payer_name": "Point32Health",
+        "policy_title": "Observation Stay",
+        "tags": [],
+        "effective_date": "2026-08-01",
+        "evidence": "Off-topic for the requested DRG pattern. This policy addresses observation stay billing and short-stay inpatient/observation classification, not DRG-specific payment for ventilated tracheostomy cases.",
+        "policy_url": "https://wwwassets.point32health.org/documents/observation-stay-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The policy bundles routine inpatient and outpatient facility services into room and board or facility charges. For this clinical area, tracheostomy supplies and care are not separately reimbursed, and facility-owned ventilator or CPAP management is only considered once per day.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260-269",
+            "270",
+            "279",
+            "270-279",
+            "300",
+            "309",
+            "300-370",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit per day"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Hospital Inclusive Charges",
+            "UB04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Pre- and Post-Anesthesia Recovery Room"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CT PPO acute spend is concentrated at Yale New Haven with both more admits and higher paid per admit",
+    "pattern_rank": 2,
+    "pattern_title": "CT PPO acute spend is concentrated at Yale New Haven with both more admits and higher paid per admit",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped because they address tracheostomy or ventilation reimbursement rather than cesarean delivery, and item 2 is additionally supported by a source that explicitly limits itself to professional POS adjudication."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/5 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 250112,
+    "output": 39038,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 231,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 649,
+        "output": 1366,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 238279,
+        "output": 31783,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2393,
+        "output": 932,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 963,
+        "output": 779,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1094,
+        "output": 817,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 3187,
+        "output": 2446,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3004,
+        "output": 684,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:43:07.257728+00:00",
+    "end_time": "2026-08-24T10:46:09.147782+00:00",
+    "duration_ms": 181890,
+    "version": "2.0.0"
+  }
+}

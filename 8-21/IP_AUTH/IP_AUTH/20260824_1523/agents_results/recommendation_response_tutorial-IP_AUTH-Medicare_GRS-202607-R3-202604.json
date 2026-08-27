@@ -1,0 +1,227 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Suspend provider, UM, and reimbursement policy action on paid inpatient and facility claims tied to AUTH_CODE_DISTRIBUTION in CA, VA, and PA until authorization-to-claim mapping is reconciled across authorization, UM, and claims feeds, PA-required Y/N denial and claims reprocessing logic is validated, impacted claims are reclassified, and attribution is rerun for Kidney and Urinary Tract Infections without MCC, Other Disorders of Nervous System with MCC, and Ungroupable.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION is flagged auth_or_mapping_shift.",
+          "Validation is required before business action.",
+          "CA is the largest issue.",
+          "VA and PA show the same code movement.",
+          "Ungroupable admissions increase classification distortion risk."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a focused post-acute prior authorization policy audit for PPO Local Medicare GRS SNF - FREE STANDING in CA and VA, NF in CA, and Physical Rehab in CA and WI, reviewing management-design changes, UM KPI shifts, denial enforcement, and provider contract terms for THC - ORANGE COUNTY, LLC and METHODIST HOSPITAL OF SO CA - PHYSICAL REH.",
+        "evidence": [
+          "CA SNF - FREE STANDING growth tied to THC - ORANGE COUNTY, LLC.",
+          "VA SNF - FREE STANDING admissions rose in authorized PPO Local cases.",
+          "METHODIST HOSPITAL OF SO CA - PHYSICAL REH drove high-cost Physical Rehab growth.",
+          "CA NF increases included UTI, cellulitis, and neurologic cases."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a joint contract compliance, auth-to-claim, and admission-criteria review for ADVENTIST HEALTH SIMI VALLEY CA PPO Local ACUTE HOSPITAL authorized IP Med/Surg admissions, focused on Kidney and Urinary Tract Infections without MCC, Cellulitis with MCC, and Other Disorders of Nervous System with MCC, with peer-hospital reimbursement and site-of-care comparison.",
+        "evidence": [
+          "Adventist Health Simi Valley added about +$0.2M with 12 more admissions.",
+          "UTI without MCC added about +$0.2M with roughly 30 more IP Med/Surg admissions.",
+          "Critical illness myopathy and toxic encephalopathy added about +$0.3M combined.",
+          "Adventist average paid per admit increased about +$1.8K.",
+          "Authorized CA acute hospital claims include auth-to-claim validation business terms."
+        ],
+        "peer_benchmarking": [
+          "Humana and United Health show no DRG-relevant acute hospital benchmark in supplied reimbursement data.",
+          "United Health policy relevance is limited to infectious disease molecular panel billing."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a provider-specific contract compliance, reimbursement-methodology, and auth-to-claim claims audit for LEHIGH VALLEY HOSPITAL - CEDAR CREST and UNIVERSITY OF KENTUCKY ALBERT B. CHANDLER HOSPITAL, plus diagnosis-level inpatient review for GA Kidney and Urinary Tract Infections without MCC, CT Ungroupable, and GA Critical Access admissions; apply contract remediation, site-of-care redirection, or claims reprocessing where contractual standards are not met.",
+        "evidence": [
+          "All focus claims are prior-auth-required inpatient admissions.",
+          "LEHIGH VALLEY HOSPITAL - CEDAR CREST concentrated PA acute hospital pressure.",
+          "UNIVERSITY OF KENTUCKY ALBERT B. CHANDLER HOSPITAL concentrated KY acute hospital pressure.",
+          "GA admissions clustered in Kidney and Urinary Tract Infections without MCC.",
+          "CT included an Ungroupable acute hospital admission.",
+          "GA Critical Access admissions showed higher paid per admit."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal bundles unplanned readmissions within 30 days into the original admission.",
+          "Elevance external generally bundles readmissions and makes them ineligible for separate reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a provider-focused Program Integrity review on the identified IP Med/Surg outlier claims at California Rehabilitation Institute, Lehigh Valley Hospital - Cedar Crest, Adventist Health Simi Valley, Lee Memorial Hospital, University of Kentucky Albert B. Chandler Hospital, and Carilion New River Valley Medical Center to verify PA-required authorization enforcement, DRG/coding accuracy, itemized bills, and discharge step-down planning for spinal cord, NSTEMI cardiac valve/catheterization, bowel surgery, sepsis, major chest, and revision joint admissions; escalate repeat provider outliers for contract or site-of-care review.",
+        "evidence": [
+          "California Rehabilitation Institute spinal cord admission paid $103,976 with one admission.",
+          "Lehigh Valley NSTEMI cardiac valve/catheterization case paid $94,574 with one admission.",
+          "Adventist Health Simi Valley sepsis O.R. case paid $46,067.",
+          "Lee Memorial bowel surgery diverticulitis case paid $39,894 with one admission.",
+          "PA/VA sepsis MCC and CA/PA revision joint spikes were single admissions."
+        ],
+        "peer_benchmarking": [
+          "Molina bundles routine supplies, services, and room-and-board; these are not separately reimbursable or outlier-eligible.",
+          "Highmark_BCBS reimbursement summary shows no documented bundling or appeals detail."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit CUMG approval pathways and confirm prior authorization matches actual non-ER PPO Local acute hospital admissions in VA, OH, GA, and NY, prioritizing CARILION NEW RIVER VALLEY MEDICAL CENTER, LEHIGH VALLEY HOSPITAL - CEDAR CREST, LEE MEMORIAL HOSPITAL, and Cellulitis with MCC.",
+        "evidence": [
+          "Authorized PPO Local acute hospital admissions increased across VA, OH, GA, and NY.",
+          "VA is the largest volume story for authorized inpatient growth.",
+          "Growth concentrates at CARILION NEW RIVER VALLEY MEDICAL CENTER and OH hospitals.",
+          "Cellulitis with MCC is a recurring diagnosis driver in OH and GA.",
+          "Non-ER admissions appear in drill context."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Correct claims-processing logic so authorized PPO Local IP Med/Surg claims assigned to facility_type \"Not Mapped\" in VA, GA, OH, and PA are reclassified to valid facility types, then audit authorization-to-claim matching and adjudication edits for Chippenham Hospital, Lee Memorial Hospital, Kidney and Urinary Tract Infections without MCC, and Ungroupable claims before any site-of-care or contract action.",
+        "evidence": [
+          "Authorized claims are grouped into a Not Mapped facility bucket.",
+          "VA Not Mapped growth was driven by higher admissions and claims.",
+          "GA clustering includes Kidney and Urinary Tract Infections without MCC.",
+          "GA also shows concentrated Ungroupable authorized claims.",
+          "OH and PA variance concentrated at Lee Memorial Hospital."
+        ],
+        "peer_benchmarking": [
+          "Humana policy summary was off-topic and offered no relevant classification benchmark."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review non-ER, PA-required IP Med/Surg admissions at UNIVERSITY OF KENTUCKY ALBERT B. CHANDLER HOSPITAL and CARILION NEW RIVER VALLEY MEDICAL CENTER for ENCOUNTER FOR ANTINEOPLASTIC CHEMO, MAL NEOPLASM OVRLAP SITE OROPHARYNX, Chemotherapy without Acute Leukemia as Secondary Diagnosis with MCC, Chemotherapy with Acute Leukemia as Secondary Diagnosis or with High Dose Chemotherapy Agent with MCC, Major Head and Neck Procedures with MCC, and Other Respiratory System O.R. Procedures with MCC to confirm contractual claim processing, enforce authorization denials, and establish outpatient site-of-care alternatives when clinically appropriate.",
+        "evidence": [
+          "University of Kentucky Albert B. Chandler Hospital added +$100.8K from five chemotherapy admissions.",
+          "One high-dose or leukemia-related chemotherapy admission added +$36.1K.",
+          "One head-and-neck cancer surgery admission added +$32.1K.",
+          "Carilion New River Valley Medical Center added +$30.0K from one respiratory O.R. admission."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal excludes cancer-treatment admissions and planned readmissions from policy scope.",
+          "Elevance external notes provider contracts and Kentucky carve-outs may override general policy."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 6,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly an authorization coding/mapping issue and repeatedly calls for reconciling authorization logic across authorization, UM, and claims feeds before action; this is an auth-to-claim match problem.; IP MedSurg (DNE) Trend 9: Highly relevant because the spend increase appears to be driven by how codes are landing on paid claims, making claims processing/reprocessing and claim status logic a key parent rule to validate.; IP MedSurg (DNE) Trend 10: Relevant secondary check because distorted authorization coding on inpatient facility claims can affect reimbursement handling, and the pattern specifically warns against reimbursement decisions until mapping is corrected.; IP MedSurg (DNE) Trend 3: Relevant for scoping because the distortion is concentrated in specific DRGs/diagnostic groupings such as Kidney and Urinary Tract Infections without MCC, Other Disorders of Nervous System with MCC, and Ungroupable.; IP MedSurg (DNE) Trend 1: Relevant for localization because the issue is concentrated in specific states and named providers, especially CA, indicating provider-level isolation is useful once the auth mapping problem is validated."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 32,
+        "categories": [
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 4: The pattern is explicitly a post-acute site-of-care shift concentrated in SNF, NF, and rehab settings rather than acute hospitals, so service-driver review is the strongest parent-rule fit.; IP NF (DNE) Trend 6: Spend is rising from both more admissions and higher paid per admit, and the recommended actions focus on level-of-care and length-of-stay review, which aligns to UM KPI/PAV investigation.; IP NF (DNE) Trend 10: Paid per admit is up across the post-acute settings and the next step includes renegotiating or steering away from outlier providers, making reimbursement method review highly relevant.; IP NF (DNE) Trend 1: The variance is concentrated in specific markets and named post-acute providers, so provider-level behavior and contract changes are a relevant secondary driver to test.; IP MedSurg (DNE) Trend 4: The Physical Rehab portion of the pattern behaves like a distinct service/site-of-care shift within the IP MedSurg-related rehab cases, especially in CA and WI where high-cost rehab spikes are present."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Spend increase is clearly concentrated in a subset of providers, especially Adventist Health Simi Valley, making provider behavior and contract terms a primary parent rule.; IP MedSurg (DNE) Trend 3: The pattern is concentrated in a narrow set of diagnoses/DRGs\u2014UTI without MCC, cellulitis with MCC, and neurologic/toxic encephalopathy cases\u2014so diagnosis-level drivers are highly relevant.; IP MedSurg (DNE) Trend 6: Admissions are up and the recommended action is a joint UM review of authorized acute admissions, aligning with review of utilization management KPI changes and potentially avoidable variance.; IP MedSurg (DNE) Trend 10: Unit cost is mixed to up and the pattern explicitly calls for provider-specific contract review and reimbursement comparison, which fits reimbursement method review.; IP MedSurg (DNE) Trend 8: The source groups repeatedly flag authorized acute hospital claims and include auth-to-claim validation as a business term, making enforcement of authorization denials relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is explicitly concentrated in a small set of acute hospital providers, especially Lehigh Valley Hospital - Cedar Crest and University of Kentucky Albert B. Chandler Hospital, which makes provider-driver review the top parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended action is provider-specific contract, case-rate, and payment review, which directly aligns to reimbursement method investigation.; IP MedSurg (DNE) Trend 8: Nearly all drivers are prior-auth-required inpatient cases (pa_required_code = Y), and the business terms include auth-to-claim validation, so checking whether authorization controls were enforced is highly relevant.; IP MedSurg (DNE) Trend 3: Variance is also clustered in specific inpatient DRG/diagnosis buckets such as Kidney and Urinary Tract Infections without MCC, chemotherapy with MCC, and other expensive admission clusters, supporting diagnosis-driver review.; IP MedSurg (DNE) Trend 9: The pattern calls for payment integrity review, and the CT high-cost ungroupable case suggests possible coding, adjudication, or reprocessing issues that fit claim frequency/status and contractual claims handling review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spike is concentrated in a narrow set of diagnoses such as spinal cord disease, NSTEMI, diverticulitis with perforation/abscess, and sepsis, making diagnosis-level isolation a primary fit.; IP MedSurg (DNE) Trend 4: The pattern is also clustered in specific high-cost DRGs/services, including major chest procedures, bowel surgery, cardiac valve/catheterization, revision joint cases, and sepsis O.R. procedures.; IP MedSurg (DNE) Trend 1: Variance is tied to a limited set of hospitals/providers across CA, PA, KY, and VA, supporting provider-focused review rather than a broad inpatient policy response.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly includes stop-loss review, and the very high paid-per-admit on rare inpatient cases could reflect reimbursement or outlier payment method effects.; IP MedSurg (DNE) Trend 8: Several source cases are marked PA-required, and the recommendation includes medical-necessity review, so confirming authorization-to-claim alignment on these paid outlier admissions is relevant."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Most directly aligned because the pattern is explicitly volume-led authorized inpatient growth with admissions up and unit cost mixed; the recommended action is tighter front-end utilization management and review of avoidable inpatient use.; IP MedSurg (DNE) Trend 1: Variance is concentrated in a subset of providers and markets, especially VA with CARILION NEW RIVER VALLEY MEDICAL CENTER and OH providers such as LEHIGH VALLEY HOSPITAL - CEDAR CREST and LEE MEMORIAL HOSPITAL.; IP MedSurg (DNE) Trend 3: There is meaningful diagnosis/DRG concentration, including Cellulitis with MCC and cardiac valve/cardiothoracic procedure DRGs, suggesting diagnosis-level review is relevant.; IP MedSurg (DNE) Trend 8: All major drivers are authorized cases (pa_required_code = Y), and the source cards explicitly flag auth_dimension_present and auth-to-claim validation, making authorization enforcement review highly relevant.; IP MedSurg (DNE) Trend 7: The admissions are non-ER in the drill context (er_admit_indicator = N), which raises the question of whether more elective or planned inpatient cases are contributing to the increase."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 9: Most directly aligned because the core issue is claims/facility classification logic: authorized inpatient claims are landing in a 'Not Mapped' facility bucket, so claims processing/reprocessing and classification integrity must be reviewed before interpreting site-of-care variance.; IP MedSurg (DNE) Trend 8: Highly relevant because all impacted claims are authorization-required ('Y') and the pattern explicitly references auth-to-claim validation; broken facility mapping may interfere with proper authorization-to-claim matching and enforcement review.; IP MedSurg (DNE) Trend 1: Relevant as a secondary rule because the unmapped variance is concentrated in specific providers/facilities such as Chippenham Hospital and Lee Memorial Hospital, which can help isolate whether the mapping defect is provider-specific.; IP MedSurg (DNE) Trend 3: Relevant because part of the unmapped spend clusters in specific DRGs/diagnostic areas, especially Kidney and Urinary Tract Infections without MCC and Ungroupable claims in GA, which may help trace where the classification issue is surfacing.; IP MedSurg (DNE) Trend 10: Relevant because incorrect facility/site-of-care assignment can distort reimbursement method interpretation and trigger the wrong reimbursement or steering action; reimbursement review should occur only after the facility mapping is corrected."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated at a small number of providers, led by University of Kentucky Albert B. Chandler Hospital with a smaller contribution from Carilion, matching a provider-isolated variance pattern.; IP MedSurg (DNE) Trend 4: The spend increase is driven by a narrow set of inpatient services/DRGs, especially chemotherapy admissions and a few complex specialty surgical cases, which fits service-level isolation.; IP MedSurg (DNE) Trend 3: The pattern is also concentrated in a small set of diagnoses, primarily antineoplastic chemotherapy encounters and specific cancer diagnoses, consistent with diagnosis-driven variance.; IP MedSurg (DNE) Trend 10: Pattern details explicitly call for reimbursement review, including case-rate exposure and contracting/site-of-care implications for inpatient oncology, making reimbursement method highly relevant.; IP MedSurg (DNE) Trend 7: These are non-ER inpatient admissions with recommended review of outpatient alternatives and site-of-care appropriateness, which aligns with assessing whether planned/elective admission patterns changed."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T15:52:09.487426+00:00"
+  }
+}

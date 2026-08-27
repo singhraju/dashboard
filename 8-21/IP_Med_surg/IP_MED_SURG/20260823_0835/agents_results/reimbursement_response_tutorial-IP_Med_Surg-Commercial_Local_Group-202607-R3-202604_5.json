@@ -1,0 +1,713 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY-centered thoracic and maternal complications are emerging as focused case-mix pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "anesthesia_bundling_rule",
+          "label": "Anesthesia Bundling",
+          "type": "text"
+        },
+        {
+          "id": "cesarean_code_pairing",
+          "label": "Cesarean Code Pairing",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "anesthesia_bundling_rule": "-",
+          "cesarean_code_pairing": "-"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "anesthesia_bundling_rule": "Pays one highest-base-unit anesthesia code per session; bundles integral services, reimbursing add-ons separately.",
+          "cesarean_code_pairing": "Cigna covers cesarean add-on codes only with 01967, never alone, and excludes highest-base-unit rule."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "anesthesia_bundling_rule": "-",
+          "cesarean_code_pairing": "-"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "anesthesia_bundling_rule": "Emblem Health bundles anesthesia with listed companion imaging/guidance services via claim edits only.",
+          "cesarean_code_pairing": "Denies separate payment when paired with specified imaging, localization, and cardiovascular companion codes."
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "anesthesia_bundling_rule": "Commercial only: catheters/initial 01996 bundled; pumps and obstetric add-ons follow benefit/timing rules.",
+          "cesarean_code_pairing": "Allows 01967 with 01968/01969, rejects pairing with 01960-01962 or add-ons without primary."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "anesthesia_bundling_rule": "-",
+          "cesarean_code_pairing": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00094",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "DME Walkers and Canes RETIRED",
+        "tags": [],
+        "effective_date": "11/09/06",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/DME%20Walkers%20and%20Canes%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00007",
+        "payer_name": "Cigna",
+        "policy_title": "Anesthesia Professional Services",
+        "tags": [],
+        "effective_date": "03/12/2023",
+        "evidence": "General anesthesia reimbursement is limited to one highest-base-unit code per session, with required rendering and medical-direction modifiers; same-day integral services are bundled and not separately paid.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R39_Anesthesia_Professional_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "00100-01999",
+            "01968",
+            "01969"
+          ],
+          "related_codes": [
+            "01953",
+            "01968",
+            "01969",
+            "01967"
+          ],
+          "required_modifiers": [
+            "AA",
+            "AD",
+            "QK",
+            "QX",
+            "QY",
+            "QZ"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same anesthesia session",
+            "same claim with 01967"
+          ],
+          "utilization_limits": [
+            "one anesthesia code per session",
+            "1 unit"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "IFP"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "01953",
+            "01968",
+            "01969",
+            "multiple anesthesia procedures rule"
+          ],
+          "action_types": [
+            "limit",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00055",
+        "payer_name": "Cigna",
+        "policy_title": "Robotic Assisted Surgery",
+        "tags": [],
+        "effective_date": "09/22/2007",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R04_Robotic_Assisted_Surgery.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960290500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Radiology Cardiology Ultrasound Correct Coding Rules (Administered by EviCore)",
+        "tags": [],
+        "effective_date": "2026-02",
+        "evidence": "Thoracic CTA is a pay-no-pay edit family. The target chest angiography code is bundled with several other thoracic imaging and guidance services when billed together.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/evicore-correct-coding-rules-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "71275",
+            "75574",
+            "93460",
+            "76811",
+            "76946"
+          ],
+          "related_codes": [
+            "71250",
+            "71260",
+            "71270",
+            "71271",
+            "76000",
+            "76376",
+            "76377",
+            "76380",
+            "76942",
+            "76998",
+            "77001",
+            "77002",
+            "78803",
+            "78830",
+            "78831",
+            "78832",
+            "71275",
+            "75571",
+            "75572",
+            "76120",
+            "76125",
+            "78431",
+            "78433",
+            "0710T",
+            "0711T",
+            "0712T",
+            "0713T",
+            "75600",
+            "75605",
+            "75625",
+            "75630",
+            "75710",
+            "75716",
+            "75741",
+            "75743",
+            "75746",
+            "75756",
+            "75774",
+            "75893",
+            "78635",
+            "93453",
+            "93454",
+            "93455",
+            "93456",
+            "93457",
+            "93458",
+            "93459",
+            "93461",
+            "76801",
+            "76805",
+            "76810",
+            "76812",
+            "76815",
+            "76816",
+            "76830",
+            "76831",
+            "76856",
+            "76857",
+            "76941",
+            "77012",
+            "77021"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "same date of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicaid"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960294500002",
+        "payer_name": "Emblem Health",
+        "policy_title": "Radiology Cardiology Ultrasound Frequency Rules (Administered by EviCore)",
+        "tags": [],
+        "effective_date": "2026-02",
+        "evidence": "Thoracic and chest imaging is subject to procedure-specific unit caps per date of service. Repeat and bilateral billing is constrained by modifier-based rules.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/evicore-frequency-rules-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "71045",
+            "71046",
+            "71047",
+            "71048",
+            "71100",
+            "71101",
+            "71110",
+            "71111",
+            "71120",
+            "71130",
+            "71250",
+            "71260",
+            "71270",
+            "71271",
+            "71275",
+            "71550",
+            "71551",
+            "71552",
+            "71555",
+            "76604",
+            "76801",
+            "76802",
+            "76805",
+            "76810",
+            "76811",
+            "76812",
+            "76813",
+            "76814",
+            "76815",
+            "76816",
+            "76817",
+            "76818",
+            "76819",
+            "76820",
+            "76821",
+            "76825",
+            "76826",
+            "76827",
+            "76828",
+            "76830",
+            "76831",
+            "75557",
+            "75559",
+            "75561",
+            "75563",
+            "75565",
+            "75571",
+            "75572",
+            "75573",
+            "75574",
+            "75577",
+            "75580",
+            "93303",
+            "93304",
+            "93306",
+            "93307",
+            "93308",
+            "93312",
+            "93313",
+            "93314",
+            "93315",
+            "93319",
+            "93320",
+            "93321",
+            "93325",
+            "93350",
+            "93351",
+            "93356",
+            "93453",
+            "93454",
+            "93455",
+            "93456",
+            "93457",
+            "93458",
+            "93459",
+            "93460",
+            "93461",
+            "93880"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "repeat imaging same DOS",
+            "each additional gestation",
+            "follow-up or repeat study",
+            "separately listed add-on services"
+          ],
+          "utilization_limits": [
+            "1 to 4 units per DOS",
+            "1 unit per DOS",
+            "4 units for 75565"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicaid",
+            "OBUltraRule"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500115",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Anesthesia Services",
+        "tags": [],
+        "effective_date": "March 12, 2018",
+        "evidence": "This policy does not reimburse this DRG directly. For related NY cardiothoracic surgical claims, the relevant adjudication rule is that catheter insertion and removal for continuous local analgesia are included in the surgery allowance and not separately reimbursed, while elastomeric pump supply codes may be payable only when doctor-reported and benefit-covered. Standard anesthesia time and modifier rules would apply to any separately billed anesthesia service.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-033.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "A4305",
+            "A4306",
+            "01967",
+            "01968",
+            "01969",
+            "01996"
+          ],
+          "related_codes": [
+            "A9270",
+            "01960",
+            "01961",
+            "01962"
+          ],
+          "required_modifiers": [
+            "AA",
+            "AD",
+            "QK",
+            "QX",
+            "QY",
+            "QZ"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "date of delivery",
+            "same claim",
+            "after catheter insertion day"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "NY: included in policy applicability; no NY-only variance stated",
+            "NY: included in policy applicability; Labor and Delivery section is Commercial only"
+          ],
+          "provider_role_restrictions": [
+            "doctor-reported pump subject to benefit coverage",
+            "appropriate physician or CRNA modifier required",
+            "medical direction rules apply"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00083",
+        "payer_name": "Centene",
+        "policy_title": "Assistant Surgeon - CC.PP.029",
+        "tags": [],
+        "effective_date": "01/01/2014",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.029.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01112",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Ultrasound Policy, Professional",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Ultrasound-Policy-R7112.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 11,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement a utilization edit that limits 01968 or 01969 to 1 unit and enforces one anesthesia code per session, while preserving the 01968 and 01969 exemption from the multiple anesthesia procedures rule. Cigna and Highmark both treat 01968/01969 as paired cesarean anesthesia add-on services on the same claim/same date of service.. Exempt: 01968, 01969, multiple anesthesia procedures rule.",
+      "evidence": [
+        "Cigna \u00b7 Anesthesia Professional Services: \"01968\" [target_codes]",
+        "Cigna \u00b7 Anesthesia Professional Services: \"01969\" [target_codes]",
+        "Cigna \u00b7 Anesthesia Professional Services: \"one anesthesia code per session\" [utilization_limits]",
+        "Cigna \u00b7 Anesthesia Professional Services: \"1 unit\" [utilization_limits]",
+        "Cigna \u00b7 Anesthesia Professional Services: \"01968\" [exemptions]",
+        "Cigna \u00b7 Anesthesia Professional Services: \"01969\" [exemptions]",
+        "Cigna \u00b7 Anesthesia Professional Services: \"multiple anesthesia procedures rule\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna and Highmark both treat 01968/01969 as paired cesarean anesthesia add-on services on the same claim/same date of service."
+      ],
+      "citation": [
+        "Cigna \u00b7 Anesthesia Professional Services \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R39_Anesthesia_Professional_Services.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: NY-centered thoracic and maternal complications are emerging as focused case-mix pressure",
+    "pattern_rank": 5,
+    "pattern_title": "NY-centered thoracic and maternal complications are emerging as focused case-mix pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC",
+      "Major Chest Procedures with CC",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 11,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "11 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY', 'CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 0 because a cited Highmark source disclaims the cesarean topic, while item 1 remains aligned with the California cesarean pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/11 policies quarantined (18%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/11 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00055:Ambulatory Surgical Groupers, RP_GBD_HF_00064:Biomarkers for Myocardial Infarction and Chronic Heart Failure]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 352571,
+    "output": 66255,
+    "breakdown": {
+      "search_keywords": {
+        "input": 558,
+        "output": 951,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 982,
+        "output": 5360,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 333506,
+        "output": 52437,
+        "calls": 12
+      },
+      "relevance_judge": {
+        "input": 2981,
+        "output": 2030,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 860,
+        "output": 443,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 987,
+        "output": 1041,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 379,
+        "output": 109,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 9019,
+        "output": 2870,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3299,
+        "output": 1014,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T09:18:26.533583+00:00",
+    "end_time": "2026-08-23T09:22:53.286773+00:00",
+    "duration_ms": 266753,
+    "version": "2.0.0"
+  }
+}

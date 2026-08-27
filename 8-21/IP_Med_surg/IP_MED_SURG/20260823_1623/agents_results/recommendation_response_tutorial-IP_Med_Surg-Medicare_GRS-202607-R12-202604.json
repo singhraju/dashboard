@@ -1,0 +1,222 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a GA retrospective prior-authorization compliance review for COMMUNITY HOSPITAL Concomitant Left Atrial Appendage Closure and Cardiac Ablation admissions tied to PAROXYSMAL ATRIAL FIBRILLATION and OTHR PERSISTENT ATRIAL FIBRILLATION, and evaluate a non-ER site-of-care opportunity for this case set.",
+        "evidence": [
+          "COMMUNITY HOSPITAL concentrated GA non-ER ablation admissions.",
+          "PAROXYSMAL ATRIAL FIBRILLATION ablation cases carried pa_required_code Y.",
+          "OTHR PERSISTENT ATRIAL FIBRILLATION ablation cases carried pa_required_code Y.",
+          "Concomitant Left Atrial Appendage Closure and Cardiac Ablation is the leading service driver."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a contractual claims-processing and auth-to-claim reprocessing review for Medicare GRS PPO Local inpatient claims in GA, CA, and CT with pa_required_code Y and either AUTH_CODE_DISTRIBUTION or facility_type Not Mapped; reconcile mismatched authorizations, verify denial enforcement, and correct facility classification for Aftercare with CC/MCC, Kidney and Urinary Tract Infections without MCC, Degenerative Nervous System Disorders without MCC, CALIFORNIA REHABILITATION INSTITUTE, and THE MIRIAM HOSPITAL.",
+        "evidence": [
+          "GA AUTH_CODE_DISTRIBUTION shifts drove about $4.2M.",
+          "Aftercare with CC/MCC contributed about $2.3M in GA.",
+          "Kidney and Urinary Tract Infections without MCC added about $1.9M.",
+          "Not Mapped facility activity added about $1.8M across GA, CA, and CT.",
+          "GA Not Mapped growth centered on Degenerative Nervous System Disorders without MCC."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a GA PPO Local acute hospital policy audit for PA-required inpatient admissions targeting Concomitant Left Atrial Appendage Closure and Cardiac Ablation, Aftercare with CC/MCC, Pulmonary Embolism with MCC or Acute Cor Pulmonale, Kidney and Urinary Tract Infections without MCC, and Degenerative Nervous System Disorders without MCC to verify authorization-to-claim matching, audit CUMG decision-tree approvals and denials with nurse-to-MD referral escalation, review initial and concurrent level-of-care decisions, and confirm claims processed under contractual reimbursement terms.",
+        "evidence": [
+          "GA authorized atrial fibrillation ablation added about $1.6M from 33 more admissions.",
+          "GA authorized aftercare acute admissions added about $445K with paid per admit up $6.5K.",
+          "GA authorized UTI acute admissions added about $537K and were largely volume-driven.",
+          "Pulmonary embolism and neurologic admissions added about $705K from 61 more admissions.",
+          "All cited drivers show pa_required_code Y and auth_dimension_present."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a focused policy, UM, and claims audit for PPO Local Physical Rehab in GA, CA, and OH to verify prior authorization obtained, authorization-to-actual matching, and denial enforcement, and to review initial and concurrent rehab review KPIs, length-of-stay discharge controls, and provider contract and site-of-care performance for GLANCY REHABILITATION CENTER, Aftercare with CC/MCC, Degenerative Nervous System Disorders without MCC, and Other Disorders of Nervous System with CC.",
+        "evidence": [
+          "Physical Rehab spend rose across GA, CA, and OH PPO Local.",
+          "GLANCY REHABILITATION CENTER added about $346K from 11 more rehab admissions.",
+          "GA Degenerative Nervous System Disorders without MCC added about $882K.",
+          "CA Aftercare with CC/MCC added about $658K with higher paid per admit.",
+          "OH Aftercare with CC/MCC added about $352K from 16 more admissions.",
+          "Major operational cards show pa_required_code equals Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA PPO Local acute hospital reimbursement and authorization policy review of prior-authorized Concomitant Left Atrial Appendage Closure and Cardiac Ablation and Kidney and Urinary Tract Infections without MCC claims, with focused outlier-payment review at ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER, to validate authorization-to-claim enforcement and contract-compliant reimbursement.",
+        "evidence": [
+          "CA authorized atrial fibrillation ablation drove most acute hospital spend growth.",
+          "Paid per admit increased for Concomitant Left Atrial Appendage Closure and Cardiac Ablation.",
+          "Authorized UTI admissions also increased in CA acute hospitals.",
+          "ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER included a very small number of high paid cases."
+        ],
+        "peer_benchmarking": [
+          "United Health: routine facility charges are generally bundled; no separate DRG-specific reimbursement stated.",
+          "Elevance internal: unlisted codes handled case-by-case with documentation when no established code exists."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run targeted claim validation and provider reimbursement review for authorized PPO Local ACUTE HOSPITAL admissions in NH, NY, CA, OH, and PA, prioritizing NH and NY Concomitant Left Atrial Appendage Closure and Cardiac Ablation and recurring Pulmonary Embolism with MCC or Acute Cor Pulmonale, Kidney and Urinary Tract Infections without MCC, and Degenerative Nervous System Disorders without MCC, with authorization-to-actual matching, claims adjudication review, and focused contract/site-of-care review for COMMUNITY HOSPITAL, MERRIMACK HEALTH METHUEN HOSPITAL, and EL CENTRO REGIONAL MEDICAL CENTER.",
+        "evidence": [
+          "All core drivers are authorized acute hospital claims with pa_required_code Y.",
+          "NH and NY ablation cases added about $898K on 14 admissions.",
+          "NY neurologic stays added about $405K with 15 more admissions.",
+          "OH pulmonary embolism added about $186K with 17 more admissions.",
+          "PA UTI added about $130K with 20 more admissions."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal policy recalculates or reduces DRG payment by excluding HCAC charges and days.",
+          "Humana applies conditional reimbursement for specific thrombosis-related indications."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch an OH PPO Local ACUTE HOSPITAL reimbursement and payment-integrity review for authorized Concomitant Left Atrial Appendage Closure and Cardiac Ablation and Kidney and Urinary Tract Infections without MCC admissions, and escalate ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER for provider-specific contract remediation, authorization-to-claim validation, and claims-processing review.",
+        "evidence": [
+          "Authorized atrial fibrillation ablation added about $1.1M with paid per admit up.",
+          "Authorized UTI admissions added about $453K with paid per admit up.",
+          "ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER had two admissions near $98.7K each."
+        ],
+        "peer_benchmarking": [
+          "United Health uses broad UB04 facility bundling for routine inpatient, cardiac, and vent/trach components."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate targeted post-pay medical record and itemized bill review for rare inpatient outlier admissions at ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER, EL CENTRO REGIONAL MEDICAL CENTER, THE MIRIAM HOSPITAL, MERRIMACK HEALTH METHUEN HOSPITAL, and GLANCY REHABILITATION CENTER involving tracheostomy with prolonged ventilation, lung transplant complication or aftercare, sepsis with MCC, pneumonia, and respiratory infection DRGs, and route unsupported principal diagnosis or DRG assignments for payment adjustment.",
+        "evidence": [
+          "ST. JOSEPH'S tracheostomy/lung transplant complication added $151,746 from one admission.",
+          "ST. JOSEPH'S lung transplant aftercare added $45,715 from one admission.",
+          "EL CENTRO sepsis with MCC added $19,540 from one admission.",
+          "Source groups are flagged low_volume_run and small_n_admissions."
+        ],
+        "peer_benchmarking": [
+          "Buckeye Health Plan: post-payment inpatient record review can deny or DRG-adjust unsupported sepsis coding.",
+          "Centene: pre- or post-pay review can deny or adjust unsupported inpatient sepsis diagnoses.",
+          "Molina: claims are subject to pre- and post-payment DRG clinical validation review.",
+          "United Health: claim denied when principal diagnosis is invalid for DRG assignment."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is explicitly a narrow inpatient clinical case-mix shift concentrated in specific diagnoses\u2014paroxysmal/persistent atrial fibrillation, pulmonary embolism, UTI, and neurologic post-stroke conditions\u2014making diagnosis-level isolation the strongest parent rule fit.; IP MedSurg (DNE) Trend 4: Spend growth is also concentrated in a small set of inpatient DRGs/services, especially Concomitant Left Atrial Appendage Closure and Cardiac Ablation, plus PE, UTI, and neurologic admissions, so service-level concentration is highly relevant.; IP MedSurg (DNE) Trend 1: The leading AF ablation episodes are tied to specific rendering providers/facilities such as COMMUNITY HOSPITAL and UC MEDICAL CENTER, suggesting the variance may be isolated to a subset of providers and merits provider-driver review.; IP MedSurg (DNE) Trend 6: The recommended next step includes UM operations review of admission appropriateness and post-acute routing, which aligns well with investigating utilization management KPI changes and potentially avoidable variance.; IP MedSurg (DNE) Trend 7: The dominant AF ablation cases are non-ER inpatient admissions and may reflect a shift in elective/scheduled admissions, making admission source/location and elective case mix an important parent rule to test."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly driven by AUTH_CODE_DISTRIBUTION shifts, auth_dimension_present flags, and a recommendation to reconcile authorization assignments before action, which maps to Auth-to-Claim match review.; IP MedSurg (DNE) Trend 9: Not Mapped facility spikes across GA, CA, and CT indicate a claims coding/mapping or processing issue that can distort paid results and should be validated as a claims processing/reprocessing standard check.; IP MedSurg (DNE) Trend 4: Facility_type = Not Mapped is fundamentally a site-of-care/service classification problem, so service-driver review is highly relevant to correct how inpatient services are being categorized.; IP MedSurg (DNE) Trend 3: Variance is concentrated in a narrow set of DRGs/diagnostic buckets such as Aftercare with CC/MCC, Kidney and Urinary Tract Infections without MCC, and Degenerative Nervous System Disorders without MCC, making diagnosis-level isolation relevant.; IP MedSurg (DNE) Trend 1: Specific provider/facility signals appear in the evidence, and the pattern explicitly notes provider comparisons are being distorted by mapping issues, so provider-driver review is relevant after the data quality cleanup."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is clearly concentrated in a subset of inpatient DRGs/diagnostic areas: atrial fibrillation ablation, aftercare, pulmonary embolism, UTI, and degenerative neurologic admissions.; IP MedSurg (DNE) Trend 4: The pattern is also service-specific, especially around acute inpatient procedural/aftercare services such as cardiac ablation, making service-driver review highly relevant.; IP MedSurg (DNE) Trend 6: Admissions are rising on authorized acute hospital cases, and the recommended action explicitly calls for UM review of medical necessity and level of care, aligning with a utilization management KPI/PAV investigation.; IP MedSurg (DNE) Trend 8: All major drivers are prior-auth linked (pa_required_code = Y), with auth_dimension_present flags and 'auth-to-claim validation' business terms, so confirming authorization enforcement is directly relevant.; IP MedSurg (DNE) Trend 10: Episode cost is higher for key drivers and the pattern specifically calls for reimbursement and contract performance review, making reimbursement method review a strong fit."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern shows clear provider concentration, especially GLANCY REHABILITATION CENTER in GA, indicating variance is isolated to a subset of providers and warrants provider-level behavior and contract review.; IP MedSurg (DNE) Trend 4: The increase is tightly concentrated in the Physical Rehab service setting across GA, CA, and OH, making service-level review highly relevant for admission criteria, level of care, and length-of-stay management.; IP MedSurg (DNE) Trend 3: Key drivers are concentrated in specific DRGs and neurologic/aftercare diagnoses, including Aftercare with CC/MCC and degenerative nervous system disorders, so diagnosis-level analysis is directly applicable.; IP MedSurg (DNE) Trend 6: Admissions are up and the recommendation explicitly calls for UM review of rehab admission criteria and LOS, aligning with investigation of utilization management KPI changes and avoidable variance.; IP MedSurg (DNE) Trend 8: All major operational cards are marked with pa_required_code = Y and include auth-to-claim validation as a business term, making review of authorization enforcement highly relevant."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: The pattern is explicitly concentrated in prior-authorized acute hospital admissions (pa_required_code=Y), and the recommended action includes reviewing authorization execution; this directly matches auth-to-claim enforcement.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially, and the pattern calls for contract and pricing review plus investigation of provider-specific payment outliers, which aligns with reimbursement method review.; IP MedSurg (DNE) Trend 1: Variance is concentrated in a select provider, especially ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER, indicating a clear provider-driver and contractual behavior review need.; IP MedSurg (DNE) Trend 4: The largest driver is a specific inpatient service/procedure grouping\u2014atrial fibrillation ablation with concomitant left atrial appendage closure\u2014so service-level concentration is central to the pattern.; IP MedSurg (DNE) Trend 3: The increase is also concentrated in a narrow set of DRG/clinical categories, chiefly atrial fibrillation ablation and secondarily UTI admissions, supporting diagnosis-level review."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: All core drivers are authorized inpatient acute hospital claims (pa_required_code = Y), and the pattern explicitly calls for targeted case validation and provider review, which directly aligns to auth-to-claim matching and enforcement review.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow set of DRGs/diagnosis groups\u2014atrial fibrillation ablation, pulmonary embolism, UTI, and degenerative neurologic stays\u2014so diagnosis-level isolation is a primary lens for explaining the variance.; IP MedSurg (DNE) Trend 1: The pattern is dispersed across a few states but includes clear provider-level outliers and a recommended provider review, suggesting the variance may be concentrated in specific hospitals or billing behaviors.; IP MedSurg (DNE) Trend 4: A major component is a discrete high-cost inpatient service/procedure\u2014Concomitant Left Atrial Appendage Closure and Cardiac Ablation\u2014with unusually high paid per admit, making service-driver review highly relevant.; IP MedSurg (DNE) Trend 10: NH and NY show small-volume ablation admissions with outsized payment levels and mixed unit-cost pressure, so reimbursement method review is relevant to confirm payment logic and contractual consistency."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Most relevant because the pattern is defined by meaningful paid-per-admit escalation in authorized acute hospital admits, with recommended action to review OH acute hospital contract performance and provider-specific payment outliers, which aligns directly to reimbursement method review.; IP MedSurg (DNE) Trend 8: All major drivers are flagged with pa_required_code = Y and the pattern specifically calls for authorization control review, making auth-to-claim match and enforcement highly relevant.; IP MedSurg (DNE) Trend 1: Variance is partly concentrated in a specific provider, ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER, where only 2 admissions produced about $197K at roughly $98.7K per admit, indicating a clear provider-driver investigation need.; IP MedSurg (DNE) Trend 3: The spend increase is strongly concentrated in a small set of diagnoses/DRGs, especially atrial fibrillation ablation and UTI admissions, so diagnosis-level driver analysis is central to the pattern.; IP MedSurg (DNE) Trend 4: A major component is a specific high-cost inpatient service/procedure set\u2014concomitant left atrial appendage closure and cardiac ablation\u2014so service-level review is directly relevant to the observed unit-cost pressure."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow set of diagnoses such as lung transplant complications, sepsis, pneumonia, and respiratory infections, making diagnosis-level investigation the strongest parent fit.; IP MedSurg (DNE) Trend 4: The pattern is also isolated to specific high-cost inpatient DRGs/services, including tracheostomy with prolonged ventilation, aftercare with CC/MCC, sepsis with MCC, and respiratory infection DRGs.; IP MedSurg (DNE) Trend 1: Spend is concentrated in a small subset of acute hospital providers across a few states, so provider-level review is relevant before any broad policy response.; IP MedSurg (DNE) Trend 10: The recommended action is individual payment review rather than utilization policy change, and the reimbursement notes specifically raise DRG/payment adjustment risk when coding or principal diagnosis support is weak.; IP MedSurg (DNE) Trend 2: These are one-off catastrophic admissions affecting a very small number of members, so the variance is effectively isolated to a subset of members and supports case-level review rather than population-wide intervention."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T16:51:04.692244+00:00"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare transplant and cardiac cases are creating a separate multi-state catastrophic cost pocket",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "reimbursement_terms",
+          "label": "Reimbursement Terms",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth": "-",
+          "reimbursement_terms": "-"
+        },
+        {
+          "payer_org": "Fallon Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth": "Requires Auth",
+          "reimbursement_terms": "Separately reimbursed when prior authorized; prior authorization required for ventricular assist devices."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_FH_00087",
+        "payer_name": "Fallon Health",
+        "policy_title": "Ventricular assist devices payment policy",
+        "tags": [],
+        "effective_date": "2019-09-01",
+        "evidence": "Ventricular assist device procedures are covered only when prior authorized.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/VentricularAssistDevices0919.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "33975",
+            "33976",
+            "33977",
+            "33978",
+            "33979",
+            "33980",
+            "33981",
+            "33982",
+            "33983",
+            "33990",
+            "33991",
+            "33992",
+            "33993",
+            "33999"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [
+            "PA required for 33975",
+            "PA required for 33976",
+            "PA required for 33977",
+            "PA required for 33978",
+            "PA required for 33979",
+            "PA required for 33980",
+            "PA required for 33981",
+            "PA required for 33982",
+            "PA required for 33983",
+            "PA required for 33990",
+            "PA required for 33991",
+            "PA required for 33992",
+            "PA required for 33993",
+            "PA required for 33999"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "require_auth"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_AHC_00092",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Cardiology Services .pdf",
+        "tags": [],
+        "effective_date": "12/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.amerihealthcaritasdc.com/content/dam/amerihealth-caritas/acdc/pdf/provider/resources/reimbursement-policies/20260112/Cardiology%20Services%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement prior authorization for ventricular assist device codes 33975, 33976, 33977, 33978, 33979, 33980, 33981, 33982, 33983, and 33990, consistent with Fallon requirements of 'PA required for 33975,' 'PA required for 33976,' 'PA required for 33977,' 'PA required for 33978,' 'PA required for 33979,' 'PA required for 33980,' 'PA required for 33981,' 'PA required for 33982,' 'PA required for 33983,' and 'PA required for 33990.' (all states)",
+      "evidence": [
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33975\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33976\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33977\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33978\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33979\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33980\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33981\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33982\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33983\" [prior_auth_thresholds]",
+        "Fallon Health \u00b7 Ventricular assist devices payment policy: \"PA required for 33990\" [prior_auth_thresholds]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Fallon Health \u00b7 Ventricular assist devices payment policy \u2014 https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/VentricularAssistDevices0919.ashx"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Rare transplant and cardiac cases are creating a separate multi-state catastrophic cost pocket",
+    "pattern_rank": 8,
+    "pattern_title": "Rare transplant and cardiac cases are creating a separate multi-state catastrophic cost pocket",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System without MCC",
+      "Other Heart Assist System Implant",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 3 source card(s) attest no state (segment scope: KY, NY, OH, UNATTRIBUTED); searched without it rather than narrowing to ['OH', 'NY']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 13175,
+    "output": 11267,
+    "breakdown": {
+      "search_keywords": {
+        "input": 550,
+        "output": 530,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 954,
+        "output": 2187,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 6864,
+        "output": 6773,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 482,
+        "output": 176,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 565,
+        "output": 399,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 199,
+        "output": 180,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 2280,
+        "output": 772,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1281,
+        "output": 250,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T09:52:14.985538+00:00",
+    "end_time": "2026-08-23T09:53:10.927525+00:00",
+    "duration_ms": 55941,
+    "version": "2.0.0"
+  }
+}

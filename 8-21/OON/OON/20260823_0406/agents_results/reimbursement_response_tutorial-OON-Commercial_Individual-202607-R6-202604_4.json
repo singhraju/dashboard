@@ -1,0 +1,192 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "ME facility spending is being pushed by acute hospital pricing and smaller rehab growth",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "facility_drg_scope",
+          "label": "DRG Scope",
+          "type": "badge"
+        },
+        {
+          "id": "ob_billing_rules",
+          "label": "OB Billing Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_drg_scope": "-",
+          "ob_billing_rules": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: ME facility spending is being pushed by acute hospital pricing and smaller rehab growth",
+    "pattern_rank": 4,
+    "pattern_title": "ME facility spending is being pushed by acute hospital pricing and smaller rehab growth",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['ME'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "5/6 policies quarantined (83%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "5 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_P32_CT_MA_ME_NH_28595710207:Anesthesia, RP_COM_P32_CT_MA_ME_NH_28595730203:Newborn Care, RP_COM_P32_CT_MA_ME_NH_28595780200:Obstetrics/Gynecology, RP_COM_UHC_00028:Assistant-at-Surgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans, RP_COM_UHC_00071:Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 38099,
+    "output": 11449,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 299,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 423,
+        "output": 1095,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 32501,
+        "output": 8255,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 2123,
+        "output": 895,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 908,
+        "output": 446,
+        "calls": 1
+      },
+      "elevance_summary": {
+        "input": 334,
+        "output": 158,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1290,
+        "output": 301,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:22:44.786075+00:00",
+    "end_time": "2026-08-23T05:23:20.035192+00:00",
+    "duration_ms": 35249,
+    "version": "2.0.0"
+  }
+}

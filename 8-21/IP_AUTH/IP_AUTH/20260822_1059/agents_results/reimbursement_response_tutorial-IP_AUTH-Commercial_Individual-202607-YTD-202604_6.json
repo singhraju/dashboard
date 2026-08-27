@@ -1,0 +1,247 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Spend is shifting into post-acute and alternative inpatient settings",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_pattern_mentioned",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance_summary",
+          "label": "Relevance Summary",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_pattern_mentioned": "-",
+          "policy_relevance_summary": "-"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_pattern_mentioned": "-",
+          "policy_relevance_summary": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082280000",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "General Inflammation Testing",
+        "tags": [],
+        "effective_date": "2025-11-07",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/cpcplab049-11-7-2025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00079",
+        "payer_name": "Emblem Health",
+        "policy_title": "Biochemical Markers of Alzheimer Disease and Dementia (LBM)",
+        "tags": [],
+        "effective_date": "3/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/biochemical-markers-alzheimer-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00116",
+        "payer_name": "Emblem Health",
+        "policy_title": "Vitamin B12 & Methylmalonic Acid Testing (LBM)",
+        "tags": [],
+        "effective_date": "2023-03-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/vitaminb12-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Spend is shifting into post-acute and alternative inpatient settings",
+    "pattern_rank": 6,
+    "pattern_title": "Spend is shifting into post-acute and alternative inpatient settings",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare, Musculoskeletal System and Connective Tissue with CC",
+      "Degenerative Nervous System Disorders without MCC"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA', 'TX', 'NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/5 policies quarantined (40%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00091:Gamma-Glutamyl Transferase (LBM), RP_COM_EMB_00092:General Inflammation Testing (LBM)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 93165,
+    "output": 8543,
+    "breakdown": {
+      "search_keywords": {
+        "input": 539,
+        "output": 995,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 431,
+        "output": 837,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 89290,
+        "output": 5695,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 875,
+        "output": 331,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 623,
+        "output": 389,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1407,
+        "output": 296,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T13:15:20.307647+00:00",
+    "end_time": "2026-08-22T13:15:58.009890+00:00",
+    "duration_ms": 37702,
+    "version": "2.0.0"
+  }
+}

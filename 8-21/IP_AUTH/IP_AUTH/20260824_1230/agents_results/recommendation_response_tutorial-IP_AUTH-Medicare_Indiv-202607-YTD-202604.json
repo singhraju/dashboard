@@ -1,0 +1,227 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a VA DSNP HMO acute inpatient policy action plan for prior-authorized acute hospital admissions at VCU Medical Center, Sentara Norfolk General Hospital, and Sentara Leigh Hospital to confirm prior authorization was obtained, enforce authorization denials, match authorizations to actual claims, and review same-member repeat admissions for CTI discharge-planning escalation.",
+        "evidence": [
+          "VA DSNP HMO acute hospital spend rose about $58.9M.",
+          "Admissions increased while paid per admit declined.",
+          "Prior authorization required code is Y.",
+          "Top providers include VCU and two Sentara hospitals.",
+          "Business terms include auth-to-claim validation."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Pause TX provider or UM policy action and complete a claims-processing audit of AUTH_CODE_DISTRIBUTION for pa_required_code Y/N IP Med/Surg acute-hospital DSNP HMO claims, confirm prior authorization status, then reprocess any misclassified Memorial Hermann Southwest Hospital claims before enforcing authorization denials.",
+        "evidence": [
+          "TX AUTH_CODE_DISTRIBUTION carries auth_or_mapping_shift and requires_validation_before_action flags.",
+          "Driver type is coding_or_mapping_validation on pa_required_code movement.",
+          "Memorial Hermann Southwest Hospital is visible, but not the primary driver."
+        ],
+        "peer_benchmarking": [
+          "Parkland Community Health Plan requires billed services to match authorization during DRG validation review.",
+          "Centene reviews inpatient sepsis claims pre/post-pay for diagnosis and DRG validation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit TX DSNP HMO ACUTE HOSPITAL IP Med/Surg prior-auth stays by service line, starting with MEMORIAL HERMANN SOUTHWEST HOSPITAL drill-down cases; review initial and concurrent review KPIs, confirm authorizations were obtained and matched to actual inpatient actuals, and validate adjudication to contractual terms.",
+        "evidence": [
+          "TX DSNP HMO acute hospital spend increased about $35.4M.",
+          "Admissions increased by about 1,671.",
+          "Paid per admit increased about $455.",
+          "pa_required_code is Y.",
+          "Business term includes auth-to-claim validation."
+        ],
+        "peer_benchmarking": [
+          "Humana limits observation reimbursement to medically necessary, qualifying encounters."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a Memorial Hermann Southwest Hospital TX ACUTE HOSPITAL IP Med/Surg auth-to-claim, contract pricing, and reimbursement methodology review, prioritizing DSNP HMO then Medicare HMO, to confirm prior-authorization enforcement, evaluate provider-specific site-of-care controls, and extend the review to CSNP HMO and SNP Crossover.",
+        "evidence": [
+          "Memorial Hermann Southwest Hospital is the concentrated TX acute hospital hotspot.",
+          "DSNP HMO and Medicare HMO carry the largest exposure.",
+          "Admissions increased and paid per admit increased across affected products.",
+          "Most major deltas are in prior-auth-required claim populations.",
+          "SNP Crossover acute hospital spend rose in a non-prior-auth segment."
+        ],
+        "peer_benchmarking": [
+          "United Health documents coding denials using correct principal diagnosis and ICD-10 sequencing.",
+          "Humana notes no stated sepsis or severe sepsis documentation requirement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a VA pa_required_code Y SNP post-acute placement policy requiring UM KPI review, CTI discharge-planning review, and alternate-discharge-location leakage review before approving DSNP HMO and CSNP HMO placement into SNF - FREE STANDING, Physical Rehab, or ACUTE PSYCH, with prior-auth confirmation for ACUTE PSYCH.",
+        "evidence": [
+          "VA DSNP HMO SNF - FREE STANDING added about $8.6M with more admissions.",
+          "VA DSNP HMO Physical Rehab added about $1.9M on 76 more admissions.",
+          "VA DSNP HMO ACUTE PSYCH added about $1.8M with higher paid per admit.",
+          "VA CSNP HMO SNF - FREE STANDING added about $982K with 122 more admissions."
+        ],
+        "peer_benchmarking": [
+          "Humana summary only lists co-surgeon criteria and payment reduction; no SNF, rehab, or acute psych facility policy benchmark available."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused VA CSNP HMO acute hospital inpatient audit for VCU Medical Center, Riverside Regional Medical Center, Sentara Leigh Hospital, and Sentara Norfolk General Hospital to validate prior authorization presence, authorization-to-claim matching, denial enforcement, CUMG approval and denial pathway changes, and contract-compliant reimbursement processing.",
+        "evidence": [
+          "Broad VA inpatient admissions increased across CSNP HMO acute hospital.",
+          "VCU Medical Center and Riverside Regional Medical Center are impacted providers.",
+          "Sentara Leigh Hospital shows higher paid per admit.",
+          "Sentara Norfolk General Hospital shows higher paid per admit.",
+          "Auth-to-claim validation is listed as a business term."
+        ],
+        "peer_benchmarking": [
+          "Humana summary shows no acute inpatient DRG-specific payment policy mentioned."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct an auth-to-claim validation audit for AUTH_CODE_DISTRIBUTION across CA, VA, and WI; confirm prior authorization status, denial enforcement, and contractual reprocessing on the corrected claims set before any provider reimbursement or UM action, then rerun provider review for VCU MEDICAL CENTER, SENTARA LEIGH HOSPITAL, SENTARA NORFOLK GENERAL HOSPITAL, and RIVERSIDE REGIONAL MEDICAL CENTER.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION flagged auth_or_mapping_shift.",
+          "Pattern requires validation before action.",
+          "CA, VA, and WI need crosswalk validation.",
+          "VA hospitals show clearest concentration.",
+          "VCU Medical Center and Sentara Leigh Hospital are key drivers."
+        ],
+        "peer_benchmarking": [
+          "Humana summary shows no DRG-pattern adjudication rule identified for this issue."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit and reprocess TX Medicare Indiv DSNP HMO IP Med/Surg claims with pa_required_code Y assigned to facility_type Not Mapped, starting with MEMORIAL HERMANN SOUTHWEST HOSPITAL and any concentrated providers, to correct facility mapping, reconcile authorizations to actual claims, and confirm payment processed to contract terms before any site-of-care or contracting changes.",
+        "evidence": [
+          "TX DSNP HMO claims are classified to facility_type Not Mapped",
+          "Claims are prior-authorization-required with pa_required_code Y",
+          "Flags include unmapped_or_unknown_value and auth_dimension_present",
+          "Drill context points to MEMORIAL HERMANN SOUTHWEST HOSPITAL"
+        ],
+        "peer_benchmarking": [
+          "Humana reimbursement summary lists no relevant policy, scope note, or documented appeals process."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: This pattern is explicitly volume-led: acute inpatient spend rose mainly from about 3,445 more admissions while paid per admit fell, which strongly points to utilization management KPI and potentially avoidable variance review rather than unit price issues.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a limited set of hospitals\u2014VCU Medical Center, Sentara Norfolk General Hospital, and Sentara Leigh Hospital\u2014making provider-level behavior and local contracting/operational review highly relevant.; IP MedSurg (DNE) Trend 8: The impacted spend is prior-authorized acute hospital inpatient spend with auth_dimension_present, and the business terms include auth-to-claim validation, so authorization enforcement and auth-to-claim matching are directly relevant.; IP MedSurg (DNE) Trend 5: Recommended actions specifically call out readmissions, discharge planning, and care transitions, so testing whether the increase is tied to repeat admissions among the same members is important.; IP MedSurg (DNE) Trend 7: The admission surge in acute inpatient settings, along with ER admit context and the need to assess admission appropriateness, supports review of admission/discharge source and location to distinguish unavoidable from potentially avoidable inpatient use."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 7,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the pattern: the issue is an authorization-code distribution shift explicitly flagged as auth-to-claim validation and requiring reconciliation before action.; IP MedSurg (DNE) Trend 9: Highly relevant because the apparent TX paid change may reflect claims processing, reprocessing, or code-assignment logic rather than a true medical-cost trend.; IP MedSurg (DNE) Trend 10: Relevant because prior-authorization classification can alter reimbursement interpretation, and the pattern routes to reimbursement policy review after validation.; IP MedSurg (DNE) Trend 6: Relevant as a downstream check since auth-code movement can distort utilization-management KPI signals; UM conclusions should wait until the mapping issue is resolved.; IP MedSurg (DNE) Trend 1: Secondarily relevant because a provider is visible in the drill path, but the pattern indicates provider concentration is not the primary driver and should only be researched after the auth shift is validated."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 23,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: This is the strongest fit because the pattern is explicitly volume-led, driven by 1,671 more admissions, and the recommended action is to tighten prior-authorization and concurrent-review workflows\u2014classic utilization management KPI/PAV review territory.; IP MedSurg (DNE) Trend 7: Admissions are the main growth driver, and the recommended next step is to identify admission sources and highest-growth hospital stays, which aligns directly with reviewing admission/discharge source and elective versus non-elective mix.; IP MedSurg (DNE) Trend 8: Prior authorization is a core filter in the pattern (pa_required_code = Y), and the card includes 'auth-to-claim validation' as a business term, making auth denial enforcement and auth-to-claim matching highly relevant.; IP MedSurg (DNE) Trend 10: The pattern is not purely utilization; paid per admit and allowed per admit also increased, and the narrative calls for a combined utilization and reimbursement review, which makes reimbursement method review directly relevant.; IP MedSurg (DNE) Trend 4: The recommended deep dive specifically calls for identifying the service lines driving the increase, matching the parent rule focused on isolating variance to subsets of services."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in a single provider, Memorial Hermann Southwest Hospital, across multiple Medicare products, making provider-specific behavior, contracting, and network analysis the top parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit and allowed per admit rose materially, and the recommended next step explicitly calls for reviewing contract terms and claim pricing, which aligns with reimbursement method review.; IP MedSurg (DNE) Trend 8: Authorization is a prominent dimension in the source cards, most major deltas are in auth-required populations, and the recommendation includes reviewing prior-authorization performance, matching auth-to-claim enforcement.; IP MedSurg (DNE) Trend 6: Admissions increased substantially alongside unit cost, so utilization management KPI review is relevant to determine whether avoidable utilization or UM process changes contributed to the variance.; IP MedSurg (DNE) Trend 7: The pattern recommends reviewing admission mix, and the inpatient acute-hospital increase may reflect shifts in admission source/location or case entry patterns that warrant this parent rule."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: The largest increases are in SNF and rehab, and the pattern is explicitly a site-of-care shift tied to discharge planning and post-acute pathway decisions; this rule directly targets admission/discharge source and location.; IP NF (DNE) Trend 6: SNF shows both higher admissions and higher paid per admit, and rehab is volume-led; the recommended action is level-of-care review, which aligns closely to utilization management KPI and PAV analysis.; IP BH (DNE) Trend 6: Acute psych spend is rising through more admissions and higher per-admission cost, indicating behavioral site-of-care movement that should be investigated through admission/discharge source and placement patterns.; IP BH (DNE) Trend 5: The acute psych component has both utilization and unit-cost pressure under PA-required admissions, making behavioral UM/PAV review relevant for level-of-care appropriateness and avoidable variance.; IP MedSurg (DNE) Trend 7: The pattern specifically calls out discharge practices from acute hospitals as an upstream driver of movement into SNF, rehab, and psych, so MedSurg admission/discharge source-location review is highly relevant."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is partly concentrated in specific hospitals\u2014VCU, Riverside, Sentara Leigh, and Sentara Norfolk\u2014making provider-level behavior, contracting, pricing, or severity mix review highly relevant.; IP MedSurg (DNE) Trend 6: The largest driver is broad inpatient admission growth in a prior-authorization setting, so utilization management KPI review is directly relevant to explain the volume-led increase.; IP MedSurg (DNE) Trend 7: Admissions are up materially, and the drill context includes ER admits; reviewing admission source/location can help determine whether case mix or avoidable/non-elective admission shifts are contributing.; IP MedSurg (DNE) Trend 8: The pattern explicitly involves PA-required acute hospital claims and includes auth-to-claim validation as a business term, so checking whether authorization denials are being enforced is highly relevant.; IP MedSurg (DNE) Trend 10: Provider-level paid-per-admit increases at Sentara Leigh and Sentara Norfolk point to possible reimbursement method, pricing, or contractual issues in addition to utilization growth."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly an AUTH_CODE_DISTRIBUTION / prior-authorization coding shift, is labeled auth-to-claim validation, and is flagged for validation before action.; IP MedSurg (DNE) Trend 9: The issue involves auth-code crosswalk and assignment movement across states, which can reflect claims classification or reprocessing inconsistencies that distort total paid results.; IP MedSurg (DNE) Trend 1: The apparent variance is concentrated in a subset of providers, especially VA hospitals such as VCU Medical Center and Sentara Leigh Hospital, making provider-driver review highly relevant after coding validation.; IP MedSurg (DNE) Trend 10: Because prior-authorization classification can affect reimbursement interpretation and the pattern routes to reimbursement policy review, reimbursement-method validation is a relevant parent rule.; IP MedSurg (DNE) Trend 6: The pattern specifically warns that provider and UM conclusions may be distorted; once auth coding is corrected, utilization-management KPI review is a logical follow-on to determine true operational impact."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 9: The core issue is a large spend increase in a Not Mapped facility bucket, which strongly suggests a claims setup, classification, or reprocessing problem that must be validated before treating the variance as real utilization change.; IP MedSurg (DNE) Trend 1: Pattern details explicitly cite possible provider setup issues, and the drill context points to an acute hospital provider, so testing whether the variance is concentrated in one or a few providers is highly relevant.; IP MedSurg (DNE) Trend 8: These are prior-authorization-required claims (pa_required_code = Y), and the card includes auth-to-claim validation as a business term, making authorization-to-claim matching an important secondary validation step.; IP MedSurg (DNE) Trend 10: Paid per admit increased sharply, so after correcting the facility mapping, reimbursement method review is relevant to determine whether payment logic or contract configuration is inflating unit cost.; IP MedSurg (DNE) Trend 7: The unmapped facility bucket may be hiding the true site of care, so admission/discharge source or location review becomes relevant once claims are reclassified correctly."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T14:51:44.352405+00:00"
+  }
+}

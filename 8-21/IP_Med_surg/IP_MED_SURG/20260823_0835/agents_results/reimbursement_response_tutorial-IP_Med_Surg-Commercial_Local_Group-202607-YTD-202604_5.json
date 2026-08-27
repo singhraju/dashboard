@@ -1,0 +1,438 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_5_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA inpatient case mix shifted across pulmonary embolism, renal infections, and rare surgical episodes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "payment_impact",
+          "label": "Payment Impact",
+          "type": "badge"
+        },
+        {
+          "id": "poa_hac_requirements",
+          "label": "POA/HAC Requirements",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "Denies",
+          "poa_hac_requirements": "Requires POA indicators on all inpatient diagnoses; may request records affecting DRG/HAC payment."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "Denies",
+          "poa_hac_requirements": "Require POA on inpatient diagnoses; POA=N may trigger HAC/never-event denials or DRG reduction."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "Denies",
+          "poa_hac_requirements": "Requires documented thrombosis/ischemia history; protein C/S also require neonatal purpura fulminans or warfarin necrosis."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00167",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Present on Admission HCAC RETIRED",
+        "tags": [],
+        "effective_date": "04/20/18",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00066",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "2026-04-01",
+        "evidence": "The policy is not DRG-specific, but it affects inpatient DRG reimbursement when a hospital acquired condition is identified and denies major surgical never events and related services. For HACs, charges or days may be removed from the DRG calculation; for never events, the claim and related services are denied.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA-based review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Inpatient facility",
+            "Professional",
+            "Facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "present on admission",
+            "secondary facility treated the HAC"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00185",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions C-23002",
+        "tags": [],
+        "effective_date": "09/01/2023",
+        "evidence": "Commercial inpatient policy: this wrong-body-part never event is denied for professional and facility claims, and related services are not reimbursed. The broader policy also reduces DRG reimbursement for HACs when POA shows the condition was not present on admission.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Professional providers",
+            "Facilities"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "The DRG is not named, but the policy applies to inpatient urinary infection claims when the urinary condition is a catheter-associated UTI classified as a health care-acquired condition. If it was not present on admission, associated charges/days and any HCAC-linked CC/MCC are excluded from DRG payment calculation, and missing POA data may cause denial or rejection.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.51",
+            "Y65.52",
+            "Y65.53"
+          ],
+          "related_codes": [],
+          "required_modifiers": [
+            "PA",
+            "PB",
+            "PC"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "not present on admission",
+            "same inpatient claim",
+            "following total knee replacement",
+            "following hip replacement",
+            "same inpatient stay",
+            "separate claim for other services"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "CA Medicaid: no DVT/PE reporting for pregnant or under 21"
+          ],
+          "provider_role_restrictions": [
+            "professional and facility providers"
+          ],
+          "exemptions": [
+            "present on admission",
+            "secondary facility treatment",
+            "Medicare-exempt facilities",
+            "pediatric and obstetric Medicaid",
+            "pregnant women in CA Medicaid",
+            "children under 21 in CA Medicaid",
+            "pre-existing at another provider"
+          ],
+          "action_types": [
+            "limit",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00064",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Venous and Arterial Thrombosis Testing",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "Reimbursable for thrombophilia testing when linked to specified thrombotic or ischemic conditions.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986393910",
+        "edit_rule_facts": {
+          "target_codes": [
+            "85300-85303",
+            "85305",
+            "85306",
+            "85302",
+            "85303",
+            "85307",
+            "0278U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "qualifying diagnosis",
+            "neonatal purpura fulminans",
+            "warfarin-induced skin necrosis",
+            "superficial venous thrombosis"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Edit Y65.51, Y65.52, and Y65.53 only on the same inpatient claim under DRG review when the condition is not present on admission / POA-based review; for California cesarean or other obstetric claims, do not apply this edit to pediatric and obstetric Medicaid, pregnant women in CA Medicaid, or children under 21 in CA Medicaid, and keep present on admission, secondary facility treatment, Medicare-exempt facilities, and pre-existing at another provider as exemptions. Apply to CA. Exempt: present on admission, secondary facility treatment, Medicare-exempt facilities, pediatric and obstetric Medicaid, pregnant women in CA Medicaid, children under 21 in CA Medicaid, pre-existing at another provider. Peer: Elevance Health internal and external both target Y65.51, Y65.52, and Y65.53 on the same inpatient claim under DRG review and exempt present on admission cases..",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.51\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.52\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.53\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"same inpatient claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"not present on admission\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions: \"POA-based review\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"pediatric and obstetric Medicaid\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"pregnant women in CA Medicaid\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"children under 21 in CA Medicaid\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"present on admission\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"secondary facility treatment\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"Medicare-exempt facilities\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"pre-existing at another provider\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Elevance Health internal and external both target Y65.51, Y65.52, and Y65.53 on the same inpatient claim under DRG review and exempt present on admission cases."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions \u2014 https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: CA inpatient case mix shifted across pulmonary embolism, renal infections, and rare surgical episodes",
+    "pattern_rank": 5,
+    "pattern_title": "CA inpatient case mix shifted across pulmonary embolism, renal infections, and rare surgical episodes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC",
+      "Kidney and Urinary Tract Infections without MCC",
+      "Pulmonary Embolism with MCC or Acute Cor Pulmonale"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/5 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 43530,
+    "output": 51894,
+    "breakdown": {
+      "search_keywords": {
+        "input": 558,
+        "output": 1628,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 398,
+        "output": 529,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 32394,
+        "output": 42091,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 2000,
+        "output": 690,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 985,
+        "output": 758,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 952,
+        "output": 832,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 438,
+        "output": 262,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3599,
+        "output": 4764,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2206,
+        "output": 340,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T10:16:34.419322+00:00",
+    "end_time": "2026-08-23T10:20:20.503776+00:00",
+    "duration_ms": 226084,
+    "version": "2.0.0"
+  }
+}

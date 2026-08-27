@@ -1,0 +1,158 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_5_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IN and OH rare inpatient admits are driving Medicare acute spend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_relevance",
+          "label": "Pattern Relevance",
+          "type": "text"
+        },
+        {
+          "id": "direct_code_rules",
+          "label": "Direct Code Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: IN and OH rare inpatient admits are driving Medicare acute spend",
+    "pattern_rank": 5,
+    "pattern_title": "IN and OH rare inpatient admits are driving Medicare acute spend",
+    "cpt_codes_requested": [
+      "A0472",
+      "A4101"
+    ],
+    "drg_codes_requested": [
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Other Digestive System O.R. Procedures with MCC",
+      "Other O.R. Procedures for Multiple Significant Trauma with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN', 'OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/2 policies quarantined (100%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_HUM_00013:Laboratory - General Inflammation Testing, RP_GBD_HUM_00029:Laboratory - B-Hemolytic Streptococcus Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 24264,
+    "output": 16763,
+    "breakdown": {
+      "search_keywords": {
+        "input": 575,
+        "output": 1012,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 8827,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 443,
+        "output": 818,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 21158,
+        "output": 4812,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 1005,
+        "output": 698,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 640,
+        "output": 596,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:43:21.262987+00:00",
+    "end_time": "2026-08-23T19:43:54.220213+00:00",
+    "duration_ms": 32957,
+    "version": "2.0.0"
+  }
+}

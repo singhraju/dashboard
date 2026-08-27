@@ -1,0 +1,199 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a claims-processing and auth-to-claim validation audit for Medicaid inpatient AUTH_CODE_DISTRIBUTION claims in FL, CA, IN, MD, and MO and LTSS Dual Eligible IA claims with facility_type 'Not Mapped'; verify denial enforcement, confirm authorizations match actual admissions, and reprocess mismatched Riley's Children's Health and affected neurologic, back, delivery, and Depressive Neuroses claims to contractual standards before any UM, reimbursement, or network action.",
+        "evidence": [
+          "FL, CA, and IN/MD/MO show AUTH_CODE_DISTRIBUTION shifts requiring validation before action.",
+          "IA LTSS Dual Eligible spend includes facility_type 'Not Mapped' and no-auth claims.",
+          "RILEY'S CHILDREN'S HEALTH is flagged in IN under the same authorization pattern.",
+          "Impacted DRGs include neurologic, back, delivery, and Depressive Neuroses inpatient cases."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement enhanced prior-authorization and high-volume provider audit policy under existing Florida Medicaid rules for SNF - FREE STANDING admissions in LTSS Dual Eligible and LTSS Non Dual, with diagnosis-focused review for Degenerative Nervous System Disorders with MCC and Medical Back Problems without MCC.",
+        "evidence": [
+          "FL LTSS Dual Eligible free-standing SNF paid rose by $58.2M.",
+          "Admissions increased by 6,568 in FL LTSS Dual Eligible SNFs.",
+          "FL LTSS Non Dual free-standing SNF paid rose by $8.1M.",
+          "Medical Back Problems without MCC added $1.1M with mixed volume-unit cost."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a CA provider-level utilization management audit for NF and SNF - FREE STANDING admissions that enforces prior-authorization and auth-to-claim matching, and reviews discharge-pathway and site-of-care decisions for LTSS Dual Eligible, LTSS Non Dual, and TANF Standard cases tied to HEMIPLG FLW CEREB INFARCT LT N-DOM, HEMIPLG FLW CEREBRAL INFARCT RT DOM, SPINAL STENOSIS LUMBAR REGION NO NC, and ALZHEIMERS DISEASE UNSPECIFIED.",
+        "evidence": [
+          "CA NF growth centers on stroke sequelae, spinal stenosis, Parkinson disease, and Alzheimer's disease.",
+          "Free-standing SNF growth spans LTSS Dual Eligible, LTSS Non Dual, and TANF Standard.",
+          "Admissions increased while paid per admit was flat or down.",
+          "Operational cards include pa_required_code Y and auth_dimension_present.",
+          "Recommended next step targets post-acute placement and provider discharge pathways."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a Tampa General Hospital FL Medicaid inpatient contract-compliance, prior-authorization, and level-of-care/site-of-care audit for prior-authorized acute admissions, prioritizing ABD Non Dual and TANF Standard cases and NICU neonatal DRG Extreme Immaturity or Respiratory Distress Syndrome, Neonate, and confirm claims process per contract.",
+        "evidence": [
+          "FL ABD Non Dual acute hospitals added about $5.9M with 422 more admissions.",
+          "ABD Non Dual paid per admit at Tampa General increased about $9.9K.",
+          "Tampa General TANF Standard acute-hospital cases added about $336K.",
+          "Tampa General NICU concentration added about $547K across 3 admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a RILEY'S CHILDREN'S HEALTH review for IN Medicaid CHILDRENS TANF Standard and Family Care to audit prior-authorization enforcement, admission and outlier service-line mix, and claims processing against reimbursement terms, with site-of-care or contract remediation where indicated.",
+        "evidence": [
+          "RILEY'S CHILDREN'S HEALTH is the main IN provider concentration.",
+          "TANF Standard and Family Care both show repeated delta concentration.",
+          "Admissions and paid per admit increased at RILEY'S CHILDREN'S HEALTH.",
+          "Both source cards have pa_required_code Y and auth-to-claim validation."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a focused NC Medicaid inpatient behavioral health review for ACUTE PSYCH/TANF Foster Care episodes, starting with Central Regional Hospital, to audit initial and concurrent review KPIs, discharge-planning controls, and contract-compliant claims processing for POST-TRAUMATIC STRESS DISORDER UNS, ADJUST D/O W/MIXED DISTURB EMOTIONS, and REACTION TO SEVERE STRESS UNS.",
+        "evidence": [
+          "NC TANF Foster Care acute psych shows admissions up and paid per admit up.",
+          "PTSD and adjustment disorder drive concentrated IP BH inpatient growth.",
+          "Central Regional Hospital appears in drill context on key NC IP BH cards.",
+          "Rare stress and OCD cases show small-N volatility and need validation."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused Medicaid acute-hospital maternity authorization and reimbursement review for DRG \"Vaginal Delivery with O.R. Procedures Except Sterilization and/or D&C\" in MD, IN, NY, KS, and MO to confirm prior authorization was obtained, authorization denials were enforced, actual services matched authorizations, authorized level matched paid level, and claims processed per contractual reimbursement terms, with targeted review of MD diagnoses POST-TERM PREGNANCY, SEVERE PRE-ECLAMPSIA COMPLICATNG CB, and FT PROM ONSET LABR W/I 24 HR RUPT.",
+        "evidence": [
+          "Recurring driver: Vaginal Delivery with O.R. Procedures across MD, IN, NY, KS, MO.",
+          "Operational groups show pa_required_code Y and auth_dimension_present.",
+          "MD diagnoses concentrate in POST-TERM PREGNANCY and SEVERE PRE-ECLAMPSIA COMPLICATNG CB.",
+          "IN is unit-cost-led with higher average paid per admit.",
+          "Admissions increased in affected Medicaid delivery episodes."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "Behavioral health pressure extends into MO and smaller acute-psych markets",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 23,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)",
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 8: Largest dollar impact is in NF-context inpatient Medicaid claims in FL and CA, where AUTH_CODE_DISTRIBUTION shifts are explicitly flagged as auth-to-claim validation issues before any UM or reimbursement action.; IP NF (DNE) Trend 9: IA adds a separate LTSS Dual Eligible 'Not Mapped' facility bucket with no-auth claims, making claims processing/mapping validation highly relevant alongside the NF authorization issue.; IP MedSurg (DNE) Trend 8: The IN Riley's Children's Health component is tagged as IP Med/Surg and shows the same authorization classification movement, so auth-to-claim match is directly applicable.; IP OB Dlvry Well NB (DNE) Trend 8: One of the key impacted drivers is 'Vaginal Delivery with O.R. Procedures Except Sterilization and/or D&C' within the IN/MD/MO auth-distribution pattern, aligning to the OB inpatient auth enforcement rule.; IP BH (DNE) Trend 7: The pattern also includes 'Depressive Neuroses' under the same AUTH_CODE_DISTRIBUTION shift, making the BH auth-to-claim match rule relevant for validating behavioral health inpatient authorization classification."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 6: The pattern is primarily volume-led, with large admission growth in FL free-standing SNFs, so reviewing utilization management KPIs and potentially avoidable variance is central to explaining the increase.; IP NF (DNE) Trend 7: This is explicitly a site-of-care shift into SNF, and the recommended action focuses on SNF entry, stay management, and discharge planning, making admission/discharge source and location highly relevant.; IP NF (DNE) Trend 4: The variance is tightly isolated to a specific service setting\u2014SNF - FREE STANDING\u2014rather than broad Medicaid spend, which fits a service-driver review.; IP NF (DNE) Trend 1: The action plan calls for review of high-volume SNF provider performance, suggesting the increase may be concentrated in a subset of Florida free-standing SNF providers.; IP NF (DNE) Trend 3: Neurologic and back-related cases recur in the evidence, including Degenerative Nervous System Disorders and Medical Back Problems, so diagnosis concentration is an important parent rule."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 3: Most directly aligned because the spend increase is explicitly concentrated in a narrow diagnosis set within NF/SNF, especially stroke sequelae, spinal stenosis, Parkinson disease, and Alzheimer's disease.; IP NF (DNE) Trend 6: Relevant because the pattern is volume-led with admissions up and recommended follow-up centers on utilization management, post-acute placement, and avoiding unnecessary NF/SNF flow rather than price inflation.; IP NF (DNE) Trend 8: Highly relevant since multiple operational source cards are flagged with pa_required_code=Y and auth_dimension_present, indicating a need to validate whether authorizations and denials are being enforced through auth-to-claim matching.; IP NF (DNE) Trend 7: Relevant because the pattern points to discharge pathway and site-of-care decisions into free-standing SNFs/NFs in CA, making admission/discharge source and location review important even if cases are not ER-driven.; IP NF (DNE) Trend 1: Moderately relevant because the recommended next step includes provider-level discharge pathways, suggesting that a subset of providers may be steering disproportionate neurologic and spine-related NF/SNF utilization growth."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 38,
+        "categories": [
+          "IP NICU (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The dominant signal is provider concentration: Tampa General Hospital accounts for a large share of the FL acute inpatient increase, especially in ABD Non Dual, making provider-specific behavior and contract review the top parent rule.; IP MedSurg (DNE) Trend 10: ABD Non Dual paid per admission at Tampa General increased by about $9.9K, and the recommended next step explicitly calls for contract and reimbursement review, aligning strongly to reimbursement method.; IP MedSurg (DNE) Trend 6: The pattern includes meaningful admission growth across FL acute hospital spend and at Tampa General, and the next-step recommendation includes UM escalation rules, fitting review of utilization management KPIs/PAV.; IP NICU (DNE) Trend 1: A smaller but material NICU cost spike is also concentrated at Tampa General, so provider-specific NICU practice patterns, contracting, or level-of-care decisions are relevant.; IP NICU (DNE) Trend 4: The NICU subset shows very high intensity with roughly $103.6K higher paid per admit for a specific neonatal DRG, which is consistent with reviewing service drivers and NICU level-of-care intensity."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is overwhelmingly concentrated at a single provider, Riley's Children's Health, across multiple Medicaid products, making provider-driver analysis the primary parent rule match.; IP MedSurg (DNE) Trend 10: Paid per admit and allowed per admit both increased materially at the same provider, and the pattern explicitly recommends reviewing reimbursement terms, making reimbursement method highly relevant.; IP MedSurg (DNE) Trend 6: Admissions increased meaningfully alongside cost, and the pattern calls for UM review, so a utilization-management KPI/PAV review is directly relevant.; IP MedSurg (DNE) Trend 8: Both source cards are prior-auth required (pa_required_code = Y) and include auth-to-claim validation as a business term, so reviewing whether authorization controls are being enforced is relevant.; IP MedSurg (DNE) Trend 4: The recommended next step specifically calls for review of admission mix and outlier service lines, aligning with service-driver analysis."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP BH (DNE) Trend 3: The clinical signal is strongly diagnosis-concentrated, with spend increases tied to PTSD, adjustment disorder, reaction to severe stress, and other stress-related inpatient behavioral health diagnoses.; IP BH (DNE) Trend 5: Volume is a core driver: admissions rose materially in NC acute psych/IP BH, and the recommended next step explicitly calls for reviewing admission criteria and length-of-stay management, which aligns to utilization management KPI review.; IP BH (DNE) Trend 9: Intensity is also a major driver because paid per admit increased sharply across the key behavioral health episodes, making reimbursement method review highly relevant.; IP BH (DNE) Trend 4: The operational pressure is concentrated in the acute psych inpatient service setting, so a service-driver review is directly applicable to determine whether a specific subset of services/site of care is driving the variance.; IP BH (DNE) Trend 1: The pattern may be concentrated in a subset of providers or facilities, with Central Regional Hospital appearing in drill context and higher paid per admit suggesting possible provider-specific behavior or contractual effects."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: Strongest fit: the increase is clinically concentrated in specific obstetric diagnoses, especially post-term pregnancy, severe pre-eclampsia, and PROM within the maternity HCC.; IP OB Dlvry Well NB (DNE) Trend 4: The recurring driver is a specific maternity service/DRG, Vaginal Delivery with O.R. Procedures, repeated across multiple states, indicating service-level concentration.; IP OB Dlvry Well NB (DNE) Trend 10: Highly relevant because the pattern explicitly recommends reimbursement logic review, and several state-level groups are unit-cost or mixed volume/unit-cost driven with paid per admit rising.; IP OB Dlvry Well NB (DNE) Trend 8: Operational drivers consistently show pa_required_code = Y and auth_dimension_present, making auth-to-claim enforcement an important parent rule to test.; IP OB Dlvry Well NB (DNE) Trend 6: Admissions are up and the pattern calls for maternity episode management review, so utilization-management KPI/PAV review is a relevant secondary lens."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-25T10:03:36.595060+00:00"
+  }
+}

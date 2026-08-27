@@ -1,0 +1,276 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R12-202604_3_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R12-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA acute hospitals are under both admission and unit-cost pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "facility_bundling",
+          "label": "Bundling Rule",
+          "type": "badge"
+        },
+        {
+          "id": "notable_exceptions",
+          "label": "Notable Exceptions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling": "Bundles",
+          "notable_exceptions": "Incremental nursing needs physician order/documentation; home DME needs discharge documentation; convenience private rooms excluded."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "General hospital facility reimbursement bundles routine room-and-board, nursing, supplies, equipment, and many ancillary services into the facility payment. Separate reimbursement is limited to specific exceptions such as physician-ordered incremental nursing, certain discharge DME, and infusion or injection administration when that service is the primary reason for the visit.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "96360-96379",
+            "96401",
+            "96402",
+            "96409-96425",
+            "96521-96523",
+            "36400",
+            "36405",
+            "36406",
+            "36410",
+            "36415",
+            "36416",
+            "36591",
+            "36592",
+            "95940",
+            "95941",
+            "G0453",
+            "99190-99192"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "TC"
+          ],
+          "revenue_codes": [
+            "0230-0239",
+            "0278",
+            "020X",
+            "017X"
+          ],
+          "pairing_conditions": [
+            "same facility claim",
+            "with primary service",
+            "facility POS"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Facility claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician order required"
+          ],
+          "exemptions": [
+            "infusion or injection primary service",
+            "medical isolation private room"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle facility-claim ancillary services 96360-96379, 96401, 96402, 96409-96425, 96521-96523, 36400, 36405, 36406, 36410, and 36415 when they appear on the same facility claim with primary service in facility POS, including revenue codes 0230-0239, 0278, 020X, and 017X; do not apply the edit when modifier TC is present; require physician order, and preserve the stated exceptions for infusion or injection primary service and medical isolation private room. Exempt: infusion or injection primary service, medical isolation private room.",
+      "evidence": [
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96360-96379\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96401\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96402\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96409-96425\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96521-96523\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"36400\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"36405\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"36406\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"36410\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"36415\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"TC\" [excluded_modifiers]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"0230-0239\" [revenue_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"0278\" [revenue_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"020X\" [revenue_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"017X\" [revenue_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"same facility claim\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"with primary service\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"facility POS\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"Facility claims\" [program_scope]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"physician order required\" [provider_role_restrictions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"infusion or injection primary service\" [exemptions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"medical isolation private room\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Cigna \u00b7 Facility Services, Supplies and Equipment \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA acute hospitals are under both admission and unit-cost pressure",
+    "pattern_rank": 3,
+    "pattern_title": "CA acute hospitals are under both admission and unit-cost pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Coronary Bypass with PTCA with MCC",
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures",
+      "Other Digestive System Diagnoses with MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 39155,
+    "output": 9102,
+    "breakdown": {
+      "search_keywords": {
+        "input": 568,
+        "output": 1173,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 370,
+        "output": 306,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 31727,
+        "output": 5142,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 486,
+        "output": 125,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 763,
+        "output": 689,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 261,
+        "output": 297,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 2192,
+        "output": 798,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2788,
+        "output": 572,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T19:29:16.582791+00:00",
+    "end_time": "2026-08-22T19:30:13.208942+00:00",
+    "duration_ms": 56626,
+    "version": "2.0.0"
+  }
+}

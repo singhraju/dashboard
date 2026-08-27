@@ -1,0 +1,195 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization classification shifts must be validated before operational action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "auth_status",
+          "label": "Auth Status",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "Bundles",
+          "auth_status": "Bundles"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00041",
+        "payer_name": "Cigna",
+        "policy_title": "Omnibus Reimbursement Policy",
+        "tags": [],
+        "effective_date": "11/01/2014",
+        "evidence": "The policy includes a liver and liver-kidney transplantation reference and states that organ transport, procurement, and retrieval are integral to the primary transplant procedure and are not separately reimbursed. No DRG-specific authorization classification shift is described.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R24_Omnibus_Reimbursement_Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: Authorization classification shifts must be validated before operational action",
+    "pattern_rank": 2,
+    "pattern_title": "Authorization classification shifts must be validated before operational action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures",
+      "Liver Transplant without MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO', 'GA', 'ME'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/3 policies quarantined (67%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_P32_CT_MA_ME_NH_28595780209:Laboratory: Immune Cell Function Assay, RP_GBD_HUM_00053:Laboratory - Immune Cell Function Assay]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 25989,
+    "output": 8973,
+    "breakdown": {
+      "search_keywords": {
+        "input": 554,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 387,
+        "output": 382,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 21298,
+        "output": 6444,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1335,
+        "output": 496,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 799,
+        "output": 593,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 265,
+        "output": 163,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1351,
+        "output": 364,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T12:36:06.732971+00:00",
+    "end_time": "2026-08-22T12:36:51.355323+00:00",
+    "duration_ms": 44622,
+    "version": "2.0.0"
+  }
+}

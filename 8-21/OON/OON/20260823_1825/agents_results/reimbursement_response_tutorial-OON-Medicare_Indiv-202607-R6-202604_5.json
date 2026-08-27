@@ -1,0 +1,318 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_5_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH DSNP HMO acute hospital pressure is concentrated in two hospitals",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "readmission_policy",
+          "label": "Readmission Policy",
+          "type": "text"
+        },
+        {
+          "id": "obstetrics_exclusion",
+          "label": "OB Exclusion",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "readmission_policy": "Unplanned 30-day readmissions bundle to index; same-day, planned, or leave-of-absence readmissions receive one DRG.",
+          "obstetrics_exclusion": "Excludes OB"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "readmission_policy": "No readmission policy specific to this service was identified for Humana.",
+          "obstetrics_exclusion": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The health plan generally denies separate reimbursement for unplanned inpatient readmissions within 30 days when the readmission is for the same, similar, or related condition. Same-day readmissions are treated as part of the original admission. The policy applies to DRG-billed inpatient facilities and includes multiple exclusions and state-specific carve-outs.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days",
+            "same date of service",
+            "same hospital system"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "discharge status 81 (planned readmission)"
+          ],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "OH: HIV infection excluded",
+            "OH: major trauma excluded"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "cancer",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "acute care transfer",
+            "AMA discharge"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00133",
+        "payer_name": "Humana",
+        "policy_title": "Common CPT and HCPCS Modifiers",
+        "tags": [],
+        "effective_date": "02/2015",
+        "evidence": "Humana policy is a general CPT/HCPCS modifier guideline and does not contain a rule for the requested DRG pattern.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00137",
+        "payer_name": "Humana",
+        "policy_title": "Assistant at Surgery Reimbursement",
+        "tags": [],
+        "effective_date": "11/2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981a7a2a2",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: OH DSNP HMO acute hospital pressure is concentrated in two hospitals",
+    "pattern_rank": 5,
+    "pattern_title": "OH DSNP HMO acute hospital pressure is concentrated in two hospitals",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it addresses California cesarean delivery readmissions rather than the Ohio DSNP HMO acute hospital pressure pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "3/7 policies quarantined (43%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00014:Professional Anesthesia Services, RP_GBD_ELV_INTERNAL_00126:Maternity Services, RP_GBD_ELV_INTERNAL_00130:Sterilization]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 56276,
+    "output": 13809,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 156,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 330,
+        "output": 274,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 48283,
+        "output": 9356,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2042,
+        "output": 947,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 901,
+        "output": 597,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 457,
+        "output": 491,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 352,
+        "output": 222,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1986,
+        "output": 1574,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1405,
+        "output": 192,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:22:28.325044+00:00",
+    "end_time": "2026-08-23T19:23:25.962706+00:00",
+    "duration_ms": 57637,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-R3-202604_1_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-R3-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA acute hospital spend is rising across HMO, with a smaller PPO tail",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "multiple_birth_payment",
+          "label": "Multiple-Birth Pay",
+          "type": "text"
+        },
+        {
+          "id": "claim_support_needed",
+          "label": "Claim Support",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "multiple_birth_payment": "Cigna pays secondary newborn lines at 50%; all-cesareans need diagnosis code, usually no extra pay.",
+          "claim_support_needed": "Include multiple gestation diagnosis; submit documentation for significant time/complexity when requested."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "multiple_birth_payment": "Subsequent vaginal deliveries reimbursed at 50% with modifier 59; contracts may override.",
+          "claim_support_needed": "Requires full medical-record/office-note support; modifier 22 cesarean claims need documentation for additional reimbursement review."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "multiple_birth_payment": "-",
+          "claim_support_needed": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "Multiple vaginal-birth delivery lines are reimbursed at full allowed amount for the first newborn and 50% for each subsequent newborn when a multiple gestation diagnosis is reported.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59610",
+            "59612",
+            "59614",
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622",
+            "O30.001-O30.099",
+            "O30.101-O30.199",
+            "O30.201-O30.299",
+            "O30.801-O30.899",
+            "O30.90",
+            "O30.93"
+          ],
+          "related_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622",
+            "O30.001-O30.099",
+            "O30.101-O30.199",
+            "O30.201-O30.299",
+            "O30.801-O30.899",
+            "O30.90",
+            "O30.93",
+            "59400",
+            "59409",
+            "59410",
+            "59610",
+            "59612",
+            "59614",
+            "Z37.2-Z37.4",
+            "Z37.50-Z37.59",
+            "Z37.60",
+            "Z37.69",
+            "Z37.7",
+            "Z38.30-Z38.31",
+            "Z38.4",
+            "Z38.5",
+            "Z38.61-Z38.69",
+            "Z38.7",
+            "Z38.8"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "multiple newborn delivery",
+            "at least one vaginal delivery",
+            "all deliveries cesarean",
+            "increased time and complexity",
+            "claim reporting"
+          ],
+          "utilization_limits": [
+            "primary 100%",
+            "secondary 50%",
+            "one cesarean payment per delivery group"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "all cesarean deliveries",
+            "modifier 22 for increased complexity"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00128",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Delivery Services C-19005",
+        "tags": [],
+        "effective_date": "04/29/2022",
+        "evidence": "Off-topic. This policy addresses professional reimbursement for multiple birth delivery services and does not address this DRG, acute hospital DRG payment, or HMO/PPO-specific adjudication.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "59"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "multiple births",
+            "same-delivery method",
+            "combined-delivery method"
+          ],
+          "utilization_limits": [
+            "50% allowance subsequent delivery"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "CA effective 01/01/2021"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider/state/federal mandates"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CA acute hospital spend is rising across HMO, with a smaller PPO tail",
+    "pattern_rank": 1,
+    "pattern_title": "CA acute hospital spend is rising across HMO, with a smaller PPO tail",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Degenerative Nervous System Disorders without MCC",
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "Not Mapped",
+      "Vaginal Delivery without Sterilization or D&C with CC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it addresses cesarean reimbursement rules rather than the acute-hospital spend pattern described."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 36968,
+    "output": 32394,
+    "breakdown": {
+      "search_keywords": {
+        "input": 563,
+        "output": 534,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 441,
+        "output": 521,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 27923,
+        "output": 25205,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 989,
+        "output": 340,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 901,
+        "output": 546,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 603,
+        "output": 680,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 383,
+        "output": 233,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3288,
+        "output": 3996,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1877,
+        "output": 339,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T06:49:07.677120+00:00",
+    "end_time": "2026-08-23T06:51:48.213391+00:00",
+    "duration_ms": 160536,
+    "version": "2.0.0"
+  }
+}

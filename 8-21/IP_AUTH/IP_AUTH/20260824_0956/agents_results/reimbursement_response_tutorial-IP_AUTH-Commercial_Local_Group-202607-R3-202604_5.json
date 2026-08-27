@@ -1,0 +1,304 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "partial_success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization coding and facility mapping must be fixed before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_auth_scope",
+          "label": "DRG/Auth Scope",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth_flag",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_auth_scope": "-",
+          "prior_auth_flag": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_auth_scope": "No DRG-specific authorization; routine facility-inclusive inpatient/outpatient charges are bundled, not separately reimbursed.",
+          "prior_auth_flag": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "10/30/2018",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00045",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00101",
+        "payer_name": "United Health",
+        "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "This payer's UB-04 policy addresses bundled routine and facility-inclusive charges for inpatient and outpatient facility claims, but it does not provide DRG-specific authorization or facility-mapping rules for the requested pattern.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 5,
+    "policies_failed": 1
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Hold any California cesarean delivery reimbursement change until the authorization-code distribution movement of roughly \"$1.0M\" in CA/OH is reconciled, because the pattern evidence shows offsetting positives and negatives that must be normalized before business interpretation. (CA)\nIA \u2014 Reclassify the unmapped California facility bucket contributing about \"$0.2M\" before implementing any authorization or reimbursement edit, so facility attribution is complete for the CA cesarean delivery population. (CA)",
+      "evidence": [
+        "CA"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": []
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Authorization coding and facility mapping must be fixed before action",
+    "pattern_rank": 5,
+    "pattern_title": "Authorization coding and facility mapping must be fixed before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders with CC",
+      "Other Digestive System Diagnoses with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures",
+      "Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 5,
+    "failed_extractions": 1,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NH', 'IN', 'OH', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/5 policies quarantined (20%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00047:Procedure and Place of Service]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "1 out of 6 policies failed extraction. Check logs for details."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 101987,
+    "output": 21365,
+    "breakdown": {
+      "search_keywords": {
+        "input": 599,
+        "output": 752,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 617,
+        "output": 1156,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 96408,
+        "output": 17519,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 1050,
+        "output": 301,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 939,
+        "output": 598,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 247,
+        "output": 177,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1369,
+        "output": 701,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 758,
+        "output": 161,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:18:05.613098+00:00",
+    "end_time": "2026-08-24T10:19:55.355895+00:00",
+    "duration_ms": 109742,
+    "version": "2.0.0"
+  }
+}

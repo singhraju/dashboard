@@ -1,0 +1,276 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicaid-202607-YTD-202604_4_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicaid-202607-YTD-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "DC TANF Standard growth is concentrated in unclear facility buckets",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_relevance",
+          "label": "DRG Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "policy_scope": "Applies broadly to inpatient/outpatient facility charges; not specific to any DRG."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_UHC_00268",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "Off-topic for this DRG pattern. The policy governs global days and global surgical package reimbursement for procedures billed on CMS-1500 professional claims, not DRG-based inpatient facility reimbursement.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Global-Days-Policy-(R0005).pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00270",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "Hospital inclusive charges policy for UB-04 Medicaid facility claims bundles routine room, board, nursing, supply, equipment, surgical room, and ventilator/CPAP components into the primary facility charge. The requested DRG is not named, but the same inpatient facility billing logic applies to unbundled routine charges.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "410",
+            "412",
+            "250",
+            "300",
+            "309",
+            "361",
+            "391",
+            "460",
+            "510",
+            "761",
+            "270-279",
+            "300-370",
+            "419"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit/day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB-04",
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Colorado exempt",
+            "Hawaii: claims related to waitlist services and COB use OCs 74-76",
+            "Kentucky exempt",
+            "Maryland exempt",
+            "Minnesota exempt",
+            "Mississippi exempt",
+            "Missouri exempt",
+            "Nebraska exempt",
+            "New Mexico exempt",
+            "North Carolina exempt",
+            "Texas exempt",
+            "Virginia: allows J0401, J0578, J2315, J2426, J2794, J2798, Q9991, Q9992"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Colorado exempt",
+            "Kentucky exempt",
+            "Maryland exempt",
+            "Minnesota exempt",
+            "Mississippi exempt",
+            "Missouri exempt",
+            "Nebraska exempt",
+            "New Mexico exempt",
+            "North Carolina exempt",
+            "Texas exempt"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: DC TANF Standard growth is concentrated in unclear facility buckets",
+    "pattern_rank": 4,
+    "pattern_title": "DC TANF Standard growth is concentrated in unclear facility buckets",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['DC'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped item 0 for scope drift because it does not match the provided DC TANF facility-bucket pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 19738,
+    "output": 11520,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 256,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 350,
+        "output": 298,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 12349,
+        "output": 7684,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 930,
+        "output": 707,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 889,
+        "output": 449,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 370,
+        "output": 191,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 2468,
+        "output": 1628,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1839,
+        "output": 307,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T13:30:21.400278+00:00",
+    "end_time": "2026-08-23T13:31:28.249198+00:00",
+    "duration_ms": 66848,
+    "version": "2.0.0"
+  }
+}

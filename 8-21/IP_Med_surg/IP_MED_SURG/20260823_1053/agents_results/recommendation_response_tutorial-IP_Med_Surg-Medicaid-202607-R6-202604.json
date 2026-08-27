@@ -1,0 +1,227 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit Medicaid inpatient AUTH_CODE_DISTRIBUTION mapping in CA, AR, and IN for Major Small and Large Bowel Procedures with CC, Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC, and Cirrhosis and Alcoholic Hepatitis with CC; confirm prior authorization was obtained, validate denial enforcement, and correct claims-processing or reprocessing logic before policy action.",
+        "evidence": [
+          "Flags include auth_or_mapping_shift and requires_validation_before_action.",
+          "CA accounts for +$6.2M across four inpatient DRGs.",
+          "AR adds +$1.4M from the same authorization code distribution issue.",
+          "IN adds +$1.2M, concentrated in Cirrhosis and Alcoholic Hepatitis with CC.",
+          "No admission or paid-per-admit metrics support a utilization interpretation."
+        ],
+        "peer_benchmarking": [
+          "United Health policy example lists No Prior Auth for the cited service."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit DC PA-required inpatient TANF Standard and ABD Non Dual claims at CHILDRENS HOSPITAL billed as Not Mapped or OTHER to match authorizations to actual admissions, enforce denial edits, and confirm inpatient contract bundling is adjudicating correctly before site-of-care remediation.",
+        "evidence": [
+          "DC TANF Standard Not Mapped drove +$4.5M from 92 more admissions.",
+          "DC TANF Standard OTHER added +$1.3M from 57 more admissions.",
+          "DC ABD Non Dual Not Mapped added +$0.6M from 16 more admissions.",
+          "All flagged records are PA-required DC Medicaid inpatient claims.",
+          "CHILDRENS HOSPITAL repeats in drill context across flagged admissions."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine inpatient UB-04 services into facility charges; only facility-owned ventilator/CPAP management is separate."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "For CA Medicaid ACUTE HOSPITAL claims with pa_required_code Y in TANF Standard and ABD Non Dual, review Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC and Major Small and Large Bowel Procedures with CC to confirm prior authorization, match authorizations to billed inpatient actuals and level of care, enforce authorization denials, validate contract-based claims processing, and obtain itemized bill review for high-cost admissions.",
+        "evidence": [
+          "CA TANF Standard acute hospital drove +$5.6M across digestive, bowel, cirrhosis, obesity, and nerve DRGs.",
+          "Digestive disorders added +$2.0M with more admissions and higher paid per admit.",
+          "Major bowel procedures added +$1.7M with more admissions and higher paid per admit.",
+          "All cited claims have pa_required_code Y in CA Medicaid acute hospital."
+        ],
+        "peer_benchmarking": [
+          "Molina summary shows IP/OP Only setting with no documented prior auth or appeals details."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA inpatient diagnosis-targeted UM policy for ALCOHOLIC CIRRHOSIS LIVER W/ASCITES, METABOLIC SYNDROME, NONINFECTIVE GE & COLITIS UNS, and TYPE 2 DM W/DIAB AUTONOM NEUROPATHY at DEACONESS MIDTOWN HOSPITAL, FRESNO HEART & SURGICAL HOSPITAL, and SIDNEY AND LOIS ESKENAZI HOSPITAL requiring prior-authorization verification, same-diagnosis repeat-admission review with CTI discharge planning, and site-of-care review for non-ER obesity procedure stays.",
+        "evidence": [
+          "CA inpatient clinical case-mix increased total paid by $5.3M.",
+          "Alcoholic cirrhosis with ascites added 66 admissions at DEACONESS MIDTOWN HOSPITAL.",
+          "Metabolic syndrome obesity procedures added 35 admissions; ER admit indicator N.",
+          "Noninfective GE and colitis added 56 admissions with higher paid per admit.",
+          "TYPE 2 DM W/DIAB AUTONOM NEUROPATHY added 31 admissions.",
+          "PA required code is Y across cited CA inpatient diagnoses."
+        ],
+        "peer_benchmarking": [
+          "United Health mentions hepatic fibrosis testing for liver diseases; no inpatient DRG payment rule identified.",
+          "Humana review was off-topic laboratory A1AT testing, not an inpatient payment policy."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a DUKE UNIVERSITY HEALTH SYSTEM INC NC Medicaid inpatient payment-integrity review for pa_required_code Y admissions to correct Not Mapped facility attribution, validate authorization-to-claim matching and denial enforcement for TANF Standard and ABD Non Dual claims, perform itemized bill review for Heart Transplant or Implant of Heart Assist System with MCC cases, and then assess DUKE-specific contract or site-of-care remediation.",
+        "evidence": [
+          "NC Medicaid admissions are concentrated at DUKE UNIVERSITY HEALTH SYSTEM INC.",
+          "TANF Standard Not Mapped utilization was volume-led on PA-required inpatient claims.",
+          "ABD Non Dual Not Mapped showed utilization and unit-cost pressure.",
+          "Heart Transplant or Implant of Heart Assist System with MCC created high-cost outliers.",
+          "Additional DUKE Not Mapped clinical case reinforces attribution concerns."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate retrospective payment-integrity review for catastrophic inpatient claims from CHILDRENS HOSPITAL, ARKANSAS CHILDREN'S HOSPITAL, and SENTARA NORFOLK GENERAL HOSPITAL, validating DRG severity coding, itemized bills, authorization compliance, and contract/outlier reimbursement for tracheostomy with prolonged ventilation, craniotomy with MCC, extensive burns with ventilation and skin graft, ECMO/tracheostomy major O.R., trauma, pneumonia, GI obstruction, and transplant admissions.",
+        "evidence": [
+          "Single DC tracheostomy ventilation admission at CHILDRENS HOSPITAL added +$1.3M.",
+          "Single DC craniotomy admission at CHILDRENS HOSPITAL added +$0.7M.",
+          "ARKANSAS CHILDREN'S HOSPITAL trauma, pneumonia, and GI obstruction admissions contributed about +$1.0M.",
+          "Two SENTARA NORFOLK GENERAL HOSPITAL cases totaled about +$0.6M.",
+          "Highlighted catastrophic claims show pa_required_code Y and small_n_admissions flags."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a provider-specific audit for VA Medicaid inpatient claims at SENTARA NORFOLK GENERAL HOSPITAL to correct Not Mapped facility attribution for ABD Non Dual and TANF Standard claims, confirm prior-authorization-to-claim matching and denial enforcement, and validate TANF Standard ACUTE HOSPITAL reimbursement and reprocessing against contractual obligations.",
+        "evidence": [
+          "Spend increase is concentrated at SENTARA NORFOLK GENERAL HOSPITAL in VA.",
+          "ABD Non Dual Not Mapped admissions increased at SENTARA NORFOLK GENERAL HOSPITAL.",
+          "TANF Standard Not Mapped admissions increased at the same provider.",
+          "TANF Standard ACUTE HOSPITAL paid per admit increased as admissions declined.",
+          "Major source cards are prior-auth-required and flagged auth-to-claim validation.",
+          "Validation is needed because largest drivers sit in Not Mapped claims."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Create a state-product authorized inpatient exception queue for MD/MO/WV TANF Standard, AR LTSS Non Dual, IN/NY Family Care, FL/OH ABD Non Dual, CO Family Care, and FL LTSS Non Dual to confirm prior authorization was obtained and matched to billed admissions, audit initial and concurrent review plus nurse and MD approval-denial pathways, and verify contractual claims processing and manual-adjudication edits.",
+        "evidence": [
+          "All source cards show pa_required_code equals Y.",
+          "MD, MO, and WV TANF Standard acute hospital added +$1.1M.",
+          "AR LTSS Non Dual added in CHILDRENS, Not Mapped, and ACUTE PSYCH.",
+          "IN Family Care acute hospital added across cirrhosis and nerve disorder admissions.",
+          "NY Family Care acute hospital added from obesity procedures.",
+          "FL, OH, and CO contain smaller ABD or Family Care exceptions."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health requires POA on all diagnoses and excludes non-POA HCAC CC/MCCs from DRGs.",
+          "Elevance Health states HCACs can lower DRGs and reduce reimbursement or covered days."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 7,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the pattern: the variance is explicitly driven by AUTH_CODE_DISTRIBUTION and flagged as an auth-to-claim mapping validation issue that requires validation before action.; IP MedSurg (DNE) Trend 9: A strong secondary fit because the spend shift appears operational/coding-related rather than true utilization, so claims processing or reprocessing status should be checked to explain the auth-status redistribution.; IP MedSurg (DNE) Trend 3: The issue is concentrated in a subset of inpatient DRGs/diagnosis groupings such as bowel procedures, digestive disorders, and cirrhosis, so diagnosis-level isolation is relevant for scoping the mapping problem.; IP MedSurg (DNE) Trend 4: The variance is also isolated to a subset of inpatient services/DRGs across CA, AR, and IN, making service-level review useful for bounding where the authorization mapping instability is occurring.; IP MedSurg (DNE) Trend 6: UM operations is a named downstream route, and auth-code shifts can mimic utilization-management change; this rule is relevant as a contingent follow-up after the mapping issue is validated."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: The pattern is explicitly on authorized inpatient claims (PA required = Y), includes auth-to-claim validation as a business term, and requires checking whether authorization logic and claim matching are being applied correctly amid facility mapping issues.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended next step includes reimbursement review; facility misclassification and site-of-care drift can alter reimbursement method, bundling, and contract application.; IP MedSurg (DNE) Trend 1: The increase appears concentrated in a narrow provider/facility mix, with repeated provider context and a stated need to separate true provider mix change from mapping noise, making provider-driver analysis highly relevant.; IP MedSurg (DNE) Trend 6: Admissions are up substantially across TANF Standard and ABD Non Dual, and the recommendation calls for focused UM review, so a utilization-management KPI/PAV assessment is directly relevant.; IP MedSurg (DNE) Trend 7: This is fundamentally a site-of-care and facility-classification pattern, so reviewing admission/discharge source and location is important to determine whether the change reflects real inpatient routing versus coding or mapping distortion."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Most directly matches the pattern because spend growth is concentrated in a narrow set of DRGs/diagnostic areas\u2014digestive disorders, bowel procedures, cirrhosis, obesity, and nerve disorders\u2014rather than broad inpatient growth.; IP MedSurg (DNE) Trend 10: Highly relevant because paid per admit is rising materially, and the recommended next step explicitly calls for review of highest-cost DRGs and reimbursement terms, pointing to reimbursement method as a key parent driver.; IP MedSurg (DNE) Trend 8: Relevant because the pattern is specifically in authorized admissions (pa_required_code = Y), with auth-related flags and business terms indicating a need to verify auth-to-claim matching and enforcement of authorization controls.; IP MedSurg (DNE) Trend 6: Relevant because total impact is driven by higher admissions plus higher unit cost, making utilization management performance a plausible parent issue; the business story and recommended action both emphasize admission management and UM operations.; IP MedSurg (DNE) Trend 4: Also relevant because the variance is not broad across all inpatient care but concentrated in a subset of inpatient DRG/service lines, especially digestive and bowel-related hospital services."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: This pattern is explicitly concentrated in a subset of inpatient diagnoses/DRGs\u2014alcoholic cirrhosis with ascites, metabolic syndrome/obesity procedures, diabetic autonomic neuropathy, and noninfective gastroenteritis/colitis\u2014making diagnosis-level isolation the clearest parent rule.; IP MedSurg (DNE) Trend 6: The increase is largely admission-volume driven and the recommended next step calls for utilization management rules on repeatable admission drivers, which aligns directly to reviewing UM KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 5: Recurring digestive, liver, and neuropathy admissions plus repeated-delta concentration suggest the need to test whether the same members are cycling through repeat inpatient stays or readmissions.; IP MedSurg (DNE) Trend 7: The case mix includes both ER-driven admissions (cirrhosis, GI, neuropathy) and non-ER obesity procedure admissions, so shifts in elective versus emergent admission source/location may explain part of the variance.; IP MedSurg (DNE) Trend 1: Several high-delta cards are tied to identifiable rendering facilities, so it is important to confirm whether the trend is concentrated in specific hospitals/providers rather than being fully broad-based across CA inpatient med-surg."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in a single inpatient provider, DUKE UNIVERSITY HEALTH SYSTEM INC, so provider-specific behavior, contracting, and network economics are the primary parent lens.; IP MedSurg (DNE) Trend 8: The operational growth is tied to PA-required admissions (pa_required_code = Y) and includes auth-to-claim validation as a business term, making authorization enforcement a key parent rule.; IP MedSurg (DNE) Trend 10: The pattern explicitly raises reimbursement terms and the true payment picture as open questions, so reimbursement method review is highly relevant once facility attribution is confirmed.; IP MedSurg (DNE) Trend 4: A major portion of the variance comes from a narrow inpatient service/DRG subset, especially heart transplant or heart assist system cases, indicating service-level concentration.; IP MedSurg (DNE) Trend 3: Clinical outliers are concentrated in specific diagnoses tied to the transplant cases and other rare high-cost inpatient presentations, so diagnosis-level review is also relevant."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is concentrated in a narrow set of catastrophic diagnoses/DRGs such as tracheostomy with prolonged ventilation, craniotomy, severe burns, ECMO-level care, trauma, and transplant, indicating diagnosis-level concentration rather than a broad inpatient trend.; IP MedSurg (DNE) Trend 4: The spend spike is tied to specific high-acuity inpatient services/DRGs with extremely high paid per admit, so service-level review is directly aligned to the pattern.; IP MedSurg (DNE) Trend 2: The pattern is driven by a handful of one-off or very small-count admissions, making member-level concentration and case-by-case clinical review highly relevant.; IP MedSurg (DNE) Trend 1: A subset of providers and hospitals account for meaningful portions of the increase, including CHILDRENS HOSPITAL, ARKANSAS CHILDREN'S HOSPITAL, and SENTARA NORFOLK GENERAL HOSPITAL, supporting provider-focused investigation.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly calls for review of contract terms and outlier payment treatment, which maps well to reimbursement method review for rare catastrophic inpatient claims."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Primary fit: the variance is highly concentrated at a single provider, SENTARA NORFOLK GENERAL HOSPITAL, and the pattern explicitly describes a focused provider economics story rather than a broad statewide inpatient trend.; IP MedSurg (DNE) Trend 10: Strong fit for the acute-hospital pocket where paid per admit increased despite declining admissions, pointing to reimbursement method or contractual unit-cost pressure at the provider level.; IP MedSurg (DNE) Trend 8: Relevant because all major source cards are PA-required and flagged for auth-to-claim validation, making authorization enforcement and matching an important review path.; IP MedSurg (DNE) Trend 9: Relevant as the largest drivers sit in Not Mapped facility claims, suggesting claim attribution, processing, or reprocessing issues may be contributing to the apparent provider concentration.; IP MedSurg (DNE) Trend 6: Secondary but relevant because much of the increase is admission-volume-led, so a UM KPI/PAV review can help determine whether the added inpatient utilization reflects avoidable or unmanaged admissions."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: All major pockets are authorized inpatient claims (pa_required_code=Y), and the source cards repeatedly flag auth-to-claim validation, making authorization enforcement the clearest parent rule match.; IP MedSurg (DNE) Trend 6: The pattern is driven by emerging inpatient utilization pressure with admissions up across multiple small state-product pockets, so reviewing UM KPI/PAV changes is highly relevant.; IP MedSurg (DNE) Trend 10: Unit cost is mixed but paid-per-admit increases are present in several pockets, and reimbursement/network review is explicitly recommended downstream, fitting reimbursement method review.; IP MedSurg (DNE) Trend 4: The variance is concentrated in specific inpatient settings and facility types\u2014acute hospital, children's, acute psych, and Not Mapped\u2014so service/site-of-care review is directly relevant, especially where mapping gaps remain.; IP MedSurg (DNE) Trend 3: Several pockets are concentrated in specific DRGs and diagnoses such as bowel procedures, digestive disorders, cirrhosis, nerve disorders, obesity procedures, and trauma, indicating diagnosis-level isolation."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T13:11:38.548367+00:00"
+  }
+}

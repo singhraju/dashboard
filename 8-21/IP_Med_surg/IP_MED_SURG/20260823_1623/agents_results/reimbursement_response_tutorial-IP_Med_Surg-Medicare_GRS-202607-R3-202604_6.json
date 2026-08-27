@@ -1,0 +1,353 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH inpatient case mix is concentrated in metabolic and electrolyte admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "care_setting",
+          "label": "Care Setting",
+          "type": "badge"
+        },
+        {
+          "id": "payment_bundling",
+          "label": "Bundling",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "payment_bundling": "Not Bundled"
+        },
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Inpatient Only",
+          "payment_bundling": "Bundles"
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Inpatient",
+          "payment_bundling": "Denies"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "payment_bundling": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_AHC_00329",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Thyroid Testing",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Covered when billed with an approved diagnosis supporting thyroid/endocrine or related medically necessary evaluation. Claims without an approved diagnosis are not reimbursed. Stable patients are limited to two tests per year unless therapy changes or symptoms/signs justify additional testing.",
+        "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Thyroid%20Testing%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "84436",
+            "84443",
+            "84439",
+            "84479"
+          ],
+          "related_codes": [
+            "84443",
+            "84439",
+            "84479",
+            "84436"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "approved diagnosis on claim",
+            "therapy altered",
+            "symptoms or signs noted"
+          ],
+          "utilization_limits": [
+            "2 tests/year stable patient"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "Ohio"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_OH_28594260200",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Malnutrition (PDF)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Severe malnutrition on inpatient claims is subject to retrospective review. DRG payment increases tied to malnutrition MCC are payable only when severe malnutrition criteria and hospital treatment documentation are clinically validated.",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.145.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "E43",
+            "E44.0",
+            "E44.1"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "non-primary diagnosis position"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "IPPS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner"
+          ],
+          "exemptions": [
+            "hospice minimal or no treatment"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00843",
+        "payer_name": "Centene",
+        "policy_title": "Severe Malnutrition",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Inpatient claims with unspecified severe protein-calorie malnutrition are retrospectively reviewed to confirm documentation supports the diagnosis. When severe malnutrition is billed as an MCC in a non-primary diagnosis position, the DRG payment increase is denied unless clinical documentation criteria are met.",
+        "policy_url": "https://buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PP.145_06.24.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "E43"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "non-primary diagnosis position",
+            "same inpatient claim"
+          ],
+          "utilization_limits": [
+            "retrospective review only"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "Inpatient Prospective Payment System"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00973",
+        "payer_name": "Molina",
+        "policy_title": "Clinical Diagnostic Laboratory Services",
+        "tags": [],
+        "effective_date": "10/11/2024",
+        "evidence": "Off-topic. This laboratory services policy does not address inpatient DRG case mix or Ohio metabolic and electrolyte admission patterns.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Clinical-Diagnostic-Laboratory-Services-03282025.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: OH inpatient case mix is concentrated in metabolic and electrolyte admissions",
+    "pattern_rank": 6,
+    "pattern_title": "OH inpatient case mix is concentrated in metabolic and electrolyte admissions",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they target inpatient malnutrition policies, not the pattern's OH metabolic and electrolyte admission focus."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 49164,
+    "output": 22900,
+    "breakdown": {
+      "search_keywords": {
+        "input": 535,
+        "output": 528,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 492,
+        "output": 1120,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 39046,
+        "output": 13762,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1789,
+        "output": 1572,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 936,
+        "output": 490,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 959,
+        "output": 447,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 2707,
+        "output": 4659,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2700,
+        "output": 322,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:08:03.753844+00:00",
+    "end_time": "2026-08-23T17:10:00.515613+00:00",
+    "duration_ms": 116761,
+    "version": "2.0.0"
+  }
+}

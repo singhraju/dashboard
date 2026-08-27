@@ -1,0 +1,234 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_3_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX site-of-care and facility classification pressure is concentrated in Not Mapped and rehab settings",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "site_of_care_rules",
+          "label": "Site of Care Rules",
+          "type": "text"
+        },
+        {
+          "id": "policy_takeaway",
+          "label": "Policy Takeaway",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_of_care_rules": "No site-of-care restrictions stated.",
+          "policy_takeaway": "Humana MA covers testing for AD/MCI patients; denies biomarker, DISCERN, and multianalyte assays otherwise."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00030",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biochemical Markers of Alzheimers Disease and Dementia",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "Covered under this Medicare Advantage laboratory policy when billed for an individual with Alzheimer\u2019s disease or mild cognitive impairment. The policy does not address Texas site-of-care, rehab setting, or facility classification.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d98",
+        "edit_rule_facts": {
+          "target_codes": [
+            "83520",
+            "0358U",
+            "0393U",
+            "0443U",
+            "0479U",
+            "0206U",
+            "0207U",
+            "0412U",
+            "0445U",
+            "0459U",
+            "0503U",
+            "0289U"
+          ],
+          "related_codes": [
+            "0443U",
+            "0479U",
+            "0393U",
+            "0207U",
+            "0206U",
+            "0445U",
+            "0459U",
+            "0503U",
+            "0412U"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "in addition to primary procedure"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "CGS jurisdictions excepted",
+            "Noridian jurisdictions excepted",
+            "Palmetto jurisdictions excepted",
+            "WPS jurisdictions excepted",
+            "First Coast jurisdictions excepted",
+            "Novitas jurisdictions excepted"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "CGS jurisdictions",
+            "Noridian jurisdictions",
+            "Palmetto jurisdictions",
+            "WPS jurisdictions",
+            "First Coast jurisdictions",
+            "Novitas jurisdictions"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: TX site-of-care and facility classification pressure is concentrated in Not Mapped and rehab settings",
+    "pattern_rank": 3,
+    "pattern_title": "TX site-of-care and facility classification pressure is concentrated in Not Mapped and rehab settings",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Degenerative Nervous System Disorders without MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 30322,
+    "output": 18231,
+    "breakdown": {
+      "search_keywords": {
+        "input": 525,
+        "output": 281,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 348,
+        "output": 334,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 25046,
+        "output": 16278,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 466,
+        "output": 188,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 862,
+        "output": 598,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 315,
+        "output": 325,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 2760,
+        "output": 227,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:20:24.581374+00:00",
+    "end_time": "2026-08-23T15:23:15.556787+00:00",
+    "duration_ms": 170975,
+    "version": "2.0.0"
+  }
+}

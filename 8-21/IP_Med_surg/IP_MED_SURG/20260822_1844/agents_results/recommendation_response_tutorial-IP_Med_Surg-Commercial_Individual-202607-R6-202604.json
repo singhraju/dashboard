@@ -1,0 +1,193 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CT Commercial Individual PPO acute-hospital inpatient policy review for PA-required admissions to assess initial and concurrent review KPIs, confirm prior authorization and denial enforcement, validate auth-to-claim matching, perform itemized bill review, and verify contractual claims processing for Craniotomy and Endovascular Intracranial Procedures with MCC and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC.",
+        "evidence": [
+          "CT PPO PA-required acute hospitals added about $42.0M.",
+          "Admissions increased by 682 and paid per admit increased about $3.4K.",
+          "Craniotomy cases added about $1.5M with higher paid per admit.",
+          "Chemotherapy cases added about $0.3M with higher paid per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a NY Commercial Individual HMO PA-required acute hospital admission audit to confirm prior authorization was obtained, enforce auth-to-claim matching and denial processing, review CUMG nurse and MD approval and referral decisions, and identify diagnosis/service cohorts for outpatient site-of-care redirection.",
+        "evidence": [
+          "NY HMO acute hospitals added about $17.3M.",
+          "Admissions increased by 464 while paid per admit decreased about $21.0K.",
+          "PA-required HMO acute hospital claims drove most pressure.",
+          "Business terms include auth-to-claim validation, site-of-care, and utilization."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health summary is off-topic and offers no comparable NY acute inpatient benchmark."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a CO case-level authorization and payment compliance review for PA-required Commercial Individual HMO acute-hospital Craniotomy and Endovascular Intracranial Procedures with MCC linked to BENIGN NEOPLASM CEREBRAL MENINGES, SECONDARY MALIGNANT NEOPLASM BRAIN, and CEREBRAL ANEURYSM NONRUPTURED; validate denial enforcement, auth-to-claim matching, reimbursement methodology, and provider/facility contract remediation.",
+        "evidence": [
+          "PA-required HMO acute-hospital neuro cases drove the CO inpatient increase.",
+          "Craniotomy and endovascular intracranial procedures with MCC concentrated spend in CO.",
+          "Admissions rose in CO Commercial Individual HMO acute hospitals.",
+          "BENIGN NEOPLASM CEREBRAL MENINGES and SECONDARY MALIGNANT NEOPLASM BRAIN reinforced the pattern.",
+          "CEREBRAL ANEURYSM NONRUPTURED appeared as a new or rare high-cost case.",
+          "Operational cards flag auth-to-claim validation, site-of-care, unit cost, and utilization."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles applicable neuro services with 69990 or 64727.",
+          "United Health limits billing to allowed neurolysis or nervous system surgery companions."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Pause UM or contract changes and complete a claims-processing audit that reconciles authorization denial enforcement, manual adjudication edits, and facility assignment for AUTH_CODE_DISTRIBUTION and Not Mapped inpatient claims in CA, WI, NY, CT, and IN, focused on CPMC VAN NESS CAMPUS, AURORA ST. LUKE'S MEDICAL CENTER, AURORA MEDICAL CENTER - SHEBOYGAN COUNTY, and LENOX HILL HOSPITAL, then rerun the impacted views.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION added about $5.0M and requires validation before action.",
+          "WI chemotherapy AUTH_CODE_DISTRIBUTION added about $1.2M at AURORA ST. LUKE'S.",
+          "NY HMO Not Mapped claims added about $1.1M on 40 more admissions.",
+          "CT and CA Not Mapped buckets added about $0.9M; IN added about $37K."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require UM review of discharge destinations for Commercial Individual orthopedic aftercare cases tied to Aftercare, Musculoskeletal System and Connective Tissue with CC and ENC FOR OTHER ORTHOPEDIC AFTERCARE before step-down to Physical Rehab, LONG TERM CARE HOSPITAL, CHILDRENS, or ACUTE PSYCH in CA, NY, and CT; audit authorization-to-claim matching, enforce denied authorizations, review nonrequired or overridden authorizations, and verify specialty facility claims adjudicate per contract.",
+        "evidence": [
+          "Aftercare, Musculoskeletal System and Connective Tissue with CC is a key driver.",
+          "ENC FOR OTHER ORTHOPEDIC AFTERCARE is a focused CA clinical pattern.",
+          "NY HMO Physical Rehab added about $0.5M with higher paid per admit.",
+          "CA EPO Physical Rehab added about $0.5M on 10 more admissions.",
+          "CT PPO long-term care hospital increase was volume-led.",
+          "Auth dimension present across key Physical Rehab and specialty facility cards."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a provider-specific inpatient chemotherapy policy audit for Aurora St. Luke's Medical Center in WI and CA Commercial Individual EPO acute hospital claims: verify PA-to-claim matching and inpatient bundling or contract edits for ENCOUNTER FOR ANTINEOPLASTIC CHEMO, and redirect eligible treatment to outpatient oncology settings.",
+        "evidence": [
+          "WI PA-required HMO inpatient chemotherapy concentrated at Aurora St. Luke's Medical Center.",
+          "CA Commercial Individual EPO acute hospital claims carried auth_dimension_present flag.",
+          "Diagnosis isolated to ENCOUNTER FOR ANTINEOPLASTIC CHEMO.",
+          "Service focused on Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC."
+        ],
+        "peer_benchmarking": [
+          "Cigna limits separate reimbursement in inpatient facilities; office reimbursement allowed and home infusion needs precertification.",
+          "United Health bundles chemotherapy administration into inpatient hospital charges without separate reimbursement.",
+          "Elevance bundles same-day facility chemotherapy items into facility fees and restricts facility billing."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 3,
+        "pattern": "A small set of hospitals is driving acute inpatient growth across several states and products",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 8,
+        "pattern": "Rare catastrophic cases are creating high-cost outlier pressure",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern is a true inpatient utilization-management issue: PA-required acute admissions increased materially and the recommended next step explicitly calls for admission management and level-of-care review.; IP MedSurg (DNE) Trend 8: PA-required claims are central to the pattern and the source cards flag auth-to-claim validation, making authorization enforcement review directly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit rose alongside volume, and the pattern recommends contract review, so reimbursement method review is highly relevant to the unit-cost component.; IP MedSurg (DNE) Trend 4: The spend increase is concentrated in specific inpatient DRG/service episodes, especially craniotomy and chemotherapy, which fits a service-driver review.; IP MedSurg (DNE) Trend 3: High-acuity clinical concentration in craniotomy and chemotherapy-related cases suggests a diagnosis-level drilldown is also important to explain the variance."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Best fit for this pattern: spend growth is explicitly volume-led, with admissions up sharply while paid per admit fell, which points to utilization management and potentially avoidable inpatient variance rather than pricing.; IP MedSurg (DNE) Trend 8: The main pressure is in PA-required HMO acute hospital claims, and the pattern includes auth-related flags/business terms, making auth-to-claim enforcement a highly relevant parent rule.; IP MedSurg (DNE) Trend 7: Because admissions are the main driver, reviewing admission source/location and elective vs non-elective mix aligns with the need to assess avoidable admits and inpatient-to-outpatient opportunities.; IP MedSurg (DNE) Trend 4: The recommendation specifically mentions inpatient-to-outpatient opportunities, so a service-level review is relevant to identify services that may be more appropriately managed outside the inpatient acute setting.; IP MedSurg (DNE) Trend 3: A diagnosis/DRG drill-down is relevant to confirm whether the admission spike is concentrated in specific clinical cohorts, which could indicate a management-design issue rather than a broad rate problem."
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is explicitly a concentrated inpatient neuro case-mix shift driven by a narrow set of brain diagnoses such as benign cerebral meningeal neoplasm, brain metastasis, aneurysm, and subdural hemorrhage, making diagnosis-level isolation the strongest parent rule.; IP MedSurg (DNE) Trend 4: Spend is tightly centered on a specific inpatient neurosurgical service/DRG: Craniotomy and Endovascular Intracranial Procedures with MCC, so service-level review is highly relevant.; IP MedSurg (DNE) Trend 10: The operational signal includes sharply higher paid amounts per admit, mixed unit cost, and a recommended review of contract performance, which aligns with checking reimbursement method and payment mechanics.; IP MedSurg (DNE) Trend 8: Key drivers include PA-required cases, and the operational cards flag auth-to-claim validation and authorization-related review needs, supporting an auth enforcement and match review.; IP MedSurg (DNE) Trend 1: The pattern is concentrated in one state and the recommended next step calls for reviewing referral patterns and acute hospital performance, which makes provider-level concentration a relevant parent rule."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the pattern because the largest drivers are AUTH_CODE_DISTRIBUTION shifts, repeated auth-to-claim validation language, and explicit flags that validation is required before UM action.; IP MedSurg (DNE) Trend 9: Relevant because major spend increases are landing in 'Not Mapped' facility buckets, which points to possible claims processing, classification, or reprocessing issues before interpreting the variance as true operational change.; IP MedSurg (DNE) Trend 1: Relevant since the variance is concentrated in specific facilities/providers such as CPMC Van Ness, Aurora St. Luke's, Aurora Medical Center - Sheboygan County, and Lenox Hill Hospital.; IP MedSurg (DNE) Trend 3: Relevant because part of the variance is isolated to specific DRGs/diagnosis contexts like chemotherapy, liver transplant, and craniotomy, indicating diagnosis-level concentration once data issues are reconciled.; IP MedSurg (DNE) Trend 10: Secondarily relevant because incorrect auth or facility attribution can distort how inpatient spend is assigned under reimbursement logic, so reimbursement method should be reviewed after mapping validation."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: Most directly matches the pattern\u2019s site-of-care and discharge-pathway story: spend is shifting into rehab, LTCH, children\u2019s, and other specialty inpatient settings, with admissions rising in follow-on facilities.; IP MedSurg (DNE) Trend 4: The variance is concentrated in a subset of services/facility types\u2014especially Physical Rehab, LONG TERM CARE HOSPITAL, CHILDRENS, and ACUTE PSYCH\u2014making service-driver review highly relevant.; IP MedSurg (DNE) Trend 3: A large share of the increase is tied to orthopedic aftercare and the DRG 'Aftercare, Musculoskeletal System and Connective Tissue with CC,' indicating diagnosis/case-mix concentration.; IP MedSurg (DNE) Trend 8: Many source cards are flagged with prior authorization dimensions and auth-to-claim validation business terms, and the recommended next step explicitly calls for reviewing prior authorization rules and enforcement.; IP MedSurg (DNE) Trend 10: Paid per admit is rising in several post-acute settings, and the recommendation includes contract-term review, making reimbursement method/contractual payment logic a key parent rule."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is tightly concentrated in a specific oncology diagnosis/DRG combination: ENCOUNTER FOR ANTINEOPLASTIC CHEMO and inpatient chemotherapy without acute leukemia, matching a diagnosis-isolated trend.; IP MedSurg (DNE) Trend 4: This is a focused inpatient chemotherapy service/site-of-care issue rather than a broad inpatient cancer trend, and the recommended action is to review service appropriateness and shift eligible care to outpatient oncology settings.; IP MedSurg (DNE) Trend 8: PA-required claims are explicitly present, the CA pocket is flagged with auth_dimension_present, and the pattern routes to UM operations, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 1: The largest dollar increase is concentrated in WI and specifically tied to Aurora St. Luke's Medical Center, indicating a likely subset-of-provider pattern requiring provider-level investigation.; IP MedSurg (DNE) Trend 10: The CA EPO pocket shows a sharp rise in paid per admit and paid ratio, and the reimbursement summary highlights inpatient bundling and site restrictions, supporting review of reimbursement method and payment setup."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T20:10:24.124986+00:00"
+  }
+}

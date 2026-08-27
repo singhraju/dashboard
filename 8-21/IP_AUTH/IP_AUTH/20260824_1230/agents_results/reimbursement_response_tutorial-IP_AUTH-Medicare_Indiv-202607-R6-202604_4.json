@@ -1,0 +1,658 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX authorization classification also shifted materially and must be resolved before policy action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_status",
+          "label": "Auth Status",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "DRG title not mentioned; policy only addresses bundled facility service reimbursement."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "Not specifically mentioned; general facility bundling policy may deny separate reimbursement for integral services."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "Molina clinically validates sepsis DRGs and may reduce payment if Sepsis-3 support is lacking."
+        },
+        {
+          "payer_org": "Parkland Community Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "Not mentioned; policy only addresses sepsis clinical validation and sepsis-related diagnosis review."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_status": "-",
+          "policy_relevance": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082140007",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Diagnostic Testing of Influenza",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/rplab033-1-1-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082280002",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "\u03b2-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "2026-01-03",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab053-1-3-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_01158",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Bundled Services and Supplies",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "This commercial facility bundled-services policy is not DRG-specific and does not include the requested DRG title. The rule addresses separate reimbursement for bundled facility services and supplies, not DRG-based authorization classification.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-067264-24-SRS66354-Bundled-Services-RP.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "General facility bundling policy applies to inpatient and outpatient claims, but this DRG label is not specifically addressed. The policy denies separate reimbursement for listed integral services and supplies unless an exception applies.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility"
+          ],
+          "state_specific_rules": [
+            "TX: entered 01/01/2025"
+          ],
+          "provider_role_restrictions": [
+            "facility provider"
+          ],
+          "exemptions": [
+            "provider, state, federal contract and/or requirements"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00882",
+        "payer_name": "Centene",
+        "policy_title": "Genitourinary Lab Testing (TX.CP.MP.307)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.307.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00888",
+        "payer_name": "Centene",
+        "policy_title": "Infectious Disease: Gastroenterologic Lab Testing (TX.CP.MP.304)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.304.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00889",
+        "payer_name": "Centene",
+        "policy_title": "Infectious Disease: Multi-System Lab Testing (TX.CP.MP.302)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.302.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00890",
+        "payer_name": "Centene",
+        "policy_title": "Infectious Disease: Respiratory Lab Testing (TX.CP.MP.301)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.301.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00891",
+        "payer_name": "Centene",
+        "policy_title": "Infectious Disease: Vector-Borne and Tropical Diseases Lab Testing (TX.CP.MP.306)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.306.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00027",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Lyme Disease",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9e54",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00060",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Hepatitis Testing",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390c",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00129",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "1/7/2022",
+        "evidence": "DRG clinical validation reviews apply to sepsis-related claims. Hospital payment may be adjusted when the medical record does not support sepsis under Sepsis-3 criteria. The diagnosis ranges R65.2, A40.x, and A41.x are subject to review.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "pre-payment or post-payment review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00139",
+        "payer_name": "Molina",
+        "policy_title": "Physician Office Laboratory Testing",
+        "tags": [],
+        "effective_date": "2025-03-31",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/PI-106-Physician-Office-Laboratory-Testing-OH.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00141",
+        "payer_name": "Molina",
+        "policy_title": "STI Lab Panel Testing",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/STI-Lab-Panel-Testing-12172024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_PRK_00012",
+        "payer_name": "Parkland Community Health Plan",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "5/15/2025",
+        "evidence": "Off-topic for this requested DRG description; the policy governs sepsis clinical validation and sepsis-related diagnosis review only.",
+        "policy_url": "https://providers.parklandhealthplan.com/Uploads/Public/Documents/Provider/sepsis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01835",
+        "payer_name": "United Health",
+        "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 19,
+    "policies_successful": 19,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: TX authorization classification also shifted materially and must be resolved before policy action",
+    "pattern_rank": 4,
+    "pattern_title": "TX authorization classification also shifted materially and must be resolved before policy action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Amputation for Musculoskeletal System and Connective Tissue Disorders with CC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC"
+    ],
+    "total_policies_found": 19,
+    "successful_extractions": 19,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 19 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "19 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "3/19 policies quarantined (16%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/19 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_ELV_INTERNAL_00139:Lifetime Procedures RETIRED, RP_COM_BCBS_TX_TX_29082280000:General Inflammation Testing, RP_GBD_HUM_00025:Laboratory - Urine Culture Testing for Bacteria]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 131790,
+    "output": 39113,
+    "breakdown": {
+      "search_keywords": {
+        "input": 547,
+        "output": 377,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 866,
+        "output": 3878,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 122931,
+        "output": 31076,
+        "calls": 19
+      },
+      "relevance_judge": {
+        "input": 3218,
+        "output": 2055,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 866,
+        "output": 458,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 757,
+        "output": 801,
+        "calls": 7
+      },
+      "elevance_summary": {
+        "input": 375,
+        "output": 222,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2230,
+        "output": 246,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T13:31:24.569248+00:00",
+    "end_time": "2026-08-24T13:33:09.986941+00:00",
+    "duration_ms": 105417,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted CA Medicaid acute inpatient audit for Connective Tissue Disorders with MCC and Inguinal and Femoral Hernia Procedures without CC/MCC across TANF Standard and LTSS Non Dual, starting with repeated UCI MEDICAL CENTER claims, to confirm authorization-to-claim matching, medical-necessity review routing, and contractual payment compliance.",
+        "evidence": [
+          "Connective Tissue Disorders with MCC appears in both TANF Standard and LTSS Non Dual.",
+          "UCI MEDICAL CENTER repeats in CA acute inpatient drill context.",
+          "Claims increased and paid per admit increased in CA Medicaid acute hospital.",
+          "A hernia inpatient episode reinforces the same CA acute hospital pattern."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a single-claim clinical and payment audit of the CA IP Med/Surg M3119 admission at UCI MEDICAL CENTER for Connective Tissue Disorders with MCC to verify diagnosis severity, final adjudication, contractual inpatient payment logic, and recoverable overpayment.",
+        "evidence": [
+          "One CA IP Med/Surg case tied to M3119 drove about $156K.",
+          "Increase was concentrated in one claim with paid per admit up.",
+          "Rendering provider name: UCI MEDICAL CENTER."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health summary lists bundled inpatient/outpatient reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Place FL and WA TANF Standard ACUTE HOSPITAL IP Med/Surg admissions with diagnoses K4090, K4030, S020XXA, and S0211HB at Orlando Health Orlando Regional Medical Center and OHSU Hospitals and Clinics into targeted medical-necessity, authorization-to-actual, and contract-compliant payment review.",
+        "evidence": [
+          "Claims rose from a low base in FL and WA IP Med/Surg.",
+          "FL K4090 admission concentrated at Orlando Health Orlando Regional Medical Center.",
+          "WA S020XXA trauma admissions concentrated at OHSU Hospitals and Clinics.",
+          "TANF Standard ACUTE HOSPITAL claims showed higher paid per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a case-level contract compliance audit for the NY TANF Standard IP Med/Surg claim from PROVIDENCE CEDARS-SINAI TARZANA MEDICAL CENTER tied to K8071 and Laparoscopic Cholecystectomy without C.D.E. without CC/MCC, verifying final-bill-only adjudication and reimbursement methodology, and route confirmed noncompliance for claim reprocessing or provider contract remediation.",
+        "evidence": [
+          "Nearly all NY TANF Standard acute hospital increase tied to one provider.",
+          "Matching IP Med/Surg case tied to K8071 and laparoscopic cholecystectomy.",
+          "Signal concentrated in one claim with paid per admit up."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a provider-specific reimbursement and utilization compliance audit for MCKENDREE SNF OPERATIONS LLC in TN LTSS Dual Eligible SNF - FREE STANDING claims, with diagnosis-level validation for I69952 and S0630AS, to verify contract-based adjudication, reimbursement methodology, authorization enforcement, placement, and length of stay, and pursue site-of-care or contract remediation if variance is confirmed.",
+        "evidence": [
+          "TN LTSS Dual Eligible SNF spend concentrated at MCKENDREE SNF OPERATIONS LLC.",
+          "Claims rose at the same TN SNF provider.",
+          "Unit cost signal was mixed to up.",
+          "NF rare-case signals repeated across I69952 and S0630AS.",
+          "Pattern recommends validating placement, length of stay, and paid amount accuracy."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Conduct a targeted postpay and authorization-enforcement review for NY ABD Non Dual and FL LTSS Dual Eligible SNF - FREE STANDING episodes with Other Digestive System Diagnoses without CC/MCC to confirm contract payment compliance, site-of-care appropriateness, and provider concentration.",
+        "evidence": [
+          "Other Digestive System Diagnoses without CC/MCC drove both emerging SNF signals.",
+          "NY ABD Non Dual increase occurred in SNF - FREE STANDING.",
+          "FL LTSS Dual Eligible increase occurred in SNF - FREE STANDING.",
+          "Claims up and paid per admit up across identified segments.",
+          "Both signals flagged low baseline and repeated delta concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Correct CA LTSS Non Dual NF and NJ TANF Standard OP Surg Not Mapped facility and DRG classifications, then route confirmed RAJESH I PATEL and D259/Cardiovascular, Hemic, and Lymphatic Systems claims to focused provider, diagnosis, service, and site-of-care review.",
+        "evidence": [
+          "CA LTSS Non Dual shows Not Mapped facility classification.",
+          "NJ TANF Standard Not Mapped records are tied to RAJESH I PATEL.",
+          "NJ OP Surg has Not Mapped clinical grouping with diagnosis D259."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 3,
+        "pattern": "CA nursing facility and SNF rare-case concentration",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend increase is highly concentrated in a small set of DRGs, especially Connective Tissue Disorders with MCC across both Medicaid products, making diagnosis-level concentration the clearest parent driver.; IP MedSurg (DNE) Trend 1: The same acute inpatient setting in one state and a named rendering provider appear repeatedly, suggesting the variance may be isolated to specific hospital/provider behavior or contract terms.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially, and the recommended action explicitly includes reviewing payment terms, making reimbursement method a strong fit for the unit-cost portion of the pattern.; IP MedSurg (DNE) Trend 8: The next step calls for checking inpatient criteria and level of care, which aligns with reviewing whether authorization controls and auth-to-claim matching are being enforced appropriately.; IP MedSurg (DNE) Trend 6: Because both claims volume and paid per admit rose in acute inpatient Med/Surg, utilization management KPI review is relevant to assess avoidable admissions, level-of-care decisions, and broader inpatient management performance."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is concentrated in a single diagnosis/DRG combination (M3119 / Connective Tissue Disorders with MCC), making diagnosis-level isolation the clearest parent rule match.; IP MedSurg (DNE) Trend 2: The increase is driven by one admission on one claim, so the variance is effectively isolated to a very small subset of members and supports member-level case review.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly calls for validating inpatient payment logic and identifying any recoverable overpayment, which aligns closely to reimbursement method review.; IP MedSurg (DNE) Trend 9: Because this is a single catastrophic claim, claim-level audit for processing or reprocessing accuracy is directly relevant to confirming whether payment followed contractual standards.; IP MedSurg (DNE) Trend 1: The case is tied to a specific provider context (UCI Medical Center), so provider concentration should be checked even though this appears more like a one-case outlier than a broad provider trend."
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: This pattern is tightly concentrated in a small set of diagnoses\u2014trauma and hernia codes such as K4090, K4030, S020XXA, and S0211HB\u2014making diagnosis-level variance the clearest parent driver.; IP MedSurg (DNE) Trend 1: The emerging spend is tied to a very small number of acute inpatient providers in FL and WA, including Orlando Health Orlando Regional Medical Center and OHSU Hospitals and Clinics, so provider-specific behavior or contract effects are highly relevant.; IP MedSurg (DNE) Trend 6: The recommended action is targeted inpatient medical-necessity and criteria review, which aligns directly with checking whether utilization management KPI changes or potentially avoidable inpatient variance contributed to the emergence.; IP MedSurg (DNE) Trend 8: Because these are new low-volume acute inpatient admissions requiring validation, reviewing authorization-to-claim alignment is relevant to confirm admissions were appropriately authorized and denial controls were enforced.; IP MedSurg (DNE) Trend 10: The pattern includes a paid-per-admit increase and an operational mixed volume/unit-cost signal, so reimbursement method review is relevant for validating payment levels on the few high-cost admissions."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: This is the strongest fit because the variance is overwhelmingly concentrated in a single acute hospital provider, with about 98% of the increase tied to one provider and one claim.; IP MedSurg (DNE) Trend 9: The pattern explicitly suggests a possible payment correction and requires case-level confirmation, making claims processing or reprocessing review highly relevant for a one-claim high-paid outlier.; IP MedSurg (DNE) Trend 10: The recommended next step is to review contract terms and determine whether provider-level reimbursement escalation is needed, which directly aligns to reimbursement method validation.; IP MedSurg (DNE) Trend 3: The increase is also isolated to a specific diagnosis code, K8071, so diagnosis-level review is relevant to confirm whether this is a narrow clinical driver versus a broader inpatient trend.; IP MedSurg (DNE) Trend 4: The case is tied to a specific inpatient service/DRG, laparoscopic cholecystectomy without CC/MCC, so service-level review is relevant to validate whether the outlier is procedure-specific."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 1: The variance is overwhelmingly concentrated at a single SNF provider, MCKENDREE SNF OPERATIONS LLC, making provider-level behavior, placement patterns, and contract terms the primary research path.; IP NF (DNE) Trend 10: The pattern includes mixed-to-higher unit cost, higher paid ratio, paid amount accuracy concerns, and a recommended contract remediation decision, which strongly aligns to reimbursement method review.; IP NF (DNE) Trend 6: Claims increased materially and the recommended next step explicitly calls for reviewing placement and length of stay, both of which fit utilization management KPI / avoidable variance investigation.; IP NF (DNE) Trend 9: Because the signal rose off a very low baseline at one provider and the pattern calls for paid amount accuracy validation, claims processing or reprocessing against contractual standards is relevant.; IP NF (DNE) Trend 3: There is a parallel NF rare-case signal across multiple nervous-system and post-acute diagnoses, so diagnosis-level review is useful to confirm the issue is not a single-code anomaly even though provider concentration appears to be the main driver."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 10: Best fit for the pattern: spend increased through higher paid per admit, and the recommended action is a postpay review against SNF payment rules, which directly aligns to reimbursement method review.; IP NF (DNE) Trend 4: The variance is tightly isolated to the SNF - FREE STANDING setting, so service/site-of-care review is highly relevant for this emerging outlier.; IP NF (DNE) Trend 3: Both state signals are concentrated in a single digestive diagnosis group, making diagnosis-level concentration a key parent driver to investigate.; IP NF (DNE) Trend 6: The pattern shows mixed volume and unit-cost pressure with explicit recommendation for utilization checks, so review of utilization management controls and placement oversight is relevant.; IP NF (DNE) Trend 1: Because the emergence is narrow by state, product, and SNF setting, it may be concentrated in a small subset of facilities/providers or local contractual behavior."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP NF (DNE)",
+          "OP Surg (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 4: CA LTSS Non Dual spend sits in facility_type 'Not Mapped'; this is fundamentally a site-of-care/service classification issue, so service-driver review is the closest parent rule once mapping is corrected.; IP NF (DNE) Trend 1: The CA NF-related record is concentrated in a specific provider context, and the pattern explicitly says mapping must be fixed before provider or network action can be directed appropriately.; OP Surg (DNE) Trend 3: NJ clinical variance is tied to OP Surg with diagnosis code D259 and a 'Not Mapped' clinical grouping, making diagnosis-driver investigation highly relevant after remapping.; OP Surg (DNE) Trend 4: The NJ OP Surg pattern includes procedure grouping 'Cardiovascular, Hemic, and Lymphatic Systems'; correct clinical/service mapping is needed before service-driver analysis.; OP Surg (DNE) Trend 1: NJ operational and clinical cards are both tied to provider RAJESH I PATEL, so provider-driver review is relevant once the unmapped facility and DRG records are classified correctly."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T04:56:38.665119+00:00"
+  }
+}

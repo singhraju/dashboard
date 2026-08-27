@@ -1,0 +1,511 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R6-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R6-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "GA PPO Local pressure is concentrated at one acute provider, with smaller spillover to unmapped and critical access settings",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "obstetrical_delivery_exclusion",
+          "label": "OB Delivery Excl.",
+          "type": "badge"
+        },
+        {
+          "id": "readmission_policy_scope",
+          "label": "Readmit Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_delivery_exclusion": "Excludes OB",
+          "readmission_policy_scope": "Broad DRG-based inpatient readmission policy: related unplanned 30-day readmissions generally not separately reimbursed."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_delivery_exclusion": "-",
+          "readmission_policy_scope": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_delivery_exclusion": "-",
+          "readmission_policy_scope": "Applies only to acute inpatient IPPS hospitals; CAHs, rehab, psych, VA/DoD excluded."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "This payer's inpatient readmissions policy applies broadly to DRG-based facility claims. It does not name this DRG, but unplanned same, similar, or related readmissions within 30 days are not separately reimbursed unless an exception applies. Same-day readmissions are treated as part of the original admission.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "GA: 3 days, same or related problem"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or CMS contract override",
+            "cancer",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "acute care hospital transfer",
+            "against medical advice"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "Wrong-body-part surgical events are nonreimbursable. The plan rejects or denies the erroneous procedure and all related services. Inpatient claims with HCACs can also have charges and days removed from DRG reimbursement when POA indicates the condition was not present on admission.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [
+            "Y65.52",
+            "Y65.51",
+            "Y65.53"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient stay",
+            "related services to erroneous surgery"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "OPPC",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "professional providers",
+            "facilities"
+          ],
+          "exemptions": [
+            "condition existed prior to treatment by that facility",
+            "condition existed prior to treatment by another provider"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The policy is not code-specific to this DRG label, but it applies to inpatient DRG-based claims and generally denies separate reimbursement for unplanned readmissions to the same hospital within 30 days when the readmission is for the same, similar, or related condition.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days of discharge",
+            "same hospital",
+            "same, similar, or related condition"
+          ],
+          "utilization_limits": [
+            "30-day readmission review"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or CMS contracts and/or requirements"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00025",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00029",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00058",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Testing for Diagnosis of Active or Latent Tuberculosis",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea9a",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00125",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Acquired Conditions Policy, Facility",
+        "tags": [],
+        "effective_date": "2008-10-01",
+        "evidence": "Applies to inpatient acute care claims. Selected hospital-acquired conditions that are not present on admission do not receive additional payment, and the case is paid as though the secondary diagnosis were not present. Applies only to IPPS hospitals, with listed facility exemptions.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Acquired-Conditions-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient admission",
+            "POA on diagnosis"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "IPPS",
+            "MS-DRG",
+            "UB-04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "POA exempt codes",
+            "CAHs",
+            "LTCHs",
+            "Maryland Waiver Hospitals",
+            "Cancer Hospitals",
+            "Children's Inpatient Facilities",
+            "Religious Non-Medical Health Care Institutions",
+            "Inpatient Psychiatric Hospitals",
+            "Inpatient Rehabilitation Facilities",
+            "VA/DoD Hospitals"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01824",
+        "payer_name": "United Health",
+        "policy_title": "Diagnostic Testing for Influenza Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Diagnostic-Testing-Influenza-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01835",
+        "payer_name": "United Health",
+        "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "Off-topic. This policy governs molecular syndromic infectious disease laboratory panel coding, not inpatient DRG reimbursement for the requested grouping.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 11,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: GA PPO Local pressure is concentrated at one acute provider, with smaller spillover to unmapped and critical access settings",
+    "pattern_rank": 5,
+    "pattern_title": "GA PPO Local pressure is concentrated at one acute provider, with smaller spillover to unmapped and critical access settings",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Other Disorders of Nervous System with CC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 11,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "11 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because the provided pattern metadata and evidence describe acute-provider pressure, not California cesarean-delivery reimbursement edits."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/11 policies quarantined (18%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/11 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00120:Abortion, RP_GBD_HUM_00060:Laboratory - Hepatitis Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 93564,
+    "output": 42790,
+    "breakdown": {
+      "search_keywords": {
+        "input": 560,
+        "output": 366,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 559,
+        "output": 1202,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 81272,
+        "output": 33790,
+        "calls": 12
+      },
+      "relevance_judge": {
+        "input": 3412,
+        "output": 1558,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 1048,
+        "output": 661,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 824,
+        "output": 588,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 424,
+        "output": 239,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3275,
+        "output": 2724,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2190,
+        "output": 1662,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T16:12:29.317216+00:00",
+    "end_time": "2026-08-24T16:15:18.691457+00:00",
+    "duration_ms": 169374,
+    "version": "2.0.0"
+  }
+}

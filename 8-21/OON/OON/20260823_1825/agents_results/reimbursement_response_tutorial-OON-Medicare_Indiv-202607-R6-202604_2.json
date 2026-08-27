@@ -1,0 +1,762 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_2_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "UNATTRIBUTED outpatient temporary-code spend needs validation before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_applicability",
+          "label": "Pattern Match",
+          "type": "badge"
+        },
+        {
+          "id": "ob_global_bundling",
+          "label": "OB Bundle Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "CareFirst_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "-"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "Global OB reimbursement applies only when one same-TIN provider/group furnishes all maternity care."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "Denies C-codes",
+          "ob_global_bundling": "Not a bundling edit; restricts temporary outpatient C-codes by claim type P/bill type."
+        },
+        {
+          "payer_org": "Florida Blue",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "Allows G0500",
+          "ob_global_bundling": "Moderate sedation is bundled; reimburse separately only with specified endoscopy sedation codes."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "No specific OB bundle rule; modifier combinations may alter payment or require separate review."
+        },
+        {
+          "payer_org": "Martins Point Health Care",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "-"
+        },
+        {
+          "payer_org": "Premera Blue Cross",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "Modifier Rules",
+          "ob_global_bundling": "Not bundled; separately payable only with modifier TH or reduced with modifier 52 when supported."
+        },
+        {
+          "payer_org": "Regence_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_applicability": "-",
+          "ob_global_bundling": "No OB DRG bundling; modifier 22 allowed selectively, never with modifier 63."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Routine Obstetrics",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No outpatient temporary code or DRG is identified for the requested pattern. This retired policy instead governs routine obstetric reimbursement, including global maternity billing, duplicate/overlapping service denial, separate payment for unrelated E/M visits, multiple-delivery payment adjustments, and limited separate reimbursement for certain services such as fetal non-stress testing.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': This policy is specifically about routine obstetric reimbursement and maternity billing rules, which is a different clinical area from an unattributed outpatient temporary-code spend pattern with no obstetric tie identified."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_COM_CAREFIRST_BCBS_MD_DC_NV_28594160214",
+        "payer_name": "CareFirst_BCBS",
+        "policy_title": "Anesthesia Policy - Professional",
+        "tags": [],
+        "effective_date": "2024-07-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://secure.compliance360.com/Common/ViewUploadedFile.aspx?PD=PbRt%2bA78MS6ax3Z%2fSdlUHJNA8kpnyMjrt7r3zCi4C%2bmkvsCmOZeUx1y1GBAnNDSCdiyms8M%2bQZAnAoQbdjvo%2bybqidEyk63ctqSAjhfO74mcj6PWWMD2n7lqytqQKWInOpPQc99Wqt5My4len6IjNZEKJwnJQSz4vBbtdC3GCrTx3tpZsjl%2fiz8Z7t3Oc4ToK3XlHTgSksRpr2EKYcihonXMgIe0Toh%2fY7BdjIEzUBamMrJgKqTk2qlJeFhth1OhRpDEVom8qpof%2bpgeQPEirVO8acMUCieJuMF6xNAKDzk%3d",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CAREFIRST_BCBS_MD_DC_NV_28594160217",
+        "payer_name": "CareFirst_BCBS",
+        "policy_title": "Surgical Assistant - Professional and Facility",
+        "tags": [],
+        "effective_date": "July 1, 2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://secure.compliance360.com/Common/ViewUploadedFile.aspx?PD=PbRt%2bA78MS6Cwhg5zbBTttd%2bJnyWvnLw2TQXf27d12B4Mq0IcOociSlTNPBTquN9MA4XS68iZzhZszLeWQ7qoUA9YT1oX%2fdVhEhwcA5ITUXhKZeNEgm4puuYtpkEaH6izHE%2fx9K9kytYjYNmWZTDPgB0je%2f3Y8NGx8m9jNqeEELhyr%2bOQPOmjhn62iBkgkjfx0jER%2fPGdb6QrYhIfCH%2b35FDaWqSZmRoJ%2bebOenc%2brhtyFibHje%2fRl8sGG%2fh4yHuZrBkGK0r9kt2sI7PIfonwkbkn5UZKTi3l8QHsJdcx4M%3d",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00031",
+        "payer_name": "Cigna",
+        "policy_title": "Modifier 22 Increased Procedural Services",
+        "tags": [],
+        "effective_date": "2007-05-21",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/Modifier_22_Increased_Procedural_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": "1/01/2018",
+        "evidence": "EmblemHealth denies HCPCS C-code claims when they are billed outside the allowed facility bill types or when they are billed on professional claims.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "wrong bill type",
+            "professional claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "OPPS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "bill types 0120-012Z",
+            "0130-013Z",
+            "0140-014Z",
+            "0830-083Z",
+            "0850-085Z"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FLBL_FL_28206720003",
+        "payer_name": "Florida Blue",
+        "policy_title": "Anesthesia Services",
+        "tags": [],
+        "effective_date": "06/12/2025",
+        "evidence": "The only explicitly addressed outpatient temporary HCPCS code is G0500. It is allowed when the same physician or other qualified health care professional performing a gastrointestinal endoscopic procedure also provides the initial 15 minutes of moderate sedation, with additional time reportable using 99153 when appropriate. The policy does not state a broader edit for unattributed outpatient temporary-code spend beyond this code-specific rule.",
+        "policy_url": "https://files.guidewell.com/m/e30ca60e183ddf4/original/providers-payment-policies-anesthesia-services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "G0500"
+          ],
+          "related_codes": [
+            "99153",
+            "99155-99157",
+            "00100-01999"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same physician performs procedure",
+            "GI endoscopic procedure",
+            "initial 15 minutes"
+          ],
+          "utilization_limits": [
+            "15 minutes initial service"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same physician/QHP performing procedure",
+            "independent trained observer required"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00017",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Modifier 52 - Reduced Services",
+        "tags": [],
+        "effective_date": "2026-02-06",
+        "evidence": "This payer recognizes modifier 52 on outpatient facility and professional claims for partially reduced services, and reimburses the line at a reduced fee schedule amount when documentation supports the reduction. The modifier cannot be used with several code or modifier combinations and is not valid for time-based codes or maternity delivery codes.",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_051718.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59510",
+            "59514",
+            "59515",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "required_modifiers": [
+            "52"
+          ],
+          "excluded_modifiers": [
+            "22",
+            "53"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "AK: 75% through 2026-02-05",
+            "AK: 50% on and after 2026-02-06"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "ASC APC payment methodology",
+            "provider contract dictates otherwise"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00088",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Modifier TH - Obstetrical treatment/services",
+        "tags": [],
+        "effective_date": "04/02/26",
+        "evidence": "The plan recognizes office E&M visits with modifier TH for antepartum care when fewer than 4 antepartum visits were rendered. TH is limited to antepartum visits 1-3, is not used for postpartum E&M visits, and cannot be billed by the same provider or provider group that bills global maternity care.",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_131217.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "99202-99215",
+            "99341-99350"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59430"
+          ],
+          "required_modifiers": [
+            "TH"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same provider/group restriction"
+          ],
+          "utilization_limits": [
+            "antepartum visits 1-3"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "Alaska providers exempt"
+          ],
+          "provider_role_restrictions": [
+            "same provider/group cannot bill global maternity code"
+          ],
+          "exemptions": [
+            "Alaska providers"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_REGENCE_BCBS_ID_OR_UT_28593710008",
+        "payer_name": "Regence_BCBS",
+        "policy_title": "Modifier 22; Increased Procedural Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "Off-topic for the requested DRG/outpatient temporary-code pattern; this policy instead governs Modifier 22 increased procedural services on physician and qualified health care professional claims.",
+        "policy_url": "https://www.regence.com/provider/library/policies-guidelines/reimbursement-policy/modifier-22",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_00681",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Multiple Delivery Services",
+        "tags": [],
+        "effective_date": "2024-07-17",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/texas/government/Medicaid-rp/TX_WLP_CAID_RP_MultipleDelivery.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Professional Anesthesia Services",
+        "tags": [],
+        "effective_date": "2025-11-14",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00074",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Modifier 22",
+        "tags": [],
+        "effective_date": "09/06/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2022.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00133",
+        "payer_name": "Humana",
+        "policy_title": "Common CPT and HCPCS Modifiers",
+        "tags": [],
+        "effective_date": "02/2015",
+        "evidence": "General modifier-payment policy for Medicare Advantage claims. It requires CPT and HCPCS modifiers only when appropriate, reviews modifier-code combinations, and may deny or recover payment for incorrect modifier use. No specific rule for unattributed outpatient temporary-code spend is stated.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MPHC_ME_2960213980001",
+        "payer_name": "Martins Point Health Care",
+        "policy_title": "Increased Payment Modifiers",
+        "tags": [],
+        "effective_date": "1/1/2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://martinspoint.org/-/media/Providers/Documents/Payment-Policy/Increased-Payment-Modifiers-Policy-GA-USFHP.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 30,
+    "policies_successful": 30,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For cesarean global maternity code 59510, allow separate antepartum E/M 99202-99215 or 99341-99350 only when modifier TH is present, limited to antepartum visits 1-3, and block payment when the same provider/group also bills the global maternity code 59510. Apply to CA. Peer: Premera Blue Cross requires modifier TH on 99202-99215 and 99341-99350 tied to 59510 and limits separate reimbursement to antepartum visits 1-3 when the same provider/group is not billing the global maternity code..\n\nRecommendation 2: For cesarean delivery codes 59510, 59514, and 59515, recognize reduced-service billing only when modifier 52 is on the same claim line, and do not allow modifier 22 or 53 with that reduced-service construct; honor ASC APC payment methodology and provider contract carve-outs. Apply to CA. Exempt: ASC APC payment methodology, provider contract dictates otherwise. Peer: Premera Blue Cross allows reduced reimbursement on 59510, 59514, and 59515 only with modifier 52 on the same claim line and excludes modifier 22 and 53, with ASC APC and contract carve-outs..",
+      "evidence": [
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services: \"99202-99215\" [target_codes]",
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services: \"99341-99350\" [target_codes]",
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services: \"59510\" [related_codes]",
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services: \"TH\" [required_modifiers]",
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services: \"antepartum visits 1-3\" [utilization_limits]",
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services: \"same provider/group cannot bill global maternity code\" [provider_role_restrictions]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"59510\" [related_codes]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"59514\" [related_codes]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"59515\" [related_codes]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"52\" [required_modifiers]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"22\" [excluded_modifiers]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"53\" [excluded_modifiers]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"same claim line\" [pairing_conditions]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"ASC APC payment methodology\" [exemptions]",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services: \"provider contract dictates otherwise\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Premera Blue Cross requires modifier TH on 99202-99215 and 99341-99350 tied to 59510 and limits separate reimbursement to antepartum visits 1-3 when the same provider/group is not billing the global maternity code.",
+        "Premera Blue Cross allows reduced reimbursement on 59510, 59514, and 59515 only with modifier 52 on the same claim line and excludes modifier 22 and 53, with ASC APC and contract carve-outs."
+      ],
+      "citation": [
+        "Premera Blue Cross \u00b7 Modifier TH - Obstetrical treatment/services \u2014 https://www.premera.com/paymentpolicies/cmi_131217.pdf",
+        "Premera Blue Cross \u00b7 Modifier 52 - Reduced Services \u2014 https://www.premera.com/paymentpolicies/cmi_051718.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: UNATTRIBUTED outpatient temporary-code spend needs validation before action",
+    "pattern_rank": 2,
+    "pattern_title": "UNATTRIBUTED outpatient temporary-code spend needs validation before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 30,
+    "successful_extractions": 30,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 30 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "30 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 3 of 3 source card(s) attest no state (segment scope: UNATTRIBUTED); searched without it rather than narrowing to []"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Item 0 was dropped for scope drift because it addresses outpatient temporary-code OPPS billing rather than cesarean-delivery reimbursement; the other items align with cesarean/global maternity policy."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "15/30 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "1/30 policies warning-flagged (3%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "15 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00007:Anesthesia Professional Services, RP_COM_ELV_INTERNAL_00096:Maternity Services C-19004, RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500115:Anesthesia Services, RP_COM_MDH_ALL_28595910104:Add-on Codes, RP_COM_MDH_ALL_28595920101:Modifier 22 - Increased Procedural Services, RP_COM_MDH_ALL_28595930101:Procedure Codes Assigned to Surgical Benefit Categories, RP_COM_MDH_ALL_28595960111:Global Surgery Package for Professional Providers, RP_COM_PBC_WA_00064:Add-On Codes, RP_COM_UHC_00028:Assistant-at-Surgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans, RP_GBD_ELV_EXTERNAL_00638:Professional Anesthesia Services, RP_GBD_ELV_INTERNAL_00128:Multiple Delivery Services, RP_GBD_HF_00092:Anesthesia Services, RP_GBD_HUM_00137:Assistant at Surgery Reimbursement, RP_GBD_MOH_00173:Multiple Procedure Payment Reduction, RP_GBD_MPHC_ME_2960213980018:Modifier 22]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "1 policy/ies flagged with contamination warnings (kept in output): [RP_ALL_ELV_INTERNAL_00019:Routine Obstetrics].",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 277217,
+    "output": 102158,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 283,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 1913,
+        "output": 20103,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 255411,
+        "output": 70137,
+        "calls": 33
+      },
+      "relevance_judge": {
+        "input": 9366,
+        "output": 5302,
+        "calls": 22
+      },
+      "dynamic_columns": {
+        "input": 996,
+        "output": 593,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1928,
+        "output": 1650,
+        "calls": 12
+      },
+      "elevance_summary": {
+        "input": 410,
+        "output": 256,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3722,
+        "output": 3295,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2951,
+        "output": 539,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:14:23.888765+00:00",
+    "end_time": "2026-08-23T19:18:45.562912+00:00",
+    "duration_ms": 261674,
+    "version": "2.0.0"
+  }
+}

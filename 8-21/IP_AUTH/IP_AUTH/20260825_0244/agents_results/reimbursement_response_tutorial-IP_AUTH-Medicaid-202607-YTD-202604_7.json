@@ -1,0 +1,499 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-YTD-202604_7_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-YTD-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA inpatient Med/Surg mix is shifting toward transplant, liver disease, and other rare high-cost cases",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "payment_impact",
+          "label": "Payment Impact",
+          "type": "text"
+        },
+        {
+          "id": "poa_hac_rules",
+          "label": "POA/HAC Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "HAC charges/days excluded from DRG payment; never-event procedures and related services denied.",
+          "poa_hac_rules": "Requires inpatient POA indicators; HAC/CC-MCC and coding modifier issues may trigger denial/review."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "No reimbursement for never events; related services denied, and HCACs excluded from DRG payment.",
+          "poa_hac_rules": "Requires POA for inpatient diagnoses, exempting admitting diagnosis, with record review and DRG impact."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "Separately reimbursable for listed clinical situations when criteria are met.",
+          "poa_hac_rules": "Requires documented qualifying indications, including liver/pulmonary disease or qualifying family history."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_impact": "Separate reimbursement limited to stated conditions once every 180 days; otherwise denied.",
+          "poa_hac_rules": "Requires documented qualifying liver disease diagnoses; no separate reimbursement documentation applies."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00167",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Present on Admission HCAC RETIRED",
+        "tags": [],
+        "effective_date": "04/20/18",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00066",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "04/01/2026",
+        "evidence": "For inpatient DRG claims, the plan requires POA reporting on primary and secondary diagnoses. If a diagnosis is a hospital acquired condition and the POA indicator shows it was not present on admission, reimbursement may be reduced or denied and HAC-related charges or days are removed from the DRG calculation.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA indicator on diagnosis",
+            "same surgical or invasive procedure",
+            "related services"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Professional",
+            "Facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition existed prior to treatment",
+            "secondary facility treated the HAC"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00185",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions C-23002",
+        "tags": [],
+        "effective_date": "09/01/2023",
+        "evidence": "Never event diagnosis for surgery or invasive procedure on the wrong body part. The claim and all related services are denied or rejected under this policy; inpatient DRG reimbursement may also be affected when applicable.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "related services"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Inpatient",
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "professional providers",
+            "facilities"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00159",
+        "payer_name": "United Health",
+        "policy_title": "Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Serum hepatic fibrosis testing is reimbursable once every 180 calendar days when used to distinguish cirrhosis from non-cirrhosis in qualifying liver disease.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hepatic-Fibrosis-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81517",
+            "81596",
+            "0002M",
+            "0003M",
+            "0166U",
+            "0344U",
+            "0468U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same member",
+            "same 180-day period"
+          ],
+          "utilization_limits": [
+            "1 unit every 180 calendar days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "Inpatient DRG reimbursement is adjusted when a health care-acquired condition is reported as not present on admission. POA is required for primary and secondary inpatient diagnoses; missing POA may lead to denial or rejection. When a HCAC is identified, related charges and days are removed from the DRG calculation.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient stay",
+            "same no-pay claim",
+            "related services"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "Facility claims",
+            "Professional claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition existed prior to treatment by that facility",
+            "secondary facility treated the HCAC",
+            "condition existed prior to initiation of treatment by another provider"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00021",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Testing for Alpha1 Anti-trypsin Deficiency",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "This policy allows alpha-1 antitrypsin testing only when specified clinical indications are present, including liver disease. No DRG-specific adjudication rule is stated.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c0",
+        "edit_rule_facts": {
+          "target_codes": [
+            "82103",
+            "82104"
+          ],
+          "related_codes": [
+            "82104",
+            "82103"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_ALL_28593510000",
+        "payer_name": "United Health",
+        "policy_title": "MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy",
+        "tags": [],
+        "effective_date": "2026-09-01",
+        "evidence": "Covers hepatic fibrosis assay testing on professional or facility claims, limited to qualifying liver disease diagnoses and a six-month frequency cap.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hepatic-Fibrosis-Testing-Chronic-Liver-Disease-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81517",
+            "81596",
+            "0002M",
+            "0003M",
+            "0166U",
+            "0344U",
+            "0468U"
+          ],
+          "related_codes": [
+            "0002M",
+            "0003M",
+            "0166U",
+            "0344U",
+            "0468U",
+            "81517",
+            "81596"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "per member regardless of provider"
+          ],
+          "utilization_limits": [
+            "once every 6 months",
+            "one unit every 180 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit",
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: CA inpatient Med/Surg mix is shifting toward transplant, liver disease, and other rare high-cost cases",
+    "pattern_rank": 7,
+    "pattern_title": "CA inpatient Med/Surg mix is shifting toward transplant, liver disease, and other rare high-cost cases",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cirrhosis and Alcoholic Hepatitis with CC",
+      "O.R. Procedures for Obesity with CC",
+      "Other Kidney and Urinary Tract Diagnoses with CC"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it addresses broad provider-preventable-condition editing rather than the pattern's CA inpatient Med/Surg high-cost case-mix shift."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 44956,
+    "output": 43922,
+    "breakdown": {
+      "search_keywords": {
+        "input": 552,
+        "output": 1050,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 539,
+        "output": 1109,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 31492,
+        "output": 36815,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 3040,
+        "output": 1069,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 942,
+        "output": 436,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1076,
+        "output": 1171,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 455,
+        "output": 185,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4364,
+        "output": 1809,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2496,
+        "output": 278,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-25T13:25:12.163718+00:00",
+    "end_time": "2026-08-25T13:27:23.838290+00:00",
+    "duration_ms": 131674,
+    "version": "2.0.0"
+  }
+}

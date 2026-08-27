@@ -1,0 +1,420 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_1_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IN DSNP HMO spend is trapped in a massive Not Mapped bucket",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "maternity_bundling",
+          "label": "Maternity Bundling",
+          "type": "text"
+        },
+        {
+          "id": "delivery_claim_requirements",
+          "label": "Claim Requirements",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "maternity_bundling": "Global obstetrical care is bundled once per pregnancy, including routine prenatal, delivery, and postpartum care.",
+          "delivery_claim_requirements": "Clinical review determines related readmissions; delivery claims need outcome/gestation codes, documentation, and pregnancy limits."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "maternity_bundling": "-",
+          "delivery_claim_requirements": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Professional Anesthesia Services",
+        "tags": [],
+        "effective_date": "11/14/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "This policy does not map to a specific DRG code; it applies to inpatient readmission adjudication for DRG-reimbursed facilities. Unplanned readmissions within 30 days for the same, similar, or related condition are not separately reimbursed, and planned readmissions or leave of absence cases are treated as one admission with one DRG payment.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days of discharge",
+            "same hospital",
+            "same or related condition"
+          ],
+          "utilization_limits": [
+            "30-day readmission review"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "planned readmission",
+            "leave of absence",
+            "acute care transfer",
+            "against medical advice",
+            "cancer treatment",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00126",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "10/23/2025",
+        "evidence": "No explicit DRG mapping appears; maternity services are adjudicated under global obstetrical billing rules, duplicate or overlapping maternity claims may be denied or recouped, and multiple state Medicaid exceptions apply.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "25",
+            "57",
+            "59",
+            "XE",
+            "XP",
+            "XS",
+            "XU"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "once per 279-day pregnancy",
+            "typically 13 prenatal visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "CA Medicaid: no global maternity",
+            "FL Medicaid: no global maternity",
+            "IA Medicaid: no global maternity",
+            "MD Medicaid: no global maternity",
+            "WV Medicaid: no global maternity",
+            "NJ Medicaid: global or individual",
+            "TN Medicaid: two postpartum visits",
+            "TX Medicaid: individual services only",
+            "GA Medicaid: lactation separate",
+            "LA/MO/IN: global only with other insurance",
+            "WI Medicaid: several services separate"
+          ],
+          "provider_role_restrictions": [
+            "single provider or same-TIN group",
+            "assistant surgeons for cesarean"
+          ],
+          "exemptions": [
+            "initial pregnancy diagnosis E/M",
+            "lab testing except urinalysis",
+            "high-risk extra antepartum visits",
+            "unrelated pregnancy E/M visits",
+            "maternal or fetal echocardiography",
+            "amniocentesis",
+            "chorionic villus sampling",
+            "NST or CST",
+            "biophysical profile",
+            "amnioinfusion",
+            "cervical dilator over 24 hours",
+            "inpatient E/M over 24 hours",
+            "surgical problems during pregnancy",
+            "maternal fetal medicine specialists",
+            "ultrasound",
+            "external cephalic version"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': The policy is specifically about maternity/obstetrical billing rules, while the pattern describes a generic DSNP HMO spend issue in a broad 'Not Mapped' bucket with no clear obstetric or maternity clinical focus."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "This inpatient readmission policy applies to DRG-reimbursed facilities and does not reference a Not Mapped bucket. Separate reimbursement is disallowed for unplanned readmissions within 30 days to the same hospital for the same, similar, or related condition, and planned readmissions or leave of absence are treated as one admission with one DRG payment, subject to listed exclusions and contract-based exceptions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same hospital",
+            "same date of service",
+            "within 30 days",
+            "same, similar, or related"
+          ],
+          "utilization_limits": [
+            "30 days from discharge"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider/state/federal/CMS contracts override",
+            "Colorado market",
+            "cancer treatment admissions",
+            "newborn admissions",
+            "behavioral health admissions",
+            "rehabilitation admissions",
+            "transfers between acute hospitals",
+            "against medical advice"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00133",
+        "payer_name": "Humana",
+        "policy_title": "Common CPT and HCPCS Modifiers",
+        "tags": [],
+        "effective_date": "02/2015",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: IN DSNP HMO spend is trapped in a massive Not Mapped bucket",
+    "pattern_rank": 1,
+    "pattern_title": "IN DSNP HMO spend is trapped in a massive Not Mapped bucket",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped for scope drift because they address California cesarean/maternity policy rather than the pattern's Indiana DSNP HMO Not Mapped facility-spend issue."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/6 policies quarantined (17%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "1/6 policies warning-flagged (17%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00130:Sterilization]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "1 policy/ies flagged with contamination warnings (kept in output): [RP_GBD_ELV_INTERNAL_00126:Maternity Services].",
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 54606,
+    "output": 22147,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 241,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 332,
+        "output": 340,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 43331,
+        "output": 15600,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1796,
+        "output": 1468,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 1009,
+        "output": 600,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 375,
+        "output": 287,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 415,
+        "output": 246,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3608,
+        "output": 3010,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3220,
+        "output": 355,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:12:46.146449+00:00",
+    "end_time": "2026-08-23T19:14:20.592396+00:00",
+    "duration_ms": 94445,
+    "version": "2.0.0"
+  }
+}

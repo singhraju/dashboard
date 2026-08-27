@@ -1,0 +1,1250 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Auth code distribution shifts must be validated before action",
+    "pattern_description": "A large share of the apparent cost change is tied to shifts in authorization coding distribution rather than a clear utilization or reimbursement signal. This appears in TX and again in UNATTRIBUTED / VA, so the first business step is to confirm how authorization status is being mapped onto claims before changing policy, contracting, or UM operations.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Auth code distribution shifts must be validated before action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "auth_requirement",
+              "label": "Auth Rule",
+              "type": "badge"
+            },
+            {
+              "id": "childbirth_exception",
+              "label": "Childbirth Exception",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "childbirth_exception": "-"
+            },
+            {
+              "payer_org": "BCBS_LA",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "Requires Auth",
+              "childbirth_exception": "Inpatient hospital admissions for childbirth do not require authorization."
+            },
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "childbirth_exception": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "Requires Auth",
+              "childbirth_exception": "No childbirth-specific exception; standard nonparticipating provider reimbursement rules apply."
+            },
+            {
+              "payer_org": "Florida Blue",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "childbirth_exception": "-"
+            },
+            {
+              "payer_org": "L.A. Care Health Plan",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "childbirth_exception": "-"
+            },
+            {
+              "payer_org": "Premera Blue Cross",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "childbirth_exception": "-"
+            },
+            {
+              "payer_org": "State FFS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "Requires Auth",
+              "childbirth_exception": "No childbirth-specific exception stated; standard authorization and exemption rules apply."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "childbirth_exception": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589950003",
+            "payer_name": "BCBS_KC",
+            "policy_title": "COVID 19 Billing and Coding",
+            "tags": [],
+            "effective_date": "12/1/2021",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/covid-19-billing-coding.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_BCBS_LA_LA_28589730008",
+            "payer_name": "BCBS_LA",
+            "policy_title": "Appendix II: Forms",
+            "tags": [],
+            "effective_date": "2026-01",
+            "evidence": "No specific procedure code rule is stated for auth code distribution shifts. The appendix requires authorization requests to be submitted before services are rendered, with retrospective review available only when permitted and with limited exceptions to the no-phone/no-fax rule.",
+            "policy_url": "https://providers.lablue.com/-/media/Files/Providers/Professional%20Provider%20Office%20Manual/2026/Prof%20Prov%20Manual%20Section%20Appendix%20II%20-%20Forms%20pdf.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "prior authorization",
+                "retrospective review"
+              ],
+              "state_specific_rules": [
+                "LA"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "transplants",
+                "dental services covered under medical",
+                "newborn sick babies",
+                "temporary members",
+                "most out-of-state services",
+                "Carelon inpatient authorization extensions and discharges",
+                "inpatient hospital admissions in connection with childbirth"
+              ],
+              "action_types": [
+                "require_auth"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00177",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Reimbursement by Code Definition RETIRED",
+            "tags": [],
+            "effective_date": "10/24/06",
+            "evidence": "The policy does not address validation of authorization code distribution shifts. It sets Tennessee reimbursement rules for medically necessary services, including when lack of prior authorization will not cause denial because the member could not have known enrollment status, and when prior authorization is required for non-emergency services from non-participating providers.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Reimbursement%20by%20Code%20Definition%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "Tennessee: reimbursement is not denied for lack of prior authorization when the member could not have known enrollment at the time of service and assignment was unknown",
+                "Tennessee: non-emergency services from a non-participating provider require prior authorization unless referred by a participating provider or required by TennCare or an Administrative Law Judge",
+                "Tennessee: referred non-participating provider reimbursement is no less than 80% of the fee schedule or contracted/negotiated rate"
+              ],
+              "provider_role_restrictions": [
+                "Health Plan Medical Director review required",
+                "participating provider referral to non-participating provider"
+              ],
+              "exemptions": [
+                "member could not have known enrollment",
+                "assignment is unknown",
+                "referred by a participating provider",
+                "service is prior authorized",
+                "directive from TennCare",
+                "Administrative Law Judge directive"
+              ],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_FLBL_FL_28206690003",
+            "payer_name": "Florida Blue",
+            "policy_title": "Never Event \u2013 Hospital Acquired Condition (HAC) in Inpatient Setting",
+            "tags": [],
+            "effective_date": "08/01/2021",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://files.guidewell.com/m/754fbe6b1ffe9759/original/providers-payment-policies-never-event-hospital-acquired-conditions-hac-in-inpatient-settings.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_PBC_WA_00033",
+            "payer_name": "Premera Blue Cross",
+            "policy_title": "Serious Adverse Events - Inpatient Facility Services",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.premera.com/paymentpolicies/cmi_114821.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_00664",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Genetic Tests Once Per Lifetime",
+            "tags": [],
+            "effective_date": "01/01/2024",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/texas/government/Medicaid-rp/TX_WLP_CAID_RP_GeneticTests.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_00839",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Genetic Testing: Once per Lifetime",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://provider.summitcommunitycare.com/docs/gpp/AR_CAID_RP_GeneticTests.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00004",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Genetic Tests Once per Lifetime",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Laboratory%20and%20Pathology/Genetic%20Tests%20Once%20per%20Lifetime.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_LACHP_00002",
+            "payer_name": "L.A. Care Health Plan",
+            "policy_title": "Clean Claim Billing Requirements CMS 1500",
+            "tags": [],
+            "effective_date": "2025-08-12",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.lacare.org/sites/default/files/la7204_cms_1500_v2_clean_claim_edits_202511.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_LACHP_00003",
+            "payer_name": "L.A. Care Health Plan",
+            "policy_title": "Clean Claim Billing Requirements UB 04",
+            "tags": [],
+            "effective_date": "08/12/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.lacare.org/sites/default/files/la7204_ub_04_v2_clean_claim_edits_202511.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_STATE_FFS_FL_28206640003",
+            "payer_name": "State FFS",
+            "policy_title": "Medicaid Providers Who Bill on the UB-04",
+            "tags": [],
+            "effective_date": "July 2008",
+            "evidence": "The handbook does not use the phrase 'auth code distribution shifts,' but it does require prior authorization data to be validated before billing or payment. Florida Medicaid ties payment to a valid authorization number, correct payer placement of that number, and matching provider and recipient identifiers on the authorization request and claim.",
+            "policy_url": "https://ahca.myflorida.com/content/download/7032/file/RH_08_080701_UB-04_ver1_3.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "99281"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "0451"
+              ],
+              "pairing_conditions": [
+                "auth number in 63A or 63B",
+                "NPI and recipient must match auth request",
+                "within 24 hours of admission",
+                "24 hours before last approved day",
+                "24 hours prior to admission",
+                "inpatient admission",
+                "primary diagnosis in same range",
+                "within 2 hours of admission",
+                "separate admission after psych transfer",
+                "same claim",
+                "delivery event",
+                "with diagnosis 630.0-677",
+                "EMTALA screening only",
+                "outpatient encounter"
+              ],
+              "utilization_limits": [
+                "3 days per psych authorization",
+                "45 inpatient days/fiscal year HMO",
+                "120 days auth validity",
+                "365 days transplant auth validity",
+                "3 days per authorization"
+              ],
+              "prior_auth_thresholds": [
+                "auth required for 290-314.9",
+                "auth required for 648.30-648.44",
+                "auth required for 630.0-677 with 72.0-74.9",
+                "no MediPass auth for 0451 with 99281",
+                "continued stay review before day 4"
+              ],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MediPass",
+                "HMO",
+                "PSN",
+                "CMS Network",
+                "Florida Medicaid"
+              ],
+              "state_specific_rules": [
+                "Florida: claim denied for auth NPI mismatch",
+                "Florida: enter 10-digit auth number on UB-04",
+                "Florida: enter psych auth in 63A-63C",
+                "Florida: effective February 1 2008"
+              ],
+              "provider_role_restrictions": [
+                "treating provider requests inpatient auth",
+                "Florida physician initiates out-of-state request",
+                "transplant physician requests transplant auth",
+                "physician provider must obtain authorization",
+                "hospital must obtain inpatient authorization"
+              ],
+              "exemptions": [
+                "Medicare covered crossovers",
+                "recipient in PSN",
+                "recipient in CMS Network",
+                "EMTALA screening with 0451 and 99281",
+                "type of admission 1 or 5",
+                "recipient enrolled in HMO",
+                "recipient dually eligible for Medicare and Medicaid",
+                "alcohol or drug detoxification services"
+              ],
+              "action_types": [
+                "require_auth",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00337",
+            "payer_name": "United Health",
+            "policy_title": "Appropriate Patient Discharge Status for Type of Bill Policy, Facility",
+            "tags": [],
+            "effective_date": "2025-09-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Appropriate-Patient-Discharge-Status-Type-Bill-Policy-(F7010).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX authorization coding distribution accounts for about $33.5M of apparent paid change. UNATTRIBUTED / VA adds another $4.5M of apparent change under the same authorization distribution issue. Affected examples include kidney and urinary infection DRGs in TX and acute myocardial infarction with MCC in UNATTRIBUTED / VA."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "TX DSNP acute hospital admissions are the main paid-cost driver",
+    "pattern_description": "TX DSNP HMO acute hospital spend is the clearest real cost trend in the analysis and is driven first by more admissions, with some added pressure from higher paid and allowed per admit. The signal is concentrated in authorization-required acute hospital claims, so the most likely lever is inpatient utilization management rather than broad product repricing alone.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX DSNP acute hospital admissions are the main paid-cost driver",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_relevance",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Rule Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_relevance": "-",
+              "policy_scope": "Nonreimburses specified urine culture CPT codes for routine general-exam primary diagnoses."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "Off-topic for the requested DRG pattern. The policy addresses laboratory urine culture CPT codes and a diagnosis-based nonreimbursement rule, not inpatient DRG admissions for kidney and urinary tract infections with MCC.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "87149* except CGS Administrators, LLC; Noridian Healthcare Solutions, LLC; Palmetto GBA; Wisconsin Physicians Service Insurance Corporation"
+              ],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX DSNP HMO acute hospital spend rose $34.7M, driven by 1,628 more admissions and 1,920 more claims. In the main TX acute hospital signal, average paid per admit rose about $441 and average allowed per admit about $544. A related TX DSNP HMO acute hospital cluster added another $1.0M, including 45 more urinary infection admissions and paid per admit up about $11.5K on with-MCC cases."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "TX DSNP spend is leaking into a Not Mapped facility bucket",
+    "pattern_description": "TX has a separate, material increase sitting in a Not Mapped facility bucket for DSNP HMO claims. Both admissions and paid per admit increased, but the facility classification is unresolved, so this could reflect a real site-of-care or provider mix shift, a mapping problem, or both.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX DSNP spend is leaking into a Not Mapped facility bucket",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mentioned",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "policy_scope": "-"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "policy_scope": "Facility services only; addresses observation billing, necessity, documentation, and excluded hours."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00004",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Genetic Tests Once per Lifetime",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Laboratory%20and%20Pathology/Genetic%20Tests%20Once%20per%20Lifetime.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00097",
+            "payer_name": "Humana",
+            "policy_title": "Observation Services",
+            "tags": [],
+            "effective_date": "03/2019",
+            "evidence": "Off-topic for the requested pattern. This policy addresses facility observation services billing, medical necessity, documentation, and hour exclusions, not a facility-bucket leakage or mapping rule.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092982a0acfa",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": {
+              "flags": [
+                "policy_topic_irrelevant"
+              ],
+              "severity": "warn",
+              "reasons": [
+                "relevance judge: relevant=false confidence='low': This policy is specifically about facility observation-services billing and documentation, while the pattern describes an administrative spend-leakage/not-mapped facility bucket issue without any clear observation-services clinical focus."
+              ]
+            }
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX DSNP HMO claims in the Not Mapped facility bucket increased $8.1M. Volume rose by 178 admissions and 209 claims. Average paid per admit increased about $33.1K and average allowed per admit about $33.4K."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "TX urinary infection admissions are running hotter and costlier",
+    "pattern_description": "TX clinical pressure is concentrated in urinary infection and cystitis episodes rather than a broad inpatient mix change. The pattern shows more admissions in kidney and urinary infection DRGs, along with higher severity or payment intensity in several diagnoses, especially unspecified UTI and cystitis presentations.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX urinary infection admissions are running hotter and costlier",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_relevance",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_relevance": "-",
+              "policy_scope": "-"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_relevance": "-",
+              "policy_scope": "Applies only to specified urine culture testing codes, not inpatient DRG admission payments."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082140004",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "2026-01-03",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab050-1-3-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082290004",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Pathogen Panel Testing",
+            "tags": [],
+            "effective_date": "2026-04-24",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab045-4-24-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Off-topic for inpatient DRG admission payment. This policy addresses reimbursement for specific urine culture testing CPT codes under Medicare Advantage, not DRG payment for kidney and urinary tract infection admissions.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "UTI site not specified added about $0.9M in Kidney and Urinary Tract Infections with MCC and about $0.4M without MCC. Those two UTI signals together reflect 120 more admissions. Additional TX urinary diagnoses added about $1.2M, including acute cystitis without hematuria, pyonephrosis, and cystitis without hematuria."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "IN / OH Not Mapped claims point to provider mix and reimbursement pressure",
+    "pattern_description": "Outside TX, the clearest provider mix pattern sits in Not Mapped inpatient claims tied to ASCENSION ST VINCENT HOSPITAL and UHCMC. The increases are concentrated in a small number of admissions with very large paid-per-admit changes, pointing to a mix of provider economics, case severity, and unresolved site attribution.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN / OH Not Mapped claims point to provider mix and reimbursement pressure",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_relevance",
+              "label": "DRG Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "scope_limit",
+              "label": "Scope Limit",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_relevance": "-",
+              "scope_limit": "Applies only to professional services."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00151",
+            "payer_name": "Humana",
+            "policy_title": "Modifier 62",
+            "tags": [],
+            "effective_date": "06/2010",
+            "evidence": "Off-topic for the requested DRG pattern. This policy addresses modifier 62 for professional co-surgeon billing and does not provide DRG payment rules or inpatient DRG mix guidance.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN DSNP HMO Not Mapped claims at ASCENSION ST VINCENT HOSPITAL rose about $0.8M on 10 more admissions, with paid per admit up about $68.0K. OH Medicare HMO Not Mapped claims at UHCMC rose about $0.4M on 5 more admissions, with paid per admit up about $34.9K. IN Medicare HMO Not Mapped claims at ASCENSION ST VINCENT HOSPITAL added about $0.2M on 9 more admissions, with paid per admit up about $27.6K."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "IN / OH rare catastrophic inpatient cases are distorting trend",
+    "pattern_description": "IN / OH has a distinct rare-case pattern driven by a handful of very high-cost admissions, not by broad utilization growth. These include transplant, tracheostomy with prolonged ventilation, cardiothoracic, and other one-case severe events at ASCENSION ST VINCENT HOSPITAL and UHCMC.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN / OH rare catastrophic inpatient cases are distorting trend",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_mentioned",
+              "label": "DRG Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "AmeriHealth Caritas",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mentioned": "-",
+              "policy_relevance": "Not relevant; cardiology services policy with no DRG-specific inpatient reimbursement or DRG mention."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mentioned": "-",
+              "policy_relevance": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00047",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "CAT Scan RETIRED",
+            "tags": [],
+            "effective_date": "08/16/06",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/CAT%20Scan%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_AHC_00256",
+            "payer_name": "AmeriHealth Caritas",
+            "policy_title": "Cardiology Services .pdf",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Off-topic for this DRG; the policy governs cardiology CPT/HCPCS services and does not contain DRG-specific inpatient case editing or reimbursement rules.",
+            "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Cardiology%20Services%20.pdf.coredownload.inline.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "A single heart transplant or heart assist system admission at ASCENSION ST VINCENT HOSPITAL added about $420K. A single tracheostomy with prolonged ventilation admission at UHCMC added about $401K. Other one-case cardiothoracic, sepsis, and O.R. procedure admissions added about $0.3M more."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "VA acute hospital growth is spreading across Medicare products",
+    "pattern_description": "VA shows a smaller but consistent acute hospital pattern across several Medicare products. DSNP HMO carries most of the increase, while Medicare HMO and CSNP HMO add further admission growth, all centered in authorization-required acute hospital urinary infection stays.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA acute hospital growth is spreading across Medicare products",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "routine_dx_denial",
+              "label": "Routine Dx Denial",
+              "type": "badge"
+            },
+            {
+              "id": "dx_lcd_criteria",
+              "label": "Dx/LCD Criteria",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "routine_dx_denial": "Denies",
+              "dx_lcd_criteria": "Requires medically necessary, non-routine primary diagnosis; Medicare LCDs may govern applicable pathogen testing."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "Urine culture testing is not reimbursable when the primary diagnosis is a general encounter without abnormal findings or a similar examination.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [
+                "87076",
+                "87077",
+                "87140",
+                "87147",
+                "87181",
+                "87186",
+                "87149"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "primary diagnosis general encounter"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "CGS Administrators, LLC",
+                "Noridian Healthcare Solutions, LLC",
+                "Palmetto GBA",
+                "Wisconsin Physicians Service Insurance Corporation"
+              ],
+              "action_types": [
+                "deny",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "VA DSNP HMO acute hospital spend rose about $619K, driven by 74 more urinary infection admissions across with-MCC and without-MCC DRGs. Paid per admit increased about $1.0K to $1.3K in those DSNP acute hospital stays. VA Medicare HMO and CSNP HMO added another $182K, mostly from 20 more acute hospital admissions."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Smaller segments show emerging acute and critical access pressure",
+    "pattern_description": "Several smaller segments are emerging with similar inpatient pressure, mostly in urinary infection DRGs across acute hospital and critical access settings. Individually these are modest, but together they show recurring admission growth and higher paid per admit, plus a small set of low-volume TX clinical outliers at TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Smaller segments show emerging acute and critical access pressure",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "coverage_rule",
+              "label": "Coverage Rule",
+              "type": "badge"
+            },
+            {
+              "id": "dx_exclusion",
+              "label": "Dx Exclusion",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "coverage_rule": "Denies",
+              "dx_exclusion": "Exclude general exam diagnoses without abnormal findings; comply with applicable contractor LCD requirements."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "This Medicare Advantage laboratory policy denies the listed urine culture bacterial identification and susceptibility CPTs when the claim's primary diagnosis is a general encounter without abnormal findings or similar examination.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [
+                "87076",
+                "87077",
+                "87140",
+                "87147",
+                "87181",
+                "87186",
+                "87149"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "primary diagnosis on claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "CGS Administrators, LLC L39038",
+                "Noridian Healthcare Solutions, LLC L39003",
+                "Noridian Healthcare Solutions, LLC L39001",
+                "Palmetto GBA L38988",
+                "Wisconsin Physicians Service Insurance Corporation L39044"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CT / IN / OH / WI DSNP HMO acute hospital claims added about $0.7M, led by recurring urinary infection DRGs in OH and IN. TX Medicare HMO acute hospital, IN PPO Local acute hospital, KY Medicare HMO critical access, and ME DSNP HMO critical access added another about $0.3M combined. Low-volume TX clinical episodes at TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL added about $162K, mostly sepsis, myocardial infarction, and heart failure cases."
+      }
+    }
+  }
+]

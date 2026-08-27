@@ -1,0 +1,351 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_7_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IU Health Ball Memorial Hospital is a concentrated IN cost driver",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_vs_delivery_only",
+          "label": "Global vs Delivery",
+          "type": "badge"
+        },
+        {
+          "id": "cesarean_claim_requirements",
+          "label": "Cesarean Claim Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_vs_delivery_only": "Bundles",
+          "cesarean_claim_requirements": "Require documentation of cesarean-only/non-global delivery, assistant surgeon role, and any missing maternity care."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_vs_delivery_only": "Revenue Code Req",
+          "cesarean_claim_requirements": "Claims/records must support newborn stay and revenue codes; no NICU code blocks sick newborn DRG."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Full global maternity package is reimbursed when one professional or group with the same TIN provides antepartum care, delivery, and postpartum care.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59514",
+            "59425"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59409",
+            "59410",
+            "59430",
+            "59510",
+            "59514",
+            "59515",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "01967",
+            "59000",
+            "59001",
+            "59012",
+            "59015",
+            "59020",
+            "59025",
+            "59030",
+            "59070",
+            "59200",
+            "59412",
+            "59414",
+            "76801-76817",
+            "76818-76819",
+            "76820",
+            "76821",
+            "76825-76828",
+            "96365-96367",
+            "96372",
+            "90460-90474",
+            "81000",
+            "81002",
+            "59400"
+          ],
+          "required_modifiers": [
+            "80",
+            "81",
+            "82",
+            "AS"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "after delivery",
+            "delivery only",
+            "same claim line",
+            "assistant surgeon present",
+            "antepartum care only"
+          ],
+          "utilization_limits": [
+            "about 13 prenatal visits",
+            "4-6 visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global Maternity/Obstetric Package",
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon"
+          ],
+          "exemptions": [
+            "59425",
+            "59426",
+            "59409",
+            "59410",
+            "59430",
+            "59514",
+            "59515",
+            "59612",
+            "59614",
+            "59620",
+            "59622"
+          ],
+          "action_types": [
+            "bundle",
+            "pay_separately",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00145",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "DRG Newborn Inpatient Stays C-18002",
+        "tags": [],
+        "effective_date": "12/18/2025",
+        "evidence": "Newborn inpatient stays are generally reimbursable, but DRG reimbursement depends on matching well-newborn or sick-newborn revenue codes. If no NICU revenue code is present, the claim will not group to a sick newborn DRG. The analyzed code is not explicitly listed in the policy.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/DRG%20Newborn%20Inpatient%20Stays%20C-18002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "revenue code must match DRG"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "Maine exempt",
+            "New York exempt",
+            "Virginia delayed implementation",
+            "some markets not subject"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider requirements",
+            "state requirements",
+            "federal requirements",
+            "contract requirements"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": "Elevance\u2019s DRG Newborn Inpatient Stays policy establishes reimbursement rules for newborn inpatient admissions, which aligns with the prematurity and preterm-birth portion of this Indiana cost pattern. It does not address cesarean delivery, so it is not responsive to the California cesarean-delivery question.",
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: IU Health Ball Memorial Hospital is a concentrated IN cost driver",
+    "pattern_rank": 7,
+    "pattern_title": "IU Health Ball Memorial Hospital is a concentrated IN cost driver",
+    "cpt_codes_requested": [
+      "O99892",
+      "Z3800"
+    ],
+    "drg_codes_requested": [
+      "Prematurity without Major Problems",
+      "Vaginal Delivery without Sterilization or D&C with CC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped for scope drift because the provided pattern is an Indiana hospital-specific cost-driver analysis, not a California cesarean delivery reimbursement pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 21244,
+    "output": 25122,
+    "breakdown": {
+      "search_keywords": {
+        "input": 537,
+        "output": 532,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 5090,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 339,
+        "output": 162,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 11091,
+        "output": 13265,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 970,
+        "output": 365,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 872,
+        "output": 530,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 577,
+        "output": 546,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 356,
+        "output": 778,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3935,
+        "output": 3193,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2124,
+        "output": 661,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:04:39.631259+00:00",
+    "end_time": "2026-08-23T05:06:25.810178+00:00",
+    "duration_ms": 106178,
+    "version": "2.0.0"
+  }
+}

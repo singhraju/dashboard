@@ -1,0 +1,298 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare transplant and catastrophic Med/Surg cases are creating outsized cost spikes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "transplant_bundling",
+          "label": "Bundling",
+          "type": "badge"
+        },
+        {
+          "id": "prior_auth",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "transplant_bundling": "Bundles",
+          "prior_auth": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "transplant_bundling": "Bundles",
+          "prior_auth": "Requires Auth"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "transplant_bundling": "Denies",
+          "prior_auth": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00181",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Robotic Assisted Surgery RETIRED",
+        "tags": [],
+        "effective_date": "10/17/06",
+        "evidence": "No DRG-specific rule is stated, but robotic assistance is not separately reimbursed; payment is based on the underlying surgery code or contracted rate only.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Robotic%20Assisted%20Surgery%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "22"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00041",
+        "payer_name": "Cigna",
+        "policy_title": "Omnibus Reimbursement Policy",
+        "tags": [],
+        "effective_date": "11/01/2014",
+        "evidence": "No DRG-specific payment rule is stated. The policy does address transplant claims and says organ transport, procurement, and retrieval are bundled into the primary transplant procedure and are not separately reimbursed.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R24_Omnibus_Reimbursement_Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Transplant"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "Denied as a nonreimbursable immune cell function assay under this Medicare Advantage claims payment policy.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81560",
+            "86352",
+            "0018M"
+          ],
+          "related_codes": [
+            "86352",
+            "0018M",
+            "81560"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "states awarded to Novitas Solutions, Inc.",
+            "LCD L34914"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Rare transplant and catastrophic Med/Surg cases are creating outsized cost spikes",
+    "pattern_rank": 6,
+    "pattern_title": "Rare transplant and catastrophic Med/Surg cases are creating outsized cost spikes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Coronary Bypass without Cardiac Catheterization with MCC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Liver Transplant without MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA', 'CO', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped: one for source-topic mismatch and one for scope drift from the catastrophic transplant/Med-Surg pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 26722,
+    "output": 15992,
+    "breakdown": {
+      "search_keywords": {
+        "input": 555,
+        "output": 516,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 361,
+        "output": 375,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 19302,
+        "output": 10841,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1478,
+        "output": 563,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 849,
+        "output": 597,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 682,
+        "output": 294,
+        "calls": 5
+      },
+      "elevance_summary": {
+        "input": 366,
+        "output": 156,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1885,
+        "output": 1750,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1244,
+        "output": 900,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T12:41:35.611503+00:00",
+    "end_time": "2026-08-22T12:42:45.260269+00:00",
+    "duration_ms": 69648,
+    "version": "2.0.0"
+  }
+}

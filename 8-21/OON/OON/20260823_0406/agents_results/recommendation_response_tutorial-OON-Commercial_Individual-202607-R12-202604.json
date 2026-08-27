@@ -1,0 +1,221 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a claims-processing and mapping audit for Commercial Individual Not Mapped claims in ME, CA, and GA, and reclassify ME outpatient miscellaneous drug claims, the CA cardiovascular inpatient claim, and GA lab/pathology claims from THREE RIVERS DIAGNOSTICS to the correct provider, facility, and site of care before contract, site-of-care, or utilization actions are assigned.",
+        "evidence": [
+          "ME PPO Not Mapped added about $1.7M with 162 more claims.",
+          "ME HMO Not Mapped added about $0.7M despite 29 fewer claims.",
+          "CA HMO Not Mapped included a major cardiovascular episode.",
+          "GA HMO Not Mapped concentrated in THREE RIVERS DIAGNOSTICS claims."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform provider-specific contract compliance and itemized bill review for CO Commercial Individual HMO IP Med/Surg admissions in ACUTE HOSPITAL and CHILDRENS, prioritizing LUTHERAN HOSPITAL, Other Major Cardiovascular Procedures with MCC, and diagnoses T81718A, I2109, I82411, and I82422; assess contract remediation and site-of-care opportunities for outlier inpatient episodes.",
+        "evidence": [
+          "Other Major Cardiovascular Procedures with MCC anchors CO HMO inpatient spend concentration.",
+          "LUTHERAN HOSPITAL appears in CO HMO acute hospital cardiovascular admissions.",
+          "Diagnoses T81718A, I2109, I82411, and I82422 recur in high-cost IP Med/Surg episodes.",
+          "CO HMO CHILDRENS contains concentrated high-cost inpatient episodes."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a case-level audit for CA Commercial Individual EPO acute hospital IP Med/Surg claims with T8149XA, T8143XA, and T8142XA at Mercy San Juan Medical Center to verify contractual reimbursement methodology, confirm final-bill adjudication, zero interim and first claims, and require itemized bill review.",
+        "evidence": [
+          "T8149XA, T8143XA, and T8142XA lead rare CA IP Med/Surg spend.",
+          "Mercy San Juan Medical Center has the top CA EPO acute hospital episode.",
+          "Leading infection claims have blank procedure detail.",
+          "Top postoperative infection claims paid near full allowed amounts.",
+          "A handful of admissions drive the variance."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted claims audit and remap for Not Mapped outpatient claims by assigning correct provider ownership, diagnosis bucket, and service classification for MEDEX BIOCARE PHARMACY D66/D67 drug claims, THREE RIVERS DIAGNOSTICS F1020/F1120 lab-pathology claims, SHIELD HEALTHCARE - VALENCIA supply claims, and TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL O034 maternity OP ER claims.",
+        "evidence": [
+          "UNATTRIBUTED D66 drug claims at MEDEX BIOCARE PHARMACY remained Not Mapped.",
+          "UNATTRIBUTED D67 drug claims also concentrated at MEDEX BIOCARE PHARMACY.",
+          "GA lab and pathology claims at THREE RIVERS DIAGNOSTICS remained Not Mapped.",
+          "TX O034 maternity claims appeared in Not Mapped OP ER."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a targeted acute inpatient reimbursement review for TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL and the HMO/POS case clusters tied to Other Major Cardiovascular Procedures with MCC, Postoperative or Posttraumatic Infections with O.R. Procedures with MCC, and Other Multiple Significant Trauma with CC to validate contract concessions, enforce authorization, and apply itemized bill plus HAC/never-event edits.",
+        "evidence": [
+          "TX HMO acute activity is concentrated at TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL.",
+          "WI HMO increase is driven by Other Multiple Significant Trauma with CC.",
+          "TX POS increase is tied to postoperative infection acute hospital claims.",
+          "CA, NV, and IN HMO increases are isolated high-cost admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a catastrophic-case payment audit for IP Med/Surg outliers coded Liver Transplant without MCC/K7031, Other Multiple Significant Trauma with CC/S065XAA, and Red Blood Cell Disorders without MCC/D571, focusing on FROEDTERT HOSPITAL and GRADY MEMORIAL HOSPITAL, with itemized bill review and authorization validation for transplant and trauma services.",
+        "evidence": [
+          "Combined pattern added about $1.7M across mostly single-case events.",
+          "One liver transplant admission added about $0.5M.",
+          "Separate trauma admissions added about $0.4M, $0.2M, and $0.2M.",
+          "Claims were up and paid per admit was up.",
+          "FROEDTERT HOSPITAL and GRADY MEMORIAL HOSPITAL appear in outlier cases."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles transplant ancillary services; organ transport, procurement, and retrieval are not separately reimbursed.",
+          "Elevance excludes transplants, major trauma, and certain sickle cell readmissions from its general inpatient readmission rule.",
+          "Moda requires complete, legible, signed medical documentation supporting billed services for payment."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a GA Commercial Individual HMO acute hospital IP Med/Surg audit for D5700 and Red Blood Cell Disorders without MCC at Grady Memorial Hospital to identify same-member, same-facility repeat admissions, confirm required prior authorization and UM approvals, and remediate any contract payment or readmission-liability gaps.",
+        "evidence": [
+          "Red Blood Cell Disorders without MCC drove the largest GA HMO acute increase.",
+          "D5700 sickle-cell inpatient cases created a separate clinical spike.",
+          "Grady Memorial Hospital appears in drill context for the blood-disorder increase.",
+          "Pattern describes recurring admissions and recommends repeat-admission review.",
+          "Paid per admit and paid ratio increased for blood-disorder admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a claim-level contract compliance, final-adjudication, and itemized-bill review for ME HMO acute-hospital drug claims tied to MEDEX BIOCARE PHARMACY and GA HMO acute-hospital claims for Traumatic Stupor and Coma >1 Hour without CC/MCC, validating reimbursement methodology and facility-service bundling.",
+        "evidence": [
+          "ME avg paid per admit rose while claim count fell.",
+          "ME context includes OP Mgmt Oth Misc and Drugs.",
+          "GA centers on Traumatic Stupor and Coma >1 Hour without CC/MCC.",
+          "Flags include repeated_delta_concentration and small_n_rows.",
+          "MEDEX BIOCARE PHARMACY appears in the ME context."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles broad facility-based services into room, board, or primary procedure payments.",
+          "Elevance Health excludes HAC-related charges and days from DRG and denies never-event services."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP Lab Pathology (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 1: The largest dollar impact is in ME Not Mapped outpatient miscellaneous/drug claims, and the pattern explicitly says provider classification is obscuring who is driving spend; this makes provider-driver review the most relevant parent rule.; OP Oth (DNE) Trend 4: The ME driver is tied to ambiguous outpatient drug/service lines and hidden site-of-care, so reviewing service drivers is directly relevant after claims are reclassified out of Not Mapped.; IP MedSurg (DNE) Trend 1: CA contains a high-cost cardiovascular inpatient episode sitting in a Not Mapped facility bucket; the true acute hospital/provider attribution must be identified before any utilization or contracting conclusion is made.; IP MedSurg (DNE) Trend 9: A major inpatient Med/Surg claim appearing under Not Mapped facility strongly suggests a claim classification or processing issue, making the claims-processing/standards rule highly relevant to validate mapping before action.; OP Lab Pathology (DNE) Trend 1: GA spend is concentrated in THREE RIVERS DIAGNOSTICS with 106 more claims, so once mapping is corrected the most relevant parent rule is provider-driver analysis for lab/pathology services."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Strongest fit because the variance is concentrated in a narrow set of inpatient diagnoses/episodes, especially major cardiovascular cases and specific diagnoses like T81718A, I2109, I82411, and I82422.; IP MedSurg (DNE) Trend 2: Highly relevant because the increase is driven by a handful of very high-cost cases, and the pattern explicitly notes that a few cases drive most of the increase and require case-level validation.; IP MedSurg (DNE) Trend 1: Relevant because spend appears concentrated in a limited provider/facility subset within CO HMO, including acute hospital and children's settings, with named provider concentration such as LUTHERAN HOSPITAL.; IP MedSurg (DNE) Trend 10: Relevant due to the clear unit-cost signal: paid per admit is materially higher, and the recommended next step includes reimbursement review for these high-cost inpatient episodes.; IP MedSurg (DNE) Trend 4: Relevant because the pattern is not broad-based; it is concentrated in specific inpatient service types/DRGs, especially major cardiovascular procedures and select children's hospital episodes."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow diagnosis set, led by postoperative infection diagnoses T8149XA, T8143XA, T8142XA and a smaller trauma diagnosis, making diagnosis isolation the clearest parent rule.; IP MedSurg (DNE) Trend 2: The increase is driven by a handful of catastrophic inpatient admissions rather than broad population use, so member-level concentration and case-level review are highly relevant.; IP MedSurg (DNE) Trend 1: A large share of the spend is tied to specific acute hospital providers, including a single Mercy San Juan Medical Center episode over $1.0M, so provider concentration and possible contract/provider-specific issues should be assessed.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly calls for isolating stop-loss or exception-payment exposure and confirming payment on severe surgical infection cases, which aligns closely to reimbursement method review.; IP MedSurg (DNE) Trend 9: Validation is needed because leading cases have blank procedure detail and very high paid ratios, so claims processing, coding, reprocessing, or claim status review is also directly relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "OP ER (DNE)",
+          "OP Lab Pathology (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 4: The dominant variance is in OP Mgmt Oth Misc with Not Mapped drugs and supplies, so the core parent question is whether the spend is isolated to a subset of services and placed in the wrong outpatient clinical bucket.; OP Oth (DNE) Trend 1: The largest spend is unattributed and concentrated with specific outpatient providers such as MEDEX BIOCARE PHARMACY, making provider ownership and attribution a primary parent rule.; OP Oth (DNE) Trend 3: Most of the material delta is concentrated in a narrow diagnosis set, especially D66 and D67 hemophilia-related claims, so diagnosis-level isolation is highly relevant.; OP Lab Pathology (DNE) Trend 1: The GA ancillary cluster is concentrated at THREE RIVERS DIAGNOSTICS with Not Mapped lab/pathology claims, which fits a provider-driver parent rule once mapping is corrected.; OP ER (DNE) Trend 4: The TX maternity-related OP ER claims appear clinically misbucketed under Not Mapped, so a service-driver rule is relevant for validating the correct setting and service classification."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern explicitly shows provider concentration, especially TX HMO acute hospital spend concentrated at TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL, and the recommended next step is a provider-level review.; IP MedSurg (DNE) Trend 3: Several named DRGs/diagnostic clusters drive the increase, including major cardiovascular procedures, postoperative infections, trauma, and coma-related admissions, indicating variance isolated to a subset of diagnoses.; IP MedSurg (DNE) Trend 10: The pattern is framed as provider network economics with mixed unit-cost pressure and a need to separate contract exposure from case severity, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 2: Multiple markets are driven by a handful of one-off high-cost admissions with very low claim counts, suggesting the variance may be concentrated in a small subset of members/cases.; IP MedSurg (DNE) Trend 4: The variance is concentrated within specific inpatient acute hospital service patterns such as O.R.-related infection cases and major cardiovascular procedures, so service-level review can help distinguish mix/severity from broader utilization."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow set of DRGs and diagnoses such as liver transplant, cirrhosis/alcoholic hepatitis, major trauma, sepsis, and red blood cell disorders, making diagnosis-driver review the strongest fit.; IP MedSurg (DNE) Trend 2: The pattern is driven by mostly single-case catastrophic admissions with zero or near-zero baseline, so the variance is effectively isolated to a very small subset of members requiring case-level review.; IP MedSurg (DNE) Trend 10: The recommended action explicitly calls for confirming transplant and trauma payment accuracy, which aligns directly to reviewing reimbursement method for these unusually high-cost inpatient cases.; IP MedSurg (DNE) Trend 1: Several outlier claims are tied to specific hospitals/providers, so provider-driver analysis is relevant to determine whether the variance is concentrated in a small provider subset or influenced by contract/payment behavior.; IP MedSurg (DNE) Trend 4: The variance is not broad inpatient utilization; it is limited to a small subset of high-cost Med/Surg services/DRGs, so service-level isolation is also relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend increase is highly concentrated in blood-disorder diagnoses, especially Red Blood Cell Disorders without MCC and D5700 sickle-cell cases, making diagnosis-level isolation the clearest parent rule.; IP MedSurg (DNE) Trend 5: The pattern is described as a recurring admission issue with recommended focus on repeat admissions, directly aligning to readmission-rate review for the same members.; IP MedSurg (DNE) Trend 1: A named hospital provider, Grady Memorial Hospital, appears in the drill context for the major blood-disorder spike, suggesting potential provider-specific utilization or contracting concentration.; IP MedSurg (DNE) Trend 10: Paid per admit and paid ratio both increased materially, and the recommendation explicitly calls for reviewing hospital contract terms that may be amplifying paid amounts, matching reimbursement-method review.; IP MedSurg (DNE) Trend 6: The pattern combines higher admissions with higher severity/unit cost and is framed as actionable through clinical and UM intervention, which fits review of utilization-management KPI changes and potentially avoidable variance."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 27,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: The pattern is explicitly unit-cost-led, with paid per admit sharply up despite flat volume, so reimbursement method review is the strongest parent rule fit for acute hospital pricing/case-rate pressure.; IP MedSurg (DNE) Trend 9: Recommended next steps call for auditing pricing, outlier payments, and contract application; the small-number, high-dollar claims are consistent with possible claims processing or reprocessing issues.; IP MedSurg (DNE) Trend 1: Variance is highly concentrated in a very small set of claims/providers and states, suggesting provider-specific billing, contract, or payment behavior should be isolated.; IP MedSurg (DNE) Trend 3: The GA component is tied to a specific trauma DRG/diagnosis, and the ME component also narrows to a specific diagnosis context, making diagnosis-level concentration relevant.; OP Oth (DNE) Trend 4: The dominant ME driver shows OP Mgmt Oth Misc / Drugs / Not Mapped context within the broader acute-hospital pattern, so service-level review is important to determine whether a specific drug/service classification is creating the unit-cost spike."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T04:46:25.941849+00:00"
+  }
+}

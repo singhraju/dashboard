@@ -1,0 +1,719 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY postpartum complications are growing through utilization, not broad price inflation",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_bundling",
+          "label": "Global Bundle",
+          "type": "badge"
+        },
+        {
+          "id": "overlap_limits",
+          "label": "Overlap Limits",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_bundling": "Bundles",
+          "overlap_limits": "Overlapping maternity/global postpartum claims for the same pregnancy are denied; global reimburses once per pregnancy."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_bundling": "-",
+          "overlap_limits": "-"
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_bundling": "-",
+          "overlap_limits": "-"
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_bundling": "Bundles",
+          "overlap_limits": "Same-day postpartum included in delivery; after 84 days bill E/M/procedure; MMC/HARP tracking only."
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_bundling": "Bundles",
+          "overlap_limits": "One antepartum/postpartum period per multiple birth; applies only to abortion-terminated pregnancies."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_bundling": "Bundles",
+          "overlap_limits": "Separate postpartum care only; overlaps split-care, cesarean delivery-only, and modifier 24 scenarios."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Routine Obstetrics",
+        "tags": [],
+        "effective_date": "2019-07-19",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "2022-09-08",
+        "evidence": "Postpartum care only is identified as a separately billable maternity service, but it is also part of the global obstetrical package and may be denied when overlapping maternity claims have already been paid for the same pregnancy.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430"
+          ],
+          "related_codes": [
+            "59400",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "overlapping maternity claims"
+          ],
+          "utilization_limits": [
+            "90-day postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Professional",
+            "Maternity Services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00135",
+        "payer_name": "Emblem Health",
+        "policy_title": "Prenatal Screening-Nongenetic (LBM)",
+        "tags": [],
+        "effective_date": "3/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/prenatal-screening-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500119",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services",
+        "tags": [],
+        "effective_date": "2018-01-29",
+        "evidence": "Postpartum care is bundled into the delivery/global obstetrical payment when billed by the same provider or physician group. Itemized postpartum charges with delivery are not separately reimbursed.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-023.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430",
+            "59425"
+          ],
+          "related_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59510",
+            "59514",
+            "59515",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "59426"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "same provider or group",
+            "pregnancy terminated by abortion"
+          ],
+          "utilization_limits": [
+            "single antepartum and postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same provider or physician group"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593510104",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Delivery Payment Equivalency",
+        "tags": [],
+        "effective_date": "June 30, 2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-056.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Postpartum care only is separately reportable. Routine postpartum outpatient visits and contraception discussion are included in postpartum care and are not separately reimbursable. Pregnancy-related problems or complications after 59430 may be reimbursed separately, and non-OB office E/M during postpartum care requires modifier 24.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430"
+          ],
+          "related_codes": [
+            "59410",
+            "59515",
+            "59622",
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "99202-99215"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "subsequent to 59430",
+            "during postpartum care",
+            "postpartum period"
+          ],
+          "utilization_limits": [
+            "6 weeks postpartum"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "OB"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "modifier 24 for non-OB office E/M"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00713",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Non-obstetrical and Obstetrical Transabdominal & Transvaginal Ultrasounds",
+        "tags": [],
+        "effective_date": "3/1/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.009-Non-obstetrical-and-Obstetrical-Transabdominal-and-Transvaginal-Ultrasounds.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00126",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "10/23/2025",
+        "evidence": "Maternity policy, not DRG-specific. Postpartum care is generally bundled into the global obstetric package, and overlapping postpartum claims may be denied. Limited state exceptions allow additional postpartum visits.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "within 6 weeks of delivery"
+          ],
+          "utilization_limits": [
+            "once per pregnancy (279 days)"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global obstetric"
+          ],
+          "state_specific_rules": [
+            "TN: 2 postpartum care visits in addition to global maternity services",
+            "TX: 2 postpartum care visits within 60 days",
+            "NJ: elect global or individual maternity services"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "TN: two postpartum care visits",
+            "TX: two postpartum care visits within 60 days",
+            "NJ: global or individual services"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00045",
+        "payer_name": "Healthfirst",
+        "policy_title": "Obstetric Billing Guidelines",
+        "tags": [],
+        "effective_date": "10/01/2025",
+        "evidence": "Postpartum care only is recognized in the policy but is deleted for dates of service on or after 01/01/2027. Before that date, postpartum care is addressed within obstetric billing rules and may not be separately reported when included in global or partial bundle services.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-132-Obstetric-Billing-Guidelines.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430",
+            "0503F"
+          ],
+          "related_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59410",
+            "59515",
+            "59614",
+            "59622",
+            "99211-99215",
+            "0500F"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of delivery",
+            "postpartum period",
+            "after 84 days",
+            "separate no-charge claim",
+            "real time",
+            "postpartum visit"
+          ],
+          "utilization_limits": [
+            "one postpartum period per pregnancy",
+            "MMC and HARP only"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "OB",
+            "MMC",
+            "HARP"
+          ],
+          "state_specific_rules": [
+            "NY: postpartum billing follows Medicaid guidance.",
+            "NY: informational postpartum reporting required for MMC and HARP."
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01066",
+        "payer_name": "United Health",
+        "policy_title": "Cesarean Delivery Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "Postpartum care only is separately reimbursable in split obstetrical care scenarios.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430",
+            "59514"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59514",
+            "59510",
+            "59430",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "required_modifiers": [
+            "U7",
+            "U8",
+            "U9"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "different tax identification number",
+            "separate physician",
+            "any position on claim",
+            "split obstetrical care"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [
+            "NY: delivery codes require U7,U8,U9"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "pay_separately",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01111",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Postpartum care-only is separately reimbursable, but routine uncomplicated postpartum visits and contraception are bundled into the code. Pregnancy-related problems or complications after the postpartum code may be reimbursed separately. The postpartum period is treated as 60 days after delivery.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430",
+            "59410"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59515",
+            "59614",
+            "59622"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "subsequent to 59430",
+            "within 60 days postpartum",
+            "same delivery episode",
+            "limited antepartum care"
+          ],
+          "utilization_limits": [
+            "60 days postpartum",
+            "single gestation"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [
+            "NY: U7/U8/U9 on delivery codes"
+          ],
+          "provider_role_restrictions": [
+            "same group physician or other qualified health professional"
+          ],
+          "exemptions": [
+            "evaluation and management of pregnancy complications",
+            "limited antepartum care"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 11,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle CPT 59430 into obstetric delivery codes 59400, 59510, 59514, and 59515 for the same pregnancy; deny overlapping maternity claims, and allow separate 59430 only for split obstetrical care in the same delivery episode when billed by a separate physician under a different tax identification number within 60 days postpartum/within 6 weeks of delivery, limited to once per pregnancy (279 days). Peer: Healthfirst, Highmark BCBS, and United Health all place CPT 59430 inside obstetric bundles tied to 59400/59510, and Highmark plus United Health extend cesarean-related guardrails to 59514 and 59515 with split-care or single-period limits..\n\nRecommendation 2: Carve out office E/M 99202-99215 with modifier 24 from the postpartum bundle during the postpartum period when used for evaluation and management of pregnancy complications, rather than auto-denying these visits under CPT 59430. Exempt: modifier 24 for non-OB office E/M, evaluation and management of pregnancy complications.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59430\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59400\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59510\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same pregnancy\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"overlapping maternity claims\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services: \"within 6 weeks of delivery\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services: \"once per pregnancy (279 days)\" [utilization_limits]",
+        "Highmark_BCBS \u00b7 Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services: \"59514\" [related_codes]",
+        "Highmark_BCBS \u00b7 Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services: \"59515\" [related_codes]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"different tax identification number\" [pairing_conditions]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"separate physician\" [pairing_conditions]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"split obstetrical care\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"within 60 days postpartum\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"same delivery episode\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59430\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"99202-99215\" [related_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"postpartum period\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"modifier 24 for non-OB office E/M\" [exemptions]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"evaluation and management of pregnancy complications\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Healthfirst, Highmark BCBS, and United Health all place CPT 59430 inside obstetric bundles tied to 59400/59510, and Highmark plus United Health extend cesarean-related guardrails to 59514 and 59515 with split-care or single-period limits."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "Elevance Health (internal) \u00b7 Maternity Services \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+        "Highmark_BCBS \u00b7 Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services \u2014 https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-023.pdf",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "United Health \u00b7 Obstetrical Services Policy, Professional \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: NY postpartum complications are growing through utilization, not broad price inflation",
+    "pattern_rank": 7,
+    "pattern_title": "NY postpartum complications are growing through utilization, not broad price inflation",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 11,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "11 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/11 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/11 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 98419,
+    "output": 49397,
+    "breakdown": {
+      "search_keywords": {
+        "input": 530,
+        "output": 391,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 832,
+        "output": 1966,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 82447,
+        "output": 40178,
+        "calls": 11
+      },
+      "relevance_judge": {
+        "input": 3250,
+        "output": 925,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 958,
+        "output": 426,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1394,
+        "output": 1229,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 373,
+        "output": 152,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 6287,
+        "output": 3472,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2348,
+        "output": 658,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T09:50:08.127581+00:00",
+    "end_time": "2026-08-23T09:52:09.212688+00:00",
+    "duration_ms": 121085,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "success": true,
+  "result": {
+    "job_id": "4d3d9a4e880241f295e7042e3ad5fc25",
+    "conversation_id": null,
+    "agent": "recommendation_dtr",
+    "status": "partial_success",
+    "output": {
+      "metadata": {
+        "total_patterns": 8,
+        "recommendations_generated": 5,
+        "patterns_skipped": 3,
+        "approach": "llm_based_dtr_relevance",
+        "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+      },
+      "recommendations": [
+        {
+          "rank": 3,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Conduct an immediate auth-to-claim and utilization management audit for ME Commercial Individual HMO PA-required non-ER acute hospital IP Med/Surg admissions at MAINEHEALTH MAINE MEDICAL CENTER PORTLAND, focused on Allogeneic Bone Marrow Transplant and ACUTE MYELOBLASTIC LEUK NOT REMISS, to confirm prior authorization, enforce unmatched authorization denials, review CUMG approval pathways, and assess elective site-of-care opportunity.",
+          "evidence": [
+            "PA required = Y for Commercial Individual HMO acute hospital admissions in ME.",
+            "Admissions rose by 410 while average paid per admission fell.",
+            "Non-ER IP Med/Surg concentrated at MaineHealth Maine Medical Center Portland.",
+            "Drill context isolates Allogeneic Bone Marrow Transplant / ACUTE MYELOBLASTIC LEUK NOT REMISS."
+          ],
+          "peer_benchmarking": [
+            "Point32Health uses a contracted-only all-inclusive transplant case rate, with donor procurement and specified testing separately reimbursed."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 4,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Complete a targeted auth-to-claim and claims-reprocessing validation for AUTH_CODE_DISTRIBUTION and facility_type 'Not Mapped' across ME, CA, GA, TX, WI, KY, CT, and IN, focusing on MaineHealth Maine Medical Center Portland, Santa Clara Valley Medical Center, Norton Hospital, Parkland Health and Hospital System, and the inpatient DRGs Craniotomy and Endovascular Intracranial Procedures with MCC and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC before UM or contracting changes.",
+          "evidence": [
+            "ME auth redistribution moved about $3.4M and requires validation before action.",
+            "CA craniotomy AUTH_CODE_DISTRIBUTION moved about $1.3M.",
+            "KY has about $1.2M in facility_type 'Not Mapped'.",
+            "TX degenerative nervous system disorders show AUTH_CODE_DISTRIBUTION movement."
+          ],
+          "peer_benchmarking": [
+            "Point32Health: auth may apply; transplant services limited to contracted facilities and negotiated case rates."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 5,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Initiate case-level reimbursement audits and itemized bill reviews for Commercial Individual IP Med/Surg CAR-T immunotherapy and heart transplant or heart-assist admissions at YALE NEW HAVEN HOSPITAL, spinal fusion infection admissions at NORTON HOSPITAL, craniotomy MCC admissions at SANTA CLARA VALLEY MEDICAL CENTER, and post-stroke hemiplegia admissions at PARKLAND HEALTH AND HOSPITAL SYSTEM; confirm DRG carve-out, stop-loss, prior authorization, and contract-compliant payment, and escalate any outlier provider terms for remediation.",
+          "evidence": [
+            "CAR-T immunotherapy at YALE NEW HAVEN HOSPITAL drove rare inpatient outlier spend.",
+            "Heart transplant or heart-assist admissions appeared in the same Yale outlier set.",
+            "Spinal fusion device infection cases were concentrated at NORTON HOSPITAL.",
+            "Craniotomy MCC and post-stroke hemiplegia episodes drove concentrated CA and TX spikes."
+          ],
+          "peer_benchmarking": [
+            "Fallon Health excludes APAD/APEC carve-out drugs from DRGs and separately reviews related inpatient services.",
+            "Highmark_BCBS excludes inpatient drugs from DRG outliers and bundles OPPS cellular therapy procedures into biologic payment."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 6,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Implement a Commercial Individual post-acute claims edit for pa_required_code Y admissions that matches authorizations to billed LONG TERM CARE HOSPITAL, Physical Rehab, CRITICAL ACCESS, and NF settings, enforces denials when actuals do not match, and triggers discharge-destination review for Degenerative Nervous System Disorders without MCC and AFTERCARE FOLLOW JNT REPLACE SURG.",
+          "evidence": [
+            "Spend shifted into LONG TERM CARE HOSPITAL, Physical Rehab, CRITICAL ACCESS, and NF settings.",
+            "Most operational source cards show pa_required_code Y and auth_dimension_present.",
+            "TX HMO Physical Rehab admissions increased for Degenerative Nervous System Disorders without MCC.",
+            "TX NF signal is concentrated in AFTERCARE FOLLOW JNT REPLACE SURG."
+          ],
+          "peer_benchmarking": [
+            "BCBS_TX and Emblem Health show no documented relevant post-acute policy in the payer summary table."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 7,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Implement a focused WI inpatient chemotherapy policy audit for AURORA ST. LUKE'S MEDICAL CENTER to verify prior authorization, match authorized versus billed inpatient services for ENCOUNTER FOR ANTINEOPLASTIC CHEMO under DRG Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, review initial and concurrent review KPIs, and establish alternative oncology site-of-care criteria for appropriate non-ER cases.",
+          "evidence": [
+            "PA required code is Y for these inpatient chemotherapy admissions.",
+            "ER admit indicator is N for this chemotherapy pattern.",
+            "Diagnosis is ENCOUNTER FOR ANTINEOPLASTIC CHEMO in IP Med/Surg.",
+            "DRG is Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC.",
+            "Provider concentration includes AURORA ST. LUKE'S MEDICAL CENTER."
+          ],
+          "peer_benchmarking": [
+            "Elevance Health: facility chemotherapy administration generally bundles with room and facility fees; Wisconsin allows separate reimbursement.",
+            "Humana: no facility setting rule identified for inpatient chemotherapy."
+          ],
+          "citation": []
+        }
+      ],
+      "skipped_patterns": [
+        {
+          "rank": 1,
+          "pattern": "CT PPO spend is concentrated at Yale New Haven Hospital",
+          "reason": "Could not fetch relevant rules"
+        },
+        {
+          "rank": 2,
+          "pattern": "Broad inpatient growth is pressuring HMO and PPO hospital spend",
+          "reason": "Could not fetch relevant rules"
+        },
+        {
+          "rank": 8,
+          "pattern": "TX maternity complexity is lifting inpatient delivery spend",
+          "reason": "Could not fetch relevant rules"
+        }
+      ],
+      "processing_log": [
+        {
+          "rank": 1,
+          "status": "skipped",
+          "reason": "rules_fetch_failed"
+        },
+        {
+          "rank": 2,
+          "status": "skipped",
+          "reason": "rules_fetch_failed"
+        },
+        {
+          "rank": 3,
+          "status": "success",
+          "rules_used": 18,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 6: Most directly matches the pattern because spend growth is clearly utilization-led, with admissions rising sharply while paid per admit fell; this points to UM KPI review, avoidable admits, authorization conversion, and continued-stay management.; IP MedSurg (DNE) Trend 8: Highly relevant because the pattern is explicitly filtered to PA required = Y and includes 'auth-to-claim validation' as a business term, making authorization enforcement a key parent rule.; IP MedSurg (DNE) Trend 1: Relevant because the drill context points to a specific hospital provider, suggesting the variance may be concentrated within a subset of providers and should be tested for provider-specific behavior or contracting effects.; IP MedSurg (DNE) Trend 3: Relevant because the context shows a specific DRG and diagnosis (allogeneic bone marrow transplant / acute myeloblastic leukemia), indicating the admissions surge may be concentrated in a diagnosis-related subset.; IP MedSurg (DNE) Trend 7: Relevant because ER admit indicator = N suggests non-ER inpatient volume, so reviewing admission source/location and whether growth is tied to elective or scheduled cases is appropriate."
+        },
+        {
+          "rank": 4,
+          "status": "success",
+          "rules_used": 8,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned to the repeated AUTH_CODE_DISTRIBUTION shifts and the explicit need for auth-to-claim validation before any UM or contracting action.; IP MedSurg (DNE) Trend 9: Facility values falling into 'Not Mapped' and other coding/mapping anomalies are consistent with claims processing or reprocessing issues that can misstate spend movement.; IP MedSurg (DNE) Trend 10: Wrong authorization classification or facility mapping can distort reimbursement conclusions, so reimbursement method review is relevant after validating the coding logic.; IP MedSurg (DNE) Trend 1: Variance is concentrated in specific hospitals/providers such as Maine Medical Center, Santa Clara Valley Medical Center, Norton Hospital, and Parkland, making provider-level isolation relevant.; IP MedSurg (DNE) Trend 4: The issue is concentrated in specific inpatient DRG/service lines such as craniotomy, chemotherapy, degenerative nervous system disorders, and spinal fusion, so service-level isolation is important once mapping is corrected."
+        },
+        {
+          "rank": 5,
+          "status": "success",
+          "rules_used": 19,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 1: Variance is concentrated in a small set of acute hospital providers, including Yale New Haven Hospital, Norton Hospital, Santa Clara Valley Medical Center, and Parkland, so provider-level review and contract differences are highly relevant.; IP MedSurg (DNE) Trend 2: The spend spike is driven by a handful of catastrophic admissions with low baseline and very small case counts, indicating concentration in a small subset of members and a need for case-level review.; IP MedSurg (DNE) Trend 3: The increase is tightly tied to specific diagnoses such as immunotherapy encounters, spinal device infection, cranial neoplasms, and severe post-stroke hemiplegia rather than broad inpatient growth.; IP MedSurg (DNE) Trend 4: Key drivers are highly specific specialty inpatient services/DRGs, including CAR-T immunotherapy, heart transplant/assist device, complex spinal fusion, craniotomy, and severe neurologic recovery episodes.; IP MedSurg (DNE) Trend 10: Pattern details explicitly call for confirming contract, stop-loss, carve-out, and specialized reimbursement handling for these catastrophic inpatient cases, which directly aligns to reimbursement method review."
+        },
+        {
+          "rank": 6,
+          "status": "success",
+          "rules_used": 30,
+          "categories": [
+            "IP MedSurg (DNE)",
+            "IP NF (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 4: The increase is concentrated in a narrow set of inpatient service and facility types\u2014long-term care hospital, physical rehab, and critical access\u2014so a service/site-of-care driver review is the strongest parent-rule match.; IP MedSurg (DNE) Trend 6: Admissions are up and the pattern describes post-acute migration bypassing acute-hospital controls, which makes utilization-management KPI and avoidable-variance review highly relevant.; IP MedSurg (DNE) Trend 7: The recommended action is to review discharge pathways and preferred post-acute placement, directly aligning with admission/discharge source-location analysis for this site-of-care shift.; IP MedSurg (DNE) Trend 8: Most operational drivers are prior-auth required and flagged for auth-to-claim validation, so checking whether authorization rules were appropriately enforced for these post-acute stays is highly relevant.; IP NF (DNE) Trend 3: The NF component is tied to a diagnosis-specific orthopedic aftercare signal (AFTERCARE FOLLOW JNT REPLACE SURG), so diagnosis-driver review is relevant for the nursing-facility portion of the pattern."
+        },
+        {
+          "rank": 7,
+          "status": "success",
+          "rules_used": 12,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is tightly concentrated in a specific oncology diagnosis pattern: ENCOUNTER FOR ANTINEOPLASTIC CHEMO tied to a chemotherapy DRG, which matches a diagnosis-driver review.; IP MedSurg (DNE) Trend 4: This is also a narrowly defined inpatient chemotherapy service pattern rather than broad Med/Surg inflation, so reviewing service-level drivers and oncology pathway design is highly relevant.; IP MedSurg (DNE) Trend 6: Admissions and paid per admit both increased, and the recommended next step is to review inpatient chemotherapy criteria and medical necessity, which aligns with utilization management KPI and avoidable variance review.; IP MedSurg (DNE) Trend 8: PA is required for these cases, so checking whether authorization decisions matched claims and whether denials were enforced is directly relevant to the inpatient necessity question.; IP MedSurg (DNE) Trend 7: These are non-ER chemotherapy admissions, suggesting planned/elective site-of-care decisions; the pattern specifically raises whether some treatment should shift to lower-cost outpatient oncology settings."
+        },
+        {
+          "rank": 8,
+          "status": "skipped",
+          "reason": "rules_fetch_failed"
+        }
+      ]
+    },
+    "recommended_action": [
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct an immediate auth-to-claim and utilization management audit for ME Commercial Individual HMO PA-required non-ER acute hospital IP Med/Surg admissions at MAINEHEALTH MAINE MEDICAL CENTER PORTLAND, focused on Allogeneic Bone Marrow Transplant and ACUTE MYELOBLASTIC LEUK NOT REMISS, to confirm prior authorization, enforce unmatched authorization denials, review CUMG approval pathways, and assess elective site-of-care opportunity.",
+        "evidence": [
+          "PA required = Y for Commercial Individual HMO acute hospital admissions in ME.",
+          "Admissions rose by 410 while average paid per admission fell.",
+          "Non-ER IP Med/Surg concentrated at MaineHealth Maine Medical Center Portland.",
+          "Drill context isolates Allogeneic Bone Marrow Transplant / ACUTE MYELOBLASTIC LEUK NOT REMISS."
+        ],
+        "peer_benchmarking": [
+          "Point32Health uses a contracted-only all-inclusive transplant case rate, with donor procurement and specified testing separately reimbursed."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Complete a targeted auth-to-claim and claims-reprocessing validation for AUTH_CODE_DISTRIBUTION and facility_type 'Not Mapped' across ME, CA, GA, TX, WI, KY, CT, and IN, focusing on MaineHealth Maine Medical Center Portland, Santa Clara Valley Medical Center, Norton Hospital, Parkland Health and Hospital System, and the inpatient DRGs Craniotomy and Endovascular Intracranial Procedures with MCC and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC before UM or contracting changes.",
+        "evidence": [
+          "ME auth redistribution moved about $3.4M and requires validation before action.",
+          "CA craniotomy AUTH_CODE_DISTRIBUTION moved about $1.3M.",
+          "KY has about $1.2M in facility_type 'Not Mapped'.",
+          "TX degenerative nervous system disorders show AUTH_CODE_DISTRIBUTION movement."
+        ],
+        "peer_benchmarking": [
+          "Point32Health: auth may apply; transplant services limited to contracted facilities and negotiated case rates."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate case-level reimbursement audits and itemized bill reviews for Commercial Individual IP Med/Surg CAR-T immunotherapy and heart transplant or heart-assist admissions at YALE NEW HAVEN HOSPITAL, spinal fusion infection admissions at NORTON HOSPITAL, craniotomy MCC admissions at SANTA CLARA VALLEY MEDICAL CENTER, and post-stroke hemiplegia admissions at PARKLAND HEALTH AND HOSPITAL SYSTEM; confirm DRG carve-out, stop-loss, prior authorization, and contract-compliant payment, and escalate any outlier provider terms for remediation.",
+        "evidence": [
+          "CAR-T immunotherapy at YALE NEW HAVEN HOSPITAL drove rare inpatient outlier spend.",
+          "Heart transplant or heart-assist admissions appeared in the same Yale outlier set.",
+          "Spinal fusion device infection cases were concentrated at NORTON HOSPITAL.",
+          "Craniotomy MCC and post-stroke hemiplegia episodes drove concentrated CA and TX spikes."
+        ],
+        "peer_benchmarking": [
+          "Fallon Health excludes APAD/APEC carve-out drugs from DRGs and separately reviews related inpatient services.",
+          "Highmark_BCBS excludes inpatient drugs from DRG outliers and bundles OPPS cellular therapy procedures into biologic payment."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a Commercial Individual post-acute claims edit for pa_required_code Y admissions that matches authorizations to billed LONG TERM CARE HOSPITAL, Physical Rehab, CRITICAL ACCESS, and NF settings, enforces denials when actuals do not match, and triggers discharge-destination review for Degenerative Nervous System Disorders without MCC and AFTERCARE FOLLOW JNT REPLACE SURG.",
+        "evidence": [
+          "Spend shifted into LONG TERM CARE HOSPITAL, Physical Rehab, CRITICAL ACCESS, and NF settings.",
+          "Most operational source cards show pa_required_code Y and auth_dimension_present.",
+          "TX HMO Physical Rehab admissions increased for Degenerative Nervous System Disorders without MCC.",
+          "TX NF signal is concentrated in AFTERCARE FOLLOW JNT REPLACE SURG."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX and Emblem Health show no documented relevant post-acute policy in the payer summary table."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a focused WI inpatient chemotherapy policy audit for AURORA ST. LUKE'S MEDICAL CENTER to verify prior authorization, match authorized versus billed inpatient services for ENCOUNTER FOR ANTINEOPLASTIC CHEMO under DRG Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, review initial and concurrent review KPIs, and establish alternative oncology site-of-care criteria for appropriate non-ER cases.",
+        "evidence": [
+          "PA required code is Y for these inpatient chemotherapy admissions.",
+          "ER admit indicator is N for this chemotherapy pattern.",
+          "Diagnosis is ENCOUNTER FOR ANTINEOPLASTIC CHEMO in IP Med/Surg.",
+          "DRG is Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC.",
+          "Provider concentration includes AURORA ST. LUKE'S MEDICAL CENTER."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health: facility chemotherapy administration generally bundles with room and facility fees; Wisconsin allows separate reimbursement.",
+          "Humana: no facility setting rule identified for inpatient chemotherapy."
+        ],
+        "citation": []
+      }
+    ],
+    "visual_component": {},
+    "explanation": {
+      "summary": "Generated 5 recommendations from 8 patterns",
+      "total_patterns": 8,
+      "recommendations_generated": 5,
+      "patterns_skipped": 3,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "validation": {
+      "is_valid": true,
+      "checks": [
+        {
+          "check": "patterns_processed",
+          "passed": true,
+          "message": "Processed 8 patterns"
+        },
+        {
+          "check": "dtr_rules_loaded",
+          "passed": true,
+          "message": "DTR rules loaded from /app/configs/decision_tree_rules.yaml"
+        },
+        {
+          "check": "recommendations_generated",
+          "passed": true,
+          "message": "Generated 5 recommendations"
+        },
+        {
+          "check": "token_tracking",
+          "passed": true,
+          "message": "Tracked 286549 input + 60114 output tokens"
+        }
+      ],
+      "warnings": [
+        "3 pattern(s) skipped (not relevant to DTR rules). See skipped_patterns in output for details."
+      ],
+      "errors": []
+    },
+    "tokens": {
+      "input": 286549,
+      "output": 60114,
+      "breakdown": {
+        "per_pattern": {
+          "pattern_1": {
+            "relevance": {
+              "input": 22641,
+              "output": 3585
+            },
+            "recommendation": {
+              "input": 0,
+              "output": 0
+            }
+          },
+          "pattern_2": {
+            "relevance": {
+              "input": 34925,
+              "output": 3890
+            },
+            "recommendation": {
+              "input": 0,
+              "output": 0
+            }
+          },
+          "pattern_3": {
+            "relevance": {
+              "input": 13851,
+              "output": 5737
+            },
+            "recommendation": {
+              "input": 5015,
+              "output": 2339
+            }
+          },
+          "pattern_4": {
+            "relevance": {
+              "input": 32646,
+              "output": 6192
+            },
+            "recommendation": {
+              "input": 13898,
+              "output": 3480
+            }
+          },
+          "pattern_5": {
+            "relevance": {
+              "input": 41534,
+              "output": 8387
+            },
+            "recommendation": {
+              "input": 18768,
+              "output": 3989
+            }
+          },
+          "pattern_6": {
+            "relevance": {
+              "input": 42044,
+              "output": 6290
+            },
+            "recommendation": {
+              "input": 19479,
+              "output": 5210
+            }
+          },
+          "pattern_7": {
+            "relevance": {
+              "input": 13611,
+              "output": 4252
+            },
+            "recommendation": {
+              "input": 4606,
+              "output": 2859
+            }
+          },
+          "pattern_8": {
+            "relevance": {
+              "input": 23531,
+              "output": 3904
+            },
+            "recommendation": {
+              "input": 0,
+              "output": 0
+            }
+          }
+        },
+        "aggregated": {
+          "relevance_checks": {
+            "input": 224783,
+            "output": 42237,
+            "calls": 8
+          },
+          "recommendations": {
+            "input": 61766,
+            "output": 17877,
+            "calls": 5
+          }
+        }
+      }
+    },
+    "execution": {
+      "start_time": "2026-08-22T13:24:31.447469+00:00",
+      "end_time": "2026-08-22T13:26:51.833844+00:00",
+      "duration_ms": 140386,
+      "version": "1.0.0"
+    }
+  },
+  "execution_time": 140.39214086532593,
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T13:26:51.834811+00:00"
+  }
+}

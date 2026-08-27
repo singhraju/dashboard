@@ -1,0 +1,410 @@
+{
+  "job_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604_5_job",
+  "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "GA inpatient behavioral health growth is concentrated in substance-use admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "care_setting",
+          "label": "Care Setting",
+          "type": "badge"
+        },
+        {
+          "id": "readmission_bundling",
+          "label": "Readmission Bundling",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "readmission_bundling": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "readmission_bundling": "Excluded from this policy; related unplanned readmissions are otherwise bundled to the original admission."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "readmission_bundling": "Specimen validity testing is bundled into one definitive drug test per day, not separately reimbursed."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00213",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Guidelines for Psychotherapy Services ",
+        "tags": [],
+        "effective_date": "07/23/2025",
+        "evidence": "This policy is a documentation guideline for professional psychotherapy services, not a DRG payment policy. It allows reimbursement for psychotherapy used to treat psychiatric and substance abuse disorders when documentation and provider requirements are met.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Documentation%20Guidelines%20for%20Psychotherapy%20Services%20.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Psychiatrists",
+            "Psychologists",
+            "APRNs/NPs with training",
+            "Physician assistants",
+            "Licensed mental health providers"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00044",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Standards for Episodes of Care C-20003",
+        "tags": [],
+        "effective_date": "2025-07-23",
+        "evidence": "No code-specific adjudication rule was found for this diagnosis code. The policy is a general documentation standard for episodes of care and requires appropriate clinical documentation, including substance abuse history when applicable.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Documentation%20Standards%20for%20Episodes%20of%20Care%20C-20003.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00085",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions C-17002",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "This policy excludes admissions for medical treatment of substance abuse from the readmission bundling/denial rules; otherwise, unplanned readmissions within 30 days for the same or related diagnosis are not separately reimbursed.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Inpatient%20Readmissions%20C-17002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge"
+          ],
+          "utilization_limits": [
+            "30 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Case rate"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Admissions for the medical treatment of substance abuse"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00040",
+        "payer_name": "United Health",
+        "policy_title": "Drug Testing Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-04-26",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Drug-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_01071",
+        "payer_name": "Centene",
+        "policy_title": "Drugs of Abuse: Definitive Testing",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CP.MP.50.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00042",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Standards for Episodes of Care",
+        "tags": [],
+        "effective_date": "2024-12-30",
+        "evidence": "General documentation standards apply to all episodes of care; no DRG-specific reimbursement rule was found for this substance-use DRG description.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Documentation%20Standards%20for%20Episodes%20of%20Care.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Drug Testing Policy",
+        "tags": [],
+        "effective_date": "2025-05-01",
+        "evidence": "Definitive drug testing CPT codes 80320-80377 are non-reimbursable under this policy; the payer directs reporting with the corresponding HCPCS definitive drug testing codes instead.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Drug-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "80320-80377",
+            "G0480-G0483",
+            "G0659"
+          ],
+          "related_codes": [
+            "G0480-G0483",
+            "G0659",
+            "80320-80377"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "one definitive test per day per patient"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny",
+            "limit"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: GA inpatient behavioral health growth is concentrated in substance-use admissions",
+    "pattern_rank": 5,
+    "pattern_title": "GA inpatient behavioral health growth is concentrated in substance-use admissions",
+    "cpt_codes_requested": [
+      "F10239",
+      "F1110",
+      "F1120"
+    ],
+    "drg_codes_requested": [
+      "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 43170,
+    "output": 30538,
+    "breakdown": {
+      "search_keywords": {
+        "input": 529,
+        "output": 176,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 448,
+        "output": 2361,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 480,
+        "output": 906,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 35394,
+        "output": 24833,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2366,
+        "output": 769,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 834,
+        "output": 506,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 572,
+        "output": 507,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 401,
+        "output": 236,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2146,
+        "output": 244,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T03:05:04.239943+00:00",
+    "end_time": "2026-08-24T03:05:59.625136+00:00",
+    "duration_ms": 55385,
+    "version": "2.0.0"
+  }
+}

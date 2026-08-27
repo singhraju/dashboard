@@ -1,0 +1,330 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-R6-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-R6-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "FL acute hospital growth is concentrated at Tampa General Hospital",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "facility_scope",
+          "label": "Facility Scope",
+          "type": "text"
+        },
+        {
+          "id": "routine_bundling",
+          "label": "Routine Bundling",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Florida Blue",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_scope": "-",
+          "routine_bundling": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_scope": "Covers inpatient and outpatient hospital settings, including basic rooms, critical care, and surgery.",
+          "routine_bundling": "Bundles"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_scope": "Applies to inpatient and outpatient hospital facilities, including rooms, procedural suites, and labs.",
+          "routine_bundling": "Bundles"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_FLBL_FL_28206710003",
+        "payer_name": "Florida Blue",
+        "policy_title": "Global Surgery Package",
+        "tags": [],
+        "effective_date": "10/09/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://files.guidewell.com/m/7d2f2f7eb720f5f0/original/providers-payment-policies-global-surgery-package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00273",
+        "payer_name": "Molina",
+        "policy_title": "Hospital Routine Supplies Services",
+        "tags": [],
+        "effective_date": "2023-06-15",
+        "evidence": "Specific DRG category is not named, but the policy broadly bundles routine hospital supplies, equipment, and facility personnel into room-and-board or procedure reimbursement. These items are not separately reimbursable and are excluded from outlier calculations.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "inpatient",
+            "outpatient"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01750",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility",
+        "tags": [],
+        "effective_date": "2024-12-01",
+        "evidence": "This facility reimbursement policy broadly bundles routine room-and-board, nursing, supplies, equipment, and certain ancillary services into hospital charges for UB-04 claims; the requested DRG pattern is not specifically referenced.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "410",
+            "412",
+            "250",
+            "270-279",
+            "300",
+            "309",
+            "361",
+            "391",
+            "460",
+            "510",
+            "761",
+            "300-370",
+            "419"
+          ],
+          "pairing_conditions": [
+            "same hospital stay",
+            "same room-and-board charge",
+            "same facility charge"
+          ],
+          "utilization_limits": [
+            "1 unit/day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB-04",
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Colorado exempt",
+            "Hawaii: OC 74-76",
+            "Kentucky exempt",
+            "Maryland exempt",
+            "Minnesota exempt",
+            "Mississippi exempt",
+            "Missouri exempt",
+            "Nebraska exempt",
+            "New Mexico exempt",
+            "North Carolina exempt",
+            "Texas exempt",
+            "Virginia: J0401,J0578,J2315,J2426,J2794,J2798,Q9991,Q9992"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Colorado exempt",
+            "Hawaii: OC 74-76",
+            "Kentucky exempt",
+            "Maryland exempt",
+            "Minnesota exempt",
+            "Mississippi exempt",
+            "Missouri exempt",
+            "Nebraska exempt",
+            "New Mexico exempt",
+            "North Carolina exempt",
+            "Texas exempt",
+            "Virginia: J0401,J0578,J2315,J2426,J2794,J2798,Q9991,Q9992"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: FL acute hospital growth is concentrated at Tampa General Hospital",
+    "pattern_rank": 6,
+    "pattern_title": "FL acute hospital growth is concentrated at Tampa General Hospital",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Degenerative Nervous System Disorders without MCC",
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['FL'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because the supplied pattern is about Florida acute hospital growth at Tampa General, not cesarean-delivery reimbursement policy."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/4 policies quarantined (25%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_UHC_01748:Global Days Policy, Professional]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 32139,
+    "output": 18872,
+    "breakdown": {
+      "search_keywords": {
+        "input": 556,
+        "output": 1234,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 487,
+        "output": 1497,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 23504,
+        "output": 11227,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1402,
+        "output": 586,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 942,
+        "output": 527,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 481,
+        "output": 331,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2820,
+        "output": 2940,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1947,
+        "output": 530,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-26T09:34:54.129579+00:00",
+    "end_time": "2026-08-26T09:36:34.444047+00:00",
+    "duration_ms": 100314,
+    "version": "2.0.0"
+  }
+}

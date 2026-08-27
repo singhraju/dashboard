@@ -1,0 +1,449 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization classification and mapping shifts must be validated before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "authorization_status",
+          "label": "Auth Status",
+          "type": "badge"
+        },
+        {
+          "id": "drg_ob_scope",
+          "label": "DRG/OB Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "authorization_status": "-",
+          "drg_ob_scope": "No DRG-specific rules; policy addresses global surgical package reimbursement and surgical modifiers."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "authorization_status": "-",
+          "drg_ob_scope": "No DRG-specific rule; broad coding edits apply across obstetric, surgical, and facility services."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "authorization_status": "Requires Auth",
+          "drg_ob_scope": "No DRG-specific scope stated; claims subject to general editing, eligibility, benefits, and authorization rules."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "authorization_status": "-",
+          "drg_ob_scope": "General facility inclusive-charges rule; not DRG-specific, with routine services and supplies bundled."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "10/30/2018",
+        "evidence": "No DRG-specific authorization or mapping rule is stated for this DRG. The policy instead governs global surgical package reimbursement and modifier handling on surgical claims.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00076",
+        "payer_name": "Emblem Health",
+        "policy_title": "Split Surgical Care (Modifiers 54/55/56) (Commercial)",
+        "tags": [],
+        "effective_date": "1/01/2021",
+        "evidence": "Modifier 54 is used for surgical care only when one provider performs the surgery and another provides preoperative and/or postoperative management. It is valid only for surgical procedure codes with a 10- or 90-day global period.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/EH_Split_Surgical_Modifiers_54_55_56_Reimbursement_Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "54",
+            "55",
+            "56"
+          ],
+          "excluded_modifiers": [
+            "55",
+            "54"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same surgical procedure code",
+            "transfer of postoperative care",
+            "after first postoperative visit",
+            "before surgery"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global Surgery",
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "surgeon relinquishing postop care",
+            "not assistant surgeon",
+            "receiving physician",
+            "not surgeon",
+            "non-surgeon physician",
+            "qualified health care professional"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No DRG-specific adjudication rule was found in this policy for this DRG description. The policy is a broad coding edit rule set focused on CPT/HCPCS, modifiers, revenue codes, and diagnosis-based edits, but it does not reference this DRG.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595760206",
+        "payer_name": "Point32Health",
+        "policy_title": "General Coding and Claims Editing",
+        "tags": [],
+        "effective_date": "01/2026",
+        "evidence": "General claims-editing policy; no DRG-specific mapping or classification-shift rule is stated. Payment remains subject to eligibility, benefits, referral/authorization, and claims-editing logic.",
+        "policy_url": "https://wwwassets.point32health.org/documents/general-coding-and-claims-editing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00101",
+        "payer_name": "United Health",
+        "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This policy is a general facility inclusive-charges rule, not a DRG-specific rule. Routine room, board, facility, surgical-room, and nursing services are bundled into the inpatient or outpatient facility charge and are not separately reimbursable. Facility-owned ventilator or CPAP management is reimbursable at one unit per day, while routine components remain bundled.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "410",
+            "412",
+            "250",
+            "270-279",
+            "300-370",
+            "300",
+            "309",
+            "361",
+            "391",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit/day for ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04",
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "management of a Ventilator or CPAP, owned by the facility",
+            "certain ancillary services ancillary to the Ventilator or CPAP usage"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 8,
+    "policies_successful": 8,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Add or validate a facility bundle edit for CA cesarean UB04 claims so routine ancillary lines under revenue codes 250, 260-269, 270-279, 300-370, 410, and 412 are treated as inclusive rather than separate auth-sensitive services, while preserving the United Health limit of 1 unit/day for ventilator or CPAP management and the exemption for management of a Ventilator or CPAP, owned by the facility. Apply to CA. Exempt: management of a Ventilator or CPAP, owned by the facility, certain ancillary services ancillary to the Ventilator or CPAP usage.\n\nIA \u2014 Before changing CA cesarean authorization classification, audit split-surgical-care mapping for modifiers 54, 55, and 56, including exclusion handling for 54 and 55, and only allow the split-care scenario when the claim pairs on the same date of service and same surgical procedure code with transfer of postoperative care, after first postoperative visit, or before surgery; also confirm provider-role routing is limited to the surgeon relinquishing postop care and the receiving physician, not assistant surgeon. (CA)",
+      "evidence": [
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"54\" [required_modifiers]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"55\" [required_modifiers]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"56\" [required_modifiers]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"55\" [excluded_modifiers]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"54\" [excluded_modifiers]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"same date of service\" [pairing_conditions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"same surgical procedure code\" [pairing_conditions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"transfer of postoperative care\" [pairing_conditions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"after first postoperative visit\" [pairing_conditions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"before surgery\" [pairing_conditions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"surgeon relinquishing postop care\" [provider_role_restrictions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"not assistant surgeon\" [provider_role_restrictions]",
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial): \"receiving physician\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"250\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"260-269\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"270-279\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"300-370\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"410\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"412\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"1 unit/day for ventilator or CPAP management\" [utilization_limits]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"management of a Ventilator or CPAP, owned by the facility\" [exemptions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB04\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Commercial\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Individual Exchange\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Emblem Health \u00b7 Split Surgical Care (Modifiers 54/55/56) (Commercial) \u2014 https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/EH_Split_Surgical_Modifiers_54_55_56_Reimbursement_Policy.pdf",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: Authorization classification and mapping shifts must be validated before action",
+    "pattern_rank": 1,
+    "pattern_title": "Authorization classification and mapping shifts must be validated before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC",
+      "Other Digestive System Diagnoses with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 8,
+    "successful_extractions": 8,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 8 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY', 'CT', 'GA', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/8 policies quarantined (25%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500128:Global Surgery and Subsequent Services, RP_COM_UHC_00045:Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 131410,
+    "output": 30190,
+    "breakdown": {
+      "search_keywords": {
+        "input": 574,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 731,
+        "output": 1901,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 117910,
+        "output": 22072,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 3528,
+        "output": 1863,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 1033,
+        "output": 400,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1115,
+        "output": 724,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 3257,
+        "output": 2160,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3262,
+        "output": 539,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:49:00.469138+00:00",
+    "end_time": "2026-08-24T11:50:40.667573+00:00",
+    "duration_ms": 100198,
+    "version": "2.0.0"
+  }
+}

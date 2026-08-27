@@ -1,0 +1,234 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a CO Commercial Individual HMO inpatient authorization-to-claim and UM KPI audit for PA=Y ACUTE HOSPITAL admissions, starting with UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, to verify approved level-of-care, enforce mismatched or denied authorizations through claims processing, and identify repeat-admission members.",
+        "evidence": [
+          "PA=Y authorized CO HMO acute hospital stays drove the top inpatient cost signal.",
+          "Commercial Individual inpatient spend increased in CO HMO acute hospitals.",
+          "Admissions and claims rose sharply while average paid per admit declined.",
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL appears in drill context."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CT Commercial Individual PPO inpatient prior-authorization enforcement review that audits initial and concurrent review KPIs, confirms PA=Y authorizations match paid ACUTE HOSPITAL and LONG TERM CARE HOSPITAL stays, and targets Medical Back Problems without MCC, Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, and downstream LONG TERM CARE HOSPITAL discharges for leakage and P.A.V. review.",
+        "evidence": [
+          "CT PPO acute hospital authorized stays added about $68.9M.",
+          "The main acute segment added 1,422 admissions and 737 claims.",
+          "Average paid per admit increased by only about $440.",
+          "Medical Back Problems without MCC appears in CT PPO acute drivers.",
+          "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC added pressure.",
+          "Smaller add-ons include chemotherapy-related acute pressure and LTCH utilization."
+        ],
+        "peer_benchmarking": [
+          "United Health states no prior authorization requirement and generally bundles inpatient facility charges.",
+          "Cigna shows no DRG-specific inpatient authorization rule; policy addresses pharmacy and infusion reimbursement only."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA Commercial Individual acute inpatient payment-integrity and UM review across HMO, EPO, and PPO to validate prior authorization attainment for PA=Y services, reconcile authorizations to actual inpatient claims, enforce denied authorizations in claims processing, confirm contractual payment compliance, and assess site-of-care or contract remediation for O'CONNOR HOSPITAL and the chemotherapy, hematology/immunology, and Medical Back Problems DRG subsets.",
+        "evidence": [
+          "CA acute hospital spend rose about $45.3M across HMO, EPO, and PPO.",
+          "CA HMO PA=Y acute stays added 422 admissions.",
+          "CA HMO PA=Y paid per admit increased about $24.7K.",
+          "CA EPO PA=Y acute stays added 264 admissions.",
+          "O'CONNOR HOSPITAL recurs within CA EPO acute growth.",
+          "Chemotherapy, hematology, and Medical Back Problems recur in acute drivers."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles facility charges; exceptions require physician or discharge documentation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Pause broad provider, site-of-care, and reimbursement actions for Commercial Individual inpatient CA, CO, OH, and WI until UM operations and data quality reconcile AUTH_CODE_DISTRIBUTION PA=Y/PA=N to actual authorization records, remap all Not Mapped facilities, confirm prior authorization and denial enforcement, and reprocess affected claims per contractual standards before rerunning analyses for CPMC VAN NESS CAMPUS, UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, and THE CHILDREN'S MEDICAL CENTER OF DAYTON.",
+        "evidence": [
+          "CA authorization code distribution contributed about $7.2M.",
+          "CO authorization code distribution contributed about $7.0M.",
+          "CA EPO spend in Not Mapped facilities added about $7.5M.",
+          "CA HMO spend in Not Mapped facilities added about $4.0M.",
+          "CO HMO added about $3.6M in Not Mapped facilities."
+        ],
+        "peer_benchmarking": [
+          "Cigna: no DRG-specific authorization or mapping; general facility bundling guidance only.",
+          "United Health: no prior authorization specified; UB04 routine services bundle, ventilator or CPAP management reimbursed daily."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a targeted site-of-care, transfer, and authorization policy review for Commercial Individual specialized inpatient admissions by validating auth-to-claim matching and denial enforcement for CHILDRENS, LONG TERM CARE HOSPITAL, Physical Rehab, and CRITICAL ACCESS cases, and open provider-level contract and referral-pathway remediation with CPMC VAN NESS CAMPUS, UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, and LAKEVIEW REHABILITATION CENTER in the highest-impact markets CA, CO, and WI.",
+        "evidence": [
+          "CA HMO CHILDRENS shows higher paid per admit with few additional admissions.",
+          "CO HMO CHILDRENS emerged with new admissions at UCHEALTH UNIVERSITY OF COLORADO HOSPITAL.",
+          "WI LONG TERM CARE HOSPITAL increase is concentrated at LAKEVIEW REHABILITATION CENTER.",
+          "CA, FL, and TX Physical Rehab repeat Aftercare musculoskeletal increases.",
+          "CO CRITICAL ACCESS increase is admission-driven."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a targeted contract remediation and claims-processing review for Commercial Individual acute inpatient claims at Medical City Plano (TX HMO/POS), Dearborn County Hospital (IN HMO), and AdventHealth North Pinellas (FL HMO) to confirm contractual reimbursement, validate prior authorization matched actual billed stays, assess site-of-care and avoidable-admission opportunities, and clinically validate Dearborn County Hospital sepsis cases.",
+        "evidence": [
+          "Residual inpatient growth is concentrated at a small number of hospitals.",
+          "Medical City Plano increased in TX HMO acute stays.",
+          "Medical City Plano also increased in TX POS acute activity.",
+          "Dearborn County Hospital increased in IN HMO acute stays.",
+          "AdventHealth North Pinellas increased in FL HMO acute stays.",
+          "Named provider spikes need case comparability and claim integrity confirmation.",
+          "Major provider cells show prior authorization required.",
+          "Auth-to-claim validation is listed as a business term.",
+          "Dearborn County Hospital context includes sepsis unspecified organism."
+        ],
+        "peer_benchmarking": [
+          "Florida Blue requires clinically validated Sepsis-3 and rejects SIRS, SEP-1, and qSOFA definitions."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a Commercial Individual WI and CA inpatient oncology utilization policy review for Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, ENCOUNTER FOR ANTINEOPLASTIC CHEMO, ANTINEO CHEMO INDUCED PANCYTOPENIA, and NEUTROPENIA UNSPECIFIED: assess admission root causes, review initial and concurrent review KPIs, confirm prior authorization on WI POS acute hospital cases, perform auth-to-claim matching, and establish site-of-care redirection for planned chemotherapy admissions.",
+        "evidence": [
+          "WI ENCOUNTER FOR ANTINEOPLASTIC CHEMO drove Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC.",
+          "WI cases were non-ER acute hospital admissions with PA required.",
+          "CA complication drivers were ANTINEO CHEMO INDUCED PANCYTOPENIA and NEUTROPENIA UNSPECIFIED.",
+          "WI POS acute hospital chemotherapy carried auth_dimension_present and reimbursement policy routing."
+        ],
+        "peer_benchmarking": [
+          "Providence uses readmission bundles but excludes expected repetitive inpatient cancer chemotherapy.",
+          "United Health bundles same-day readmissions and excludes chemo/immunotherapy admissions from room-and-board bundling.",
+          "Elevance does not separately reimburse G0498 with same-day facility fees."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted case-level outlier review for flagged ECMO/tracheostomy, septicemia/sepsis, infectious O.R. MCC, digestive MCC, orthopedic aftercare, and cirrhosis admissions at Medical City Plano, Saint Mary's Regional Hospital, Dearborn County Hospital, and The Children's Medical Center of Dayton to validate DRG assignment, contractual claim processing/reprocessing, and catastrophic case management before any broader policy or network action.",
+        "evidence": [
+          "Low-baseline, low-volume, small-n flags appear across multiple source groups.",
+          "Medical City Plano ECMO/tracheostomy admissions concentrated high-cost spend in Texas.",
+          "Children's Medical Center of Dayton gastroschisis cases were rare and catastrophic.",
+          "Saint Mary's Regional orthopedic aftercare rise came from more admissions.",
+          "Pattern guidance calls for case-level validation and coding confirmation."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health reviews claims individually with supporting documentation, invoices, and NDCs.",
+          "United Health reviews claims and itemized bills for applicable inpatient services."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Most directly aligned because the pattern is overwhelmingly volume-led in acute inpatient admissions with lower paid per admit, pointing to utilization management approval, level-of-care, or avoidable variance issues rather than price inflation.; IP MedSurg (DNE) Trend 8: Highly relevant since authorized stays (PA=Y) are the explicit driver; auth-to-claim matching should confirm that the surge reflects valid approved admissions and that denials/enforcement are functioning correctly.; IP MedSurg (DNE) Trend 7: Relevant because the recommended action explicitly calls for reviewing admission sources and level-of-care decisions, and the pattern reflects more inpatient use getting through the system.; IP MedSurg (DNE) Trend 1: Relevant due to likely provider concentration within CO acute hospitals, with drill context pointing to UCHEALTH UNIVERSITY OF COLORADO HOSPITAL as a possible major contributor to the surge.; IP MedSurg (DNE) Trend 5: Important inpatient follow-up because a sharp admissions increase could be partly driven by the same members having repeat acute stays, which would amplify volume without requiring higher unit cost."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The dominant signal is a large increase in authorized inpatient admissions with only minor change in paid per admit, making this primarily a utilization-management KPI issue.; IP MedSurg (DNE) Trend 8: PA=Y is present across the main drivers, and the source cards explicitly flag auth-to-claim validation, so authorization enforcement is directly relevant.; IP MedSurg (DNE) Trend 7: The recommended action calls for review of admission pathways and discharge destination patterns, including downstream LTCH use, which fits admission/discharge source-location review.; IP MedSurg (DNE) Trend 3: Variance is partly concentrated in specific inpatient DRGs such as Medical Back Problems without MCC and chemotherapy-related admissions, supporting diagnosis-level investigation.; IP MedSurg (DNE) Trend 4: The pattern spans acute hospital and LTCH authorized stays with site-of-care implications, so service-level review is relevant to isolate which inpatient services are driving growth."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern is fundamentally admission-driven in CA acute inpatient care, with large admission growth in both HMO and EPO and a recommended UM review of admission and level-of-care appropriateness, which fits a utilization management KPI/PAV investigation.; IP MedSurg (DNE) Trend 10: A major part of the variance is higher paid per admit, especially in CA HMO and at specific providers/DRGs, and the next step explicitly calls for validating contract performance and case-rate behavior, aligning to reimbursement method review.; IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in specific inpatient DRGs/diagnosis groupings such as chemotherapy, hematology/immunology, and medical back problems, making diagnosis-level driver analysis highly relevant.; IP MedSurg (DNE) Trend 1: Provider concentration is present within the broader CA acute pattern, especially O'Connor Hospital and named acute hospital providers, so provider behavior and contractual changes are important parent-rule considerations.; IP MedSurg (DNE) Trend 8: Authorization status is a core dimension in the pattern (PA=Y and PA=N), multiple source groups are flagged for auth_dimension_present, and business terms include auth-to-claim validation, making authorization enforcement/match review directly relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best fit for the core pattern: large PA=Y/PA=N distribution shifts and explicit auth-to-claim validation flags show the first question is whether authorization status is being assigned and enforced correctly.; IP MedSurg (DNE) Trend 9: Relevant because unmapped facility values and coding movement can reflect claims processing or reprocessing issues, so claim status/frequency review is a logical parent rule before interpreting trend as real utilization change.; IP MedSurg (DNE) Trend 10: Facility mapping gaps can alter reimbursement logic and site-of-care interpretation, making reimbursement method review important once auth and mapping defects are reconciled.; IP MedSurg (DNE) Trend 6: The pattern explicitly warns that authorization story may be classification noise; PA flag movement can distort UM KPI conclusions, so the PAV/UM waterfall is a strong secondary parent rule after data correction.; IP MedSurg (DNE) Trend 1: Concentrated impact in specific states and named hospitals suggests provider-level follow-up will matter, but only after the auth coding and facility mapping issues are fixed to avoid false provider-mix conclusions."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: The pattern is explicitly a site-of-care and referral/transfer mix shift into higher-cost inpatient settings, so reviewing admission/discharge source and location is the closest parent rule match.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a subset of specialized facilities and markets, especially CA and CO Children's plus WI LTCH and rehab-related providers, making provider-level behavior and contract review highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit rose sharply in the largest drivers, and the recommendation calls for contract performance review, which aligns with reimbursement method as a likely contributor alongside site-of-care mix.; IP MedSurg (DNE) Trend 8: Authorization context is present across the major source cards, and the pattern suggests specialized settings may be bypassing standard acute controls, so auth-to-claim enforcement should be evaluated.; IP MedSurg (DNE) Trend 6: Admissions are up and the recommended follow-up includes UM review of referral pathways and transfer criteria, which fits investigation of utilization management KPI or PAV-related changes."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small set of acute inpatient providers (Medical City Plano, Dearborn County Hospital, AdventHealth North Pinellas), making provider-driver isolation the clearest parent rule match.; IP MedSurg (DNE) Trend 10: Higher paid per admit and the recommendation to pull contract and reimbursement detail point directly to reimbursement method review as a key explanation for the provider-specific unit-cost pressure.; IP MedSurg (DNE) Trend 6: Admissions are up and the next step calls for UM review to determine whether growth reflects avoidable admissions or utilization management issues, which aligns with reviewing PAV and UM KPIs.; IP MedSurg (DNE) Trend 3: The pattern includes specific DRG/diagnosis signals and calls for case-mix and severity validation, so diagnosis-driver review is relevant to determine whether the spend increase reflects changing clinical mix.; IP MedSurg (DNE) Trend 8: All major cells are prior-authorization-related and include auth-to-claim validation as a business term, so checking whether authorization controls and denials are appropriately enforced is directly relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in specific oncology-related diagnoses: ENCOUNTER FOR ANTINEOPLASTIC CHEMO, ANTINEO CHEMO INDUCED PANCYTOPENIA, and NEUTROPENIA UNSPECIFIED, making diagnosis-level investigation the strongest fit.; IP MedSurg (DNE) Trend 4: This pattern is tied to a distinct inpatient chemotherapy/oncology service story, with recommended redirection to outpatient oncology protocols, so service-driver review is directly relevant.; IP MedSurg (DNE) Trend 6: The recommended next step focuses on care management, supportive care, and preventing avoidable chemotherapy-related admissions, which aligns with reviewing UM KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 7: A major WI driver is non-ER inpatient chemotherapy admissions, suggesting the need to assess whether more planned/elective admissions are occurring and whether they could be managed in other settings.; IP MedSurg (DNE) Trend 8: The WI operational signal includes PA required = Y and an auth_dimension_present flag, so auth-to-claim enforcement is relevant for understanding whether authorization controls are functioning as intended."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Primary variance is concentrated in a narrow set of catastrophic inpatient DRGs/diagnoses such as ECMO/tracheostomy, sepsis, digestive MCC, orthopedic aftercare, and cirrhosis, making diagnosis-level isolation the strongest parent rule.; IP MedSurg (DNE) Trend 1: Spend increase is also concentrated in a small set of hospitals/providers across states, including Medical City Plano, Saint Mary's Regional Hospital, Dearborn County Hospital, and Children's Medical Center of Dayton, supporting provider-driver review.; IP MedSurg (DNE) Trend 2: The pattern is explicitly small-n and case-level, with a few catastrophic admissions large enough to move trend, so member-level concentration and catastrophic case management are highly relevant.; IP MedSurg (DNE) Trend 4: Several outliers are tied to highly specific inpatient services/procedural groupings such as ECMO/mechanical ventilation, O.R. procedures with MCC, and orthopedic aftercare, so service-driver review is relevant after diagnosis/provider review.; IP MedSurg (DNE) Trend 9: The recommended action includes case-level validation and coding confirmation before broader action, which makes claim-level review for processing/reprocessing anomalies a reasonable supporting parent rule."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T19:42:38.833566+00:00"
+  }
+}

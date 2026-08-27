@@ -1,0 +1,417 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R6-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R6-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA authorization code distribution must be validated before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Requirement",
+          "type": "badge"
+        },
+        {
+          "id": "inpatient_scope",
+          "label": "Inpatient Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "inpatient_scope": "Denies never events and removes HAC-related charges or days from DRG inpatient reimbursement."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "inpatient_scope": "Applies to inpatient DRG hospital claims; POA-related preventable conditions reduce or deny reimbursement."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "inpatient_scope": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "inpatient_scope": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00167",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Present on Admission HCAC RETIRED",
+        "tags": [],
+        "effective_date": "04/20/18",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00066",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "04/01/2026",
+        "evidence": "The health plan denies or reduces reimbursement for provider preventable conditions. For inpatient claims, hospital acquired conditions identified by POA can remove charges or days from DRG reimbursement, and never events are denied for professional and facility claims.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA indicator present"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "inpatient facility",
+            "professional services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "preexisting at treatment start",
+            "secondary facility treating HAC",
+            "contracts or mandates override"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00185",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions C-23002",
+        "tags": [],
+        "effective_date": "09/01/2023",
+        "evidence": "This policy is on-topic for inpatient DRG reimbursement, but the named DRG is not explicitly listed. DRG claims may have reimbursement reduced when a present-on-admission review identifies a hospital acquired condition, and never-event procedures with related services are denied.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA review on admission"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition defined as a HAC existed prior to treatment",
+            "secondary facility treated HAC caused by another facility"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "Applies to inpatient DRG claims generally. When a provider preventable condition is identified, POA reporting drives DRG adjustment: HCAC charges and days are removed from reimbursement, and OPPC wrong-patient/wrong-body-part/wrong-surgery events are denied or rejected.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient facility claims",
+            "same claim",
+            "during inpatient stay"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Condition existed before treatment",
+            "Secondary facility treated HCAC",
+            "Critical Access Hospitals",
+            "LTACs",
+            "Maryland Waiver Hospitals",
+            "Cancer hospitals",
+            "Childrens inpatient facilities",
+            "Religious non-medical health care institutions",
+            "Inpatient psychiatric hospitals",
+            "Inpatient rehabilitation facilities",
+            "VA/DoD hospitals"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00025",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01835",
+        "payer_name": "United Health",
+        "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CA authorization code distribution must be validated before action",
+    "pattern_rank": 1,
+    "pattern_title": "CA authorization code distribution must be validated before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Kidney and Urinary Tract Infections without MCC",
+      "Other Disorders of Nervous System with CC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it addresses inpatient HAC/never-event denial logic rather than the pattern's validation-before-action authorization distribution issue."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 39461,
+    "output": 28419,
+    "breakdown": {
+      "search_keywords": {
+        "input": 538,
+        "output": 361,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 467,
+        "output": 1090,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 30728,
+        "output": 22319,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1387,
+        "output": 886,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 1007,
+        "output": 546,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 442,
+        "output": 260,
+        "calls": 3
+      },
+      "elevance_summary": {
+        "input": 401,
+        "output": 223,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2867,
+        "output": 2478,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1624,
+        "output": 256,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T16:09:23.950589+00:00",
+    "end_time": "2026-08-24T16:11:16.368083+00:00",
+    "duration_ms": 112417,
+    "version": "2.0.0"
+  }
+}

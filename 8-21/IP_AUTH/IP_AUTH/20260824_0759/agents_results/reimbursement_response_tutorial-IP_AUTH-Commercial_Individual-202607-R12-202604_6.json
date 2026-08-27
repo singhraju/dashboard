@@ -1,0 +1,761 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CO maternity spend was driven by a very small number of high-cost C-section cases",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "billing_structure",
+          "label": "Billing Structure",
+          "type": "text"
+        },
+        {
+          "id": "extra_pay_limits",
+          "label": "Extra Pay Limits",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_structure": "Generally bundled into global obstetric package; separate reimbursement only when global care isn\u2019t provided.",
+          "extra_pay_limits": "Secondary procedures pay 50%; no extra reimbursement for all-cesarean multiple births."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_structure": "Cesarean obstetric care bills globally or delivery/postpartum; overlapping same-pregnancy claims may be denied.",
+          "extra_pay_limits": "No duplicate pregnancy payments; extra reimbursement or epidural time over 300 minutes requires documentation."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_structure": "Cesarean is globally bundled; delivery-only codes may reduce, with extra payment for second baby.",
+          "extra_pay_limits": "Extra pay limited to twins or documented increased services; elective low-risk cesareans reduced."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Routine Obstetrics",
+        "tags": [],
+        "effective_date": "07/19/19",
+        "evidence": "This policy applies to routine obstetric services and includes cesarean delivery reimbursement rules. A single cesarean section is paid at 100% of the maximum allowance when billed correctly, while multiple c-section births do not receive additional reimbursement unless modifier 22 is supported by documentation. The policy does not name a DRG number, but it governs cesarean-delivery claims in the same clinical area.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Employer Group Retiree Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Same TIN global OB"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Cesarean delivery is payable as part of the full global maternity package when antepartum, delivery, and postpartum care are all provided by the same TIN.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59618",
+            "59514",
+            "59620"
+          ],
+          "related_codes": [
+            "59514",
+            "59515",
+            "59620",
+            "59510",
+            "59618"
+          ],
+          "required_modifiers": [
+            "80",
+            "81",
+            "82",
+            "AS"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "same claim line"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global maternity/obstetric package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same TIN required",
+            "assistant surgeon"
+          ],
+          "exemptions": [
+            "multiple gestation"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "Multiple-birth delivery claims are reimbursed at 100% for the primary delivery and 50% for secondary deliveries when a multiple gestation diagnosis is on the claim and at least one delivery is vaginal. When all deliveries are cesarean sections, additional reimbursement is not typically allowed unless modifier 22 supports substantially increased time and complexity.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59610",
+            "59612",
+            "59614",
+            "O30.001-O30.099",
+            "O30.101-O30.199",
+            "O30.201-O30.299",
+            "O30.801-O30.899",
+            "O30.90",
+            "O30.93",
+            "Z37.2-Z37.4",
+            "Z37.50-Z37.59",
+            "Z37.60-Z37.69",
+            "Z37.7",
+            "Z38.30-Z38.31",
+            "Z38.4-Z38.5",
+            "Z38.61-Z38.69",
+            "Z38.7-Z38.8"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "at least one vaginal delivery",
+            "multiple gestation diagnosis on claim"
+          ],
+          "utilization_limits": [
+            "secondary procedures paid at 50%"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "maternity benefits"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "modifier 22 for substantially increased time and complexity"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "2022-09-08",
+        "evidence": "This professional maternity reimbursement policy does not adjudicate facility DRG payment directly. On professional claims, the global obstetric package is reimbursed once per pregnancy when billed by one provider or group under the same TIN, and cesarean delivery is included in the global package rather than paid separately.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510"
+          ],
+          "related_codes": [
+            "59400",
+            "59430"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "same claim"
+          ],
+          "utilization_limits": [
+            "once per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Professional"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider/group under same TIN",
+            "assistant surgeons only for cesarean delivery"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Global cesarean OB codes are reimbursed when the same group provides antepartum, delivery, and postpartum care; cesarean delivery is included in the global package.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59618",
+            "59514",
+            "59620"
+          ],
+          "related_codes": [
+            "59514",
+            "59620",
+            "59515",
+            "59622",
+            "59510",
+            "59618"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same group care",
+            "all components provided",
+            "assistant surgeon modifier",
+            "twin delivery",
+            "second baby"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "CMS-1500"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Professional Anesthesia Services",
+        "tags": [],
+        "effective_date": "11/14/2025",
+        "evidence": "Policy is anesthesia-specific and applies to cesarean-related obstetrical anesthesia, not DRG payment. Neuraxial labor-and-delivery anesthesia is allowed with time limits, and some states permit cesarean-delivery add-on billing.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "01960",
+            "01967",
+            "01968",
+            "01969"
+          ],
+          "related_codes": [
+            "01962-01966"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "in conjunction with labor and delivery",
+            "Cesarean delivery following neuraxial labor anesthesia",
+            "same anesthesia episode"
+          ],
+          "utilization_limits": [
+            "300 minutes obstetrical epidural"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "professional anesthesia",
+            "obstetrical anesthesia"
+          ],
+          "state_specific_rules": [
+            "Texas: 01968 add-on with C-section",
+            "Florida: 360-minute labor limit",
+            "Washington: 360-minute labor limit",
+            "West Virginia: 120-minute maternity limit"
+          ],
+          "provider_role_restrictions": [
+            "delivering physician only for continuous epidural analgesia",
+            "qualified provider otherwise"
+          ],
+          "exemptions": [
+            "delivering physician continuous epidural analgesia"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00074",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Modifier 22",
+        "tags": [],
+        "effective_date": "09/06/2024",
+        "evidence": "This policy allows reimbursement for claims with modifier 22 when documentation shows substantially more extensive services than usual. For Louisiana Medicaid, modifier 22 is specifically required for unusual circumstances with the most appropriate CPT code for vaginal or cesarean delivery, and prepayment review applies before the higher payment rate is allowed.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2022.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same delivery method for all births"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "Colorado excluded",
+            "Ohio excluded",
+            "DC fee schedule only",
+            "Iowa 110% after review",
+            "Louisiana 125% after review",
+            "Missouri state fee schedule only",
+            "Nevada 125% after review",
+            "Tennessee 120% after review"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00128",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Delivery Services",
+        "tags": [],
+        "effective_date": "2024-07-17",
+        "evidence": "Applies to multiple-birth cesarean deliveries. The rule requires modifier 22 and removes multiple-procedure reduction, but only when the cesarean is part of a multiple birth; state Medicaid overrides can change or negate this rule.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Multiple%20Delivery%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "multiple births",
+            "same-delivery or combined-delivery method"
+          ],
+          "utilization_limits": [
+            "Ohio: no additional payment after third delivery",
+            "Texas: one cesarean in 7 months"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "DC: modifier 22 not accepted",
+            "Indiana: one cesarean regardless of babies",
+            "Maryland: multiple procedure guidelines apply",
+            "Missouri: no 22 or 51",
+            "North Carolina: 51 then 59",
+            "Ohio: 59 required; third delivery capped",
+            "Texas: one cesarean in 7 months",
+            "Wisconsin: no 22 required",
+            "Colorado: policy not subject"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Colorado Medicaid not subject",
+            "District of Columbia no modifier 22",
+            "Indiana one cesarean only",
+            "Missouri no 22 or 51",
+            "Texas one cesarean in 7 months"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00345",
+        "payer_name": "United Health",
+        "policy_title": "Cesarean Delivery Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "Professional cesarean delivery policy for Medicaid claims. Cesarean delivery codes are payable only when supported by an allowed ICD-10 diagnosis; elective non-high-risk cases are reduced, not denied. Certain state modifiers and state diagnosis lists apply.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59430"
+          ],
+          "required_modifiers": [
+            "U1",
+            "U2",
+            "U7",
+            "U8",
+            "U9"
+          ],
+          "excluded_modifiers": [
+            "U3"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "appropriate ICD-10 diagnosis",
+            "assistant surgeon billed"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Colorado exempt",
+            "Idaho exempt",
+            "Rhode Island exempt",
+            "Indiana own diagnosis list",
+            "Mississippi own diagnosis list",
+            "New Mexico: U1 required",
+            "New York: U7, U8, U9 required",
+            "Texas: U1, U2, U3 required; U3 not reimbursable"
+          ],
+          "provider_role_restrictions": [
+            "assistant surgeon required for 59514 and 59620"
+          ],
+          "exemptions": [
+            "Colorado",
+            "Idaho",
+            "Rhode Island"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00388",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This plan allows non-global cesarean delivery-only billing only when an assistant surgeon modifier is present; cesarean delivery is otherwise generally handled within OB global billing rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59514",
+            "59620",
+            "59510",
+            "59618"
+          ],
+          "related_codes": [
+            "59510",
+            "59515",
+            "59618",
+            "59622",
+            "59514",
+            "59620"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "with assistant surgeon modifier",
+            "multiple gestation",
+            "delivery of second baby"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "CMS-1500"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 10,
+    "policies_successful": 10,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For CPT 59510, reimburse only once per pregnancy and only on the same claim for the same pregnancy under the same TIN; bundle overlapping 59400 or 59430 obstetric services from a single provider/group under the same TIN. Peer: Cigna requires same TIN and same-claim billing for obstetric packages, and United Health applies same-claim global obstetrical controls on 59510..\n\nRecommendation 2: For 59510 multiple-birth exceptions, require modifier 22 and medical review only when there are multiple births and the same-delivery or combined-delivery method; otherwise keep payment at once per pregnancy. Peer: Cigna and United Health also require modifier 22 for additional cesarean reimbursement, and Cigna requires same-claim submission for multiple births..\n\nRecommendation 3: For 59514 and 59620, deny separate assistant surgeon reimbursement unless billed on the same claim with modifier 80, 81, 82, or AS. Peer: Cigna requires modifiers 80, 81, 82, or AS for assistant surgeons, and United Health requires assistant surgeon billing for 59514 and 59620 on the same claim..\n\nIA \u2014 For 01967, 01968, and 01969, route any same anesthesia episode over 300 minutes for prepayment review, and reimburse 01968 only for Cesarean delivery following neuraxial labor anesthesia.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59510\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59400\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59430\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same pregnancy\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same TIN\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"once per pregnancy\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"single provider/group under same TIN\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Modifier 22: \"22\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Multiple Delivery Services: \"22\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Multiple Delivery Services: \"multiple births\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Multiple Delivery Services: \"same-delivery or combined-delivery method\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"80\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"81\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"82\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"AS\" [required_modifiers]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59514\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59620\" [target_codes]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"same claim\" [pairing_conditions]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"assistant surgeon billed\" [pairing_conditions]",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional: \"assistant surgeon required for 59514 and 59620\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services: \"01967\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services: \"01968\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services: \"01969\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services: \"Cesarean delivery following neuraxial labor anesthesia\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services: \"same anesthesia episode\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services: \"300 minutes obstetrical epidural\" [utilization_limits]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna requires same TIN and same-claim billing for obstetric packages, and United Health applies same-claim global obstetrical controls on 59510.",
+        "Cigna and United Health also require modifier 22 for additional cesarean reimbursement, and Cigna requires same-claim submission for multiple births.",
+        "Cigna requires modifiers 80, 81, 82, or AS for assistant surgeons, and United Health requires assistant surgeon billing for 59514 and 59620 on the same claim."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "Elevance Health (internal) \u00b7 Modifier 22 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2022.pdf",
+        "Elevance Health (internal) \u00b7 Multiple Delivery Services \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Multiple%20Delivery%20Services.pdf",
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "United Health \u00b7 Cesarean Delivery Policy, Professional \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "Elevance Health (internal) \u00b7 Professional Anesthesia Services \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: CO maternity spend was driven by a very small number of high-cost C-section cases",
+    "pattern_rank": 6,
+    "pattern_title": "CO maternity spend was driven by a very small number of high-cost C-section cases",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cesarean Section without Sterilization with MCC"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "10 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/10 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/10 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 84849,
+    "output": 77112,
+    "breakdown": {
+      "search_keywords": {
+        "input": 527,
+        "output": 282,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 542,
+        "output": 1365,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 65754,
+        "output": 66177,
+        "calls": 10
+      },
+      "relevance_judge": {
+        "input": 4634,
+        "output": 1149,
+        "calls": 10
+      },
+      "dynamic_columns": {
+        "input": 954,
+        "output": 537,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1032,
+        "output": 859,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 414,
+        "output": 623,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 7611,
+        "output": 4562,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3381,
+        "output": 1558,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T08:21:50.167801+00:00",
+    "end_time": "2026-08-24T08:25:03.939576+00:00",
+    "duration_ms": 193771,
+    "version": "2.0.0"
+  }
+}

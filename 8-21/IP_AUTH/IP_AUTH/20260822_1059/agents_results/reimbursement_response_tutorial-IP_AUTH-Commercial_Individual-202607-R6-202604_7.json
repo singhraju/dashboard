@@ -1,0 +1,1091 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX maternity acuity is rising in vaginal deliveries with complications",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "ob_global_billing",
+          "label": "OB Global Billing",
+          "type": "text"
+        },
+        {
+          "id": "cesarean_doc_rules",
+          "label": "Cesarean Doc Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "BCBS_TX bundles routine OB care/delivery globally; supported complications bill separately; prolonged services not reimbursed.",
+          "cesarean_doc_rules": "Documentation must justify all billed services, extra antepartum visits, and separately coded complications."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "Transvaginal ultrasound primary; concurrent transabdominal ultrasound may be reimbursed at 50%.",
+          "cesarean_doc_rules": "No specific cesarean documentation rules stated."
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "Cigna bundles routine OB services globally; separate billing only for partial care or qualifying complications.",
+          "cesarean_doc_rules": "Require documentation of obstetric care components, complication visits, and multiple gestation support for modifier 22."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "Multiple-birth vaginal deliveries pay 50%; delivery sterilization follows multiple surgery rules, otherwise not separate.",
+          "cesarean_doc_rules": "Requires standard coding support and signed state-approved informed consent documentation."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "Global OB allowed only under same provider/TIN; otherwise bill components; routine pregnancy E/M included.",
+          "cesarean_doc_rules": "Medical records must support services; submit modifier 22 documentation and global antepartum, delivery, postpartum records."
+        },
+        {
+          "payer_org": "First Care",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "-",
+          "cesarean_doc_rules": "-"
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "Moda bundles vaginal delivery complication management into global OB; medically necessary high-risk antepartum visits separate.",
+          "cesarean_doc_rules": "Support separate high-risk antepartum billing; quantify extra complexity in operative report and appeal."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_global_billing": "Global OB bundled; Texas requires non-global delivery/postpartum billing, with modifier 22 for severe lacerations.",
+          "cesarean_doc_rules": "Modifier 22 requires supporting records; high-risk complications need diagnosis coding at delivery."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Routine Obstetrics",
+        "tags": [],
+        "effective_date": "07/19/2019",
+        "evidence": "The policy is on-topic for obstetric vaginal delivery claims but does not adjudicate by DRG or state a Texas-specific acuity/CC payment rule. Instead, it reimburses professional obstetric services using global versus component billing rules. Single vaginal delivery is reimbursed at 100% of the maximum allowance when the appropriate global, delivery-only, or delivery/postpartum code is reported. Routine antepartum, delivery, postpartum, and pregnancy-related E/M services are bundled into the global obstetric package when the same provider or provider group under the same TIN furnishes all components. Additional vaginal deliveries require modifier 59 and are reduced to 50%. Duplicate or overlapping pregnancy services and several labor-management services are not separately reimbursed.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "O09.511",
+            "O09.512",
+            "O09.513",
+            "O09.519",
+            "O09.521",
+            "O09.522",
+            "O09.523",
+            "O09.529",
+            "O09.611",
+            "O09.612",
+            "O09.613",
+            "O09.619",
+            "O09.621",
+            "O09.622",
+            "O09.623",
+            "O09.629",
+            "O09.70",
+            "O09.71",
+            "O09.72",
+            "O09.73",
+            "O09.811",
+            "O09.812",
+            "O09.813",
+            "O09.819",
+            "O09.821",
+            "O09.822",
+            "O09.823",
+            "O09.829",
+            "O09.891",
+            "O09.892",
+            "O09.893",
+            "O09.899",
+            "O80",
+            "Z33.1",
+            "Z34.00",
+            "Z34.01",
+            "Z34.02",
+            "Z34.03",
+            "Z34.80",
+            "Z34.81",
+            "Z34.82",
+            "Z34.83",
+            "Z34.90",
+            "Z34.91",
+            "Z34.92",
+            "Z34.93",
+            "Z36.1",
+            "Z36.2",
+            "Z36.3",
+            "Z36.4",
+            "Z36.5",
+            "Z36.81",
+            "Z36.82",
+            "Z36.83",
+            "Z36.84",
+            "Z36.85",
+            "Z36.86",
+            "Z36.87",
+            "Z36.88",
+            "Z36.89",
+            "Z36.9",
+            "Z39.0",
+            "Z39.1",
+            "Z39.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [
+            "59"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "same provider group",
+            "same pregnancy",
+            "first diagnosis field normal pregnancy/delivery"
+          ],
+          "utilization_limits": [
+            "45-day postpartum period",
+            "first vaginal delivery 100% allowance",
+            "each additional vaginal delivery 50% allowance",
+            "2 ultrasounds per pregnancy/fetus in OH/VA"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Employer Group Retiree Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "Georgia and Kentucky: maternity global package or antepartum care only visits include maternity ultrasounds unless related to a problem oriented diagnosis",
+            "Ohio and Virginia: more than two maternity ultrasounds per pregnancy/fetus per patient are not eligible for separate reimbursement unless related to a problem oriented diagnosis"
+          ],
+          "provider_role_restrictions": [
+            "same provider or provider group under same TIN for global billing"
+          ],
+          "exemptions": [
+            "diagnosis code not related to a normal pregnancy diagnosis",
+            "unless such service is related to a problem oriented diagnosis"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082140001",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Global Obstetrical/OB Maternity Services Policy",
+        "tags": [],
+        "effective_date": "2026-05-22",
+        "evidence": "Routine vaginal delivery is bundled into the global OB maternity package when antepartum, delivery, and postpartum care are provided by the same qualified professional or same location/TIN. Complications of pregnancy or surgical complications are separately reportable with appropriate CPT/HCPCS/E/M codes when documented.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/rp044-5-22-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400"
+          ],
+          "related_codes": [
+            "59409",
+            "59410",
+            "59510",
+            "59514",
+            "59515",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "59000-59001",
+            "59012",
+            "59015",
+            "59020",
+            "59025",
+            "59412",
+            "76801-76802",
+            "76805",
+            "76810-76828",
+            "99415-99418",
+            "59425",
+            "59426",
+            "59430"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "same location",
+            "same TIN",
+            "upon delivery"
+          ],
+          "utilization_limits": [
+            "more than 13 antepartum visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Professional Provider",
+            "Global OB"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same qualified health care professional",
+            "same location/TIN"
+          ],
+          "exemptions": [
+            "surgical complications",
+            "medical complications of pregnancy",
+            "separately reportable ancillary services"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "The policy is on-topic for maternity professional billing but does not provide inpatient DRG/MS-DRG payment logic or separate severity rules for CC, sterilization, or D&C. For vaginal delivery claims, routine antepartum, delivery, and postpartum services are reimbursed as a single global package after delivery when the same clinician or group provides all components; pregnancy-complication E&M may be separately payable only under stated conditions.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410"
+          ],
+          "related_codes": [
+            "59510",
+            "59610",
+            "59618",
+            "59409",
+            "59410",
+            "59425",
+            "59426",
+            "59430",
+            "81000",
+            "81002",
+            "59200",
+            "96365-96367",
+            "64430",
+            "64435",
+            "51701",
+            "51702",
+            "59414",
+            "96372",
+            "90384",
+            "90385",
+            "90460-90474",
+            "90632",
+            "90636",
+            "90656",
+            "90658",
+            "90662",
+            "90670",
+            "90714",
+            "90732",
+            "90740",
+            "90746",
+            "90747",
+            "96360",
+            "96361",
+            "59000",
+            "59001",
+            "59070",
+            "59015",
+            "59012",
+            "59020",
+            "59025",
+            "59030",
+            "59412",
+            "01967",
+            "76801-76817",
+            "76818-76819",
+            "76820",
+            "76821",
+            "76825-76828",
+            "Z32.01",
+            "Z33.1",
+            "Z34.00-Z34.03",
+            "Z34.80-Z34.83",
+            "Z34.90-Z34.93",
+            "Z39.0-Z39.2",
+            "O09.00-O09.03",
+            "O09.10-O09.13",
+            "O09.211-O09.219",
+            "O09.291-O09.299",
+            "O09.30-O09.33",
+            "O09.40-O09.43",
+            "O09.511-O09.519",
+            "O09.521-O09.529",
+            "O09.611-O09.619",
+            "O09.621-O09.629",
+            "O09.70-O09.73",
+            "O09.811-O09.819",
+            "O09.821-O09.829",
+            "O09.891-O09.899",
+            "O09.90-O09.93",
+            "O34.211-O34.219",
+            "O10.011-O16.9",
+            "59400",
+            "59514",
+            "59612",
+            "59620",
+            "59515",
+            "59614",
+            "59622"
+          ],
+          "required_modifiers": [
+            "25"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "after delivery",
+            "same TIN",
+            "within 72 hours of delivery",
+            "observation up to 48 hours",
+            "when only delivery services provided",
+            "antepartum not rendered",
+            "postpartum not rendered",
+            "when delivery and postpartum only provided",
+            "1-3 antepartum visits billed separately"
+          ],
+          "utilization_limits": [
+            "approximately 13 prenatal visits",
+            "6 weeks postpartum after vaginal delivery",
+            "48 hours labor observation included",
+            "72 hours delivery admission included",
+            "1-3 antepartum visits separate E&M"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same TIN for full package",
+            "global maternity diagnoses only by maternity providers",
+            "billing clinician provided delivery only",
+            "billing clinician provided delivery and postpartum only"
+          ],
+          "exemptions": [
+            "59409",
+            "59410",
+            "59425",
+            "59426",
+            "59430",
+            "01967",
+            "59025",
+            "76801-76817",
+            "current complication E&M",
+            "appropriate E&M for 1-3 antepartum visits"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "This policy governs multiple-birth maternity delivery claims using CPT and ICD-10 codes rather than DRG codes. When a multiple gestation diagnosis is reported and at least one delivery is vaginal, the primary delivery is reimbursed at 100% and each secondary delivery at 50%. All-cesarean multiple births are not typically paid extra unless modifier 22 is supported by substantially increased time and complexity.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59510",
+            "59514",
+            "59515",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "O30.001-O30.099",
+            "O30.101-O30.199",
+            "O30.201-O30.299",
+            "O30.801-O30.899",
+            "O30.90",
+            "O30.93",
+            "Z37.2-Z37.4",
+            "Z37.50-Z37.59",
+            "Z37.60-Z37.69",
+            "Z37.7",
+            "Z38.30-Z38.31",
+            "Z38.4-Z38.5",
+            "Z38.61-Z38.69",
+            "Z38.7-Z38.8"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "at least one vaginal delivery"
+          ],
+          "utilization_limits": [
+            "primary at 100%",
+            "secondary at 50%"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "maternity benefits",
+            "multiple births"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "modifier 22 for complex cesarean"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_01197",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Multiple Delivery Services",
+        "tags": [],
+        "effective_date": "01/01/2025",
+        "evidence": "Commercial policy for multiple delivery services applies to vaginal deliveries in multiple births. Subsequent vaginal deliveries are reimbursed at 50% of the allowance when billed with Modifier 59.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-093390-25-Multiple-Delivery-Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "59"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same-delivery method",
+            "combined-delivery method",
+            "multiple births"
+          ],
+          "utilization_limits": [
+            "subsequent vaginal delivery paid at 50%"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Multiple Delivery Services"
+          ],
+          "state_specific_rules": [
+            "Florida",
+            "Maryland",
+            "Texas",
+            "Washington"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00128",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Delivery Services C-19005",
+        "tags": [],
+        "effective_date": "04/29/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595910106",
+        "payer_name": "Moda Health",
+        "policy_title": "Maternity Care",
+        "tags": [],
+        "effective_date": "1/1/2000",
+        "evidence": "Moda Health's maternity policy bundles management of complications that occur during vaginal delivery into the delivery service/global OB package. Intrapartum complication management is not separately reimbursable; separately identifiable services outside the global package may be paid, and related post-delivery return-to-OR surgical care may be separately considered with modifier 78.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM020.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59610",
+            "59612",
+            "59614"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59430"
+          ],
+          "required_modifiers": [
+            "78"
+          ],
+          "excluded_modifiers": [
+            "22",
+            "24",
+            "52"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "same date of delivery",
+            "during delivery room stay"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "maternity care",
+            "global OB package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "post-delivery surgical procedure with modifier 78",
+            "separately identifiable non-OB specialist care"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595920101",
+        "payer_name": "Moda Health",
+        "policy_title": "Modifier 22 - Increased Procedural Services",
+        "tags": [],
+        "effective_date": "2000-01-01",
+        "evidence": "Routine vaginal-delivery-related services are included in the maternity package and do not justify extra reimbursement under modifier 22; modifier 22 is denied for facility claims and is only considered in very unusual maternity cases with documented extra difficulty.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM007-Modifier-22-Increased-Procedural-Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59618",
+            "59425",
+            "59426",
+            "59430",
+            "59412"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "22",
+            "63"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "written appeal"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicare Advantage",
+            "Medicaid"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "surgeons billing office"
+          ],
+          "exemptions": [
+            "cesarean multiple gestation",
+            "MMM delivery-component codes"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Vaginal delivery only is reimbursable under the delivery-only OB code family when the global package is not provided by the same group. Routine delivery components are bundled, and increased procedural complexity may be addressed separately only under the policy's modifier rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59409"
+          ],
+          "related_codes": [
+            "59400",
+            "59410",
+            "59610",
+            "59612",
+            "59614",
+            "59618"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "delivery claim",
+            "single gestation",
+            "delivery confinement"
+          ],
+          "utilization_limits": [
+            "one unit per delivery",
+            "single gestation only",
+            "multiple procedure reduction applies"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "CMS-1500",
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Same Group Physician and/or Other QHP"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00907",
+        "payer_name": "Centene",
+        "policy_title": "Non-obstetrical and Obstetrical Transabdominal and Transvaginal Ultrasounds (CC.PP.061)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This policy is off-topic for the requested DRG pattern. It governs reimbursement for transabdominal and transvaginal ultrasound procedures, including multiple procedure payment reduction between ultrasound CPT codes, and does not adjudicate vaginal delivery DRG payments.",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/CC.PP.061.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_TX_28833392601",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Sterilization",
+        "tags": [],
+        "effective_date": "2024-07-17",
+        "evidence": "This policy is not a delivery DRG reimbursement policy. It governs sterilization services and only affects delivery claims when sterilization is performed with the delivery; in that case, multiple surgery guidelines and consent requirements apply.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/medicare/government/reimbursement-policies/WLP_CARE_RP_Sterilization.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "in conjunction with delivery"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "Surgery"
+          ],
+          "state_specific_rules": [
+            "AZ, IA, NJ, SC, TN, TX, WA, WV"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "necessary part of treatment of an illness or injury",
+            "provider, state, federal, or CMS contracts"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00130",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Sterilization",
+        "tags": [],
+        "effective_date": "06/08/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Sterilization.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_FC_00002",
+        "payer_name": "First Care",
+        "policy_title": "STAR obstetric (OB) ultrasounds reimbursement policy",
+        "tags": [],
+        "effective_date": "11/1/2018",
+        "evidence": "Off-topic for the requested DRG pattern. This policy governs obstetric ultrasound reimbursement, limits, and medical necessity, not vaginal delivery DRG payment.",
+        "policy_url": "https://www.firstcare.com/-/media/project/bsw/sites/firstcare/documents/STAR/Obstetric-Ultrasounds-Reimbursement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "Texas Medicaid"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01317",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The policy is not DRG-specific, but it governs Texas obstetrical delivery billing for vaginal deliveries and related complications. In Texas, global OB codes are not reimbursed, delivery and postpartum services are billed separately, and third- or fourth-degree laceration repairs may support modifier 22 on delivery codes. Routine delivery components are bundled into the delivery code.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59510",
+            "59514",
+            "59515",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "59425",
+            "59426",
+            "59430"
+          ],
+          "related_codes": [
+            "59200",
+            "59025"
+          ],
+          "required_modifiers": [
+            "22",
+            "U1",
+            "U2"
+          ],
+          "excluded_modifiers": [
+            "U3"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of delivery",
+            "same claim line"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "TX: global OB codes not reimbursed",
+            "TX: delivery codes require U1, U2, or U3",
+            "TX: U3 is not reimbursable",
+            "TX: delivery plus postpartum codes may be used",
+            "TX: 59409 allowed on CMS-1500 with same-day birthing-center claim"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 16,
+    "policies_successful": 16,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle routine antepartum and postpartum into 59510, 59514, 59515, and 59618 when billed under the same TIN and on the same claim; allow 59425, 59426, or 59430 only when antepartum not rendered, postpartum not rendered, or 1-3 antepartum visits billed separately, and send claims above approximately 13 prenatal visits / more than 13 antepartum visits to exception review. Exempt: appropriate E&M for 1-3 antepartum visits. Peer: BCBS TX, Cigna, Moda, and United all manage maternity package codes such as 59400/59510/59618 within global-OB policy logic, with same-TIN and same-claim bundling used by peers..\n\nRecommendation 2: For multiple-birth cesarean claims, require modifier 22 on 59510 or 59618, reimburse the primary at 100% and the secondary at 50%, and route any enhanced payment request through same claim line review with written appeal; reserve this pathway for documented complex cesarean cases. Exempt: modifier 22 for complex cesarean, cesarean multiple gestation. Peer: Cigna requires modifier 22 and pays the secondary delivery at 50% in multiple births, while Moda separately reviews modifier 22 requests on 59510 and 59618..\n\nRecommendation 3: Do not bundle complication care into 59510, 59514, 59515, or 59618 when the claim supports modifier 25 for current complication E&M or documents surgical complications or medical complications of pregnancy; separately reportable ancillary services should remain payable outside the routine OB package. Exempt: current complication E&M, surgical complications, medical complications of pregnancy, separately reportable ancillary services. Peer: BCBS TX and Cigna both carve complication services out of maternity-package bundling, and Cigna specifically preserves modifier 25 current-complication E&M..",
+      "evidence": [
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59510\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59514\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59515\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59618\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same TIN\" [pairing_conditions]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Global Obstetrical/OB Maternity Services Policy: \"same claim\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59425\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59426\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59430\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"antepartum not rendered\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"postpartum not rendered\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"1-3 antepartum visits billed separately\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"approximately 13 prenatal visits\" [utilization_limits]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Global Obstetrical/OB Maternity Services Policy: \"more than 13 antepartum visits\" [utilization_limits]",
+        "Moda Health \u00b7 Modifier 22 - Increased Procedural Services: \"59510\" [target_codes]",
+        "Moda Health \u00b7 Modifier 22 - Increased Procedural Services: \"59618\" [target_codes]",
+        "Cigna \u00b7 Multiple Births: \"22\" [required_modifiers]",
+        "Cigna \u00b7 Multiple Births: \"primary at 100%\" [utilization_limits]",
+        "Cigna \u00b7 Multiple Births: \"secondary at 50%\" [utilization_limits]",
+        "Moda Health \u00b7 Modifier 22 - Increased Procedural Services: \"same claim line\" [pairing_conditions]",
+        "Moda Health \u00b7 Modifier 22 - Increased Procedural Services: \"written appeal\" [pairing_conditions]",
+        "Cigna \u00b7 Multiple Births: \"modifier 22 for complex cesarean\" [exemptions]",
+        "Cigna \u00b7 Multiple Births: \"multiple births\" [program_scope]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"25\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"current complication E&M\" [exemptions]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Global Obstetrical/OB Maternity Services Policy: \"surgical complications\" [exemptions]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Global Obstetrical/OB Maternity Services Policy: \"medical complications of pregnancy\" [exemptions]",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Global Obstetrical/OB Maternity Services Policy: \"separately reportable ancillary services\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "BCBS TX, Cigna, Moda, and United all manage maternity package codes such as 59400/59510/59618 within global-OB policy logic, with same-TIN and same-claim bundling used by peers.",
+        "Cigna requires modifier 22 and pays the secondary delivery at 50% in multiple births, while Moda separately reviews modifier 22 requests on 59510 and 59618.",
+        "BCBS TX and Cigna both carve complication services out of maternity-package bundling, and Cigna specifically preserves modifier 25 current-complication E&M."
+      ],
+      "citation": [
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "BCBS_TX (Health Care Service Corporation) \u00b7 Global Obstetrical/OB Maternity Services Policy \u2014 https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/rp044-5-22-2026.pdf",
+        "Moda Health \u00b7 Modifier 22 - Increased Procedural Services \u2014 https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM007-Modifier-22-Increased-Procedural-Services.pdf",
+        "Cigna \u00b7 Multiple Births \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: TX maternity acuity is rising in vaginal deliveries with complications",
+    "pattern_rank": 7,
+    "pattern_title": "TX maternity acuity is rising in vaginal deliveries with complications",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Vaginal Delivery without Sterilization or D&C with CC"
+    ],
+    "total_policies_found": 16,
+    "successful_extractions": 16,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 16 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "16 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/16 policies quarantined (12%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/16 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00022:Inpatient Readmissions, RP_GBD_ELV_INTERNAL_ALL_2960259020000:GB Inpt Readmissions FINAL 05062025]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 153780,
+    "output": 98422,
+    "breakdown": {
+      "search_keywords": {
+        "input": 530,
+        "output": 282,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 815,
+        "output": 2667,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 124293,
+        "output": 83088,
+        "calls": 18
+      },
+      "relevance_judge": {
+        "input": 6307,
+        "output": 2068,
+        "calls": 14
+      },
+      "dynamic_columns": {
+        "input": 1037,
+        "output": 791,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 2313,
+        "output": 2006,
+        "calls": 14
+      },
+      "elevance_summary": {
+        "input": 404,
+        "output": 221,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 13642,
+        "output": 5695,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4439,
+        "output": 1604,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T12:06:02.432096+00:00",
+    "end_time": "2026-08-22T12:11:21.521389+00:00",
+    "duration_ms": 319089,
+    "version": "2.0.0"
+  }
+}

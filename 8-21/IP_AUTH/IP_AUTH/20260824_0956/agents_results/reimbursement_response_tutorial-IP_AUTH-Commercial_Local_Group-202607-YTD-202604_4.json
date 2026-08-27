@@ -1,0 +1,315 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_4_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Smaller-state provider mix pressure is emerging across PPO and POS inpatient business",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "reimbursement_note",
+          "label": "Reimbursement Note",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "reimbursement_note": "Not addressed for this DRG; Cigna policy only covers respiratory equipment and routine care bundling."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Bundles",
+          "reimbursement_note": "United Health bundles routine services/supplies into facility charges and does not reimburse separately."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00052",
+        "payer_name": "Cigna",
+        "policy_title": "Respiratory Services and Supplies",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Off-topic: this policy addresses respiratory services and supplies, not inpatient DRG reimbursement for digestive system diagnoses.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-09",
+        "evidence": "This diagnosis-related stay is not named in the policy, but the policy applies broadly to inpatient and outpatient facility claims billed on UB04. Routine room and board, supplies, nursing care, equipment, and listed ancillary components are included in the facility payment and are not separately reimbursable.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260-269",
+            "270-279",
+            "300-370",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [
+            "same UB04 claim",
+            "same inpatient or outpatient visit"
+          ],
+          "utilization_limits": [
+            "1 unit/day for facility-owned ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04",
+            "inpatient facility claims",
+            "outpatient facility claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Pre- and Post-Anesthesia Recovery Room"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle revenue codes 250, 260-269, 270-279, 300-370, 410, 412, 419, 460, and 510 as inclusive facility charges when billed on the same UB04 claim for the same inpatient or outpatient visit; exempt Pre- and Post-Anesthesia Recovery Room. Exempt: Pre- and Post-Anesthesia Recovery Room.\n\nIA \u2014 Limit revenue code 761 to 1 unit/day for facility-owned ventilator or CPAP management on UB04 inpatient facility claims.",
+      "evidence": [
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"250\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"260-269\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"270-279\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"300-370\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"410\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"412\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"419\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"460\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"510\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same UB04 claim\" [pairing_conditions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same inpatient or outpatient visit\" [pairing_conditions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Pre- and Post-Anesthesia Recovery Room\" [exemptions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"761\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"1 unit/day for facility-owned ventilator or CPAP management\" [utilization_limits]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB04\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"inpatient facility claims\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Smaller-state provider mix pressure is emerging across PPO and POS inpatient business",
+    "pattern_rank": 4,
+    "pattern_title": "Smaller-state provider mix pressure is emerging across PPO and POS inpatient business",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other Digestive System Diagnoses with MCC",
+      "Other Disorders of Nervous System with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA', 'VA', 'CA', 'KY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 48111,
+    "output": 13781,
+    "breakdown": {
+      "search_keywords": {
+        "input": 563,
+        "output": 1240,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 535,
+        "output": 971,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 39906,
+        "output": 8221,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 990,
+        "output": 311,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 924,
+        "output": 511,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 656,
+        "output": 405,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2162,
+        "output": 1633,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2375,
+        "output": 489,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:55:18.453136+00:00",
+    "end_time": "2026-08-24T11:56:42.095173+00:00",
+    "duration_ms": 83642,
+    "version": "2.0.0"
+  }
+}

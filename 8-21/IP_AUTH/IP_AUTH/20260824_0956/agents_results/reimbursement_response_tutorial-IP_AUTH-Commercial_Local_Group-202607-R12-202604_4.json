@@ -1,0 +1,887 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_4_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Maternity and C-section episodes are a recurring multi-state cost driver",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "ob_package_status",
+          "label": "OB Package",
+          "type": "badge"
+        },
+        {
+          "id": "delivery_only_rules",
+          "label": "Delivery-Only Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_package_status": "Bundles",
+          "delivery_only_rules": "Delivery-only billing excludes antepartum care, bundles single-gestation admissions within 72 hours, and excludes cesareans."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_package_status": "Bundles",
+          "delivery_only_rules": "For newborn inpatient stays, bill well or sick newborn DRGs using appropriate nursery revenue codes."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_package_status": "Partial Bundle",
+          "delivery_only_rules": "Once per pregnancy; denied for overlapping/global claims; separate 90-day postpartum; assistant surgeon only for cesareans."
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_package_status": "Bundles",
+          "delivery_only_rules": "Delivery codes cover multiples; modifier 59 distinguishes births; limited separate newborn and fetal services."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_package_status": "Bundles",
+          "delivery_only_rules": "Bill routine newborn care under mother when allowed; NICU/non-routine under newborn, separate infant claims."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_package_status": "Conditional Bundle",
+          "delivery_only_rules": "Delivery-only: single-gestation, one unit; postpartum included; multiple gestation/assistant-surgeon rules may apply."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Cesarean-inclusive full maternity package is reimbursed when antepartum, delivery, and postpartum care are all provided by the same tax identifier; cesarean delivery is bundled into the global code.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59618",
+            "59514",
+            "59620",
+            "59515",
+            "59622"
+          ],
+          "related_codes": [
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622",
+            "59510"
+          ],
+          "required_modifiers": [
+            "80",
+            "81",
+            "82",
+            "AS"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Global Maternity/Obstetric Package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same TIN",
+            "assistant surgeon"
+          ],
+          "exemptions": [
+            "multiple gestation"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "Multiple-birth vaginal deliveries are reimbursed at 100% for the primary procedure and 50% for each subsequent procedure when a multiple gestation diagnosis is reported and at least one delivery is vaginal.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59610",
+            "59612",
+            "59614",
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "O30.001-O30.099",
+            "O30.101-O30.199",
+            "O30.201-O30.299",
+            "O30.801-O30.899",
+            "O30.90-O30.93",
+            "Z37.2-Z37.4",
+            "Z37.50-Z37.59",
+            "Z37.60-Z37.69",
+            "Z37.7",
+            "Z38.30-Z38.31",
+            "Z38.4-Z38.5",
+            "Z38.61-Z38.69",
+            "Z38.7-Z38.8"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "multiple gestation diagnosis"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Maternity"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00057",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "DRG Newborn Inpatient Stays",
+        "tags": [],
+        "effective_date": "10/01/2026",
+        "evidence": "For newborn inpatient stays reimbursed under DRG, the revenue code must match the DRG. Sick newborn claims require a NICU revenue code to group correctly; otherwise, they will not group to a sick newborn DRG. Normal newborn DRG claims must use well-newborn revenue codes, and sick newborn DRG claims must use sick-newborn revenue codes.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-18002-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "newborn inpatient stay",
+            "same inpatient newborn stay"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "Cesarean global obstetric care is reimbursable once per pregnancy when one provider or group bills the full antepartum, delivery, and postpartum package under the same TIN. The cesarean delivery component is included in the global package.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59430"
+          ],
+          "related_codes": [
+            "59400",
+            "59430",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "once per pregnancy",
+            "same claim history"
+          ],
+          "utilization_limits": [
+            "once per pregnancy",
+            "one postpartum period per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "assistant surgeon cesarean deliveries"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "Cesarean-inclusive global obstetrical care is reimbursed once per pregnancy when antepartum, delivery, and postpartum services are all provided by one provider or group under the same TIN. The global package includes cesarean delivery and is not separately reimbursable when overlapping obstetric services were already paid.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59400",
+            "59430"
+          ],
+          "related_codes": [
+            "59400",
+            "59430",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same provider/group TIN"
+          ],
+          "utilization_limits": [
+            "once per pregnancy",
+            "90-day postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [
+            "GA: maternity package or antepartum-only visits may include ultrasounds and two non-stress tests.",
+            "KY: maternity package or antepartum-only visits may include ultrasounds.",
+            "OH: more than two ultrasounds per pregnancy/fetus not separately reimbursed.",
+            "VA: more than two ultrasounds per pregnancy/fetus not separately reimbursed."
+          ],
+          "provider_role_restrictions": [
+            "single provider/group same TIN"
+          ],
+          "exemptions": [
+            "assistant surgeon on cesarean delivery with appropriate modifier",
+            "not global package postpartum care"
+          ],
+          "action_types": [
+            "bundle",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00145",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "DRG Newborn Inpatient Stays C-18002",
+        "tags": [],
+        "effective_date": "12/18/2025",
+        "evidence": "Newborn inpatient stays are reimbursable under DRG-based billing when the claim uses the matching newborn revenue code set. Normal newborn DRG claims must use well-newborn revenue codes, and sick newborn DRG claims must use sick-newborn/NICU revenue codes or the claim will not group to a sick newborn DRG. Revenue-code-based neonatal care levels 0170-0174 are also defined for well-baby through intensive care levels.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/DRG%20Newborn%20Inpatient%20Stays%20C-18002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "matching revenue code"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "Maine: Section I does not apply",
+            "New York: Section I does not apply",
+            "Massachusetts and Virginia: Section I does not apply",
+            "One market is not subject to this policy"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Maine: Section I does not apply",
+            "New York: Section I does not apply",
+            "Massachusetts and Virginia: Section I does not apply",
+            "One market is not subject to this policy"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500119",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Newborn Care, Obstetrical Delivery, Antepartum and Postpartum Care and Associated Services",
+        "tags": [],
+        "effective_date": "2018-01-29",
+        "evidence": "Global obstetrical delivery codes, including cesarean-related delivery services, are bundled when the same provider or physician group bills delivery together with antepartum or postpartum care. For multiple births, one delivery is payable per newborn, but only one antepartum/postpartum period applies.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-023.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59414",
+            "59510",
+            "59514",
+            "59515",
+            "59525",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622",
+            "31500",
+            "99221",
+            "99222",
+            "99223",
+            "99231",
+            "99232",
+            "99233",
+            "99238",
+            "99239",
+            "99460",
+            "99462",
+            "99463",
+            "99464",
+            "99465",
+            "59020",
+            "59025",
+            "59050",
+            "59051",
+            "59425",
+            "59426",
+            "59430",
+            "59030",
+            "59412",
+            "59871",
+            "59899"
+          ],
+          "related_codes": [
+            "59030",
+            "59412",
+            "59871",
+            "59899",
+            "59400",
+            "59409",
+            "59410",
+            "59414",
+            "59510",
+            "59514",
+            "59515",
+            "59525",
+            "59610",
+            "59612",
+            "59614",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "required_modifiers": [
+            "59",
+            "25",
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "multiple births",
+            "per newborn",
+            "delivery session",
+            "same day of service",
+            "global obstetrical care claim",
+            "same provider group",
+            "with delivery claim",
+            "performed independently"
+          ],
+          "utilization_limits": [
+            "one antepartum/postpartum period per delivery episode",
+            "one 99464 per newborn",
+            "one antepartum/postpartum period per episode"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same physician or physician group",
+            "doctor other than delivery doctor",
+            "same health care professional",
+            "same physician or qualified health care professional"
+          ],
+          "exemptions": [
+            "external cephalic version (59412)",
+            "cerclage removal under anesthesia",
+            "same doctor billing 99465",
+            "delivery global allowance",
+            "pregnancy terminated by abortion"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595730203",
+        "payer_name": "Point32Health",
+        "policy_title": "Newborn Care",
+        "tags": [],
+        "effective_date": "05/01/2026",
+        "evidence": "Routine newborn nursery care is reimbursed in contracted inpatient facilities, with state-specific billing and timing rules. For Massachusetts, routine newborn care may be billed under the mother's ID for up to 48 hours after vaginal delivery or 96 hours after cesarean delivery if the newborn is not separately enrolled. Non-routine newborn care and NICU services generally require the newborn's own ID, and delivery notification rules apply for certain programs.",
+        "policy_url": "https://wwwassets.point32health.org/documents/newborn-care-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174",
+            "0179",
+            "0220"
+          ],
+          "pairing_conditions": [
+            "after mother's obstetrical claim",
+            "do not submit duplicate claim",
+            "separate claim for each infant",
+            "included in facility payment"
+          ],
+          "utilization_limits": [
+            "MA: 48h vaginal",
+            "MA: 96h cesarean",
+            "ME/NH/RI: up to 31 days",
+            "MA: newborn enrollment within 60 days",
+            "Together/One Care: notify within 25 days",
+            "RITogether: notify within 10 days"
+          ],
+          "prior_auth_thresholds": [
+            "notification and authorization may apply"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial Products",
+            "Public Plans",
+            "Senior Products"
+          ],
+          "state_specific_rules": [
+            "MA routine care: 48h vaginal",
+            "MA routine care: 96h cesarean",
+            "ME routine care: until mother discharge",
+            "NH routine care: up to 31 days",
+            "RI routine care: up to 31 days",
+            "Together/One Care: notify within 25 days",
+            "RITogether: notify within 10 days",
+            "MA: bill entire NICU stay one claim",
+            "MA members only"
+          ],
+          "provider_role_restrictions": [
+            "contracted inpatient facilities",
+            "professional providers"
+          ],
+          "exemptions": [
+            "newborn ID unavailable for routine care",
+            "mother ID allowed when newborn not enrolled"
+          ],
+          "action_types": [
+            "limit",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595780200",
+        "payer_name": "Point32Health",
+        "policy_title": "Obstetrics/Gynecology",
+        "tags": [],
+        "effective_date": "07/2026",
+        "evidence": "Routine obstetric care that includes antepartum care, cesarean delivery, and postpartum care is reimbursed as a single global obstetrical package.",
+        "policy_url": "https://wwwassets.point32health.org/documents/obstetrics-gynecology-pp",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620"
+          ],
+          "related_codes": [
+            "59400",
+            "59618",
+            "59514",
+            "59515",
+            "59620",
+            "59510",
+            "59622"
+          ],
+          "required_modifiers": [
+            "AS",
+            "80",
+            "81",
+            "82"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "one claim following delivery",
+            "assistant surgeon billing",
+            "separate delivery and postpartum care"
+          ],
+          "utilization_limits": [
+            "one global package per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "another provider rendered other components",
+            "same provider billed global package"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Global cesarean OB service is reimbursable when the same group provides antepartum, delivery, and postpartum care; otherwise, services are itemized by component.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59618",
+            "59514",
+            "59515",
+            "59620",
+            "59622",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same group all components",
+            "twin delivery second baby",
+            "non-global cesarean",
+            "assistant surgeon billed",
+            "delivery and postpartum only",
+            "limited antepartum care"
+          ],
+          "utilization_limits": [
+            "one unit per claim",
+            "one delivery code per birth episode",
+            "one postpartum package per delivery"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same group physician/QHP",
+            "assistant surgeon"
+          ],
+          "exemptions": [
+            "delivery split across groups",
+            "postpartum billed separately",
+            "global OB package"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": "For California cesarean delivery, Elevance\u2019s Maternity Services and DRG Newborn Inpatient Stays policies are directly relevant because they govern reimbursement for maternal delivery episodes and neonatal inpatient DRG payments. This policy set plausibly explains the observed cost pattern where C-section episodes and related newborn acuity are recurring cost drivers.",
+    "policies_processed": 10,
+    "policies_successful": 10,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Limit CPT 59510 and 59430 to the same pregnancy and the same TIN or same provider/group TIN, with 59510 payable once per pregnancy and only one postpartum period per pregnancy / 90-day postpartum period; bundle or deny duplicate claim history for repeat 59510 or 59430. Exempt: assistant surgeon cesarean deliveries, not global package postpartum care. Peer: Point32Health allows one global package per pregnancy, United Health allows one delivery code per birth episode and one postpartum package per delivery, and Highmark_BCBS allows one antepartum/postpartum period per delivery episode..\n\nRecommendation 2: Allow separate assistant-surgeon reimbursement for cesarean delivery codes 59510, 59514, 59515, 59618, 59620, and 59622 only when modifier 80, 81, 82, or AS is present; otherwise bundle the assistant-surgeon line into the maternity package. Exempt: assistant surgeon cesarean deliveries, assistant surgeon on cesarean delivery with appropriate modifier. Peer: Cigna and Point32Health require modifier 80, 81, 82, or AS for assistant surgeon billing on cesarean delivery codes, while United Health separately recognizes assistant surgeon billed scenarios..",
+      "evidence": [
+        "Elevance Health (external) \u00b7 Maternity Services: \"59510\" [target_codes]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"59430\" [target_codes]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"same pregnancy\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"same TIN\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"once per pregnancy\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"same claim history\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"once per pregnancy\" [utilization_limits]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"one postpartum period per pregnancy\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59510\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59430\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same pregnancy\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same provider/group TIN\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"once per pregnancy\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"90-day postpartum period\" [utilization_limits]",
+        "Elevance Health (external) \u00b7 Maternity Services: \"assistant surgeon cesarean deliveries\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"assistant surgeon on cesarean delivery with appropriate modifier\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59510\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59618\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59514\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59620\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59515\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59622\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"80\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"81\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"82\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"AS\" [required_modifiers]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Point32Health allows one global package per pregnancy, United Health allows one delivery code per birth episode and one postpartum package per delivery, and Highmark_BCBS allows one antepartum/postpartum period per delivery episode.",
+        "Cigna and Point32Health require modifier 80, 81, 82, or AS for assistant surgeon billing on cesarean delivery codes, while United Health separately recognizes assistant surgeon billed scenarios."
+      ],
+      "citation": [
+        "Elevance Health (external) \u00b7 Maternity Services \u2014 https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Maternity and C-section episodes are a recurring multi-state cost driver",
+    "pattern_rank": 4,
+    "pattern_title": "Maternity and C-section episodes are a recurring multi-state cost driver",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cesarean Section without Sterilization with CC",
+      "Extreme Immaturity or Respiratory Distress Syndrome, Neonate"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "10 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY', 'CA', 'CT', 'VA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped only item 2 because it shifts from maternal cesarean reimbursement to newborn inpatient neonatal billing; all other items aligned with the pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/10 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/10 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 78541,
+    "output": 105380,
+    "breakdown": {
+      "search_keywords": {
+        "input": 541,
+        "output": 263,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 685,
+        "output": 1551,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 51222,
+        "output": 95538,
+        "calls": 10
+      },
+      "relevance_judge": {
+        "input": 4792,
+        "output": 1424,
+        "calls": 10
+      },
+      "dynamic_columns": {
+        "input": 838,
+        "output": 501,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 2652,
+        "output": 1481,
+        "calls": 12
+      },
+      "elevance_summary": {
+        "input": 421,
+        "output": 335,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 12478,
+        "output": 3707,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4912,
+        "output": 580,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:21:02.831823+00:00",
+    "end_time": "2026-08-24T11:24:32.357266+00:00",
+    "duration_ms": 209525,
+    "version": "2.0.0"
+  }
+}

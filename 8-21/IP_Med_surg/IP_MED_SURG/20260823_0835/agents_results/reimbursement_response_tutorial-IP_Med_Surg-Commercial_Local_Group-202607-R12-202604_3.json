@@ -1,0 +1,216 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_3_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA authorization-code movement must be validated before policy action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pa_status",
+          "label": "PA Status",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pa_status": "-",
+          "policy_relevance": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00151",
+        "payer_name": "Humana",
+        "policy_title": "Modifier 62",
+        "tags": [],
+        "effective_date": "Commercial: 06/2010; Medicare: 01/2008",
+        "evidence": "Off-topic for the requested DRG pattern. This policy addresses Modifier 62 co-surgeon billing for professional services and does not provide adjudication rules for the DRG pattern.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Hold any reimbursement policy action linked to CA AUTH_CODE_DISTRIBUTION pending validation of the reported +$4.4M movement, with targeted review of the +$3.5M shift in aftercare with CC/MCC and the +$0.4M contribution from HILLCREST MEDICAL CENTER before implementing denials, PA, or payment edits. (CA)",
+      "evidence": [
+        "CA"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": []
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA authorization-code movement must be validated before policy action",
+    "pattern_rank": 3,
+    "pattern_title": "CA authorization-code movement must be validated before policy action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Heart Transplant or Implant of Heart Assist System without MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/2 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_HUM_00053:Laboratory - Immune Cell Function Assay]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 15328,
+    "output": 5790,
+    "breakdown": {
+      "search_keywords": {
+        "input": 536,
+        "output": 495,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 341,
+        "output": 428,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 10513,
+        "output": 3042,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 886,
+        "output": 347,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 801,
+        "output": 594,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 287,
+        "output": 102,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1275,
+        "output": 668,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 689,
+        "output": 114,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T08:49:20.761236+00:00",
+    "end_time": "2026-08-23T08:49:52.186729+00:00",
+    "duration_ms": 31425,
+    "version": "2.0.0"
+  }
+}

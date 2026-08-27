@@ -1,0 +1,208 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a GA PPO Local acute hospital admission management and reimbursement audit that isolates the facilities and service lines driving claim growth, reviews utilization management KPIs and prior-authorization enforcement with auth-to-claim matching, and confirms contract-based reimbursement for the ARCHBOLD MEDICAL CENTER Signs and Symptoms without MCC pocket.",
+        "evidence": [
+          "GA PPO Local acute hospital spend increased about $2.8M.",
+          "The increase was driven by about 1,970 more claims.",
+          "Signs and Symptoms without MCC had paid per admit up about $23.5K.",
+          "ARCHBOLD MEDICAL CENTER was the identified unit-cost inpatient pocket."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) uses product-line methodology for nonparticipating emergency services and may require documentation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Reprocess GA PPO Local inpatient claims in Not Mapped DRG and Not Mapped or ACUTE HOSPITAL facility classes through a mapping and contractual adjudication audit, stratify results by provider subset, and defer broader reimbursement or UM changes until the corrected rerun is complete.",
+        "evidence": [
+          "GA PPO Local spend is concentrated in Not Mapped inpatient buckets.",
+          "Acute hospital variance includes Not Mapped DRG as a top driver.",
+          "Not Mapped facility claims are flagged unmapped_or_unknown_value.",
+          "Validation is required before broad policy or contracting action."
+        ],
+        "peer_benchmarking": [
+          "No relevant peer inpatient mapping policy identified; only an off-topic Elevance internal obstetrical policy appears."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a CA PPO Local Medicare GRS inpatient claims audit for Not Mapped, ACUTE HOSPITAL, and Physical Rehab to verify contractual adjudication and reprocessing, isolate provider-level outliers, review the affected service buckets, and enforce authorization denials.",
+        "evidence": [
+          "CA Not Mapped facility spend increased with higher claim volume.",
+          "CA ACUTE HOSPITAL Not Mapped spend rose despite fewer claims.",
+          "CA ACUTE HOSPITAL paid per admit increased in the comparison window.",
+          "CA Physical Rehab showed flat claim volume with higher paid per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a GA PPO Local site-of-care policy audit across SNF - FREE STANDING, AMBULATORY SURGERY CENTER, Physical Rehab, and CRITICAL ACCESS claims to enforce authorization-denial edits, reconcile authorizations to actual discharge destination, and verify contracted payment methodology at the fastest-growing facilities.",
+        "evidence": [
+          "GA SNF - FREE STANDING claims rose and paid per admit increased.",
+          "GA AMBULATORY SURGERY CENTER claims rose materially.",
+          "GA Physical Rehab paid per admit increased on new claims.",
+          "GA CRITICAL ACCESS added spend on very low volume."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit OH PPO Local Medicare GRS acute hospital inpatient claims in the Not Mapped bucket and the Degenerative Nervous System Disorders without MCC case to correct DRG mapping, verify authorization denial enforcement and authorization-to-actual matching, confirm final-bill adjudication per contract, and complete itemized outlier payment review.",
+        "evidence": [
+          "Not Mapped DRG drove most OH acute hospital increase.",
+          "Paid per admit increased in the OH Not Mapped pocket.",
+          "Single neurologic DRG case added material volatility.",
+          "Validation needed for mapping error and high-cost spike."
+        ],
+        "peer_benchmarking": [
+          "No relevant peer inpatient DRG policy identified; Humana item was off-topic."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a targeted provider-level reimbursement policy audit for HOSPITAL FOR SPECIAL SURGERY, WVU MEDICINE PRINCETON COMMUNITY HOSPITAL, and the Missouri chemotherapy acute hospital pocket to validate single-case agreements, contracted payment terms, OON status, and site-of-care steerage; remediate any contract concessions, compliance gaps, or claims payment issues identified.",
+        "evidence": [
+          "MO acute hospital pocket contributed about $116K on roughly 51 more claims.",
+          "HOSPITAL FOR SPECIAL SURGERY added leakage across NY, CT, and IN.",
+          "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL added about $46K in VA on 3 claims.",
+          "Pattern next step calls for auditing steerage, single-case pricing, and contracted terms."
+        ],
+        "peer_benchmarking": [
+          "Humana has only a general modifier policy, with no code-specific rule for this DRG pattern.",
+          "Elevance internally bundles related unplanned same-hospital readmissions within 30 days; OB delivery excluded."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a focused provider-, diagnosis-, and service-level outlier review policy for John Muir Medical Center Walnut Creek Camp, Archbold Medical Center, and Phoebe Worth Medical Center IP Med/Surg and NF admissions with diagnoses G20C, I69354, G959, R5381, and Z7409 when procedure fields are -3 or Null or Blank.",
+        "evidence": [
+          "John Muir Medical Center Walnut Creek Camp outliers carried procedure -3.",
+          "Archbold Medical Center G959 IP Med/Surg case used procedure -3.",
+          "Phoebe Worth Medical Center Z7409 NF case had Null or Blank procedure.",
+          "CA NF outliers centered on G20C and I69354.",
+          "GA IP Med/Surg outliers centered on R5381 and G959."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "Outpatient specialty claims show provider-specific mapping and auth risk",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is concentrated in GA acute hospitals, and the recommended next step explicitly calls for identifying the facilities/providers driving the admission growth.; IP MedSurg (DNE) Trend 4: The pattern recommends finding the hospital service lines behind the increase, which directly matches the service-driver investigation rule.; IP MedSurg (DNE) Trend 6: This is primarily a utilization-led inpatient trend, so reviewing utilization management KPIs and the PAV waterfall is highly relevant to explain the admission surge.; IP MedSurg (DNE) Trend 8: Because the pattern points to admission management leverage in acute hospitals, checking whether authorization controls and auth-to-claim matching are being enforced is directly relevant.; IP MedSurg (DNE) Trend 10: A smaller but notable inpatient unit-cost pocket exists within the broader pattern, and the recommendation includes reimbursement review, making reimbursement method a relevant parent rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 9: Most directly aligned because the pattern is a coding/mapping validation issue with large spend in not-mapped DRG and facility buckets, indicating claims processing, reprocessing, or classification integrity should be reviewed first.; IP MedSurg (DNE) Trend 10: Highly relevant because paid per admit is also increasing and the pattern explicitly says pricing, contract terms, and payment leakage cannot be separated until mapping is fixed, making reimbursement method review important.; IP MedSurg (DNE) Trend 4: The variance is concentrated in inpatient facility/service classification, especially ACUTE HOSPITAL versus Not Mapped buckets, so service-driver review fits the need to validate where the claims are being categorized.; IP MedSurg (DNE) Trend 3: Not-mapped DRGs prevent clear diagnosis attribution, so this rule is relevant for determining whether the increase reflects true diagnosis mix change or missing DRG mapping.; IP MedSurg (DNE) Trend 1: Useful because the issue may be concentrated in a subset of GA hospitals or billing entities, which would help distinguish provider-specific behavior, contract setup, or mapping configuration problems."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 31,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Best fit for the main signal: CA acute hospital spend rose even with fewer claims because paid per admit increased materially, which points to reimbursement method, payment logic, or contracted rate pressure.; IP MedSurg (DNE) Trend 9: Highly relevant because the biggest drivers sit in not-mapped claim buckets, so claims processing, reprocessing, status, and payment application should be validated before interpreting the increase as fully real.; IP MedSurg (DNE) Trend 4: The variance is concentrated in specific facility/service buckets (Not Mapped, Acute Hospital, Physical Rehab), making service-level and classification review directly relevant to the pattern.; IP MedSurg (DNE) Trend 1: The pattern suggests a concentrated hospital subset may be driving the increase, so provider-level review is relevant for identifying whether specific facilities or contracts are responsible for the pricing pressure.; IP NF (DNE) Trend 10: Relevant to the smaller Physical Rehab component, which showed flat volume but higher paid per admit, indicating possible post-acute reimbursement pressure beyond the acute hospital subset."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 24,
+        "categories": [
+          "IP NF (DNE)",
+          "OP Surg (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: Best fit for the post-acute site-of-care shift: spend is moving into SNF, rehab, and critical access settings, so admission/discharge source and routing should be reviewed.; IP NF (DNE) Trend 8: The pattern explicitly calls for confirming authorization criteria, and rising claims across non-acute facilities may reflect auth-to-claim mismatch or weak enforcement.; IP NF (DNE) Trend 10: Paid per admit increased materially in key settings, especially SNF and rehab, making reimbursement method and contracted rate review highly relevant.; IP NF (DNE) Trend 1: The increase appears concentrated in specific GA facility settings and fastest-growing facilities, so provider-level drivers and contract/provider behavior should be assessed.; OP Surg (DNE) Trend 7: ASC is a major contributor with a large claim-count increase, so outpatient surgical authorization controls and auth-to-claim matching are directly relevant."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend increase is concentrated in specific inpatient DRG/diagnostic buckets, especially a large 'Not Mapped' bucket plus a neurologic DRG spike, so diagnosis-level isolation is a primary research path.; IP MedSurg (DNE) Trend 9: The pattern explicitly flags a material not-mapped bucket and potential mapping error, making claims processing/reprocessing and claim status review highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased and the recommended next step includes confirming outlier payment treatment, which aligns closely to reimbursement method review.; IP MedSurg (DNE) Trend 8: The recommended action specifically calls for confirming authorization handling, directly matching the auth-to-claim review rule.; IP MedSurg (DNE) Trend 2: A single high-cost neurologic case added meaningful volatility, so it is relevant to test whether the variance is isolated to one or a small subset of members."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 29,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)",
+          "OP Oth (DNE)",
+          "OP Surg (DNE)"
+        ],
+        "relevance_reason": "OP IV Thrpy - Oncly (DNE) Trend 1: The largest component of the pattern is the MO acute hospital pocket tied to chemotherapy drugs in OP IV therapy/oncology, concentrated in a specific provider with 51 more claims and higher paid per admit, which directly fits a provider-isolated variance review.; OP Surg (DNE) Trend 1: HOSPITAL FOR SPECIAL SURGERY is a recurring multi-state driver across NY, CT, and IN for musculoskeletal OP surgical cases in acute hospitals, making provider concentration the clearest parent rule for this portion of the pattern.; OP IV Thrpy - Oncly (DNE) Trend 9: Pattern details explicitly point to provider mix, episodic payment terms, and targeted network economics review rather than broad utilization, so reimbursement method review is highly relevant for the MO oncology/chemo acute hospital leakage.; OP Surg (DNE) Trend 8: The recommended next step calls for auditing HOSPITAL FOR SPECIAL SURGERY for single-case pricing and contracted payment terms, which aligns directly to the reimbursement method parent rule for the OP surgical segment.; OP Oth (DNE) Trend 1: WVU MEDICINE PRINCETON COMMUNITY HOSPITAL in VA generated a sharp low-volume spike (+$46K on 3 incremental claims with about +$5.7K paid per admit) in misc outpatient management/drug activity, strongly indicating a provider-specific pocket rather than systemwide utilization change."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The largest spend increase is concentrated in a narrow set of IP Med/Surg neurologic and medical diagnoses such as I69351, G959, and R5381, which directly fits diagnosis-driver review.; IP NF (DNE) Trend 3: NF outlier spend is also isolated to a small group of diagnoses including G20C, I69354, Z7409, R2689, and R278, making diagnosis concentration a primary parent rule.; IP MedSurg (DNE) Trend 4: Several high-cost IP Med/Surg outlier cases carry '-3' or blank procedure values, so service/procedure review is highly relevant for validating whether these are true catastrophic cases or coding/data-quality issues.; IP NF (DNE) Trend 4: NF cases repeatedly show unmapped or blank procedure fields within a narrow service setting, aligning well with a service-driver review and the recommended data-quality follow-up.; IP MedSurg (DNE) Trend 1: The IP Med/Surg outliers appear tied to specific facilities/providers rather than broad utilization growth, so provider concentration should be evaluated as part of the focused review."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T02:37:29.236420+00:00"
+  }
+}

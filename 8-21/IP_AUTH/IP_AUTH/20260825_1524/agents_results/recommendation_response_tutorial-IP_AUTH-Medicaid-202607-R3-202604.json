@@ -1,0 +1,185 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 5,
+      "patterns_skipped": 3,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate an AUTH_CODE_DISTRIBUTION auth-to-claim validation and claims-processing audit for inpatient IP Med/Surg and IP BH claims in IN, CO, MD, CA, and VA, starting with RILEY'S CHILDREN'S HEALTH, PEAK VIEW BEHAVIORAL HEALTH, Major Small and Large Bowel Procedures with CC, Cirrhosis and Alcoholic Hepatitis with CC, Other Disorders of Nervous System with MCC, and Depressive Neuroses, and pause denial-enforcement or reprocessing changes until status mapping is confirmed.",
+        "evidence": [
+          "Pattern type is coding_mapping_validation on inpatient claims.",
+          "AUTH_CODE_DISTRIBUTION is the primary driver code.",
+          "All source groups carry requires_validation_before_action.",
+          "IN concentration includes RILEY'S CHILDREN'S HEALTH.",
+          "CO behavioral health concentration includes PEAK VIEW BEHAVIORAL HEALTH."
+        ],
+        "peer_benchmarking": [
+          "United Health states no prior authorization or notification requirements in policy summary."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a joint Medicaid acute-hospital audit in CA, MO, and TN for pa_required_code Y admissions, targeting Major Small and Large Bowel Procedures with CC, Cirrhosis and Alcoholic Hepatitis with CC, Depressive Neuroses, and Neuroses Except Depressive, with provider-level review at THE KECK HOSPITAL OF USC and ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL to confirm prior authorization, denial enforcement, admission and level-of-care appropriateness, inpatient conversion controls, and claims paid per contract.",
+        "evidence": [
+          "CA TANF Standard pressure centers on Major Small and Large Bowel Procedures with CC.",
+          "MO acute hospital BH pressure centers on Depressive Neuroses and Neuroses Except Depressive.",
+          "TN variance is concentrated at ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL.",
+          "CA context identifies THE KECK HOSPITAL OF USC within the bowel DRG spike.",
+          "Affected acute hospital segments are marked pa_required_code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused review for PA-required Medicaid CHILDRENS IP Med/Surg admissions at RILEY'S CHILDREN'S HEALTH and JOHN R. OISHEI CHILDRENS HOSPITAL across TANF Standard, Family Care, and CHIP Standard to confirm prior authorization was obtained, validate auth-to-claim matching and denial enforcement, confirm claims are processing per contractual obligation, and establish pediatric site-of-care opportunities.",
+        "evidence": [
+          "Spend is concentrated at RILEY'S CHILDREN'S HEALTH and JOHN R. OISHEI CHILDRENS HOSPITAL.",
+          "All source cards are PA-required with auth_dimension_present flags.",
+          "Largest IN and NY TANF Standard segments are volume-led.",
+          "Family Care and CHIP Standard segments show mixed volume and unit-cost pressure."
+        ],
+        "peer_benchmarking": [
+          "Centene allows separate billing only with supporting documentation for complications or unrelated services.",
+          "Healthfirst includes same-day immediate postpartum care in delivery and bars separate billing."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a case-level payment integrity and contract compliance audit for the CA IP Med/Surg outlier admissions tied to ANOXIC BRAIN DAMAGE NEC, ALCOHOLIC HEPATITIS WITH ASCITES, ALCOHOLIC HEPATITIS WITHOUT ASCITES, BENIGN NEOPLASM OF SIGMOID COLON, and ULCERATIVE CHRN PANCOLITIS W/O COMP at TIRR MEMORIAL HERMANN, MERCY SAN JUAN MEDICAL CENTER, and THE KECK HOSPITAL OF USC, validating authorization enforcement, itemized bills, interim-versus-final claim zeroing, and final adjudication, with provider-specific recovery or contract remediation if noncompliance is found.",
+        "evidence": [
+          "ANOXIC BRAIN DAMAGE NEC admissions were concentrated at TIRR MEMORIAL HERMANN.",
+          "Alcoholic hepatitis admissions were concentrated at MERCY SAN JUAN MEDICAL CENTER.",
+          "BENIGN NEOPLASM OF SIGMOID COLON outlier was billed by THE KECK HOSPITAL OF USC.",
+          "ULCERATIVE CHRN PANCOLITIS W/O COMP appeared as a single high-cost bowel surgery outlier.",
+          "PA required code is Y on the identified outlier admissions.",
+          "Paid ratio reached 1.0 or higher on named outlier claims."
+        ],
+        "peer_benchmarking": [
+          "United Health documentation identified no relevant DRG or outlier payment policy for this inpatient pattern."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA IP Med/Surg UM policy review for ALCOHOLIC CIRRHOSIS LIVER W/ASCITES, UNSPECIFIED CIRRHOSIS OF LIVER, ENCOUNTER FOR ATTENTION ILEOSTOMY, and DVTRCLI LG INT NO PERF/ABSC W/O BL: confirm prior authorization was obtained, investigate repeat same-facility returns, apply CTI discharge planning, and evaluate site of care for non-ER bowel surgery admissions at MERCY SAN JUAN MEDICAL CENTER and THE KECK HOSPITAL OF USC.",
+        "evidence": [
+          "CA broader IP Med/Surg case mix adds about +$0.9M.",
+          "ALCOHOLIC CIRRHOSIS LIVER W/ASCITES contributes +$0.3M with +25 admissions.",
+          "ENCOUNTER FOR ATTENTION ILEOSTOMY adds +$0.3M with +9 admissions.",
+          "Ileostomy driver shows er_admit_indicator N.",
+          "UNSPECIFIED CIRRHOSIS OF LIVER and diverticular bowel cases add another +$0.3M.",
+          "All highlighted source cards show prior authorization required."
+        ],
+        "peer_benchmarking": [
+          "United Health mentions hepatic fibrosis assays every six months; not relevant to DRG reimbursement.",
+          "Humana shows no documented policy relevance or appeals process for this pattern."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 3,
+        "pattern": "Inpatient behavioral health case mix is rising across NC, VA, GA, and UNATTRIBUTED",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 4,
+        "pattern": "Acute psych admissions are a recurring Medicaid cost driver",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 7,
+        "pattern": "CA neurologic members are shifting into high-cost post-acute settings",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most direct match to the pattern: the increase is explicitly driven by AUTH_CODE_DISTRIBUTION shifts on inpatient Med/Surg claims and is flagged as auth-to-claim validation requiring review before any UM or reimbursement action.; IP BH (DNE) Trend 7: Behavioral health portions of the pattern, including CO psychoses and likely VA depressive neuroses, show the same authorization status distribution issue; this rule directly targets auth-to-claim match validation in IP BH.; IP MedSurg (DNE) Trend 9: The pattern repeatedly describes a coding and claim mapping problem rather than confirmed utilization change, making claims processing/reprocessing and status assignment review a strong secondary parent rule for Med/Surg claims.; IP BH (DNE) Trend 8: For the IP BH component, the authorization shift may also reflect claims status or processing workflow issues rather than real care change, so claim frequency/status review is a relevant secondary rule.; IP MedSurg (DNE) Trend 1: The variance is materially concentrated in a subset of providers, especially RILEY'S CHILDREN'S HEALTH and named facilities tied to the Med/Surg cards, which supports provider-level workflow and coding review as a scoping parent rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 24,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is repeatedly concentrated in specific inpatient med/surg DRGs, especially Major Small and Large Bowel Procedures with CC and Cirrhosis and Alcoholic Hepatitis with CC across CA, OH, NC, IN, MD, and MO, making diagnosis-level concentration a primary parent rule.; IP MedSurg (DNE) Trend 6: Admissions are up across multiple states and the recommended action explicitly calls for UM review of admission appropriateness, level of care, and inpatient conversion, which aligns directly to reviewing utilization management KPI and PAV drivers.; IP MedSurg (DNE) Trend 10: Paid per admit is higher in the largest markets, especially CA, and the pattern narrative highlights reimbursement and hospital contract exposure, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 1: The issue is tied to acute hospitals and includes provider-specific context and explicit hospital contract exposure language, so checking whether variance is concentrated in a subset of providers is an important parent rule.; IP BH (DNE) Trend 3: Behavioral health inpatient pressure in MO is concentrated in Depressive Neuroses and Neuroses Except Depressive, so BH diagnosis-driver review is directly applicable for that part of the recurring pattern."
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Best fit because the pattern is explicitly concentrated at two named children's hospitals, making provider-specific behavior, referral flow, and contract/network dynamics the primary research path.; IP MedSurg (DNE) Trend 6: Highly relevant because the largest spend increases are volume-led, with admissions up materially in both IN and NY, pointing to utilization management and potentially avoidable variance review.; IP MedSurg (DNE) Trend 7: Relevant because the recommended action is to review referral and admission patterns and assess lower-intensity pediatric site-of-care alternatives, which aligns with admission/discharge source-location review.; IP MedSurg (DNE) Trend 8: Relevant because all key source cards are PA-required (Y) and flagged for auth dimension presence, so auth-to-claim enforcement should be checked as volume rises at concentrated providers.; IP MedSurg (DNE) Trend 10: Secondary but relevant because some segments show mixed volume and unit-cost pressure, and the downstream routing includes reimbursement policy/network review at the concentrated providers."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Strongest fit: the variance is explicitly concentrated in a small set of diagnoses within CA IP Med/Surg, especially anoxic brain damage, alcoholic hepatitis, and isolated bowel surgery cases.; IP MedSurg (DNE) Trend 2: The pattern is driven by a very small number of catastrophic admissions, indicating concentration in a subset of members rather than a broad population-wide utilization shift.; IP MedSurg (DNE) Trend 1: Spend is tied to a limited set of named facilities/providers, so provider-level concentration and possible contract or billing differences should be evaluated.; IP MedSurg (DNE) Trend 10: Highly relevant because the recommended next step specifically calls for review of stop-loss, outlier contract terms, benefit coverage, and payment exposure, which aligns with reimbursement method review.; IP MedSurg (DNE) Trend 9: Case-level validation of very high-cost claims is needed to confirm proper processing, reprocessing, and any recovery opportunity for these unusual outlier admissions."
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Highest-fit rule: the variance is explicitly concentrated in a narrow diagnosis set within CA IP Med/Surg, especially cirrhosis and bowel/ostomy-related diagnoses, rather than across Med/Surg broadly.; IP MedSurg (DNE) Trend 4: The pattern also clusters in specific liver disease and bowel surgery pathways/DRGs, so reviewing whether the shift is isolated to a subset of services is highly relevant.; IP MedSurg (DNE) Trend 6: Admissions are the main driver, and the recommended actions focus on admission avoidance and complication management, which aligns with reviewing potentially avoidable variance and UM KPI changes.; IP MedSurg (DNE) Trend 5: The narrative describes recurring cirrhosis and ostomy-related cases and highlights post-discharge planning, making repeat-admission/readmission dynamics an important parent question.; IP MedSurg (DNE) Trend 7: At least part of the increase is in non-ER bowel surgery/ileostomy admissions, so a shift in elective inpatient case mix should be tested through admission source/location review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-25T15:47:21.480471+00:00"
+  }
+}

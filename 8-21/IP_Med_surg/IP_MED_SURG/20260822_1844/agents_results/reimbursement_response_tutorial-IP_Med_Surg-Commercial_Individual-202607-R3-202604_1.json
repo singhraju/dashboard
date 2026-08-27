@@ -1,0 +1,222 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R3-202604_1_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R3-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT PPO authorized acute admissions are the dominant cost driver",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention_status",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope_summary",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention_status": "-",
+          "policy_scope_summary": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention_status": "-",
+          "policy_scope_summary": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_00061",
+        "payer_name": "Emblem Health",
+        "policy_title": "Co-Surgeon/Team Surgeon-Modifiers 62/66",
+        "tags": [],
+        "effective_date": "1/1/2021",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/co-surgeon-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00056",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "10/1/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Microsurgery-Policy-Professional.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CT PPO authorized acute admissions are the dominant cost driver",
+    "pattern_rank": 1,
+    "pattern_title": "CT PPO authorized acute admissions are the dominant cost driver",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Craniotomy and Endovascular Intracranial Procedures with MCC",
+      "Heart Transplant or Implant of Heart Assist System with MCC",
+      "Major Bladder Procedures with CC"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "3/5 policies quarantined (60%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00055:Ambulatory Surgical Groupers, RP_COM_EMB_00129:Immune Cell Function Assay (LBM), RP_COM_P32_CT_MA_ME_NH_28595780209:Laboratory: Immune Cell Function Assay]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 213062,
+    "output": 14018,
+    "breakdown": {
+      "search_keywords": {
+        "input": 551,
+        "output": 1026,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 440,
+        "output": 1187,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 208433,
+        "output": 10821,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1409,
+        "output": 345,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 862,
+        "output": 464,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1367,
+        "output": 175,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T18:57:58.285143+00:00",
+    "end_time": "2026-08-22T18:59:29.959523+00:00",
+    "duration_ms": 91674,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a manual inpatient claim and authorization audit for DEACONESS ILLINOIS MEDICAL CENTER OH PPO Local acute hospital IP Med/Surg admissions tied to DRG \"Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours\" and diagnosis A419 to verify prior authorization alignment, final-bill adjudication, interim and first-claim zero-out, reimbursement methodology, and contract compliance; route confirmed pricing variance to contract remediation or site-of-care review.",
+        "evidence": [
+          "DEACONESS ILLINOIS MEDICAL CENTER drove about +$61K in OH PPO Local acute hospital spend.",
+          "Change came with four more claims and higher paid per admission.",
+          "Increase was flagged low baseline and repeated delta concentration."
+        ],
+        "peer_benchmarking": [
+          "United Health requires correct primary diagnosis field placement and ICD-10-CM sequencing compliance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused audit of WVU MEDICINE PRINCETON COMMUNITY HOSPITAL VA Medicare GRS PPO Local acute hospital claims, prioritizing Not Mapped DRG / Drugs cases, to verify authorization enforcement, acute level-of-care management, and contract-compliant final adjudication; if variance is confirmed, initiate contract remediation or site-of-care management.",
+        "evidence": [
+          "Spend increase concentrated at WVU MEDICINE PRINCETON COMMUNITY HOSPITAL.",
+          "Claims increased in VA PPO Local acute hospital.",
+          "Paid per admission increased at this provider.",
+          "Drill context shows Not Mapped DRG and Drugs.",
+          "Validation requested for payment accuracy and claim classification."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health summary table only notes multiple-delivery billing; no pattern-relevant acute hospital rule.",
+          "Humana summary table shows no documented pattern-relevant billing rule."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Hold UM or reimbursement changes and require a provider-level billing, coding, and category-mapping review for WVU MEDICINE PRINCETON COMMUNITY HOSPITAL outpatient Drugs claims with diagnosis Z5112, correcting Not Mapped routing between OP Mgmt Oth Misc and OP IV Thrpy/Oncology before any management-design action.",
+        "evidence": [
+          "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL drove all flagged VA outpatient drug claims.",
+          "All affected claims used diagnosis Z5112 and procedure Drugs.",
+          "Claims appeared as Not Mapped in OP Mgmt Oth Misc and OP IV Thrpy/Oncology.",
+          "Both findings carried unmapped_or_unknown_value and small_n_rows flags."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused case-level clinical, coding, and payment audit for the DEACONESS ILLINOIS MEDICAL CENTER admission billed as Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours with diagnosis A419, validating sepsis clinical support, ventilation severity, DRG assignment, and contract-compliant claim processing.",
+        "evidence": [
+          "One OH inpatient Med/Surg case drove the increase.",
+          "DRG was severe sepsis with mechanical ventilation over 96 hours.",
+          "Primary diagnosis code was A419.",
+          "Facility was DEACONESS ILLINOIS MEDICAL CENTER.",
+          "Pattern flagged low baseline and repeated delta concentration."
+        ],
+        "peer_benchmarking": [
+          "Buckeye Health Plan requires Sepsis-3 evidence, organ dysfunction or SOFA rise, and treatment.",
+          "Centene subjects MS-DRG payment to clinical validation, sequencing, diagnosis, discharge, and DRG review.",
+          "Molina may adjust payment when A41.x or R65.2 sepsis codes lack record support."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit CA PPO Local acute hospital claims for OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER to confirm contractual rate application, final adjudication status, claims processing, and reimbursement methodology, and validate the IP Med/Surg vascular claim for Other Vascular Procedures without CC/MCC with diagnosis I70223.",
+        "evidence": [
+          "OU Health acute hospital claims were down by 2 in CA.",
+          "Paid per admission increased by about +$16.6K.",
+          "One vascular inpatient claim tied to diagnosis I70223 added about +$17K.",
+          "Provider flags include low_volume_run and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit and correct CARDIAC RMS LLC PPO Local claims in CA and NY with Not Mapped facility or DRG assignment for provider specialty, outpatient service, diagnosis I498, and Medicine claim mapping, then validate authorization denial logic before any site-of-care or reimbursement policy action.",
+        "evidence": [
+          "All contributing findings include Not Mapped classifications or unmapped-value flags.",
+          "CARDIAC RMS LLC growth is concentrated in Not Mapped CA and NY activity.",
+          "NY Not Mapped facility activity added claims while average paid per claim decreased."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health requires documentation supporting all billed services."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 5,
+        "pattern": "GA inpatient behavioral health growth is concentrated in substance-use admissions",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 6,
+        "pattern": "Substance-use cases are surfacing in acute settings across CA and GA",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is almost entirely concentrated at a single acute hospital provider, DEACONESS ILLINOIS MEDICAL CENTER, which directly matches the provider-subset driver rule.; IP MedSurg (DNE) Trend 9: The pattern explicitly calls for validation of claim setup and payment accuracy on a very small number of claims, aligning with review of claims processing/reprocessing and claim status issues.; IP MedSurg (DNE) Trend 10: Paid per admission increased materially and the recommended review includes payment terms, making reimbursement method or contractual pricing a highly relevant parent rule.; IP MedSurg (DNE) Trend 8: Because the increase involves a few inpatient admissions and admission appropriateness is a stated next step, checking auth-to-claim alignment and enforcement is relevant.; IP MedSurg (DNE) Trend 6: The pattern shows mixed utilization and unit-cost pressure in inpatient acute care, so utilization management KPI review is a secondary but relevant lens for avoidable variance or case-management gaps."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: All of the positive spend change is concentrated at WVU MEDICINE PRINCETON COMMUNITY HOSPITAL, making provider-level behavior or contracting the leading hypothesis.; IP MedSurg (DNE) Trend 10: Paid per admit increased by roughly $4.9K and the recommended next step includes recent pricing review, which directly matches a reimbursement method or contract-driven variance.; IP MedSurg (DNE) Trend 9: The pattern is flagged for low baseline and validation needed, with explicit concern about payment accuracy and claim classification, aligning to claim processing/reprocessing review.; IP MedSurg (DNE) Trend 8: Claims increased and the pattern recommends reviewing admission management opportunities, so authorization-to-claim enforcement is a relevant parent rule to test.; IP MedSurg (DNE) Trend 4: Drill context includes service-specific signals such as Drugs and a Not Mapped DRG, suggesting service mix or claim classification within acute hospital billing may be contributing."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP IV Thrpy - Oncly (DNE) Trend 4: Directly relevant because the impacted oncology outpatient claims are all for the service 'Drugs' and are landing in a 'Not Mapped' bucket, making service-level classification review the strongest fit.; OP Oth (DNE) Trend 4: Best fit for the OP Mgmt Oth Misc portion of the pattern; the same drug service is appearing in a miscellaneous outpatient category as 'Not Mapped,' pointing to a service mapping issue.; OP IV Thrpy - Oncly (DNE) Trend 3: All affected oncology outpatient claims share diagnosis Z5112, so diagnosis-driver review is relevant to confirm whether diagnosis-based coding or routing is pushing claims into the wrong category.; OP Oth (DNE) Trend 3: The OP Mgmt Oth Misc claims also share diagnosis Z5112, which supports checking whether this diagnosis is being misclassified into a miscellaneous outpatient bucket.; OP Oth (DNE) Trend 1: The variance is concentrated at a single provider, WVU MEDICINE PRINCETON COMMUNITY HOSPITAL, suggesting provider-specific billing setup or local coding configuration as a likely contributor."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The entire spend increase is concentrated at a single provider, DEACONESS ILLINOIS MEDICAL CENTER, so provider-level isolation is the strongest parent trend match.; IP MedSurg (DNE) Trend 3: The variance is narrowly tied to one diagnosis/DRG pattern: A419 with severe sepsis and mechanical ventilation over 96 hours, making diagnosis concentration highly relevant.; IP MedSurg (DNE) Trend 10: The recommended action explicitly calls for payment accuracy and DRG validation, which aligns well with reimbursement method review for a high-cost inpatient outlier.; IP MedSurg (DNE) Trend 4: Prolonged mechanical ventilation over 96 hours is the key high-cost clinical service embedded in the DRG, so service-driver review is relevant to validate acuity and intensity.; IP MedSurg (DNE) Trend 2: The spike appears to be isolated to a single admission and likely a single member, supporting member-level isolation to confirm this is a one-off catastrophic case rather than a broader trend."
+      },
+      {
+        "rank": 5,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 6,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated at a single provider, OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER, making provider-specific behavior or contract terms the primary research path.; IP MedSurg (DNE) Trend 10: The pattern is explicitly price-led, with paid per admit sharply up despite lower claim volume, so reimbursement method and rate application review are directly relevant.; IP MedSurg (DNE) Trend 9: Recommended next steps call for claim accuracy and payment audit, which aligns with reviewing claims processing or reprocessing against contractual standards.; IP MedSurg (DNE) Trend 3: A single new or rare diagnosis-linked inpatient case tied to I70223 is a major contributor, so diagnosis-level concentration is clearly relevant.; IP MedSurg (DNE) Trend 4: The spend increase is concentrated in a specific inpatient vascular DRG/service line, indicating service-level review is also appropriate."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 1: The variance is tightly concentrated in a single provider, CARDIAC RMS LLC, so provider-level setup, specialty, and mapping validation is the most direct parent research path.; OP Oth (DNE) Trend 4: The growth is confined to a narrow outpatient service context (OP Mgmt Oth Misc / Medicine) and Not Mapped facility classification, making service/category assignment review highly relevant.; OP Oth (DNE) Trend 3: The pattern is also focused on diagnosis I498 within a Not Mapped DRG context, so diagnosis-level coding or mapping review is relevant before treating this as a broad utilization shift.; OP Oth (DNE) Trend 8: Because incorrect facility and outpatient mapping can alter payment categorization, reimbursement method review is important before acting on the apparent paid increase.; OP Oth (DNE) Trend 7: The pattern explicitly warns that bad mapping can misdirect authorization and site-of-care actions, so auth-to-claim alignment is a useful validation path."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T03:11:01.500320+00:00"
+  }
+}

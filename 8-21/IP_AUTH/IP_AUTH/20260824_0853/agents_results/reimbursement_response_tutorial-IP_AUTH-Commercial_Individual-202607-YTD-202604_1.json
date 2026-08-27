@@ -1,0 +1,194 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Provider concentration is led by Yale, with smaller recurring pockets in GA behavioral health and IN",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "topic_status",
+          "label": "Topic Status",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Optum Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "topic_status": "-",
+          "policy_scope": "No DRG-specific rule; general office/outpatient E/M documentation guidance only."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_OPTUM_ALL_28595840100",
+        "payer_name": "Optum Health",
+        "policy_title": "Documentation Requirements for Reimbursement of Evaluation Management (E/M) Services (99201-99205 and 99212-99215)",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "This policy is general office/outpatient evaluation and management documentation guidance and does not contain a DRG-specific adjudication rule for this DRG.",
+        "policy_url": "https://www.myoptumhealthphysicalhealth.com/public/document/?documentType=ReimbursementPolicies&documentName=0056_DocReqEMServicesReimbursementPolicy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: Provider concentration is led by Yale, with smaller recurring pockets in GA behavioral health and IN",
+    "pattern_rank": 1,
+    "pattern_title": "Provider concentration is led by Yale, with smaller recurring pockets in GA behavioral health and IN",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies",
+      "Coronary Bypass without Cardiac Catheterization without MCC",
+      "Psychoses"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT', 'GA', 'IN'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "3/4 policies quarantined (75%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00056:Biomarkers Testing for Autoimmune Rheumatic Disease (LBM), RP_COM_EMB_00106:Prescription Medication and Illicit Drug Testing in Outpatient Setting (LBM), RP_COM_EMB_00116:Vitamin B12 & Methylmalonic Acid Testing (LBM)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 86813,
+    "output": 11777,
+    "breakdown": {
+      "search_keywords": {
+        "input": 553,
+        "output": 397,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 446,
+        "output": 706,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 81366,
+        "output": 8986,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1976,
+        "output": 876,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 885,
+        "output": 441,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 233,
+        "output": 121,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1354,
+        "output": 250,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T09:11:07.309228+00:00",
+    "end_time": "2026-08-24T09:11:54.893398+00:00",
+    "duration_ms": 47584,
+    "version": "2.0.0"
+  }
+}

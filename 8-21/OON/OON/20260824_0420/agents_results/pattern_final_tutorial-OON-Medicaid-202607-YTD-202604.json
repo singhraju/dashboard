@@ -1,0 +1,435 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "VA acute leukemia inpatient outlier in TANF Standard",
+    "pattern_description": "A single inpatient acute leukemia case is driving the VA increase in TANF Standard acute hospital spend. The pattern is highly concentrated and looks like a rare catastrophic case rather than broad utilization growth. Because the clinical and operational views point to the same event, the right action is a case-level review of coding, medical necessity, and reimbursement together.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA acute leukemia inpatient outlier in TANF Standard",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope_summary",
+              "label": "Relevant Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_scope_summary": "Covers reimbursement for specified flow cytometry immunophenotyping codes for listed conditions."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_UHC_01702",
+            "payer_name": "United Health",
+            "policy_title": "Flow Cytometry Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "This policy addresses flow cytometry immunophenotyping and related cell enumeration rules for specific CPT/HCPCS codes and conditions. It does not mention CPT C9201 or any DRG acute leukemia inpatient outlier rule, so no adjudication rule is extracted for that pattern.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Flow-Cytometry-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "One VA TANF Standard acute hospital case added about $1.9M. Paid per admit increased by about $1.9M with 1 additional claim. Acute Leukemia with MCC drove nearly all of the positive change in this slice. Diagnosis C9201 appeared with no recorded procedure detail in the clinical view."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "NJ rare IP Med/Surg case cluster",
+    "pattern_description": "NJ shows a narrow IP Med/Surg cost increase tied to low-volume K5650 cases rather than a broad inpatient trend. The impact is concentrated in Peritoneal Adhesiolysis with CC and appears to reflect a small cluster of higher-cost cases. This should be handled as targeted clinical validation, not a broad utilization intervention.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "NJ K5650 IP Med/Surg cases added about $50K across 3 claims. Peritoneal Adhesiolysis with CC was the main driver. Average paid per claim increased by about $17K. Procedure detail was blank in the clinical view."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "NJ Family Care acute hospital payment spike",
+    "pattern_description": "Within NJ Family Care, acute hospital spend rose from a very small base and was concentrated in a single higher-cost case. The pattern reflects both claim growth and higher paid amount per case, but it is not broad enough to indicate a market-wide hospital trend. The business lever is claim-level reimbursement and admission review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "One NJ Family Care acute hospital claim added about $30K. Paid per admit increased by about $30K with 1 additional claim. This single case represented just over half of the positive change in the operational slice."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "AR MINIMED DME mapping issue across clinical and LTSS views",
+    "pattern_description": "AR shows a small but recurring provider-specific signal tied to MINIMED DISTRIBUTION CORP, with activity appearing in both OP HH/DME and LTSS Non Dual views. The common issue is classification quality: facility and clinical fields are not mapped cleanly enough to support confident utilization or reimbursement action. This is a gating validation pattern first, with provider follow-up only after mapping is corrected.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "AR MINIMED DME mapping issue across clinical and LTSS views",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "bundling_rules",
+              "label": "Bundling Rules",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Mention Status",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "bundling_rules": "-",
+              "mention_status": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00023",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.arkansastotalcare.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MINIMED DISTRIBUTION CORP drove a recurring AR signal across OP HH/DME and LTSS Non Dual views. Clinical DME claims tied to E109 and E1165 contributed about $3K. A separate LTSS Non Dual view showed 5 additional claims and about $2K in Not Mapped facility activity. Both views include unmapped or not-mapped classification issues."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "IN MINIMED LTSS not-mapped provider signal",
+    "pattern_description": "IN shows a small provider-specific LTSS signal tied to MINIMED DISTRIBUTION CORP, but the activity sits in a Not Mapped facility bucket. That makes this primarily a classification and payment-setup validation issue rather than a clean provider economics trend. The immediate business lever is data correction, then provider or payment review if the signal remains.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN MINIMED LTSS not-mapped provider signal",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_ltss_relevance",
+              "label": "DRG/LTSS Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_ltss_relevance": "-",
+              "policy_scope": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_ltss_relevance": "-",
+              "policy_scope": "Professional CMS-1500 multiple procedure reduction policy; not applicable to DRG/LTSS mapping."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00277",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00437",
+            "payer_name": "United Health",
+            "policy_title": "Anesthesia Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-02-20",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Anesthesia-Policy-R0032.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00439",
+            "payer_name": "United Health",
+            "policy_title": "Assistant at Surgery Services Policy, Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Assistant-at-Surgery-Policy-R5000.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00446",
+            "payer_name": "United Health",
+            "policy_title": "Cesarean Delivery Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00482",
+            "payer_name": "United Health",
+            "policy_title": "Multiple Procedure Payment Reduction (MPPR) for Medical and Surgical Services Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-07-12",
+            "evidence": "Off-topic for the requested DRG/LTSS not-mapped signal. The policy governs professional CMS-1500 claims and multiple procedure reductions for medical and surgical CPT/HCPCS services, not DRG mapping.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Multiple-Procedure-Policy-R0034.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00490",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Services Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MINIMED DISTRIBUTION CORP in IN LTSS Non Dual added about $2K. The increase involved 3 additional claims. The activity sits in a Not Mapped facility bucket, making this a validation-first issue."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "CA isolated acute hospital emergence in TANF Standard",
+    "pattern_description": "CA shows an isolated acute hospital increase from a very small base, concentrated in a single Peritoneal Adhesiolysis with CC case. This looks like a one-off emergence rather than a broad product or hospital utilization issue. The right response is claim-level review, not a wider market action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "One CA TANF Standard acute hospital claim added about $11K. Paid per admit increased by about $11K with 1 additional claim. The driver was Peritoneal Adhesiolysis with CC, indicating an isolated case rather than a broad trend."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "MD isolated acute hospital emergence in ABD Non Dual",
+    "pattern_description": "MD also shows a small, concentrated acute hospital increase from a very low base. The impact is tied to a single Peritoneal Adhesiolysis with CC case, suggesting isolated emergence rather than sustained utilization or reimbursement pressure. Business response should stay narrow unless this pattern repeats.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "One MD ABD Non Dual acute hospital claim added about $9K. Paid per admit increased by about $9K with 1 additional claim. The driver was Peritoneal Adhesiolysis with CC, consistent with an isolated case."
+      }
+    }
+  }
+]

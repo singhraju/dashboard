@@ -1,0 +1,42 @@
+{
+  "conversation_id": "tutorial-IP_Med_Surg-Medicaid-202607-R3-202604",
+  "context": {
+    "analysis_mode_parameters": {
+      "drill_metric": [
+        "expense_detail.total_paid"
+      ],
+      "period": {
+        "rolling_time_dimension": "expense_detail.incurred_month",
+        "current_period": {
+          "start_time": 202602,
+          "end_time": 202604
+        },
+        "previous_period": {
+          "start_time": 202502,
+          "end_time": 202504
+        }
+      }
+    },
+    "filters": [
+      {
+        "field": "snap_month",
+        "operator": "=",
+        "value": 202607,
+        "source": "dimension_match"
+      },
+      {
+        "field": "lob_description",
+        "operator": "=",
+        "value": "Medicaid",
+        "source": "dimension_match"
+      },
+      {
+        "field": "hcc_medium",
+        "operator": "=",
+        "value": "IP Med/Surg",
+        "source": "dimension_match"
+      }
+    ]
+  },
+  "yaml_path": "configs/correlation_pattern/coc_ecap_ip_auth_sematic_view_with_samples_prod.yaml"
+}

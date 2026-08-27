@@ -1,0 +1,401 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH cost pressure is concentrated in Cleveland Clinic and UHCMC across acute and poorly classified settings",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "site_rules",
+          "label": "Site Rules",
+          "type": "text"
+        },
+        {
+          "id": "bundling",
+          "label": "Bundling",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_rules": "-",
+          "bundling": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_rules": "Restricted in independent labs for ACS symptoms; otherwise no special site rule, LCDs may supersede.",
+          "bundling": "Bundles"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_rules": "UB04 hospital facility claims cover room/board and procedure areas; routine services/supplies not separately reimbursed.",
+          "bundling": "Bundles"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Unlisted or Miscellaneous Codes",
+        "tags": [],
+        "effective_date": "11/04/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00059",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "Quantitative troponin is reimbursable for MI evaluation when the presentation is consistent with acute ischemic symptoms, and serial testing is limited. The policy is on-topic for acute cardiac workups but is not DRG-specific.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+        "edit_rule_facts": {
+          "target_codes": [
+            "84484",
+            "83880",
+            "82553",
+            "82554",
+            "82550",
+            "82552",
+            "83625",
+            "83874",
+            "84588",
+            "86140",
+            "82725",
+            "84512",
+            "83006"
+          ],
+          "related_codes": [
+            "82553",
+            "82554",
+            "82550",
+            "82552",
+            "83625",
+            "83874",
+            "84588",
+            "86140",
+            "82725",
+            "84484"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "first three days after presentation",
+            "in independent laboratory",
+            "dyspnea or shortness of breath",
+            "chronic heart failure",
+            "in conjunction with troponin",
+            "outpatient setting"
+          ],
+          "utilization_limits": [
+            "max 4 serial tests in 3 days",
+            "4 tests per 365 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "CGS L33943",
+            "FCSO L33267",
+            "NGS L33573",
+            "Noridian L35526",
+            "Noridian L34038",
+            "Palmetto L33422",
+            "Palmetto L34410",
+            "WPS L36523"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00064",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Venous and Arterial Thrombosis Testing",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "Reimbursable antithrombin III testing when used for specified acute or thrombotic indications; not reimbursable for superficial venous thrombosis.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986393910",
+        "edit_rule_facts": {
+          "target_codes": [
+            "85300",
+            "85301",
+            "85302",
+            "85303",
+            "85305",
+            "85306",
+            "85307",
+            "0278U"
+          ],
+          "related_codes": [
+            "85302-85303",
+            "85305-85306",
+            "85307",
+            "85300-85301"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "superficial venous thrombosis, including superficial thrombophlebitis and varicosities",
+            "jurisdictions with listed local coverage determinations"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00159",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "The policy is not DRG-specific, but it broadly bundles routine hospital services and many facility components into room and board, facility, surgical, critical care, and ventilator/CPAP charges. No separate reimbursement is allowed for bundled routine services; ventilator/CPAP management owned by the facility is limited to one unit per day.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260-269",
+            "270",
+            "279",
+            "300",
+            "309",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761",
+            "270-279",
+            "300-370"
+          ],
+          "pairing_conditions": [
+            "same claim line",
+            "UB04 facility claim"
+          ],
+          "utilization_limits": [
+            "1 unit per day ventilator/CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "UB04",
+            "facility claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: OH cost pressure is concentrated in Cleveland Clinic and UHCMC across acute and poorly classified settings",
+    "pattern_rank": 7,
+    "pattern_title": "OH cost pressure is concentrated in Cleveland Clinic and UHCMC across acute and poorly classified settings",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Acute Myocardial Infarction, Discharged Alive with MCC",
+      "Not Mapped",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it is a generic facility-bundling policy rather than a recommendation tailored to the pattern's Ohio hospital cost-pressure scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 40473,
+    "output": 30640,
+    "breakdown": {
+      "search_keywords": {
+        "input": 564,
+        "output": 234,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 513,
+        "output": 1558,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 29427,
+        "output": 22182,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1561,
+        "output": 627,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 1007,
+        "output": 912,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 665,
+        "output": 370,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 402,
+        "output": 321,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4237,
+        "output": 4096,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2097,
+        "output": 340,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:27:08.651272+00:00",
+    "end_time": "2026-08-23T15:29:06.486323+00:00",
+    "duration_ms": 117835,
+    "version": "2.0.0"
+  }
+}

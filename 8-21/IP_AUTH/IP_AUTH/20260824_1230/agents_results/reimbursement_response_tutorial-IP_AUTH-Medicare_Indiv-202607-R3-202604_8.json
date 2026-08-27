@@ -1,0 +1,354 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R3-202604_8_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R3-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare high-cost inpatient outliers need case-level management, not broad policy changes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "obstetrical_exclusion",
+          "label": "OB Excluded",
+          "type": "badge"
+        },
+        {
+          "id": "readmission_bundling",
+          "label": "Readmit Bundling",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_exclusion": "OB Excluded",
+          "readmission_bundling": "Unplanned 30-day readmissions bundle into prior admission; planned returns/leave count as one DRG."
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_exclusion": "-",
+          "readmission_bundling": "-"
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "obstetrical_exclusion": "-",
+          "readmission_bundling": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595920111",
+        "payer_name": "Moda Health",
+        "policy_title": "Medical Records Documentation Standards",
+        "tags": [],
+        "effective_date": "2000-01-01",
+        "evidence": "This policy is a general medical records documentation standard and does not contain DRG-specific inpatient reimbursement rules or outlier case-level management guidance.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM039.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00683",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "14 Day Readmission (Medicaid)",
+        "tags": [],
+        "effective_date": "11/1/2022",
+        "evidence": "This is a general hospital readmission policy for Medicaid claims, not a DRG-specific rule for this label. No code-specific adjudication rule was found for this DRG description.",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.003_Readmission_MD.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "This policy is a broad inpatient readmissions rule, not a code-specific DRG policy. If this DRG is part of an unplanned readmission to the same hospital for the same, similar, or related condition within the readmission window, separate reimbursement is not allowed unless an exception applies.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days of discharge",
+            "same hospital"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Inpatient"
+          ],
+          "state_specific_rules": [
+            "Market-specific readmission windows and exclusions apply in Exhibit A.",
+            "Some markets use same-day rules within 24 hours."
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or CMS contracts and/or requirements",
+            "planned readmission",
+            "leave of absence",
+            "cancer",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "transfer from one acute care hospital to another",
+            "discharge against medical advice"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "Broad inpatient readmissions policy. It does not name this DRG label, but it applies to inpatient DRG claims when a second admission within 30 days is unplanned and related; separate reimbursement is not allowed unless an exception applies.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days",
+            "same date of service",
+            "same or related condition"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "discharge against medical advice"
+          ],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "licensed clinical medical review"
+          ],
+          "exemptions": [
+            "cancer",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "acute care transfers",
+            "AMA"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Rare high-cost inpatient outliers need case-level management, not broad policy changes",
+    "pattern_rank": 8,
+    "pattern_title": "Rare high-cost inpatient outliers need case-level management, not broad policy changes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Connective Tissue Disorders with MCC",
+      "Limb Reattachment, Hip and Femur Procedures for Multiple Significant Trauma",
+      "Other O.R. Procedures for Injuries with CC",
+      "Ventricular Shunt Procedures with CC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX', 'NY', 'OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it addresses California obstetrical readmissions rather than the pattern\u2019s multi-state rare inpatient outlier management scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/6 policies quarantined (33%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00138:Serum Testing for Evidence of Mild Traumatic Brain Injury (LBM), RP_GBD_HF_00059:Serum Testing for Evidence of Mild Traumatic Brain Injury]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 69254,
+    "output": 28067,
+    "breakdown": {
+      "search_keywords": {
+        "input": 561,
+        "output": 1166,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 425,
+        "output": 781,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 59476,
+        "output": 21614,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 2958,
+        "output": 1255,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 1020,
+        "output": 557,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 362,
+        "output": 268,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 406,
+        "output": 168,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2689,
+        "output": 1713,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1357,
+        "output": 545,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T12:59:01.819755+00:00",
+    "end_time": "2026-08-24T13:00:32.841465+00:00",
+    "duration_ms": 91021,
+    "version": "2.0.0"
+  }
+}

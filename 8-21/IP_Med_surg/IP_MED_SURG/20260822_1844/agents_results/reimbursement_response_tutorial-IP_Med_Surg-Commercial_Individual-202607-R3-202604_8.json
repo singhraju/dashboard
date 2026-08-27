@@ -1,0 +1,754 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R3-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R3-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Inpatient chemotherapy episodes are emerging in WI and select acute facilities",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "facility_bundling_rule",
+          "label": "Facility Bundling",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Required",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling_rule": "Cigna bundles routine facility services and room-and-board; denies separate reimbursement for incidental items.",
+          "auth_requirement": "No Auth"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling_rule": "Facility services are DRG/case-rate bundled, with no separate reimbursement for related 30-day readmissions.",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling_rule": "Generally bundled for facility claims with room/facility fees; Wisconsin allows separate reimbursement.",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Medica",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling_rule": "Facility observation monitoring for chemotherapy is bundled into chemotherapy; no separate reporting.",
+          "auth_requirement": "No Auth"
+        },
+        {
+          "payer_org": "Paramount Healthcare",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling_rule": "Inpatient and outpatient facility claims are bundled into room and board or primary service charges.",
+          "auth_requirement": "-"
+        },
+        {
+          "payer_org": "Providence Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_bundling_rule": "Routine, integral facility and infusion services are bundled into facility or administration charges.",
+          "auth_requirement": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "The policy does not name this chemotherapy DRG pattern or create a Wisconsin- or facility-specific inpatient chemotherapy episode rule. However, it applies general facility bundling rules that are relevant to inpatient chemotherapy claims: routine nursing, room and board, supplies, equipment, and many injection/infusion administration services are included in facility reimbursement, and chemotherapy administration work in the facility setting is described as routine nursing rather than separately reportable physician work. A limited exception states that administration services associated with an infusion or injection may be separately reimbursed when the infusion/injection is the primary reason for the facility visit.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "96401",
+            "96402",
+            "96409-96425"
+          ],
+          "related_codes": [
+            "96360-96379",
+            "96521-96523"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0230-0239"
+          ],
+          "pairing_conditions": [
+            "reported with primary medical/surgical service",
+            "facility visit where infusion/injection primary"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician reporting not intended in facility"
+          ],
+          "exemptions": [
+            "infusion/injection primary reason for visit",
+            "0230-0239 with physician order and documentation"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00042",
+        "payer_name": "Cigna",
+        "policy_title": "Pharmacy and Infusion Services",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Inpatient and facility-based infusion or chemotherapy administration services are bundled into the primary medical/surgical payment or treated as incidental. Routine inpatient supplies, equipment, and administration charges are not separately reimbursed.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R14_Pharmacy_and_Infusion_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "96360-96376",
+            "96379",
+            "96521",
+            "96522",
+            "96523",
+            "96401",
+            "96402",
+            "96409",
+            "96411",
+            "96413",
+            "96415",
+            "96416",
+            "96417",
+            "96420",
+            "96422",
+            "96423",
+            "96425"
+          ],
+          "related_codes": [
+            "96401-96425"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0250-0259",
+            "0260-0269",
+            "0270-0273",
+            "0279",
+            "0290-0299",
+            "0390-0399",
+            "0450-0459",
+            "0623-0624",
+            "0630-0639"
+          ],
+          "pairing_conditions": [
+            "performed in facility setting",
+            "reported on UB04",
+            "CMS-1500 with facility place of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "health care professional billing"
+          ],
+          "exemptions": [
+            "infusion/injection primary reason",
+            "office setting"
+          ],
+          "action_types": [
+            "bundle",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00001",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "This is a general inpatient readmission reimbursement policy, not a chemotherapy-DRG-specific policy. The requested chemotherapy pattern is not named, and admissions for the medical treatment of cancer are explicitly excluded from the readmission denial rule. The policy also states that planned readmissions and/or leave-of-absence readmissions within 30 days are treated as one admission with one DRG reimbursed.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/Inpatient_Readmissions_CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge",
+            "same or related diagnoses",
+            "same facility or affiliated facility"
+          ],
+          "utilization_limits": [
+            "30 days from discharge"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Case rate"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "medical treatment of cancer",
+            "substance abuse",
+            "rehabilitation",
+            "transplants",
+            "transfers from one facility to another",
+            "member discharged against medical advice",
+            "planned readmissions"
+          ],
+          "action_types": []
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': This is a general inpatient readmission policy, but the pattern is for inpatient chemotherapy episodes; the policy does not target chemotherapy DRGs and explicitly excludes admissions for medical treatment of cancer from the readmission denial rule."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00007",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Bundled Services and Supplies",
+        "tags": [],
+        "effective_date": "04/01/2026",
+        "evidence": "For facility claims, chemotherapy administration and infusion drug administration are treated as bundled or integral to the facility fee and are not separately reimbursed when billed on the same date of service as a room or facility fee. Stand-alone always-bundled items are denied, and modifiers do not override those denials.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/CA-08003-CA1.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "G0498"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same claim with room or facility fee"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "inpatient and outpatient facilities"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "facility provider"
+          ],
+          "exemptions": [
+            "provider, state, federal contract, and/or requirements"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "Facility claims for chemotherapy administration are generally bundled with the room or facility fee and not separately reimbursable, but Wisconsin permits separate reimbursement for chemotherapy administration and infusion administration.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "G0498"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same claim as room or facility fee"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Facility"
+          ],
+          "state_specific_rules": [
+            "WI: chemotherapy administration and infusion administration may be separately reimbursed"
+          ],
+          "provider_role_restrictions": [
+            "facility provider"
+          ],
+          "exemptions": [
+            "Wisconsin: chemotherapy administration",
+            "Wisconsin: infusion administration"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960320580015",
+        "payer_name": "Medica",
+        "policy_title": "Injection and Infusion Services",
+        "tags": [],
+        "effective_date": "01/01/1996",
+        "evidence": "Off-topic for inpatient DRG chemotherapy. The policy is limited to office-based injection and infusion reimbursement and does not set a DRG payment rule.",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/injection-and-infusion-services-policy.pdf?la=en&hash=1E4DFA8A26FDEA260292AF7B76A05F13",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960322580002",
+        "payer_name": "Medica",
+        "policy_title": "Observation Policy",
+        "tags": [],
+        "effective_date": "08/01/2021",
+        "evidence": "Medica reimburses facility observation services only when billed under observation rules, up to 48 hours and only after at least 8 hours are reported. Observation used for monitoring associated with chemotherapy is not separately reimbursable because it is considered part of the procedure.",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/observation-policy-ifb-commercial.pdf?la=en&hash=49E71FF547C64A4375498530A12C20D3",
+        "edit_rule_facts": {
+          "target_codes": [
+            "G0378"
+          ],
+          "related_codes": [
+            "G0379",
+            "99217-99220",
+            "99224-99226",
+            "99234-99236"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0762"
+          ],
+          "pairing_conditions": [
+            "with chemotherapy monitoring",
+            "same hospital admission day",
+            "immediately prior to admission"
+          ],
+          "utilization_limits": [
+            "max 48 hours",
+            "minimum 8 hours"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "IFB"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician order required"
+          ],
+          "exemptions": [
+            "inpatient claim when admitted"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00011",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Facility Routine Supplies and Services",
+        "tags": [],
+        "effective_date": "6/1/2026",
+        "evidence": "Routine facility supplies and services used in hospital care are bundled into the room, board, accommodation, or procedure charge and are not separately reimbursable when they are integral to the service delivered.",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp43.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "410",
+            "412",
+            "250",
+            "0410",
+            "0412",
+            "0250",
+            "0260",
+            "0261",
+            "0262",
+            "0263",
+            "0264",
+            "0269",
+            "0230-0239",
+            "260",
+            "300",
+            "309",
+            "361",
+            "391",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [
+            "same claim as facility charge",
+            "same date of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Modified DRG",
+            "OPPS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "incremental nursing charges"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00023",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Outpatient Hospital Services Rendered Prior to an Inpatient Admission",
+        "tags": [],
+        "effective_date": "2/1/2026",
+        "evidence": "The policy is not chemotherapy-specific, but it governs inpatient admission claims that may include outpatient services before admission. Outpatient diagnostic services within the 3-day or 1-day window are bundled into the inpatient payment. Related outpatient nondiagnostic services in that window are also bundled, while unrelated services or services outside the window may be billed separately.",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp6.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0254",
+            "0255",
+            "030X",
+            "031X",
+            "032X",
+            "0341",
+            "0343",
+            "035X",
+            "0371",
+            "0372",
+            "040X",
+            "046X",
+            "0471",
+            "0481",
+            "0489",
+            "0482",
+            "0483",
+            "053X",
+            "061X",
+            "062X",
+            "073X",
+            "074X",
+            "0918",
+            "092X"
+          ],
+          "pairing_conditions": [
+            "same hospital",
+            "within 3 calendar days before admission",
+            "on the admission date",
+            "within 1 day for certain hospitals",
+            "same continuous outpatient encounter"
+          ],
+          "utilization_limits": [
+            "3 calendar days",
+            "1 day"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Modified DRG",
+            "Commercial",
+            "Medicare",
+            "Percentage of billed charges/per diem"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "critical access hospitals (CAH)",
+            "RHC/FQHC all-inclusive rate",
+            "ambulance services",
+            "maintenance renal dialysis services",
+            "unrelated nondiagnostic services",
+            "services outside the payment window"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PH_00020",
+        "payer_name": "Paramount Healthcare",
+        "policy_title": "RM-042 Facility Routine Services, Supplies and Medical Equipment\\",
+        "tags": [],
+        "effective_date": "12/15/2025",
+        "evidence": "Chemotherapy administration is treated as an incremental nursing/ancillary service included in facility reimbursement and not separately billable when routine or included in another service charge.",
+        "policy_url": "https://www.paramounthealthcare.com/-/media/ParamountHealth/Files/Providers/Reimbursement-Policies/RM042-Facility-Routine-Services-Supplies-and-Medical-Equipment12012025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "reported elsewhere on claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "OPPS",
+            "inpatient claims",
+            "outpatient claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 14,
+    "policies_successful": 14,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: CA EPO: bundle/deny separate facility reimbursement for 96401, 96402, 96409-96425, 96360-96379, and 96521-96523 when performed in facility setting and reported on UB04 or CMS-1500 with facility place of service with the primary medical/surgical service; allow separate payment only when infusion/injection is the primary reason for visit or when revenue code 0230-0239 has a physician order and documentation. Apply to CA. Exempt: infusion/injection primary reason for visit, 0230-0239 with physician order and documentation. Peer: Cigna and Providence Health Plan both treat revenue code 0230-0239 as facility-bundled, with same-date/same-claim facility guardrails..\n\nRecommendation 2: CA EPO: bundle G0498 on the same date of service when billed on the same claim as room or facility fee by a facility provider, and keep the separately reimbursed chemotherapy/infusion administration carve-out limited to Wisconsin only. Apply to CA. Exempt: Wisconsin: chemotherapy administration, Wisconsin: infusion administration. Peer: Elevance Health (external) and Elevance Health (internal) both bundle G0498 on the same date of service when it is on the same claim as a room or facility fee..",
+      "evidence": [
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96401\" [target_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96402\" [target_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"96409-96425\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96360-96376\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96521\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96522\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96523\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"performed in facility setting\" [pairing_conditions]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"reported on UB04\" [pairing_conditions]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"CMS-1500 with facility place of service\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"reported with primary medical/surgical service\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"infusion/injection primary reason for visit\" [exemptions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"0230-0239 with physician order and documentation\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"G0498\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"same date of service\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"same claim as room or facility fee\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Facility\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"WI: chemotherapy administration and infusion administration may be separately reimbursed\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"facility provider\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Wisconsin: chemotherapy administration\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Wisconsin: infusion administration\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna and Providence Health Plan both treat revenue code 0230-0239 as facility-bundled, with same-date/same-claim facility guardrails.",
+        "Elevance Health (external) and Elevance Health (internal) both bundle G0498 on the same date of service when it is on the same claim as a room or facility fee."
+      ],
+      "citation": [
+        "Cigna \u00b7 Facility Services, Supplies and Equipment \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "Cigna \u00b7 Pharmacy and Infusion Services \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R14_Pharmacy_and_Infusion_Services.pdf",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Inpatient chemotherapy episodes are emerging in WI and select acute facilities",
+    "pattern_rank": 8,
+    "pattern_title": "Inpatient chemotherapy episodes are emerging in WI and select acute facilities",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC"
+    ],
+    "total_policies_found": 14,
+    "successful_extractions": 14,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 14 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "14 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['WI', 'OH', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "4/14 policies quarantined (29%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "1/14 policies warning-flagged (7%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "4 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_ELV_EXTERNAL_00073:Screening Services with Related Evaluation and Management Services, RP_COM_ELV_INTERNAL_00085:Inpatient Readmissions C-17002, RP_COM_ELV_INTERNAL_00218:Bundled Services and Supplies C-08003, RP_COM_UHC_00160:In Vitro Chemotherapy Assays Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "1 policy/ies flagged with contamination warnings (kept in output): [RP_COM_ELV_EXTERNAL_00001:Inpatient Readmissions]."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 158449,
+    "output": 68873,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 170,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 806,
+        "output": 1788,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 137984,
+        "output": 58681,
+        "calls": 16
+      },
+      "relevance_judge": {
+        "input": 6251,
+        "output": 2540,
+        "calls": 14
+      },
+      "dynamic_columns": {
+        "input": 959,
+        "output": 596,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1724,
+        "output": 1197,
+        "calls": 12
+      },
+      "elevance_summary": {
+        "input": 380,
+        "output": 129,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 6966,
+        "output": 3220,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2851,
+        "output": 552,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T19:05:51.438152+00:00",
+    "end_time": "2026-08-22T19:09:02.975133+00:00",
+    "duration_ms": 191536,
+    "version": "2.0.0"
+  }
+}

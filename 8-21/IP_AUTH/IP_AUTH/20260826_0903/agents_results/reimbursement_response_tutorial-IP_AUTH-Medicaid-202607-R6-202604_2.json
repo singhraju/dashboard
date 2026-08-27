@@ -1,0 +1,529 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-R6-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-R6-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "partial_success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "FL authorization code movement is masking true cost drivers",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Rule",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "No Auth",
+          "policy_scope": "General facility clean-claim bundling policy for routine supplies; no DRG-specific or state authorization guidance."
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "No Auth",
+          "policy_scope": "General facility bundling rules apply; ICU monitoring/equipment included in accommodation charges, not separately reimbursed."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "Requires Auth",
+          "policy_scope": "Reimburses tracheostomy care supplies when physician-directed, medically necessary, and subject to benefit limits."
+        },
+        {
+          "payer_org": "Florida Blue",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "policy_scope": "Applies only to physician global surgery billing and modifier handling on CMS-1500 claims."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "No Auth",
+          "policy_scope": "Applies broad professional/facility bundling rules, not DRG payment or Florida authorization movement."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Tracheostomy Supplies RETIRED",
+        "tags": [],
+        "effective_date": "11/07/06",
+        "evidence": "This policy addresses reimbursement for tracheostomy care supplies, not inpatient DRG reassignment or Florida authorization-code movement. It allows reimbursement when supplies are incident to physician services or ordered by a physician and used in accepted medical practice, with bundling in office/facility use and separate reimbursement possible in home health or through vendor fee schedules, subject to medical necessity, authorization guidelines, and supply limits.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 care kit/day",
+            "starter kit first 2 weeks",
+            "established kit after 2 weeks"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "incident to physician services",
+            "physician order required"
+          ],
+          "exemptions": [
+            "additional documentation for extra kits",
+            "medical necessity authorization above limits"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "This DRG descriptor is not named in the policy. The policy provides only general facility bundling and unit-reporting rules that may affect inpatient payment and does not state any Florida-specific authorization code movement rule.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "99190",
+            "99191",
+            "99192",
+            "95940",
+            "95941",
+            "G0453",
+            "C1762",
+            "C1763",
+            "C1781",
+            "C1734",
+            "C1889",
+            "L8699",
+            "96360",
+            "96361",
+            "96365-96379",
+            "96521-96523"
+          ],
+          "related_codes": [
+            "51785",
+            "92265",
+            "92558",
+            "95812-95813",
+            "95822",
+            "95860-95870",
+            "95872",
+            "95874",
+            "95885-95887",
+            "95907-95913",
+            "95925-95939",
+            "95955",
+            "95957",
+            "95999",
+            "96401",
+            "96402",
+            "96409-96425"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "TC"
+          ],
+          "revenue_codes": [
+            "020X",
+            "017X",
+            "36X",
+            "0230-0239",
+            "0278"
+          ],
+          "pairing_conditions": [
+            "reported as time and procedure units",
+            "beyond standard nursing services",
+            "with associated electrodiagnostic studies",
+            "under revenue code 0278",
+            "with primary surgical procedure",
+            "with primary service or procedure"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician services only",
+            "not intended for physician reporting"
+          ],
+          "exemptions": [
+            "physician-ordered documented increased nursing intensity",
+            "infusion/injection is primary visit reason"
+          ],
+          "action_types": [
+            "bundle",
+            "limit",
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "10/30/2018",
+        "evidence": "Off-topic for the requested inpatient DRG pattern. This policy governs professional global surgical package reimbursement and selected modifiers, not DRG assignment, facility authorization code movement, or inpatient cost-driver adjudication.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FLBL_FL_28206710003",
+        "payer_name": "Florida Blue",
+        "policy_title": "Global Surgery Package",
+        "tags": [],
+        "effective_date": "02/24/2010",
+        "evidence": "This DRG description is not mentioned. The policy is about physician global surgery package billing and modifier handling on CMS-1500 claims, not inpatient facility DRG reimbursement or authorization code movement.",
+        "policy_url": "https://files.guidewell.com/m/7d2f2f7eb720f5f0/original/providers-payment-policies-global-surgery-package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00045",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No adjudication rule was found for this DRG-described pattern. The policy is a professional global days and surgical bundling policy for CMS-1500 claims and does not define DRG payment, facility authorization movement, or state-specific inpatient cost-driver logic for the requested pattern.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00101",
+        "payer_name": "United Health",
+        "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No adjudication rule is stated for the requested DRG pattern or for Florida authorization code movement. The policy is off-topic to the request and instead governs split surgical package reimbursement on professional claims using transfer-of-care modifiers.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This facility policy is not DRG- or diagnosis-specific and does not address Florida authorization code movement. It applies broad inclusive-charge bundling rules to inpatient and outpatient UB04 claims, including percent-of-charge reviews and audits, so routine separately billed facility items and services during an inpatient stay are generally bundled rather than paid separately.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260",
+            "260-269",
+            "270",
+            "270-279",
+            "279",
+            "300",
+            "300-370",
+            "309",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [
+            "same inpatient or outpatient visit",
+            "when separately billed as routine services"
+          ],
+          "utilization_limits": [
+            "1 unit per day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "services not considered routine (or ancillary)",
+            "Ventilator or CPAP management"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00179",
+        "payer_name": "Centene",
+        "policy_title": "Unbundling Adjustments on Clean Claim Reviews",
+        "tags": [],
+        "effective_date": "2022-09-01",
+        "evidence": "This Centene facility clean-claim policy does not mention this DRG and does not address state-specific authorization code movement. It sets general unbundling rules for facility claims: routine supplies, services, and items integral to room/board or procedures are bundled and not separately payable; only non-routine, medically necessary, physician-ordered, and documented items may be considered separately payable.",
+        "policy_url": "https://www.sunshinehealth.com/content/dam/centene/policies/payment-policies/CC.PI.10.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same underlying room and board acuity level",
+            "during the course of a procedure",
+            "same underlying blood sample analysis",
+            "with anesthesia time charges",
+            "with perfusionist time charges",
+            "on inpatient claims"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "distinct physician order required"
+          ],
+          "exemptions": [
+            "non-routine (separately payable)",
+            "oxygen unless utilized as an exclusive form of respiratory therapy"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 11,
+    "policies_successful": 8,
+    "policies_failed": 3
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: FL authorization code movement is masking true cost drivers",
+    "pattern_rank": 2,
+    "pattern_title": "FL authorization code movement is masking true cost drivers",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Degenerative Nervous System Disorders without MCC",
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures"
+    ],
+    "total_policies_found": 11,
+    "successful_extractions": 8,
+    "failed_extractions": 3,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 11 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['FL'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift from the Florida authorization-code-movement pattern into California cesarean-delivery facility bundling, with citations that are generic and not on the pattern\u2019s specific topic."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/8 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons.",
+      "3 out of 11 policies failed extraction. Check logs for details."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 79372,
+    "output": 56818,
+    "breakdown": {
+      "search_keywords": {
+        "input": 556,
+        "output": 533,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 672,
+        "output": 1656,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 67304,
+        "output": 50485,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 1093,
+        "output": 483,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1805,
+        "output": 1094,
+        "calls": 10
+      },
+      "elevance_summary": {
+        "input": 367,
+        "output": 158,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4491,
+        "output": 1901,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3084,
+        "output": 508,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-26T09:21:58.619563+00:00",
+    "end_time": "2026-08-26T09:25:40.377114+00:00",
+    "duration_ms": 221757,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CO, GA, and ME HMO acute admissions are driving the largest spend increase",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention_status",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "facility_bundling_rule",
+          "label": "Facility Bundling",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention_status": "-",
+          "facility_bundling_rule": "Cigna bundles routine facility services and respiratory care; reimburses only highest-priced ventilatory modality."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention_status": "Bundles",
+          "facility_bundling_rule": "Routine services are bundled into facility charges; only one daily ventilator/CPAP management unit reimbursable."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "The policy is a general facility reimbursement policy and does not contain a DRG-specific rule for the requested DRG pattern. It generally bundles room-and-board-inclusive, routine, incidental, and facility-integral services into the facility payment rather than paying them separately.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00052",
+        "payer_name": "Cigna",
+        "policy_title": "Respiratory Services and Supplies",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No DRG-specific rule is stated for the requested pattern. The policy instead limits reimbursement for ventilator, CPAP, and BiPAP charges, pays only the highest-priced modality when multiple are reported on the same date, caps combined units at 24 per day, and treats routine respiratory care and tracheostomy care as integral/non-separately reimbursable.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same claim line"
+          ],
+          "utilization_limits": [
+            "24 units per day combined"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "2018-10-30",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "This policy bundles routine hospital room, board, nursing, supply, and equipment charges into facility reimbursement for inpatient and outpatient facility claims. Facility-owned ventilator or CPAP management is reimbursable at one unit per day, but routine components of that service and other listed ancillary items remain bundled.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260-269",
+            "270-279",
+            "300-370",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit/day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04",
+            "Hospital Inclusive Charges"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Pre- and Post-Anesthesia Recovery Room",
+            "facility-owned ventilator or CPAP management"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CO, GA, and ME HMO acute admissions are driving the largest spend increase",
+    "pattern_rank": 1,
+    "pattern_title": "CO, GA, and ME HMO acute admissions are driving the largest spend increase",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures",
+      "Liver Transplant without MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO', 'GA', 'ME'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped because they address respiratory-service facility billing rules rather than the target pattern, and item 1 is additionally supported by sources that explicitly say they do not contain a DRG-specific rule for the requested pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 56358,
+    "output": 16604,
+    "breakdown": {
+      "search_keywords": {
+        "input": 554,
+        "output": 994,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 556,
+        "output": 1047,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 46737,
+        "output": 10668,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1473,
+        "output": 465,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 994,
+        "output": 509,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 788,
+        "output": 471,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2287,
+        "output": 1867,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2969,
+        "output": 583,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T12:34:36.286145+00:00",
+    "end_time": "2026-08-22T12:36:01.037395+00:00",
+    "duration_ms": 84751,
+    "version": "2.0.0"
+  }
+}

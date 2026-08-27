@@ -1,0 +1,231 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a claims-processing and auth-to-claim audit for inpatient AUTH_CODE_DISTRIBUTION and Not Mapped facility claims in GA, CA, PA, KY, and OH, verifying denial enforcement, authorization-to-actual matching, and facility mapping for Aftercare with CC/MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, Cellulitis without MCC, and electrolyte-disorder admissions before UM or contracting action.",
+        "evidence": [
+          "GA AUTH_CODE_DISTRIBUTION driven by Aftercare with CC/MCC and Kidney infections.",
+          "CA AUTH_CODE_DISTRIBUTION driven by electrolyte disorders and sepsis.",
+          "Not Mapped facility growth appears in GA, PA, KY, OH, and CA.",
+          "Pattern states validation is needed before business action."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted claims-processing review for authorization-to-claim matching and denial enforcement on PPO Local authorized inpatient claims in KY, VA, OH, CT, NY, NV, and ME, then route concentrated acute hospital admissions at MARY WASHINGTON HOSPITAL INC, HIGHLAND HOSPITAL, and MANCHESTER MEMORIAL HOSPITAL, plus OH Physical Rehab and ME CRITICAL ACCESS growth, to UM KPI review and local contract/site-of-care review.",
+        "evidence": [
+          "All major drivers are prior-authorized PPO Local inpatient claims (pa_required_code Y).",
+          "Source cards list auth-to-claim validation among business terms.",
+          "KY acute hospital added about +$497K on 16 more admissions.",
+          "MARY WASHINGTON HOSPITAL INC added about +$345K on 25 more admissions.",
+          "OH added about +$300K acute hospital and +$264K Physical Rehab utilization.",
+          "CT, GA, and NY added about +$443K acute hospital utilization.",
+          "Notable contributors include MANCHESTER MEMORIAL HOSPITAL and HIGHLAND HOSPITAL.",
+          "ME critical access shows mixed volume and unit-cost pressure."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review CA PPO Local initial and concurrent UM KPIs, confirm prior authorization-to-claim matching, and review the UM ROI model to determine P.A.V. and leakage opportunities for ACUTE HOSPITAL electrolyte, UTI, and sepsis admissions transitioning to Physical Rehab Aftercare with CC/MCC.",
+        "evidence": [
+          "Authorized status is present across key drivers: pa_required_code Y.",
+          "Acute hospital increase centers on electrolyte disorders, UTI, and sepsis.",
+          "Physical Rehab increase centers on Aftercare with CC/MCC.",
+          "Cards flag auth-to-claim validation and repeated delta concentration."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health internal policy notes modifier 78 reimbursement for qualifying unplanned related postoperative returns to the OR."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA PPO Local inpatient UM policy review for prior-auth claims that separates Physical Rehab aftercare from Acute Hospital sepsis and electrolyte admissions, verifies authorization capture, reviews initial and concurrent UM KPIs, evaluates P.A.V., site-of-care, and alternative post-acute routing opportunities, and conducts sepsis DRG clinical validation at CALIFORNIA REHABILITATION INSTITUTE, PIEDMONT FAYETTE HOSPITAL, and CEDARS-SINAI MEDICAL CENTER for ENC AFTERCARE FLW SURGERY NEOPLASM, SEPSIS UNSPECIFIED ORGANISM, OTHER GRAM-NEGATIVE SEPSIS, HYPO-OSMOLALITY AND HYPONATREMIA, and FLUID OVERLOAD UNSPECIFIED.",
+        "evidence": [
+          "Aftercare following neoplasm surgery added about +$369K.",
+          "Sepsis unspecified organism added about +$263K on 26 more admissions.",
+          "Hyponatremia, hypernatremia, and fluid overload together added about +$344K.",
+          "Other gram-negative sepsis added about +$112K on 14 more admissions.",
+          "Aftercare cases are non-ER Physical Rehab at California Rehabilitation Institute.",
+          "Sepsis and electrolyte cases are ER Acute Hospital admissions.",
+          "Affected claims show prior auth required code Y."
+        ],
+        "peer_benchmarking": [
+          "Centene reviews inpatient sepsis DRGs pre/post-pay and adjusts unsupported diagnoses or incorrect DRGs.",
+          "Molina applies clinical validation review to sepsis DRGs and may adjust unsupported hospital payments.",
+          "United Health denies inpatient claims with invalid principal diagnoses and may assign MS-DRG 998."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused case-level policy audit for CA Aftercare with CC/MCC physical rehab admissions at California Rehabilitation Institute, validating prior authorization enforcement, authorization-to-actual service match, member benefit configuration, and post-acute appropriateness for UNS INJURY C4 LEVEL C-SPN CORD SUB, ENC SURG AFTERCARE FOLLOW SURG NS, TRAUMATIC SA HEMORRHAGE NO LOC SUB, TRAUM SUBDURAL HEM LOC UNS DUR SUB, and ENC AFTERCARE FLW LIVER TRANSPLANT.",
+        "evidence": [
+          "Aftercare with CC/MCC rare cases added about +$830K in CA.",
+          "PA required code is Y on highlighted admissions.",
+          "Facility type is Physical Rehab for key admissions.",
+          "California Rehabilitation Institute appears on key source cards.",
+          "Pattern flagged small_n_admissions and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [
+          "Elevance policies address routine postoperative global bundles, not DRG aftercare with CC/MCC.",
+          "United Health policy addresses split surgical package modifiers, not inpatient aftercare bundling.",
+          "Cigna summary shows no documented matching aftercare DRG policy."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a joint UM and reimbursement policy review for GA PPO Local authorized inpatient ACUTE HOSPITAL and Physical Rehab claims focused on Cellulitis without MCC, Kidney and Urinary Tract Infections without MCC, Aftercare with CC/MCC, and EMORY HOSPITAL PERRY to validate denial enforcement, auth-to-claim matching, provider contract compliance, site-of-care appropriateness, and DRG/POA claims processing.",
+        "evidence": [
+          "GA acute hospital increase is led by Cellulitis without MCC and Kidney/UTI without MCC.",
+          "EMORY HOSPITAL PERRY shows additional admissions with higher paid per admit.",
+          "GA Physical Rehab Aftercare with CC/MCC shows higher paid per admit.",
+          "All key source cards are authorized inpatient claims."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health excludes HCAC charges/days from DRG and requires POA on inpatient diagnoses.",
+          "United Health excludes non-POA HACs, which may change CC/MCC status and MS-DRG."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a GA diagnosis-targeted inpatient utilization-management policy for PA-required acute-hospital ER admissions coded UTI SITE NOT SPECIFIED, ACUTE CYSTITIS WITHOUT HEMATURIA, PYONEPHROSIS, CELLULITIS OF LEFT LOWER LIMB, and CELLULITIS OF RIGHT LOWER LIMB, requiring nurse-to-MD medical-necessity escalation and prior-authorization verification.",
+        "evidence": [
+          "UTI SITE NOT SPECIFIED, ACUTE CYSTITIS WITHOUT HEMATURIA, and PYONEPHROSIS are key drivers.",
+          "CELLULITIS OF LEFT LOWER LIMB and RIGHT LOWER LIMB are key drivers.",
+          "Source cards show PA-required, ER-admit, acute-hospital PPO Local cases.",
+          "repeated_delta_concentration is flagged across the leading source cards."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Implement a targeted inpatient case-validation workflow for ATLANTICARE REGIONAL MEDICAL CTR, MARY WASHINGTON HOSPITAL INC, MANCHESTER MEMORIAL HOSPITAL, and HIGHLAND HOSPITAL to verify DRG mapping, diagnosis support, and contractual claim processing for Not Mapped, sepsis with MCC, endovascular cardiac valve replacement, extensive O.R. liver abscess, and nervous system neoplasm admissions.",
+        "evidence": [
+          "ATLANTICARE REGIONAL MEDICAL CTR has a Not Mapped cardiac admission.",
+          "MARY WASHINGTON HOSPITAL INC has isolated valve replacement and liver abscess admissions.",
+          "MANCHESTER MEMORIAL HOSPITAL shows sepsis with MCC admissions in CT.",
+          "HIGHLAND HOSPITAL shows a brain neoplasm MCC admission in NY.",
+          "Flags include low_volume_run, small_n_admissions, and unmapped_or_unknown_value."
+        ],
+        "peer_benchmarking": [
+          "Fidelis Care (Centene) reviews inpatient sepsis DRGs 870-872 pre/post-pay and denies unsupported assignments.",
+          "Molina clinically validates sepsis DRGs and may adjust payment without Sepsis-3 support.",
+          "United Health denies claims with invalid primary diagnoses, including DRG 998 inpatient diagnoses."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the pattern's main issue: the increase is heavily tied to AUTH_CODE_DISTRIBUTION and the recommended next step is an auth-to-claim assignment audit before business action.; IP MedSurg (DNE) Trend 9: Highly relevant because the pattern highlights possible coding, mapping, or claim movement artifacts, especially growth in Not Mapped facility buckets that may reflect claims processing or reprocessing issues.; IP MedSurg (DNE) Trend 10: Secondary but relevant because if authorization coding or facility mapping changed adjudication behavior, reimbursement method and denial enforcement could be affecting paid amounts.; IP MedSurg (DNE) Trend 3: The variance is concentrated in a limited set of inpatient DRGs/diagnosis groupings such as Aftercare, Sepsis, Cellulitis, and Electrolyte Disorders, so diagnosis-level review is a useful follow-up after validation.; IP MedSurg (DNE) Trend 4: Facility classification shifts between mapped and Not Mapped buckets indicate a service/site-of-care classification issue, making service-level review a relevant secondary parent rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is clearly concentrated at specific providers and local markets, including MARY WASHINGTON HOSPITAL INC, HIGHLAND HOSPITAL, and MANCHESTER MEMORIAL HOSPITAL, which aligns with provider-driven variance review.; IP MedSurg (DNE) Trend 4: The pattern is concentrated by inpatient service setting and facility type across ACUTE HOSPITAL, Physical Rehab, and CRITICAL ACCESS, making service/site-of-care review highly relevant.; IP MedSurg (DNE) Trend 8: All major drivers are prior-authorized inpatient claims (pa_required_code = Y), and the source cards explicitly flag auth-to-claim validation, so auth enforcement and matching should be reviewed.; IP MedSurg (DNE) Trend 6: Most of the $2.0M increase is volume-led with admissions up across multiple secondary markets, and the recommended next step focuses on UM controls and admission management, fitting a utilization-management KPI/PAV review.; IP MedSurg (DNE) Trend 3: Several contributors are concentrated in specific DRGs/diagnoses such as sepsis, aftercare, cellulitis, and metabolic/electrolyte disorders, supporting diagnosis-level investigation."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The core pattern is utilization-led inpatient growth with authorized acute admissions rising and downstream rehab use increasing, so reviewing UM KPIs and the PAV waterfall is the strongest parent path.; IP MedSurg (DNE) Trend 4: Variance is concentrated in specific service settings\u2014ACUTE HOSPITAL and Physical Rehab\u2014pointing to a service and site-of-care review across the inpatient episode.; IP MedSurg (DNE) Trend 3: The increase is clearly concentrated in a subset of diagnoses/DRGs, especially electrolyte disorders with MCC, UTI without MCC, sepsis, and aftercare with CC/MCC.; IP MedSurg (DNE) Trend 7: The pattern explicitly calls out discharge pathways and flow from acute admissions into rehab, which aligns with reviewing admission/discharge source and location dynamics.; IP MedSurg (DNE) Trend 8: All major drivers are authorized cases (pa_required_code = Y), and the cards include auth-to-claim validation signals, making authorization enforcement and match review directly relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in a narrow diagnosis set\u2014aftercare following neoplasm surgery, sepsis, hyponatremia, fluid overload, and related electrolyte disorders\u2014making diagnosis-level review the strongest parent rule match.; IP MedSurg (DNE) Trend 6: The pattern specifically calls for UM and clinical pathway review to determine which admissions are preventable, redirectable, or better managed in alternative settings, aligning closely to PAV and utilization management KPI review.; IP MedSurg (DNE) Trend 4: The increase spans distinct inpatient service contexts, especially physical rehab aftercare versus acute hospital sepsis and electrolyte admissions, so service-line and care-setting review is highly relevant.; IP MedSurg (DNE) Trend 1: Several of the largest deltas are tied to specific rendering providers and facilities, indicating potential provider concentration that may reflect local practice patterns, referral behavior, or contracting effects.; IP MedSurg (DNE) Trend 7: Admission pathway differences appear meaningful: aftercare cases are non-ER rehab oriented, while sepsis and electrolyte cases are ER-driven acute admits, so admission/discharge source and post-acute routing should be reviewed."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Spend is concentrated in a narrow set of diagnoses, including catastrophic spinal cord injury, traumatic hemorrhage, and transplant/surgical aftercare, so diagnosis-level isolation is the strongest match.; IP MedSurg (DNE) Trend 4: The variance is tightly tied to a specific inpatient service pattern\u2014Aftercare with CC/MCC in physical rehab/post-acute aftercare admissions\u2014making service-level review highly relevant.; IP MedSurg (DNE) Trend 2: The pattern is driven by a very small number of high-cost admissions and explicitly calls for case-level review, indicating likely concentration within a small subset of members.; IP MedSurg (DNE) Trend 1: Key cases appear concentrated in a specific CA rehab provider/facility setting, especially California Rehabilitation Institute, so provider-level concentration should be assessed.; IP MedSurg (DNE) Trend 8: These admissions have prior authorization required and the pattern recommends validating clinical appropriateness and benefit configuration, so auth-to-claim enforcement is an important secondary check."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The largest acute spend increase is concentrated in specific medical DRGs\u2014Cellulitis without MCC (+$213K) and Kidney and Urinary Tract Infections without MCC (+$206K)\u2014so diagnosis-level concentration is a primary driver.; IP MedSurg (DNE) Trend 1: Variance is also concentrated in a notable provider pocket: EMORY HOSPITAL PERRY added about +$72K on 8 more admissions with roughly +$3.7K higher paid per admit, supporting provider-driver review.; IP MedSurg (DNE) Trend 4: The pattern spans acute hospital plus Physical Rehab, and rehab aftercare added about +$122K with materially higher paid per admit, making service/site-of-care and follow-on aftercare review highly relevant.; IP MedSurg (DNE) Trend 8: All key source cards are authorized inpatient claims (pa_required_code=Y), and the cards explicitly flag auth-to-claim validation, so reviewing whether authorization controls are matching to paid claims is directly applicable.; IP MedSurg (DNE) Trend 10: Paid per admit increased in both acute and rehab, and the recommendation specifically calls for provider-level pricing or billing variance review, which aligns with reimbursement method investigation."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Most directly aligned: the spend increase is clearly concentrated in a narrow set of diagnoses\u2014UTI site not specified, acute cystitis, pyonephrosis, and lower-limb cellulitis\u2014matching a diagnosis-driver rule.; IP MedSurg (DNE) Trend 6: Highly relevant because the pattern is inpatient admission-driven, includes ER admits in acute hospitals, and the recommended next step explicitly calls for UM review and avoidable admission screening, which fits PAV investigation.; IP MedSurg (DNE) Trend 5: Relevant because UTI and cellulitis can be recurrence-prone, and the recommendation mentions post-discharge management for recurrence-prone patients, suggesting possible repeat admissions among the same members.; IP MedSurg (DNE) Trend 2: Relevant as the pattern may be concentrated in a subset of members with repeated infection-related admissions, making member-level clinical engagement and care management a logical follow-up.; IP MedSurg (DNE) Trend 1: Secondarily relevant because some source cards point to specific facilities/providers contributing to the variance, so provider-level concentration should be tested after confirming diagnosis concentration."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is concentrated in a small set of inpatient providers across CT, GA, NY, PA, and VA, with notable one-off outliers at providers like MARY WASHINGTON HOSPITAL INC, ATLANTICARE REGIONAL MEDICAL CTR, and MANCHESTER MEMORIAL HOSPITAL.; IP MedSurg (DNE) Trend 3: The pattern is driven by a limited set of diagnoses/DRGs such as sepsis with MCC, nonrheumatic aortic valve stenosis, liver abscess, and brain neoplasm, matching a diagnosis-isolated variance review.; IP MedSurg (DNE) Trend 4: Several isolated high-cost inpatient services and procedures are involved, including valve replacement and extensive OR cases, so service-level review is relevant to distinguish isolated complex services from broader utilization change.; IP MedSurg (DNE) Trend 9: The presence of 'Not Mapped' DRG values, unmapped/data-quality flags, and the recommendation to confirm diagnosis and DRG accuracy make claims processing or claim status validation relevant."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T18:02:08.960691+00:00"
+  }
+}

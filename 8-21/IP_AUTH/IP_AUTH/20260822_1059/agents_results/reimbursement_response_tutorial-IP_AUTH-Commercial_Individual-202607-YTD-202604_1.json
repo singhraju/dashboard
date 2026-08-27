@@ -1,0 +1,493 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT PPO spend is concentrated at Yale New Haven Hospital",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_ob_package",
+          "label": "Global OB Package",
+          "type": "text"
+        },
+        {
+          "id": "partial_care_billing",
+          "label": "Partial Care Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_package": "Cigna bundles routine antepartum, delivery, and postpartum care globally; partial obstetric care bills separately.",
+          "partial_care_billing": "Use partial obstetric codes by phase and visit count; bill global only for complete care."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_package": "-",
+          "partial_care_billing": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_package": "Point32Health does not address Global OB Package in the provided policy.",
+          "partial_care_billing": "No applicable partial care rules, limitations, or code/DRG interactions were identified."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_package": "No applicable reimbursement guidance; policy excludes inpatient DRG-specific hospital payment methodology.",
+          "partial_care_billing": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Full global obstetric care is bundled when the same physician or group TIN provides antepartum, delivery, and postpartum care. Routine maternity services are included in the package.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59425",
+            "59426",
+            "59409",
+            "59410",
+            "59430",
+            "59514",
+            "59515",
+            "59612",
+            "59614",
+            "59620",
+            "59622",
+            "99202-99205",
+            "99212-99215",
+            "99381-99397",
+            "96365-96371",
+            "96373-96376",
+            "96372",
+            "90460-90474",
+            "59000",
+            "59001",
+            "59070",
+            "59012",
+            "59015",
+            "59020",
+            "59025",
+            "59030",
+            "59412",
+            "01967",
+            "76801-76817",
+            "76818-76819",
+            "76820",
+            "76821",
+            "76825-76828"
+          ],
+          "related_codes": [
+            "59200",
+            "59414",
+            "81000",
+            "81002",
+            "O09.00-O09.03",
+            "O09.10-O09.13",
+            "O09.211-O09.219",
+            "O09.291-O09.299",
+            "O09.30-O09.33",
+            "O09.40-O09.43",
+            "O09.511-O09.519",
+            "O09.521-O09.529",
+            "O09.611-O09.619",
+            "O09.621-O09.629",
+            "O09.70-O09.73",
+            "O09.811-O09.819",
+            "O09.821-O09.829",
+            "O09.891-O09.899",
+            "O09.90-O09.93",
+            "O34.211-O34.219",
+            "Z33.1",
+            "Z34.00-Z34.03",
+            "Z34.80-Z34.83",
+            "Z34.90-Z34.93",
+            "Z39.0-Z39.2",
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "Z32.01",
+            "O10.011-O16.9",
+            "59515",
+            "59622"
+          ],
+          "required_modifiers": [
+            "25",
+            "80",
+            "81",
+            "82",
+            "AS"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "all components provided",
+            "partial care only",
+            "same date of service",
+            "separate significant E&M service",
+            "same claim line"
+          ],
+          "utilization_limits": [
+            "59425 once for 4-6 visits",
+            "59426 once for 7+ visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "CMS-1500"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon only"
+          ],
+          "exemptions": [
+            "partial care codes",
+            "full global package",
+            "significant separately identifiable E&M",
+            "global cesarean package"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "2007-05-21",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00128",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Delivery Services C-19005",
+        "tags": [],
+        "effective_date": "2022-04-29",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595730203",
+        "payer_name": "Point32Health",
+        "policy_title": "Newborn Care",
+        "tags": [],
+        "effective_date": "05/01/2026",
+        "evidence": "Off-topic. This Point32Health policy addresses newborn care reimbursement, billing, and notification rules; it does not address CT PPO spend concentration or Yale New Haven Hospital.",
+        "policy_url": "https://wwwassets.point32health.org/documents/newborn-care-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595780200",
+        "payer_name": "Point32Health",
+        "policy_title": "Obstetrics/Gynecology",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "Off-topic: this policy governs obstetrical and gynecology services and does not address this DRG pattern.",
+        "policy_url": "https://wwwassets.point32health.org/documents/obstetrics-gynecology-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Off-topic: this obstetrical professional policy does not contain reimbursement rules for this DRG description or any inpatient DRG-specific hospital payment methodology.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle CMS-1500 cesarean maternity professional claims to 59510 when all components are provided under the same TIN; allow 59514 only for partial care, and allow separate E&M only with modifier 25 for a separate significant E&M service on the same date of service. Apply to all states. Exempt: partial care codes, significant separately identifiable E&M, global cesarean package.\n\nRecommendation 2: For assistant participation on cesarean delivery codes 59510 and 59514, pay only when billed by an assistant surgeon with modifier 80, 81, 82, or AS on the same claim line. Apply to all states.\n\nIA \u2014 Implement a prepay frequency limit for antepartum-only partial care on CMS-1500: 59425 once for 4-6 visits and 59426 once for 7+ visits, and only for partial care. (all states)",
+      "evidence": [
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59510\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59514\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"25\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same TIN\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"all components provided\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"partial care only\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same date of service\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"separate significant E&M service\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"CMS-1500\" [program_scope]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"significant separately identifiable E&M\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"global cesarean package\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"80\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"81\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"82\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"AS\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same claim line\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"assistant surgeon only\" [provider_role_restrictions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59425\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59426\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59425 once for 4-6 visits\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59426 once for 7+ visits\" [utilization_limits]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CT PPO spend is concentrated at Yale New Haven Hospital",
+    "pattern_rank": 1,
+    "pattern_title": "CT PPO spend is concentrated at Yale New Haven Hospital",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies",
+      "Craniotomy and Endovascular Intracranial Procedures with MCC",
+      "Vaginal Delivery without Sterilization or D&C with CC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 46206,
+    "output": 33386,
+    "breakdown": {
+      "search_keywords": {
+        "input": 564,
+        "output": 533,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 644,
+        "output": 2071,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 34142,
+        "output": 25694,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1945,
+        "output": 736,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 1038,
+        "output": 439,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 798,
+        "output": 696,
+        "calls": 5
+      },
+      "elevance_summary": {
+        "input": 369,
+        "output": 307,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4187,
+        "output": 2405,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2519,
+        "output": 505,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T13:06:05.246677+00:00",
+    "end_time": "2026-08-22T13:09:25.033338+00:00",
+    "duration_ms": 199786,
+    "version": "2.0.0"
+  }
+}

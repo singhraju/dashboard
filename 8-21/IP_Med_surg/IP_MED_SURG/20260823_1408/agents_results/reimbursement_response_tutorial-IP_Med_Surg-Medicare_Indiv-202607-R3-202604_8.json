@@ -1,0 +1,338 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R3-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R3-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic inpatient cases created outsized spend in CA, IN, TX, and VA",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_review_rule",
+          "label": "DRG Review",
+          "type": "text"
+        },
+        {
+          "id": "clinical_support",
+          "label": "Clinical Support",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_review_rule": "Conditional DRG payment for sepsis DRGs 720, 870-872 requires medical record validation.",
+          "clinical_support": "Requires physician-documented SOFA-based sepsis with organ dysfunction and supporting treatment evidence."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_review_rule": "Subject to DRG validation; sepsis-related hospital payments may be adjusted if unsupported under Sepsis-3.",
+          "clinical_support": "Requires records support sepsis and treatment per Sepsis-3 and SOFA criteria."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_review_rule": "No DRG review policy stated; claims require correct principal diagnosis coding for reimbursement.",
+          "clinical_support": "Requires correct principal/primary diagnosis coding and ICD-10-CM-compliant sequencing on claims."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "This policy is a diagnosis-coding rule for inpatient and outpatient claims. It requires the correct principal or primary diagnosis and only explicitly references MS-DRG 998 as an invalid principal diagnosis example; this DRG label is not specifically listed.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "UB-04",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00101",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis - CC.PP.073",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "APR-DRG 720 is included in the sepsis diagnosis validation policy. Adult inpatient claims with a sepsis diagnosis may be reviewed pre- or post-pay, and payment can be adjusted or denied if the record does not support sepsis.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "720",
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [
+            "870",
+            "871",
+            "872",
+            "A41.9",
+            "R65.20",
+            "R65.21",
+            "720"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient sepsis diagnosis claim",
+            "same claim medical record review"
+          ],
+          "utilization_limits": [
+            "review within 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "APR-DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Physician or LIP documentation required"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00202",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "1/7/2022",
+        "evidence": "Molina applies DRG clinical validation to sepsis-related inpatient claims. R65.2 is subject to review and must be supported by Sepsis-3 criteria and medical record documentation; unsupported cases may have payment adjusted. The listed catastrophic DRGs in the prompt are not explicitly named.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "medical record review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00454",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2024-05-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Rare catastrophic inpatient cases created outsized spend in CA, IN, TX, and VA",
+    "pattern_rank": 8,
+    "pattern_title": "Rare catastrophic inpatient cases created outsized spend in CA, IN, TX, and VA",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System with MCC",
+      "Kidney and Urinary Tract Infections without MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN', 'VA', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they address inpatient sepsis validation rather than California cesarean-delivery reimbursement policy."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 31320,
+    "output": 26232,
+    "breakdown": {
+      "search_keywords": {
+        "input": 587,
+        "output": 976,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 568,
+        "output": 1200,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 22094,
+        "output": 18744,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1583,
+        "output": 433,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 954,
+        "output": 1057,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 711,
+        "output": 760,
+        "calls": 6
+      },
+      "policy_recommendations": {
+        "input": 2549,
+        "output": 2290,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2274,
+        "output": 772,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T14:56:23.125562+00:00",
+    "end_time": "2026-08-23T14:58:11.921796+00:00",
+    "duration_ms": 108796,
+    "version": "2.0.0"
+  }
+}

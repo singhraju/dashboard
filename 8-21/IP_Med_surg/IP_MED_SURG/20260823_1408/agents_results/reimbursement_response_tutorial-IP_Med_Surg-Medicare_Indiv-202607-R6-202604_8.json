@@ -1,0 +1,563 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R6-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic inpatient outliers need case-level review, not broad policy changes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "CareSource",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "Off-topic: bundled facility and respiratory reimbursement policies, not DRG inpatient outlier adjudication."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "Molina bundles routine hospital services/supplies into room/board or procedure payments; no separate reimbursement or outliers."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_relevance": "United Health bundles routine facility services on UB04 claims, not catastrophic DRG outlier reviews."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Tracheostomy Supplies RETIRED",
+        "tags": [],
+        "effective_date": "11/07/06",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00016",
+        "payer_name": "Cigna",
+        "policy_title": "Emergency Room Services",
+        "tags": [],
+        "effective_date": "2021-08-14",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R36_Emergency_Room_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "Off-topic for the requested DRG outlier pattern; this policy is a broad facility reimbursement policy about bundled supplies, services, and equipment, not DRG-level case review.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00052",
+        "payer_name": "Cigna",
+        "policy_title": "Respiratory Services and Supplies",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Off-topic. This policy addresses respiratory services and supplies, not DRG inpatient outlier adjudication for connective tissue disorder cases.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "10/30/2018",
+        "evidence": "Policy is unrelated to the requested DRG catastrophic inpatient outlier pattern. It governs global surgical package reimbursement and related modifiers for surgical services, not DRG-based inpatient outlier review.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00045",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00101",
+        "payer_name": "United Health",
+        "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "Off-topic to the requested DRG outlier pattern. This policy addresses inclusive facility billing on UB04 claims, bundling routine room, board, facility, and surgical-room services rather than case-level review for catastrophic DRG outliers.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00011",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Unbundling Adjustments on Clean Claim Reviews (PDF)",
+        "tags": [],
+        "effective_date": "9/1/22",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PI.10.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00788",
+        "payer_name": "Centene",
+        "policy_title": "Unbundling Adjustments on Clean Claim Reviews Corp Format",
+        "tags": [],
+        "effective_date": "9/1/22",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PI.10.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CRSC_27755360003",
+        "payer_name": "CareSource",
+        "policy_title": "Newborn and Neonatal Intensive Care Unit (NICU) Level of Care",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.caresource.com/documents/medicaid-oh-policy-reimburse-py-1430-20260201.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00196",
+        "payer_name": "Molina",
+        "policy_title": "Hospital Routine Supplies Services",
+        "tags": [],
+        "effective_date": "2024-08-26",
+        "evidence": "Routine hospital supplies, services, equipment, and personnel are bundled into room, board, or procedure payment and are not separately reimbursable. These charges are also excluded from outlier calculations.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Inpatient claims",
+            "Outpatient claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Immediate discharge DME"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00159",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility",
+        "tags": [],
+        "effective_date": "12/1/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 16,
+    "policies_successful": 16,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Rare catastrophic inpatient outliers need case-level review, not broad policy changes",
+    "pattern_rank": 8,
+    "pattern_title": "Rare catastrophic inpatient outliers need case-level review, not broad policy changes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Connective Tissue Disorders with MCC",
+      "Coronary Bypass with Cardiac Catheterization or Open Ablation with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 16,
+    "successful_extractions": 16,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 16 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "16 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "3/16 policies quarantined (19%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/16 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00006:Ambulance Services, RP_GBD_ELV_INTERNAL_00112:Unlisted or Miscellaneous Codes, RP_GBD_UHC_00124:Global Days Policy, Professional]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 127260,
+    "output": 30623,
+    "breakdown": {
+      "search_keywords": {
+        "input": 570,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 679,
+        "output": 1346,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 118088,
+        "output": 25523,
+        "calls": 16
+      },
+      "relevance_judge": {
+        "input": 3872,
+        "output": 1961,
+        "calls": 8
+      },
+      "dynamic_columns": {
+        "input": 922,
+        "output": 348,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 840,
+        "output": 498,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 393,
+        "output": 176,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1896,
+        "output": 240,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:29:12.354562+00:00",
+    "end_time": "2026-08-23T15:30:15.352776+00:00",
+    "duration_ms": 62998,
+    "version": "2.0.0"
+  }
+}

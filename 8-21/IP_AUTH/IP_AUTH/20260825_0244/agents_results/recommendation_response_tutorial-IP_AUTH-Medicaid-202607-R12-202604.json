@@ -1,0 +1,174 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 5,
+      "patterns_skipped": 3,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a Florida Medicaid LTSS post-acute CUMG audit for SNF - FREE STANDING and NF admissions tied to Degenerative Nervous System Disorders and Aftercare, Musculoskeletal System and Connective Tissue with CC, requiring nurse-to-MD referral review, approval and denial pathway review, authorization-to-claim reconciliation, and continuation/discharge site-of-care review.",
+        "evidence": [
+          "FL LTSS Dual Eligible SNF - FREE STANDING added +$136.1M.",
+          "About 13,000 more admissions drove Dual Eligible SNF growth.",
+          "FL LTSS Non Dual SNF - FREE STANDING added +$17.7M.",
+          "Growth centered in Degenerative Nervous System Disorders and Aftercare stays.",
+          "NF growth includes ENC ORTHOPED AFTERCARE FLW SURG AMP and ENC FOR OTHER ORTHOPEDIC AFTERCARE.",
+          "PA-required stays dominate the major Florida driver cards."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA/IN/KS Medicaid LTSS SNF - FREE STANDING and NF neurologic utilization review for Alzheimer's, post-stroke hemiplegia, and Parkinson's diagnoses that audits CUMG nurse and MD approval, denial, and referral pathways, validates auth-to-claim matching, assesses admission root causes, and requires tighter discharge-planning review.",
+        "evidence": [
+          "CA/IN/KS LTSS Dual Eligible SNF added +$41.7M, mostly from more admissions.",
+          "CA LTSS Non Dual SNF added +$9.6M despite lower paid per admit.",
+          "IN NF neurologic case mix added +$38.0M, led by Alzheimer's and hemiplegia.",
+          "KS NF neurologic case mix added +$12.0M, concentrated in stroke sequelae and Parkinson's.",
+          "Operational SNF cards show auth_dimension_present and repeated_delta_concentration flags."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run provider-by-product reviews for Tampa General Hospital, AdventHealth Orlando, and Lakeland Regional Medical Center across their identified FL Medicaid acute hospital ABD Non Dual, TANF Standard, and CHIP Standard pockets to confirm prior authorization obtained, reconcile authorizations to paid claims, review acute level-of-care initial and concurrent review KPIs, and validate reimbursement against contractual obligations with targeted contract and site-of-care remediation for outlier pockets.",
+        "evidence": [
+          "FL ABD Non Dual acute hospital spend rose with admissions and paid per admit.",
+          "Tampa General Hospital is a concentrated ABD Non Dual outlier provider pocket.",
+          "FL TANF Standard acute hospital growth is primarily volume-led.",
+          "AdventHealth Orlando and Lakeland Regional Medical Center are named concentration pockets.",
+          "All highlighted acute hospital pockets are prior-auth required."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted claim-level audit for the Florida IP Med/Surg admissions at Tampa General Hospital and AdventHealth Orlando involving CAR-T, ECMO/tracheostomy-level care, Acute Lymphoblastic Leukemia Relapse, and SINGLE LIVE INFANT DELIV VAGINALLY to validate prior authorization-to-actual match, DRG coding, itemized billed services, and contractual claim adjudication.",
+        "evidence": [
+          "FL IP Med/Surg rare outliers added +$1.6M from only 3 admissions.",
+          "Tampa General Hospital CAR-T admission added +$771K.",
+          "AdventHealth Orlando ECMO or tracheostomy-level case added +$857K.",
+          "PA required code = Y on both highlighted source cards."
+        ],
+        "peer_benchmarking": [
+          "No surveyed payer addresses Florida inpatient DRG catastrophic outlier reimbursement or claim-level adjudication."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Perform a targeted contract and claim review for NY LTSS Dual Eligible SNF - FREE STANDING claims in Aftercare, Musculoskeletal System and Connective Tissue with CC and the acute outliers at ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL and ADVENTHEALTH ORLANDO to verify authorization matching, denial enforcement, final adjudication, contractual reimbursement processing, and manual edit compliance.",
+        "evidence": [
+          "PA required equals Y across all identified pockets.",
+          "NY LTSS Dual Eligible SNF pocket is concentrated in orthopedic aftercare DRG.",
+          "ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL concentrates the TN acute increase.",
+          "NY and IN acute hospital spikes are essentially one-case events."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "Authorization and facility mapping shifts must be validated before action",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 5,
+        "pattern": "Maternity and newborn pressure is recurring across several states",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 6,
+        "pattern": "NC behavioral health costs are being driven by a few very expensive inpatient cases",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 25,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 3: The surge is explicitly concentrated in degenerative nervous system and orthopedic aftercare DRGs/diagnoses, making diagnosis-level isolation one of the clearest parent rules.; IP NF (DNE) Trend 4: The increase is concentrated in SNF - FREE STANDING and NF post-acute settings, pointing to a service/site-of-care specific utilization issue rather than broad inpatient growth.; IP NF (DNE) Trend 6: This pattern is strongly volume-led, occurs in PA-required stays, and the recommended next step is UM review of referrals, admissions, and LOS, which aligns with utilization management KPI and PAV investigation.; IP NF (DNE) Trend 7: Heavier use of facility-based recovery and long-stay care suggests reviewing admission/discharge source and referral pathways that are sending more LTSS members into SNF/NF.; IP NF (DNE) Trend 8: Authorization is present on the major driver cards (pa_required_code = Y), so auth-to-claim matching and enforcement should be checked given the sharp admission growth."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 26,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 3: Spend growth is heavily concentrated in neurologic diagnoses such as Alzheimer's, post-stroke hemiplegia, and Parkinson's, making diagnosis-level variance the clearest parent driver.; IP NF (DNE) Trend 4: The increase is isolated to SNF - FREE STANDING and NF settings, so service/site-of-care concentration is a core part of the pattern.; IP NF (DNE) Trend 6: This is a utilization-led LTSS pattern with admissions up and recommended tighter SNF criteria, discharge planning, and NF level-of-care management, which fits UM KPI/PAV review.; IP NF (DNE) Trend 7: Because the issue is post-acute nursing-facility utilization growth, admission and discharge source/location review is relevant to understand hospital-to-SNF/NF flow and placement patterns.; IP NF (DNE) Trend 8: Operational cards repeatedly show an authorization dimension, so reviewing auth-to-claim matching and enforcement is a relevant secondary check for SNF/NF utilization leakage."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small set of named acute hospital providers and provider-product pockets in FL, making provider driver analysis the most direct parent rule match.; IP MedSurg (DNE) Trend 10: ABD Non Dual shows meaningful unit-cost pressure, especially at Tampa General Hospital with much higher paid per admit, which makes reimbursement method and contract structure review highly relevant.; IP MedSurg (DNE) Trend 8: All major pockets are prior-auth required (pa_required_code = Y), and the pattern calls out authorization opportunities and auth-to-claim validation, aligning closely to review of authorization enforcement.; IP MedSurg (DNE) Trend 6: Admissions are up materially across ABD Non Dual and TANF Standard, so changes in utilization management performance and potentially avoidable variance are relevant to explain the volume-led inpatient growth.; IP MedSurg (DNE) Trend 4: The recommended next step is to separate contract, level-of-care, and authorization opportunities by provider-product, which fits review of service or care-pattern drivers within acute hospital stays."
+      },
+      {
+        "rank": 5,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 6,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The increase is concentrated in a very small set of ultra-high-cost inpatient services/DRGs, specifically CAR-T and ECMO/tracheostomy-level stays, so service-level isolation is the strongest parent rule match.; IP MedSurg (DNE) Trend 1: The entire signal is concentrated in only two Florida acute hospitals, Tampa General Hospital and AdventHealth Orlando, making provider-level review highly relevant.; IP MedSurg (DNE) Trend 3: The variance is tied to a narrow set of diagnoses, including Acute Lymphoblastic Leukemia Relapse and an unusual delivery diagnosis paired with catastrophic inpatient care, so diagnosis-level validation is important.; IP MedSurg (DNE) Trend 10: The recommended action is immediate claim-level payment validation for catastrophic inpatient cases, which aligns closely with reviewing whether the reimbursement method was applied correctly.; IP MedSurg (DNE) Trend 8: Both highlighted cases have PA required code = Y, and the pattern calls for documentation and billed-service validation, making auth-to-claim matching relevant."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 27,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The acute hospital spikes are highly concentrated at specific providers, especially ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL and ADVENTHEALTH ORLANDO, matching a provider-driver investigation.; IP MedSurg (DNE) Trend 8: All acute pockets have PA required = Y, the auth_dimension_present flag, and auth-to-claim validation as a business term, so authorization enforcement should be checked.; IP MedSurg (DNE) Trend 9: The NY and IN acute increases are essentially one-case spikes with extreme paid-per-admit changes, so claim-level review for claim status, reprocessing, or adjudication issues is highly relevant.; IP NF (DNE) Trend 3: The NY SNF increase is concentrated in a specific aftercare/orthopedic DRG-diagnosis pocket, indicating a diagnosis-specific driver rather than a broad SNF trend.; IP NF (DNE) Trend 10: The NY LTSS SNF pocket shows mixed volume and unit-cost pressure, including higher paid per admit and paid ratio, which aligns with reimbursement method and pricing review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-25T12:59:49.984839+00:00"
+  }
+}

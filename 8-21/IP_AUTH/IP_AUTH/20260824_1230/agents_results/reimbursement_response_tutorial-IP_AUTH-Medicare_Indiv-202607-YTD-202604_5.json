@@ -1,0 +1,245 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-YTD-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-YTD-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "VA SNP spending is shifting into SNF, rehab, and acute psych settings",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "co_surgeon_criteria",
+          "label": "Co-Surgeon Criteria",
+          "type": "text"
+        },
+        {
+          "id": "payment_reduction",
+          "label": "Payment Reduction",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "co_surgeon_criteria": "Allows co-surgeons only for MPFS indicator 1 or 2 procedures when medically necessary.",
+          "payment_reduction": "Allowed co-surgeons are each paid 62.5%; no co-surgeon reduction applies to indicator 0."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00151",
+        "payer_name": "Humana",
+        "policy_title": "Modifier 62",
+        "tags": [],
+        "effective_date": "Commercial: 06/2010; Medicare: 01/2008",
+        "evidence": "The payer allows co-surgeon billing only when a procedure has co-surgeon indicator 1 or 2. Each surgeon must append modifier 62. Approved co-surgeon claims are paid at 62.5% of the applicable allowed amount per surgeon. Procedures with co-surgeon indicator 0 are not allowed for co-surgeon billing, and indicator 1 claims require medical necessity documentation.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "62"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same operative session",
+            "same patient",
+            "same procedure"
+          ],
+          "utilization_limits": [
+            "62.5% allowed amount per surgeon"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "Commercial Products",
+            "MPFS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "co-surgeon required",
+            "two surgeons acting as primary surgeons"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: VA SNP spending is shifting into SNF, rehab, and acute psych settings",
+    "pattern_rank": 5,
+    "pattern_title": "VA SNP spending is shifting into SNF, rehab, and acute psych settings",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['VA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it does not match the VA SNP post-acute/acute psych spending pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 16437,
+    "output": 7941,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 233,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 339,
+        "output": 432,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 10509,
+        "output": 4260,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 472,
+        "output": 338,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 780,
+        "output": 944,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 267,
+        "output": 306,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1710,
+        "output": 1236,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1832,
+        "output": 192,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T14:44:33.598812+00:00",
+    "end_time": "2026-08-24T14:45:44.252664+00:00",
+    "duration_ms": 70653,
+    "version": "2.0.0"
+  }
+}

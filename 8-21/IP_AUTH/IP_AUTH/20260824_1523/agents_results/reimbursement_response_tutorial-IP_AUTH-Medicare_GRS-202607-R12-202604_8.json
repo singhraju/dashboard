@@ -1,0 +1,385 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R12-202604_8_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R12-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "GA clinical spend is concentrated in a narrow set of inpatient sepsis, circulatory, and neurologic cases",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "claim_scope",
+          "label": "Claim Scope",
+          "type": "badge"
+        },
+        {
+          "id": "review_basis",
+          "label": "Review Basis",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_scope": "Inpatient Only",
+          "review_basis": "Reviews medical records to validate DRG and documented sepsis criteria, SOFA increase, and treatment."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "claim_scope": "All Claims",
+          "review_basis": "Reviews principal diagnosis validity and sequencing per ICD-10-CM guidelines; invalid coding may deny claims."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "03/01/2026",
+        "evidence": "The payer denies claims when an invalid diagnosis is submitted as the principal or primary diagnosis. For inpatient UB-04 claims, an invalid principal diagnosis routes the discharge to MS-DRG 998 and the entire claim is denied. For outpatient UB-04 and professional claims, the affected line is denied when an inappropriate primary diagnosis is pointed to or linked.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [
+            "Z51.89"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis on UB-04",
+            "primary diagnosis pointer on CMS-1500"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00250",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "MS-DRG 871 inpatient sepsis claims are subject to pre- or post-pay clinical validation. Payment depends on documentation supporting a sepsis diagnosis and correct DRG assignment; unsupported claims may be denied or adjusted.",
+        "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "710",
+            "720",
+            "853-855",
+            "870-872",
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A41.9",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "pre- or post-pay review",
+            "same inpatient claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "APR-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician",
+            "licensed independent practitioner"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00116",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "Sepsis, severe sepsis, and septic shock codes are subject to Excludes1 mutual exclusivity and must be coded per ICD-10-CM sequencing rules; incorrect principal or primary diagnosis reporting can deny the claim.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65",
+            "Z51.89",
+            "Q21.0",
+            "C80.2",
+            "T51-T65",
+            "V00-Y99"
+          ],
+          "related_codes": [
+            "I51.0",
+            "T86"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "per ICD-10-CM guidelines",
+            "same claim",
+            "same condition",
+            "not principal diagnosis"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB-04",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement pre- or post-pay review for inpatient DRG 871 on the same inpatient claim, especially when paired with DRG 710, 720, 853-855, or 870-872 or sepsis diagnoses such as A02.1, A20.7, A22.7, A26.7, A32.7, or A39.1; require physician or licensed independent practitioner documentation and keep sepsis screening exempt. Exempt: sepsis screening.",
+      "evidence": [
+        "Centene \u00b7 Sepsis Diagnosis: \"871\" [target_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"710\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"720\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"853-855\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"870-872\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A02.1\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A20.7\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A22.7\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A26.7\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A32.7\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"A39.1\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis: \"pre- or post-pay review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"same inpatient claim\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"physician\" [provider_role_restrictions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"licensed independent practitioner\" [provider_role_restrictions]",
+        "Centene \u00b7 Sepsis Diagnosis: \"sepsis screening\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Centene \u00b7 Sepsis Diagnosis \u2014 https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CC.PP.073.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: GA clinical spend is concentrated in a narrow set of inpatient sepsis, circulatory, and neurologic cases",
+    "pattern_rank": 8,
+    "pattern_title": "GA clinical spend is concentrated in a narrow set of inpatient sepsis, circulatory, and neurologic cases",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other Disorders of Nervous System with CC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Item 1 was dropped for scope drift because it is a general diagnosis-validity policy rather than a targeted action for the pattern's concentrated inpatient sepsis/circulatory/neurologic spend; item 0 aligned with the pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 27171,
+    "output": 24647,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 453,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 484,
+        "output": 691,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 16340,
+        "output": 18326,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1459,
+        "output": 393,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 1002,
+        "output": 748,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 516,
+        "output": 370,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 3405,
+        "output": 3017,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3422,
+        "output": 649,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T16:43:36.822065+00:00",
+    "end_time": "2026-08-24T16:45:44.010759+00:00",
+    "duration_ms": 127188,
+    "version": "2.0.0"
+  }
+}

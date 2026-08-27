@@ -1,0 +1,196 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "For OH Medicaid TANF Standard, remediate facility-type mapping and auth-to-claim matching for PA Required = Y claims coded Not Mapped, verify PA requirement or override logic for SNF - FREE STANDING PA Required = N claims, and only then run SNF admission, level-of-care, and reimbursement-method review on the validated population.",
+        "evidence": [
+          "Authorized Not Mapped bucket added +$10.1M with 408 more admissions.",
+          "Authorized Not Mapped paid per admit increased about +$21.6K.",
+          "Non-PA SNF - FREE STANDING added +$9.1M with 1,314 admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Reconcile PA-required code-to-claim mapping and claims reprocessing for AUTH_CODE_DISTRIBUTION in CA, IN, and TN, targeting RILEY'S CHILDREN'S HEALTH, METHODIST UNIVERSITY HOSPITAL, FRESNO HEART & SURGICAL HOSPITAL, and the CA CC DRGs before any PA denial enforcement, provider escalation, or reimbursement change.",
+        "evidence": [
+          "Recommended next step is reconciling PA-required coding logic and claim-level mapping.",
+          "RILEY'S CHILDREN'S HEALTH drives IN AUTH_CODE_DISTRIBUTION validation.",
+          "METHODIST UNIVERSITY HOSPITAL drives TN AUTH_CODE_DISTRIBUTION validation.",
+          "CA shifts center on Kidney/Urinary and Cirrhosis/Alcoholic Hepatitis CC DRGs."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health requires supporting notes for incident-to or physician-ordered services.",
+          "United Health enforces ICD-10 sequencing and may audit documentation for compliance.",
+          "Molina applies standard coding edits and reviews sepsis claims for supported documentation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a Riley's Children's Health focused review for IN Medicaid CHILDRENS IP Med/Surg PA-required TANF Standard and ABD Non Dual admissions to validate prior authorization-to-claim matching, enforce denials on claims without supported authorization, and reconcile claim payment methodology to contract terms.",
+        "evidence": [
+          "TANF Standard spend at Riley's Children's Health increased by +$2.6M.",
+          "TANF Standard admissions rose by 91 while paid per admit fell.",
+          "ABD Non Dual spend increased by +$830K with 18 more admissions.",
+          "ABD Non Dual paid per admit increased by about +$3.0K.",
+          "Both increases sit in PA-required Medicaid CHILDRENS inpatient business."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine respiratory services; ventilator/CPAP management reimbursed one unit daily."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a Fresno Heart & Surgical Hospital-focused policy audit for CA Medicaid authorized acute-hospital admissions in TANF Standard and ABD Non Dual to verify prior authorization-to-claim matching, enforce denied authorizations, confirm contract-based reimbursement processing, and prepare contract remediation or site-of-care redirection for cirrhosis and kidney cases.",
+        "evidence": [
+          "FRESNO HEART & SURGICAL HOSPITAL drove TANF Standard acute-hospital utilization growth in CA.",
+          "ABD Non Dual growth is also concentrated at FRESNO HEART & SURGICAL HOSPITAL.",
+          "Cirrhosis and Alcoholic Hepatitis with CC shows mixed volume and unit-cost pressure.",
+          "Other Kidney and Urinary Tract Diagnoses with CC also shows unit-cost pressure.",
+          "All source cards are prior-authorization-required acute-hospital claims."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a focused California case-mix review that isolates MERCY SAN JUAN MEDICAL CENTER, FRESNO HEART & SURGICAL HOSPITAL, and PNP, INC.; perform targeted management-design review for ALCOHOLIC CIRRHOSIS LIVER W/ASCITES and KIDNEY TRANSPLANT REJECTION, and require claim-level confirmation for O.R. Procedures for Obesity with CC, TYPE 2 DM W/DIABETIC CKD, and OBSTRUCTIVE & REFLUX UROPATHY UNS before broader statewide action.",
+        "evidence": [
+          "ALCOHOLIC CIRRHOSIS LIVER W/ASCITES concentrated at MERCY SAN JUAN MEDICAL CENTER.",
+          "KIDNEY TRANSPLANT REJECTION showed sharply higher paid per admit.",
+          "FRESNO HEART & SURGICAL HOSPITAL introduced rare O.R. Procedures for Obesity with CC.",
+          "NF growth centered on TYPE 2 DM W/DIABETIC CKD and OBSTRUCTIVE & REFLUX UROPATHY UNS."
+        ],
+        "peer_benchmarking": [
+          "Elevance requires inpatient POA indicators; HAC or coding issues may trigger denial or review.",
+          "Humana reimburses separately only when documented qualifying indications are met.",
+          "United Health limits separate reimbursement to stated liver conditions with required documentation."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a PA-to-claim enforcement and contract-compliance audit for Medicaid ACUTE HOSPITAL admissions in MO, VA, and TN for TANF Standard and ABD Non Dual, targeting ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL and recurring diagnoses Depressive Neuroses, Neuroses Except Depressive, and Cirrhosis and Alcoholic Hepatitis with CC; verify denied authorizations are not paid, authorizations match billed stays, and reimbursement is processing to contractual terms.",
+        "evidence": [
+          "All named drivers are PA-required Medicaid ACUTE HOSPITAL admissions.",
+          "MO TANF Standard includes Depressive Neuroses and Neuroses Except Depressive.",
+          "TN TANF Standard and ABD Non Dual concentrate at ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL.",
+          "VA TANF Standard includes Cirrhosis and Alcoholic Hepatitis with CC.",
+          "Pattern recommended next step calls for admission and reimbursement term audit."
+        ],
+        "peer_benchmarking": [
+          "No applicable peer policy identified; BCBS_KC policy was irrelevant to inpatient DRG or neonatal payment adjudication."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 1,
+        "pattern": "OH LTSS Dual Eligible SNF spend jumped on both volume and rate",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 4,
+        "pattern": "Behavioral health admissions and acuity are rising across NC, GA, VA, NY, IA, and WV",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 8: Most directly aligned because a +$10.1M authorized increase sits in a Not Mapped facility bucket; the pattern explicitly calls for validation of authorized spend and facility mapping, which fits auth-to-claim review.; IP NF (DNE) Trend 4: The core issue is facility/site-of-care classification between SNF - FREE STANDING and Not Mapped, so reviewing service/facility drivers is essential once mapping is corrected.; IP NF (DNE) Trend 10: The authorized Not Mapped bucket has very high paid per admit, and the recommended next step includes reimbursement review after validation, making reimbursement method highly relevant.; IP NF (DNE) Trend 6: After mapping cleanup, the remaining SNF increase is clearly utilization-led with +1,314 admissions in non-PA SNF, matching a utilization-management KPI/PAV style review for admission and level-of-care controls.; IP NF (DNE) Trend 9: Because a material share of spend is landing in an unmapped facility category, an operational claims review is relevant to determine whether processing/reclassification issues are contributing to the apparent trend."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly an authorization-code distribution and claim-mapping validation issue, with repeated 'auth_or_mapping_shift' flags and a recommended next step to reconcile PA-required coding logic and claim-level auth-to-claim mapping.; IP MedSurg (DNE) Trend 1: Highly relevant because the variance is concentrated in a subset of providers, especially Riley's Children's Health, Methodist University Hospital, and Fresno Heart & Surgical Hospital, indicating provider-level isolation of the coding shift.; IP MedSurg (DNE) Trend 3: Relevant because part of the CA impact is isolated to specific diagnosis/DRG groupings such as Other Kidney and Urinary Tract Diagnoses with CC and Cirrhosis and Alcoholic Hepatitis with CC, supporting diagnosis-level review.; IP MedSurg (DNE) Trend 9: Relevant as a secondary validation path because false cost signals from authorization-code assignment can reflect claims processing, reprocessing, or status/mapping issues rather than true medical trend.; IP MedSurg (DNE) Trend 10: Relevant as a lower-priority follow-up because the pattern could be mistaken for reimbursement change; the pattern details specifically caution against reimbursement action until coding and auth mapping are validated."
+      },
+      {
+        "rank": 4,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated at a single provider, Riley's Children's Health, across both TANF Standard and ABD Non Dual, making provider-level behavior and contracting the clearest parent driver.; IP MedSurg (DNE) Trend 8: Both source cards are PA-required and flagged for auth dimension presence, and the pattern explicitly recommends reviewing authorization patterns, making auth-to-claim enforcement a strong fit.; IP MedSurg (DNE) Trend 10: ABD Non Dual shows clear unit-cost pressure and the recommended next step includes contract-term review, so reimbursement method is directly relevant to explaining the spend increase.; IP MedSurg (DNE) Trend 6: TANF Standard growth is primarily admission-driven in authorized inpatient business, so changes in utilization management KPIs or approval dynamics could be contributing to the higher spend.; IP MedSurg (DNE) Trend 7: Admissions increased materially at this children's hospital, and the business terms include site-of-care/utilization, so admission source, elective mix, or routing changes may help explain the volume rise."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated at a single provider, Fresno Heart & Surgical Hospital, which the pattern explicitly identifies as a provider-specific cost driver rather than a broad statewide trend.; IP MedSurg (DNE) Trend 3: Specific diagnoses materially contribute to the variance, especially Cirrhosis and Alcoholic Hepatitis with CC and Other Kidney and Urinary Tract Diagnoses with CC, indicating diagnosis-level concentration.; IP MedSurg (DNE) Trend 6: Admissions are up and volume growth is the primary driver, making utilization management performance and avoidable variance review directly relevant to the observed increase.; IP MedSurg (DNE) Trend 10: The pattern calls for review of reimbursement terms and notes unit-cost pressure in some admissions, making reimbursement method review relevant alongside volume growth.; IP MedSurg (DNE) Trend 8: All key source cards are authorization-required acute hospital claims and include auth-to-claim validation as a business term, so enforcement of authorization controls is an important parent rule."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Primary IP Med/Surg variance is concentrated in a narrow diagnosis set\u2014especially alcoholic cirrhosis with ascites, kidney transplant rejection, and related liver/transplant diagnoses\u2014so this is fundamentally a diagnosis-driven case-mix shift.; IP NF (DNE) Trend 3: NF spend growth is also concentrated in specific diagnoses, mainly type 2 diabetes with diabetic CKD and obstructive/reflux uropathy, which fits a diagnosis-driver pattern rather than broad NF inflation.; IP MedSurg (DNE) Trend 1: Several high-impact IP Med/Surg drivers are tied to identifiable providers/facilities, including Mercy San Juan Medical Center and Fresno Heart & Surgical Hospital, supporting focused provider-level review.; IP NF (DNE) Trend 1: The NF increase appears concentrated in a specific free-standing SNF provider context, making provider isolation relevant before any broader utilization or policy conclusions.; IP MedSurg (DNE) Trend 4: The rare bariatric DRG spike and transplant-related high-cost inpatient cases indicate a subset-of-services/DRG mix issue that should be separately reviewed and validated from general inpatient utilization."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 29,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP BH (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: All major drivers are PA-required acute-hospital admissions, and the recommended next step is to audit authorized admissions, making auth-to-claim enforcement the clearest parent rule.; IP MedSurg (DNE) Trend 10: The pattern has mixed unit-cost pressure and explicitly calls for comparing hospital reimbursement terms and contract checks, which directly aligns to reimbursement method review.; IP MedSurg (DNE) Trend 6: The increase is primarily admissions-led across multiple states and products, suggesting a broader inpatient utilization-management issue rather than a one-off event, which fits PAV and UM KPI review.; IP MedSurg (DNE) Trend 1: A meaningful portion of the variance is concentrated at specific hospitals, especially ASCENSION SAINT THOMAS RUTHERFORD HOSPITAL in TN, supporting provider-level behavior and contract analysis.; IP BH (DNE) Trend 3: Missouri's largest named driver is behavioral, with recurring DRGs such as Depressive Neuroses and Neuroses Except Depressive, so BH diagnosis concentration is a relevant parent rule."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-25T13:31:52.039560+00:00"
+  }
+}

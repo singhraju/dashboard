@@ -1,0 +1,630 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IN / UNATTRIBUTED rare inpatient Med/Surg outliers are materially moving spend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Policy Mention",
+          "type": "badge"
+        },
+        {
+          "id": "drg_outlier_rule",
+          "label": "DRG/Outlier Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_IL",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "drg_outlier_rule": "-"
+        },
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "drg_outlier_rule": "-"
+        },
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "Conditional Coverage",
+          "drg_outlier_rule": "Covers 87505 broadly; 87506/87507 require specified POS and diagnosis/transplant criteria."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "Site Restricted",
+          "drg_outlier_rule": "Requires Table 3 POS codes; outpatient hospital coverage limited to observation work-up."
+        },
+        {
+          "payer_org": "Coordinated Care",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "drg_outlier_rule": "-"
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "Covered",
+          "drg_outlier_rule": "Covered for GI pathogen testing when criteria met; outpatient limited to observation diagnostic work-up."
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "drg_outlier_rule": "No relevant DRG or outlier rule interaction found."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "drg_outlier_rule": "No applicable DRG/outlier rule; policy concerns donor fecal testing and analysis."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_IL_IL_28593780300",
+        "payer_name": "BCBS_IL",
+        "policy_title": "Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "Off-topic to this policy; the code is not listed and no adjudication rule is provided for it.",
+        "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/cpcplab/2026/cpcplab025-1-1-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082300002",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing",
+        "tags": [],
+        "effective_date": "2026-01-03",
+        "evidence": "Off-topic for the requested code. The policy addresses fecal analysis and fecal microbiota transplant donor testing, not this HCPCS code.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab025-1-3-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595790209",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "Off-topic. This policy covers fecal analysis and fecal microbiota transplant donor testing, not inpatient DRG outlier payment for the requested digestive disorder DRG.",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-fecal-analysis-diagnosis-intestinal-dysbiosis-and-fecal-microbiota-transplant",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00027",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing (PDF)",
+        "tags": [],
+        "effective_date": "03/23",
+        "evidence": "Covered for GI pathogen panels of 3-5 targets when medical necessity criteria are met; usable in any place of service and with any diagnosis.",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CP.MP.209.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87505",
+            "87506",
+            "87507"
+          ],
+          "related_codes": [
+            "87506",
+            "87507",
+            "87505",
+            "A09",
+            "R19.7",
+            "Z94.4"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "with POS 19, 21, 22, or 23",
+            "with Table 4 and Table 5 diagnoses",
+            "with Table 6 diagnoses"
+          ],
+          "utilization_limits": [
+            "3-5 targets",
+            "6-11 targets",
+            "12-25 targets"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "GI pathogen panel testing"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00033",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Infectious Disease: Gastroenterologic Testing (PDF)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CG.CP.MP.04.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CC_00018",
+        "payer_name": "Coordinated Care",
+        "policy_title": "Infectious Disease: Gastroenterologic Lab Testing",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.coordinatedcarehealth.com/content/dam/centene/Coordinated%20Care/policies/payment-policies/CG.CP.MP.04.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00091",
+        "payer_name": "Centene",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing - CP.MP.209",
+        "tags": [],
+        "effective_date": "06/21",
+        "evidence": "Covered when the stool GI pathogen panel is medically necessary and limited to 3-5 targets; allowed in any place of service.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/healthnet/pdfs/providerlibrary/500046_Payment%20Integrity%20Policy%20CP.MP.209.Gastro-Pathogen-Nucleic-Acid-Detection-Panel-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87505",
+            "87506",
+            "87507",
+            "0097U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "diarrhea >7 days with fever",
+            "suspected bacteremia",
+            "suspected enteric fever",
+            "recent endemic travel",
+            "C. difficile risk",
+            "persistent diarrhea",
+            "immunocompromised",
+            "billed with POS 21, 22, or 23",
+            "observation work-up when POS 22"
+          ],
+          "utilization_limits": [
+            "3-5 targets",
+            "up to 5 targets",
+            "6-11 targets",
+            "up to 11 targets",
+            "12-25 targets",
+            "22 targets"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "outpatient observation work-up"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00421",
+        "payer_name": "Centene",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing",
+        "tags": [],
+        "effective_date": "03/23",
+        "evidence": "This policy governs gastrointestinal pathogen panel testing criteria and billing for specific CPT/ICD-10 combinations. It does not mention K5720 and does not provide a direct adjudication rule for this diagnosis/code.",
+        "policy_url": "https://www.sunflowerhealthplan.com/content/dam/centene/sunflower/policies/payment-policies/CP.MP.209.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00679",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "GI Pathogen Nucleic Acid Detection Panel Testing Policy: CP.MP.209",
+        "tags": [],
+        "effective_date": "06/21",
+        "evidence": "This policy does not mention K5720. It addresses GI pathogen panel CPT codes and place-of-service criteria instead.",
+        "policy_url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/Prov/policies/NJ_CP.MP.209%20GI%20Pathogen%20Nucleic%20Acid%20Detection%20Panel%20Testing_Policy_2022.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87505",
+            "87506",
+            "87507",
+            "0097U"
+          ],
+          "related_codes": [
+            "0097U",
+            "87507"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same place of service"
+          ],
+          "utilization_limits": [
+            "3-5 targets",
+            "6-11 targets",
+            "12-25 targets",
+            "22 targets"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "observation work-up"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00700",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel",
+        "tags": [],
+        "effective_date": "03/06/2025",
+        "evidence": "Not mentioned in this Medicare GI pathogen panel policy; no adjudication rule found for this requested pattern.",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.034-Gastrointestinal-Pathogen-Nucleic-Acid-Detection-Panel.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00745",
+        "payer_name": "Centene",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing (CP.MP.209)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.ambetterhealth.com/content/dam/centene/ambetternc/policies/payment-policies/CP.MP.209.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00024",
+        "payer_name": "Healthfirst",
+        "policy_title": "Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "Off-topic for this policy. The policy addresses fecal analysis and fecal microbiota transplant testing, not this HCPCS code, so no adjudication rule applies.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-053-Fecal-Analysis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00027",
+        "payer_name": "Healthfirst",
+        "policy_title": "Testing for Alpha-1 Antitrypsin",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-048-Antitrypsin-Deficiency.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 19,
+    "policies_successful": 19,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: IN / UNATTRIBUTED rare inpatient Med/Surg outliers are materially moving spend",
+    "pattern_rank": 7,
+    "pattern_title": "IN / UNATTRIBUTED rare inpatient Med/Surg outliers are materially moving spend",
+    "cpt_codes_requested": [
+      "K5720",
+      "K7031"
+    ],
+    "drg_codes_requested": [
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "Liver Transplant without MCC"
+    ],
+    "total_policies_found": 19,
+    "successful_extractions": 19,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 19 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "19 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 2 source card(s) attest no state (segment scope: IN, UNATTRIBUTED); searched without it rather than narrowing to ['IN']"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "6/19 policies quarantined (32%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/19 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "6 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00087:Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing (LBM), RP_COM_EMB_00109:Testing For Alpha-1 Antitrypsin Deficiency (LBM), RP_GBD_CNC_00210:Infectious Disease: Gastroenterologic Lab Testing, RP_GBD_CNC_00327:Concert Infectious Disease: Gastroenterologic Testing, RP_GBD_CNC_00708:Infectious Disease Gastroenterologic Lab Testing, RP_GBD_HUM_00012:Laboratory - Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 215517,
+    "output": 66994,
+    "breakdown": {
+      "search_keywords": {
+        "input": 541,
+        "output": 188,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 2616,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 1330,
+        "output": 5758,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 198532,
+        "output": 49489,
+        "calls": 19
+      },
+      "relevance_judge": {
+        "input": 7372,
+        "output": 7080,
+        "calls": 15
+      },
+      "dynamic_columns": {
+        "input": 812,
+        "output": 456,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 2108,
+        "output": 1119,
+        "calls": 12
+      },
+      "policy_recommendations": {
+        "input": 4379,
+        "output": 288,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:25:48.095230+00:00",
+    "end_time": "2026-08-23T05:27:29.235548+00:00",
+    "duration_ms": 101140,
+    "version": "2.0.0"
+  }
+}

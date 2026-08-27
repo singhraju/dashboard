@@ -1,0 +1,210 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a GA PPO Local authorized acute inpatient policy audit for MEMORIAL HEALTH UNIVERSITY MEDICAL CENTER, NORTHSIDE HOSPITAL CHEROKEE, and PIEDMONT ATHENS REGIONAL MEDICAL CENTER to confirm prior authorization and auth-to-actual matching, enforce denial edits, validate contract-based claims processing, and assess contract remediation, site-of-care, and management-design controls for Other Disorders of Nervous System with CC, Other Circulatory System Diagnoses with CC, Disorders of Liver Except Malignancy, Cirrhosis, or Alcoholic Hepatitis with CC, and Other Musculoskeletal System and Connective Tissue Diagnoses with MCC.",
+        "evidence": [
+          "Spend increase is concentrated in three GA acute hospitals.",
+          "MEMORIAL HEALTH UNIVERSITY MEDICAL CENTER shows more admissions and higher paid per admit.",
+          "NORTHSIDE HOSPITAL CHEROKEE shows more admissions and higher paid per admit.",
+          "PIEDMONT ATHENS REGIONAL MEDICAL CENTER is mainly a volume story.",
+          "All provider cards have prior authorization required.",
+          "Key drivers include Other Disorders of Nervous System with CC.",
+          "Key drivers include Other Circulatory System Diagnoses with CC."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a UCI MEDICAL CENTER utilization-management and claims-processing review for CA PPO Local authorized acute hospital IP Med/Surg admissions in Other Circulatory System Diagnoses with CC and Disorders of Liver Except Malignancy, Cirrhosis, or Alcoholic Hepatitis with CC: assess root cause of admission increases, review initial and concurrent review KPIs, confirm prior auth obtained, and validate authorization-to-actual matching and denial enforcement.",
+        "evidence": [
+          "UCI MEDICAL CENTER drove about +$1.9M of the increase.",
+          "Admissions increased at UCI MEDICAL CENTER while paid per admit declined.",
+          "Pattern is limited to prior-auth-required CA PPO Local acute hospital care.",
+          "Circulatory and liver DRGs were the clearest service-line drivers."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Escalate NYU LANGONE HOSPITAL LONG ISLAND for a provider-specific NY PPO Local ACUTE HOSPITAL inpatient review covering admission appropriateness, prior authorization-to-claim matching, denial enforcement, and contract-compliant reimbursement on authorized cases.",
+        "evidence": [
+          "NYU LANGONE HOSPITAL LONG ISLAND added about +$1.3M.",
+          "Admissions increased by 47 while paid per admit increased about $2.8K.",
+          "pa_required_code is Y and auth-to-claim validation is flagged.",
+          "The signal supports provider-specific action rather than a broad NY response."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a joint UM operations and claims processing review for CA, OH, and GA to reconcile AUTH_CODE_DISTRIBUTION authorizations with actual billed services, correct \"Not Mapped\" facility assignments, confirm authorization denials and contractual edits are firing as intended, and reprocess exceptions where manual adjudication bypassed required edits for the affected NF and IP Med/Surg claims.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION increase is tied to Ungroupable claims.",
+          "OH AUTH_CODE_DISTRIBUTION shift is concentrated in musculoskeletal inpatient claims.",
+          "GA spend appears in a \"Not Mapped\" facility bucket.",
+          "CA also has claims assigned to \"Not Mapped\" facilities.",
+          "Source groups flag validation before action."
+        ],
+        "peer_benchmarking": [
+          "Humana summary does not address DRG facility scope or authorization status for this issue.",
+          "United Health summary shows no documented authorization, appeals, or facility-scope guidance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "For Medicare GRS PPO Local authorized admissions, require a joint UM-network policy review to tighten site-of-care and discharge-routing criteria for SNF - FREE STANDING, CRITICAL ACCESS, and Physical Rehab, starting in GA and CA, and complete denial-enforcement, auth-to-claim, and contract-processing audits for CA and PA SNF plus NH rehab claims.",
+        "evidence": [
+          "CA SNF added about +$0.5M with 12 more admissions and higher paid/admit.",
+          "GA CRITICAL ACCESS added about +$0.3M from 11 more admissions.",
+          "GA SNF added about +$0.3M from 20 more admissions.",
+          "PA and OH SNF added about +$0.2M combined with higher paid/admit.",
+          "NH Physical Rehab had 2 admissions at about $45.5K paid/admit."
+        ],
+        "peer_benchmarking": [
+          "United Health reimburses only POS 19, 21, 22, and 24.",
+          "Humana lists no site-of-service limits specified."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open targeted catastrophic-case audits for the UCI MEDICAL CENTER heart transplant or heart assist admission and the NYU LANGONE HOSPITAL LONG ISLAND complex spinal fusion admission, verifying prior authorization enforcement, contract-based inpatient claim pricing, and itemized billing.",
+        "evidence": [
+          "UCI MEDICAL CENTER had a heart transplant or heart assist inpatient case.",
+          "NYU LANGONE HOSPITAL LONG ISLAND had a complex spinal fusion inpatient case.",
+          "Both highlighted admissions show prior authorization required.",
+          "Pattern flags include low baseline, small admissions, and repeated delta concentration."
+        ],
+        "peer_benchmarking": [
+          "Humana documents professional services only and no inpatient DRG bundling.",
+          "Emblem Health has no documented relevant inpatient DRG policy in supplied data."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted inpatient policy and claims audit in GA and NY for Concomitant Left Atrial Appendage Closure and Cardiac Ablation admissions with paroxysmal or persistent atrial fibrillation at Memorial Health University Medical Center and NYU Langone Hospital Long Island, validating prior authorization enforcement, inpatient appropriateness, and contractual reimbursement methodology.",
+        "evidence": [
+          "All increase tied to Concomitant Left Atrial Appendage Closure and Cardiac Ablation.",
+          "Only Memorial Health University Medical Center and NYU Langone Hospital Long Island appear.",
+          "Diagnoses are paroxysmal atrial fibrillation and other persistent atrial fibrillation.",
+          "PA required code is Y on both inpatient provider records."
+        ],
+        "peer_benchmarking": [
+          "No documented pattern mention, policy relevance, appeals process, or effective date for Centene, Healthfirst, Molina, or United Health."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "GA clinical spend is concentrated in a narrow set of inpatient sepsis, circulatory, and neurologic cases",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Highest relevance: the pattern explicitly states spend increase is concentrated in three hospitals, making provider-level behavior and contractual change review the primary parent rule.; IP MedSurg (DNE) Trend 3: Diagnosis concentration is also present, with key inpatient drivers tied to nervous system, circulatory, liver, and musculoskeletal cases, so diagnosis-level research is directly relevant.; IP MedSurg (DNE) Trend 10: Two of the three hospitals show higher paid per admit, and the recommendation includes reimbursement and contract performance review, aligning with reimbursement method as a key parent rule.; IP MedSurg (DNE) Trend 8: This is authorized inpatient care and the source cards include auth-related flags and business terms such as auth-to-claim validation, so enforcement of authorization rules is relevant.; IP MedSurg (DNE) Trend 6: Admissions are materially up across the main providers, and the recommended next step includes UM and medical-necessity review, which fits investigation of utilization management KPI changes."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is overwhelmingly concentrated in one provider, UCI Medical Center, which contributed about $1.9M of the ~$2.2M increase and 95 additional admissions, making provider-driver review the highest-priority parent rule.; IP MedSurg (DNE) Trend 3: Variance is also concentrated in a subset of diagnoses/DRGs, especially Other Circulatory System Diagnoses with CC and liver-related cases, so diagnosis-driver analysis is directly aligned to the pattern.; IP MedSurg (DNE) Trend 6: This is explicitly a utilization-led inpatient pattern: admissions increased while paid per admit declined. The recommended next step is to assess avoidable admits and inpatient criteria, which matches UM KPI/PAV waterfall review.; IP MedSurg (DNE) Trend 8: The pattern is restricted to authorized inpatient care, and the source cards flag auth-to-claim validation, so confirming that authorization denials and enforcement are functioning appropriately is still relevant.; IP MedSurg (DNE) Trend 4: The increase is tied to a subset of inpatient service lines within acute hospital care, particularly circulatory and liver-related admissions, so service-driver review is a useful supporting parent rule."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated at a single provider, NYU LANGONE HOSPITAL LONG ISLAND, so provider-driver analysis is the most direct parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit and allowed per admit both increased, indicating reimbursement or contract-method pressure in addition to higher utilization.; IP MedSurg (DNE) Trend 8: This is authorized inpatient care with PA required = Y, and the pattern explicitly flags auth-to-claim validation, making authorization enforcement and matching highly relevant.; IP MedSurg (DNE) Trend 6: Admissions rose materially, and the recommended next step includes admission appropriateness, case management, and UM review, aligning with utilization management KPI investigation.; IP MedSurg (DNE) Trend 7: The inpatient admission increase may reflect shifts in admission source or case type; the ER admit context and appropriateness review make admission/discharge source-location analysis relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 8: The largest NF/SNF-related portion of the pattern includes CA AUTH_CODE_DISTRIBUTION movement and GA claims in a 'Not Mapped' facility bucket, directly fitting auth-to-claim validation before business action.; IP MedSurg (DNE) Trend 8: OH inpatient musculoskeletal claims and CA inpatient 'Not Mapped' claims both show authorization coding shifts, making Auth to Claim match the primary MedSurg parent rule.; IP NF (DNE) Trend 9: 'Ungroupable' and 'Not Mapped' signals in NF/SNF segments are consistent with claims processing, classification, or reprocessing issues rather than confirmed utilization change.; IP MedSurg (DNE) Trend 9: The CA inpatient 'Not Mapped' facility assignment suggests claim processing or status standards should be checked before attributing the variance to providers or true care changes.; IP NF (DNE) Trend 10: SNF-related facility mapping issues can change reimbursement logic once claims are correctly classified, so reimbursement method review is an important secondary follow-up after mapping reconciliation."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 26,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: Most directly fits the site-of-care shift pattern because spend is moving into SNF, critical access, and rehab through discharge routing and admission location changes, with admissions increasing across key states.; IP NF (DNE) Trend 8: Highly relevant because the major drivers are authorized admissions (pa_required_code = Y), and the pattern explicitly raises whether authorization criteria and denials are being appropriately enforced in non-acute settings.; IP NF (DNE) Trend 10: Relevant for the unit-cost component, especially in CA and PA SNF and rehab, where paid per admit increased and the recommended action includes reviewing contracted rates and reimbursement structure.; IP NF (DNE) Trend 6: Relevant because the pattern calls for UM review of admission criteria and discharge pathways, which aligns with investigating utilization management KPI changes driving authorized non-acute volume.; IP NF (DNE) Trend 4: Relevant because the variance is concentrated in a narrow subset of services/settings\u2014SNF, critical access, and physical rehab\u2014so service-driver analysis is needed to isolate where site-of-care leakage is occurring."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in a small subset of providers, especially UCI MEDICAL CENTER and NYU LANGONE HOSPITAL LONG ISLAND, making provider-level investigation the strongest parent rule fit.; IP MedSurg (DNE) Trend 4: The pattern is driven by a narrow set of very high-cost inpatient services/DRGs, particularly heart transplant/heart assist and complex spinal fusion, which aligns directly to service-driver review.; IP MedSurg (DNE) Trend 3: Specific diagnoses are part of the pattern signal, including acute/chronic combined systolic and diastolic CHF and lumbar disc disorder with radiculopathy, so diagnosis concentration is relevant.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly says to confirm reimbursement terms for transplant and complex spine services, which maps most directly to reimbursement method review.; IP MedSurg (DNE) Trend 8: Both highlighted cases show PA required = Y, so validating auth-to-claim matching and whether authorization controls were correctly applied is a relevant secondary check."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The increase is tightly concentrated in one specific inpatient service/DRG: Concomitant Left Atrial Appendage Closure and Cardiac Ablation, making service-level review the strongest parent rule match.; IP MedSurg (DNE) Trend 1: All observed variance is concentrated in just two hospitals across GA and NY, indicating a provider-specific pattern rather than a broad inpatient trend.; IP MedSurg (DNE) Trend 3: The pattern is linked to a narrow diagnosis subset\u2014paroxysmal and other persistent atrial fibrillation\u2014so diagnosis-level isolation is directly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit is unusually high and the recommendation explicitly calls for reimbursement review to confirm payment terms for the combined cardiac procedure, aligning with reimbursement method review.; IP MedSurg (DNE) Trend 8: These are inpatient cases with PA required flagged as yes, and the next step includes inpatient appropriateness review, making auth-to-claim enforcement an important related parent rule."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T16:48:26.938312+00:00"
+  }
+}

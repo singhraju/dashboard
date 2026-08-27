@@ -1,0 +1,1905 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "FL free-standing SNF surge in LTSS is the largest actionable cost driver",
+    "pattern_description": "Authorized free-standing SNF spend in FL rose sharply across LTSS products, led overwhelmingly by LTSS Dual Eligible and supplemented by LTSS Non Dual. The increase is primarily volume-driven, with large admission and claim growth and only modest per-admission price movement relative to the total change. Neurologic and related rehab conditions are meaningful contributors inside the broader SNF increase.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "FL LTSS Dual Eligible free-standing SNF added +$61.3M, including 6,568 more admissions and 10,981 more claims. FL LTSS Non Dual free-standing SNF added +$8.1M with 853 more admissions. Degenerative Nervous System Disorders with MCC contributed +$3.0M within the larger FL LTSS Dual Eligible SNF growth. A smaller mixed volume and unit-cost layer added another +$1.1M inside FL LTSS Dual Eligible SNF."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "FL authorization code movement is masking true cost drivers",
+    "pattern_description": "A very large share of FL cost movement is sitting in authorization code distribution rather than a stable authorization category. This is a gating validation issue, not a clean utilization or reimbursement signal, until authorization-to-claim mapping is confirmed. Tampa General Hospital appears within the same validation pattern and should be included in the audit scope.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "FL authorization code movement is masking true cost drivers",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "auth_requirement",
+              "label": "Auth Rule",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "No Auth",
+              "policy_scope": "General facility clean-claim bundling policy for routine supplies; no DRG-specific or state authorization guidance."
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "No Auth",
+              "policy_scope": "General facility bundling rules apply; ICU monitoring/equipment included in accommodation charges, not separately reimbursed."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "Requires Auth",
+              "policy_scope": "Reimburses tracheostomy care supplies when physician-directed, medically necessary, and subject to benefit limits."
+            },
+            {
+              "payer_org": "Florida Blue",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "policy_scope": "Applies only to physician global surgery billing and modifier handling on CMS-1500 claims."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "No Auth",
+              "policy_scope": "Applies broad professional/facility bundling rules, not DRG payment or Florida authorization movement."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Tracheostomy Supplies RETIRED",
+            "tags": [],
+            "effective_date": "11/07/06",
+            "evidence": "This policy addresses reimbursement for tracheostomy care supplies, not inpatient DRG reassignment or Florida authorization-code movement. It allows reimbursement when supplies are incident to physician services or ordered by a physician and used in accepted medical practice, with bundling in office/facility use and separate reimbursement possible in home health or through vendor fee schedules, subject to medical necessity, authorization guidelines, and supply limits.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 care kit/day",
+                "starter kit first 2 weeks",
+                "established kit after 2 weeks"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "incident to physician services",
+                "physician order required"
+              ],
+              "exemptions": [
+                "additional documentation for extra kits",
+                "medical necessity authorization above limits"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00018",
+            "payer_name": "Cigna",
+            "policy_title": "Facility Services, Supplies and Equipment",
+            "tags": [],
+            "effective_date": "10/01/2010",
+            "evidence": "This DRG descriptor is not named in the policy. The policy provides only general facility bundling and unit-reporting rules that may affect inpatient payment and does not state any Florida-specific authorization code movement rule.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "99190",
+                "99191",
+                "99192",
+                "95940",
+                "95941",
+                "G0453",
+                "C1762",
+                "C1763",
+                "C1781",
+                "C1734",
+                "C1889",
+                "L8699",
+                "96360",
+                "96361",
+                "96365-96379",
+                "96521-96523"
+              ],
+              "related_codes": [
+                "51785",
+                "92265",
+                "92558",
+                "95812-95813",
+                "95822",
+                "95860-95870",
+                "95872",
+                "95874",
+                "95885-95887",
+                "95907-95913",
+                "95925-95939",
+                "95955",
+                "95957",
+                "95999",
+                "96401",
+                "96402",
+                "96409-96425"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [
+                "TC"
+              ],
+              "revenue_codes": [
+                "020X",
+                "017X",
+                "36X",
+                "0230-0239",
+                "0278"
+              ],
+              "pairing_conditions": [
+                "reported as time and procedure units",
+                "beyond standard nursing services",
+                "with associated electrodiagnostic studies",
+                "under revenue code 0278",
+                "with primary surgical procedure",
+                "with primary service or procedure"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician services only",
+                "not intended for physician reporting"
+              ],
+              "exemptions": [
+                "physician-ordered documented increased nursing intensity",
+                "infusion/injection is primary visit reason"
+              ],
+              "action_types": [
+                "bundle",
+                "limit",
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_27067540000",
+            "payer_name": "Cigna",
+            "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+            "tags": [],
+            "effective_date": "10/30/2018",
+            "evidence": "Off-topic for the requested inpatient DRG pattern. This policy governs professional global surgical package reimbursement and selected modifiers, not DRG assignment, facility authorization code movement, or inpatient cost-driver adjudication.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_FLBL_FL_28206710003",
+            "payer_name": "Florida Blue",
+            "policy_title": "Global Surgery Package",
+            "tags": [],
+            "effective_date": "02/24/2010",
+            "evidence": "This DRG description is not mentioned. The policy is about physician global surgery package billing and modifier handling on CMS-1500 claims, not inpatient facility DRG reimbursement or authorization code movement.",
+            "policy_url": "https://files.guidewell.com/m/7d2f2f7eb720f5f0/original/providers-payment-policies-global-surgery-package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00045",
+            "payer_name": "United Health",
+            "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No adjudication rule was found for this DRG-described pattern. The policy is a professional global days and surgical bundling policy for CMS-1500 claims and does not define DRG payment, facility authorization movement, or state-specific inpatient cost-driver logic for the requested pattern.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00101",
+            "payer_name": "United Health",
+            "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No adjudication rule is stated for the requested DRG pattern or for Florida authorization code movement. The policy is off-topic to the request and instead governs split surgical package reimbursement on professional claims using transfer-of-care modifiers.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00136",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "This facility policy is not DRG- or diagnosis-specific and does not address Florida authorization code movement. It applies broad inclusive-charge bundling rules to inpatient and outpatient UB04 claims, including percent-of-charge reviews and audits, so routine separately billed facility items and services during an inpatient stay are generally bundled rather than paid separately.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "250",
+                "260",
+                "260-269",
+                "270",
+                "270-279",
+                "279",
+                "300",
+                "300-370",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [
+                "same inpatient or outpatient visit",
+                "when separately billed as routine services"
+              ],
+              "utilization_limits": [
+                "1 unit per day ventilator or CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "services not considered routine (or ancillary)",
+                "Ventilator or CPAP management"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00179",
+            "payer_name": "Centene",
+            "policy_title": "Unbundling Adjustments on Clean Claim Reviews",
+            "tags": [],
+            "effective_date": "2022-09-01",
+            "evidence": "This Centene facility clean-claim policy does not mention this DRG and does not address state-specific authorization code movement. It sets general unbundling rules for facility claims: routine supplies, services, and items integral to room/board or procedures are bundled and not separately payable; only non-routine, medically necessary, physician-ordered, and documented items may be considered separately payable.",
+            "policy_url": "https://www.sunshinehealth.com/content/dam/centene/policies/payment-policies/CC.PI.10.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same underlying room and board acuity level",
+                "during the course of a procedure",
+                "same underlying blood sample analysis",
+                "with anesthesia time charges",
+                "with perfusionist time charges",
+                "on inpatient claims"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "distinct physician order required"
+              ],
+              "exemptions": [
+                "non-routine (separately payable)",
+                "oxygen unless utilized as an exclusive form of respiratory therapy"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "FL AUTH_CODE_DISTRIBUTION accounts for +$55.7M of delta at the state level. Tampa General Hospital contributes another +$2.4M inside the same authorization classification issue. The finding is flagged for validation before business action rather than direct utilization or pricing intervention."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA nursing facility growth is concentrated in neurologic and back-related members",
+    "pattern_description": "In CA, free-standing SNF growth and NF case mix are both concentrated in neurologic, stroke-sequela, Parkinson's, and back-related conditions. Operationally, authorized SNF admissions increased across LTSS Dual Eligible, LTSS Non Dual, and TANF Standard, while clinical NF spend rose through a heavier mix of stroke and spine diagnoses. The overall story is more about member volume and case mix than broad price inflation.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA authorized free-standing SNF added +$6.0M in LTSS Dual Eligible, +$4.9M in LTSS Non Dual, and +$1.9M in TANF Standard. CA NF clinical case mix added +$10.4M, led by stroke sequelae, spinal stenosis, Parkinson's, and other neurologic diagnoses. Two stroke-sequela diagnoses alone contributed about +$6.2M and 706 more admissions. Operational SNF growth was volume-led, while NF clinical severity and diagnosis mix added a second layer of pressure."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "CA authorization code movement needs validation before utilization action",
+    "pattern_description": "A large CA cost signal is sitting in authorization code distribution instead of a stable business category. Until that mapping is validated, apparent increases in neurologic and back-related inpatient activity may be overstated or misclassified. This should be treated as a gating data and authorization issue before UM or reimbursement changes are made.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA authorization code movement needs validation before utilization action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "authorization_notes",
+              "label": "Auth Notes",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "authorization_notes": "-"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "authorization_notes": "No code-specific authorization; claims remain subject to applicable referral and authorization requirements."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00160",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Patient Convenience Items RETIRED",
+            "tags": [],
+            "effective_date": "11/09/06",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Patient%20Convenience%20Items%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00077",
+            "payer_name": "Humana",
+            "policy_title": "Acupuncture for Chronic Lower Back Pain",
+            "tags": [],
+            "effective_date": "2022-01-01",
+            "evidence": "No adjudication rule was found for this requested DRG and authorization pattern. The policy is limited to outpatient acupuncture and dry needling for chronic lower back pain and does not address this DRG descriptor or any CA authorization-code movement validation before utilization action.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929830141c6",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service"
+              ],
+              "utilization_limits": [
+                "20 sessions/year"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Medicare Part B"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "acupuncture licensure required",
+                "plan participation required"
+              ],
+              "exemptions": [
+                "PCP services 2022-2025",
+                "Group MA PCP services 2026"
+              ],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA AUTH_CODE_DISTRIBUTION shows +$18.3M of delta requiring validation before action. Degenerative Nervous System Disorders with MCC account for +$12.3M inside the issue. Medical Back Problems without MCC add another +$6.0M inside the same authorization classification shift."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "IN / MD / MO authorization distribution shifts are obscuring market-specific actions",
+    "pattern_description": "Across IN, MD, and MO, a meaningful share of cost change is landing in authorization code distribution rather than a clean operational category. The issue spans pediatric provider concentration, maternity admissions, and behavioral health diagnoses, so business action should wait until the authorization classification is confirmed. This is a cross-market validation pattern rather than a direct utilization conclusion.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN / MD / MO authorization distribution shifts are obscuring market-specific actions",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "service_scope",
+              "label": "Service Scope",
+              "type": "text"
+            },
+            {
+              "id": "auth_rule",
+              "label": "Auth Rule",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Neonatal critical/intensive care billing only; psychiatric and vaginal delivery DRGs not addressed.",
+              "auth_rule": "-"
+            },
+            {
+              "payer_org": "CareFirst_BCBS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Covers prenatal, postpartum, and delivery-attendance doula services with specified billing requirements.",
+              "auth_rule": "No Auth"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Uses CPT-based global maternity package bundling, not DRG-based behavioral health or neonatal adjudication.",
+              "auth_rule": "No Auth"
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Global maternity package includes routine obstetric care; limited partial-care and certain related services reimburse separately.",
+              "auth_rule": "-"
+            },
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Multiple-birth delivery reimbursement; no neonatal or psychiatric DRG-specific payment rule mentioned.",
+              "auth_rule": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Not mentioned; policy only addresses obstetric maternity services, not behavioral health or neonatal DRGs.",
+              "auth_rule": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "service_scope": "Covers global OB, delivery-only, and delivery-plus-postpartum; routine maternity is bundled.",
+              "auth_rule": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589930008",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Newborn and Neonatal Critical and Intensive Care Services",
+            "tags": [],
+            "effective_date": "11/1/2025",
+            "evidence": "Policy is limited to neonatal critical/intensive care billing and does not address psychiatric DRGs.",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/newborn-neonatal-critical-intensive-care-serivce.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "99468",
+                "99469",
+                "99477",
+                "99478",
+                "99479",
+                "99480"
+              ],
+              "related_codes": [
+                "31500",
+                "36000",
+                "36140",
+                "36620",
+                "36400",
+                "36405",
+                "36406",
+                "36420",
+                "36600",
+                "36430",
+                "36440",
+                "36510",
+                "36555",
+                "36660",
+                "43752",
+                "51100",
+                "51701",
+                "51702",
+                "62270",
+                "94002-94004",
+                "94375",
+                "94610",
+                "94660",
+                "94760-94762",
+                "94780-94781",
+                "96360",
+                "96361"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "0170",
+                "0171",
+                "0172",
+                "0173",
+                "0174"
+              ],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "same date of service",
+                "reported with neonatal critical care codes"
+              ],
+              "utilization_limits": [
+                "28 days of age or younger",
+                "present body weight less than 1,500 grams",
+                "present body weight 1,500-2,500 grams",
+                "present body weight 2,501-5,000 grams"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "bedside or immediately available",
+                "continuously available neonatologist"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589970006",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "2019-07-01",
+            "evidence": "Off-topic for this policy. The policy is limited to maternity and newborn reimbursement and contains no behavioral health or psychiatric DRG adjudication rules. No IN, MD, or MO authorization variation is described.",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/maternity-services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "99221-99223",
+                "99231-99233",
+                "99477",
+                "99478-99480",
+                "99468-99476",
+                "99238",
+                "99464",
+                "59400",
+                "59610",
+                "59425",
+                "59426",
+                "59409",
+                "59612",
+                "59410",
+                "59614",
+                "59430"
+              ],
+              "related_codes": [
+                "99460",
+                "99462",
+                "Z76.2",
+                "54150",
+                "54160",
+                "Z41.2",
+                "59510",
+                "59618",
+                "59514",
+                "59620",
+                "59515",
+                "59622",
+                "80055",
+                "59899"
+              ],
+              "required_modifiers": [
+                "25",
+                "59",
+                "22"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same day as discharge",
+                "within 1 calendar day of delivery",
+                "day before childbirth admission",
+                "same day as childbirth admission",
+                "same physician or physician group"
+              ],
+              "utilization_limits": [
+                "99477 for 28 days or less",
+                "99478-99480 weight-based",
+                "59425 4-6 visits",
+                "59426 7 or more visits",
+                "59430 one time one unit",
+                "1-2 postpartum office visits"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "another physician requests 99464",
+                "no other patients during 99464",
+                "59430 only if another provider",
+                "same physician or group for twins"
+              ],
+              "exemptions": [
+                "pre-delivery complication inpatient care",
+                "initial visit E/M",
+                "80055",
+                "labs other than urinalysis"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Routine Obstetrics",
+            "tags": [],
+            "effective_date": "2019-07-19",
+            "evidence": "Off-topic for this obstetric reimbursement policy; no depression/neurosis or behavioral health DRG adjudication rules are provided.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "O80",
+                "Z34.00",
+                "Z39.2",
+                "Z36.9"
+              ],
+              "required_modifiers": [
+                "59"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same TIN",
+                "same pregnancy episode",
+                "additional vaginal delivery"
+              ],
+              "utilization_limits": [
+                "first vaginal delivery 100%",
+                "additional vaginal deliveries 50%",
+                "45-day postpartum period"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [
+                "GA: maternity ultrasounds included unless problem-oriented",
+                "KY: maternity ultrasounds included unless problem-oriented",
+                "OH: more than two ultrasounds per pregnancy/fetus not separately reimbursable unless problem-oriented",
+                "VA: more than two ultrasounds per pregnancy/fetus not separately reimbursable unless problem-oriented"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "problem oriented diagnosis",
+                "OB complication diagnoses"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CAREFIRST_BCBS_MD_DC_NV_28594150221",
+            "payer_name": "CareFirst_BCBS",
+            "policy_title": "Doula Services - Professional",
+            "tags": [],
+            "effective_date": "2026-01-01",
+            "evidence": "Covered prenatal doula service visits are reimbursable when billed in 15-minute units. The policy is specific to professional doula services, not DRG payment rules.",
+            "policy_url": "https://secure.compliance360.com/Common/ViewUploadedFile.aspx?PD=PbRt%2bA78MS6Cwhg5zbBTtprogPW3aVu04ezDgdjZOxXMkOOHtVfQIY0DC9B0qVCAIe6xKlQuTeXuGB4iHX5dDuACtwNF7AeY9gQWRLnwAHdO6M65pMi7ou6GPsIW3gjIZdauVGf%2b9%2fR795fPtkWPjJ1gsP5KQ5UAlv9AXJiwROCHXoVkZZf1eyGyF7fJnjKvwo%2fXp9Am0Dq3ubgsZRbkiYHOgmu5veu3LWo61LS2R%2bT6kyM01GibUnwrGf0od3uEUykJFiWP%2faGNWVm9gS2G2%2ba13gT6jVJpCNqv%2bGJbuek%3d",
+            "edit_rule_facts": {
+              "target_codes": [
+                "T1032",
+                "T1033"
+              ],
+              "related_codes": [
+                "T1033"
+              ],
+              "required_modifiers": [
+                "U9"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "during labor process",
+                "immediately before and after delivery"
+              ],
+              "utilization_limits": [
+                "15 min/unit"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "trained doula",
+                "non-clinical provider"
+              ],
+              "exemptions": [
+                "restricted from delivery room during actual birth"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "Off-topic for this maternity reimbursement policy; no psychiatric DRG adjudication rule is described.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "59409",
+                "59410",
+                "59425",
+                "59426",
+                "59430",
+                "59514",
+                "59515",
+                "59612",
+                "59614",
+                "59620",
+                "59622"
+              ],
+              "related_codes": [
+                "59200",
+                "96365-96367",
+                "64430",
+                "64435",
+                "51701",
+                "51702",
+                "59414",
+                "96360",
+                "96361",
+                "96372",
+                "90384",
+                "90385",
+                "90460-90474",
+                "59000",
+                "59001",
+                "59015",
+                "59070",
+                "59012",
+                "59020",
+                "59025",
+                "59030",
+                "59412",
+                "01967",
+                "76801-76817",
+                "76820",
+                "76821",
+                "76825-76828",
+                "76818-76819",
+                "99202-99205",
+                "99212-99215",
+                "99381-99397",
+                "76813",
+                "76814",
+                "81000",
+                "81002",
+                "Z32.01",
+                "O10.011-O16.9",
+                "O34.211-O34.219",
+                "Z33.1",
+                "Z34.00-Z34.93",
+                "Z39.0-Z39.2"
+              ],
+              "required_modifiers": [
+                "25",
+                "80",
+                "81",
+                "82",
+                "AS",
+                "62",
+                "66"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "same claim line",
+                "post-delivery billing",
+                "after delivery only"
+              ],
+              "utilization_limits": [
+                "about 13 antepartum visits",
+                "48 hours observation",
+                "72 hours admission",
+                "6 weeks vaginal postpartum",
+                "8 weeks cesarean postpartum"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "multiple gestation",
+                "separate partial care codes",
+                "complication-related visits"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00037",
+            "payer_name": "Cigna",
+            "policy_title": "Multiple Births",
+            "tags": [],
+            "effective_date": "2007-05-21",
+            "evidence": "Multiple-birth deliveries with at least one vaginal delivery are reimbursed at 100% for the primary procedure and 50% for secondary procedures when a multiple gestation diagnosis code is reported.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59410",
+                "59610",
+                "59612",
+                "59614",
+                "59510",
+                "59514",
+                "59515",
+                "59618",
+                "59620",
+                "59622"
+              ],
+              "related_codes": [
+                "O30.001-O30.099",
+                "O30.101-O30.199",
+                "O30.201-O30.299",
+                "O30.801-O30.899",
+                "O30.90-O30.93",
+                "Z37.2-Z37.4",
+                "Z37.50-Z37.59",
+                "Z37.60-Z37.69",
+                "Z37.7",
+                "Z38.30-Z38.31",
+                "Z38.4-Z38.5",
+                "Z38.61-Z38.69",
+                "Z38.7-Z38.8",
+                "59409",
+                "59612"
+              ],
+              "required_modifiers": [
+                "22"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "multiple gestation diagnosis",
+                "all deliveries cesarean",
+                "vaginal then cesarean"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "maternity benefits"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_01128",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Multiple Delivery Services",
+            "tags": [],
+            "effective_date": "2025-01-01",
+            "evidence": "This psychiatric DRG is not addressed by the multiple-delivery reimbursement policy.",
+            "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-093390-25-Multiple-Delivery-Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "59"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same-delivery method",
+                "combined-delivery method",
+                "multiple births",
+                "subsequent vaginal delivery"
+              ],
+              "utilization_limits": [
+                "50% allowance for subsequent vaginal delivery"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [
+                "Florida",
+                "Maryland",
+                "Texas",
+                "Washington"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00128",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Multiple Delivery Services C-19005",
+            "tags": [],
+            "effective_date": "2022-04-29",
+            "evidence": "This is a maternity multiple-delivery policy and does not address this behavioral-health DRG.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "59"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same-delivery or combined-delivery method",
+                "multiple births"
+              ],
+              "utilization_limits": [
+                "each subsequent vaginal delivery at 50%"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00071",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "Global obstetric care is reimbursed as one bundled package when the same group provides antepartum, delivery, and postpartum care. Routine maternity services are included and not separately payable unless specifically excluded by policy.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59410",
+                "59514",
+                "59430"
+              ],
+              "related_codes": [
+                "59510",
+                "59610",
+                "59618",
+                "59425",
+                "59426",
+                "59430",
+                "59409",
+                "59410",
+                "59514",
+                "59515",
+                "59612",
+                "59620",
+                "59622",
+                "59400"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same group same tax ID",
+                "all antepartum delivery postpartum",
+                "single gestation",
+                "total OB package not provided",
+                "postpartum by another provider",
+                "delivery and postpartum only",
+                "limited antepartum care",
+                "non-global cesarean",
+                "assistant surgeon submitted",
+                "postpartum only",
+                "within 6 weeks of delivery"
+              ],
+              "utilization_limits": [
+                "one unit per pregnancy",
+                "one unit per delivery",
+                "one unit per delivery episode",
+                "one assistant-surgeon cesarean claim",
+                "one postpartum package"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "Individual Exchange"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "same group physician or QHP",
+                "assistant surgeon role required"
+              ],
+              "exemptions": [
+                "confirmatory visit with Z32.01",
+                "separate non-OB conditions",
+                "global OB package already billed",
+                "postpartum included by same group",
+                "routine uncomplicated postpartum visits",
+                "contraception discussion",
+                "global cesarean OB codes",
+                "non-cesarean delivery",
+                "postpartum complications",
+                "problem-focused E/M after package"
+              ],
+              "action_types": [
+                "bundle",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00277",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "Off-topic for this behavioral health DRG description. This policy governs global maternity package reimbursement and does not provide adjudication or authorization rules for depressive neuroses.",
+            "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59510",
+                "59514"
+              ],
+              "related_codes": [
+                "96365-96367",
+                "12041-12047",
+                "13131-13133"
+              ],
+              "required_modifiers": [
+                "22",
+                "51"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same physician/group provides total care",
+                "same global obstetrical period",
+                "calendar day prior to delivery",
+                "calendar day of delivery",
+                "claim billed separate from global"
+              ],
+              "utilization_limits": [
+                "approximately 13 antepartum visits",
+                "6 weeks following delivery",
+                "20 weeks 0 days threshold",
+                "60 days history review"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "global obstetrical package"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "same physician/group for global billing",
+                "split billing if care transferred",
+                "split billing if another physician delivers"
+              ],
+              "exemptions": [
+                "problem-oriented visit confirming pregnancy",
+                "preventive visit confirming pregnancy",
+                "unrelated medical problem management",
+                "pregnancy complication requiring higher complexity",
+                "tubal ligation procedure",
+                "IUD procedure",
+                "state or contractual exception",
+                "patient changes insurers",
+                "patient transfers practice",
+                "non-covering physician delivers"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_27755700011",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Modifier 63",
+            "tags": [],
+            "effective_date": "08/28/2020",
+            "evidence": "Allows reimbursement for eligible surgery on neonates and infants up to 4 kg when Modifier 63 is valid. Payment is at 100% of the applicable fee schedule or contracted/negotiated rate. Facility billing is excluded, and standard assistant surgeon and multiple procedure reductions still apply. The modifier is not allowed with E/M, anesthesia, radiology, pathology/lab, most medicine codes, modifier 22 on the same procedure, or codes that already include neonate or infant in the description.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/abcbsrp-0114-21.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "63"
+              ],
+              "excluded_modifiers": [
+                "22"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same operative session"
+              ],
+              "utilization_limits": [
+                "present body weight up to 4 kg"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [
+                "Applies in CO, CT, GA, IN, KY, ME, MO, NV, NH, NY, OH, VA, WI"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider, state, federal, or CMS contracts"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00024",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Preadmission Services for Inpatient Stays",
+            "tags": [],
+            "effective_date": "09/11/2025",
+            "evidence": "Diagnostic and admission-related nondiagnostic preadmission services are bundled into the inpatient payment window for admitting hospitals, with specific hospital-type and state-based exceptions. Modifier PD identifies services subject to the window.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Preadmission%20Services%20for%20Inpatient%20Stays.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "PD"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "three days prior to admission",
+                "one day prior to admission",
+                "including day of admission",
+                "outpatient nondiagnostic service",
+                "related to inpatient admission"
+              ],
+              "utilization_limits": [
+                "3-day payment window",
+                "1-day payment window"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "inpatient"
+              ],
+              "state_specific_rules": [
+                "IN: no payment window when inpatient stay is less than 24 hours, unless neonate expires within one day of birth",
+                "MD: outpatient preadmission services before midnight of the day following DOS must be billed with the inpatient claim",
+                "MO: market not subject to this policy"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "critical access hospitals",
+                "RHC/FQHC all-inclusive rate",
+                "unrelated nondiagnostic services",
+                "ambulance services",
+                "maintenance renal dialysis services",
+                "SNF services",
+                "home health services",
+                "hospice services",
+                "specific nondiagnostic services attested as unrelated"
+              ],
+              "action_types": [
+                "bundle",
+                "pay_separately"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00082",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Modifier 63",
+            "tags": [],
+            "effective_date": "08/28/2020",
+            "evidence": "The health plan reimburses eligible surgery on neonates and infants up to 4 kg when modifier 63 is valid, generally at 100% of the applicable fee schedule or contracted rate, subject to contract overrides and listed exclusions.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2063.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "63"
+              ],
+              "excluded_modifiers": [
+                "22"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same operative session"
+              ],
+              "utilization_limits": [
+                "up to 4 kg"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "Colorado Medicaid exempt",
+                "Missouri Medicaid exempt",
+                "Ohio Medicaid exempt",
+                "Louisiana Medicaid special payment rule"
+              ],
+              "provider_role_restrictions": [
+                "assistant surgeon reductions apply"
+              ],
+              "exemptions": [
+                "provider, state, federal, or CMS contracts/requirements",
+                "Colorado Medicaid",
+                "Missouri Medicaid",
+                "Ohio Medicaid"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00130",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Sterilization",
+            "tags": [],
+            "effective_date": "06/08/2026",
+            "evidence": "Off-topic. This policy addresses sterilization reimbursement in surgery and obstetric settings and does not govern behavioral health DRGs such as depressive neuroses.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Sterilization.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "58600",
+                "58605",
+                "58611",
+                "58615"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "performed in conjunction with delivery",
+                "multiple surgeries claim"
+              ],
+              "utilization_limits": [
+                "30-180 days before procedure",
+                "72 hours before procedure in premature delivery/emergency surgery"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "IN: consent form not required for illness or injury causing sterility when prior acknowledgement was not possible; alternative documentation required",
+                "IN: consent form not required if patient was already sterile prior to the procedure; alternative documentation required",
+                "IN: consent form not required if the procedure does not render the patient sterile, such as unilateral rather than bilateral; alternative documentation required",
+                "MD: consent form submission not required for claims processing",
+                "MO: no current state-specific exception is stated in the active policy body",
+                "TN: facility reimbursement denied for sterilization with caesarean delivery or vaginal delivery with sterilization when reimbursed under DRG methodology",
+                "WV: sterilization services carved out unless multiple surgeries include 58600, 58605, 58611, or 58615"
+              ],
+              "provider_role_restrictions": [
+                "physician performing sterilization signature required",
+                "person obtaining consent signature required",
+                "interpreter signature if applicable"
+              ],
+              "exemptions": [
+                "premature delivery or emergency abdominal surgery 72-hour wait",
+                "IN illness or injury when prior acknowledgement not possible",
+                "IN already sterile prior to procedure",
+                "IN unilateral or non-sterilizing procedure",
+                "MD consent form submission not required for claims processing",
+                "WV carved out unless multiple surgeries include 58600, 58605, 58611, or 58615"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00490",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Services Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "The policy is obstetrical and does not address psychiatric DRG payment or authorization rules.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618"
+              ],
+              "related_codes": [
+                "59425",
+                "59426",
+                "59410",
+                "59515",
+                "59614",
+                "59622"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "state exception",
+                "delivery and postpartum"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid",
+                "CMS-1500"
+              ],
+              "state_specific_rules": [
+                "IN: global codes not covered",
+                "MD: global OB and 59425/59426 not reimbursed",
+                "MO: global codes not reimbursed effective 08-01-2022"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN / MD / MO AUTH_CODE_DISTRIBUTION totals +$12.6M. Riley's Children's Health contributes +$8.3M within the issue. Vaginal delivery claims add +$2.6M and depressive behavioral health claims add +$1.7M under the same authorization classification pattern."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "FL acute hospital growth is concentrated at Tampa General Hospital",
+    "pattern_description": "FL acute hospital spend is increasingly concentrated at Tampa General Hospital, especially in ABD Non Dual. The pattern combines more inpatient admissions with materially higher paid per admit in the provider-specific slice, indicating both utilization and provider economics pressure. This looks more concentrated than a broad statewide acute hospital trend.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "FL acute hospital growth is concentrated at Tampa General Hospital",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "facility_scope",
+              "label": "Facility Scope",
+              "type": "text"
+            },
+            {
+              "id": "routine_bundling",
+              "label": "Routine Bundling",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Florida Blue",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "-",
+              "routine_bundling": "-"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "Covers inpatient and outpatient hospital settings, including basic rooms, critical care, and surgery.",
+              "routine_bundling": "Bundles"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "Applies to inpatient and outpatient hospital facilities, including rooms, procedural suites, and labs.",
+              "routine_bundling": "Bundles"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_FLBL_FL_28206710003",
+            "payer_name": "Florida Blue",
+            "policy_title": "Global Surgery Package",
+            "tags": [],
+            "effective_date": "10/09/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://files.guidewell.com/m/7d2f2f7eb720f5f0/original/providers-payment-policies-global-surgery-package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00273",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2023-06-15",
+            "evidence": "Specific DRG category is not named, but the policy broadly bundles routine hospital supplies, equipment, and facility personnel into room-and-board or procedure reimbursement. These items are not separately reimbursable and are excluded from outlier calculations.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "inpatient",
+                "outpatient"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01750",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": "2024-12-01",
+            "evidence": "This facility reimbursement policy broadly bundles routine room-and-board, nursing, supplies, equipment, and certain ancillary services into hospital charges for UB-04 claims; the requested DRG pattern is not specifically referenced.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "260-269",
+                "270",
+                "279",
+                "410",
+                "412",
+                "250",
+                "270-279",
+                "300",
+                "309",
+                "361",
+                "391",
+                "460",
+                "510",
+                "761",
+                "300-370",
+                "419"
+              ],
+              "pairing_conditions": [
+                "same hospital stay",
+                "same room-and-board charge",
+                "same facility charge"
+              ],
+              "utilization_limits": [
+                "1 unit/day ventilator or CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "UB-04",
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "Colorado exempt",
+                "Hawaii: OC 74-76",
+                "Kentucky exempt",
+                "Maryland exempt",
+                "Minnesota exempt",
+                "Mississippi exempt",
+                "Missouri exempt",
+                "Nebraska exempt",
+                "New Mexico exempt",
+                "North Carolina exempt",
+                "Texas exempt",
+                "Virginia: J0401,J0578,J2315,J2426,J2794,J2798,Q9991,Q9992"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Colorado exempt",
+                "Hawaii: OC 74-76",
+                "Kentucky exempt",
+                "Maryland exempt",
+                "Minnesota exempt",
+                "Mississippi exempt",
+                "Missouri exempt",
+                "Nebraska exempt",
+                "New Mexico exempt",
+                "North Carolina exempt",
+                "Texas exempt",
+                "Virginia: J0401,J0578,J2315,J2426,J2794,J2798,Q9991,Q9992"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "FL ABD Non Dual acute hospital utilization added +$5.9M with 422 more admissions. Tampa General Hospital added +$2.2M more in ABD Non Dual acute hospital claims with only 27 more admissions but about $9.9K higher paid per admit. Tampa General Hospital TANF Standard acute hospital claims added another +$336K with 63 more admissions."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "IN pediatric spend is concentrated at Riley's Children's Health",
+    "pattern_description": "Riley's Children's Health is the dominant pediatric provider signal in IN, driving higher spend across both TANF Standard and Family Care. The increase reflects both more admissions and higher paid per admit, making this a provider concentration issue rather than simple volume growth alone. The pattern is strong enough to support targeted provider and utilization action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN pediatric spend is concentrated at Riley's Children's Health",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "never_event_reimbursement",
+              "label": "Never Event Pay",
+              "type": "badge"
+            },
+            {
+              "id": "modifier_denial_triggers",
+              "label": "Modifier Denial Triggers",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "never_event_reimbursement": "Denies",
+              "modifier_denial_triggers": "PA, PB, and PC modifiers deny claims; never-event services are non-reimbursable."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00287",
+            "payer_name": "Centene",
+            "policy_title": "Never Paid Events",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "General never-event policy: services associated with never events are not reimbursed, claim lines billed with modifiers PA, PB, or PC are denied, and follow-up care is only reimbursed when provided by a physician not responsible for the never event.",
+            "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.017.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "PA",
+                "PB",
+                "PC"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "ALL"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "follow-up care by non-responsible physician"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Riley's Children's Health TANF Standard CHILDRENS claims added +$7.3M from 99 more admissions and about $4.9K higher paid per admit. Riley's Children's Health Family Care CHILDRENS claims added +$1.0M from 19 more admissions and about $2.9K higher paid per admit. The same provider also appears in a separate authorization validation pattern, reinforcing the need for a targeted provider review."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "NC behavioral health shows both admission growth and sharp cost intensity",
+    "pattern_description": "NC behavioral health spend increased through both more acute psych use and a heavier inpatient behavioral health case mix. The core pattern is driven by higher admissions and much higher paid per admit, especially in foster care and PTSD-related admissions. A smaller rare-case tail is present and should be validated, but it does not erase the broader behavioral health pressure.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "NC TANF Foster Care acute psych added +$1.9M with 46 more admissions and about $41.2K higher paid per admit. NC IP BH clinical case mix added +$1.5M, led by PTSD at +$908K and adjustment disorder at +$632K. Rare high-cost IP BH cases added +$488K from severe stress reaction and OCD, but the counts are small and require validation."
+      }
+    }
+  }
+]

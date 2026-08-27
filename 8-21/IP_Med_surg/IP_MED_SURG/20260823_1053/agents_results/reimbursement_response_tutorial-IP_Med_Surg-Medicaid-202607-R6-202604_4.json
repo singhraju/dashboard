@@ -1,0 +1,343 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicaid-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicaid-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA inpatient case mix is shifting toward digestive, liver, obesity, and neuropathy admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_summary",
+          "label": "Policy Summary",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_summary": "Off-topic: laboratory A1AT testing reimbursement policy, not an inpatient DRG payment rule."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "Mentioned",
+          "policy_summary": "Reimburses hepatic fibrosis testing for specified liver diseases semiannually; excludes separate payment for certain assays."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00159",
+        "payer_name": "United Health",
+        "policy_title": "Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Serum hepatic fibrosis testing is reimbursable only for listed liver disease diagnoses and only within the stated six-month frequency limit.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hepatic-Fibrosis-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81517",
+            "81596",
+            "0002M",
+            "0003M",
+            "0166U",
+            "0344U",
+            "0468U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same member",
+            "same billing period"
+          ],
+          "utilization_limits": [
+            "1 unit every 180 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "limit applies regardless of provider"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "limit",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00021",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Testing for Alpha1 Anti-trypsin Deficiency",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "Off-topic for this DRG; the policy is a laboratory testing reimbursement rule and does not adjudicate inpatient DRG payment. It does note liver disease as a qualifying indication for A1AT testing, but no DRG-specific rule is stated.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c0",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_ALL_28593510000",
+        "payer_name": "United Health",
+        "policy_title": "MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy",
+        "tags": [],
+        "effective_date": "2026-09-01",
+        "evidence": "Covered with conditions for hepatic fibrosis testing in specified chronic liver disease diagnoses, limited to once every six months.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hepatic-Fibrosis-Testing-Chronic-Liver-Disease-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81517",
+            "81596",
+            "0002M",
+            "0003M",
+            "0166U",
+            "0344U",
+            "0468U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same member",
+            "any provider or facility",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "once every six months",
+            "one unit every 180 calendar days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle duplicate claims for 81517, 81596, 0002M, 0003M, 0166U, 0344U, and 0468U when billed for the same member in the same billing period, and for Medicare Advantage when the same member has the test from any provider or facility on the same date of service.\n\nIA \u2014 Implement a semiannual frequency limit for 81517, 81596, 0002M, 0003M, 0166U, 0344U, and 0468U: allow 1 unit every 180 days for the same member in Commercial and Individual Exchange, and once every six months / one unit every 180 calendar days in Medicare Advantage.",
+      "evidence": [
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"81517\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"81596\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"0002M\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"0003M\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"0166U\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"0344U\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"0468U\" [target_codes]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same member\" [pairing_conditions]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"1 unit every 180 days\" [utilization_limits]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Commercial\" [program_scope]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Individual Exchange\" [program_scope]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"once every six months\" [utilization_limits]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"one unit every 180 calendar days\" [utilization_limits]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"Medicare Advantage\" [program_scope]",
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same billing period\" [pairing_conditions]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"81517\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"81596\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"0002M\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"0003M\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"0166U\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"0344U\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"0468U\" [target_codes]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"same member\" [pairing_conditions]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"any provider or facility\" [pairing_conditions]",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy: \"same date of service\" [pairing_conditions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "United Health \u00b7 Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hepatic-Fibrosis-Testing-Policy.pdf",
+        "United Health \u00b7 MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hepatic-Fibrosis-Testing-Chronic-Liver-Disease-Policy.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: CA inpatient case mix is shifting toward digestive, liver, obesity, and neuropathy admissions",
+    "pattern_rank": 4,
+    "pattern_title": "CA inpatient case mix is shifting toward digestive, liver, obesity, and neuropathy admissions",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cirrhosis and Alcoholic Hepatitis with CC",
+      "Cranial and Peripheral Nerve Disorders without MCC",
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "O.R. Procedures for Obesity with CC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 22025,
+    "output": 19591,
+    "breakdown": {
+      "search_keywords": {
+        "input": 569,
+        "output": 532,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 465,
+        "output": 592,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 12227,
+        "output": 13254,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1582,
+        "output": 607,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 912,
+        "output": 587,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 661,
+        "output": 486,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2504,
+        "output": 2617,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3105,
+        "output": 916,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T12:39:13.011750+00:00",
+    "end_time": "2026-08-23T12:40:35.579915+00:00",
+    "duration_ms": 82568,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH acute hospital growth is volume-led, with smaller added unit-cost pockets",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "site_and_bundling",
+          "label": "Site & Bundling",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Limited to myocardial infarction and chronic heart failure cardiac biomarker testing; unrelated conditions not mentioned.",
+          "site_and_bundling": "No DRG bundling rule identified; biomarker reimbursement is restricted and conditional."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Not mentioned; policy only addresses heart failure biomarker testing and denies code 83006.",
+          "site_and_bundling": "Applies to professional and facility claims only; no site-of-service or DRG bundling rule."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00059",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No direct rule in this policy for cellulitis. The policy is limited to cardiac biomarker testing for myocardial infarction and chronic heart failure.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+        "edit_rule_facts": {
+          "target_codes": [
+            "83880"
+          ],
+          "related_codes": [
+            "84484",
+            "84512",
+            "83006",
+            "82553",
+            "82554",
+            "82550",
+            "82552",
+            "83625",
+            "83874",
+            "84588",
+            "86140"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "conjunction with troponin",
+            "outpatient setting",
+            "independent laboratory"
+          ],
+          "utilization_limits": [
+            "4 times every 365 days",
+            "max four serial troponins"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01821",
+        "payer_name": "United Health",
+        "policy_title": "Chronic Heart Failure Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "Off-topic for this DRG label. The policy only addresses chronic heart failure biomarker testing and states procedure code 83006 is not reimbursable.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Chronic-Heart-Failure-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: OH acute hospital growth is volume-led, with smaller added unit-cost pockets",
+    "pattern_rank": 5,
+    "pattern_title": "OH acute hospital growth is volume-led, with smaller added unit-cost pockets",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cellulitis without MCC",
+      "Heart Failure and Shock with MCC",
+      "Kidney and Urinary Tract Infections without MCC",
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item because it is unrelated to the pattern\u2019s hospital/cesarean scenario and the cited source expressly disclaims applicability to the topic."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/3 policies quarantined (33%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_HUM_00032:Laboratory - Cardiovascular Disease Risk Assessment in Adults]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 40804,
+    "output": 21163,
+    "breakdown": {
+      "search_keywords": {
+        "input": 563,
+        "output": 1217,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 466,
+        "output": 756,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 33346,
+        "output": 15311,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1501,
+        "output": 571,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 928,
+        "output": 1603,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 499,
+        "output": 612,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2177,
+        "output": 921,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1324,
+        "output": 172,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:06:24.187074+00:00",
+    "end_time": "2026-08-23T17:07:58.745944+00:00",
+    "duration_ms": 94558,
+    "version": "2.0.0"
+  }
+}

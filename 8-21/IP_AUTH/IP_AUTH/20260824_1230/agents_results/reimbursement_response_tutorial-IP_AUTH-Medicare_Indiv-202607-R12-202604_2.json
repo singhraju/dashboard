@@ -1,0 +1,237 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R12-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R12-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX authorized acute growth is mainly an admission spike",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth_rule",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "billing_scope_limits",
+          "label": "Billing Scope Limits",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth_rule": "-",
+          "billing_scope_limits": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth_rule": "-",
+          "billing_scope_limits": "Humana bills only medically necessary observation time, excluding routine monitoring, generally limited to 48 hours."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00004",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Genetic Tests Once per Lifetime",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Laboratory%20and%20Pathology/Genetic%20Tests%20Once%20per%20Lifetime.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00097",
+        "payer_name": "Humana",
+        "policy_title": "Observation Services",
+        "tags": [],
+        "effective_date": "12/2023",
+        "evidence": "No Texas-specific authorization spike rule is stated. The policy instead governs facility observation billing for encounters used to determine whether inpatient admission is needed. Payment is allowed only when observation is medically necessary, ordered, supervised by an appropriate practitioner, and tied to qualifying encounter circumstances; otherwise the facility observation charge is not reimbursed.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092982a0acfa",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "to determine inpatient admission need",
+            "after outpatient surgery beyond recovery",
+            "after diagnostic testing beyond recovery",
+            "direct referral for observation",
+            "child uncertain outpatient response",
+            "child caregiver unavailable or unknown"
+          ],
+          "utilization_limits": [
+            "typically <=48 hours",
+            "standard recovery 4-6 hours excluded"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "ordered by qualified healthcare professional",
+            "physician or nonphysician care required",
+            "direct referral by qualified professional"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: TX authorized acute growth is mainly an admission spike",
+    "pattern_rank": 2,
+    "pattern_title": "TX authorized acute growth is mainly an admission spike",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 14948,
+    "output": 10550,
+    "breakdown": {
+      "triage_policies": {
+        "input": 367,
+        "output": 377,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 11086,
+        "output": 8818,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 418,
+        "output": 216,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 787,
+        "output": 464,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 243,
+        "output": 226,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 308,
+        "output": 116,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1739,
+        "output": 333,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T14:04:15.425641+00:00",
+    "end_time": "2026-08-24T14:06:19.993688+00:00",
+    "duration_ms": 124568,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Residual acute hospital growth spans multiple products and states beyond the top named providers",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "bundling_rule",
+          "label": "Bundling Rule",
+          "type": "text"
+        },
+        {
+          "id": "modifier_requirements",
+          "label": "Modifier Requirements",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "bundling_rule": "NCCI PTP pairs bundle by default; Column 2 denied without a valid distinct-service modifier.",
+          "modifier_requirements": "Use XE/XS/XP/XU for distinct NCCI pairs; use 59 only if unsupported otherwise."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "bundling_rule": "Separately reimbursable only with specified neurolysis procedures; not allowed with 64727 or 69990.",
+          "modifier_requirements": "Allowed with listed nervous system and internal neurolysis codes; add-ons follow primary, excluding 69990."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589900004",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Modifiers 59, XE, XP, XS, & XU",
+        "tags": [],
+        "effective_date": "6/1/2024",
+        "evidence": "Separate reimbursement is allowed only when a distinct-service modifier is supported by documentation and NCCI PTP criteria are met. Modifier 59 is secondary to more specific modifiers XE, XS, XP, and XU.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/modifiers-59-xe-xp-xs-xu.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same encounter",
+            "different anatomic site",
+            "different encounter"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "NCCI PTP"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "separate encounters",
+            "different anatomic sites",
+            "separate structures",
+            "different practitioners",
+            "distinct timed blocks"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00056",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "This payer reimburses the operating microscope add-on code only with specified nervous system procedures. It is allowed with listed neurosurgical primary codes, but not separately reported with 64727. The policy applies to commercial and exchange products, with exchange coverage excluding Mississippi.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Microsurgery-Policy-Professional.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "69990",
+            "64727"
+          ],
+          "related_codes": [
+            "61304-61305",
+            "61312-61316",
+            "61320-61323",
+            "61330",
+            "61333",
+            "61340",
+            "61343",
+            "61345",
+            "61450",
+            "61458",
+            "61460",
+            "61500-61501",
+            "61510",
+            "61512",
+            "61514",
+            "61516-61519",
+            "61520-61522",
+            "61524",
+            "61526",
+            "61530-61541",
+            "61543-61546",
+            "61550",
+            "61552",
+            "61556-61559",
+            "61563-61564",
+            "61566-61567",
+            "61570-61571",
+            "61575-61576",
+            "61580-61586",
+            "61590-61592",
+            "61595-61598",
+            "61600-61601",
+            "61605-61608",
+            "61611",
+            "61613",
+            "61615-61616",
+            "61618-61619",
+            "61623-61624",
+            "61626",
+            "61630",
+            "61635",
+            "61640-61642",
+            "61645",
+            "61650-61651",
+            "61680",
+            "61682",
+            "61684",
+            "61686",
+            "61690",
+            "61692",
+            "61697-61698",
+            "61700",
+            "61702-61703",
+            "61705",
+            "61708",
+            "61710-61711",
+            "62010",
+            "62100",
+            "63081-63082",
+            "63085-63088",
+            "63090-63091",
+            "63101-63103",
+            "63170",
+            "63172-63173",
+            "63185",
+            "63190-63191",
+            "63197",
+            "63200",
+            "63250-63252",
+            "63265-63268",
+            "63270-63273",
+            "63275-63278",
+            "63280-63283",
+            "63285-63287",
+            "63290",
+            "63295",
+            "63300-63308",
+            "63704",
+            "63706-63707",
+            "63709-63710",
+            "64831-64832",
+            "64834-64837",
+            "64840",
+            "64856-64859",
+            "64861-64862",
+            "64864-64866",
+            "64868",
+            "64872",
+            "64874",
+            "64876",
+            "64885-64886",
+            "64890-64898",
+            "64901-64902",
+            "64905",
+            "64907",
+            "64702",
+            "64704",
+            "64708",
+            "64712",
+            "64713",
+            "64714",
+            "64716",
+            "64718",
+            "64719",
+            "64721",
+            "64722",
+            "64726",
+            "69990"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [
+            "Individual Exchange excludes Mississippi"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Residual acute hospital growth spans multiple products and states beyond the top named providers",
+    "pattern_rank": 4,
+    "pattern_title": "Residual acute hospital growth spans multiple products and states beyond the top named providers",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Craniotomy and Endovascular Intracranial Procedures with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CO', 'CA', 'MO', 'IN'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 21053,
+    "output": 18338,
+    "breakdown": {
+      "search_keywords": {
+        "input": 530,
+        "output": 532,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 366,
+        "output": 458,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 11843,
+        "output": 15814,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 945,
+        "output": 267,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 894,
+        "output": 552,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 552,
+        "output": 540,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 5923,
+        "output": 175,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T06:59:16.488937+00:00",
+    "end_time": "2026-08-24T07:00:31.075105+00:00",
+    "duration_ms": 74586,
+    "version": "2.0.0"
+  }
+}

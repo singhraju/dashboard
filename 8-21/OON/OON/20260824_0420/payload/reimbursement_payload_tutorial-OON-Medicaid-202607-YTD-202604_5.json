@@ -1,0 +1,2059 @@
+{
+  "context": {
+    "pattern": {
+      "pattern_rank": 5,
+      "top_pattern": "IN MINIMED LTSS not-mapped provider signal",
+      "pattern_type": "coding_mapping_validation",
+      "what_is_impacting": "IN / LTSS Non Dual / MINIMED DISTRIBUTION CORP",
+      "priority_entities": {
+        "states": [
+          "IN"
+        ],
+        "providers": [
+          "MINIMED DISTRIBUTION CORP"
+        ],
+        "products": [
+          "LTSS Non Dual"
+        ],
+        "facility_types": [
+          "Not Mapped"
+        ],
+        "clinical_categories": []
+      },
+      "key_driver_codes": [
+        "MINIMED DISTRIBUTION CORP",
+        "LTSS Non Dual",
+        "Not Mapped"
+      ],
+      "impact_summary": {
+        "primary_metric": "total_paid",
+        "direction": "increase",
+        "estimated_delta": "+ $2K",
+        "volume_signal": "claims up",
+        "unit_cost_signal": "paid per admit up"
+      },
+      "pattern_details": "IN shows a small provider-specific LTSS signal tied to MINIMED DISTRIBUTION CORP, but the activity sits in a Not Mapped facility bucket. That makes this primarily a classification and payment-setup validation issue rather than a clean provider economics trend. The immediate business lever is data correction, then provider or payment review if the signal remains.",
+      "why_it_matters": "Provider-specific actions are unreliable when the underlying claims are not assigned to a valid facility classification.",
+      "recommended_next_step": "Validate facility mapping and payment setup for MINIMED LTSS claims in IN before any network or utilization action.",
+      "validation_needed": true,
+      "validation_reason": "The signal is low volume and concentrated in a Not Mapped facility category.",
+      "downstream_routes": [
+        "um_operations_agent",
+        "reimbursement_policy_agent",
+        "network_financial_agent",
+        "data_quality_agent"
+      ],
+      "evidence_summary": [
+        "MINIMED DISTRIBUTION CORP in IN LTSS Non Dual added about $2K.",
+        "The increase involved 3 additional claims.",
+        "The activity sits in a Not Mapped facility bucket, making this a validation-first issue."
+      ],
+      "source_group_ids": [
+        "3fb942ba5dceba8624ed"
+      ],
+      "source_card_ids": [
+        "5750a9e9b68043b2bd34"
+      ],
+      "scope": {
+        "segment_by": [
+          "service_area_state"
+        ],
+        "segment_values": [
+          "IN"
+        ],
+        "segment_signatures": [
+          "217ce12689215c42a20a"
+        ],
+        "filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "filters_attested": {
+          "state": true
+        }
+      }
+    },
+    "cards": [
+      {
+        "card_id": "9708bf5ae3d56df6b512",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "MINIMED DISTRIBUTION CORP"
+        },
+        "source_trace": {
+          "run_id": "20260824T051108Z_where_did_change_happen_for_provider_min_c4d689b5",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "LTSS Non Dual",
+          "facility_type": "Not Mapped",
+          "service_area_state": "AR",
+          "lob_description": "Medicaid"
+        },
+        "context_dimensions": {
+          "product_description": "LTSS Non Dual",
+          "service_area_state": "AR",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP HH/DME",
+          "procedure_name": "Durable Medical Equipment",
+          "primary_diagnosis_code": "E109"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "LTSS Non Dual",
+          "facility_type": "Not Mapped",
+          "lob_description": "Medicaid"
+        },
+        "segment_filters": {
+          "state": [
+            "AR"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "LTSS Non Dual"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "AR"
+          ],
+          "line_of_business": [
+            "Medicaid"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 1753.27,
+            "delta": 1753.27
+          },
+          "share_of_positive_delta": 0.47993506955660065,
+          "share_of_net_delta": 1.7243186892081945,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 8.0,
+            "delta": 8.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 5.0,
+              "delta": 5.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 350.654,
+              "delta": 350.654
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 5.0,
+              "delta": 5.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.29576579,
+              "delta": 0.29576579
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.29576579,
+              "delta": 0.29576579
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01999299,
+              "delta": 0.01999299
+            }
+          }
+        },
+        "driver_type": "volume_led",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "LTSS Non Dual",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "AR",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicaid",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP HH/DME",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Durable Medical Equipment",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "E109",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 2335.2531834613515,
+        "business_terms": [
+          "site-of-care",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "5750a9e9b68043b2bd34",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "MINIMED DISTRIBUTION CORP"
+        },
+        "source_trace": {
+          "run_id": "20260824T051108Z_where_did_change_happen_for_provider_min_c4d689b5",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "LTSS Non Dual",
+          "facility_type": "Not Mapped",
+          "service_area_state": "IN",
+          "lob_description": "Medicaid"
+        },
+        "context_dimensions": {
+          "product_description": "LTSS Non Dual",
+          "service_area_state": "AR",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP HH/DME",
+          "procedure_name": "Durable Medical Equipment",
+          "primary_diagnosis_code": "E109"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "LTSS Non Dual",
+          "facility_type": "Not Mapped",
+          "lob_description": "Medicaid"
+        },
+        "segment_filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "LTSS Non Dual"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "IN"
+          ],
+          "line_of_business": [
+            "Medicaid"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 32.8,
+            "comparison": 1763.8,
+            "delta": 1731.0
+          },
+          "share_of_positive_delta": 0.47383894403170973,
+          "share_of_net_delta": 1.7024164281710088,
+          "raw_row_count": {
+            "baseline": 1.0,
+            "comparison": 5.0,
+            "delta": 4.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 1.0,
+              "comparison": 4.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 32.8,
+              "comparison": 440.95,
+              "delta": 408.15
+            },
+            "total_paid": {
+              "baseline": 1.0,
+              "comparison": 4.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 1.0,
+              "comparison": 1.0,
+              "delta": 0.0
+            },
+            "paid_ratio": {
+              "baseline": 1.0,
+              "comparison": 1.0,
+              "delta": 0.0
+            },
+            "pmpm": {
+              "baseline": 0.00326843,
+              "comparison": 0.03438643,
+              "delta": 0.031118000000000003
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "LTSS Non Dual",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "IN",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicaid",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP HH/DME",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Durable Medical Equipment",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "E109",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 1722.0702681802507,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "2cf8d67c338772ae1b1a",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "MINIMED DISTRIBUTION CORP"
+        },
+        "source_trace": {
+          "run_id": "20260824T051108Z_where_did_change_happen_for_provider_min_c4d689b5",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP HH/DME",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "E109",
+          "procedure_name": "Durable Medical Equipment"
+        },
+        "context_dimensions": {
+          "product_description": "LTSS Non Dual",
+          "service_area_state": "AR",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP HH/DME",
+          "procedure_name": "Durable Medical Equipment",
+          "primary_diagnosis_code": "E109"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "AR"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP HH/DME"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "E109"
+          ],
+          "procedure": [
+            "Durable Medical Equipment"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 1745.3,
+            "delta": 1745.3
+          },
+          "share_of_positive_delta": 0.5009083681804223,
+          "share_of_net_delta": 1.7164802958329646,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 1.0,
+            "delta": 1.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 1745.3,
+              "delta": 1745.3
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.3213707,
+              "delta": 0.3213707
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.3213707,
+              "delta": 0.3213707
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.15955734,
+              "delta": 0.15955734
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP HH/DME",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "E109",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Durable Medical Equipment",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "LTSS Non Dual",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "AR",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 1768.1863781150716,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "8c5edfd311a59c201ba6",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "MINIMED DISTRIBUTION CORP"
+        },
+        "source_trace": {
+          "run_id": "20260824T051108Z_where_did_change_happen_for_provider_min_c4d689b5",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP HH/DME",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "E1165",
+          "procedure_name": "Durable Medical Equipment"
+        },
+        "context_dimensions": {
+          "product_description": "LTSS Non Dual",
+          "service_area_state": "AR",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP HH/DME",
+          "procedure_name": "Durable Medical Equipment",
+          "primary_diagnosis_code": "E109"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "AR"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP HH/DME"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "E1165"
+          ],
+          "procedure": [
+            "Durable Medical Equipment"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 1086.16,
+            "delta": 1086.16
+          },
+          "share_of_positive_delta": 0.3117324432377514,
+          "share_of_net_delta": 1.0682245104692218,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 2.0,
+            "delta": 2.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 543.08,
+              "delta": 543.08
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.05290281,
+              "delta": 0.05290281
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP HH/DME",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "E1165",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Durable Medical Equipment",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "LTSS Non Dual",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "AR",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 961.7071346193035,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "50cfc80b12152a853465",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Peritoneal Adhesiolysis with CC"
+        },
+        "source_trace": {
+          "run_id": "20260824T051137Z_where_did_change_happen_for_drg_peritone_cd520dab",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "Family Care",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "NJ",
+          "lob_description": "Medicaid"
+        },
+        "context_dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "service_area_state": "NJ",
+          "primary_diagnosis_code": "K5650",
+          "rendering_provider_name": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+          "product_description": "Family Care"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "lob_description": "Medicaid"
+        },
+        "segment_filters": {
+          "state": [
+            "NJ"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context",
+          "rendering_provider_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "Family Care"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "NJ"
+          ],
+          "line_of_business": [
+            "Medicaid"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 30179.75,
+            "delta": 30179.75
+          },
+          "share_of_positive_delta": 0.5137708933950612,
+          "share_of_net_delta": 0.5137708933950612,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 18.0,
+            "delta": 18.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 30179.75,
+              "delta": 30179.75
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.00032881,
+              "delta": 1.00032881
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.00032881,
+              "delta": 1.00032881
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.0352799,
+              "delta": 0.0352799
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "Family Care",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "NJ",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicaid",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K5650",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 41116.70440794564,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "f014799a37ab1b3814bd",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Peritoneal Adhesiolysis with CC"
+        },
+        "source_trace": {
+          "run_id": "20260824T051137Z_where_did_change_happen_for_drg_peritone_cd520dab",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "TANF Standard",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Medicaid"
+        },
+        "context_dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "service_area_state": "NJ",
+          "primary_diagnosis_code": "K5650",
+          "rendering_provider_name": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+          "product_description": "Family Care"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "lob_description": "Medicaid"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context",
+          "rendering_provider_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "TANF Standard"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Medicaid"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 10979.45,
+            "delta": 10979.45
+          },
+          "share_of_positive_delta": 0.18691082051661811,
+          "share_of_net_delta": 0.18691082051661811,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 16.0,
+            "delta": 16.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 10979.45,
+              "delta": 10979.45
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00588744,
+              "delta": 0.00588744
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "TANF Standard",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicaid",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K5650",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 11728.465207489066,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "d96bf53dc49633864c4e",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Peritoneal Adhesiolysis with CC"
+        },
+        "source_trace": {
+          "run_id": "20260824T051137Z_where_did_change_happen_for_drg_peritone_cd520dab",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "ABD Non Dual",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "MD",
+          "lob_description": "Medicaid"
+        },
+        "context_dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "service_area_state": "NJ",
+          "primary_diagnosis_code": "K5650",
+          "rendering_provider_name": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+          "product_description": "Family Care"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "lob_description": "Medicaid"
+        },
+        "segment_filters": {
+          "state": [
+            "MD"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context",
+          "rendering_provider_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "ABD Non Dual"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "MD"
+          ],
+          "line_of_business": [
+            "Medicaid"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 9260.13,
+            "delta": 9260.13
+          },
+          "share_of_positive_delta": 0.1576416392797955,
+          "share_of_net_delta": 0.1576416392797955,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 19.0,
+            "delta": 19.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 9260.13,
+              "delta": 9260.13
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.03568971,
+              "delta": 0.03568971
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "ABD Non Dual",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "MD",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicaid",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K5650",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 9647.92086582961,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "80b7f3afa049e339fe50",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Peritoneal Adhesiolysis with CC"
+        },
+        "source_trace": {
+          "run_id": "20260824T051137Z_where_did_change_happen_for_drg_peritone_cd520dab",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "primary_diagnosis_code": "K5650",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "service_area_state": "NJ",
+          "primary_diagnosis_code": "K5650",
+          "rendering_provider_name": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+          "product_description": "Family Care"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "NJ"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "service_area_state": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "diagnosis": [
+            "K5650"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 50419.33,
+            "delta": 50419.33
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 0.8583233531914749,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 53.0,
+            "delta": 53.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 16806.44333333,
+              "delta": 16806.44333333
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.00019679,
+              "delta": 1.00019679
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.00019679,
+              "delta": 1.00019679
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.0169204,
+              "delta": 0.0169204
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K5650",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "NJ",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "NYU LANGONE HOSPITAL TISCH HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "Family Care",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 90754.79400000001,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "e3e548319fc3f9dbe588",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Acute Leukemia with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T051155Z_where_did_change_happen_for_drg_acute_le_b2f6d4e1",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "TANF Standard",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "VA",
+          "lob_description": "Medicaid"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "C9201",
+          "service_area_state": "VA",
+          "hcc_medium": "IP Med/Surg",
+          "rendering_provider_name": "VCU MEDICAL CENTER - TRANSPLANT",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "TANF Standard"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "TANF Standard",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "VA",
+          "lob_description": "Medicaid"
+        },
+        "segment_filters": {
+          "state": [
+            "VA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "primary_diagnosis_code": "drill_context",
+          "hcc_medium": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "procedure_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "TANF Standard"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "VA"
+          ],
+          "line_of_business": [
+            "Medicaid"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 1895473.68,
+            "delta": 1895473.68
+          },
+          "share_of_positive_delta": 0.9688918226792014,
+          "share_of_net_delta": 1.3221428159788384,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 42.0,
+            "delta": 42.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 1895473.68,
+              "delta": 1895473.68
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.11692232,
+              "delta": 0.11692232
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "TANF Standard",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "VA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicaid",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "C9201",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "VCU MEDICAL CENTER - TRANSPLANT",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 3358784.3657900877,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "2c9af9353e99981267da",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Acute Leukemia with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T051155Z_where_did_change_happen_for_drg_acute_le_b2f6d4e1",
+          "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "primary_diagnosis_code": "C9201",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "C9201",
+          "service_area_state": "VA",
+          "hcc_medium": "IP Med/Surg",
+          "rendering_provider_name": "VCU MEDICAL CENTER - TRANSPLANT",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "TANF Standard"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "VA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "diagnosis": [
+            "C9201"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 1895473.68,
+            "delta": 1895473.68
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 1.3221428159788384,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 42.0,
+            "delta": 42.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 1895473.68,
+              "delta": 1895473.68
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.11692232,
+              "delta": 0.11692232
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "C9201",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "VA",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "VCU MEDICAL CENTER - TRANSPLANT",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "TANF Standard",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 3411852.624,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      }
+    ]
+  },
+  "conversation_id": "tutorial-OON-Medicaid-202607-YTD-202604_5",
+  "query": "Analyze reimbursement policies for pattern 5",
+  "job_id": "tutorial-OON-Medicaid-202607-YTD-202604_5_job"
+}

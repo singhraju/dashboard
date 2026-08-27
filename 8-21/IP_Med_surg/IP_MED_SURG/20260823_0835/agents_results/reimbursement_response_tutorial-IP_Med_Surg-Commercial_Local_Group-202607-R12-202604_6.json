@@ -1,0 +1,215 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_6_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY cervical spine episodes are driving both clinical and operational growth",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mentioned",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "policy_scope": "Ambulatory surgical grouper policy paying surgery, including cervical spine fusion, under specified revenue code rules."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_00055",
+        "payer_name": "Emblem Health",
+        "policy_title": "Ambulatory Surgical Groupers",
+        "tags": [],
+        "effective_date": "2026-06-25",
+        "evidence": "The policy is an ambulatory surgical grouper policy, not a DRG policy. It does, however, include cervical spine fusion CPT codes that are assigned grouper levels and are paid as surgical services when billed under the stated revenue code rules. No prior authorization, documentation, or diagnosis-specific exclusion is stated for these cervical fusion codes.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/asc-groupers-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "22548",
+            "22551",
+            "22552",
+            "22554",
+            "22585"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "360",
+            "490"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "ASC Grouper"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: NY cervical spine episodes are driving both clinical and operational growth",
+    "pattern_rank": 6,
+    "pattern_title": "NY cervical spine episodes are driving both clinical and operational growth",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cervical Spinal Fusion with CC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it addresses Emblem cervical spine ASC reimbursement rather than California cesarean-delivery policy."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 96227,
+    "output": 8518,
+    "breakdown": {
+      "search_keywords": {
+        "input": 525,
+        "output": 192,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 312,
+        "output": 174,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 90801,
+        "output": 6207,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 465,
+        "output": 110,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 743,
+        "output": 466,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 277,
+        "output": 172,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1618,
+        "output": 928,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1486,
+        "output": 269,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T08:51:16.305593+00:00",
+    "end_time": "2026-08-23T08:52:21.187790+00:00",
+    "duration_ms": 64882,
+    "version": "2.0.0"
+  }
+}

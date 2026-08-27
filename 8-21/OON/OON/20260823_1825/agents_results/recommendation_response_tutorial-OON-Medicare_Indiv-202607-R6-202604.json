@@ -1,0 +1,212 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a claims-processing and classification audit for IN Medicare Indiv DSNP HMO OP HH/DME claims coded with facility_type and drg_name 'Not Mapped', prioritizing procedure 'Temporary National Codes (Non-Medicare)' and rendering provider CAREGIVER HOMES OF IN, INC. D/B/A CAREFORTH, then reassess provider concentration, service mix, and authorization-denial enforcement on the remapped claims.",
+        "evidence": [
+          "Facility type and DRG are both Not Mapped.",
+          "Drill context identifies OP HH/DME.",
+          "Procedure is Temporary National Codes (Non-Medicare).",
+          "Rendering provider is CAREGIVER HOMES OF IN, INC. D/B/A CAREFORTH.",
+          "Pattern carries unmapped_or_unknown_value flag.",
+          "Claim volume and paid per admit both increased."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a targeted validation review for UNATTRIBUTED OP HH/DME and OP Mgmt Oth Misc claims that are Not Mapped with diagnosis R69 and Temporary National Codes (Non-Medicare) or National T Codes, starting with CAREGIVER HOMES OF IN, INC. D/B/A CAREFORTH, and then follow the AI Acceleration Engine internal rule set to ensure coverage and appropriate benefit limits apply to validated procedure groupings.",
+        "evidence": [
+          "UNATTRIBUTED OP HH/DME concentrates in Not Mapped claims with diagnosis R69.",
+          "OP Mgmt Oth Misc concentrates in Temporary National Codes and National T Codes.",
+          "Source cards show repeated delta concentration and unmapped or unknown value flags.",
+          "Rendering provider context includes CAREGIVER HOMES OF IN, INC. D/B/A CAREFORTH."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health restricts temporary outpatient C-codes by claim type P and bill type.",
+          "Premera Blue Cross separately pays only with modifier TH or reduces with modifier 52 when supported."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch case-level payment integrity review for the cited TX DSNP HMO acute hospital IP Med/Surg admissions at BEN TAUB HOSPITAL involving I2699, T84622A, K8510, K8590, and K5000; complete missing procedure fields, reconcile authorizations to billed actuals, enforce denial edits, and obtain itemized bills.",
+        "evidence": [
+          "BEN TAUB HOSPITAL appears across top TX DSNP HMO IP Med/Surg drivers.",
+          "Drivers include I2699, T84622A, K8510, K8590, and K5000.",
+          "Several clinical records contain Null or Blank procedure fields.",
+          "Paid per admit increased for acute hospital admissions."
+        ],
+        "peer_benchmarking": [
+          "Elevance denies provider-preventable conditions and removes HCAC POA charges or days from DRG unless contracts require otherwise.",
+          "Humana covers one weekly amylase or lipase for symptomatic initial acute pancreatitis.",
+          "United covers weekly lipase for symptomatic acute pancreatitis; same-day serum and urinary amylase not reimbursed."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate an OH DSNP HMO acute hospital provider review for KETTERING HEALTH DAYTON and GOOD SAMARITAN HOSPITAL to validate reimbursement methodology and contractual claims processing, confirm authorizations match actual admissions and stays, review diagnosis and discharge patterns, and pursue provider-specific contract remediation or site-of-care changes.",
+        "evidence": [
+          "OH DSNP HMO acute hospital increase is concentrated in two hospitals.",
+          "KETTERING HEALTH DAYTON is a key driver.",
+          "GOOD SAMARITAN HOSPITAL is a key driver.",
+          "Claims and paid per admit increased at both providers."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health bundles unplanned 30-day readmissions to the index stay and excludes OB.",
+          "Humana had no service-specific readmission policy identified."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused inpatient contract-compliance and authorization audit for El Camino Health - Mountain View Hospital and Good Samaritan Hospital across CA DSNP HMO, Medicare HMO, DSNP PPO, and CSNP PPO, reviewing Major Chest Procedures with CC, Disorders of Pancreas Except Malignancy with MCC, and Lower Extremity and Humerus Procedures Except Hip, Foot, Femur with MCC to validate claim processing, confirm prior authorization where required, and prepare rate-remediation or site-of-care steerage policy changes.",
+        "evidence": [
+          "CA acute hospital pressure across DSNP and Medicare products totals about +$1.1M.",
+          "El Camino Health - Mountain View Hospital contributes about +$642K.",
+          "Major Chest Procedures with CC and pancreatic disorders with MCC recur.",
+          "Lower-extremity or humerus procedures with MCC drive Medicare HMO acute costs.",
+          "Claims are up and paid per admit is elevated in selected DRGs."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit OH Transportation Services Including Ambulance claims from MIDWEST MEDICAL TRANSPORT COMPANY in Medicare HMO and DSNP HMO to correct Not Mapped facility and service classification, validate transport coverage and benefit limits, and enforce prior-authorization denial, override, and manual-adjudication edit controls for R0602 and R2689 claims.",
+        "evidence": [
+          "OH not-mapped transportation-related claims total about +$576K across Medicare HMO and DSNP HMO.",
+          "MIDWEST MEDICAL TRANSPORT COMPANY drives operational increases in Medicare HMO and DSNP HMO.",
+          "Transportation Services Including Ambulance repeats under Not Mapped classification.",
+          "Clinical transportation patterns include diagnosis codes R0602 and R2689.",
+          "Recommended next step includes prior authorization or edit compliance audit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct targeted claim review for CA OP IV Thrpy/Oncology Chemotherapy Drugs from GOOD SAMARITAN HOSPITAL and EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL with diagnoses Z5111 or C180 in the Not Mapped grouping to verify authorization-to-claim matching, code mapping, coverage and benefit limits, site-of-care appropriateness, and payment compliance.",
+        "evidence": [
+          "Variance is concentrated at GOOD SAMARITAN HOSPITAL and EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL.",
+          "Chemotherapy Drugs is the key procedure driver.",
+          "Diagnoses Z5111 and C180 drive the pattern.",
+          "Claims fall under a Not Mapped grouping.",
+          "Paid per admit increased with claims up."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) is the only listed payer; no scope summary is documented."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 3,
+        "pattern": "IN DSNP HMO home health is showing real volume and cost pressure",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP HH DME (DNE)"
+        ],
+        "relevance_reason": "OP HH DME (DNE) Trend 4: The core issue is that spend sits in a Not Mapped facility bucket within OP HH/DME, so the first parent question is whether variance is really isolated to a subset of services once claims are properly reclassified.; OP HH DME (DNE) Trend 1: A named rendering provider is present in the drill context, suggesting potential concentration in a subset of providers that should be tested after mapping cleanup.; OP HH DME (DNE) Trend 8: Unit cost and paid ratio both increased materially, so after claims are remapped the reimbursement method should be reviewed to determine whether payment logic is contributing to the delta.; OP HH DME (DNE) Trend 7: The pattern is routed to UM operations and claims volume rose sharply, making auth-to-claim alignment a relevant follow-up once the facility and service mapping issue is resolved.; IP MedSurg (DNE) Trend 9: Although this is an outpatient HH/DME pattern, this parent rule is the closest explicit match to the gating problem described: validating whether claims are being processed, classified, or reprocessed correctly before drawing business conclusions."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "OP HH DME (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP HH DME (DNE) Trend 4: Most directly fits the OP HH/DME portion of the pattern because the spike is concentrated in specific temporary procedure buckets and Not Mapped services, making service-level validation the primary parent question.; OP Oth (DNE) Trend 4: Best fit for the OP Mgmt Oth Misc portion of the pattern, which is also concentrated in temporary code groupings and unmapped outpatient miscellaneous services rather than a broad utilization shift.; OP HH DME (DNE) Trend 3: Relevant because the HH/DME increase is tightly concentrated in diagnosis R69, so diagnosis-level review is needed to determine whether this reflects coding weakness or a real clinical signal.; OP Oth (DNE) Trend 3: Relevant because the OP Mgmt Oth Misc increase is likewise concentrated in R69 with Not Mapped classification, pointing to diagnosis coding/mapping validation before downstream action.; OP HH DME (DNE) Trend 1: Provider-level concentration is also relevant because the largest dollar impact appears tied to a specific rendering provider context, so confirming whether the variance is isolated to a provider subset can help separate coding/setup issues from true utilization change."
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in a narrow set of diagnoses/DRGs and diagnosis codes (pancreatic disorders, pulmonary embolism, lower-extremity procedures, inflammatory bowel disease), making diagnosis-level isolation the strongest parent rule fit.; IP MedSurg (DNE) Trend 2: The increase is driven by a handful of rare, very high-cost admissions with 1 to 5 claims per driver, which points to concentration in a very small member subset and supports case-level member review.; IP MedSurg (DNE) Trend 1: Several top clinical cards are tied to the same acute hospital/provider context, suggesting the spend increase may be concentrated in a limited provider subset and warrants provider-driver analysis.; IP MedSurg (DNE) Trend 10: Paid per admit is sharply up and the recommended action explicitly calls for confirming outlier payment and reimbursement controls, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 8: The next-step recommendation includes checking whether acute inpatient authorization controls should be adjusted, aligning directly to auth-to-claim enforcement review for these high-cost IP admissions."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is explicitly concentrated in two hospitals\u2014Kettering Health Dayton and Good Samaritan Hospital\u2014so provider-level behavior and contract differences are the clearest parent driver.; IP MedSurg (DNE) Trend 10: Paid per admit increased at both hospitals, and the recommended next step is a provider contract and case-mix review, which aligns directly to reimbursement method as a unit-cost driver.; IP MedSurg (DNE) Trend 6: Claim counts also rose materially, and the recommendation for pre-service and continued-stay review fits investigation of utilization management KPIs and potentially avoidable inpatient variance.; IP MedSurg (DNE) Trend 8: Because the action plan includes admission management and UM review, it is relevant to test whether authorizations and denial controls are being enforced appropriately on the acute claims.; IP MedSurg (DNE) Trend 3: The requested case-mix review suggests the pressure may reflect a shift in diagnosis or DRG severity mix within these hospitals, not just broad provider volume growth."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated in a small set of hospitals, especially El Camino Health - Mountain View Hospital and Good Samaritan Hospital, which aligns directly with a provider-subset driver review.; IP MedSurg (DNE) Trend 3: Recurring DRG/diagnosis drivers such as Disorders of Pancreas Except Malignancy with MCC indicate the variance is concentrated in a subset of diagnoses.; IP MedSurg (DNE) Trend 4: Specific inpatient procedure/service groups, including Major Chest Procedures with CC and Lower Extremity and Humerus Procedures with MCC, are key contributors, fitting a service-driver investigation.; IP MedSurg (DNE) Trend 10: Mixed unit-cost pressure and elevated paid per admit, along with the recommendation to renegotiate rates, make reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 6: Claims volume is up and the recommended next step includes tightening inpatient review, so utilization management KPI/PAV analysis is relevant for the utilization component."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 1: The increase is heavily concentrated in a single provider, MIDWEST MEDICAL TRANSPORT COMPANY, across both Medicare HMO and DSNP HMO, making provider-specific behavior, setup, or contracting review the top parent rule.; OP Oth (DNE) Trend 4: The pattern is narrowly tied to Transportation Services Including Ambulance and repeated Not Mapped classification, so service-level review is critical to validate transport classification and mapping.; OP Oth (DNE) Trend 7: The recommended next step explicitly calls for prior authorization and edit compliance review, which directly aligns with auth-to-claim matching and enforcement.; OP Oth (DNE) Trend 3: Clinical evidence shows recurring diagnosis concentration around codes such as R0602 and R2689, so diagnosis-level review may help determine whether the trend reflects valid clinical need versus miscoding or routing issues.; OP Oth (DNE) Trend 8: Because the claims are in Not Mapped buckets and may reflect leakage through coding, routing, or payment setup, reimbursement method review is relevant after provider/service/auth checks."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)"
+        ],
+        "relevance_reason": "OP IV Thrpy - Oncly (DNE) Trend 1: The spend increase is highly concentrated in two providers, Good Samaritan Hospital and El Camino Health - Mountain View Hospital, making provider-level behavior, contracting, or site-of-care differences a primary parent trend to investigate.; OP IV Thrpy - Oncly (DNE) Trend 3: The pattern is explicitly tied to a narrow diagnosis subset, Z5111 and C180, which fits a diagnosis-driver review for oncology case-mix shift versus coding concentration.; OP IV Thrpy - Oncly (DNE) Trend 4: The variance is concentrated in a specific service/procedure, Chemotherapy Drugs, so service-level review is directly relevant to determine whether a chemotherapy regimen or billing mix changed.; OP IV Thrpy - Oncly (DNE) Trend 7: The recommended next step includes confirming oncology authorization rules against observed utilization, which aligns with reviewing auth-to-claim matching for these outpatient chemotherapy claims.; OP IV Thrpy - Oncly (DNE) Trend 9: The pattern calls for coding and payment validation, and the claims sit in a Not Mapped grouping with higher paid per admit, making reimbursement-method review relevant to rule out payment or classification issues."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T19:28:32.004498+00:00"
+  }
+}

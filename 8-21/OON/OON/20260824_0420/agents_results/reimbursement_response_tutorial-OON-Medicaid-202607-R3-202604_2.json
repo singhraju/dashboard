@@ -1,0 +1,375 @@
+{
+  "job_id": "tutorial-OON-Medicaid-202607-R3-202604_2_job",
+  "conversation_id": "tutorial-OON-Medicaid-202607-R3-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA single catastrophic IP Med/Surg outlier",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "inpatient_scope",
+          "label": "Facility Scope",
+          "type": "badge"
+        },
+        {
+          "id": "separate_reimbursement",
+          "label": "Separate Reimb.",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_scope": "Inpatient/Outpatient",
+          "separate_reimbursement": "Bundles"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_scope": "Inpatient/Outpatient",
+          "separate_reimbursement": "Bundles"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_scope": "-",
+          "separate_reimbursement": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_scope": "Outpatient Only",
+          "separate_reimbursement": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_CA_29085730301",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Bundled Services and Supplies",
+        "tags": [],
+        "effective_date": "10/01/2026",
+        "evidence": "Always bundled facility service; no separate reimbursement and no modifier override.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-26001-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "15851",
+            "76014-76019",
+            "76979",
+            "76983",
+            "77293",
+            "77387",
+            "87913",
+            "96521",
+            "96522",
+            "96523",
+            "97010",
+            "99070",
+            "99072",
+            "99190-99192",
+            "C1734",
+            "C1762",
+            "C1763",
+            "C1781",
+            "G0498",
+            "G2211",
+            "K1034",
+            "L8699",
+            "T1040"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Facility providers"
+          ],
+          "exemptions": [
+            "provider, state, federal contract and/or requirements"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "The policy is a broad facility bundling policy and does not specifically address M3119 or a catastrophic inpatient Med/Surg outlier DRG. It generally treats many ancillary services and supplies as included in the facility fee and not separately reimbursable in inpatient and outpatient facility settings.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00138",
+        "payer_name": "United Health",
+        "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "Off-topic for the requested inpatient DRG/outlier pattern. The policy only addresses reimbursement for biomarker testing associated with autoimmune rheumatic disease and does not include DRG-based catastrophic inpatient outlier adjudication or any rule for M3119.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Autoimmune-Rheumatic-Disease-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00160",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biomarker Testing for Autoimmune Rheumatic Disease",
+        "tags": [],
+        "effective_date": "05/2023",
+        "evidence": "Off-topic for the requested inpatient DRG/outlier pattern. This laboratory biomarker policy does not address code M3119 or DRG-based catastrophic inpatient reimbursement.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d96",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01818",
+        "payer_name": "United Health",
+        "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "This policy is unrelated to inpatient DRG outlier reimbursement and does not address the requested DRG pattern.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Autoimmune-Rheumatic-Disease-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CA single catastrophic IP Med/Surg outlier",
+    "pattern_rank": 2,
+    "pattern_title": "CA single catastrophic IP Med/Surg outlier",
+    "cpt_codes_requested": [
+      "M3119"
+    ],
+    "drg_codes_requested": [
+      "Connective Tissue Disorders with MCC"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because its cited commercial facility bundling rule is not clearly applicable to the specific California inpatient outlier pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/5 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 39326,
+    "output": 39566,
+    "breakdown": {
+      "search_keywords": {
+        "input": 523,
+        "output": 531,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 3402,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 400,
+        "output": 992,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 29832,
+        "output": 29386,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 2202,
+        "output": 1806,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 802,
+        "output": 562,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1031,
+        "output": 599,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 350,
+        "output": 270,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2417,
+        "output": 1325,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1331,
+        "output": 693,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T04:47:03.817129+00:00",
+    "end_time": "2026-08-24T04:49:36.412513+00:00",
+    "duration_ms": 152595,
+    "version": "2.0.0"
+  }
+}

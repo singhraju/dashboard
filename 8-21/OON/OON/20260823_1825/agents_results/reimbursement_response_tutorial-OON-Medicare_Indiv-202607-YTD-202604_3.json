@@ -1,0 +1,490 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA inpatient Med/Surg spend jump is driven by rare catastrophic admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "principal_dx_edit",
+          "label": "Principal Dx Edit",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Reviews adult inpatient sepsis-related DRGs pre/post-pay; may deny unsupported sepsis diagnoses.",
+          "principal_dx_edit": "Reviews sepsis principal diagnosis claims; rejects SIRS/SEP-1/qSOFA and local infection SOFA points."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "General California inpatient readmission policy; non-DRG-specific, denying separate payment for qualifying unplanned readmissions.",
+          "principal_dx_edit": "No principal diagnosis-specific exclusion; general unplanned readmission exclusions and contract exceptions apply."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Performs pre- and post-payment inpatient DRG sepsis clinical validation using Sepsis-3 criteria.",
+          "principal_dx_edit": "Molina may adjust payment for unsupported sepsis diagnoses/treatment based on Sepsis-3 record review."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "General diagnosis-coding edits; no DRG-specific reimbursement or sepsis exception.",
+          "principal_dx_edit": "Denies inpatient claims with invalid, unsupported, or unacceptable principal diagnoses per ICD-10 guidelines."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "This DRG description is not specifically addressed. The policy applies a general inpatient diagnosis-coding edit: reimbursement for inpatient UB-04 claims depends on submitting an acceptable principal diagnosis in Box 67 and following ICD-10-CM sequencing rules. If the principal diagnosis is inappropriate or falls into the invalid-principal-diagnosis grouping used for MS-DRG assignment, the entire inpatient claim may be denied.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998",
+            "Z51.89",
+            "Q21.0",
+            "I51.0",
+            "T86",
+            "C80.2",
+            "T51-T65",
+            "V00-Y99",
+            "R65"
+          ],
+          "related_codes": [
+            "R65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis in Box 67",
+            "secondary diagnosis required",
+            "underlying condition sequenced first"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00101",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis - CC.PP.073",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The health plan reviews inpatient sepsis-related DRGs on a pre- or post-pay basis and may deny or adjust claims when the sepsis diagnosis is not clinically supported. The policy is limited to inpatient claims for members/enrollees age 18 or older and does not address sepsis screening or trauma DRGs.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "720",
+            "710",
+            "A41.9",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "medical record review",
+            "pre- or post-pay review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "For California inpatient DRG-paid facilities, this policy is not DRG-title specific but can affect this trauma admission when it is an unplanned readmission. Separate reimbursement is not allowed for a same or related readmission that meets the readmission criteria; same-day related returns are treated as continuation of the original stay. Trauma-specific exclusions appear in some non-California state programs.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "unplanned readmission",
+            "within 30 days of discharge",
+            "same date of service",
+            "same hospital",
+            "same or related condition"
+          ],
+          "utilization_limits": [
+            "30 days from discharge"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "CA: 30 days; GBD Standard",
+            "NY: multiple trauma treatment excluded",
+            "OH: major trauma excluded",
+            "TN: burns or major trauma excluded"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "cancer",
+            "neonatal/newborn",
+            "obstetrical deliveries",
+            "behavioral health",
+            "rehabilitation care",
+            "sickle cell anemia",
+            "transplants",
+            "acute hospital transfers",
+            "discharged against medical advice",
+            "multiple trauma treatment",
+            "major trauma"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "Off-topic for this DRG pattern. The policy is a general inpatient readmissions policy and does not contain DRG-specific rules for these catastrophic admission groups. It only affects payment when the admission is an unplanned readmission within the policy window.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00202",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "1/7/2022",
+        "evidence": "Molina conducts pre-payment and post-payment DRG clinical validation for sepsis. Inpatient hospital payment may be adjusted when the medical record does not support sepsis under Sepsis-3 criteria.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "pre-payment or post-payment review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Molina or designated vendor clinical review"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00116",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "This policy is diagnosis-code based and does not provide DRG-specific reimbursement logic. It can deny facility or professional claims when the principal or primary diagnosis is reported incorrectly.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Q21.0",
+            "I51.0",
+            "Z51.89",
+            "T86",
+            "C80.2",
+            "T51-T65",
+            "R65",
+            "V00-Y99"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "Box 67 principal diagnosis",
+            "Box 24E diagnosis pointer"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 For the separate sepsis signal, send same inpatient claim / same claim cases with 871, R65.2, or R65 to pre-payment or post-payment medical record review; require physician or licensed independent practitioner documentation, a secondary diagnosis, and sequencing the underlying condition first for R65. (CA) Exempt: sepsis screening.",
+      "evidence": [
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"871\" [target_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"same inpatient claim\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"medical record review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"pre- or post-pay review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"physician or licensed independent practitioner documentation\" [provider_role_restrictions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"sepsis screening\" [exemptions]",
+        "Molina \u00b7 Sepsis: \"R65.2\" [target_codes]",
+        "Molina \u00b7 Sepsis: \"same claim\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"pre-payment or post-payment review\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"Molina or designated vendor clinical review\" [provider_role_restrictions]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"R65\" [target_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"secondary diagnosis required\" [pairing_conditions]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"underlying condition sequenced first\" [pairing_conditions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073 \u2014 https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "Molina \u00b7 Sepsis \u2014 https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA inpatient Med/Surg spend jump is driven by rare catastrophic admissions",
+    "pattern_rank": 3,
+    "pattern_title": "CA inpatient Med/Surg spend jump is driven by rare catastrophic admissions",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other O.R. Procedures for Multiple Significant Trauma with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Item 0 was dropped for scope drift to cesarean/obstetrical readmission policy; item 1 aligned with the pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 58805,
+    "output": 47853,
+    "breakdown": {
+      "search_keywords": {
+        "input": 546,
+        "output": 529,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 489,
+        "output": 882,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 44880,
+        "output": 39718,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 2874,
+        "output": 1340,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 1084,
+        "output": 482,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1602,
+        "output": 1055,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 394,
+        "output": 207,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4141,
+        "output": 2994,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2795,
+        "output": 646,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:37:12.488933+00:00",
+    "end_time": "2026-08-23T19:40:30.866016+00:00",
+    "duration_ms": 198377,
+    "version": "2.0.0"
+  }
+}

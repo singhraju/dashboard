@@ -1,0 +1,518 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R3-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-R3-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Infection-related inpatient case mix is adding pressure in UNATTRIBUTED, TX, and VA",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_mention_status",
+          "label": "DRG Mention",
+          "type": "badge"
+        },
+        {
+          "id": "inpatient_scope",
+          "label": "Inpatient Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_IL",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "Not addressed; policy only covers urine culture testing reimbursement, not inpatient DRG scope."
+        },
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "-"
+        },
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "Not applicable to inpatient DRG case mix; addresses urine culture reimbursement criteria only."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "Not addressed; policy only covers urine culture testing criteria, not inpatient DRG payment."
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "Inpatient urine culture services covered when medically necessary; not site-restricted."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "No inpatient DRG scope; policy addresses laboratory urine culture testing reimbursement only."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "inpatient_scope": "Outpatient-only policy; inpatient DRG claims and related reimbursement are outside scope."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589920013",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "10/1/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/urine-culture-testing-for-bacteria.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_IL_IL_28593830307",
+        "payer_name": "BCBS_IL",
+        "policy_title": "Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "Off-topic for DRG adjudication. The policy addresses reimbursement criteria for urine culture testing and lists specific laboratory procedure codes, but it does not provide DRG-specific inpatient payment rules for this case type.",
+        "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/cpcplab/2026/cpcplab050-1-1-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082140004",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "2026-01-03",
+        "evidence": "Off-topic to inpatient DRG case mix; the policy only addresses urine culture testing reimbursement criteria for urinary tract conditions.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab050-1-3-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00115",
+        "payer_name": "Emblem Health",
+        "policy_title": "Urine Culture Testing for Bacteria (LBM)",
+        "tags": [],
+        "effective_date": "3/01/2023",
+        "evidence": "Off-topic for inpatient DRG adjudication. This policy governs urine culture testing coverage criteria for urinary tract infection and bacteriuria scenarios, not DRG payment or severity-severity inpatient case mix rules.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/urine-culture-testing-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00134",
+        "payer_name": "Emblem Health",
+        "policy_title": "Pathogen Panel Testing (LBM)",
+        "tags": [],
+        "effective_date": "2023-03-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/pathogen-panel-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595690210",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-urine-culture-testing-bacteria-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595750209",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "This outpatient laboratory policy covers selected pathogen panel tests for specific infectious syndromes, but it does not address inpatient DRG reimbursement or infection-related inpatient case mix patterns.",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-pathogen-panel-testing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00042",
+        "payer_name": "Healthfirst",
+        "policy_title": "Urine Culture for Bacteria",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "Healthfirst covers urine culture-related bacterial isolate identification when medical-necessity criteria are met, including pregnancy, symptomatic UTI or bacteriuria, pyelonephritis, and pre-procedure testing for urologic interventions that breach the mucosa. Routine screening, asymptomatic bacteriuria outside the stated exceptions, surveillance after clinical resolution, asymptomatic prostatitis screening, and prostate-biopsy assessment are not covered.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-013-Urine-Culture-for-Bacteria.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87077",
+            "87086",
+            "87088",
+            "87140",
+            "87147",
+            "87149",
+            "87181",
+            "87186"
+          ],
+          "related_codes": [
+            "87086",
+            "87088",
+            "87140",
+            "87147",
+            "87149",
+            "87181",
+            "87186",
+            "87077"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "with urine culture",
+            "when isolate identification needed",
+            "when susceptibility testing is needed",
+            "with isolate identification",
+            "when organism typing needed",
+            "when organism identification needed",
+            "when susceptibility testing needed"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "pregnancy",
+            "symptomatic UTI or bacteriuria",
+            "pyelonephritis",
+            "urologic intervention breaching mucosa"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00043",
+        "payer_name": "Healthfirst",
+        "policy_title": "Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "02/01/2026",
+        "evidence": "No DRG-specific adjudication rule is stated for this inpatient diagnosis. The policy applies only to outpatient pathogen panel testing and includes a noncoverage rule for urine pathogen testing for urinary tract infections.",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-012-Pathogen-Panel-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "outpatient"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00025",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "This payer's policy is off-topic for inpatient DRG case mix. It addresses reimbursement for specific urine culture testing CPT codes, not DRG-based inpatient infection cases.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 12,
+    "policies_successful": 12,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Infection-related inpatient case mix is adding pressure in UNATTRIBUTED, TX, and VA",
+    "pattern_rank": 7,
+    "pattern_title": "Infection-related inpatient case mix is adding pressure in UNATTRIBUTED, TX, and VA",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Kidney and Urinary Tract Infections with MCC",
+      "Kidney and Urinary Tract Infections without MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 12,
+    "successful_extractions": 12,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 12 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "12 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 4 source card(s) attest no state (segment scope: UNATTRIBUTED, TX, VA); searched without it rather than narrowing to ['TX', 'VA']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped because it is an outpatient lab adjudication rule outside the inpatient infection pattern, and a cited source explicitly limits its scope to outpatient testing."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "2/12 policies quarantined (17%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/12 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_BCBS_IL_IL_28593820308:Pathogen Panel Testing, RP_COM_BCBS_TX_TX_29082290004:Pathogen Panel Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 160378,
+    "output": 44016,
+    "breakdown": {
+      "search_keywords": {
+        "input": 559,
+        "output": 438,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 761,
+        "output": 2599,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 146721,
+        "output": 34744,
+        "calls": 12
+      },
+      "relevance_judge": {
+        "input": 4396,
+        "output": 1920,
+        "calls": 9
+      },
+      "dynamic_columns": {
+        "input": 919,
+        "output": 533,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1546,
+        "output": 906,
+        "calls": 12
+      },
+      "policy_recommendations": {
+        "input": 2665,
+        "output": 2568,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2811,
+        "output": 308,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T14:54:18.210482+00:00",
+    "end_time": "2026-08-23T14:56:13.842512+00:00",
+    "duration_ms": 115632,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Inpatient chemotherapy is emerging as a focused oncology cost driver",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "inpatient_bundling_rule",
+          "label": "Inpatient Bundling",
+          "type": "text"
+        },
+        {
+          "id": "site_of_care_restriction",
+          "label": "Site Restrictions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_bundling_rule": "Facility inpatient ancillary supplies, administration, and incidental items are bundled, not separately reimbursed.",
+          "site_of_care_restriction": "Separate reimbursement limited in facility/inpatient settings; office allowed, home infusion requires precertification."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_bundling_rule": "Facilities cannot separately bill bundled items on same-day services tied to facility fees/procedures.",
+          "site_of_care_restriction": "Restricted for facility billing with same-day room/facility fee and non-administration procedures."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_bundling_rule": "Bundled into the facility fee when billed on the same date of service.",
+          "site_of_care_restriction": "Applies to inpatient/outpatient facilities when same-day room/facility fees or administration services are billed."
+        },
+        {
+          "payer_org": "Medica",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_bundling_rule": "-",
+          "site_of_care_restriction": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_bundling_rule": "Routine services, including chemotherapy administration, are bundled into inpatient hospital charges without separate reimbursement.",
+          "site_of_care_restriction": "Routine inpatient/outpatient facility services, including medication administration, are bundled into facility charges."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00042",
+        "payer_name": "Cigna",
+        "policy_title": "Pharmacy and Infusion Services",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "The policy includes chemotherapy within pharmacy and infusion services, but it does not create a DRG-specific chemotherapy payment rule. In facility and inpatient settings, administration charges, routine supplies, and equipment are generally bundled into the primary service; separate reimbursement is limited when the infusion or injection is the primary reason for the facility visit.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R14_Pharmacy_and_Infusion_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "96360-96379",
+            "96401",
+            "96402",
+            "96409-96425",
+            "96521-96523"
+          ],
+          "related_codes": [
+            "96360-96379",
+            "96401",
+            "96402",
+            "96409-96425",
+            "96521-96523",
+            "J7050",
+            "J1642"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0250-0259",
+            "0260-0269",
+            "0270-0273",
+            "0279",
+            "0290-0299",
+            "0390-0399",
+            "0450-0459",
+            "0623-0624",
+            "0630-0639"
+          ],
+          "pairing_conditions": [
+            "same claim form",
+            "facility place of service",
+            "inpatient setting",
+            "primary medical/surgical service"
+          ],
+          "utilization_limits": [
+            "one blood transfusion fee per outpatient setting"
+          ],
+          "prior_auth_thresholds": [
+            "home infusion therapy requires precertification"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Inpatient",
+            "Facility",
+            "Office",
+            "Home"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "health care professional in facility setting",
+            "professional pharmacy services not separately reimbursed"
+          ],
+          "exemptions": [
+            "patients less than 1095 days of age for J7050",
+            "infusion/injection primary reason for visit",
+            "autologous donation for scheduled surgery"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00007",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Bundled Services and Supplies",
+        "tags": [],
+        "effective_date": "2026-04-01",
+        "evidence": "For facility claims, chemotherapy administration and infusion drug administration are treated as bundled services when reported with a room or facility fee on the same date of service. Separate reimbursement is not allowed for always-bundled services and supplies, and listed chemotherapy-related items are included in the facility payment rather than paid separately.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/CA-08003-CA1.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same claim as room or facility fee"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility reimbursement"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "facility provider"
+          ],
+          "exemptions": [
+            "provider, state, federal contract, and/or requirements indicate otherwise"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "The authoring health plan generally bundles chemotherapy administration into facility reimbursement and denies separate payment on the same date of service as a room or facility fee, with state and contract exceptions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "G0498"
+          ],
+          "related_codes": [
+            "96521-96523"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Facility",
+            "Inpatient",
+            "Outpatient"
+          ],
+          "state_specific_rules": [
+            "CO allows chemo admin separately",
+            "KY treatment room exception",
+            "WI allows chemo admin",
+            "VA policy not applicable"
+          ],
+          "provider_role_restrictions": [
+            "Facility provider"
+          ],
+          "exemptions": [
+            "Contract or federal overrides",
+            "CO chemo administration",
+            "CO infusion drug administration",
+            "KY treatment room exception",
+            "WI chemo administration",
+            "VA not subject"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960320580015",
+        "payer_name": "Medica",
+        "policy_title": "Injection and Infusion Services",
+        "tags": [],
+        "effective_date": "01/01/1996",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/injection-and-infusion-services-policy.pdf?la=en&hash=1E4DFA8A26FDEA260292AF7B76A05F13",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "The policy bundles routine hospital facility services into room and board or facility reimbursement; chemotherapy administration and related routine nursing or IV services are not separately reimbursable.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "300",
+            "309",
+            "361",
+            "391",
+            "410",
+            "412",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04",
+            "Hospital Inclusive Charges"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle 96360-96379, 96401, 96402, 96409-96425, 96521-96523, and G0498 when billed on the same date of service / same claim form by a facility provider in the inpatient setting with a room or facility fee or primary medical/surgical service, to curb California inpatient chemotherapy overpayment. Exempt: Contract or federal overrides, CO chemo administration, CO infusion drug administration, KY treatment room exception, WI chemo administration, VA not subject. Peer: Cigna and Elevance internal already bundle 96521-96523 in facility/inpatient settings, and both Elevance policies document same-date bundling..\n\nRecommendation 2: Apply a UB-04 / hospital inclusive-charge bundling edit so revenue codes 270, 279, 300, 309, 361, 391, 410, 412, and 460, plus facility chemotherapy families 025X, 026X, 0270-0273, 0279, 029X, 039X, 045X, 0623-0624, and 063X, are not separately reimbursed on the same claim for inpatient facility reimbursement. Exempt: provider, state, federal contract, and/or requirements indicate otherwise.",
+      "evidence": [
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96360-96379\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96401\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96402\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96409-96425\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"96521-96523\" [target_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"same claim form\" [pairing_conditions]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"inpatient setting\" [pairing_conditions]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"primary medical/surgical service\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Bundled Services and Supplies: \"same date of service\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Bundled Services and Supplies: \"same claim as room or facility fee\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"G0498\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"same date of service\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Inpatient\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Facility provider\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Contract or federal overrides\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"CO chemo administration\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"CO infusion drug administration\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"KY treatment room exception\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"WI chemo administration\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"VA not subject\" [exemptions]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0250-0259\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0260-0269\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0270-0273\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0279\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0290-0299\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0390-0399\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0450-0459\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0623-0624\" [revenue_codes]",
+        "Cigna \u00b7 Pharmacy and Infusion Services: \"0630-0639\" [revenue_codes]",
+        "Elevance Health (external) \u00b7 Bundled Services and Supplies: \"facility reimbursement\" [program_scope]",
+        "Elevance Health (external) \u00b7 Bundled Services and Supplies: \"provider, state, federal contract, and/or requirements indicate otherwise\" [exemptions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"260-269\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"270\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"279\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"300\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"309\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"361\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"391\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"410\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"412\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"460\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB04\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Hospital Inclusive Charges\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna and Elevance internal already bundle 96521-96523 in facility/inpatient settings, and both Elevance policies document same-date bundling."
+      ],
+      "citation": [
+        "Cigna \u00b7 Pharmacy and Infusion Services \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R14_Pharmacy_and_Infusion_Services.pdf",
+        "Elevance Health (external) \u00b7 Bundled Services and Supplies \u2014 https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/CA-08003-CA1.pdf",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Inpatient chemotherapy is emerging as a focused oncology cost driver",
+    "pattern_rank": 7,
+    "pattern_title": "Inpatient chemotherapy is emerging as a focused oncology cost driver",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['WI', 'CA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/6 policies quarantined (17%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_UHC_00160:In Vitro Chemotherapy Assays Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 42204,
+    "output": 31842,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 294,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 585,
+        "output": 1514,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 27967,
+        "output": 22819,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 2202,
+        "output": 553,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 904,
+        "output": 661,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 839,
+        "output": 941,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 354,
+        "output": 171,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4336,
+        "output": 4440,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4489,
+        "output": 449,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T20:02:19.738934+00:00",
+    "end_time": "2026-08-22T20:04:08.908432+00:00",
+    "duration_ms": 109169,
+    "version": "2.0.0"
+  }
+}

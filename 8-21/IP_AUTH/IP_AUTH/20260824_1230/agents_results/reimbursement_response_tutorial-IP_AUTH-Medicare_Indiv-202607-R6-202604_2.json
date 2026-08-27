@@ -1,0 +1,293 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "VA authorization classification shifted enough to block clean business action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "prior_auth",
+          "label": "Prior Auth",
+          "type": "badge"
+        },
+        {
+          "id": "payment_review_rule",
+          "label": "Payment Review Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth": "-",
+          "payment_review_rule": "Pre/post-payment DRG validation reviews sepsis claims; payments adjusted if records lack Sepsis-3 support."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "prior_auth": "-",
+          "payment_review_rule": "Denies inpatient claims for invalid principal diagnoses, including mutually exclusive sepsis-related ICD-10 coding."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "Inpatient claims are denied when the principal diagnosis is not valid for principal diagnosis assignment. MS-DRG 998 is used when the reported principal diagnosis is invalid, which blocks clean inpatient reimbursement action.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [
+            "R65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient UB-04 claim",
+            "principal diagnosis in Box 67"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00397",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2022-01-07",
+        "evidence": "Hospital DRG claims with sepsis-related diagnoses are subject to pre-payment and post-payment clinical validation. Payment may be adjusted when the medical record does not support Sepsis-3 criteria for sepsis or sepsis treatment services.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "pre-payment review",
+            "post-payment review",
+            "medical record review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01383",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Diagnosis coding must follow ICD-10-CM sequencing rules. The sepsis, severe sepsis, and septic shock category is subject to Excludes1 mutual exclusivity, so conflicting diagnosis codes should not be reported together. Inappropriate primary or principal diagnosis reporting can deny the claim.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "primary or principal diagnosis position"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB-04",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: VA authorization classification shifted enough to block clean business action",
+    "pattern_rank": 2,
+    "pattern_title": "VA authorization classification shifted enough to block clean business action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['VA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped for scope drift because they address sepsis/diagnosis-edit policies across all states rather than the Virginia authorization-classification shift pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 22475,
+    "output": 14189,
+    "breakdown": {
+      "search_keywords": {
+        "input": 538,
+        "output": 318,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 456,
+        "output": 943,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 14715,
+        "output": 9077,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1364,
+        "output": 541,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 926,
+        "output": 594,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 583,
+        "output": 437,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 1952,
+        "output": 1980,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1941,
+        "output": 299,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T13:26:59.348011+00:00",
+    "end_time": "2026-08-24T13:28:18.498381+00:00",
+    "duration_ms": 79150,
+    "version": "2.0.0"
+  }
+}

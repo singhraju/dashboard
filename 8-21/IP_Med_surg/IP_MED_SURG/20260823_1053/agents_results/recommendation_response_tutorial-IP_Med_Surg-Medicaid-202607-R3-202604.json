@@ -1,0 +1,227 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit AUTH_CODE_DISTRIBUTION PA-required mapping and claims reprocessing against contractual standards in CA, IN, and AR, and defer authorization-denial enforcement changes until validation is completed for AMG SPECIALTY HOSPITAL CENTRAL INDIANA - MUNCIE and the affected DRGs.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION is flagged auth_or_mapping_shift in CA, IN, and AR.",
+          "All source groups are marked requires_validation_before_action.",
+          "IN includes AMG SPECIALTY HOSPITAL CENTRAL INDIANA - MUNCIE provider concentration.",
+          "Impacted diagnoses include bowel procedures, GI disorders, cellulitis, and cirrhosis."
+        ],
+        "peer_benchmarking": [
+          "All listed payers show no documented auth status or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA Medicaid inpatient policy audit for authorization-required ACUTE HOSPITAL stays in TANF Standard and ABD Non Dual: validate prior authorization and auth-to-claim matching, review denial enforcement, and verify contract-based reimbursement for Cellulitis without MCC, Major Small and Large Bowel Procedures with CC, Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC, Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes without MCC, and Cirrhosis and Alcoholic Hepatitis with CC.",
+        "evidence": [
+          "Pattern limited to CA Medicaid ACUTE HOSPITAL admissions with pa_required_code Y.",
+          "Largest pressure is TANF Standard; ABD Non Dual shows similar acute hospital pattern.",
+          "Variance concentrates in cellulitis, bowel procedures, GI disorders, metabolic disorders, and cirrhosis stays.",
+          "Spend increase reflects both admissions growth and higher paid per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA inpatient focused review for DEHYDRATION, UNS SEVERE PROTEIN-CALORIE MLNUTRIT, ALCOHOLIC CIRRHOSIS LIVER W/ASCITES, ALCOHOLIC HEPATITIS WITH ASCITES, bowel surgery, and cellulitis cases at CHILDREN'S SPECIALIZED HOSPITAL and MERCY SAN JUAN MEDICAL CENTER to confirm prior authorization, review elective versus non-elective admissions, tighten discharge planning, and assess site-of-care or contract remediation.",
+        "evidence": [
+          "CA inpatient spend increase is concentrated in liver, GI/metabolic, bowel surgery, and cellulitis.",
+          "DEHYDRATION is linked to CHILDREN'S SPECIALIZED HOSPITAL non-ER acute admissions.",
+          "ALCOHOLIC CIRRHOSIS LIVER W/ASCITES clustered at MERCY SAN JUAN MEDICAL CENTER ER admissions.",
+          "Source cards show pa_required_code Y across metabolic and liver admissions.",
+          "ALCOHOLIC HEPATITIS WITH ASCITES is flagged low_baseline_value case-mix validation."
+        ],
+        "peer_benchmarking": [
+          "Humana: Criteria required with documented qualifying indication, including liver disease.",
+          "United Health: Conditional payment requires eligible diagnosis; one unit every 180 days; no separate reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review ECU HEALTH MEDICAL CENTER for contract remediation and site-of-care action by auditing NC Medicaid TANF Standard and TANF Foster Care inpatient claims across ACUTE HOSPITAL and Not Mapped records, confirming authorization-to-claim matches and contract-compliant reimbursement.",
+        "evidence": [
+          "ECU Not Mapped TANF Standard added about +$0.6M across 9 admissions.",
+          "Not Mapped ECU paid per admit increased about +$65.1K.",
+          "Major Small and Large Bowel Procedures with CC added 12 admissions.",
+          "TANF Foster Care acute admissions added about +$0.2M at ECU.",
+          "TANF Standard ACUTE HOSPITAL records were flagged auth-required."
+        ],
+        "peer_benchmarking": [
+          "United Health documents bundled non-separately-payable code pairings, including restrictions with 64727."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a targeted inpatient claims and case-level audit of the highest-cost UNATTRIBUTED, IA, IN, and OH admissions tied to Arkansas Children's Hospital, Iowa Methodist Medical Center, and AMG Specialty Hospital Central Indiana - Muncie, prioritizing Simple Pneumonia and Pleurisy with MCC, Other Multiple Significant Trauma with MCC, Gastrointestinal Obstruction with MCC, Wound Debridements for Injuries with MCC, and Stomach, Esophageal and Duodenal Procedures without CC/MCC to confirm attribution and verify interim and first claims are zeroed out to the final bill.",
+        "evidence": [
+          "UNATTRIBUTED severe cases are led by pneumonia with MCC and trauma with MCC.",
+          "Arkansas Children's Hospital contains repeated outlier admissions for pneumonia and trauma.",
+          "Iowa Methodist Medical Center shows stomach malignancy surgery as a single-admission outlier.",
+          "AMG Specialty Hospital Central Indiana - Muncie has multiple single-admission outliers.",
+          "Pattern requires attribution cleanup and case-level review before broader action."
+        ],
+        "peer_benchmarking": [
+          "Moda Health requires complete, signed, dated records and retained source documentation.",
+          "Premera Blue Cross requires readmission relationship and same-day transfer coding documentation.",
+          "Fidelis Care requires medical records for both stays and readmission relatedness."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a targeted MO and TX Medicaid inpatient claims and contract policy audit for TANF Standard and LTSS Non Dual CHILDRENS admissions in Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes without MCC and MO TANF Standard ACUTE HOSPITAL admissions in Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC and Cirrhosis and Alcoholic Hepatitis with CC to validate prior authorization matching, denial enforcement, reimbursement methodology compliance, and site-of-care or contract remediation.",
+        "evidence": [
+          "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC drove MO ACUTE HOSPITAL growth.",
+          "Cirrhosis and Alcoholic Hepatitis with CC also drove MO ACUTE HOSPITAL growth.",
+          "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes without MCC concentrated in CHILDRENS.",
+          "TX CHILDRENS repeats across TANF Standard and LTSS Non Dual.",
+          "Pattern includes pa_required_code Y and N segments.",
+          "Admissions and avg paid per admit both increased."
+        ],
+        "peer_benchmarking": [
+          "Molina requires listed ICD-10 diagnoses and compliant sequencing; manifestation and external cause codes cannot be primary.",
+          "Parkland requires underlying or toxic-agent codes first; manifestations and residuals cannot be primary."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review AR Medicaid LTSS Non Dual inpatient claims with pa_required_code=Y across CHILDRENS, ACUTE HOSPITAL, and Not Mapped, beginning with Arkansas Children's Hospital, to enforce authorization-to-claim matching, validate facility mapping, confirm claims process to contractual reimbursement terms, and tighten site-of-care routing.",
+        "evidence": [
+          "CHILDRENS is the largest LTSS Non Dual driver in AR.",
+          "Arkansas Children's Hospital appears in drill context for CHILDRENS claims.",
+          "ACUTE HOSPITAL growth is admissions-driven for LTSS Non Dual.",
+          "Not Mapped carries unmapped_or_unknown_value and validation_needed.",
+          "All source cards show pa_required_code=Y and auth_dimension_present."
+        ],
+        "peer_benchmarking": [
+          "Centene shows no DRG guidance; documented policy scope is limited to respiratory viral panel PCR medical necessity."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a focused episode policy audit for IN Family Care cases with Major Small and Large Bowel Procedures with CC that transition from ACUTE HOSPITAL to AMG SPECIALTY HOSPITAL CENTRAL INDIANA - MUNCIE LONG TERM CARE HOSPITAL, including auth-to-claim matching, alternate discharge review, and LTCH contractual payment validation.",
+        "evidence": [
+          "Major Small and Large Bowel Procedures with CC drove acute hospital admission growth.",
+          "AMG Specialty Hospital Central Indiana - Muncie added LTCH admissions.",
+          "AMG LTCH stays showed higher paid per admit.",
+          "Both impacted claim sets required prior authorization."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 7,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the pattern: the increase is explicitly tied to AUTH_CODE_DISTRIBUTION, flagged as auth_or_mapping_shift, and described as requiring auth-to-claim validation before any operational action.; IP MedSurg (DNE) Trend 9: Highly relevant because the pattern suggests code reassignment or inconsistent historical mapping, which can reflect claims processing or reprocessing issues rather than true utilization change.; IP MedSurg (DNE) Trend 1: Relevant due to the meaningful provider concentration in IN, especially AMG SPECIALTY HOSPITAL CENTRAL INDIANA - MUNCIE, indicating provider-level isolation should be reviewed after validation.; IP MedSurg (DNE) Trend 3: Relevant because the variance is concentrated in a subset of DRGs/diagnostic groupings such as GI, cellulitis, metabolic, cirrhosis, and bowel procedure admissions, supporting diagnosis-level driver review once mapping is corrected.; IP MedSurg (DNE) Trend 10: Secondarily relevant because incorrect authorization classification can distort reimbursement interpretation; reimbursement method review is appropriate only after the auth classification is validated."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: The pattern is explicitly limited to authorization-required acute hospital admissions (pa_required_code=Y), and the recommended next step includes DRG-level authorization review, directly matching auth-to-claim enforcement.; IP MedSurg (DNE) Trend 10: Paid per admit is increasing alongside admissions, and the recommendation calls for contract and payment review, making reimbursement method review highly relevant to the unit-cost component.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow set of DRGs/diagnosis groupings such as cellulitis, bowel procedures, GI disorders, metabolic disorders, and cirrhosis rather than across all inpatient admissions.; IP MedSurg (DNE) Trend 6: This is a mixed utilization and cost inpatient pattern in an auth-managed setting, so changes in utilization management performance or potentially avoidable variance are important to assess.; IP MedSurg (DNE) Trend 4: Variance is also isolated to specific inpatient service/DRG types, especially high-growth acute hospital stays like bowel procedures and selected med-surg admissions, supporting service-level review."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Strongest fit: the spend increase is explicitly concentrated in a narrow set of inpatient diagnoses/DRGs such as cirrhosis, alcoholic hepatitis, dehydration, severe malnutrition, bowel procedures, and cellulitis, matching diagnosis-driver research.; IP MedSurg (DNE) Trend 6: Pattern details and next steps call for admission appropriateness review, complication management, and discharge planning, which aligns with evaluating utilization management KPIs and potentially avoidable inpatient variance.; IP MedSurg (DNE) Trend 1: Several high-impact source cards are tied to specific acute hospitals/providers, suggesting the variance may be concentrated among a subset of facilities and should be tested for provider-specific behavior or contracting effects.; IP MedSurg (DNE) Trend 4: The increase is clustered in a focused inpatient service mix\u2014liver, GI/metabolic, bowel surgery, and cellulitis episodes\u2014so service/DRG concentration is relevant in addition to diagnosis concentration.; IP MedSurg (DNE) Trend 7: Admissions are up and the pattern includes both ER-admitted liver cases and non-ER metabolic cases, making admission source/location and elective vs non-elective mix relevant to understanding the inpatient shift."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated at one inpatient provider, ECU HEALTH MEDICAL CENTER, so provider-level behavior, contracting, and attribution are central to the pattern.; IP MedSurg (DNE) Trend 4: A meaningful share of the increase is tied to a specific inpatient service/DRG area, including Major Small and Large Bowel Procedures with CC, making service-driver review relevant.; IP MedSurg (DNE) Trend 7: This is explicitly a site-of-care shift pattern spanning ACUTE HOSPITAL and Not Mapped records, so admission/source/location review is important to determine whether utilization shifted or facility attribution is distorting the signal.; IP MedSurg (DNE) Trend 8: Authorization handling is directly implicated: the pattern includes auth-required TANF Standard admissions, auth flags are present, and the recommended next step calls for auth-to-claim review.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially, especially in the Not Mapped facility bucket, so reimbursement method and payment logic review are highly relevant alongside the mapping issue."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend increase is concentrated in a small set of severe inpatient diagnoses such as bacterial pneumonia, major trauma, GI obstruction, necrotizing fasciitis, and stomach malignancy, making diagnosis-level isolation highly relevant.; IP MedSurg (DNE) Trend 1: Variance is concentrated in a limited provider set and an UNATTRIBUTED segment, with named hospitals like Arkansas Children's Hospital, Iowa Methodist Medical Center, and AMG Specialty Hospital Central Indiana - Muncie appearing as key outlier sources.; IP MedSurg (DNE) Trend 4: Specific inpatient DRGs and procedures are driving the change, including pneumonia with MCC, trauma with MCC, wound debridement, GI obstruction, and stomach/esophageal/duodenal procedures, so service-level review fits the pattern.; IP MedSurg (DNE) Trend 2: The pattern is explicitly low-volume and case-level, with a handful of admissions producing outsized spend, indicating the variance is likely isolated to a small subset of members/cases.; IP MedSurg (DNE) Trend 9: A meaningful share of spend sits in an UNATTRIBUTED bucket and the pattern calls for attribution cleanup, so claims processing/status review is the closest parent rule for validating whether some variance reflects data or processing issues rather than true clinical trend."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow set of inpatient DRGs\u2014GI, cirrhosis, and metabolic/nutrition diagnoses\u2014matching the diagnosis-driver rule.; IP MedSurg (DNE) Trend 10: Paid per admit is rising materially, especially in TX children\u2019s admissions, and the recommended action explicitly calls for reimbursement term review, making reimbursement method a key parent rule.; IP MedSurg (DNE) Trend 1: The pressure is concentrated in specific facility/provider subsets\u2014MO acute hospitals and children\u2019s facilities, and TX children\u2019s facilities\u2014supporting focused provider/contractual driver research.; IP MedSurg (DNE) Trend 6: Admissions are up alongside unit cost, and the next step includes testing admission appropriateness and level of care, which aligns with utilization management KPI and PAV review.; IP MedSurg (DNE) Trend 8: Authorization is explicitly present in the pattern dimensions, with both auth-required and non-auth segments contributing, and the business terms call out auth-to-claim validation."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: This pattern is explicitly a site-of-care shift, with rising LTSS Non Dual spend spread across CHILDRENS, ACUTE HOSPITAL, and Not Mapped inpatient settings, making admission/discharge source-location and routing review the strongest parent rule fit.; IP MedSurg (DNE) Trend 1: Variance is concentrated in specific facility/provider subsets, especially CHILDRENS and Arkansas Children's Hospital, so provider-level behavior, contracting, and facility mix are highly relevant.; IP MedSurg (DNE) Trend 10: Children's and Not Mapped records show meaningful paid-per-admit pressure, and the pattern recommendation specifically calls for reimbursement appropriateness review, aligning to reimbursement method analysis.; IP MedSurg (DNE) Trend 8: All source cards carry pa_required_code=Y and auth_dimension_present, so validating whether authorizations are matching claims and being enforced appropriately is directly relevant.; IP MedSurg (DNE) Trend 9: The Not Mapped facility bucket creates attribution and data-quality uncertainty, so reviewing whether claims are categorized and processed correctly before drawing final conclusions is relevant to claims processing standards."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Variance is concentrated in a specific LTCH provider, AMG Specialty Hospital Central Indiana - Muncie, and the recommended next step is a provider-level episode review, making provider drivers the strongest parent rule.; IP MedSurg (DNE) Trend 7: The pattern explicitly points to transfer behavior and episodes extending from acute hospital into LTCH, which aligns with reviewing admission/discharge source and location.; IP MedSurg (DNE) Trend 10: LTCH spend is tied to higher-cost episode economics and the pattern calls out reimbursement terms, directly matching reimbursement method review.; IP MedSurg (DNE) Trend 4: Acute spend growth is concentrated in a specific inpatient service/DRG, Major Small and Large Bowel Procedures with CC, so service-level drivers are highly relevant.; IP MedSurg (DNE) Trend 8: Both source cards include PA-required claims and the investigation focus includes medical necessity and LTCH utilization, supporting review of auth-to-claim enforcement."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T12:17:04.480505+00:00"
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA authorized inpatient and rehab use is climbing",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mentioned",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "policy_relevance": "Reimburses modifier 78 for qualifying unplanned related postoperative returns to the OR, usually at 70%."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_27755390012",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Global Surgical Package",
+        "tags": [],
+        "effective_date": "2023-01-30",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-08007_CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00056",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Modifiers 25 and 57 Evaluation and Management with Global Procedures",
+        "tags": [],
+        "effective_date": "2024-05-22",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifiers%2025%20and%2057%20Evaluation%20and%20Management%20with%20Global%20Procedures.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00090",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Modifier 78",
+        "tags": [],
+        "effective_date": "2025-09-11",
+        "evidence": "Claims billed with modifier 78 are reimbursable when the return to the operating or procedure room is unplanned, related to the original surgery, performed by the same physician, and done during the postoperative period. Payment is generally 70% of the fee schedule or contracted rate, with state and program-specific exceptions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2078.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "78"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "unplanned return",
+            "same physician",
+            "postoperative period"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid",
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "Colorado not subject to policy",
+            "Florida no reimbursement reduction",
+            "Florida anesthesia claims allowed",
+            "Florida same physician or group",
+            "Indiana intraoperative percent of MPFSDB",
+            "Iowa intraoperative percent of MPFSDB",
+            "Kansas intraoperative percent of MPFSDB",
+            "Missouri 100% fee schedule",
+            "New York 100% fee schedule",
+            "West Virginia 100% fee schedule"
+          ],
+          "provider_role_restrictions": [
+            "Same physician required"
+          ],
+          "exemptions": [
+            "Colorado",
+            "Florida",
+            "Indiana",
+            "Iowa",
+            "Kansas",
+            "Missouri",
+            "New York",
+            "West Virginia",
+            "Medicare Advantage"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': Modifier 78 governs unplanned return-to-operating-room procedure billing in the postoperative surgical period, which is a different clinical area from the inpatient/rehab DRGs listed (aftercare, UTI, and metabolic/nutritional disorders)."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00122",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Global Surgical Package",
+        "tags": [],
+        "effective_date": "2025-06-03",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Global%20Surgical%20Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 10,
+    "policies_successful": 10,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Add a California Medicaid allow-with-conditions edit so cesarean-related postoperative return claims are reimbursed only when modifier 78 is billed for an unplanned return by the same physician during the postoperative period; exempt Medicare Advantage. Apply to California Medicaid. Exempt: Medicare Advantage.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Modifier 78: \"78\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Modifier 78: \"unplanned return\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Modifier 78: \"same physician\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Modifier 78: \"postoperative period\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Modifier 78: \"Medicaid\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Modifier 78: \"Medicare Advantage\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Modifier 78 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2078.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA authorized inpatient and rehab use is climbing",
+    "pattern_rank": 3,
+    "pattern_title": "CA authorized inpatient and rehab use is climbing",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Kidney and Urinary Tract Infections without MCC",
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "10 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "6/10 policies quarantined (60%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "1/10 policies warning-flagged (10%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "6 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00026:Consultations, RP_GBD_ELV_INTERNAL_00110:Split-Care Surgical Modifiers, RP_GBD_HUM_00152:Modifiers 54 55 and 56, RP_GBD_UHC_00149:Rebundling and NCCI Edits, Professional, RP_GBD_UHC_00151:Same Day, Same Service Policy, Professional, RP_GBD_UHC_00154:Split Surgical Package Policy, Professional]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "1 policy/ies flagged with contamination warnings (kept in output): [RP_GBD_ELV_INTERNAL_00090:Modifier 78]."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 57126,
+    "output": 26508,
+    "breakdown": {
+      "search_keywords": {
+        "input": 556,
+        "output": 728,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 405,
+        "output": 574,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 47826,
+        "output": 20753,
+        "calls": 10
+      },
+      "relevance_judge": {
+        "input": 3302,
+        "output": 1281,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 855,
+        "output": 568,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 285,
+        "output": 226,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 422,
+        "output": 329,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2234,
+        "output": 1729,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1241,
+        "output": 320,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:51:25.541755+00:00",
+    "end_time": "2026-08-23T17:52:36.575639+00:00",
+    "duration_ms": 71033,
+    "version": "2.0.0"
+  }
+}

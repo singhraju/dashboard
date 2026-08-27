@@ -1,0 +1,212 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R12-202604_3_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R12-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX Not Mapped spend is rising across multiple Medicare products",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "dx_sequencing_rule",
+          "label": "Dx Sequencing Rule",
+          "type": "text"
+        },
+        {
+          "id": "excludes1_edit",
+          "label": "Excludes1 Edit",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "dx_sequencing_rule": "Follow ICD-10-CM principal diagnosis sequencing; R65 requires Excludes1 and possible code-first sequencing.",
+          "excludes1_edit": "Mutually Exclusive"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_UHC_00116",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "This Medicare Advantage reimbursement policy requires correct ICD-10-CM diagnosis coding and sequencing. For sepsis-related category R65, the codes are mutually exclusive under Excludes1 rules, and incorrect principal or primary diagnosis reporting can result in denial of the affected claim or claim line.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis on UB-04",
+            "primary diagnosis on CMS-1500",
+            "Excludes1 pairing prohibited"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: TX Not Mapped spend is rising across multiple Medicare products",
+    "pattern_rank": 3,
+    "pattern_title": "TX Not Mapped spend is rising across multiple Medicare products",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because its sepsis diagnosis-edit scenario is outside the pattern's clinical and spend context."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 9368,
+    "output": 6065,
+    "breakdown": {
+      "search_keywords": {
+        "input": 533,
+        "output": 304,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 391,
+        "output": 568,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 4383,
+        "output": 3239,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 454,
+        "output": 134,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 652,
+        "output": 528,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 274,
+        "output": 295,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1555,
+        "output": 693,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1126,
+        "output": 304,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T18:34:25.157324+00:00",
+    "end_time": "2026-08-23T18:35:11.684801+00:00",
+    "duration_ms": 46527,
+    "version": "2.0.0"
+  }
+}

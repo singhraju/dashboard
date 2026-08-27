@@ -1,0 +1,457 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA maternity costs are being pushed by high-severity C-section cases rather than delivery volume",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_package_status",
+          "label": "Global Package",
+          "type": "badge"
+        },
+        {
+          "id": "separate_pay_conditions",
+          "label": "Separate Pay Conditions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "Bundles",
+          "separate_pay_conditions": "Cigna separately pays 59514/59620 with assistant surgeon modifier; 59510/59618 remain bundled."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "Globally Bundled",
+          "separate_pay_conditions": "Separate payment depends on global component billed, cesarean assistant surgeon rules, and documentation support."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "Bundles",
+          "separate_pay_conditions": "Separate payment requires documentation; assistant cesarean delivery-only claims may pay with appropriate modifier."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "Bundles",
+          "separate_pay_conditions": "Separate pay allowed with supporting diagnoses, modifier 22 documentation, and unrelated/high-risk conditions."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "The maternity package bundles cesarean delivery into the global obstetric package, but a non-global cesarean delivery may be reimbursed separately when billed with an assistant-surgeon modifier. The policy does not address DRG MCC severity.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59514",
+            "59620"
+          ],
+          "related_codes": [
+            "59510",
+            "59618"
+          ],
+          "required_modifiers": [
+            "80",
+            "81",
+            "82",
+            "AS"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "with assistant surgeon modifier"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global Maternity/Obstetric Package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon"
+          ],
+          "exemptions": [
+            "59514",
+            "59620"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "Cesarean delivery global obstetric services are bundled into the global maternity package when antepartum, delivery, and postpartum care are provided by the same provider or group under the same TIN. Overlapping maternity claims may be denied or recouped, and assistant surgeon reimbursement is allowed only for cesarean deliveries when billed with the appropriate modifier.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510"
+          ],
+          "related_codes": [
+            "59400",
+            "59430"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "same claim",
+            "assistant surgeon cesarean"
+          ],
+          "utilization_limits": [
+            "once per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider or group under same TIN",
+            "assistant surgeons only for cesarean delivery"
+          ],
+          "exemptions": [
+            "assistant surgeon cesarean with appropriate modifier"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "2022-09-08",
+        "evidence": "On-topic for cesarean maternity billing. The policy allows global obstetrical reimbursement when all antepartum, delivery, and postpartum components are furnished by the same provider or same TIN, and cesarean delivery is included in the global package rather than paid separately. Overlapping pregnancy claims may be denied or recouped.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510"
+          ],
+          "related_codes": [
+            "59400",
+            "59430"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "same claim cycle"
+          ],
+          "utilization_limits": [
+            "once per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial maternity services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider or same TIN group"
+          ],
+          "exemptions": [
+            "assistant surgeons only for cesarean deliveries"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "This obstetrical policy governs cesarean-related professional billing through global OB codes, delivery-only codes, and delivery-plus-postpartum codes. Routine cesarean delivery components are bundled into the global package, while increased procedural work may be considered only with modifier 22 and supporting documentation. Multiple procedure reductions apply to OB codes with delivery components.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59618",
+            "59514",
+            "59620"
+          ],
+          "related_codes": [
+            "59400",
+            "59610",
+            "59515",
+            "59622",
+            "59409",
+            "59410",
+            "59612",
+            "59510",
+            "59618"
+          ],
+          "required_modifiers": [
+            "22",
+            "25"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "same global OB period",
+            "when increased procedural work is documented",
+            "same claim",
+            "separate and distinct E/M service"
+          ],
+          "utilization_limits": [
+            "single gestation for global OB cesarean codes"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Professional OB"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Same Group Physician and/or Other Qualified Health Care Professional",
+            "assistant surgeon required for non-global cesarean coding"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: In Commercial maternity services, bundle 59510 with 59400 and 59430 once per pregnancy when billed for the same pregnancy and same TIN in the same claim cycle; allow payment outside this edit only for assistant surgeons on cesarean deliveries. Apply to CA. Exempt: assistant surgeons only for cesarean deliveries. Peer: United Health also includes 59510 and 59400 in its Professional OB package, and Elevance external limits 59510 to once per pregnancy for the same pregnancy and same TIN..\n\nRecommendation 2: Allow 59514 and 59620 only on the same claim line with assistant surgeon modifier 80, 81, 82, or AS, using 59510 or 59618 as the related global maternity codes in the Global Maternity/Obstetric Package. Apply to CA. Peer: Cigna and United Health both identify 59514 and 59620 as cesarean target codes, and Cigna limits separate pay to the same claim line with assistant-surgeon modifiers..\n\nRecommendation 3: For 59510, 59618, 59514, and 59620, allow modifier 22 only when increased procedural work is documented, and allow modifier 25 only for a separate and distinct E/M service on the same claim during the same global OB period. Apply to CA. Peer: United Health requires modifier 22 on 59510/59618/59514/59620 only when increased procedural work is documented and modifier 25 only for a separate and distinct E/M service on the same claim during the global OB period..",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59510\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59400\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"59430\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same pregnancy\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same TIN\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"same claim cycle\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"once per pregnancy\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"Commercial maternity services\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004: \"assistant surgeons only for cesarean deliveries\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59514\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59620\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59510\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59618\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"80\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"81\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"82\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"AS\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same claim line\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"with assistant surgeon modifier\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"Global Maternity/Obstetric Package\" [program_scope]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"assistant surgeon\" [provider_role_restrictions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59510\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59618\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59514\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59620\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"22\" [required_modifiers]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"25\" [required_modifiers]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same global OB period\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"when increased procedural work is documented\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same claim\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"separate and distinct E/M service\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Professional OB\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "United Health also includes 59510 and 59400 in its Professional OB package, and Elevance external limits 59510 to once per pregnancy for the same pregnancy and same TIN.",
+        "Cigna and United Health both identify 59514 and 59620 as cesarean target codes, and Cigna limits separate pay to the same claim line with assistant-surgeon modifiers.",
+        "United Health requires modifier 22 on 59510/59618/59514/59620 only when increased procedural work is documented and modifier 25 only for a separate and distinct E/M service on the same claim during the global OB period."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Maternity Services C-19004 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: CA maternity costs are being pushed by high-severity C-section cases rather than delivery volume",
+    "pattern_rank": 7,
+    "pattern_title": "CA maternity costs are being pushed by high-severity C-section cases rather than delivery volume",
+    "cpt_codes_requested": [
+      "O1404"
+    ],
+    "drg_codes_requested": [
+      "Cesarean Section without Sterilization with MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 39894,
+    "output": 30012,
+    "breakdown": {
+      "search_keywords": {
+        "input": 527,
+        "output": 246,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 1468,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 363,
+        "output": 295,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 25859,
+        "output": 21418,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1886,
+        "output": 555,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 1022,
+        "output": 477,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1199,
+        "output": 862,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 366,
+        "output": 94,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4205,
+        "output": 4358,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4029,
+        "output": 239,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T07:16:18.980282+00:00",
+    "end_time": "2026-08-23T07:17:59.999651+00:00",
+    "duration_ms": 101019,
+    "version": "2.0.0"
+  }
+}

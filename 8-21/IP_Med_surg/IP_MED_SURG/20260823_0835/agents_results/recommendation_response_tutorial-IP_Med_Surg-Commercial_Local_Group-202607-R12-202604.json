@@ -1,0 +1,224 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a targeted CA inpatient outlier audit for Stanford Hospital and Hillcrest Medical Center focused on Ungroupable admissions and Heart Transplant or Implant of Heart Assist System without MCC tied to OTHER CIRRHOSIS OF LIVER, CMPL LESION C2 LEVEL C-SPN CORD SUB, and VENTRICULAR TACHYCARDIA UNSPECIFIED, requiring diagnosis and DRG validation, itemized bill review, and prior-authorization enforcement checks, then route validated non-billing outliers to provider contract and site-of-care review.",
+        "evidence": [
+          "CA inpatient outlier growth is concentrated in rare, high-cost admissions.",
+          "Ungroupable diagnoses at Stanford Hospital include OTHER CIRRHOSIS OF LIVER.",
+          "Heart Transplant or Implant of Heart Assist System without MCC occurred at Hillcrest.",
+          "Top cards are flagged repeated_delta_concentration and small_n_admissions.",
+          "Top outlier admissions show pa_required_code as Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a CA acute hospital PPO/HMO audit by PA-required status: route O'CONNOR HOSPITAL admissions to utilization management review for prior-auth confirmation and denial enforcement, route HILLCREST MEDICAL CENTER and HALIFAX HEALTH MEDICAL CENTER OF DAYTONA BEACH to contract-compliance, claims-processing, and site-of-care review, and perform focused diagnosis review for Ungroupable, Medical Back Problems without MCC, and Cervical Spinal Fusion with CC.",
+        "evidence": [
+          "CA PPO authorized acute hospital admissions added about +$5.8M.",
+          "O'CONNOR HOSPITAL added 35 admissions across PPO and HMO.",
+          "HILLCREST MEDICAL CENTER added 12 HMO admissions with higher paid per admit.",
+          "Unit-cost-only pressure added about +$1.3M despite flat or lower admissions.",
+          "Medical Back Problems without MCC concentrated HMO pa_required_code N unit-cost growth."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a CA auth-to-claim validation audit for AUTH_CODE_DISTRIBUTION that tests PA-required mapping, denial enforcement, and claims reprocessing against contractual standards for Aftercare with CC/MCC, Other Digestive System Diagnoses with CC, and HILLCREST MEDICAL CENTER; defer PA or reimbursement policy changes until mismatches are corrected.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION added about +$4.4M; flagged for validation before action.",
+          "Aftercare with CC/MCC accounts for about +$3.5M of the shift.",
+          "HILLCREST MEDICAL CENTER contributes about +$0.4M within the same movement."
+        ],
+        "peer_benchmarking": [
+          "Humana payer summary shows no documented PA status, appeals process, or policy relevance."
+        ],
+        "citation": [
+          "Policy: Humana - N/A"
+        ]
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted LTCH and Physical Rehab post-acute payment-control policy in GA, VA, CA, and IN requiring auth-to-claim matching and denial enforcement, concurrent review and discharge-route escalation, contract review of non-authorized LTCH claims, and itemized bill review for Ungroupable, Aftercare with CC/MCC, and Medical Back Problems without MCC episodes.",
+        "evidence": [
+          "LTCH and Physical Rehab across GA, VA, CA, and IN added about +$7.8M.",
+          "GA POS LTCH ungroupable average paid per admit increased about $695.9K.",
+          "IN PPO LTCH ungroupable claims show non-authorized admissions with very high paid per admit.",
+          "CA PPO Physical Rehab aftercare and back-problem episodes show admissions and paid per admit rising."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused policy and claims audit for authorized PPO acute admissions in KY, CT, MO, and OH to verify prior-auth-to-claim matching, denial enforcement, itemized billing, and contract-compliant reimbursement for Cervical Spinal Fusion with CC, Aftercare with CC/MCC, Ungroupable cases, and HILLCREST MEDICAL CENTER.",
+        "evidence": [
+          "Authorized PPO acute hospital spend increased across CT, IN, KY, MO, NH, NV, VA, OH.",
+          "KY Cervical Spinal Fusion with CC admissions increased.",
+          "CT Cervical Spinal Fusion with CC paid per admit increased.",
+          "MO Ungroupable acute cases showed higher paid per admit.",
+          "HILLCREST MEDICAL CENTER contributed MO acute PPO pressure.",
+          "OH PPO acute signal was unit-cost-led despite fewer admissions."
+        ],
+        "peer_benchmarking": [
+          "Cigna allows separate reimbursement only with documented corpectomy-level vertebral body resection.",
+          "Emblem Health found no separate pay rule beyond grouper status assignment."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a NY cervical spine episode policy review for SPINAL STENOSIS CERVICAL REGION and OTH SPONDYLS RADICULOPATHY CERV RGN tied to Cervical Spinal Fusion with CC, with EPO ACUTE HOSPITAL review of elective inpatient and site-of-care appropriateness, authorization-to-claim matching for PA-required non-ER cases, initial and concurrent review KPIs, and contract-compliant payment for related Aftercare with CC/MCC.",
+        "evidence": [
+          "NY cervical spine patterns added about +$4.5M.",
+          "Spinal stenosis cervical region showed more admissions and higher paid per admit.",
+          "Other cervical radiculopathy admissions increased within Cervical Spinal Fusion with CC.",
+          "NY EPO acute hospital fusion claims were PA-required and non-ER.",
+          "Aftercare with CC/MCC also increased in NY EPO acute hospital."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health uses ambulatory surgical grouper revenue code rules for cervical spine fusion."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a targeted provider-level review for MANNING FAMILY CHILDREN'S CT PPO CHILDRENS Y, HARRISON COUNTY HOSPITAL IN PPO CRITICAL ACCESS Y, and GA POS ACUTE HOSPITAL Cervical Spinal Fusion with CC to verify authorization-denial enforcement and claims processing, perform itemized bill review on large claims, assess CAH admission root causes, and evaluate contract or site-of-care remediation for persistent outlier unit cost.",
+        "evidence": [
+          "Small-volume outliers across CT, IN, NY, and GA added about +$1.9M.",
+          "Rare CT, IN, and NY clinical outliers added about +$0.8M.",
+          "MANNING FAMILY CHILDREN'S CT PPO CHILDRENS Y added +$0.4M with 7 more admissions.",
+          "HARRISON COUNTY HOSPITAL IN PPO CRITICAL ACCESS Y added +$65.5K from 5 admissions.",
+          "GA POS acute Cervical Spinal Fusion with CC added +$595.3K with 9 admissions.",
+          "Operational cards show pa_required_code Y and auth_dimension_present flags."
+        ],
+        "peer_benchmarking": [
+          "Cigna: no DRG-specific adjudication; only general reimbursement edit policies apply.",
+          "United Health: no relevant DRG policy; CPT 69990 reimbursed only with specified allowed services."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a CA episode-management policy review at St. Joseph's Hospital and Medical Center and Dominican Hospital for Aftercare with CC/MCC and Medical Back Problems without MCC admissions tied to ENC SURG AFTRCARE FLW SURG CIRC SYS, SPINAL STENOSIS LUMBAR REGION NO NC, and IV DISC D/O W/RADICULOPATHY LUMB to confirm prior authorization, inpatient level-of-care necessity, concurrent review performance, discharge planning, and site-of-care appropriateness.",
+        "evidence": [
+          "CA lower-acuity spine and aftercare cases added about +$1.2M.",
+          "Post-surgical circulatory aftercare added about +$0.4M with 3 more admissions.",
+          "Lumbar stenosis and lumbar disc/radiculopathy together added about +$0.3M with 7 more admissions.",
+          "All highlighted source cards show pa_required_code = Y.",
+          "St. Joseph's and Dominican Hospital are the rendering providers on concentrated source cards."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in rare and unclassifiable diagnoses, and the recommended next step explicitly calls for diagnosis and DRG validation to distinguish valid catastrophic cases from miscoding.; IP MedSurg (DNE) Trend 4: A narrow set of inpatient DRGs/services is driving the increase, including Ungroupable, heart transplant/heart assist, intracranial vascular procedures, and percutaneous cardiovascular procedures.; IP MedSurg (DNE) Trend 1: The outlier spend is clustered within a limited provider subset, with specific high-cost episodes called out at providers such as Stanford Hospital and Hillcrest Medical Center.; IP MedSurg (DNE) Trend 2: This is a small-number, case-level pattern where a few admissions likely tied to a few members are creating a large share of the variance, making member-level isolation relevant.; IP MedSurg (DNE) Trend 10: Because several cases are ungroupable or unusually high paid per admit, reimbursement-method validation is a relevant secondary check after clinical and coding review to confirm correct payment logic."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is clearly concentrated in a subset of acute hospital providers, especially O'CONNOR HOSPITAL for admission growth and HILLCREST MEDICAL CENTER/HALIFAX HEALTH MEDICAL CENTER OF DAYTONA BEACH for paid-per-admit pressure.; IP MedSurg (DNE) Trend 8: Authorization mix is a core part of the pattern: authorized acute hospital admissions account for most of the increase, and the recommended next step explicitly calls for review by PA status and auth-to-claim consistency.; IP MedSurg (DNE) Trend 10: Unit-cost pressure is material, with paid per admit rising sharply at concentrated providers, making reimbursement method and contractual payment review highly relevant.; IP MedSurg (DNE) Trend 6: The pattern is partly utilization-led, with admissions rising meaningfully in CA acute hospital, so a utilization management KPI/PAV review fits the need to assess avoidable volume growth and UM controls.; IP MedSurg (DNE) Trend 3: Although this is not a single-diagnosis problem, there is still meaningful concentration in specific DRGs such as Medical Back Problems without MCC, Cervical Spinal Fusion with CC, and Ungroupable, so diagnosis-level review is a secondary but relevant parent rule."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best direct fit: the pattern is explicitly an AUTH_CODE_DISTRIBUTION and PA-required status validation issue, and the recommended next step is to reconcile auth-to-claim mapping before any business action.; IP MedSurg (DNE) Trend 9: The pattern explicitly raises the possibility of claim mapping, classification, or reprocessing changes, which aligns with reviewing claims processing and claim status behavior.; IP MedSurg (DNE) Trend 1: Variance is partly isolated to specific providers, especially HILLCREST MEDICAL CENTER, so provider-level concentration is relevant as a parent rule.; IP MedSurg (DNE) Trend 3: A major share of the movement is concentrated in specific DRGs/diagnosis groupings such as Aftercare with CC/MCC and Other Digestive System Diagnoses with CC.; IP MedSurg (DNE) Trend 10: Reimbursement policy changes are specifically mentioned as something to delay until validation is complete, making reimbursement-method review a secondary follow-up if mapping does not explain the shift."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is highly concentrated in a narrow set of inpatient post-acute services/sites of care\u2014LONG TERM CARE HOSPITAL and Physical Rehab\u2014making service-driver review the strongest parent rule match.; IP MedSurg (DNE) Trend 6: The pattern is described as a level-of-care and utilization management issue, with avoidable post-acute spend tied to admission criteria, length of stay, and discharge management, which aligns with reviewing UM KPI/PAV drivers.; IP MedSurg (DNE) Trend 8: Authorization is explicitly present in the pattern, including both authorized and non-authorized LTCH cases, so auth-to-claim enforcement is directly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit is materially elevated in several LTCH/rehab segments, suggesting reimbursement method and contractual payment logic should be reviewed alongside utilization.; IP MedSurg (DNE) Trend 7: The recommended next step focuses on discharge pathway and steering members to lower-cost post-acute settings, which fits admission/discharge source-location review."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: All major source cards are authorized (pa_required_code = Y) and explicitly tagged with auth-to-claim validation, making authorization enforcement and auth-to-claim matching a primary parent rule.; IP MedSurg (DNE) Trend 10: The pattern includes meaningful paid-per-admit increases, especially the OH unit-cost-led signal and high-cost MO cases, so reimbursement method review is highly relevant.; IP MedSurg (DNE) Trend 4: Variance is concentrated in a narrow set of acute inpatient DRGs/services such as Cervical Spinal Fusion with CC, Aftercare with CC/MCC, and Ungroupable admissions, indicating strong service-level concentration.; IP MedSurg (DNE) Trend 1: The pattern is not purely market-wide noise; specific providers such as HILLCREST MEDICAL CENTER are called out, and the recommended action is a state-by-state provider review.; IP MedSurg (DNE) Trend 6: The pattern shows both higher admissions and higher paid per admit across authorized inpatient acute cases, and the narrative explicitly frames this as a portable utilization management and inpatient appropriateness opportunity."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Variance is highly concentrated in specific cervical diagnoses\u2014spinal stenosis and cervical radiculopathy\u2014which are the main clinical drivers of the increase.; IP MedSurg (DNE) Trend 4: The growth is centered on a narrow inpatient service family: cervical spinal fusion and related aftercare, making service-level review directly relevant.; IP MedSurg (DNE) Trend 10: The operational signal includes materially higher paid per admit in NY EPO acute hospital, and the recommended next step explicitly calls for payment/reimbursement review.; IP MedSurg (DNE) Trend 8: The pattern includes PA-required admissions and an auth-related operational flag, so reviewing whether authorization controls are being enforced appropriately is relevant.; IP MedSurg (DNE) Trend 7: These are non-ER cervical spine surgical admissions with concern for surgical appropriateness and inpatient criteria, aligning with review of elective case mix and admission source/location."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small set of named providers and facility types such as MANNING FAMILY CHILDREN'S, HARRISON COUNTY HOSPITAL, CHILDRENS, CRITICAL ACCESS, and select acute hospitals, making provider-level investigation the strongest parent rule fit.; IP MedSurg (DNE) Trend 3: Several emerging costs are tied to rare or new diagnoses, including BREAKDOWN VENTRICULAR IC SHUNT INIT, TYPE 2 DM W/FOOT ULCER, and other uncommon clinical outliers, so diagnosis-level isolation is highly relevant.; IP MedSurg (DNE) Trend 4: The variance is also concentrated in a narrow set of inpatient DRGs/services such as Craniotomy and Endovascular Intracranial Procedures with CC and Cervical Spinal Fusion with CC, supporting service-driver review.; IP MedSurg (DNE) Trend 8: Operational cards repeatedly show pa_required_code = Y, auth_dimension_present flags, and business terms including auth-to-claim validation, indicating authorization enforcement and match review are directly relevant.; IP MedSurg (DNE) Trend 10: The pattern includes mixed unit-cost pressure and provider-specific facility outliers, with routing to reimbursement policy and network financial review, so reimbursement method and contractual payment logic should be assessed."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is explicitly concentrated in a narrow diagnosis cluster\u2014post-surgical aftercare plus lumbar spinal stenosis and lumbar disc/radiculopathy\u2014rather than broad inpatient growth, making diagnosis-level isolation the strongest parent rule fit.; IP MedSurg (DNE) Trend 4: The recommended next step is an episode-pattern review to confirm care is being managed in the right setting and duration, which aligns directly with reviewing service drivers for aftercare, rehab, and lower-acuity spine admissions.; IP MedSurg (DNE) Trend 6: Admissions and paid per admit are both rising, and the narrative calls out avoidable inpatient follow-up, longer stays, and poorly managed post-surgical pathways\u2014classic signals to review UM KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 1: The increase appears concentrated at a limited provider set, including St. Joseph's Hospital and Medical Center and Dominican Hospital, suggesting provider-specific practice patterns or local pathway issues may be contributing.; IP MedSurg (DNE) Trend 7: Lower-acuity spine and post-surgical aftercare episodes are often sensitive to elective pathway design and discharge destination, so reviewing admission/discharge source and location is relevant to whether these cases belonged in inpatient care."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T08:56:26.108268+00:00"
+  }
+}

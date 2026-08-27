@@ -1,0 +1,360 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX acute hospital spend is being driven by a handful of very high-cost IP Med/Surg cases",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "code_mentioned",
+          "label": "Code Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "reimbursement_rule",
+          "label": "Reimbursement Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "code_mentioned": "-",
+          "reimbursement_rule": "Denies provider-preventable conditions; removes HCAC POA charges/days from DRG unless contracts require otherwise."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "code_mentioned": "Mentioned",
+          "reimbursement_rule": "Covers one weekly amylase or lipase for symptomatic initial acute pancreatitis; excludes others."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "code_mentioned": "Mentioned",
+          "reimbursement_rule": "Initial acute pancreatitis lipase covered weekly with symptoms; same-day serum/urinary amylase not reimbursed."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "General inpatient provider-preventable-condition policy. For inpatient facility claims, POA indicators are required, HCAC-related charges and days are removed from DRG payment, and wrong-body-part, wrong-patient, or wrong-surgery events are denied or rejected. No code-specific rule for the analyzed code.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA required on diagnoses"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG",
+            "Inpatient facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "CAHs",
+            "LTACs",
+            "Maryland Waiver Hospitals",
+            "Cancer hospitals",
+            "Children's inpatient facilities",
+            "Religious non-medical institutions",
+            "Inpatient psychiatric hospitals",
+            "Inpatient rehabilitation facilities",
+            "VA/DoD hospitals"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00056",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Pancreatic Enzyme Testing for Acute Pancreatitis",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "Lipase is reimbursable for initial acute pancreatitis diagnosis when symptoms are present, but it is limited to once per week and is not covered in chronic pancreatitis, asymptomatic screening, or other unsupported situations.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea98",
+        "edit_rule_facts": {
+          "target_codes": [
+            "83690",
+            "82150",
+            "83519",
+            "83520",
+            "83529",
+            "84145",
+            "86140",
+            "86141"
+          ],
+          "related_codes": [
+            "82150",
+            "83690",
+            "83529",
+            "84145",
+            "86140",
+            "86141",
+            "83520"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "initial diagnosis of acute pancreatitis",
+            "same claim line with lipase"
+          ],
+          "utilization_limits": [
+            "once per week"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "Jurisdiction-specific LCDs apply"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "chronic pancreatitis",
+            "asymptomatic general exam without abnormal findings",
+            "applicable LCD jurisdictions"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01825",
+        "payer_name": "United Health",
+        "policy_title": "Enzyme Testing for Acute Pancreatitis Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-03-03",
+        "evidence": "Conditionally reimbursable lipase test for initial acute pancreatitis determination, subject to symptom criteria and a weekly frequency limit.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Enzyme-Testing-Acute-Pancreatitis-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "83690",
+            "82150",
+            "83519",
+            "83520",
+            "83529",
+            "84145",
+            "86140"
+          ],
+          "related_codes": [
+            "83690"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "once per week"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle",
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: TX acute hospital spend is being driven by a handful of very high-cost IP Med/Surg cases",
+    "pattern_rank": 4,
+    "pattern_title": "TX acute hospital spend is being driven by a handful of very high-cost IP Med/Surg cases",
+    "cpt_codes_requested": [
+      "I2699",
+      "K8510",
+      "K8590"
+    ],
+    "drg_codes_requested": [
+      "Disorders of Pancreas Except Malignancy with MCC",
+      "Lower Extremity and Humerus Procedures Except Hip, Foot, Femur with MCC",
+      "Pulmonary Embolism without MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they address California policies unrelated to the pattern's Texas inpatient Med/Surg high-cost case scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 31633,
+    "output": 40031,
+    "breakdown": {
+      "search_keywords": {
+        "input": 557,
+        "output": 1050,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 448,
+        "output": 7148,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 465,
+        "output": 767,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 18993,
+        "output": 25124,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1558,
+        "output": 704,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 930,
+        "output": 644,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 989,
+        "output": 637,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 399,
+        "output": 191,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3627,
+        "output": 3345,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3667,
+        "output": 421,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:20:35.702686+00:00",
+    "end_time": "2026-08-23T19:22:26.130394+00:00",
+    "duration_ms": 110427,
+    "version": "2.0.0"
+  }
+}

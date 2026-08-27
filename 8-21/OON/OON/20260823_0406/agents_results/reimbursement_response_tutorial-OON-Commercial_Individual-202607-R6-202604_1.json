@@ -1,0 +1,450 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_1_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT PPO residential behavioral health is rising through higher volume and higher paid per case",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "site_scope",
+          "label": "Site Scope",
+          "type": "text"
+        },
+        {
+          "id": "sud_exclusion",
+          "label": "SUD Exclusion",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_scope": "Professional and facility claims broadly; inpatient DRG/case-rate facilities included, excluding substance abuse admissions.",
+          "sud_exclusion": "Excludes SUD"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_scope": "Applies to routine outpatient only; bundled with inpatient, rehab, PHP, and facility-based IOP.",
+          "sud_exclusion": "Not Covered"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_scope": "Allows office/home OUD services; OTP billing requires POS 58; no DRG inpatient/residential rule.",
+          "sud_exclusion": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_scope": "-",
+          "sud_exclusion": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00044",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Standards for Episodes of Care C-20003",
+        "tags": [],
+        "effective_date": "2025-07-23",
+        "evidence": "Off-topic for this pattern. The policy is a general documentation-standards rule for episodes of care and does not contain a DRG-specific reimbursement rule for alcohol/drug abuse or dependence claims.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Documentation%20Standards%20for%20Episodes%20of%20Care%20C-20003.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "timely entry should not exceed 30 days",
+            "signature date within 30 days of service"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "California: recorded start and stop times required for time-based procedures due to delayed implementation",
+            "Virginia: recorded start and stop times required for time-based procedures due to delayed implementation; facility providers are not subject to this policy"
+          ],
+          "provider_role_restrictions": [
+            "Each entry must include author identification of the physician, other qualified health care provider, or supervising provider"
+          ],
+          "exemptions": [
+            "provider, state, or federal contracts and/or requirements"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00085",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions C-17002",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The policy does not name this DRG, but it does exclude admissions for substance abuse and rehabilitation from the inpatient readmissions rule. The general readmission denial logic applies only to covered inpatient DRG or case-rate facilities and does not separately reimburse unplanned 30-day same or related readmissions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Inpatient%20Readmissions%20C-17002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge",
+            "same or related diagnoses",
+            "same facility agreement",
+            "same tax identification number",
+            "common ownership"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Case rate"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "substance abuse admissions",
+            "rehabilitation admissions",
+            "cancer admissions",
+            "transplant admissions",
+            "transfer from another facility",
+            "against medical advice",
+            "planned readmissions",
+            "leave of absence"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00019",
+        "payer_name": "Emblem Health",
+        "policy_title": "Drug Alcohol Testing (Commercial/Medicaid)",
+        "tags": [],
+        "effective_date": "2020-07-01",
+        "evidence": "Off-topic for the requested DRG pattern. This policy governs outpatient drug and alcohol testing limits, specimen validity testing, and related billing rules, not residential behavioral health DRG adjudication.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/drug-alcohol-testing-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595710203",
+        "payer_name": "Point32Health",
+        "policy_title": "Opioid Use Disorder (OUD) Services and Medication Assisted Treatment (MAT)",
+        "tags": [],
+        "effective_date": "06/2026",
+        "evidence": "The policy does not address DRG-based inpatient reimbursement for this alcohol/drug dependence DRG. It instead covers medically necessary opioid use disorder treatment and medication assisted treatment services, including specific CPT/HCPCS billing and OTP rules.",
+        "policy_url": "https://wwwassets.point32health.org/documents/ort-mat-thpp-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595730201",
+        "payer_name": "Point32Health",
+        "policy_title": "Urine Drug Testing",
+        "tags": [],
+        "effective_date": "12/01/2025",
+        "evidence": "Off-topic for the requested DRG pattern. This policy addresses medically necessary urine drug testing and does not set reimbursement rules for the DRG/residential behavioral health scenario described.",
+        "policy_url": "https://wwwassets.point32health.org/documents/urine-drug-testing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595760203",
+        "payer_name": "Point32Health",
+        "policy_title": "Outpatient Behavioral Health & Substance Use Disorder",
+        "tags": [],
+        "effective_date": "07/2026",
+        "evidence": "This outpatient behavioral health and substance use disorder policy does not address the requested inpatient/residential DRG pattern. It governs professional outpatient services, not DRG-based residential behavioral health payment.",
+        "policy_url": "https://wwwassets.point32health.org/documents/bh-sud-outpt-sp-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00040",
+        "payer_name": "United Health",
+        "policy_title": "Drug Testing Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Drug-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 8,
+    "policies_successful": 8,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For California cesarean-delivery inpatient claims paid under 'DRG' or 'Case rate', apply a readmission edit only when the episode satisfies Elevance\u2019s pairing conditions 'within 30 days of discharge', for 'same or related diagnoses', and within the policy\u2019s '30-day readmission window', using the listed facility linkage conditions 'same facility agreement', 'same tax identification number', and 'common ownership'; exclude 'substance abuse admissions', 'rehabilitation admissions', 'cancer admissions', 'transplant admissions', 'transfer from another facility', 'against medical advice', 'planned readmissions', and 'leave of absence'. Apply to California. Exempt: substance abuse admissions, rehabilitation admissions, cancer admissions, transplant admissions, transfer from another facility, against medical advice, planned readmissions, leave of absence.\n\nRecommendation 2: In California cesarean-delivery episodes, deny or pend any time-based professional procedure claim unless the documentation includes 'recorded start and stop times', 'timely entry should not exceed 30 days', the 'signature date within 30 days of service', and 'Each entry must include author identification of the physician, other qualified health care provider, or supervising provider'; carve out 'provider, state, or federal contracts and/or requirements'. Apply to California. Exempt: provider, state, or federal contracts and/or requirements.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"within 30 days of discharge\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"same or related diagnoses\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"same facility agreement\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"same tax identification number\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"common ownership\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"30-day readmission window\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"Case rate\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"substance abuse admissions\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"rehabilitation admissions\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"cancer admissions\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"transplant admissions\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"transfer from another facility\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"against medical advice\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"planned readmissions\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"leave of absence\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Documentation Standards for Episodes of Care C-20003: \"timely entry should not exceed 30 days\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Documentation Standards for Episodes of Care C-20003: \"signature date within 30 days of service\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Documentation Standards for Episodes of Care C-20003: \"California: recorded start and stop times required for time-based procedures due to delayed implementation\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 Documentation Standards for Episodes of Care C-20003: \"Each entry must include author identification of the physician, other qualified health care provider, or supervising provider\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Documentation Standards for Episodes of Care C-20003: \"provider, state, or federal contracts and/or requirements\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Inpatient%20Readmissions%20C-17002.pdf",
+        "Elevance Health (internal) \u00b7 Documentation Standards for Episodes of Care C-20003 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Documentation%20Standards%20for%20Episodes%20of%20Care%20C-20003.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: CT PPO residential behavioral health is rising through higher volume and higher paid per case",
+    "pattern_rank": 1,
+    "pattern_title": "CT PPO residential behavioral health is rising through higher volume and higher paid per case",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+    ],
+    "total_policies_found": 8,
+    "successful_extractions": 8,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 8 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/8 policies quarantined (12%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00106:Prescription Medication and Illicit Drug Testing in Outpatient Setting (LBM)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 80069,
+    "output": 24532,
+    "breakdown": {
+      "search_keywords": {
+        "input": 529,
+        "output": 320,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 711,
+        "output": 1412,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 67934,
+        "output": 14687,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 3122,
+        "output": 1202,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 1063,
+        "output": 1432,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 913,
+        "output": 834,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 388,
+        "output": 230,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2533,
+        "output": 2786,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2876,
+        "output": 1629,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:12:52.562966+00:00",
+    "end_time": "2026-08-23T05:14:25.242125+00:00",
+    "duration_ms": 92679,
+    "version": "2.0.0"
+  }
+}

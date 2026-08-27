@@ -1,0 +1,234 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CO Commercial Local Group inpatient policy audit for PPO CHILDRENS PA=Y, EPO ACUTE HOSPITAL PA=N, and PPO ACUTE HOSPITAL PA=Y to confirm prior-authorization and denial enforcement, validate no-PA contract overrides, verify hospital claims processed per contract, and escalate outlier facility/provider unit costs for contract remediation or site-of-care review.",
+        "evidence": [
+          "PPO CHILDRENS PA=Y added $1.5M; admissions and paid per admit increased.",
+          "EPO ACUTE HOSPITAL PA=N added $1.3M; admissions and paid per admit increased.",
+          "PPO ACUTE HOSPITAL PA=Y spend rose despite fewer admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Complete case-level clinical, attribution, and claims-adjudication validation for heart transplant/heart-assist, pancreas, and pulmonary edema/respiratory failure inpatient outliers in CO, OH, and UNATTRIBUTED at UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, THE QUEEN'S MEDICAL CENTER, and UPMC PASSAVANT; confirm PA-required cases, interim and first claims are zeroed out, and final bills are adjudicated per contract.",
+        "evidence": [
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL: one heart-transplant admission added about $1.5M.",
+          "THE QUEEN'S MEDICAL CENTER: two heart-assist admissions added about $0.5M.",
+          "UPMC PASSAVANT respiratory-failure cases added about $46K across two admissions.",
+          "Pattern includes UNATTRIBUTED spend and flags repeated_delta_concentration and small_n_admissions."
+        ],
+        "peer_benchmarking": [
+          "Fallon Health requires prior authorization for Ventricular Assist Devices.",
+          "AmeriHealth Caritas reports no special authorization rules for the requested DRGs."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a NY Commercial Local Group acute-hospital provider-and-diagnosis audit that confirms prior authorization where required, audits denial enforcement and authorization-to-claim matching for PPO digestive MCC admissions and PPO/EPO postpartum/postabortion admissions, and evaluates provider-specific contract or site-of-care action for NEW YORK-PRESBYTERIAN COLUMBIA UNIVERSITY MEDICAL CENTER and LONG ISLAND JEWISH MEDICAL CENTER involving ULCER OF INTESTINE and EXOMPHALOS.",
+        "evidence": [
+          "NY PPO acute hospital digestive MCC added about $0.4M.",
+          "Postpartum/postabortion diagnoses added about $0.2M in NY PPO.",
+          "ULCER OF INTESTINE added about $0.5M across 3 admissions.",
+          "EXOMPHALOS added about $0.4M across 3 admissions.",
+          "Digestive spike concentrated at NEW YORK-PRESBYTERIAN COLUMBIA UNIVERSITY MEDICAL CENTER.",
+          "Postpartum PPO increase included LONG ISLAND JEWISH MEDICAL CENTER.",
+          "Operational digestive and postpartum PPO cards were PA-required."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health denies overlapping maternity claims once per pregnancy, including postpartum overlaps.",
+          "Emblem Health bundles postpartum care for 42 days and denies incompatible gestation-age coding combinations.",
+          "United Health applies 42-day global OB edits to delivery-related and postpartum E/M services."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Route CA, CO, and NY inpatient claims to claims processing for facility remap and PA=Y/PA=N auth-to-claim reconciliation, focusing on Not Mapped and AUTH_CODE_DISTRIBUTION records tied to UC IRVINE MEDICAL CENTER, UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, and LONG ISLAND JEWISH MEDICAL CENTER, then rerun UM review after correction.",
+        "evidence": [
+          "CO PPO PA=Y claims shifted into Not Mapped at UCHEALTH UNIVERSITY OF COLORADO HOSPITAL.",
+          "CA PPO and HMO Not Mapped claims concentrate at UC IRVINE MEDICAL CENTER.",
+          "NY postpartum claims show AUTH_CODE_DISTRIBUTION and require validation before action.",
+          "Pattern states classification must be fixed before broader business action."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal): Global OB package bundles maternity care; overlapping postpartum claims may deny or recoup.",
+          "Emblem Health: Denies separate payment when Z3A is paired with postpartum diagnoses."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a CA inpatient provider-and-diagnosis review for Stanford Hospital, Sutter Memorial Medical Center, and UC Irvine Medical Center across OTH PULM EMBO W/O AC COR PULMONALE, PYONEPHROSIS, Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC, and BLOODSTREAM INF D/T CVC INITIAL; confirm ER admission source, prior authorization status for PA-required admissions, and POA/HAC documentation before broader policy changes.",
+        "evidence": [
+          "OTH PULM EMBO W/O AC COR PULMONALE concentrated at Stanford Hospital.",
+          "PYONEPHROSIS concentrated at Sutter Memorial Medical Center with higher paid per admit.",
+          "UC Irvine rare surgical case was flagged small_n and low_volume_run.",
+          "Central-line bloodstream infection appears in CA rare circulatory case group."
+        ],
+        "peer_benchmarking": [
+          "Elevance requires POA indicators on all inpatient diagnoses and may request records affecting DRG/HAC payment.",
+          "Elevance internal policy says POA=N may trigger HAC denials or DRG reduction.",
+          "Humana requires documented thrombosis or ischemia history for thrombosis-related denials."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform itemized bill, prior authorization-to-claim, and contract compliance review for OH PPO ACUTE HOSPITAL PA=Y inpatient claims at THE QUEEN'S MEDICAL CENTER and UPMC PASSAVANT, then reprocess mismatches and assess site-of-care or contract remediation for Pulmonary Embolism with MCC or Acute Cor Pulmonale and postpartum admissions.",
+        "evidence": [
+          "OH PPO acute hospital authorized inpatient spend is concentrated in few providers.",
+          "THE QUEEN'S MEDICAL CENTER is a named high-cost provider.",
+          "UPMC PASSAVANT is a named high-cost provider.",
+          "Pulmonary embolism and postpartum episodes contribute to the increase.",
+          "Source cards include auth-to-claim validation and unit cost business terms."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal): no documented policy relevance or appeals process listed.",
+          "Paramount Healthcare: no documented policy relevance or appeals process listed."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a targeted CA PPO ACUTE HOSPITAL inpatient review to confirm prior authorization and denial enforcement for Other Digestive System Diagnoses with MCC and Pulmonary Embolism with MCC or Acute Cor Pulmonale, and validate contractual claims processing at THE QUEEN'S MEDICAL CENTER.",
+        "evidence": [
+          "Digestive MCC added 7 admissions in CA PPO ACUTE HOSPITAL.",
+          "Pulmonary embolism added 4 admissions in CA PPO ACUTE HOSPITAL.",
+          "Both acute hospital DRGs have pa_required_code Y and auth-to-claim validation.",
+          "THE QUEEN'S MEDICAL CENTER had unit-cost-led increase with no admission change."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal: inpatient claims require POA indicators, admission documentation, and possible additional PPC records.",
+          "Elevance external: inpatient claims may undergo clinical review and require diagnosis POA indicators."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require an NY OB postpartum preeclampsia episode review at Long Island Jewish Medical Center for Postpartum and Postabortion Diagnoses without O.R. Procedures, with diagnosis-specific review of SEVERE PRE-ECLAMP COMP PUERPERIUM and UNSPEC PRE-ECLAMP COMP PUERPERIUM, same-facility repeat-admission screening, transition-of-care discharge planning, and maternal care-navigation outreach.",
+        "evidence": [
+          "Severe and unspecified puerperium preeclampsia are the key driver diagnoses.",
+          "Both source cards identify Long Island Jewish Medical Center.",
+          "Severe preeclampsia in puerperium is primarily a volume story.",
+          "Unspecified preeclampsia in puerperium adds a smaller intensity component.",
+          "Both source cards carry repeated_delta_concentration flags."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health internal summary notes readmission denies and excludes OB.",
+          "Fidelis Care summary shows no documented pattern mention or OB exclusion."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the PA-driven pattern: spend rose across PA=Y and PA=N segments, the cards are flagged with auth_dimension_present, and the recommended next step explicitly calls for confirming PA policy performance and reviewing no-PA admission rules.; IP MedSurg (DNE) Trend 10: Highly relevant for the clear unit-cost inflation signal, especially PPO ACUTE HOSPITAL where spend increased despite 16 fewer admissions because paid per admit rose; this aligns with reviewing reimbursement method and repricing hospital payments.; IP MedSurg (DNE) Trend 6: The pattern is partly a utilization management issue, not just price: PPO CHILDRENS with PA and EPO ACUTE HOSPITAL without PA both had admissions growth, so reviewing UM KPIs/PAV is appropriate for admission rule performance and avoidable variance.; IP MedSurg (DNE) Trend 1: Variance is concentrated in specific inpatient provider/facility subsets in CO, including CHILDRENS and ACUTE HOSPITAL settings and likely specific hospital systems, making provider-level behavior or contractual change review important.; IP MedSurg (DNE) Trend 4: The business story is a facility and service mix issue within inpatient care, with CHILDRENS versus ACUTE HOSPITAL splits and high-cost inpatient service intensity contributing to the increase, so service-driver review is relevant."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is concentrated in a small set of providers and sites, including UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, THE QUEEN'S MEDICAL CENTER, and UPMC PASSAVANT, making provider-level isolation a primary parent rule.; IP MedSurg (DNE) Trend 3: The spend increase is tied to a narrow diagnosis set such as coronary artery dissection, heart-failure-related diagnoses, pancreatitis, and respiratory failure, so diagnosis concentration is highly relevant.; IP MedSurg (DNE) Trend 4: The pattern is driven by a few specific inpatient DRGs/services, especially heart transplant/heart assist system cases and pulmonary edema/respiratory failure, indicating service-level concentration rather than a broad utilization trend.; IP MedSurg (DNE) Trend 2: The pattern reflects only a handful of catastrophic admissions with small-n volume, so variance is likely isolated to very few members/cases and warrants case-level review before broader conclusions.; IP MedSurg (DNE) Trend 9: The recommendation explicitly calls for claims validation and attribution review, and the presence of unattributed spend makes claim status/processing validation an important parent rule to test."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 23,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The largest share of the increase is concentrated in digestive inpatient diagnoses, especially Other Digestive System Diagnoses with MCC and the rare high-cost diagnoses ULCER OF INTESTINE and EXOMPHALOS.; IP OB Dlvry Well NB (DNE) Trend 3: Postpartum and postabortion diagnoses are a repeated driver in NY acute hospital spend across PPO and smaller EPO pockets, indicating diagnosis-specific OB variance.; IP MedSurg (DNE) Trend 8: Key digestive operational cards are PA-required and the recommendation explicitly calls for reviewing authorization and concurrent review rules, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 1: The rare digestive spike is concentrated at a specific NY acute hospital provider, supporting a provider-subset review for case management, coding, or contract effects.; IP OB Dlvry Well NB (DNE) Trend 6: Postpartum inpatient pressure includes real admission growth and calls for targeted episode management, so reviewing utilization management KPIs/PAV is relevant for the OB portion of the pattern."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the auth-code movement and PA=Y/PA=N shifts. The pattern is explicitly flagged for auth-to-claim validation and requires validation before UM action.; IP MedSurg (DNE) Trend 9: The dominant issue is facility values landing in 'Not Mapped' plus attribution/classification problems, which aligns with reviewing claims processing or reprocessing before interpreting utilization or cost signals.; IP MedSurg (DNE) Trend 1: Large portions of the delta are concentrated in a small provider subset, especially UC IRVINE MEDICAL CENTER and UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, making provider-level investigation highly relevant.; IP OB Dlvry Well NB (DNE) Trend 8: The NY postpartum increase is specifically an AUTH_CODE_DISTRIBUTION issue within an OB-related inpatient slice, so OB auth-to-claim matching is the most relevant parent rule for that component.; IP OB Dlvry Well NB (DNE) Trend 9: The NY postpartum signal has no reliable utilization or unit-cost interpretation yet and is explicitly a coding validation issue, which fits claims processing/status review before business action."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Strongest fit because the variance is clearly concentrated in a small set of diagnoses driving the case-mix shift, especially pulmonary embolism diagnoses, pyonephrosis, and rare complex diagnoses tied to surgical/circulatory spikes.; IP MedSurg (DNE) Trend 1: Highly relevant because the pattern is also concentrated in a subset of providers, with notable signals at Stanford Hospital, Sutter Memorial Medical Center, and UC Irvine Medical Center rather than a diffuse statewide effect.; IP MedSurg (DNE) Trend 4: Relevant because the increase is tied to specific inpatient DRG/service buckets, including pulmonary embolism, kidney/urinary infection, and extensive unrelated O.R. procedures with MCC, indicating a service-line mix issue.; IP MedSurg (DNE) Trend 6: Relevant secondary rule because the pattern shows real admission growth plus selected complexity increases, and the recommended action explicitly calls for UM/clinical pathway review rather than a payment-only explanation.; IP MedSurg (DNE) Trend 7: Useful validation rule because admissions are up and the leading cards are ER-admit cases, so reviewing admission source/location can confirm whether a non-elective acuity shift is contributing to the inpatient mix change."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in a small number of providers, especially THE QUEEN'S MEDICAL CENTER and UPMC PASSAVANT, which directly matches the provider-driver rule.; IP MedSurg (DNE) Trend 10: Paid per admit is materially higher and the pattern explicitly calls for contract review, payment-term validation, and possible targeted reimbursement action, making reimbursement method review highly relevant.; IP MedSurg (DNE) Trend 8: All key drivers are authorized inpatient cases (PA=Y), and the source cards explicitly reference auth-to-claim validation, so authorization enforcement and matching should be reviewed.; IP MedSurg (DNE) Trend 3: Some of the variance is also isolated to specific diagnoses/DRGs, including pulmonary embolism and postpartum-related episodes, so diagnosis-level case mix review is relevant.; IP MedSurg (DNE) Trend 6: Admissions are up within a small authorized inpatient cohort, so reviewing UM KPI changes/PAV can help determine whether utilization management behavior contributed alongside unit-cost pressure."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The dominant pattern is utilization-led inpatient growth in CA PPO acute hospital admissions, and the recommended action is explicitly inpatient utilization review, making UM KPI/PAV review the best-fit parent rule.; IP MedSurg (DNE) Trend 3: Spend increase is highly concentrated in specific inpatient diagnoses/DRGs, especially Other Digestive System Diagnoses with MCC and Pulmonary Embolism with MCC or Acute Cor Pulmonale, so diagnosis-driver analysis is central.; IP MedSurg (DNE) Trend 1: A meaningful portion of the increase is isolated to a provider-level hotspot at THE QUEEN'S MEDICAL CENTER with no volume change, which strongly supports provider-driver review.; IP MedSurg (DNE) Trend 10: The no-volume acute hospital cost spike points to possible reimbursement or contractual method issues rather than utilization alone, so reimbursement method review is relevant for the unit-cost pocket.; IP MedSurg (DNE) Trend 8: The source cards repeatedly show PA/auth dimensions and auth-to-claim validation flags, so checking whether authorization requirements are being enforced appropriately is a relevant secondary rule."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: The increase is highly concentrated in a narrow diagnosis subset\u2014severe and unspecified preeclampsia in the puerperium\u2014so diagnosis-driver review is the strongest parent rule match.; IP OB Dlvry Well NB (DNE) Trend 5: The recommended next step explicitly calls for reviewing readmission or complication pathways, which aligns directly to the repeat-admission/readmission parent rule.; IP OB Dlvry Well NB (DNE) Trend 2: This is a postpartum maternal complication pattern, so member-level review focused on mothers is relevant for maternal care management and engagement.; IP OB Dlvry Well NB (DNE) Trend 1: Both source drivers are tied to Long Island Jewish Medical Center, suggesting the variance may be concentrated in a provider subset and warrants provider-driver review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T10:28:36.098521+00:00"
+  }
+}

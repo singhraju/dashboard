@@ -1,0 +1,1051 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "VA DSNP acute hospital admissions are the dominant cost driver",
+    "pattern_description": "VA DSNP HMO acute hospital spend increased sharply, and the increase is predominantly an admission-growth story rather than a pricing story. Volume rose across major hospitals, while paid and allowed per admission declined, indicating that more inpatient use is overwhelming modest unit-cost relief. The pattern is concentrated enough to support immediate hospital- and market-level action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA DSNP acute hospital admissions are the dominant cost driver",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Mentioned?",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "VA DSNP HMO acute hospital spend rose about $58.9M. The increase was driven by about 3,445 more admissions and 3,759 more claims, while paid per admit fell about $467. The largest visible provider concentrations were VCU Medical Center, Sentara Norfolk General Hospital, and Sentara Leigh Hospital, contributing about $9.9M combined."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "TX authorization-code movement must be validated before business action",
+    "pattern_description": "TX shows a large shift in authorization-code assignment that can make utilization or reimbursement changes appear larger than they really are. This is a gating validation issue, not a confirmed medical-cost trend. Business action on policy, provider performance, or utilization should wait until the auth-code movement is reconciled.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX authorization-code movement must be validated before business action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "authorization_review",
+              "label": "Auth Review",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Pattern Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "authorization_review": "No prior authorization stated; sepsis-related DRGs may trigger diagnosis validation review.",
+              "policy_relevance": "Sepsis-related DRGs may trigger validation review; documentation must support diagnosis, organ dysfunction, and treatment."
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "authorization_review": "No prior auth stated; sepsis DRG 871 claims may undergo pre/post-pay review.",
+              "policy_relevance": "Centene reviews inpatient sepsis claims, including DRG 871, for diagnosis/DRG validation and possible denial."
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "authorization_review": "No prior authorization; Molina conducts pre/post-payment sepsis clinical validation review and may adjust payments.",
+              "policy_relevance": "Clinically validates sepsis-related inpatient DRGs pre/post-payment; may adjust payment if Sepsis-3 unsupported."
+            },
+            {
+              "payer_org": "Parkland Community Health Plan",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "authorization_review": "Performs pre/post-payment DRG validation reviews; billed services must match authorization and medical necessity.",
+              "policy_relevance": "Clinically validates sepsis DRG claims pre/post-payment and adjusts payment if Sepsis-3 unsupported."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "authorization_review": "Denies claims for invalid principal diagnoses and mutually exclusive sepsis/severe sepsis/septic shock coding.",
+              "policy_relevance": "Denies claims or lines for invalid or improperly sequenced principal/primary diagnoses."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082130000",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Sepsis Policy",
+            "tags": [],
+            "effective_date": "2026-04-30",
+            "evidence": "This sepsis policy does not name the requested DRG explicitly, but it states that DRG codes related to sepsis may trigger validation review of submitted diagnoses. Claims are reviewed against medical record documentation, and coding must support infection, organ dysfunction, and the treatment course. No explicit payment carve-out or separate reimbursement rule is stated for this DRG.",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp041-4-30-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "A00-B99",
+                "U07.1",
+                "U09.9",
+                "R65.2",
+                "R65.21",
+                "T81.12"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "TX"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00118",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-03-01",
+            "evidence": "Claims must use the correct principal or primary diagnosis in the designated field. If an inpatient UB-04 principal diagnosis is not valid for principal-diagnosis assignment, the claim is denied as DRG 998. For outpatient UB-04 and professional CMS-1500 claims, an inappropriate primary diagnosis denies the affected line.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "998"
+              ],
+              "related_codes": [
+                "R65",
+                "Z51.89"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim form field",
+                "box 67",
+                "box 24E"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00859",
+            "payer_name": "Centene",
+            "policy_title": "Acute Care Inpatient Hospital Claims - Sepsis Diagnosis (CC.PP.073)",
+            "tags": [],
+            "effective_date": "09/2024",
+            "evidence": "The health plan reviews inpatient sepsis claims pre- or post-pay to validate diagnosis and DRG coding. DRG 871 is within scope and may be adjusted or denied if medical record documentation does not support sepsis and the assigned DRG.",
+            "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/CC.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "871"
+              ],
+              "related_codes": [
+                "870",
+                "872"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "pre- or post-pay review"
+              ],
+              "utilization_limits": [
+                "age 18+",
+                "inpatient facility claims only"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MS-DRG",
+                "DRG",
+                "inpatient hospital"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician documentation",
+                "licensed independent practitioner documentation"
+              ],
+              "exemptions": [
+                "sepsis screening"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00129",
+            "payer_name": "Molina",
+            "policy_title": "Sepsis",
+            "tags": [],
+            "effective_date": "2022-01-07",
+            "evidence": "The specific DRG is not explicitly named, but sepsis-related inpatient DRG claims are subject to pre-payment and post-payment clinical validation. Hospital payment may be adjusted when the medical record does not support sepsis or sepsis treatment under Sepsis-3 criteria.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+            "edit_rule_facts": {
+              "target_codes": [
+                "R65.2"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_PRK_00012",
+            "payer_name": "Parkland Community Health Plan",
+            "policy_title": "Sepsis",
+            "tags": [],
+            "effective_date": "5/15/2025",
+            "evidence": "Sepsis-related DRG claims are subject to pre- and post-payment clinical validation. Payment may be adjusted when documentation does not support sepsis under Sepsis-3 criteria.",
+            "policy_url": "https://providers.parklandhealthplan.com/Uploads/Public/Documents/Provider/sepsis.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "R65.2"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "before and after payment",
+                "upon medical record review"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01280",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-07-12",
+            "evidence": "Diagnosis coding must follow ICD-10-CM sequencing rules. Category R65 sepsis, severe sepsis, and septic shock codes are treated as mutually exclusive under Excludes1. Inappropriate primary diagnosis reporting can deny the affected claim line or, for UB-04 principal diagnosis errors, the entire claim.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "R65"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX auth-code movement carries about $35.8M of apparent impact and is flagged for validation before action. The visible provider concentration is Memorial Hermann Southwest Hospital, but the core issue is the authorization-code shift itself. Memorial Hermann Southwest Hospital shows only about a $129K offset beneath the broader TX auth-code movement."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "TX DSNP acute hospital growth is a broad utilization surge",
+    "pattern_description": "TX DSNP HMO acute hospital spend rose materially on top of significant admission growth. Unlike VA, this market also shows some upward paid-per-admission movement, so the issue is not purely volume. The broad market signal supports a combined utilization and reimbursement review, with utilization still the main lever.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX DSNP acute hospital growth is a broad utilization surge",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "reimbursement_conditions",
+              "label": "Reimbursement Conditions",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "Denies",
+              "reimbursement_conditions": "Reimburses observation only if medically necessary, properly ordered, supervised, and meeting qualifying encounter criteria."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00097",
+            "payer_name": "Humana",
+            "policy_title": "Observation Services",
+            "tags": [],
+            "effective_date": "03/2019",
+            "evidence": "Observation services are reimbursable only when medically necessary, ordered by a qualified healthcare professional, and provided while the patient is under physician or qualified nonphysician practitioner care. At least one qualifying encounter condition must be present. If none apply, the facility observation charge is not reimbursed. Billable observation time is typically limited to 48 hours, and several intervals are excluded from the count. Documentation is required to support billing.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092982a0acfa",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "typically do not exceed 48 hours",
+                "standard recovery period 4 to 6 hours excluded"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Commercial",
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "Humana Medicaid plans follow state Medicaid guidelines when state rules are more restrictive"
+              ],
+              "provider_role_restrictions": [
+                "qualified healthcare professional required",
+                "physician or qualified nonphysician practitioner must oversee care"
+              ],
+              "exemptions": [
+                "Humana Medicaid plans when not permissible by state Medicaid guidelines"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX DSNP HMO acute hospital spend increased about $35.4M. Growth came with about 1,671 more admissions and 1,968 more claims. Paid per admit increased about $455, adding mild unit-cost pressure on top of utilization growth."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Memorial Hermann Southwest is a concentrated TX provider-cost hotspot across Medicare products",
+    "pattern_description": "A meaningful share of TX acute-hospital pressure is concentrated at Memorial Hermann Southwest Hospital across several Medicare products. Both admissions and paid per admit increased, with the largest exposure in DSNP HMO and Medicare HMO. This is a focused provider economics issue with a clear target for contract, pricing, and care-management intervention.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Memorial Hermann Southwest is a concentrated TX provider-cost hotspot across Medicare products",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "claim_rules",
+              "label": "Claim Rules",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "claim_rules": "No documentation requirement stated; septicemia/severe sepsis DRG pattern not addressed."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "Coding Denials",
+              "claim_rules": "Use correct principal diagnosis per ICD-10 guidelines; avoid invalid code sequencing/combinations."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00013",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - General Inflammation Testing",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "This Medicare Advantage laboratory testing policy addresses CRP and ESR reimbursement for specified inflammatory conditions and does not address the requested septicemia/severe sepsis DRG pattern, hospital DRG payment, or provider-specific cost hotspot issues.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00029",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "Off-topic for the requested DRG pattern. This policy only addresses reimbursement limits for \u03b2-hemolytic Streptococcus laboratory testing and contains no DRG septicemia or severe sepsis adjudication rule.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00116",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-05-01",
+            "evidence": "This diagnosis-code policy is not DRG-specific, but it can affect sepsis and severe sepsis claims by denying claims with incorrect principal or primary diagnosis coding and by enforcing ICD-10-CM sequencing rules.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "R65"
+              ],
+              "related_codes": [
+                "Q21.0",
+                "I51.0",
+                "Z51.89",
+                "T86",
+                "C80.2",
+                "T51-T65",
+                "V00-Y99"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "Box 67 principal diagnosis",
+                "Box 24E primary diagnosis",
+                "same claim form"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Memorial Hermann Southwest Hospital drove about $6.6M in TX DSNP HMO acute hospital pressure with 332 more admissions and about $8.0K higher paid per admit. The same provider added about $3.3M in Medicare HMO acute hospital spend with 153 more admissions and about $4.8K higher paid per admit. Smaller but consistent increases also appeared in CSNP HMO (+$349K) and SNP Crossover (+$341K)."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "VA SNP spending is shifting into SNF, rehab, and acute psych settings",
+    "pattern_description": "VA SNP growth is not limited to acute hospitals; spending is also moving into SNF, physical rehab, and acute psych settings. SNF and acute psych show both higher volume and higher per-admission cost, while physical rehab is mainly a volume story. This points to site-of-care management opportunities across discharge planning, level-of-care decisions, and preferred post-acute pathways.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA SNP spending is shifting into SNF, rehab, and acute psych settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "co_surgeon_criteria",
+              "label": "Co-Surgeon Criteria",
+              "type": "text"
+            },
+            {
+              "id": "payment_reduction",
+              "label": "Payment Reduction",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "co_surgeon_criteria": "Allows co-surgeons only for MPFS indicator 1 or 2 procedures when medically necessary.",
+              "payment_reduction": "Allowed co-surgeons are each paid 62.5%; no co-surgeon reduction applies to indicator 0."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00053",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Immune Cell Function Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00151",
+            "payer_name": "Humana",
+            "policy_title": "Modifier 62",
+            "tags": [],
+            "effective_date": "Commercial: 06/2010; Medicare: 01/2008",
+            "evidence": "The payer allows co-surgeon billing only when a procedure has co-surgeon indicator 1 or 2. Each surgeon must append modifier 62. Approved co-surgeon claims are paid at 62.5% of the applicable allowed amount per surgeon. Procedures with co-surgeon indicator 0 are not allowed for co-surgeon billing, and indicator 1 claims require medical necessity documentation.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "62"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same operative session",
+                "same patient",
+                "same procedure"
+              ],
+              "utilization_limits": [
+                "62.5% allowed amount per surgeon"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Commercial Products",
+                "MPFS"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "co-surgeon required",
+                "two surgeons acting as primary surgeons"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "VA DSNP HMO SNF spend rose about $8.6M with about 911 more admissions and about $2.1K higher paid per admit. VA DSNP HMO Physical Rehab added about $1.9M on 76 more admissions even as paid per admit fell about $4.2K. VA DSNP HMO Acute Psych added about $1.8M with 176 more admissions and about $2.5K higher paid per admit. VA CSNP HMO SNF added about $982K with 122 more admissions."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "VA CSNP acute hospital growth is broad, with added provider-level cost pressure",
+    "pattern_description": "VA CSNP acute hospital spend increased through a combination of broader admission growth and added provider-level cost pressure. The broad market signal shows more inpatient use, while specific hospitals show higher paid per admit. The action should combine admission management with targeted hospital performance review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA CSNP acute hospital growth is broad, with added provider-level cost pressure",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance": "Not mentioned; policy only denies immune cell function assay CPT codes, not DRG-specific payment."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00053",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Immune Cell Function Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "Off-topic for this DRG. The policy addresses immune cell function assay CPT codes and states they are not reimbursable; it does not provide DRG-specific payment rules.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "VA CSNP HMO acute hospital signals total about $8.4M. Broad utilization added about $6.5M with 481 more admissions while paid per admit fell about $2.3K. Separate provider-level pressure at Sentara Leigh Hospital and Sentara Norfolk General Hospital added about $1.9M with higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "CA / VA / WI also show authorization-code shifts that can distort performance readings",
+    "pattern_description": "A separate multistate authorization-code movement is present across CA, VA, and WI and should be treated as another gating validation issue. The clearest visible concentration is in VA hospitals, but the scope spans all three listed states. Until the auth-code assignment is validated, provider and utilization conclusions in these markets remain at risk of misclassification.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA / VA / WI also show authorization-code shifts that can distort performance readings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_policy_mention",
+              "label": "DRG Mention",
+              "type": "badge"
+            },
+            {
+              "id": "scope_note",
+              "label": "Scope Note",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_policy_mention": "-",
+              "scope_note": "Professional-services co-surgeon policy; no DRG-pattern adjudication rule identified."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00053",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Immune Cell Function Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00151",
+            "payer_name": "Humana",
+            "policy_title": "Modifier 62",
+            "tags": [],
+            "effective_date": "Commercial: 06/2010; Medicare: 01/2008",
+            "evidence": "This professional-services co-surgeon policy does not address DRG payment logic or authorization-code shifts, so no adjudication rule was found for this DRG pattern.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "A multistate auth-code shift across CA, VA, and WI carries about $5.6M of apparent impact and is flagged for validation before action. VA is the clearest visible concentration, including about $2.2M at the state level. Within VA, VCU Medical Center and Sentara Leigh Hospital together account for about $2.0M of the shifted amount."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "TX Not Mapped facility growth is a second gating validation issue",
+    "pattern_description": "TX has a large increase in claims assigned to a Not Mapped facility category, and the size of the per-admission increase is too large to treat as a routine utilization change without validation. This could reflect misclassification of site of care, provider setup issues, or other mapping defects. Validate the facility assignment first, then decide whether any utilization or reimbursement action is warranted.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX Not Mapped facility growth is a second gating validation issue",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "scope_note",
+              "label": "Scope Note",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "scope_note": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00019",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Parathyroid Hormone, Phosphorus, Calcium and Magnesium Testing",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29bd",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00032",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Cardiovascular Disease Risk Assessment in Adults",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9e4b",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00061",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Oral Screening Lesion Identification Systems",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390d",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX DSNP HMO claims in the Not Mapped facility bucket increased about $8.3M. The bucket shows about 201 more admissions and an extremely large paid-per-admit increase of about $29.1K. Because the facility type is unmapped, utilization, reimbursement, and site-of-care conclusions should wait until classification is corrected."
+      }
+    }
+  }
+]

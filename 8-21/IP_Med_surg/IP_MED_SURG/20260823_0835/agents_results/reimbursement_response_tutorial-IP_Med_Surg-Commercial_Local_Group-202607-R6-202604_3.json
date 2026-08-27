@@ -1,0 +1,403 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_3_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA PPO acute hospital spend is rising from both authorized admissions and biliary surgery volume",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "ob_bundling_rule",
+          "label": "OB Bundling",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Applies to professional maternity package billing and ICD-10 reporting, not inpatient DRG payment.",
+          "ob_bundling_rule": "OB services bundle into global maternity package codes; no applicable biliary surgery DRG rule."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Separately bills only sole postpartum care, subject to overlap denial within 90-day postpartum period.",
+          "ob_bundling_rule": "Separately reimbursed only if non-overlapping; otherwise bundled with obstetric package and recoupable."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "-",
+          "ob_bundling_rule": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Professional obstetric CMS-1500 claims: antepartum, global maternity, and postpartum-only care across settings.",
+          "ob_bundling_rule": "United bundles routine prenatal, delivery, and postpartum care; complications, labs, ultrasounds, unrelated services separate."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Off-topic to the requested DRG pattern. The policy governs professional maternity/obstetric package billing and related ICD-10 diagnosis reporting, not DRG-based inpatient biliary surgery or acute hospital spend adjudication.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "Postpartum care only is separately billable when it is the only postpartum service provided for that pregnancy, but it may be denied if overlapping global, delivery/postpartum, or postpartum-only services were already paid. The policy also applies a separate 90-day postpartum period.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430"
+          ],
+          "related_codes": [
+            "59400",
+            "59510"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "postpartum-only claim",
+            "after obstetric delivery"
+          ],
+          "utilization_limits": [
+            "90-day postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Maternity Services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider or same TIN for global package"
+          ],
+          "exemptions": [
+            "only when no overlapping obstetric package payment exists"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "2022-09-08",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "This is a professional obstetrical policy rather than a DRG or acute inpatient authorization policy. For maternity claims, routine prenatal, delivery, and postpartum services are bundled into the global OB package and not separately reimbursed. The policy also states that management of surgical problems during pregnancy, including cholecystectomy, is outside the global OB package and may be reported separately if warranted.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59430",
+            "59425",
+            "59426"
+          ],
+          "related_codes": [
+            "59430",
+            "81000",
+            "81002",
+            "76801-76828",
+            "59425",
+            "59426",
+            "99202-99215",
+            "99242-99245",
+            "99341-99342",
+            "99344-99345",
+            "99347-99350",
+            "Z32.01"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same group physician/QHP",
+            "within 24 hours of delivery",
+            "within 6 weeks of delivery",
+            "subsequent to 59430",
+            "single claim submission",
+            "date span covering visits",
+            "when pregnancy terminates or miscarries"
+          ],
+          "utilization_limits": [
+            "1 unit",
+            "approximately 13 routine visits",
+            "6 weeks after delivery",
+            "59425: 4-6 visits",
+            "59426: 7+ visits",
+            "1-3 visits itemized E/M"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same group physician/QHP"
+          ],
+          "exemptions": [
+            "lab tests excluding 81000 and 81002",
+            "OB ultrasound 76801-76828",
+            "management of surgical problems during pregnancy",
+            "inpatient E/M >24 hours before delivery",
+            "unrelated critical care",
+            "problems or complications related to pregnancy",
+            "non-OB office E/M with 24",
+            "confirmatory visit when OB record not initiated"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: CA PPO acute hospital spend is rising from both authorized admissions and biliary surgery volume",
+    "pattern_rank": 3,
+    "pattern_title": "CA PPO acute hospital spend is rising from both authorized admissions and biliary surgery volume",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Laparoscopic Cholecystectomy without C.D.E. with CC",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures",
+      "Ungroupable"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped because they are professional OB billing edits that drift from the pattern\u2019s acute hospital spend/utilization focus rather than addressing inpatient authorization or hospital reimbursement."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/5 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 53367,
+    "output": 39002,
+    "breakdown": {
+      "search_keywords": {
+        "input": 552,
+        "output": 535,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 477,
+        "output": 923,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 40249,
+        "output": 31850,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1444,
+        "output": 526,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 1049,
+        "output": 652,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1039,
+        "output": 800,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 395,
+        "output": 212,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3880,
+        "output": 2691,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4282,
+        "output": 813,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T09:43:04.503960+00:00",
+    "end_time": "2026-08-23T09:46:47.747833+00:00",
+    "duration_ms": 223243,
+    "version": "2.0.0"
+  }
+}

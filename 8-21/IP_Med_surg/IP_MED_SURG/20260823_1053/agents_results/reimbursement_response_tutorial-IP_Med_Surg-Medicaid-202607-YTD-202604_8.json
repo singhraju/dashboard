@@ -1,0 +1,368 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicaid-202607-YTD-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicaid-202607-YTD-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA is also seeing smaller emerging high-cost diagnoses",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "coverage_criteria",
+          "label": "Coverage Criteria",
+          "type": "text"
+        },
+        {
+          "id": "setting_exclusions",
+          "label": "Setting/Exclusions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "coverage_criteria": "Covers GI panels by target count based on prolonged diarrheal severity, immunocompromise, and care setting.",
+          "setting_exclusions": "Only covered in inpatient, ER, or observation settings; standalone outpatient testing not covered."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "coverage_criteria": "Humana denies reimbursement for listed stool analysis components for dysbiosis, IBS, malabsorption, or SIBO.",
+          "setting_exclusions": "No site restrictions; excludes specified fecal analyses for the four evaluation indications."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "coverage_criteria": "Requires correct diagnosis sequencing: code underlying, residual, or toxic agent conditions before secondary codes.",
+          "setting_exclusions": "All settings, especially outpatient hospital claims, with primary-diagnosis edits; excludes standalone coding without toxic agent."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CNC_00091",
+        "payer_name": "Centene",
+        "policy_title": "Gastrointestinal Pathogen Nucleic Acid Detection Panel Testing - CP.MP.209",
+        "tags": [],
+        "effective_date": "06/21",
+        "evidence": "Centene-affiliated health plans consider this GI pathogen panel code medically necessary when the listed infectious diarrhea or enteric fever criteria are met.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/healthnet/pdfs/providerlibrary/500046_Payment%20Integrity%20Policy%20CP.MP.209.Gastro-Pathogen-Nucleic-Acid-Detection-Panel-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87505",
+            "87506",
+            "87507",
+            "0097U"
+          ],
+          "related_codes": [
+            "87506",
+            "87507",
+            "0097U",
+            "87505"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient hospital",
+            "emergency department",
+            "observation status"
+          ],
+          "utilization_limits": [
+            "up to 5 targets",
+            "up to 11 targets",
+            "greater than 11 targets",
+            "12-25 targets",
+            "22 targets"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "observation diagnostic work-up"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00012",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The policy does not cite the requested DRGs, but within the same gastrointestinal testing area it denies code 82710 when billed as fecal triglyceride analysis for evaluation of intestinal dysbiosis, irritable bowel syndrome, malabsorption, or small intestinal overgrowth of bacteria under Medicare Advantage.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c5",
+        "edit_rule_facts": {
+          "target_codes": [
+            "82710",
+            "84311",
+            "82542",
+            "89160",
+            "82725",
+            "82715",
+            "87076",
+            "87077",
+            "87102",
+            "87106",
+            "83986",
+            "82784"
+          ],
+          "related_codes": [
+            "82725",
+            "82542",
+            "87106",
+            "87102"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00190",
+        "payer_name": "Molina",
+        "policy_title": "Diagnosis Code Coding",
+        "tags": [],
+        "effective_date": "2020-11-01",
+        "evidence": "General diagnosis coding edit; the requested DRG labels are not named. L62 cannot be used as the primary diagnosis because the underlying disease must be coded first.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/DiagnosisCodeCodingPolicy12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "L62",
+            "K52.1",
+            "V00-Y99"
+          ],
+          "related_codes": [
+            "M89.4",
+            "M24.271",
+            "T51-T65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "code first underlying disease",
+            "residual condition first",
+            "code first toxic agent",
+            "code first infection",
+            "secondary diagnosis only"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "ICD-10-CM"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00199",
+        "payer_name": "Molina",
+        "policy_title": "ICD-10 First Listed Diagnosis Coding Policy",
+        "tags": [],
+        "effective_date": "11/20/2020",
+        "evidence": "General ICD-10 diagnosis sequencing policy only. The listed DRG patterns are not specifically addressed, but diagnosis codes cannot be used as primary or first-listed when sequencing rules require a different code first.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/ICD-10FirstListedDiagnosisCodingPolicy12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "L62",
+            "M89.4-M89.49",
+            "M24.271",
+            "K52.1",
+            "T51-T65",
+            "V00-Y99"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: CA is also seeing smaller emerging high-cost diagnoses",
+    "pattern_rank": 8,
+    "pattern_title": "CA is also seeing smaller emerging high-cost diagnoses",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cellulitis without MCC",
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped for scope drift because they address GI testing or generic coding edits rather than the pattern's California emerging high-cost diagnoses/cesarean context."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 45451,
+    "output": 41922,
+    "breakdown": {
+      "search_keywords": {
+        "input": 557,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 479,
+        "output": 970,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 32925,
+        "output": 35573,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 1961,
+        "output": 651,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 960,
+        "output": 596,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1055,
+        "output": 813,
+        "calls": 6
+      },
+      "policy_recommendations": {
+        "input": 3557,
+        "output": 2291,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3957,
+        "output": 497,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T13:39:01.692427+00:00",
+    "end_time": "2026-08-23T13:41:55.279028+00:00",
+    "duration_ms": 173586,
+    "version": "2.0.0"
+  }
+}

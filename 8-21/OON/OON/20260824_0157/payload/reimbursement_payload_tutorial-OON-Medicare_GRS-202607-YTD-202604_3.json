@@ -1,0 +1,3219 @@
+{
+  "context": {
+    "pattern": {
+      "pattern_rank": 3,
+      "top_pattern": "VA outpatient drug claims are landing in Not Mapped categories",
+      "pattern_type": "coding_mapping_validation",
+      "what_is_impacting": "VA outpatient drugs / OP Mgmt Oth Misc and OP IV Thrpy/Oncology",
+      "priority_entities": {
+        "states": [
+          "VA"
+        ],
+        "providers": [
+          "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL"
+        ],
+        "products": [],
+        "facility_types": [],
+        "clinical_categories": [
+          "OP Mgmt Oth Misc",
+          "OP IV Thrpy/Oncology"
+        ]
+      },
+      "key_driver_codes": [
+        "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL",
+        "Not Mapped",
+        "Z5112",
+        "Drugs",
+        "OP Mgmt Oth Misc",
+        "OP IV Thrpy/Oncology"
+      ],
+      "impact_summary": {
+        "primary_metric": "total_paid",
+        "direction": "increase",
+        "estimated_delta": "+$59K",
+        "volume_signal": "claims up",
+        "unit_cost_signal": "paid per admit up"
+      },
+      "pattern_details": "In VA, outpatient drug-related claims at WVU MEDICINE PRINCETON COMMUNITY HOSPITAL are showing up in Not Mapped categories under diagnosis Z5112 across both OP Mgmt Oth Misc and OP IV Thrpy/Oncology. Because the same diagnosis and procedure pattern appears in multiple outpatient categories, this is a gating classification issue before any utilization or reimbursement action. The business risk is that oncology and other outpatient drug spend could be misrouted or misread.",
+      "why_it_matters": "If outpatient drug claims are misclassified, authorization routing, oncology reporting, and medical policy actions may target the wrong problem.",
+      "recommended_next_step": "Validate category mapping, provider billing setup, and claim coding for Z5112 drug claims at WVU MEDICINE PRINCETON COMMUNITY HOSPITAL before changing UM or reimbursement policy.",
+      "validation_needed": true,
+      "validation_reason": "Both contributing findings include Not Mapped categories and unmapped-value flags tied to a small number of claims.",
+      "downstream_routes": [
+        "clinical_agent",
+        "data_quality_agent"
+      ],
+      "evidence_summary": [
+        "VA OP Mgmt Oth Misc contributed about +$42K from 3 drug claims coded as Not Mapped with diagnosis Z5112.",
+        "VA OP IV Thrpy/Oncology added about +$18K from 1 additional drug claim with the same diagnosis and Not Mapped classification.",
+        "Both findings were concentrated at WVU MEDICINE PRINCETON COMMUNITY HOSPITAL and flagged for unmapped values and small claim counts."
+      ],
+      "source_group_ids": [
+        "c640b2baaaa7ce7490bd",
+        "86b7c4f7f904dab08a10"
+      ],
+      "source_card_ids": [
+        "ed228e4b72895d6d16e0",
+        "ade89626f490d5daa25d"
+      ],
+      "scope": {
+        "segment_by": [
+          "service_area_state"
+        ],
+        "segment_values": [
+          "VA"
+        ],
+        "segment_signatures": [
+          "50927f95ccad81762548",
+          "9a2c5cc7e8933c566be0"
+        ],
+        "filters": {
+          "state": [
+            "VA"
+          ]
+        },
+        "filters_attested": {
+          "state": true
+        }
+      }
+    },
+    "cards": [
+      {
+        "card_id": "1306437f15d66592e98c",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260824T025712Z_where_did_change_happen_for_provider_ou__65b1bed9",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "drg_name": "Other Vascular Procedures without CC/MCC",
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "primary_diagnosis_code": "I70223"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 141.62,
+            "comparison": 16675.09,
+            "delta": 16533.47
+          },
+          "share_of_positive_delta": 0.9986705308453757,
+          "share_of_net_delta": 0.9986705308453757,
+          "raw_row_count": {
+            "baseline": 6.0,
+            "comparison": 16.0,
+            "delta": 10.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 3.0,
+              "comparison": 1.0,
+              "delta": -2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 47.20666667,
+              "comparison": 16675.09,
+              "delta": 16627.88333333
+            },
+            "total_paid": {
+              "baseline": 3.0,
+              "comparison": 1.0,
+              "delta": -2.0
+            },
+            "total_allowed": {
+              "baseline": 0.9800692,
+              "comparison": 0.97999988,
+              "delta": -6.931999999992833e-05
+            },
+            "paid_ratio": {
+              "baseline": 0.9800692,
+              "comparison": 0.97999988,
+              "delta": -6.931999999992833e-05
+            },
+            "pmpm": {
+              "baseline": 0.00053306,
+              "comparison": 0.02881932,
+              "delta": 0.02828626
+            }
+          }
+        },
+        "driver_type": "unit_cost_led",
+        "flags": [
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Other Vascular Procedures without CC/MCC",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "I70223",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 29740.463335454486,
+        "business_terms": [
+          "site-of-care",
+          "unit cost"
+        ]
+      },
+      {
+        "card_id": "50a304a7e8a067df4502",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "OU HEALTH UNIVERSITY OF OKLAHOMA MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260824T025712Z_where_did_change_happen_for_provider_ou__65b1bed9",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Other Vascular Procedures without CC/MCC",
+          "primary_diagnosis_code": "I70223",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "drg_name": "Other Vascular Procedures without CC/MCC",
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "primary_diagnosis_code": "I70223"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Other Vascular Procedures without CC/MCC"
+          ],
+          "diagnosis": [
+            "I70223"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 16675.09,
+            "delta": 16675.09
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 1.0072247980729039,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 16.0,
+            "delta": 16.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 16675.09,
+              "delta": 16675.09
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.97999988,
+              "delta": 0.97999988
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.97999988,
+              "delta": 0.97999988
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.02881932,
+              "delta": 0.02881932
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Other Vascular Procedures without CC/MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "I70223",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 30015.162,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "aec9125faafb006e7b82",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260824T025730Z_where_did_change_happen_for_provider_wvu_a93741a0",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "VA",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "service_area_state": "VA",
+          "facility_type": "ACUTE HOSPITAL",
+          "drg_name": "Not Mapped",
+          "product_description": "PPO Local",
+          "procedure_name": "Drugs",
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "primary_diagnosis_code": "Z5112"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "VA",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "VA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "procedure_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "VA"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 46.96,
+            "comparison": 59401.48,
+            "delta": 59354.520000000004
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 1.0,
+          "raw_row_count": {
+            "baseline": 47.0,
+            "comparison": 101.0,
+            "delta": 54.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 5.0,
+              "comparison": 12.0,
+              "delta": 7.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 9.392,
+              "comparison": 4950.12333333,
+              "delta": 4940.73133333
+            },
+            "total_paid": {
+              "baseline": 5.0,
+              "comparison": 12.0,
+              "delta": 7.0
+            },
+            "total_allowed": {
+              "baseline": 0.97996661,
+              "comparison": 0.97999992,
+              "delta": 3.331000000006412e-05
+            },
+            "paid_ratio": {
+              "baseline": 0.97996661,
+              "comparison": 0.97999992,
+              "delta": 3.331000000006412e-05
+            },
+            "pmpm": {
+              "baseline": 0.00068653,
+              "comparison": 0.39609173,
+              "delta": 0.39540519999999996
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "VA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Drugs",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z5112",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 106838.13600000001,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "ed228e4b72895d6d16e0",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260824T025730Z_where_did_change_happen_for_provider_wvu_a93741a0",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z5112",
+          "procedure_name": "Drugs"
+        },
+        "context_dimensions": {
+          "service_area_state": "VA",
+          "facility_type": "ACUTE HOSPITAL",
+          "drg_name": "Not Mapped",
+          "product_description": "PPO Local",
+          "procedure_name": "Drugs",
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "primary_diagnosis_code": "Z5112"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "VA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Mgmt Oth Misc"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z5112"
+          ],
+          "procedure": [
+            "Drugs"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 41791.62,
+            "delta": 41791.62
+          },
+          "share_of_positive_delta": 0.7035450968561726,
+          "share_of_net_delta": 0.7041017263723134,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 3.0,
+            "delta": 3.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 13930.54,
+              "delta": 13930.54
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.98,
+              "delta": 0.98
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.98,
+              "delta": 0.98
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 9.38926533,
+              "delta": 9.38926533
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z5112",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Drugs",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "VA",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 48055.88880495654,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "ade89626f490d5daa25d",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "WVU MEDICINE PRINCETON COMMUNITY HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260824T025730Z_where_did_change_happen_for_provider_wvu_a93741a0",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP IV Thrpy/Oncology",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z5112",
+          "procedure_name": "Drugs"
+        },
+        "context_dimensions": {
+          "service_area_state": "VA",
+          "facility_type": "ACUTE HOSPITAL",
+          "drg_name": "Not Mapped",
+          "product_description": "PPO Local",
+          "procedure_name": "Drugs",
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "primary_diagnosis_code": "Z5112"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "VA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP IV Thrpy/Oncology"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z5112"
+          ],
+          "procedure": [
+            "Drugs"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 17505.11,
+            "delta": 17505.11
+          },
+          "share_of_positive_delta": 0.2946914790675249,
+          "share_of_net_delta": 0.29492463253009205,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 2.0,
+            "delta": 2.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 17505.11,
+              "delta": 17505.11
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.97999984,
+              "delta": 0.97999984
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.97999984,
+              "delta": 0.97999984
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 5.89397643,
+              "delta": 5.89397643
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP IV Thrpy/Oncology",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z5112",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Drugs",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "VA",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 15298.008811069314,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "96191c3c7b9e0e97e465",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "DEACONESS ILLINOIS MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260824T025749Z_where_did_change_happen_for_provider_dea_1270469a",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "OH",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "PPO Local",
+          "service_area_state": "OH",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours",
+          "primary_diagnosis_code": "A419"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "OH",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "OH"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "procedure_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "drg_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "OH"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 61189.16,
+            "delta": 61189.16
+          },
+          "share_of_positive_delta": 0.9946623335921214,
+          "share_of_net_delta": 1.0060316693055014,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 45.0,
+            "delta": 45.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 4.0,
+              "delta": 4.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 15297.29,
+              "delta": 15297.29
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 4.0,
+              "delta": 4.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.9805369,
+              "delta": 0.9805369
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.9805369,
+              "delta": 0.9805369
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.16682387,
+              "delta": 0.16682387
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "OH",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "A419",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 109846.54140852754,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "5bf58db502630c894e39",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "DEACONESS ILLINOIS MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260824T025749Z_where_did_change_happen_for_provider_dea_1270469a",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours",
+          "primary_diagnosis_code": "A419",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "PPO Local",
+          "service_area_state": "OH",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours",
+          "primary_diagnosis_code": "A419"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "OH"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours"
+          ],
+          "diagnosis": [
+            "A419"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 59321.73,
+            "delta": 59321.73
+          },
+          "share_of_positive_delta": 0.9694810322612698,
+          "share_of_net_delta": 0.975328621245826,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 33.0,
+            "delta": 33.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 59321.73,
+              "delta": 59321.73
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.9805538,
+              "delta": 0.9805538
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.9805538,
+              "delta": 0.9805538
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.22035158,
+              "delta": 0.22035158
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "A419",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "OH",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 105149.7198323319,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "1ca4d904bf9113649fd8",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "CARDIAC RMS LLC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025809Z_where_did_change_happen_for_provider_car_e668e393",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CA",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Medicine",
+          "product_description": "PPO Local",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "I498"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "Not Mapped",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "drg_name": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 156.23,
+            "comparison": 9643.32,
+            "delta": 9487.09
+          },
+          "share_of_positive_delta": 0.511191468404712,
+          "share_of_net_delta": 0.511191468404712,
+          "raw_row_count": {
+            "baseline": 5.0,
+            "comparison": 118.0,
+            "delta": 113.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 5.0,
+              "comparison": 118.0,
+              "delta": 113.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 31.246,
+              "comparison": 81.72305085,
+              "delta": 50.47705085000001
+            },
+            "total_paid": {
+              "baseline": 5.0,
+              "comparison": 118.0,
+              "delta": 113.0
+            },
+            "total_allowed": {
+              "baseline": 0.97998996,
+              "comparison": 0.97806898,
+              "delta": -0.001920980000000072
+            },
+            "paid_ratio": {
+              "baseline": 0.97998996,
+              "comparison": 0.97806898,
+              "delta": -0.001920980000000072
+            },
+            "pmpm": {
+              "baseline": 0.00074853,
+              "comparison": 0.00181931,
+              "delta": 0.00107078
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Medicine",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "I498",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 12903.128521188894,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "42b89a25d286b7b57a03",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "CARDIAC RMS LLC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025809Z_where_did_change_happen_for_provider_car_e668e393",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "Not Mapped",
+          "service_area_state": "NY",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Medicine",
+          "product_description": "PPO Local",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "I498"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "Not Mapped",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "NY"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "drg_name": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "NY"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 310.59,
+            "comparison": 7324.02,
+            "delta": 7013.43
+          },
+          "share_of_positive_delta": 0.3779036121986467,
+          "share_of_net_delta": 0.3779036121986467,
+          "raw_row_count": {
+            "baseline": 3.0,
+            "comparison": 91.0,
+            "delta": 88.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 3.0,
+              "comparison": 91.0,
+              "delta": 88.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 103.53,
+              "comparison": 80.48373626,
+              "delta": -23.04626374
+            },
+            "total_paid": {
+              "baseline": 3.0,
+              "comparison": 91.0,
+              "delta": 88.0
+            },
+            "total_allowed": {
+              "baseline": 0.98002651,
+              "comparison": 0.98027149,
+              "delta": 0.00024498000000006126
+            },
+            "paid_ratio": {
+              "baseline": 0.98002651,
+              "comparison": 0.98027149,
+              "delta": 0.00024498000000006126
+            },
+            "pmpm": {
+              "baseline": 0.01443463,
+              "comparison": 0.00672163,
+              "delta": -0.007713
+            }
+          }
+        },
+        "driver_type": "volume_led",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "NY",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Medicine",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "I498",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 8697.44747781212,
+        "business_terms": [
+          "site-of-care",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "85ff9ee93d0151769f5a",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "CARDIAC RMS LLC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025809Z_where_did_change_happen_for_provider_car_e668e393",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "I498",
+          "procedure_name": "Medicine"
+        },
+        "context_dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Medicine",
+          "product_description": "PPO Local",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "I498"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Mgmt Oth Misc"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "I498"
+          ],
+          "procedure": [
+            "Medicine"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 310.59,
+            "comparison": 15204.86,
+            "delta": 14894.27
+          },
+          "share_of_positive_delta": 0.902654583007081,
+          "share_of_net_delta": 0.8025457492356718,
+          "raw_row_count": {
+            "baseline": 3.0,
+            "comparison": 165.0,
+            "delta": 162.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 3.0,
+              "comparison": 165.0,
+              "delta": 162.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 103.53,
+              "comparison": 92.15066667,
+              "delta": -11.379333329999994
+            },
+            "total_paid": {
+              "baseline": 3.0,
+              "comparison": 165.0,
+              "delta": 162.0
+            },
+            "total_allowed": {
+              "baseline": 0.98002651,
+              "comparison": 0.97890742,
+              "delta": -0.0011190899999999893
+            },
+            "paid_ratio": {
+              "baseline": 0.98002651,
+              "comparison": 0.97890742,
+              "delta": -0.0011190899999999893
+            },
+            "pmpm": {
+              "baseline": 0.01443463,
+              "comparison": 0.00325819,
+              "delta": -0.011176440000000001
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "I498",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Medicine",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 25504.78596844039,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "633bd7df93a70bc86ed4",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025831Z_where_did_change_happen_for_drg_alcohol__775b3829",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "service_area_state": "GA",
+          "hcc_medium": "IP BH",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "rendering_provider_name": "WILLOWBROOKE AT TANNER",
+          "primary_diagnosis_code": "F10239",
+          "facility_type": "ACUTE HOSPITAL"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 19292.33,
+            "delta": 19292.33
+          },
+          "share_of_positive_delta": 0.34689132824273206,
+          "share_of_net_delta": 0.4482883216987634,
+          "raw_row_count": {
+            "baseline": 9.0,
+            "comparison": 20.0,
+            "delta": 11.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 1.0,
+              "comparison": 2.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 9646.165,
+              "delta": 9646.165
+            },
+            "total_paid": {
+              "baseline": 1.0,
+              "comparison": 2.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.97571477,
+              "delta": 0.97571477
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.97571477,
+              "delta": 0.97571477
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.02292884,
+              "delta": 0.02292884
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP BH",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "WILLOWBROOKE AT TANNER",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "F10239",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 23386.204780737397,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "d7b4f164a4fe41d08a6a",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025831Z_where_did_change_happen_for_drg_alcohol__775b3829",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE PSYCH",
+          "service_area_state": "GA",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "service_area_state": "GA",
+          "hcc_medium": "IP BH",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "rendering_provider_name": "WILLOWBROOKE AT TANNER",
+          "primary_diagnosis_code": "F10239",
+          "facility_type": "ACUTE HOSPITAL"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "GA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "ACUTE PSYCH"
+          ],
+          "state": [
+            "GA"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 16981.74,
+            "delta": 16981.74
+          },
+          "share_of_positive_delta": 0.30534509540696914,
+          "share_of_net_delta": 0.3945980461730003,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 15.0,
+            "delta": 15.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 5660.58,
+              "delta": 5660.58
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.7840001,
+              "delta": 0.7840001
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.7840001,
+              "delta": 0.7840001
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01629228,
+              "delta": 0.01629228
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE PSYCH",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "GA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP BH",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "WILLOWBROOKE AT TANNER",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "F10239",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 19950.327918428713,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "af20f669a0c1c768a269",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025831Z_where_did_change_happen_for_drg_alcohol__775b3829",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "GA",
+          "lob_description": "Medicare GRS"
+        },
+        "context_dimensions": {
+          "service_area_state": "GA",
+          "hcc_medium": "IP BH",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "rendering_provider_name": "WILLOWBROOKE AT TANNER",
+          "primary_diagnosis_code": "F10239",
+          "facility_type": "ACUTE HOSPITAL"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO Local",
+          "facility_type": "ACUTE HOSPITAL",
+          "lob_description": "Medicare GRS"
+        },
+        "segment_filters": {
+          "state": [
+            "GA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO Local"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "GA"
+          ],
+          "line_of_business": [
+            "Medicare GRS"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 11430.29,
+            "delta": 11430.29
+          },
+          "share_of_positive_delta": 0.20552564051618533,
+          "share_of_net_delta": 0.2656011752147179,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 15.0,
+            "delta": 15.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 11430.29,
+              "delta": 11430.29
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.98287958,
+              "delta": 0.98287958
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.98287958,
+              "delta": 0.98287958
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.02606174,
+              "delta": 0.02606174
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "GA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Medicare GRS",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP BH",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "WILLOWBROOKE AT TANNER",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "F10239",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 12401.556906182173,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "ff900288ac95f4ea21d9",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025831Z_where_did_change_happen_for_drg_alcohol__775b3829",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP BH",
+          "primary_diagnosis_code": "F10239",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "GA",
+          "hcc_medium": "IP BH",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "rendering_provider_name": "WILLOWBROOKE AT TANNER",
+          "primary_diagnosis_code": "F10239",
+          "facility_type": "ACUTE HOSPITAL"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "GA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP BH"
+          ],
+          "diagnosis": [
+            "F10239"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 35709.59,
+            "delta": 35709.59
+          },
+          "share_of_positive_delta": 0.7485602993101678,
+          "share_of_net_delta": 0.8297697670344092,
+          "raw_row_count": {
+            "baseline": 9.0,
+            "comparison": 38.0,
+            "delta": 29.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 1.0,
+              "comparison": 4.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 8927.3975,
+              "delta": 8927.3975
+            },
+            "total_paid": {
+              "baseline": 1.0,
+              "comparison": 4.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.94562827,
+              "delta": 0.94562827
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.94562827,
+              "delta": 0.94562827
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.02400551,
+              "delta": 0.02400551
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP BH",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "F10239",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "GA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "WILLOWBROOKE AT TANNER",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 56196.33424077903,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "d97f1f22279dacbad2ea",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025831Z_where_did_change_happen_for_drg_alcohol__775b3829",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP BH",
+          "primary_diagnosis_code": "F1110",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "GA",
+          "hcc_medium": "IP BH",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "rendering_provider_name": "WILLOWBROOKE AT TANNER",
+          "primary_diagnosis_code": "F10239",
+          "facility_type": "ACUTE HOSPITAL"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "GA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP BH"
+          ],
+          "diagnosis": [
+            "F1110"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 7006.04,
+            "delta": 7006.04
+          },
+          "share_of_positive_delta": 0.14686372482515225,
+          "share_of_net_delta": 0.1627966094999621,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 7.0,
+            "delta": 7.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 7006.04,
+              "delta": 7006.04
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.78399961,
+              "delta": 0.78399961
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.78399961,
+              "delta": 0.78399961
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01436989,
+              "delta": 0.01436989
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP BH",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "F1110",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "GA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "WILLOWBROOKE AT TANNER",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 7231.47581760661,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "a9001ce8f3db336e1cd1",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+        },
+        "source_trace": {
+          "run_id": "20260824T025831Z_where_did_change_happen_for_drg_alcohol__775b3829",
+          "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP BH",
+          "primary_diagnosis_code": "F1120",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "GA",
+          "hcc_medium": "IP BH",
+          "procedure_name": "Null or Blank",
+          "product_description": "PPO Local",
+          "rendering_provider_name": "WILLOWBROOKE AT TANNER",
+          "primary_diagnosis_code": "F10239",
+          "facility_type": "ACUTE HOSPITAL"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "GA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP BH"
+          ],
+          "diagnosis": [
+            "F1120"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 4988.73,
+            "delta": 4988.73
+          },
+          "share_of_positive_delta": 0.10457597586467986,
+          "share_of_net_delta": 0.11592116655211017,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 5.0,
+            "delta": 5.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 4988.73,
+              "delta": 4988.73
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.78399951,
+              "delta": 0.78399951
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.78399951,
+              "delta": 0.78399951
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01436867,
+              "delta": 0.01436867
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP BH",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "F1120",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "GA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO Local",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "WILLOWBROOKE AT TANNER",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 3719.541132950898,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      }
+    ]
+  },
+  "conversation_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604_3",
+  "query": "Analyze reimbursement policies for pattern 3",
+  "job_id": "tutorial-OON-Medicare_GRS-202607-YTD-202604_3_job"
+}

@@ -1,0 +1,233 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R12-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R12-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH acute hospital spend shows meaningful authorized unit-cost pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_scope": "Broad UB04 facility bundling includes routine inpatient, cardiac, and vent/trach components; ventilator management separate."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_UHC_00159",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "This is not a DRG-specific rule, but it applies broad hospital inclusive-charge bundling to UB04 facility claims. For cardiac procedural encounters, routine supplies, nursing, equipment, and surgical/procedural room components are included in the room, board, facility, or surgical room payment and are not separately reimbursed.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270-279",
+            "300-370",
+            "250",
+            "300",
+            "309",
+            "361",
+            "391",
+            "460",
+            "510",
+            "761",
+            "410",
+            "412",
+            "419"
+          ],
+          "pairing_conditions": [
+            "same surgical encounter",
+            "same inpatient stay",
+            "same day of use"
+          ],
+          "utilization_limits": [
+            "1 unit/day"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Ventilator or CPAP management"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: OH acute hospital spend shows meaningful authorized unit-cost pressure",
+    "pattern_rank": 7,
+    "pattern_title": "OH acute hospital spend shows meaningful authorized unit-cost pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Concomitant Left Atrial Appendage Closure and Cardiac Ablation",
+      "Kidney and Urinary Tract Infections without MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it targets cesarean-delivery facility bundling rather than the OH acute hospital unit-cost pressure scenario in the pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/2 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00112:Unlisted or Miscellaneous Codes]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 21259,
+    "output": 22542,
+    "breakdown": {
+      "search_keywords": {
+        "input": 572,
+        "output": 1552,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 443,
+        "output": 725,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 13667,
+        "output": 17743,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 996,
+        "output": 437,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 1049,
+        "output": 699,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 380,
+        "output": 274,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1907,
+        "output": 789,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2245,
+        "output": 323,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T16:43:01.110337+00:00",
+    "end_time": "2026-08-23T16:45:50.158884+00:00",
+    "duration_ms": 169048,
+    "version": "2.0.0"
+  }
+}

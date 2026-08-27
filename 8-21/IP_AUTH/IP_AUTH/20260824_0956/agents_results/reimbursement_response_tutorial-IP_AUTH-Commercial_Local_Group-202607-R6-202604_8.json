@@ -1,0 +1,418 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_8_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Maternity and NICU complications are creating small-volume, high-cost spikes in CA and VA",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "newborn_drg_revenue_match",
+          "label": "DRG/Revenue Match",
+          "type": "text"
+        },
+        {
+          "id": "newborn_stay_auth",
+          "label": "Newborn Stay Auth",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "newborn_drg_revenue_match": "DRG must match newborn revenue-code level; mismatches prevent sick newborn grouping and NICU reimbursement.",
+          "newborn_stay_auth": "Requires Auth"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "newborn_drg_revenue_match": "Matches billed newborn or Level II NICU level to the corresponding revenue code.",
+          "newborn_stay_auth": "Requires Auth"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "newborn_drg_revenue_match": "-",
+          "newborn_stay_auth": "-"
+        },
+        {
+          "payer_org": "Optum Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "newborn_drg_revenue_match": "-",
+          "newborn_stay_auth": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "newborn_drg_revenue_match": "Not bundled; payable with medical necessity/diagnosis, including newborn screening, hearing-loss evaluation, and ABR need.",
+          "newborn_stay_auth": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00057",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "DRG Newborn Inpatient Stays",
+        "tags": [],
+        "effective_date": "2026-10-01",
+        "evidence": "When newborn inpatient reimbursement is based on DRG assignment, the billed revenue code must match the newborn DRG category. Claims without a NICU revenue code do not group to a sick newborn DRG. Current authorization rules still apply.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-18002-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0172",
+            "0173",
+            "0174",
+            "0170",
+            "0171"
+          ],
+          "pairing_conditions": [
+            "same claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or contracts/requirements"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00145",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "DRG Newborn Inpatient Stays C-18002",
+        "tags": [],
+        "effective_date": "12/18/2025",
+        "evidence": "General nursery or well-baby care is reimbursable for healthy, physiologically stable neonates receiving immediate postpartum evaluation and observation.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/DRG%20Newborn%20Inpatient%20Stays%20C-18002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "related_codes": [
+            "0170",
+            "0171",
+            "0173",
+            "0174",
+            "0172"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "pairing_conditions": [
+            "same claim"
+          ],
+          "utilization_limits": [
+            "first 24 hours monitoring"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "California: revenue code comments updated effective 01/01/2026",
+            "Virginia: Section I delayed implementation"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Maine: Section I does not apply",
+            "New York: Section I does not apply",
+            "market not subject to this policy"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_OPTUM_ALL_28595840100",
+        "payer_name": "Optum Health",
+        "policy_title": "Documentation Requirements for Reimbursement of Evaluation Management (E/M) Services (99201-99205 and 99212-99215)",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.myoptumhealthphysicalhealth.com/public/document/?documentType=ReimbursementPolicies&documentName=0056_DocReqEMServicesReimbursementPolicy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00193",
+        "payer_name": "Molina",
+        "policy_title": "Facility Emergency Department Evaluation and Management leveling",
+        "tags": [],
+        "effective_date": "01/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/FacilityEmergencyDepartmentEvaluationandManagementleveling12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01425",
+        "payer_name": "United Health",
+        "policy_title": "Otoacoustic Emissions Testing Policy, Professional",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Limitations apply to otoacoustic emissions testing. The code is reimbursable for neonatal and early childhood hearing screening when medical necessity criteria are met, but is denied for members age 4 years and over when no diagnosis from the diagnosis list is submitted.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Otoacoustic-Emissions-Testing-R7104.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "92558",
+            "92587",
+            "92588"
+          ],
+          "related_codes": [
+            "92587",
+            "92588",
+            "92558"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "same date of service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Indiana exempt",
+            "Kansas exempt",
+            "NC allows Z00.110 Z00.111 Z00.121 Z00.129 Z00.00 Z00.01"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Indiana",
+            "Kansas",
+            "NC Z00.110 Z00.111 Z00.121 Z00.129 Z00.00 Z00.01"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Maternity and NICU complications are creating small-volume, high-cost spikes in CA and VA",
+    "pattern_rank": 8,
+    "pattern_title": "Maternity and NICU complications are creating small-volume, high-cost spikes in CA and VA",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Extreme Immaturity or Respiratory Distress Syndrome, Neonate",
+      "Full Term Neonate with Major Problems",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA', 'VA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it addresses routine healthy newborn nursery billing rather than the pattern\u2019s California maternity/NICU complication cost spike."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/6 policies quarantined (17%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_ELV_INTERNAL_00163:Pest Control Services RETIRED]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 63042,
+    "output": 34993,
+    "breakdown": {
+      "search_keywords": {
+        "input": 553,
+        "output": 1461,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 412,
+        "output": 426,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 52671,
+        "output": 28218,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 1930,
+        "output": 675,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 932,
+        "output": 841,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 642,
+        "output": 530,
+        "calls": 5
+      },
+      "elevance_summary": {
+        "input": 405,
+        "output": 153,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4097,
+        "output": 2261,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1400,
+        "output": 428,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:53:04.584652+00:00",
+    "end_time": "2026-08-24T10:55:14.064494+00:00",
+    "duration_ms": 129479,
+    "version": "2.0.0"
+  }
+}

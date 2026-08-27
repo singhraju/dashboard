@@ -1,0 +1,191 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R6-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R6-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Post-acute, pediatric, and behavioral facilities are pulling more spend outside core acute hospitals",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Optum Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "policy_scope": "Covers office/outpatient E/M coding reimbursement, not DRG reimbursement."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_OPTUM_ALL_28595840100",
+        "payer_name": "Optum Health",
+        "policy_title": "Documentation Requirements for Reimbursement of Evaluation Management (E/M) Services (99201-99205 and 99212-99215)",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "Off-topic for the requested DRG pattern. The policy addresses office and outpatient E/M documentation and coding, not DRG reimbursement.",
+        "policy_url": "https://www.myoptumhealthphysicalhealth.com/public/document/?documentType=ReimbursementPolicies&documentName=0056_DocReqEMServicesReimbursementPolicy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Post-acute, pediatric, and behavioral facilities are pulling more spend outside core acute hospitals",
+    "pattern_rank": 5,
+    "pattern_title": "Post-acute, pediatric, and behavioral facilities are pulling more spend outside core acute hospitals",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare, Musculoskeletal System and Connective Tissue with CC",
+      "Psychoses"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 11756,
+    "output": 4676,
+    "breakdown": {
+      "search_keywords": {
+        "input": 533,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 350,
+        "output": 219,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 8151,
+        "output": 2539,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 471,
+        "output": 565,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 647,
+        "output": 454,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 258,
+        "output": 131,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1346,
+        "output": 237,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T07:00:37.027664+00:00",
+    "end_time": "2026-08-24T07:01:23.105307+00:00",
+    "duration_ms": 46077,
+    "version": "2.0.0"
+  }
+}

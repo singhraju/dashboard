@@ -1,0 +1,514 @@
+{
+  "success": true,
+  "result": {
+    "job_id": "40d9297904074753b532f6f8d384da1c",
+    "conversation_id": null,
+    "agent": "recommendation_dtr",
+    "status": "success",
+    "output": {
+      "metadata": {
+        "total_patterns": 8,
+        "recommendations_generated": 8,
+        "patterns_skipped": 0,
+        "approach": "llm_based_dtr_relevance",
+        "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Initiate a Commercial Individual HMO ACUTE HOSPITAL policy action plan for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, EMORY UNIVERSITY HOSPITAL, EMORY UNIVERSITY HOSPITAL MIDTOWN, and statewide ME facilities to perform contract remediation and site-of-care review, confirm prior authorization on PA-required admits, enforce denial claims edits, and review repeat admissions for discharge-planning and elective-admit appropriateness.",
+          "evidence": [
+            "CO HMO acute hospitals added 2,380 admissions while paid per admit fell.",
+            "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL added 274 admissions.",
+            "EMORY UNIVERSITY HOSPITAL added 396 admissions.",
+            "EMORY UNIVERSITY HOSPITAL MIDTOWN added 352 admissions.",
+            "ME HMO acute hospitals added 830 admissions while paid per admit fell.",
+            "Source cards are flagged auth_dimension_present with pa_required_code Y."
+          ],
+          "peer_benchmarking": [
+            "Cigna bundles routine facility services and respiratory care; only highest-priced ventilatory modality reimbursable.",
+            "United Health bundles routine services into facility charges; one daily ventilator/CPAP management unit reimbursable."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 2,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Hold UM rule updates, provider scorecard changes, reimbursement responses, and related claim reprocessing for AUTH_CODE_DISTRIBUTION until PA-required assignment, denial enforcement, and manual adjudication edits are validated in CO, GA, CA, and ME for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, UCHEALTH MEMORIAL HOSPITAL CENTRAL, EMORY UNIVERSITY HOSPITAL, and Coronary Bypass without Cardiac Catheterization with MCC.",
+          "evidence": [
+            "Validation needed flag is true for authorization or mapping shifts.",
+            "CO AUTH_CODE_DISTRIBUTION shift totals about +$18.2M.",
+            "GA shift centers on EMORY UNIVERSITY HOSPITAL.",
+            "CA / ME group includes Coronary Bypass without Cardiac Catheterization with MCC.",
+            "Flags include auth_or_mapping_shift and requires_validation_before_action."
+          ],
+          "peer_benchmarking": [
+            "Cigna payer summary lists Bundles for both pattern mention and auth status."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 3,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Reprocess CO Commercial Individual HMO prior-auth inpatient Med/Surg claims in CHILDRENS and Not Mapped facilities to validate facility mapping, authorization-to-claim matching, denial enforcement, and contractual payment compliance for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, then initiate a targeted Children's site-of-care remediation review only for claims confirmed as correctly processed.",
+          "evidence": [
+            "CO HMO Children's claims rose with more admissions and higher paid per admit.",
+            "CO HMO Not Mapped claims are flagged unmapped_or_unknown_value.",
+            "Both claim pockets are prior-auth required inpatient Med/Surg admissions.",
+            "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL appears in drill context for both pockets."
+          ],
+          "peer_benchmarking": [
+            "Cigna bundles inpatient and outpatient facility claims on CMS-1500 and UB-04.",
+            "United Health bundles all inpatient and outpatient facility settings, including room and board."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 4,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Implement a CA joint IP Med/Surg review for Coronary Bypass without Cardiac Catheterization with MCC and hematology admissions tied to ANTINEO CHEMO INDUCED PANCYTOPENIA and NEUTROPENIA UNSPECIFIED, requiring initial and concurrent review KPI audit, non-ER elective CABG site-of-care review, and EPO acute-hospital Commercial Individual PA-to-claim plus contractual payment validation.",
+          "evidence": [
+            "CA CABG diagnoses contributed about +$5.4M across 36 more admissions.",
+            "Pancytopenia and neutropenia hematology admissions added about +$0.6M on 16 admissions.",
+            "CA EPO acute-hospital admissions added about +$2.3M on 16 admissions.",
+            "EPO paid per admit fell sharply despite admission growth."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        },
+        {
+          "rank": 5,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Adopt product-specific inpatient chemotherapy admission rules for ENCOUNTER FOR ANTINEOPLASTIC CHEMO and AGRANULOCYTOSIS SEC TO CANCER CHEMO in WI HMO/POS acute hospital, CA HMO acute hospital, and CA EPO CHILDRENS that redirect scheduled non-ER chemotherapy to outpatient site of care, require auth-to-claim matching for PA=Y admissions, and review CA HMO PA=N contract terms.",
+          "evidence": [
+            "ENCOUNTER FOR ANTINEOPLASTIC CHEMO drives WI and CA acute inpatient chemotherapy.",
+            "CA HMO acute chemotherapy admissions were segmented with pa_required_code N.",
+            "WI POS acute chemotherapy admissions were segmented with pa_required_code Y.",
+            "CA CHILDRENS EPO hematology admissions used AGRANULOCYTOSIS SEC TO CANCER CHEMO."
+          ],
+          "peer_benchmarking": [
+            "United Health bundles medication, chemotherapy, and IV fluid administration during inpatient stays.",
+            "Cigna bundles routine inpatient chemotherapy administration, supplies, flushes, and IV insertion.",
+            "Elevance Health does not separately reimburse with same-day facility or room fees."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 6,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Implement targeted post-pay audit and authorization-to-claim matching edits for PA-required IP Med/Surg catastrophic admissions at EMORY UNIVERSITY HOSPITAL, UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, UCHEALTH MEMORIAL HOSPITAL CENTRAL, and MARIAN REGIONAL MEDICAL CENTER, focused on Liver Transplant without MCC, Infectious and Parasitic Diseases with O.R. Procedures with MCC, Other Major Cardiovascular Procedures with MCC, and Coronary Bypass without Cardiac Catheterization with MCC; escalate confirmed outlier payment, DRG, or bundling mismatches to provider reimbursement review.",
+          "evidence": [
+            "PA-required acute-hospital claims drive the transplant and catastrophic admission pattern.",
+            "Variance is concentrated at Emory, UCHealth, and Marian Regional providers.",
+            "Liver Transplant without MCC is a primary driver in GA and CO.",
+            "Small-number admissions carry low-baseline and repeated-delta concentration flags."
+          ],
+          "peer_benchmarking": [
+            "Elevance Health (internal) bundles transplant services and requires authorization.",
+            "Cigna bundles transplant services."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 7,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Perform a claim-level maternity policy audit for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL admissions coded as Cesarean Section without Sterilization with MCC and PT PROM UNS TM BTW RUPT LABR 2 TRI to verify obstetric severity coding, contractual claims adjudication, prior-authorization enforcement, and correct OB bundle versus separate-pay handling.",
+          "evidence": [
+            "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL drives the maternity variance.",
+            "DRG is Cesarean Section without Sterilization with MCC.",
+            "Diagnosis is PT PROM UNS TM BTW RUPT LABR 2 TRI.",
+            "PA required code is Y.",
+            "Flags include small_n_admissions and repeated_delta_concentration."
+          ],
+          "peer_benchmarking": [
+            "Cigna bundles global OB; separate pay needs documented modifier 22 and assistant modifier on non-global cesarean delivery.",
+            "Elevance allows separate pay for distinct obstetric services, assistant surgeons, and supported modifier 22 cesareans."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 8,
+          "priority": "MEDIUM",
+          "category": "Policy",
+          "description": "Stand up a recurring IP Med/Surg claim review queue beginning with CT PPO acute hospitals and ME HMO Not Mapped claims to validate authorization-to-claim matching, enforce denials, confirm payment per contract, and route recurring OH, VA, WI, CO, TX, and CA pockets to site-of-care or contract remediation review.",
+          "evidence": [
+            "CT PPO acute hospitals added about +$3.2M across utilization and mixed cost pressure.",
+            "ME HMO not-mapped claims added about +$2.1M on 42 more admissions.",
+            "CT cards repeatedly flag auth_dimension_present and repeated_delta_concentration.",
+            "CABG, hematology, injury procedures, medical back, and rehab recur as drivers.",
+            "ME claims are flagged unmapped_or_unknown_value, low_baseline_rows, and low_baseline_value."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        }
+      ],
+      "skipped_patterns": [],
+      "processing_log": [
+        {
+          "rank": 1,
+          "status": "success",
+          "rules_used": 10,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in specific provider systems and hospitals, especially UCHealth in CO and Emory in GA, making provider-level behavior and contracting review the top parent rule.; IP MedSurg (DNE) Trend 6: The pattern is clearly utilization-led, with admissions rising sharply while paid per admit declines, which aligns with reviewing utilization management KPI changes and a PAV waterfall.; IP MedSurg (DNE) Trend 8: PA-required admits are prominent across the source cards, the pattern is flagged for auth dimension presence, and the recommended next step explicitly calls for checking PA rule effectiveness and auth enforcement.; IP MedSurg (DNE) Trend 5: Recommended follow-up includes readmission pattern review, and the large increase in admissions could reflect repeat admits among the same members rather than only new case growth.; IP MedSurg (DNE) Trend 7: The action plan mentions admission appropriateness, and this volume-led inpatient spike may reflect changes in elective versus urgent admits or shifts in admission source/location."
+        },
+        {
+          "rank": 2,
+          "status": "success",
+          "rules_used": 10,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly an authorization classification and auth-to-claim mapping issue, with AUTH_CODE_DISTRIBUTION shifts and a stated need to validate PA-required code assignment before action.; IP MedSurg (DNE) Trend 9: Highly relevant because the pattern details call out possible mapping or feed changes; claim processing or reprocessing differences could create apparent bucket movement without true care-pattern change.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a subset of providers, especially the UCHealth hospitals in CO, Emory University Hospital in GA, and Maine-related inpatient claims, matching the provider-driver rule.; IP MedSurg (DNE) Trend 10: Relevant because the pattern warns that reimbursement action should be paused until authorization classification is confirmed, which directly affects interpretation of reimbursement method changes.; IP MedSurg (DNE) Trend 4: Secondary but relevant because specific inpatient services/DRGs are named as drivers, including CABG with MCC, ECMO/tracheostomy with ventilation, and liver transplant cases, so service-level isolation may help after auth mapping is validated."
+        },
+        {
+          "rank": 3,
+          "status": "success",
+          "rules_used": 13,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 7: This pattern is explicitly a site-of-care and facility-mix shift in inpatient HMO claims, with admissions moving into Children's and unmapped facilities, so reviewing admission/discharge source/location is the closest parent rule for the location-based variance.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially, especially in Children's claims, and the recommended action includes a reimbursement review, making reimbursement method highly relevant to the specialty-facility unit-cost pressure.; IP MedSurg (DNE) Trend 9: A large share of the increase sits in 'Not Mapped' facility claims, and the pattern specifically calls for validating facility attribution first, which aligns with claims processing or reprocessing review.; IP MedSurg (DNE) Trend 8: Both contributing claim pockets are prior-auth required and flagged for auth-to-claim validation, so this rule is relevant to confirm authorization enforcement and possible leakage on the admission spike.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a narrow specialty facility/provider subset in CO, especially Children's settings, so provider-level concentration and any associated contractual changes should be investigated."
+        },
+        {
+          "rank": 4,
+          "status": "success",
+          "rules_used": 13,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is explicitly concentrated in a narrow set of diagnoses and clinical pathways, especially CABG tied to coronary disease diagnoses plus chemo-induced pancytopenia and neutropenia admissions.; IP MedSurg (DNE) Trend 4: Variance is confined to a few high-cost inpatient Med/Surg service/DRG pathways rather than broad inpatient inflation, matching a focused service-driver review.; IP MedSurg (DNE) Trend 10: The recommended next step calls for a reimbursement check on CA EPO acute-hospital episodes, and mixed unit cost with lower paid per admit makes reimbursement method/payment terms highly relevant.; IP MedSurg (DNE) Trend 8: PA-required acute-hospital episodes are present and the EPO operational signal is flagged for auth dimensions, so auth-to-claim enforcement is an appropriate parent rule.; IP MedSurg (DNE) Trend 7: The dominant CABG growth is in non-ER admissions, making review of elective case mix and admission source/location relevant for the cardiac portion of the pattern."
+        },
+        {
+          "rank": 5,
+          "status": "success",
+          "rules_used": 13,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow oncology diagnosis set, especially ENCOUNTER FOR ANTINEOPLASTIC CHEMO and related chemotherapy-induced hematology diagnoses, making diagnosis-level isolation a primary parent rule.; IP MedSurg (DNE) Trend 4: The pattern is specifically about inpatient chemotherapy and related hematology services, and the recommended action emphasizes site-of-care and outpatient substitution, which aligns directly to service-driver review.; IP MedSurg (DNE) Trend 6: Pattern details and next steps point to inpatient appropriateness, pathway management, and UM rule design; rising admissions plus higher paid per admit suggest reviewing UM KPI and potentially avoidable inpatient variance.; IP MedSurg (DNE) Trend 8: Several operational cards are explicitly segmented by PA required code and flagged with auth_dimension_present, including a CA HMO pocket with PA=N, so auth-to-claim enforcement is highly relevant.; IP MedSurg (DNE) Trend 7: Key chemotherapy growth appears in non-ER inpatient admissions, which may reflect more scheduled/elective inpatient chemo and supports review of admission source/location and inpatient setting appropriateness."
+        },
+        {
+          "rank": 6,
+          "status": "success",
+          "rules_used": 15,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a narrow set of catastrophic diagnoses/DRGs, including liver transplant failure, alcoholic cirrhosis with ascites, sepsis with O.R. procedures, cardiovascular surgical cases, and hematologic complications.; IP MedSurg (DNE) Trend 1: The spend spike is concentrated in a small subset of hospitals/providers such as Emory University Hospital, UCHealth facilities, and Marian Regional Medical Center, matching a provider-driver investigation.; IP MedSurg (DNE) Trend 2: The pattern is driven by a handful of very expensive admissions and explicitly calls for claim-level and case-management review, which aligns with variance isolated to a small subset of members.; IP MedSurg (DNE) Trend 4: The emerging cost is tied to specific inpatient service types and procedures\u2014especially transplant, major cardiovascular surgery, and O.R.-intensive sepsis cases\u2014rather than broad IP Med/Surg utilization.; IP MedSurg (DNE) Trend 8: Several high-cost cases are marked PA-required, and transplant/catastrophic admissions warrant checking whether authorization requirements matched paid claims and UM controls were properly enforced."
+        },
+        {
+          "rank": 7,
+          "status": "success",
+          "rules_used": 12,
+          "categories": [
+            "IP OB Dlvry Well NB (DNE)"
+          ],
+          "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 1: The variance is highly concentrated at a single provider, UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, so provider-specific behavior, contracting, or billing review is the most direct parent rule.; IP OB Dlvry Well NB (DNE) Trend 3: The pattern is tied to a specific obstetric diagnosis, PT PROM UNS TM BTW RUPT LABR 2 TRI, which fits a diagnosis-isolated severity/coding review.; IP OB Dlvry Well NB (DNE) Trend 4: The outlier is concentrated in one maternity service/DRG, Cesarean Section without Sterilization with MCC, indicating a focused service-line issue rather than a broad OB trend.; IP OB Dlvry Well NB (DNE) Trend 9: The recommended next step is claim-level review to confirm coding and claim accuracy, which aligns with reviewing claims processing/reprocessing and claim status for a very small number of high-cost admissions.; IP OB Dlvry Well NB (DNE) Trend 10: Maternity-specific payment rules and the extremely high paid per admit make reimbursement method review relevant, especially to confirm the claims were paid under the correct OB payment approach."
+        },
+        {
+          "rank": 8,
+          "status": "success",
+          "rules_used": 16,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 4: The pattern is concentrated in specific service and facility settings\u2014acute hospitals, physical rehab, and not-mapped facility claims\u2014so service/site-of-care review is highly relevant.; IP MedSurg (DNE) Trend 3: The increase is clinically narrow and DRG-driven, with CABG, hematology, injury procedures, and medical back problems repeatedly appearing as key drivers.; IP MedSurg (DNE) Trend 8: Most pockets are authorization-related and the source cards explicitly reference auth-to-claim validation, making authorization enforcement a strong fit.; IP MedSurg (DNE) Trend 1: The issue appears in repeat product-facility pockets rather than broadly, suggesting concentration in a subset of hospitals/providers that should be investigated as repeat offenders.; IP MedSurg (DNE) Trend 10: Several pockets show mixed but meaningful unit-cost pressure, and the recommended routes include reimbursement and network review, supporting reimbursement-method analysis."
+        }
+      ]
+    },
+    "recommended_action": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a Commercial Individual HMO ACUTE HOSPITAL policy action plan for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, EMORY UNIVERSITY HOSPITAL, EMORY UNIVERSITY HOSPITAL MIDTOWN, and statewide ME facilities to perform contract remediation and site-of-care review, confirm prior authorization on PA-required admits, enforce denial claims edits, and review repeat admissions for discharge-planning and elective-admit appropriateness.",
+        "evidence": [
+          "CO HMO acute hospitals added 2,380 admissions while paid per admit fell.",
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL added 274 admissions.",
+          "EMORY UNIVERSITY HOSPITAL added 396 admissions.",
+          "EMORY UNIVERSITY HOSPITAL MIDTOWN added 352 admissions.",
+          "ME HMO acute hospitals added 830 admissions while paid per admit fell.",
+          "Source cards are flagged auth_dimension_present with pa_required_code Y."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles routine facility services and respiratory care; only highest-priced ventilatory modality reimbursable.",
+          "United Health bundles routine services into facility charges; one daily ventilator/CPAP management unit reimbursable."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Hold UM rule updates, provider scorecard changes, reimbursement responses, and related claim reprocessing for AUTH_CODE_DISTRIBUTION until PA-required assignment, denial enforcement, and manual adjudication edits are validated in CO, GA, CA, and ME for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, UCHEALTH MEMORIAL HOSPITAL CENTRAL, EMORY UNIVERSITY HOSPITAL, and Coronary Bypass without Cardiac Catheterization with MCC.",
+        "evidence": [
+          "Validation needed flag is true for authorization or mapping shifts.",
+          "CO AUTH_CODE_DISTRIBUTION shift totals about +$18.2M.",
+          "GA shift centers on EMORY UNIVERSITY HOSPITAL.",
+          "CA / ME group includes Coronary Bypass without Cardiac Catheterization with MCC.",
+          "Flags include auth_or_mapping_shift and requires_validation_before_action."
+        ],
+        "peer_benchmarking": [
+          "Cigna payer summary lists Bundles for both pattern mention and auth status."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Reprocess CO Commercial Individual HMO prior-auth inpatient Med/Surg claims in CHILDRENS and Not Mapped facilities to validate facility mapping, authorization-to-claim matching, denial enforcement, and contractual payment compliance for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, then initiate a targeted Children's site-of-care remediation review only for claims confirmed as correctly processed.",
+        "evidence": [
+          "CO HMO Children's claims rose with more admissions and higher paid per admit.",
+          "CO HMO Not Mapped claims are flagged unmapped_or_unknown_value.",
+          "Both claim pockets are prior-auth required inpatient Med/Surg admissions.",
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL appears in drill context for both pockets."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles inpatient and outpatient facility claims on CMS-1500 and UB-04.",
+          "United Health bundles all inpatient and outpatient facility settings, including room and board."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA joint IP Med/Surg review for Coronary Bypass without Cardiac Catheterization with MCC and hematology admissions tied to ANTINEO CHEMO INDUCED PANCYTOPENIA and NEUTROPENIA UNSPECIFIED, requiring initial and concurrent review KPI audit, non-ER elective CABG site-of-care review, and EPO acute-hospital Commercial Individual PA-to-claim plus contractual payment validation.",
+        "evidence": [
+          "CA CABG diagnoses contributed about +$5.4M across 36 more admissions.",
+          "Pancytopenia and neutropenia hematology admissions added about +$0.6M on 16 admissions.",
+          "CA EPO acute-hospital admissions added about +$2.3M on 16 admissions.",
+          "EPO paid per admit fell sharply despite admission growth."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Adopt product-specific inpatient chemotherapy admission rules for ENCOUNTER FOR ANTINEOPLASTIC CHEMO and AGRANULOCYTOSIS SEC TO CANCER CHEMO in WI HMO/POS acute hospital, CA HMO acute hospital, and CA EPO CHILDRENS that redirect scheduled non-ER chemotherapy to outpatient site of care, require auth-to-claim matching for PA=Y admissions, and review CA HMO PA=N contract terms.",
+        "evidence": [
+          "ENCOUNTER FOR ANTINEOPLASTIC CHEMO drives WI and CA acute inpatient chemotherapy.",
+          "CA HMO acute chemotherapy admissions were segmented with pa_required_code N.",
+          "WI POS acute chemotherapy admissions were segmented with pa_required_code Y.",
+          "CA CHILDRENS EPO hematology admissions used AGRANULOCYTOSIS SEC TO CANCER CHEMO."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles medication, chemotherapy, and IV fluid administration during inpatient stays.",
+          "Cigna bundles routine inpatient chemotherapy administration, supplies, flushes, and IV insertion.",
+          "Elevance Health does not separately reimburse with same-day facility or room fees."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement targeted post-pay audit and authorization-to-claim matching edits for PA-required IP Med/Surg catastrophic admissions at EMORY UNIVERSITY HOSPITAL, UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, UCHEALTH MEMORIAL HOSPITAL CENTRAL, and MARIAN REGIONAL MEDICAL CENTER, focused on Liver Transplant without MCC, Infectious and Parasitic Diseases with O.R. Procedures with MCC, Other Major Cardiovascular Procedures with MCC, and Coronary Bypass without Cardiac Catheterization with MCC; escalate confirmed outlier payment, DRG, or bundling mismatches to provider reimbursement review.",
+        "evidence": [
+          "PA-required acute-hospital claims drive the transplant and catastrophic admission pattern.",
+          "Variance is concentrated at Emory, UCHealth, and Marian Regional providers.",
+          "Liver Transplant without MCC is a primary driver in GA and CO.",
+          "Small-number admissions carry low-baseline and repeated-delta concentration flags."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) bundles transplant services and requires authorization.",
+          "Cigna bundles transplant services."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a claim-level maternity policy audit for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL admissions coded as Cesarean Section without Sterilization with MCC and PT PROM UNS TM BTW RUPT LABR 2 TRI to verify obstetric severity coding, contractual claims adjudication, prior-authorization enforcement, and correct OB bundle versus separate-pay handling.",
+        "evidence": [
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL drives the maternity variance.",
+          "DRG is Cesarean Section without Sterilization with MCC.",
+          "Diagnosis is PT PROM UNS TM BTW RUPT LABR 2 TRI.",
+          "PA required code is Y.",
+          "Flags include small_n_admissions and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles global OB; separate pay needs documented modifier 22 and assistant modifier on non-global cesarean delivery.",
+          "Elevance allows separate pay for distinct obstetric services, assistant surgeons, and supported modifier 22 cesareans."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Stand up a recurring IP Med/Surg claim review queue beginning with CT PPO acute hospitals and ME HMO Not Mapped claims to validate authorization-to-claim matching, enforce denials, confirm payment per contract, and route recurring OH, VA, WI, CO, TX, and CA pockets to site-of-care or contract remediation review.",
+        "evidence": [
+          "CT PPO acute hospitals added about +$3.2M across utilization and mixed cost pressure.",
+          "ME HMO not-mapped claims added about +$2.1M on 42 more admissions.",
+          "CT cards repeatedly flag auth_dimension_present and repeated_delta_concentration.",
+          "CABG, hematology, injury procedures, medical back, and rehab recur as drivers.",
+          "ME claims are flagged unmapped_or_unknown_value, low_baseline_rows, and low_baseline_value."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "visual_component": {},
+    "explanation": {
+      "summary": "Generated 8 recommendations from 8 patterns",
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "validation": {
+      "is_valid": true,
+      "checks": [
+        {
+          "check": "patterns_processed",
+          "passed": true,
+          "message": "Processed 8 patterns"
+        },
+        {
+          "check": "dtr_rules_loaded",
+          "passed": true,
+          "message": "DTR rules loaded from /app/configs/decision_tree_rules.yaml"
+        },
+        {
+          "check": "recommendations_generated",
+          "passed": true,
+          "message": "Generated 8 recommendations"
+        },
+        {
+          "check": "token_tracking",
+          "passed": true,
+          "message": "Tracked 315430 input + 82437 output tokens"
+        }
+      ],
+      "warnings": [],
+      "errors": []
+    },
+    "tokens": {
+      "input": 315430,
+      "output": 82437,
+      "breakdown": {
+        "per_pattern": {
+          "pattern_1": {
+            "relevance": {
+              "input": 28743,
+              "output": 3280
+            },
+            "recommendation": {
+              "input": 12129,
+              "output": 3754
+            }
+          },
+          "pattern_2": {
+            "relevance": {
+              "input": 23774,
+              "output": 4919
+            },
+            "recommendation": {
+              "input": 9581,
+              "output": 1959
+            }
+          },
+          "pattern_3": {
+            "relevance": {
+              "input": 19494,
+              "output": 6282
+            },
+            "recommendation": {
+              "input": 7715,
+              "output": 2017
+            }
+          },
+          "pattern_4": {
+            "relevance": {
+              "input": 24235,
+              "output": 8821
+            },
+            "recommendation": {
+              "input": 10031,
+              "output": 2761
+            }
+          },
+          "pattern_5": {
+            "relevance": {
+              "input": 32881,
+              "output": 4832
+            },
+            "recommendation": {
+              "input": 14298,
+              "output": 5293
+            }
+          },
+          "pattern_6": {
+            "relevance": {
+              "input": 36130,
+              "output": 8753
+            },
+            "recommendation": {
+              "input": 15903,
+              "output": 3757
+            }
+          },
+          "pattern_7": {
+            "relevance": {
+              "input": 14569,
+              "output": 8819
+            },
+            "recommendation": {
+              "input": 5098,
+              "output": 2309
+            }
+          },
+          "pattern_8": {
+            "relevance": {
+              "input": 41967,
+              "output": 9083
+            },
+            "recommendation": {
+              "input": 18882,
+              "output": 5798
+            }
+          }
+        },
+        "aggregated": {
+          "relevance_checks": {
+            "input": 221793,
+            "output": 54789,
+            "calls": 8
+          },
+          "recommendations": {
+            "input": 93637,
+            "output": 27648,
+            "calls": 8
+          }
+        }
+      }
+    },
+    "execution": {
+      "start_time": "2026-08-22T12:46:12.134126+00:00",
+      "end_time": "2026-08-22T12:49:38.140007+00:00",
+      "duration_ms": 206005,
+      "version": "1.0.0"
+    }
+  },
+  "execution_time": 206.01194143295288,
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T12:49:38.140889+00:00"
+  }
+}

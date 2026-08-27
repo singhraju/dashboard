@@ -1,0 +1,335 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-R12-202604_8_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-R12-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Prime Surgical Center growth is mixed with Not Mapped outpatient claims and needs validation first",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "site_of_service",
+          "label": "Site of Service",
+          "type": "text"
+        },
+        {
+          "id": "policy_summary",
+          "label": "Policy Summary",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_of_service": "No site-of-service restriction stated for allowed commercial professional claims.",
+          "policy_summary": "Cigna allows Modifier 22 extra reimbursement with documentation, up to 120% of allowed fees."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_of_service": "-",
+          "policy_summary": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "site_of_service": "-",
+          "policy_summary": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00007",
+        "payer_name": "Cigna",
+        "policy_title": "Anesthesia Professional Services",
+        "tags": [],
+        "effective_date": "03/12/2023",
+        "evidence": "Anesthesia-only reimbursement policy; this HCPCS code is not addressed and no adjudication rule can be applied.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R39_Anesthesia_Professional_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00031",
+        "payer_name": "Cigna",
+        "policy_title": "Modifier 22 Increased Procedural Services",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "Modifier 22 may allow additional reimbursement when documentation shows substantially greater work, time, and complexity than typically required for the procedure; payment may increase up to 120% of the applicable fee schedule or maximum allowed fee.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/Modifier_22_Increased_Procedural_Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line"
+          ],
+          "utilization_limits": [
+            "up to 120% of fee schedule"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "2022-09-08",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Immediately audit the CA Prime Surgical Center one-off Not Mapped outpatient claims for any Commercial increased-payment billing that used modifier 22 on the same claim line, and hold policy or contracting changes until those cases are clinically remapped and validated against the peer limit of up to 120% of fee schedule. (CA)",
+      "evidence": [
+        "Cigna \u00b7 Modifier 22 Increased Procedural Services: \"22\" [required_modifiers]",
+        "Cigna \u00b7 Modifier 22 Increased Procedural Services: \"same claim line\" [pairing_conditions]",
+        "Cigna \u00b7 Modifier 22 Increased Procedural Services: \"up to 120% of fee schedule\" [utilization_limits]",
+        "Cigna \u00b7 Modifier 22 Increased Procedural Services: \"Commercial\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Cigna \u00b7 Modifier 22 Increased Procedural Services \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/Modifier_22_Increased_Procedural_Services.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Prime Surgical Center growth is mixed with Not Mapped outpatient claims and needs validation first",
+    "pattern_rank": 8,
+    "pattern_title": "Prime Surgical Center growth is mixed with Not Mapped outpatient claims and needs validation first",
+    "cpt_codes_requested": [
+      "K4020",
+      "M75121"
+    ],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA', 'NV'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 1 for scope drift into cesarean-delivery billing; item 0 remained aligned with the CA Prime Surgical Center validation pattern."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 33378,
+    "output": 14341,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 337,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 2011,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 443,
+        "output": 880,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 26666,
+        "output": 6935,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 869,
+        "output": 657,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 769,
+        "output": 1234,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 222,
+        "output": 290,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 398,
+        "output": 222,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1647,
+        "output": 995,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1401,
+        "output": 780,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T06:40:59.152639+00:00",
+    "end_time": "2026-08-23T06:42:06.866401+00:00",
+    "duration_ms": 67713,
+    "version": "2.0.0"
+  }
+}

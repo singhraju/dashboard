@@ -1,0 +1,823 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "OH free-standing SNF spend surge in LTSS and TANF",
+    "pattern_description": "OH free-standing SNF spend rose sharply across LTSS Dual Eligible and TANF Standard. The biggest pressure came from LTSS Dual Eligible, where both admissions and paid per admit increased across both non-PA and PA-required claims; TANF Standard growth was mostly admission-led. This is a concentrated site-of-care issue that needs utilization and reimbursement action together.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "OH LTSS Dual Eligible / SNF - FREE STANDING added $50.3M. Within that slice, admissions rose by about 6,749 and paid per admit increased by about $6.9K for N and $10.5K for Y. OH TANF Standard / SNF - FREE STANDING added another $9.1M with 1,314 more admissions and only about $270 higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "OH Not Mapped facility bucket needs validation",
+    "pattern_description": "A large OH TANF Standard increase is sitting in a Not Mapped facility bucket under PA-required claims. Because the facility type is unmapped, the increase could reflect real use, classification drift, or site-of-care attribution error. Validate the mapping first so UM and contracting teams act on the right category.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "OH TANF Standard / Not Mapped / Y increased $10.1M. Admissions rose by 408 while paid per admit increased by about $21.6K. The pattern is explicitly flagged as unmapped, so site-of-care attribution should be corrected before action."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA, IN, and TN auth code distribution shifts require reconciliation",
+    "pattern_description": "AUTH_CODE_DISTRIBUTION changes are showing up across CA, IN, and TN and should be treated as a gating data issue. The pattern is concentrated at Fresno Heart & Surgical Hospital, Riley's Children's Health, and Methodist University Hospital, with CA also touching several inpatient DRGs. Do not use these shifts to change UM, provider performance views, or reimbursement policy until PA-required coding is reconciled.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA, IN, and TN auth code distribution shifts require reconciliation",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_mentioned",
+              "label": "DRG Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "auth_requirements",
+              "label": "Auth Requirements",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mentioned": "-",
+              "auth_requirements": "No prior authorization required; sepsis claims may undergo pre/post-pay review for DRG validation."
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mentioned": "-",
+              "auth_requirements": "No prior authorization requirements are stated for this DRG."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mentioned": "-",
+              "auth_requirements": "No DRG-specific authorization requirement stated; authorization may apply for supplies exceeding benefit limits."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mentioned": "-",
+              "auth_requirements": "No prior authorization, notification, or state-specific authorization requirements stated."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Tracheostomy Supplies RETIRED",
+            "tags": [],
+            "effective_date": "11/07/06",
+            "evidence": "No adjudication rule for this DRG was found. The policy is limited to tracheostomy care supplies and does not address inpatient DRG reimbursement or CA/IN/TN authorization code distribution for cirrhosis or alcoholic hepatitis cases.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "first two weeks post-op",
+                "beginning two weeks post-op"
+              ],
+              "utilization_limits": [
+                "1 care kit/day"
+              ],
+              "prior_auth_thresholds": [
+                "auth when benefit limit exceeded"
+              ],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DME and Supplies"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "ordered by physician",
+                "incident to physician services"
+              ],
+              "exemptions": [
+                "additional documentation supports additional kits",
+                "authorized through medical necessity"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00052",
+            "payer_name": "Cigna",
+            "policy_title": "Respiratory Services and Supplies",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "The policy addresses general respiratory service reimbursement and does not contain a DRG-specific rule, prior authorization requirement, or CA/IN/TN distribution instruction for this DRG.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service"
+              ],
+              "utilization_limits": [
+                "24 units/day combined total"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "both reported in hourly units <=24 hours"
+              ],
+              "action_types": [
+                "limit",
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_27067540000",
+            "payer_name": "Cigna",
+            "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+            "tags": [],
+            "effective_date": "10/30/2018",
+            "evidence": "No adjudication rule was identified for this inpatient DRG pattern. The policy is a physician reimbursement policy for the global surgical package and related modifiers, not a DRG-based inpatient authorization or state distribution policy.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00045",
+            "payer_name": "United Health",
+            "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "The requested DRG/auth reconciliation pattern is not addressed. This policy governs professional global surgical package reimbursement on CMS-1500 claims and does not provide DRG-specific inpatient authorization or CA/IN/TN reconciliation rules.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00118",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-03-01",
+            "evidence": "No DRG-specific reimbursement, bundling, or authorization rule is stated for this inpatient DRG description. The policy applies only general ICD-10-CM principal-diagnosis validation and may deny the entire inpatient claim when the principal diagnosis is inappropriate or the discharge reports MS-DRG 998.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "998"
+              ],
+              "related_codes": [
+                "R65"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "inpatient UB-04 claim",
+                "principal diagnosis in Box 67"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00136",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2024-12-01",
+            "evidence": "This policy does not mention this DRG or any CA, IN, or TN authorization reconciliation rule. It broadly applies to UB04 inpatient and outpatient facility claims and bundles routine supplies, nursing, equipment, and many surgical or ventilator-related components into room and board, facility, ancillary, or surgical room reimbursement. Ventilator or CPAP management is separately considered only at 1 unit per day when owned by the facility.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "250",
+                "260",
+                "260-269",
+                "270",
+                "270-279",
+                "279",
+                "300",
+                "300-370",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 unit/day ventilator or CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Pre- and Post-Anesthesia Recovery Room"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00101",
+            "payer_name": "Centene",
+            "policy_title": "Sepsis Diagnosis - CC.PP.073",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No code-specific adjudication rule was identified for this DRG in this policy. The policy is limited to inpatient claims billed with a sepsis diagnosis and does not state CA-, IN-, or TN-specific authorization distribution requirements for this DRG.",
+            "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "871"
+              ],
+              "related_codes": [
+                "710",
+                "720",
+                "853",
+                "854",
+                "855",
+                "870",
+                "872",
+                "A02.1",
+                "A20.7",
+                "A22.7",
+                "A26.7",
+                "A32.7",
+                "A39.1",
+                "A39.2",
+                "A39.3",
+                "A39.4",
+                "A39.89",
+                "A39.9",
+                "A40.0",
+                "A40.1",
+                "A40.3",
+                "A40.8",
+                "A40.9",
+                "A41.01",
+                "A41.02",
+                "A41.1",
+                "A41.2",
+                "A41.3",
+                "A41.4",
+                "A41.50",
+                "A41.51",
+                "A41.52",
+                "A41.53",
+                "A41.54",
+                "A41.59",
+                "A41.81",
+                "A41.89",
+                "A41.9",
+                "A42.7",
+                "A54.86",
+                "B00.7",
+                "B37.7",
+                "R57.1",
+                "R57.8",
+                "R65.20",
+                "R65.21",
+                "R78.81"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "inpatient claim with sepsis diagnosis",
+                "adult member or enrollee"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "MS-DRG",
+                "APR-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician documentation required",
+                "licensed independent practitioner documentation"
+              ],
+              "exemptions": [
+                "sepsis screening"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Unlisted or Miscellaneous Codes",
+            "tags": [],
+            "effective_date": "2024-11-04",
+            "evidence": "This policy governs reimbursement for unlisted or miscellaneous codes and does not provide DRG-specific adjudication, bundling, or authorization rules for this inpatient DRG pattern.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN AUTH_CODE_DISTRIBUTION at Riley's Children's Health contributed $3.7M. CA AUTH_CODE_DISTRIBUTION contributed $3.6M, concentrated in Cirrhosis and Alcoholic Hepatitis with CC, Other Kidney and Urinary Tract Diagnoses with CC, and Poisoning and Toxic Effects of Drugs without MCC. TN AUTH_CODE_DISTRIBUTION at Methodist University Hospital contributed $0.6M."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Riley's Children's Health concentration in IN PA-required admissions",
+    "pattern_description": "IN spend growth is concentrated at Riley's Children's Health in PA-required children's admissions. TANF Standard is mainly volume-led, while ABD Non Dual adds a smaller but higher-cost component. This points to a provider concentration issue that needs joint UM and network action rather than a broad statewide policy change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Riley's Children's Health concentration in IN PA-required admissions",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "reimbursement_rule",
+              "label": "Reimbursement Rule",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "reimbursement_rule": "Routine services, supplies, equipment, nursing, and ventilator/CPAP management are bundled, not separately reimbursed."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_UHC_00465",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": "2026-01-01",
+            "evidence": "The policy does not name the requested DRG, but it bundles routine hospital facility services into room and board, facility, or ancillary charges. Tracheostomy care, ventilator/CPAP management, and related routine components are treated as included services rather than separately reimbursable items. Facility-owned ventilator or CPAP management may be reimbursed once per day.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "260-269",
+                "270",
+                "279",
+                "410",
+                "412",
+                "250",
+                "300",
+                "309",
+                "361",
+                "391",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [
+                "same claim",
+                "same facility charge",
+                "per day"
+              ],
+              "utilization_limits": [
+                "1 unit per day"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid",
+                "UB-04"
+              ],
+              "state_specific_rules": [
+                "Colorado exempt",
+                "Hawaii special OC 74-76",
+                "Kentucky exempt",
+                "Maryland exempt",
+                "Minnesota exempt",
+                "Mississippi exempt",
+                "Missouri exempt",
+                "Nebraska exempt",
+                "New Mexico exempt",
+                "North Carolina exempt",
+                "Texas exempt",
+                "Virginia drug allowances"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Colorado",
+                "Hawaii",
+                "Kentucky",
+                "Maryland",
+                "Minnesota",
+                "Mississippi",
+                "Missouri",
+                "Nebraska",
+                "New Mexico",
+                "North Carolina",
+                "Texas"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN TANF Standard / CHILDRENS / Y at Riley's Children's Health added $2.6M and 91 admissions, while paid per admit fell about $736. IN ABD Non Dual / CHILDRENS / Y at the same provider added $0.8M with 18 admissions and about $3.0K higher paid per admit. Both signals are concentrated in a single children's provider and PA-required admissions."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "Fresno Heart & Surgical acute hospital concentration in CA",
+    "pattern_description": "CA acute hospital growth is concentrated at Fresno Heart & Surgical Hospital under PA-required products. TANF Standard shows utilization growth plus added unit-cost pressure in cirrhosis/hepatitis, kidney and urinary, and poisoning-related admissions, while ABD Non Dual adds a smaller low-volume high-cost component. This looks more like provider mix and case intake concentration than a broad statewide change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Fresno Heart & Surgical acute hospital concentration in CA",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "inpatient_rule_scope",
+              "label": "Inpatient Rule Scope",
+              "type": "text"
+            },
+            {
+              "id": "prior_auth",
+              "label": "Prior Auth",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_rule_scope": "No inpatient rule scope is specified in this Molina policy.",
+              "prior_auth": "No Auth"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_MOH_00938",
+            "payer_name": "Molina",
+            "policy_title": "Clinical Diagnostic Laboratory Services",
+            "tags": [],
+            "effective_date": "2024-10-11",
+            "evidence": "The policy does not establish inpatient DRG payment, CC logic, acute-hospital concentration rules, or Fresno-specific rules. For related liver disease claims, it allows certain laboratory services only when the claim includes approved diagnoses; in California, 83951 is specifically limited to listed liver and hepatitis diagnoses that include alcoholic liver disease and cirrhosis ranges.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Clinical-Diagnostic-Laboratory-Services-03282025.ashx",
+            "edit_rule_facts": {
+              "target_codes": [
+                "83951",
+                "82105",
+                "80074",
+                "82977",
+                "83001",
+                "83002"
+              ],
+              "related_codes": [
+                "B16.0",
+                "B16.2",
+                "B18.0",
+                "B18.1",
+                "B19.11",
+                "C15.3-C22.9",
+                "K70.0-K70.9",
+                "K72.00",
+                "K72.01",
+                "K73.0-K74.69",
+                "K75.4",
+                "K75.81",
+                "K76.0",
+                "K76.2",
+                "E66.01-E66.2"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "billed with approved ICD-10-CM",
+                "medically indicated"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "California: 83951 only with B16.0, B16.2, B18.0, B18.1, B19.11, C15.3-C22.9, K70.0-K70.9, K72.00, K72.01, K73.0-K74.69, K75.4, K75.81, K76.0, K76.2.",
+                "California: 83001/83002 only with approved diagnoses including E66.01-E66.2."
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA TANF Standard / ACUTE HOSPITAL / Y utilization growth added $1.7M; Fresno Heart & Surgical Hospital represented $1.2M of that pattern. A second CA TANF Standard acute hospital pattern added $0.8M with mixed volume and unit-cost pressure, led by Cirrhosis and Alcoholic Hepatitis with CC and Other Kidney and Urinary Tract Diagnoses with CC. CA ABD Non Dual / ACUTE HOSPITAL / Y added $0.3M at Fresno Heart & Surgical Hospital with about $24.2K higher paid per admit on 13 admissions."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "NC behavioral health acuity and acute psych growth",
+    "pattern_description": "NC behavioral health spend is rising in two linked ways: inpatient behavioral health case mix is concentrated in PTSD and adjustment or stress diagnoses, and acute psych foster care admissions are also increasing with much higher paid per admit. The combined pattern suggests higher-acuity behavioral health use rather than a diffuse trend. This supports joint clinical and UM intervention in one state.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "NC IP BH case mix added $1.5M, led by POST-TRAUMATIC STRESS DISORDER UNS at $0.7M and ADJUST D/O W/MIXED DISTURB EMOTIONS at $0.5M. The PTSD subset added 25 admissions and about $14.7K higher paid per admit. NC TANF Foster Care / ACUTE PSYCH / N added $0.9M with 33 admissions and about $28.3K higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "Ridgeview Institute Monroe drives GA behavioral health growth",
+    "pattern_description": "GA behavioral health growth is highly concentrated at Ridgeview Institute Monroe across acute psych and inpatient behavioral health. Operationally, both TANF Standard and TANF Foster Care admissions are up; clinically, Psychoses and Depressive Neuroses diagnoses account for much of the added spend. This is a provider-centered behavioral health management and contracting issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Ridgeview Institute Monroe drives GA behavioral health growth",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "rule_summary",
+              "label": "Rule Summary",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "GA TANF Standard / ACUTE PSYCH / Y at RIDGEVIEW INSTITUTE MONROE added $0.6M with 99 admissions. GA TANF Foster Care / ACUTE PSYCH / Y at the same provider added $0.4M with 61 admissions. GA IP BH case-mix groups added about $0.9M combined, led by Psychoses and Depressive Neuroses diagnoses at Ridgeview."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "MO and VA PA-required acute hospital growth",
+    "pattern_description": "MO and VA are showing PA-required acute hospital growth in TANF Standard, with the heavier pressure in MO. MO has both admission growth and higher paid per admit in cirrhosis/hepatitis, depressive neuroses, and related acute hospital cases, while VA contributes additional volume-led acute hospital growth. This is a targeted acute hospital management issue, not a broad product-wide change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "MO and VA PA-required acute hospital growth",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589910006",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Hepatitis Testing",
+            "tags": [],
+            "effective_date": "07/01/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/hepatitis-testing.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589960007",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Serum Testing for Hepatic Fibrosis in the Evaluation and Monitoring of Chronic Liver Disease",
+            "tags": [],
+            "effective_date": "10/1/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/serum-test-hepatic-fibrosis-chronic-liver-disease.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MO TANF Standard / ACUTE HOSPITAL / Y mixed pressure added $1.1M, led by Depressive Neuroses at $0.5M and Cirrhosis and Alcoholic Hepatitis with CC at $0.3M. The MO / VA acute hospital utilization pattern added another $0.3M, including volume-led growth in VA cirrhosis/hepatitis and MO poisoning-related admissions. Across these slices, admissions increased while paid per admit was flat to higher depending on diagnosis."
+      }
+    }
+  }
+]

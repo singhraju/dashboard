@@ -1,0 +1,1265 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "GA acute hospital admissions are driving the largest spend increase",
+    "pattern_description": "GA PPO Local acute hospital spend rose primarily because inpatient claim volume increased sharply. There is also a smaller unit-cost increase on a high-cost medical inpatient pocket, but the main story is more hospital activity, not just higher prices. This is the clearest operational utilization issue in the analysis.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "GA acute hospital admissions are driving the largest spend increase",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope_summary",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_scope_summary": "Reimburses nonparticipating emergency services per product-line methodology without diagnosis limits, though documentation may be required."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_scope_summary": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00048",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Emergency Services Non-Participating Providers and Facilities",
+            "tags": [],
+            "effective_date": "2024-09-06",
+            "evidence": "Emergency services furnished by non-participating providers and facilities are reimbursed under the applicable emergency payment methodology for the product line. The policy does not restrict reimbursement based on diagnosis or symptom lists, but claims may require additional documentation and remain subject to standard editing and billed charge rules.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Emergency%20Services%20Non-Participating%20Providers%20and%20Facilities.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "Medicaid: state rule in Exhibit A",
+                "Texas Medicaid: nonparticipating facility claims may be sent to TMHP for pricing"
+              ],
+              "provider_role_restrictions": [
+                "Applies to non-participating professional providers and facilities"
+              ],
+              "exemptions": [
+                "Maryland Medicaid: qualifying network group may be reimbursed at participating provider rate",
+                "Texas Medicaid: TMHP pricing for nonparticipating facility claims"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00133",
+            "payer_name": "Humana",
+            "policy_title": "Common CPT and HCPCS Modifiers",
+            "tags": [],
+            "effective_date": "01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "GA acute hospital spend increased about $2.8M in PPO Local. The increase was driven by about 1,970 more claims in GA acute hospitals. A smaller acute hospital unit-cost pocket added about $42K even with 1 fewer claim, with paid per admit up about $23.5K."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "GA not-mapped inpatient claims are masking a major cost driver",
+    "pattern_description": "A large share of GA PPO Local spend is sitting in not-mapped inpatient buckets, both within acute hospitals and under unmapped facility classification. Claim counts and paid per case both increased, so the organization cannot yet tell how much is true utilization, how much is pricing, and how much is coding or classification movement. This should be treated as a gating validation issue before broad policy or contracting action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "GA not-mapped inpatient claims are masking a major cost driver",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance": "Off-topic: reimburses global obstetrical codes once per 279-day pregnancy period."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Professional Anesthesia Services",
+            "tags": [],
+            "effective_date": "11/14/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00020",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Emergency Department Leveling of Evaluation and Management Services",
+            "tags": [],
+            "effective_date": "01/16/2024",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Emergency%20Department%20Leveling%20of%20Evaluation%20and%20Management%20Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00126",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "10/23/2025",
+            "evidence": "Off-topic for the requested DRG-style inpatient pattern. This policy governs maternity/global obstetrical reimbursement rather than DRG mapping.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "once per pregnancy period"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Maternity services"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "single provider or same TIN"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "GA acute hospital not-mapped DRG spend increased about $2.7M on roughly 2,001 more claims, with paid per admit up about $591. GA not-mapped facility spend increased about $1.8M on roughly 2,239 more claims, with paid per admit up about $439. Within the not-mapped facility bucket, not-mapped DRG added about $949K on roughly 2,189 more claims."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA hospital spend is rising from pricing pressure inside not-mapped claims",
+    "pattern_description": "CA shows a large not-mapped hospital pattern, but unlike GA, the stronger signal is payment pressure rather than pure broad-based volume growth. One not-mapped facility bucket grew with claims, while an acute hospital not-mapped bucket rose even as claims declined, indicating higher paid per case. A smaller rehab unit-cost increase suggests some spillover beyond acute hospitals.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA hospital spend is rising from pricing pressure inside not-mapped claims",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00013",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - General Inflammation Testing",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA not-mapped facility spend increased about $1.4M on roughly 3,419 more claims. CA acute hospital not-mapped DRG spend increased about $1.1M even with about 201 fewer claims, with paid per admit up about $368. CA Physical Rehab added about $43K with flat claim volume, indicating localized unit-cost pressure."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "GA spend is spreading into SNF, ASC, rehab, and critical access sites",
+    "pattern_description": "The GA cost trend is not limited to acute hospitals. Spend also increased across SNF, ambulatory surgery center, rehab, and critical access settings, with both more claims and higher paid per case in the largest pockets. This suggests a broader site-of-care and discharge-routing issue in GA PPO Local.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "GA spend is spreading into SNF, ASC, rehab, and critical access sites",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00030",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biochemical Markers of Alzheimers Disease and Dementia",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d98",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "GA SNF - FREE STANDING spend increased about $987K on roughly 153 more claims, with paid per admit up about $3.4K. GA ambulatory surgery center spend increased about $517K on roughly 504 more claims. GA Physical Rehab added about $86K across 3 claims, with paid per admit up about $28.6K. GA Critical Access added about $36K, but on very low volume."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "OH acute hospital spend shows mixed pressure with one-off neuro spikes",
+    "pattern_description": "OH acute hospital spend increased through a combination of more claims and higher paid per case. Most of the increase sits in a not-mapped inpatient bucket, with an additional single high-cost neurologic case adding volatility. This is a smaller market than GA or CA, but the pattern is concentrated enough to warrant targeted review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "OH acute hospital spend shows mixed pressure with one-off neuro spikes",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "Off-topic: Humana policy covers Alzheimer\u2019s biomarker testing, not degenerative nervous system DRG payment."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00030",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biochemical Markers of Alzheimers Disease and Dementia",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "Off-topic for the requested DRG pattern. This policy addresses laboratory biomarker testing for Alzheimer\u2019s disease, mild cognitive impairment, and related dementia testing, not inpatient DRG payment for degenerative nervous system disorders.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d98",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "OH acute hospital spend increased about $586K in a not-mapped DRG bucket on roughly 525 more claims. Paid per admit in that OH not-mapped pocket increased about $230. A single Degenerative Nervous System Disorders without MCC case added about $60K."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "Low-volume provider pockets are creating acute hospital cost leakage",
+    "pattern_description": "A small but recurring provider-mix pattern is emerging in acute hospitals across CT / IN / MO / NY / VA. Volumes are low, but the cases are concentrated in a few providers with much higher paid per case, which is more consistent with provider mix or episodic payment terms than with broad market demand. This should be handled as a targeted network economics review, not a marketwide utilization issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Low-volume provider pockets are creating acute hospital cost leakage",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "ob_delivery_exclusion",
+              "label": "OB Delivery Exclusion",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_delivery_exclusion": "-",
+              "policy_scope": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_delivery_exclusion": "OB Excluded",
+              "policy_scope": "Bundles unplanned same-hospital inpatient readmissions within 30 days for related conditions."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_delivery_exclusion": "-",
+              "policy_scope": "Humana has only a general modifier policy, with no code-specific rule for this DRG pattern."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589990004",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Anesthesia Processing",
+            "tags": [],
+            "effective_date": "07/01/2019",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/Anesthesia-Processing.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Professional Anesthesia Services",
+            "tags": [],
+            "effective_date": "11/14/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Inpatient Readmissions",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "Facility-level inpatient readmission policy. Unplanned readmissions within 30 days to the same hospital for the same, similar, or related condition are not separately reimbursed. Planned readmission and leave-of-absence cases are treated as one admission with a single DRG payment, subject to exclusions and state-specific exceptions.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "within 30 days",
+                "same hospital",
+                "same or related condition"
+              ],
+              "utilization_limits": [
+                "30-day readmission window",
+                "same-day continuation"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "varies by state per Exhibit A",
+                "some states use same-day rules",
+                "some states have shorter readmission windows"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider, state, federal, or CMS requirements",
+                "transfers from acute care hospital",
+                "against medical advice"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00130",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Sterilization",
+            "tags": [],
+            "effective_date": "06/08/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Sterilization.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "GB Inpt Readmissions FINAL 05062025",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "The policy bundles unplanned inpatient readmissions within 30 days when the subsequent stay is for the same, similar, or related condition. Same-day readmissions are treated as part of the original admission, and planned readmission or leave-of-absence cases are paid as one admission with one DRG.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "within 30 days of discharge",
+                "same date of service",
+                "same hospital",
+                "same hospital system"
+              ],
+              "utilization_limits": [
+                "30-day readmission window"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "CO: not subject to policy",
+                "IA: CAHs excluded",
+                "WA: CAHs excluded; 14-day readmission standard",
+                "TX: same-day means within 24 hours"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Colorado market not subject to policy",
+                "Critical Access Hospitals in Iowa",
+                "Critical Access Hospitals in Virginia",
+                "Critical Access Hospitals in Washington",
+                "Same-day readmission continuation rule for same-condition cases"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00133",
+            "payer_name": "Humana",
+            "policy_title": "Common CPT and HCPCS Modifiers",
+            "tags": [],
+            "effective_date": "01/2026",
+            "evidence": "This is a general modifier policy and does not provide a code-specific rule for the requested DRG pattern.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "The CT / IN / MO / NY / VA acute hospital pattern added about $265K overall. A MO acute hospital pocket contributed about $116K on roughly 51 more claims. HOSPITAL FOR SPECIAL SURGERY added about $55K in NY, $25K in CT, and $23K in IN. WVU MEDICINE PRINCETON COMMUNITY HOSPITAL added about $46K in VA on 3 claims, with paid per admit up about $5.7K."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "Rare inpatient and neuro cases are producing high-cost outliers",
+    "pattern_description": "A set of rare inpatient and NF cases is creating meaningful spend through a small number of very expensive neurologic and medical admissions. These are not broad utilization trends; they are low-frequency, high-cost outliers, and several also carry missing or blank procedure information. The right response is combined clinical validation and case management, not broad utilization restriction.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare inpatient and neuro cases are producing high-cost outliers",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00013",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - General Inflammation Testing",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA / NY / UNATTRIBUTED IP Med/Surg outliers added about $256K, including single cases of about $75.5K and $60.4K. CA NF outliers added about $177K, led by G20C and I69354 cases of about $59.6K and $58.7K. GA IP Med/Surg outliers added about $106K, led by R5381 and G959 cases. GA NF outliers added about $45K on a handful of low-volume cases."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Outpatient specialty claims show provider-specific mapping and auth risk",
+    "pattern_description": "Several outpatient specialty claims are appearing in not-mapped surgery, oncology, and drug-management categories and are concentrated in a few providers. Volumes are small, so this looks less like broad demand growth and more like provider mix, specialty authorization, or coding classification movement. Validation should happen before expanding policy edits or provider actions.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Outpatient specialty claims show provider-specific mapping and auth risk",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "prior_auth",
+              "label": "Prior Auth",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Not mentioned; policy only addresses global obstetrical/maternity services, not this outpatient specialty code.",
+              "prior_auth": "No Auth"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Not mentioned; global obstetrical package policy does not address this HCPCS code.",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Coordinated Care",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "General maternity and global obstetrical billing policy; exact listed codes are not specifically addressed.",
+              "prior_auth": "No Auth"
+            },
+            {
+              "payer_org": "Horizon NJ Health - New Jersey",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Horizon_BCBS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Premera Blue Cross",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "Regence_BCBS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "prior_auth": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589970006",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "7/1/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/maternity-services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082140001",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Global Obstetrical/OB Maternity Services Policy",
+            "tags": [],
+            "effective_date": "2026-05-22",
+            "evidence": "Off-topic for the requested pattern. The policy is limited to global obstetrical/OB maternity services and does not provide adjudication rules for this outpatient specialty code.",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/rp044-5-22-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_HORIZON_BCBS_NJ_28593980207",
+            "payer_name": "Horizon_BCBS",
+            "policy_title": "Maternity Reimbursement",
+            "tags": [],
+            "effective_date": "2012-04-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.horizonblue.com/providers/policies-procedures/policies/reimbursement-policies-guidelines/maternity-reimbursement",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_PBC_WA_00049",
+            "payer_name": "Premera Blue Cross",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "10/07/25",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.premera.com/paymentpolicies/cmi_129382.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_REGENCE_BCBS_ID_OR_UT_28593680007",
+            "payer_name": "Regence_BCBS",
+            "policy_title": "Maternity Care",
+            "tags": [],
+            "effective_date": "2026-09-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.regence.com/provider/library/policies-guidelines/reimbursement-policy/care-maternity-sept2026",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CC_00015",
+            "payer_name": "Coordinated Care",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.coordinatedcarehealth.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00023",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "This policy is about reporting the global obstetrical package and does not address this code; no mapping or authorization rule was identified.",
+            "policy_url": "https://www.arkansastotalcare.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00247",
+            "payer_name": "Centene",
+            "policy_title": "Reporting the Global Maternity Package",
+            "tags": [],
+            "effective_date": "01/01/2019",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/pdfs/508_PSHP-Payment-Policy-Reporting-The-Global-Maternity-Package-01-04-24.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00473",
+            "payer_name": "Centene",
+            "policy_title": "LA.PP.016 Reporting the Global Maternity Package",
+            "tags": [],
+            "effective_date": "08/2020",
+            "evidence": "This policy addresses global maternity package billing and does not mention or govern this HCPCS code; no applicable adjudication rule was found.",
+            "policy_url": "https://www.louisianahealthconnect.com/content/dam/centene/louisiana-health-connect/policies/payment-policies/LA.PP.016%20Reporting%20the%20Global%20Maternity%20Package%20updated%205.25.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00126",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "10/23/2025",
+            "evidence": "This payer governs maternity/global obstetrical billing generally. Exact code G7000 is not named, but global maternity care is reimbursable once per pregnancy when antepartum, delivery, and postpartum care are furnished by the same provider or group under the same TIN. Duplicate or overlapping maternity services can be denied or recouped.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same pregnancy",
+                "same TIN",
+                "same provider group"
+              ],
+              "utilization_limits": [
+                "once per pregnancy",
+                "279-day pregnancy"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "CA/FL/IA/MD/WV: no global maternity",
+                "IN/LA/MO: other primary insurance",
+                "NJ/WI: no mixed methodologies",
+                "TN: postpartum and lactation separate",
+                "TX: two postpartum visits",
+                "GA: lactation separate",
+                "CO: not subject"
+              ],
+              "provider_role_restrictions": [
+                "single provider or group"
+              ],
+              "exemptions": [
+                "state, federal, or CMS requirements"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HORIZON_BCBS_NJ_28593990300",
+            "payer_name": "Horizon NJ Health - New Jersey",
+            "policy_title": "Maternity Reimbursement",
+            "tags": [],
+            "effective_date": "March 29, 2021",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.horizonnjhealth.com/for-providers/resources/policies/reimbursement-policies-guidelines/maternity-reimbursement",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00345",
+            "payer_name": "United Health",
+            "policy_title": "Cesarean Delivery Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "NY OP Surg at HOSPITAL FOR SPECIAL SURGERY added about $65K, mostly under not-mapped surgical classification and musculoskeletal diagnoses. UNATTRIBUTED OP IV Thrpy/Oncology added about $57K on 3 claims tied to Chemotherapy Drugs. NY / UNATTRIBUTED / VA outpatient oncology-related cases added about $42K across a few specialty drug claims. GA / VA OP Mgmt Oth Misc added about $30K, mostly tied to WVU MEDICINE PRINCETON COMMUNITY HOSPITAL."
+      }
+    }
+  }
+]

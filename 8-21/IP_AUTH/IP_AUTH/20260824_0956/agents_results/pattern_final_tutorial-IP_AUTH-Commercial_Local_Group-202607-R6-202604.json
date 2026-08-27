@@ -1,0 +1,1485 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Authorization coding shifts are masking true inpatient spend drivers",
+    "pattern_description": "A large share of the apparent inpatient increase is tied to authorization code redistribution rather than a clean utilization or reimbursement signal. The issue is heaviest in CA and also appears in VA, NY, and OH, touching ungroupable, spine, and postpartum claims. Validate PA-required coding and claim mapping before taking utilization or rate action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorization coding shifts are masking true inpatient spend drivers",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_MOH_00212",
+            "payer_name": "Molina",
+            "policy_title": "Physician Office Laboratory Testing",
+            "tags": [],
+            "effective_date": "03/31/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/PI-106-Physician-Office-Laboratory-Testing-OH.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA authorization code redistribution accounts for about +$7.2M, led by ungroupable (+$4.6M), cervical spinal fusion (+$1.8M), and postpartum claims (+$0.8M). VA adds about +$1.5M of the same issue, concentrated at HENRICO DOCTORS' HOSPITAL. NY and OH add about +$1.0M more, mostly tied to OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER and THE CLEVELAND CLINIC MAIN CAMPUS."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "CT PPO acute spend is concentrated at Yale New Haven with both more admits and higher paid per admit",
+    "pattern_description": "CT PPO inpatient growth is heavily concentrated at YALE NEW HAVEN HOSPITAL. Both authorization-required and non-authorization acute admissions increased, and paid per admit also rose, pointing to combined volume and reimbursement pressure rather than a single coding issue. This is a provider-focused cost trend with clear UM and network levers.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CT PPO acute spend is concentrated at Yale New Haven with both more admits and higher paid per admit",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "bundling_status",
+              "label": "Bundling Status",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Applies only to professional claims with specified POS restrictions, not inpatient/facility payment rules.",
+              "bundling_status": "Bundles"
+            },
+            {
+              "payer_org": "Emblem Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "No DRG-specific acute inpatient site-of-service policy identified.",
+              "bundling_status": "-"
+            },
+            {
+              "payer_org": "Point32Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Applies to observation services at contracted acute care hospitals; not limited by DRG.",
+              "bundling_status": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Applies to inpatient and outpatient facility settings, including various procedural and diagnostic rooms.",
+              "bundling_status": "Bundles"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00018",
+            "payer_name": "Cigna",
+            "policy_title": "Facility Services, Supplies and Equipment",
+            "tags": [],
+            "effective_date": "10/01/2010",
+            "evidence": "Routine tracheostomy and invasive mechanical-ventilation related supplies, nursing care, and equipment are bundled into room-and-board or the primary facility payment; separate reimbursement is generally denied.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "A4483",
+                "A4481",
+                "A4605",
+                "A4618",
+                "A4623",
+                "A4624",
+                "A4625",
+                "A4626",
+                "A4629",
+                "A7501",
+                "A7502",
+                "A7503",
+                "A7504",
+                "A7505",
+                "A7506",
+                "A7507",
+                "A7508",
+                "A7509",
+                "A7520",
+                "A7521",
+                "A7522",
+                "A7523",
+                "A7524",
+                "A7525",
+                "A7526",
+                "A7527"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "facility claim",
+                "room and board"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "facility claims"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00047",
+            "payer_name": "Cigna",
+            "policy_title": "Procedure and Place of Service",
+            "tags": [],
+            "effective_date": "08/12/2023",
+            "evidence": "No DRG-level acute inpatient reimbursement rule is stated for this tracheostomy/mechanical ventilation pattern. This policy is limited to professional CPT/HCPCS reimbursement based on appropriate place of service on CMS-1500 claims; related ventilation management CPT codes are listed separately.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R43_Procedure_and_Place_of_Service.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "94002",
+                "94003"
+              ],
+              "related_codes": [
+                "94002",
+                "94003"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "appropriate POS required"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+            "payer_name": "Emblem Health",
+            "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No explicit DRG-specific adjudication rule was identified for this tracheostomy with prolonged mechanical ventilation inpatient pattern. The policy is a broad coding-edit policy and does not provide Connecticut PPO acute inpatient DRG reimbursement logic, hospital-specific payment direction, or provider-concentration guidance for this DRG.",
+            "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595770204",
+            "payer_name": "Point32Health",
+            "policy_title": "Observation Stay",
+            "tags": [],
+            "effective_date": "2026-08-01",
+            "evidence": "Off-topic for the requested DRG pattern. This policy addresses observation stay billing and short-stay inpatient/observation classification, not DRG-specific payment for ventilated tracheostomy cases.",
+            "policy_url": "https://wwwassets.point32health.org/documents/observation-stay-pp",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00136",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "The policy bundles routine inpatient and outpatient facility services into room and board or facility charges. For this clinical area, tracheostomy supplies and care are not separately reimbursed, and facility-owned ventilator or CPAP management is only considered once per day.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "250",
+                "260-269",
+                "270",
+                "279",
+                "270-279",
+                "300",
+                "309",
+                "300-370",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 unit per day"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Hospital Inclusive Charges",
+                "UB04"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Pre- and Post-Anesthesia Recovery Room"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Authorization-required CT PPO acute claims at YALE NEW HAVEN HOSPITAL added about +$4.2M on 41 more admissions, with paid per admit up about $7.1K. Non-authorization CT PPO acute claims added another +$1.1M on 50 more admissions, with paid per admit up about $3.1K. The pattern is concentrated in one provider and one facility setting rather than spread broadly across CT."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "OH PPO acute growth is concentrated in Cleveland Clinic and Ohio State",
+    "pattern_description": "OH PPO acute spend is rising across two academic centers, but the mechanism differs by provider. THE CLEVELAND CLINIC MAIN CAMPUS is primarily a volume story, while OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER shows both higher admissions and modest paid-per-admit pressure. This should be handled as a provider concentration issue, not a broad marketwide hospital trend.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "OH PPO acute growth is concentrated in Cleveland Clinic and Ohio State",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "bundling_status",
+              "label": "Bundling Status",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Broad facility reimbursement policy; no relevant DRG-specific adjudication rule mentioned.",
+              "bundling_status": "Routine room, board, supplies, nursing, and many ancillaries are bundled into facility payment."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Broad inpatient and outpatient facility reimbursement policy includes many bundled services.",
+              "bundling_status": "Routine services, ancillary components, supplies, and equipment are bundled and not separately reimbursed."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00018",
+            "payer_name": "Cigna",
+            "policy_title": "Facility Services, Supplies and Equipment",
+            "tags": [],
+            "effective_date": "2010-10-01",
+            "evidence": "Broad facility reimbursement policy; no DRG-specific adjudication rule found for the requested pattern, and the market-growth note is unrelated.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00136",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-03-09",
+            "evidence": "Broad facility reimbursement policy. Routine room and board, nursing, supplies, equipment, and many ancillary or surgical-room components are included in facility reimbursement and are not separately payable. Applies to inpatient and outpatient facility claims.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "260-269",
+                "270",
+                "279",
+                "250",
+                "300",
+                "309",
+                "361",
+                "391",
+                "460",
+                "510",
+                "761",
+                "270-279",
+                "300-370",
+                "410",
+                "412",
+                "419"
+              ],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 unit per day for ventilator or CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "UB04"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "THE CLEVELAND CLINIC MAIN CAMPUS added about +$2.3M on 47 more admissions, while paid per admit fell about $6.6K, confirming a volume-led trend. OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER added about +$1.7M on 22 more admissions, with paid per admit up about $5.1K. Medical Back Problems without MCC added another +$0.2M on 8 more admissions within the same OH PPO acute setting."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "CA acute hospital spend is rising across PPO and HMO inpatient business",
+    "pattern_description": "CA acute hospital spend is increasing across Commercial PPO and HMO inpatient business. PPO acute claims show both more admissions and higher paid per admit, while additional PPO utilization in postpartum and back cases is mostly volume-led. A smaller HMO acute component is driven by very high paid per admit on aftercare cases.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA acute hospital spend is rising across PPO and HMO inpatient business",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "global_package_status",
+              "label": "Global Package",
+              "type": "badge"
+            },
+            {
+              "id": "postpartum_only_rules",
+              "label": "Postpartum-Only Rules",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_package_status": "Bundles",
+              "postpartum_only_rules": "Report CPT 59430 only for postpartum-only care, during the routine six-to-eight-week postpartum period."
+            },
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_package_status": "-",
+              "postpartum_only_rules": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_package_status": "-",
+              "postpartum_only_rules": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_package_status": "-",
+              "postpartum_only_rules": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "Postpartum care only is separately reimbursable when no antepartum or delivery services were provided. Routine postpartum care remains part of the global maternity package.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59430",
+                "Z39.0-Z39.2"
+              ],
+              "related_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "59410",
+                "59515",
+                "59614",
+                "59622",
+                "59430",
+                "99202",
+                "99205",
+                "99212",
+                "99215"
+              ],
+              "required_modifiers": [
+                "25"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "postpartum care only",
+                "postpartum complication visit",
+                "same claim as E&M"
+              ],
+              "utilization_limits": [
+                "no antepartum care",
+                "no delivery services",
+                "6 weeks after vaginal delivery",
+                "8 weeks after cesarean delivery"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "postpartum care only",
+                "routine postpartum care only"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "01/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00096",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Maternity Services C-19004",
+            "tags": [],
+            "effective_date": "09/08/2022",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00071",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA PPO acute mixed pressure added about +$3.0M, including ungroupable claims at +$2.4M on 5 more admissions and cervical spinal fusion at +$0.5M on 5 more admissions. Additional CA PPO utilization added about +$0.5M, led by postpartum cases on 20 more admissions and back cases on 7 more admissions, with paid per admit roughly flat to down. CA HMO acute claims added about +$0.3M from aftercare cases despite 1 fewer admission, with paid per admit up about $189.2K."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "CA inpatient Med/Surg spike is dominated by a few catastrophic outlier cases",
+    "pattern_description": "CA IP Med/Surg growth is not a broad service-line trend; it is dominated by a handful of very high-cost cases. Two ungroupable cases account for most of the increase, with additional pressure from spine and endocarditis-related admissions. This needs claim-level clinical and payment review rather than broad utilization tightening.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA inpatient Med/Surg spike is dominated by a few catastrophic outlier cases",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "separate_reimbursement",
+              "label": "Separate Pay?",
+              "type": "badge"
+            },
+            {
+              "id": "documentation_threshold",
+              "label": "Resection Threshold",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "separate_reimbursement": "Docs Required",
+              "documentation_threshold": "Requires documentation confirming at least 50% vertebral body resection in operative notes."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00041",
+            "payer_name": "Cigna",
+            "policy_title": "Omnibus Reimbursement Policy",
+            "tags": [],
+            "effective_date": "11/01/2014",
+            "evidence": "Cervical corpectomy billed with cervical fusion is separately reimbursable only when operative documentation shows at least 50% of the vertebral body was resected; otherwise it is not separately payable.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R24_Omnibus_Reimbursement_Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "63081",
+                "63082"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "with cervical fusion"
+              ],
+              "utilization_limits": [
+                ">=50% vertebral body resection"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Two ungroupable CA Med/Surg cases added about +$5.3M on only 3 more admissions, with paid per admit above $1.3M in each case. Cervical spinal fusion cases added about +$0.8M across 7 admissions. An endocarditis case at LUCILE PACKARD CHILDRENS HOSPITAL STANFORD added about +$0.2M on 1 admission."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "Post-acute facility use is creating high-cost pressure in GA, VA, and WI",
+    "pattern_description": "Post-acute settings are generating outsized cost pressure, especially in long term care hospitals. GA is almost entirely a unit-cost story with no admission growth, while VA and WI add more spend through a small number of very expensive LTCH and rehab admissions. This points to a site-of-care and reimbursement issue more than broad acute-hospital utilization.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Post-acute facility use is creating high-cost pressure in GA, VA, and WI",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance_summary",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance_summary": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_27067540000",
+            "payer_name": "Cigna",
+            "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+            "tags": [],
+            "effective_date": "10/30/2018",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "GA POS LTCH added about +$2.5M with no admission growth and paid per admit up about $1.3M. VA POS LTCH added about +$1.1M on 6 more admissions, with paid per admit up about $181.7K. VA PPO LTCH added about +$0.4M on 2 more admissions, and WI physical rehab added about +$0.3M on 4 more admissions with paid per admit up about $82.4K."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "CT and OH have catastrophic trach and respiratory outliers in IP Med/Surg",
+    "pattern_description": "CT and OH each show a few catastrophic IP Med/Surg cases rather than a broad inpatient deterioration. The common theme is tracheostomy, prolonged ventilation, severe respiratory failure, sepsis, and transplant-related complications with extreme paid per admit. These are best handled through focused clinical and payment review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CT and OH have catastrophic trach and respiratory outliers in IP Med/Surg",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "inpatient_drg_scope",
+              "label": "IP DRG Scope",
+              "type": "text"
+            },
+            {
+              "id": "bundling_status",
+              "label": "Bundling Status",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "Inpatient/outpatient facility DRGs bundle routine room, nursing, and supplies; no separate reimbursement.",
+              "bundling_status": "Bundles"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "No specific IP DRG guidance; standard coding and applicable regulatory requirements govern.",
+              "bundling_status": "Conditionally Bundles"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "No DRG-specific inpatient scope; bundled facility and nursing routine services aren\u2019t separately payable.",
+              "bundling_status": "Bundles"
+            },
+            {
+              "payer_org": "Point32Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "Inpatient DRG payment methodology is not addressed by this policy.",
+              "bundling_status": "No Bundling"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "Broad facility settings included; routine tracheostomy, nursing, respiratory, and supply components not separately payable.",
+              "bundling_status": "Bundles"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Tracheostomy Supplies RETIRED",
+            "tags": [],
+            "effective_date": "11/07/06",
+            "evidence": "Policy allows reimbursement for tracheostomy care supplies with conditions. In provider or facility settings, the supplies are included in the E&M visit or facility charge. In home health, they are separately reimbursed based on the applicable fee schedule or negotiated rate. One care kit per day is the default limit unless additional documentation supports more.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 kit per day",
+                "starter kit first 2 weeks",
+                "established kit after 2 weeks"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DME and Supplies"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "incident to physician services",
+                "ordered by physician"
+              ],
+              "exemptions": [
+                "home health setting",
+                "additional documentation supports need"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00018",
+            "payer_name": "Cigna",
+            "policy_title": "Facility Services, Supplies and Equipment",
+            "tags": [],
+            "effective_date": "10/01/2010",
+            "evidence": "Tracheostomy care and listed tracheostomy/respiratory supplies are bundled into facility reimbursement. Routine nursing, room and board, and associated supplies are not separately reimbursed; only documented incremental nursing beyond standard care may be payable.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "A4625"
+              ],
+              "related_codes": [
+                "A4481",
+                "A4483",
+                "A4605",
+                "A4615-A4620",
+                "A4623",
+                "A4624",
+                "A4626",
+                "A4629",
+                "A7501-A7509",
+                "A7520-A7527"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "0230-0239"
+              ],
+              "pairing_conditions": [
+                "same facility claim",
+                "routine room and board",
+                "same level of care"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "facility reimbursement"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "incremental nursing charges with physician order and documentation"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595790203",
+            "payer_name": "Point32Health",
+            "policy_title": "Durable Medical Equipment (DME)",
+            "tags": [],
+            "effective_date": "11/01/2025",
+            "evidence": "This is a durable medical equipment policy focused on home-use equipment and supplies. It does not contain DRG inpatient payment rules for tracheostomy with prolonged mechanical ventilation or related inpatient outlier adjudication. Relevant respiratory items are addressed only as DME, oxygen, ventilators, and tracheostomy supplies for covered use cases.",
+            "policy_url": "https://wwwassets.point32health.org/documents/h1-dme-pp",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00136",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-07-08",
+            "evidence": "The payer's hospital inclusive-charges policy bundles routine tracheostomy care, respiratory therapy/nursing tasks, and routine ventilator/CPAP components into room, board, or facility charges. Facility-owned ventilator or CPAP management is reimbursable at one unit per day, but bundled components are not separately paid.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "260-269",
+                "270",
+                "279",
+                "250",
+                "300",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761",
+                "270-279",
+                "300-370"
+              ],
+              "pairing_conditions": [
+                "same facility claim"
+              ],
+              "utilization_limits": [
+                "1 unit/day ventilator or CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Hospital Inclusive Charges",
+                "UB04",
+                "inpatient facility claims",
+                "outpatient facility claims"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "bedside nurses",
+                "respiratory therapists",
+                "CNA",
+                "perfusionists",
+                "technicians"
+              ],
+              "exemptions": [
+                "facility-owned ventilator or CPAP management",
+                "ancillary ventilator or CPAP services"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Unlisted or Miscellaneous Codes",
+            "tags": [],
+            "effective_date": "11/04/2024",
+            "evidence": "This is a general unlisted or miscellaneous code policy, not a DRG-specific reimbursement rule. It requires claim-by-claim review and supporting documentation when no established code exists.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00077",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2023-06-15",
+            "evidence": "Routine hospital supplies, services, equipment, and facility personnel are bundled into room and board charges and are not separately reimbursable; these items are also excluded from outlier calculations.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00971",
+            "payer_name": "Molina",
+            "policy_title": "NF Ventilator Pre-Payment Medical Necessity Review",
+            "tags": [],
+            "effective_date": "04/01/2025",
+            "evidence": "Off-topic for this DRG pattern. The policy applies to nursing facility ventilator-dependent and ventilator-weaning services, with review of claims billed under revenue codes 0419 and 0410, rather than inpatient DRG payment for tracheostomy or respiratory outliers.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/NF-Vent-Payment-Medical-Necessity-Review-Policy-for-Medicaid-Line-of-Business.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "YALE NEW HAVEN HOSPITAL added about +$1.4M from trach and prolonged ventilation cases tied to sepsis on 2 more admissions. A second YALE NEW HAVEN HOSPITAL respiratory failure case added about +$1.0M on 1 admission. THE CLEVELAND CLINIC MAIN CAMPUS added about +$0.9M from a lung transplant infection case on 1 admission."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Maternity and NICU complications are creating small-volume, high-cost spikes in CA and VA",
+    "pattern_description": "Maternity and NICU cost pressure is coming from a small number of high-acuity neonatal and maternal complication cases, not broad delivery volume alone. The largest spikes involve neonatal respiratory complications and a C-section-linked NICU episode, with additional CA maternal complication activity in pre-eclampsia and postpartum infection. This should be handled as a focused maternity and neonatal case review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Maternity and NICU complications are creating small-volume, high-cost spikes in CA and VA",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "newborn_drg_revenue_match",
+              "label": "DRG/Revenue Match",
+              "type": "text"
+            },
+            {
+              "id": "newborn_stay_auth",
+              "label": "Newborn Stay Auth",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "newborn_drg_revenue_match": "DRG must match newborn revenue-code level; mismatches prevent sick newborn grouping and NICU reimbursement.",
+              "newborn_stay_auth": "Requires Auth"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "newborn_drg_revenue_match": "Matches billed newborn or Level II NICU level to the corresponding revenue code.",
+              "newborn_stay_auth": "Requires Auth"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "newborn_drg_revenue_match": "-",
+              "newborn_stay_auth": "-"
+            },
+            {
+              "payer_org": "Optum Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "newborn_drg_revenue_match": "-",
+              "newborn_stay_auth": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "newborn_drg_revenue_match": "Not bundled; payable with medical necessity/diagnosis, including newborn screening, hearing-loss evaluation, and ABR need.",
+              "newborn_stay_auth": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_00057",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "DRG Newborn Inpatient Stays",
+            "tags": [],
+            "effective_date": "2026-10-01",
+            "evidence": "When newborn inpatient reimbursement is based on DRG assignment, the billed revenue code must match the newborn DRG category. Claims without a NICU revenue code do not group to a sick newborn DRG. Current authorization rules still apply.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-18002-CA.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "0170",
+                "0171",
+                "0172",
+                "0173",
+                "0174"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "0172",
+                "0173",
+                "0174",
+                "0170",
+                "0171"
+              ],
+              "pairing_conditions": [
+                "same claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider, state, federal, or contracts/requirements"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00145",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "DRG Newborn Inpatient Stays C-18002",
+            "tags": [],
+            "effective_date": "12/18/2025",
+            "evidence": "General nursery or well-baby care is reimbursable for healthy, physiologically stable neonates receiving immediate postpartum evaluation and observation.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/DRG%20Newborn%20Inpatient%20Stays%20C-18002.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "0170",
+                "0171",
+                "0172",
+                "0173",
+                "0174"
+              ],
+              "related_codes": [
+                "0170",
+                "0171",
+                "0173",
+                "0174",
+                "0172"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "0170",
+                "0171",
+                "0172",
+                "0173",
+                "0174"
+              ],
+              "pairing_conditions": [
+                "same claim"
+              ],
+              "utilization_limits": [
+                "first 24 hours monitoring"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "California: revenue code comments updated effective 01/01/2026",
+                "Virginia: Section I delayed implementation"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Maine: Section I does not apply",
+                "New York: Section I does not apply",
+                "market not subject to this policy"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_OPTUM_ALL_28595840100",
+            "payer_name": "Optum Health",
+            "policy_title": "Documentation Requirements for Reimbursement of Evaluation Management (E/M) Services (99201-99205 and 99212-99215)",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.myoptumhealthphysicalhealth.com/public/document/?documentType=ReimbursementPolicies&documentName=0056_DocReqEMServicesReimbursementPolicy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00193",
+            "payer_name": "Molina",
+            "policy_title": "Facility Emergency Department Evaluation and Management leveling",
+            "tags": [],
+            "effective_date": "01/01/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/FacilityEmergencyDepartmentEvaluationandManagementleveling12162024_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01425",
+            "payer_name": "United Health",
+            "policy_title": "Otoacoustic Emissions Testing Policy, Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Limitations apply to otoacoustic emissions testing. The code is reimbursable for neonatal and early childhood hearing screening when medical necessity criteria are met, but is denied for members age 4 years and over when no diagnosis from the diagnosis list is submitted.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Otoacoustic-Emissions-Testing-R7104.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "92558",
+                "92587",
+                "92588"
+              ],
+              "related_codes": [
+                "92587",
+                "92588",
+                "92558"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim line",
+                "same date of service"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "Indiana exempt",
+                "Kansas exempt",
+                "NC allows Z00.110 Z00.111 Z00.121 Z00.129 Z00.00 Z00.01"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Indiana",
+                "Kansas",
+                "NC Z00.110 Z00.111 Z00.121 Z00.129 Z00.00 Z00.01"
+              ],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "A CA NICU case at LUCILE PACKARD CHILDRENS HOSPITAL STANFORD added about +$0.9M on 1 admission for a neonate with major problems. A VA NICU pattern at HENRICO DOCTORS' HOSPITAL added about +$0.4M across 5 admissions tied to extreme immaturity or respiratory distress and C-section delivery. CA maternal complications added about +$0.6M more, including a rare vaginal delivery case at +$0.3M and severe pre-eclampsia cases at +$0.2M on 16 more admissions."
+      }
+    }
+  }
+]

@@ -1,0 +1,441 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "CA acute hospital spend pressure in Medicaid products",
+    "pattern_description": "CA acute hospital spend increased across two Medicaid products, led by connective tissue and hernia admissions. Both claim counts and paid per admit rose, so this is not only a reimbursement issue. The repeat appearance of the same high-cost DRG across products suggests a targeted inpatient management and payment issue in CA acute hospitals.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA ACUTE HOSPITAL / TANF Standard added about $188K, led by Connective Tissue Disorders with MCC at about $178K on 2 claims. CA ACUTE HOSPITAL / LTSS Non Dual added about $69K, again concentrated in Connective Tissue Disorders with MCC on 3 claims. A smaller CA TANF Standard hernia episode added about $10K on 1 claim, reinforcing the acute inpatient pattern."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "CA single catastrophic IP Med/Surg outlier",
+    "pattern_description": "CA also has a separate single-case IP Med/Surg spike. One Connective Tissue Disorders with MCC admission tied to diagnosis M3119 drove nearly the full increase. Because the change comes from one very high-cost case, this should be handled as a case-level outlier review rather than a broad policy response.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA single catastrophic IP Med/Surg outlier",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "inpatient_scope",
+              "label": "Facility Scope",
+              "type": "badge"
+            },
+            {
+              "id": "separate_reimbursement",
+              "label": "Separate Reimb.",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_scope": "Inpatient/Outpatient",
+              "separate_reimbursement": "Bundles"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_scope": "Inpatient/Outpatient",
+              "separate_reimbursement": "Bundles"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_scope": "-",
+              "separate_reimbursement": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_scope": "Outpatient Only",
+              "separate_reimbursement": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_CA_29085730301",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Bundled Services and Supplies",
+            "tags": [],
+            "effective_date": "10/01/2026",
+            "evidence": "Always bundled facility service; no separate reimbursement and no modifier override.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-26001-CA.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "15851",
+                "76014-76019",
+                "76979",
+                "76983",
+                "77293",
+                "77387",
+                "87913",
+                "96521",
+                "96522",
+                "96523",
+                "97010",
+                "99070",
+                "99072",
+                "99190-99192",
+                "C1734",
+                "C1762",
+                "C1763",
+                "C1781",
+                "G0498",
+                "G2211",
+                "K1034",
+                "L8699",
+                "T1040"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "Facility"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "Facility providers"
+              ],
+              "exemptions": [
+                "provider, state, federal contract and/or requirements"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Bundled Services and Supplies C-23001",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "The policy is a broad facility bundling policy and does not specifically address M3119 or a catastrophic inpatient Med/Surg outlier DRG. It generally treats many ancillary services and supplies as included in the facility fee and not separately reimbursable in inpatient and outpatient facility settings.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00138",
+            "payer_name": "United Health",
+            "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "Off-topic for the requested inpatient DRG/outlier pattern. The policy only addresses reimbursement for biomarker testing associated with autoimmune rheumatic disease and does not include DRG-based catastrophic inpatient outlier adjudication or any rule for M3119.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Autoimmune-Rheumatic-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "Individual Exchange"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00160",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarker Testing for Autoimmune Rheumatic Disease",
+            "tags": [],
+            "effective_date": "05/2023",
+            "evidence": "Off-topic for the requested inpatient DRG/outlier pattern. This laboratory biomarker policy does not address code M3119 or DRG-based catastrophic inpatient reimbursement.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d96",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01818",
+            "payer_name": "United Health",
+            "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "This policy is unrelated to inpatient DRG outlier reimbursement and does not address the requested DRG pattern.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Autoimmune-Rheumatic-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "One CA IP Med/Surg case tied to M3119 and Connective Tissue Disorders with MCC drove about $156K. The increase was concentrated in 1 claim with paid per admit up about $155.7K."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA nursing facility and SNF rare-case concentration",
+    "pattern_description": "CA NF spend is being pushed by a cluster of rare diagnoses, and the same market also shows added SNF pressure in LTSS Non Dual. The NF signal is concentrated in feeding tube or ostomy, digestive, and connective tissue diagnoses, while SNF spend is concentrated in digestive and connective tissue DRGs. Together this points to a post-acute and nursing-facility management issue in CA rather than a broad statewide trend.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA NF rare cases totaled about $180K, led by M069 at about $69K on 3 claims and Z431 at about $37K on 10 claims. Additional CA NF diagnoses M359, K9423, and K611 added about $75K combined. CA LTSS Non Dual / SNF - FREE STANDING added about $54K, concentrated in Other Digestive System Diagnoses without CC/MCC and Connective Tissue Disorders with MCC."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "FL and WA small-volume acute inpatient emergence",
+    "pattern_description": "FL and WA show small numbers of acute inpatient cases creating visible spend movement. The pattern is concentrated in trauma and hernia-related IP Med/Surg admissions and appears again in TANF Standard acute hospital claims. This is an emergence pattern from a low base, so action should stay targeted to case review and inpatient criteria rather than broad benefit changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "FL and WA IP Med/Surg rare cases totaled about $56K, mainly hernia K4090 at about $18K and trauma diagnoses S020XXA and S0211HB at about $24K combined. FL and WA ACUTE HOSPITAL / TANF Standard added about $45K, with WA trauma cases adding about $17K and FL hernia or trauma cases adding about $28K."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "NY single-provider acute hospital outlier",
+    "pattern_description": "In NY, one acute hospital provider accounts for nearly all of the identified increase in TANF Standard, and the same case appears in the clinical view. The episode is tied to laparoscopic cholecystectomy and diagnosis K8071 and shows a very high paid amount for a single claim. This is a provider-specific outlier until proven otherwise.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "NY single-provider acute hospital outlier",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "relevance_summary",
+              "label": "Relevance Summary",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "NY TANF Standard acute hospital increase was about $51K, and about 98% of it was tied to PROVIDENCE CEDARS-SINAI TARZANA MEDICAL CENTER. The same provider also drove a matching about $51K IP Med/Surg case tied to laparoscopic cholecystectomy and diagnosis K8071. The signal is concentrated in 1 claim."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "TN SNF provider concentration",
+    "pattern_description": "TN shows a concentrated SNF pattern at MCKENDREE SNF OPERATIONS LLC, with both higher operational spend and a matching NF rare-case signal. The claims are spread across multiple nervous system and post-acute diagnoses, which suggests provider-level placement or payment management rather than one unusual diagnosis alone. Because the signal sits on one provider, targeted provider action is more useful than marketwide policy.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "TN LTSS Dual Eligible / SNF - FREE STANDING added about $27K, with 17 more claims concentrated at MCKENDREE SNF OPERATIONS LLC. TN NF rare cases added about $26K at the same provider across several nervous system and post-acute diagnoses. Top TN NF diagnoses I69952 and S0630AS each added about $5K, confirming repeat provider concentration rather than a one-code anomaly."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "FL and NY SNF low-volume spend emergence",
+    "pattern_description": "Separate from the larger CA and TN patterns, NY and FL each show smaller SNF - FREE STANDING increases tied to digestive cases. Volumes are low, but both states show higher spend within specific Medicaid products, so these may be early site-of-care outliers. They are best handled as targeted SNF payment and utilization checks.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "FL and NY SNF low-volume spend emergence",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HF_00021",
+            "payer_name": "Healthfirst",
+            "policy_title": "Laboratory Testing for the Diagnosis of Inflammatory Bowel Disease",
+            "tags": [],
+            "effective_date": "02/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-058-Inflammatory-Bowel-Disease.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00024",
+            "payer_name": "Healthfirst",
+            "policy_title": "Fecal Analysis in the Diagnosis of Intestinal Dysbiosis and Fecal Microbiota Transplant Testing",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-053-Fecal-Analysis.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "NY ABD Non Dual / SNF - FREE STANDING added about $25K on 3 claims, tied to Other Digestive System Diagnoses without CC/MCC. FL LTSS Dual Eligible / SNF - FREE STANDING added about $23K on 6 claims, tied to the same digestive DRG. Both state signals were flagged as low baseline and concentrated in a narrow SNF setting."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Not Mapped records are blocking clean action",
+    "pattern_description": "Some of the remaining increase sits in records classified as Not Mapped for facility or clinical grouping. That limits confidence in site-of-care, provider, and clinical routing, especially in CA and NJ. Clean mapping is a gating step before tightening policy or escalating provider action on these claims.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA LTSS Non Dual had about $9K of spend in Not Mapped facility records. NJ TANF Standard had about $3K in Not Mapped facility records tied to RAJESH I PATEL. NJ OP Surg also showed a separate Not Mapped clinical grouping tied to diagnosis D259 at about $3K."
+      }
+    }
+  }
+]

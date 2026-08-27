@@ -1,0 +1,216 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "VA acute hospital spend surged across Medicare products, led by DSNP admissions and a few major hospital systems",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_scope": "Applies only to laboratory/professional services, not heart transplant or heart-assist DRG reimbursement."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "This policy is a laboratory claims payment policy for immune cell function assays and does not address the requested heart transplant or implant of heart assist system DRG.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00151",
+        "payer_name": "Humana",
+        "policy_title": "Modifier 62",
+        "tags": [],
+        "effective_date": "01/2008",
+        "evidence": "Off-topic for this DRG pattern. The policy addresses professional-service co-surgeon billing under modifier 62, not inpatient DRG reimbursement.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: VA acute hospital spend surged across Medicare products, led by DSNP admissions and a few major hospital systems",
+    "pattern_rank": 1,
+    "pattern_title": "VA acute hospital spend surged across Medicare products, led by DSNP admissions and a few major hospital systems",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['VA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 14457,
+    "output": 6981,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 303,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 344,
+        "output": 528,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 10519,
+        "output": 4787,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 812,
+        "output": 624,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 663,
+        "output": 392,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 231,
+        "output": 145,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1360,
+        "output": 202,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T13:26:11.328642+00:00",
+    "end_time": "2026-08-24T13:26:55.315876+00:00",
+    "duration_ms": 43987,
+    "version": "2.0.0"
+  }
+}

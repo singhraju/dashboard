@@ -1,0 +1,843 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "VA catastrophic leukemia inpatient spike",
+    "pattern_description": "VA cost growth is being driven by a very small number of catastrophic inpatient leukemia cases, not by a broad hospital trend. The largest episode added roughly $1.9M from a single claim, with another leukemia diagnosis adding about $357K from two claims. The operational view shows the largest spend sitting in TANF Standard at an acute hospital, so case management, payment validation, and admission review should be coordinated on the same episodes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA catastrophic leukemia inpatient spike",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "covered_uses",
+              "label": "Covered Uses",
+              "type": "text"
+            },
+            {
+              "id": "bundle_rule",
+              "label": "Bundle Rule",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "covered_uses": "Covered only for listed conditions, same date of service; not prognostic or therapeutic.",
+              "bundle_rule": "Bundles"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_UHC_01702",
+            "payer_name": "United Health",
+            "policy_title": "Flow Cytometry Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "Flow cytometry immunophenotyping marker codes are reimbursable for leukemia and other listed diagnoses.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Flow-Cytometry-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "88184",
+                "88185",
+                "88187",
+                "88188",
+                "88189",
+                "86355",
+                "86356",
+                "86357",
+                "86359",
+                "86360",
+                "86361",
+                "86367",
+                "88182"
+              ],
+              "related_codes": [
+                "86355",
+                "86356",
+                "86357",
+                "86359",
+                "86360",
+                "86361",
+                "86367",
+                "88184",
+                "88185",
+                "88187",
+                "88188",
+                "88189"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "billed for listed conditions",
+                "same date of service",
+                "submitted in conjunction"
+              ],
+              "utilization_limits": [
+                "86356: 5 units in Pennsylvania"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "Virginia: unit per date limits follow guidelines.",
+                "Arizona: exempt from this policy.",
+                "Kansas: separately reimbursable.",
+                "Kentucky: exempt from this policy.",
+                "Maryland: exempt from this policy.",
+                "Massachusetts: exempt from this policy.",
+                "Missouri: exempt from this policy.",
+                "Nebraska: exempt from this policy.",
+                "New Jersey: exempt from this policy.",
+                "Ohio: exempt from this policy.",
+                "Pennsylvania: 86356 limit five units.",
+                "Texas: exempt from this policy.",
+                "Washington: exempt from this policy.",
+                "Washington DC: exempt from this policy."
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Kansas separately reimbursable."
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "bundle",
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "One VA IP Med/Surg leukemia case tied to C9201 added about +$1.9M. Two additional VA leukemia-related claims tied to C9250 added about +$357K. The operational view places the largest episode in VA TANF Standard at ACUTE HOSPITAL with about +$1.9M."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "Acute hospital cost pressure across Medicaid products",
+    "pattern_description": "A second major theme is repeated acute hospital pressure across several Medicaid products and states, with both extra claims and higher paid amounts per episode contributing. The pattern is spread across TANF Standard, ABD Non Dual, LTSS Non Dual, and Family Care, which makes it more actionable than a one-off state anomaly. This looks like case-level admission and reimbursement pressure concentrated in acute hospitals.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Acute hospital cost pressure across Medicaid products",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_scope",
+              "label": "DRG Scope",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance_summary",
+              "label": "Relevance Summary",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "OH TANF Standard at ACUTE HOSPITAL added about +$416K. KS ABD Non Dual at ACUTE HOSPITAL added about +$260K. CA / DC / MO TANF Standard at ACUTE HOSPITAL added about +$233K. CA LTSS Non Dual added about +$110K, with smaller acute hospital pockets in CA ABD Non Dual and MD Family Care."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "Rare inpatient Med/Surg cases emerging in CA / IN / KS",
+    "pattern_description": "CA / IN / KS show a focused inpatient Med/Surg case-mix pattern driven by a few rare musculoskeletal and connective tissue admissions. The largest individual episodes are very high cost and mostly single-claim events, which points to uncommon complex cases rather than broad inpatient growth. The business lever is targeted clinical and payment validation on those admissions, not broad policy change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare inpatient Med/Surg cases emerging in CA / IN / KS",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "payment_status",
+              "label": "Payment Status",
+              "type": "badge"
+            },
+            {
+              "id": "auth_documentation",
+              "label": "Auth/Docs",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "payment_status": "Bundles",
+              "auth_documentation": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "payment_status": "Bundles",
+              "auth_documentation": "No specific auth stated; submit compliant codes with full medical record/office note support."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "payment_status": "-",
+              "auth_documentation": "No prior authorization or documentation requirements stated."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "payment_status": "Bundles",
+              "auth_documentation": "Requires supported abnormal findings; denies reimbursement for systemic lupus or connective tissue diagnoses."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00052",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Chiropractic Manipulation RETIRED",
+            "tags": [],
+            "effective_date": "08/16/06",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Chiropractic%20Manipulation%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_CA_29085730301",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Bundled Services and Supplies",
+            "tags": [],
+            "effective_date": "10/01/2026",
+            "evidence": "Always bundled and not separately reimbursable when reported as a stand-alone service or with another service.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-26001-CA.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "15851",
+                "76014-76019",
+                "76979",
+                "76983",
+                "77293",
+                "77387",
+                "87913",
+                "96521-96523",
+                "97010",
+                "99070",
+                "99072",
+                "99190-99192",
+                "C1734",
+                "C1762",
+                "C1763",
+                "C1781",
+                "G0498",
+                "G2211",
+                "K1034",
+                "L8699",
+                "T1040",
+                "G6012-G6014",
+                "G6015",
+                "G6017"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny",
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Bundled Services and Supplies C-23001",
+            "tags": [],
+            "effective_date": "06/01/2026",
+            "evidence": "M3110 is not explicitly addressed. This policy does not adjudicate the musculoskeletal/connective-tissue inpatient pattern by DRG label or M-code, but it does impose line-item facility bundling rules that can affect related implant/connective-tissue supplies. Relevant connective tissue and implant HCPCS codes C1734, C1762, C1763, C1781, C1889, and L8699 are generally always bundled and not separately reimbursable on facility claims. California history shows delayed-implementation reimbursement for those codes; Indiana has no matching carve-out for them; Kansas has no stated exception.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "C1734",
+                "C1762",
+                "C1763",
+                "C1781",
+                "C1889",
+                "L8699"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "stand-alone service",
+                "with another service"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [
+                "California: delayed implementation history allows reimbursement for C1734/C1762/C1763/C1781/C1889/L8699 effective 10/01/2026",
+                "Indiana: no carve-out stated for these connective tissue or implant codes",
+                "Kansas: no state-specific exception stated"
+              ],
+              "provider_role_restrictions": [
+                "facility provider"
+              ],
+              "exemptions": [
+                "provider, state, federal contract requirements",
+                "California delayed implementation for C1734/C1762/C1763/C1781/C1889/L8699"
+              ],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00138",
+            "payer_name": "United Health",
+            "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2025-09-01",
+            "evidence": "Denied when ANA/ENA testing is billed for a general encounter without abnormal findings.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Autoimmune-Rheumatic-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "86038",
+                "86039",
+                "86235",
+                "0312U",
+                "0062U",
+                "0446U",
+                "0447U"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "general encounter without abnormal findings",
+                "submitted for SLE",
+                "submitted for connective tissue disease"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "Individual Exchange"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00160",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarker Testing for Autoimmune Rheumatic Disease",
+            "tags": [],
+            "effective_date": "05/2023",
+            "evidence": "Off-topic for the requested inpatient DRG/Med-Surg pattern. This policy addresses laboratory biomarker testing for autoimmune rheumatic disease and does not provide a reimbursement rule for this diagnosis code in an inpatient DRG context.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d96",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01818",
+            "payer_name": "United Health",
+            "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Autoimmune-Rheumatic-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "A musculoskeletal O.R. case tied to M952 added about +$260K. Two connective tissue disorder diagnoses, M3110 and M3119, added about +$159K and +$156K. Additional hip or pelvic fracture and related rare diagnoses added smaller but still material increments across the same segment."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Post-acute nursing facility pressure in CA / NY, with NY SNF concentration",
+    "pattern_description": "Post-acute cost pressure is showing up in nursing facility settings, with the clearest operational concentration in NY free-standing SNF and a parallel NF case-mix signal across CA / NY. The biggest drivers are traumatic injury and connective tissue cases, suggesting discharge destination and post-acute intensity may be part of the cost story. This is a site-of-care and provider-mix issue more than a broad acute inpatient trend.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Post-acute nursing facility pressure in CA / NY, with NY SNF concentration",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_NY_28206820100",
+            "payer_name": "Fidelis Care (Centene)",
+            "policy_title": "Non-Genetic Immunology and Rheumatology Testing",
+            "tags": [],
+            "effective_date": "02/26",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.CG.PP.11-Non-Genetic-Immunology-and-Rheumatology-Testing.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00061",
+            "payer_name": "Healthfirst",
+            "policy_title": "General Inflammation Testing",
+            "tags": [],
+            "effective_date": "10/15/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-063-Inflammation-Testing.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00078",
+            "payer_name": "Healthfirst",
+            "policy_title": "Biomarker Testing for Autoimmune Rheumatic Disease",
+            "tags": [],
+            "effective_date": "08/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-Re-060-Autoimmune-Rheumatic-Disease.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA / NY NF traumatic injury tied to T148XXS added about +$180K across 11 claims. CA / NY NF connective tissue disorder tied to M069 added about +$110K across 5 claims. NY ABD Non Dual at SNF - FREE STANDING added about +$161K across 10 claims. NY TANF Standard at the same SNF setting added another +$18K."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "IN hip fracture discharges driving NF and SNF spend",
+    "pattern_description": "Indiana has a clear post-acute pattern tied to hip and pelvic fracture cases moving through NF and free-standing SNF. Clinical findings show the diagnosis cluster, and the operational view shows the pressure concentrated in LTSS Dual Eligible SNF spending. This supports a targeted discharge-planning and post-acute management response rather than a broad network change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "IN NF diagnosis S72044A added about +$63K across 14 claims. IN NF diagnosis S72002A added about +$38K across 6 claims. IN LTSS Dual Eligible at SNF - FREE STANDING added about +$101K across 20 claims, with paid per admit up about $5K."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "VERACYTE lab spend is obscured by Not Mapped classification",
+    "pattern_description": "VERACYTE spend is appearing under Not Mapped facility or service classification across multiple states, with the clearest clinical concentration in NC outpatient lab and pathology. Because the same provider also appears in operational Not Mapped buckets, this is a gating data-quality and routing issue before drawing strong conclusions about utilization or reimbursement. The current classification can hide the real site of care, benefit rules, and authorization pathway.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VERACYTE lab spend is obscured by Not Mapped classification",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mentioned",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Carolina Complete Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "policy_relevance": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CCH_00017",
+            "payer_name": "Carolina Complete Health",
+            "policy_title": "Reporting the Global Maternity Package",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://network.carolinacompletehealth.com/content/dam/centene/carolinacompletehealth/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00950",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.coordinatedcarehealth.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_01101",
+            "payer_name": "Molina",
+            "policy_title": "Multiple Procedure Payment Reduction",
+            "tags": [],
+            "effective_date": "10/23/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/MultipleProcedurePaymentReduction12162024_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "NC outpatient lab and pathology tied to VERACYTE added about +$58K, mostly from diagnoses E042 and E041. Operational Not Mapped VERACYTE spend added about +$42K across NC, MO, and IA. A separate utilization-only Not Mapped signal added about +$17K across WA and TN. All contributing groups carry Not Mapped or unmapped flags."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "TX CHILDRENS admissions are a reimbursement issue, not a volume issue",
+    "pattern_description": "Texas CHILDRENS spend rose even though claim volume fell, which makes this a reimbursement or case-rate issue rather than a utilization spike. The single identified driver is a connective tissue disorder admission with a large increase in paid per admission. This calls for focused payment review, not broad authorization tightening.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX CHILDRENS admissions are a reimbursement issue, not a volume issue",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope_summary",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_scope_summary": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00916",
+            "payer_name": "Centene",
+            "policy_title": "Pulmonary Function Testing (TX.CP.MP.242)",
+            "tags": [],
+            "effective_date": "03/24",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.242.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX TANF Standard at CHILDRENS added about +$91K. Claim volume fell by 1 while paid per admit increased by about $125K. The signal is concentrated in Connective Tissue Disorders with MCC."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "VA LTSS Dual SNF connective tissue emergence",
+    "pattern_description": "A smaller but distinct VA pocket is emerging in LTSS Dual Eligible free-standing SNF, tied to connective tissue disorder cases. The dollar impact is modest compared with the inpatient spike, but the setting and product make it operationally different and worth targeted follow-up. This is best handled as an early post-acute management issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "VA LTSS Dual Eligible at SNF - FREE STANDING added about +$58K across 8 claims. Paid per admit increased by about $7K. The increase is concentrated in Connective Tissue Disorders with MCC."
+      }
+    }
+  }
+]

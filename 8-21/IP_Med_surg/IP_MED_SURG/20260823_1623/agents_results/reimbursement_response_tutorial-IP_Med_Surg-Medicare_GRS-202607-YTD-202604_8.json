@@ -1,0 +1,549 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-YTD-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-YTD-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Scattered one-off complex admissions are emerging across multiple states",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_mention",
+          "label": "DRG Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention": "Mentioned",
+          "policy_relevance": "Reviews inpatient sepsis DRGs 870-872 pre/post-pay and denies unsupported diagnoses or DRG assignments."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention": "-",
+          "policy_relevance": "Molina clinically validates sepsis DRGs and may adjust hospital payment if records lack Sepsis-3 support."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention": "Mentioned",
+          "policy_relevance": "Pays ED facility charges at contracted rates, bundling them into observation or surgery episodes."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention": "-",
+          "policy_relevance": "Denies claims with invalid primary diagnoses, including DRG 998 inpatient diagnoses, across Medicaid claim types."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": "7/29/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595760206",
+        "payer_name": "Point32Health",
+        "policy_title": "General Coding and Claims Editing",
+        "tags": [],
+        "effective_date": "01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/general-coding-and-claims-editing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595790208",
+        "payer_name": "Point32Health",
+        "policy_title": "Emergency Department Services",
+        "tags": [],
+        "effective_date": "07/01/2026",
+        "evidence": "Emergency department facility services are reimbursed at contracted rates. Room and facility charges tied to ED care are paid, while ancillary services are handled separately. When the ED episode escalates to observation, inpatient admission, or surgical day care, ED charges are bundled into the higher-level rate.",
+        "policy_url": "https://wwwassets.point32health.org/documents/emergency-department-services-pp",
+        "edit_rule_facts": {
+          "target_codes": [
+            "045X",
+            "0762",
+            "036X",
+            "99281-99285"
+          ],
+          "related_codes": [
+            "0762",
+            "036X",
+            "99281-99285",
+            "045X"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "045X",
+            "25X",
+            "27X",
+            "0762",
+            "036X"
+          ],
+          "pairing_conditions": [
+            "same ED claim",
+            "same observation stay",
+            "same emergency episode",
+            "same surgical episode",
+            "same claim with CPT code",
+            "once per day"
+          ],
+          "utilization_limits": [
+            "once per day"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "Inpatient claims are denied when the principal diagnosis is invalid, including the DRG 998 diagnosis list. The policy also applies separate inappropriate primary diagnosis edits for outpatient and professional claims.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis on inpatient claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "UB-04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00721",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Inpatient MS-DRG 870 claims tied to sepsis are subject to medical record validation on a pre- or post-pay basis. Payment can be denied or adjusted if the sepsis diagnosis, sequencing, principal diagnosis, discharge status, or DRG assignment is not supported by the medical record.",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/CC.PP.073-Sepsis-Diagnosis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "870",
+            "871",
+            "872"
+          ],
+          "related_codes": [
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A41.9",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00034",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2022-01-07",
+        "evidence": "Hospital claims with this ICD-10 diagnosis range are subject to pre- and post-payment DRG clinical validation for sepsis. Payment may be adjusted if the medical record does not support sepsis under Sepsis-3 criteria.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "pre-payment review",
+            "post-payment review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00694",
+        "payer_name": "Molina",
+        "policy_title": "General Billing and Coding Policy",
+        "tags": [],
+        "effective_date": "2020-11-20",
+        "evidence": "This general claims coding policy does not contain a DRG-specific reimbursement edit for this admission type. It applies broad correct-coding, audit, and documentation standards only.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Generalandbillingpolicy12182024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01074",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This policy is about correct ICD-10-CM primary/first-listed diagnosis coding for Medicaid claims and does not contain DRG-specific reimbursement rules for this admission type.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 9,
+    "policies_successful": 9,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Deny code 998 on UB-04 inpatient claims unless 998 is the principal diagnosis on the inpatient claim within the MS-DRG program. Apply to all states. Peer: United Health and Fidelis Care both use MS-DRG-based inpatient diagnosis controls; United Health specifically denies 998 unless it is the principal diagnosis on the inpatient claim..\n\nIA \u2014 Implement pre-payment review and post-payment review for inpatient sepsis-coded cases using R65.2 and MS-DRG 870, 871, and 872; require supporting documentation from a physician or licensed independent practitioner, and exempt sepsis screening. (all states) Fidelis Care and United Health both apply inpatient MS-DRG policy logic; Fidelis reviews sepsis DRGs 870-872 while United Health also uses an MS-DRG diagnosis-control framework.. Exempt: sepsis screening.",
+      "evidence": [
+        "Molina \u00b7 Sepsis: \"R65.2\" [target_codes]",
+        "Molina \u00b7 Sepsis: \"pre-payment review\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"post-payment review\" [pairing_conditions]",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis: \"870\" [target_codes]",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis: \"871\" [target_codes]",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis: \"872\" [target_codes]",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis: \"MS-DRG\" [program_scope]",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis: \"physician or licensed independent practitioner\" [provider_role_restrictions]",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis: \"sepsis screening\" [exemptions]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"998\" [target_codes]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"principal diagnosis on inpatient claim\" [pairing_conditions]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"MS-DRG\" [program_scope]",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB-04\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Fidelis Care and United Health both apply inpatient MS-DRG policy logic; Fidelis reviews sepsis DRGs 870-872 while United Health also uses an MS-DRG diagnosis-control framework.",
+        "United Health and Fidelis Care both use MS-DRG-based inpatient diagnosis controls; United Health specifically denies 998 unless it is the principal diagnosis on the inpatient claim."
+      ],
+      "citation": [
+        "Molina \u00b7 Sepsis \u2014 https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "Fidelis Care (Centene) \u00b7 Sepsis Diagnosis \u2014 https://www.fideliscare.org/Portals/0/Providers/CC.PP.073-Sepsis-Diagnosis.pdf",
+        "United Health \u00b7 Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Scattered one-off complex admissions are emerging across multiple states",
+    "pattern_rank": 8,
+    "pattern_title": "Scattered one-off complex admissions are emerging across multiple states",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Endovascular Cardiac Valve Replacement and Supplement Procedures without MCC",
+      "Nervous System Neoplasms with MCC",
+      "Not Mapped",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 9,
+    "successful_extractions": 9,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 9 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "9 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['PA', 'VA', 'CT', 'NY'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Item 2 was dropped for scope drift because it addresses ED facility bundling rather than the pattern's inpatient complex-admission scenarios; the other items remain aligned."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/9 policies quarantined (11%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/9 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_ELV_INTERNAL_00047:CAT Scan RETIRED]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 139294,
+    "output": 47175,
+    "breakdown": {
+      "search_keywords": {
+        "input": 562,
+        "output": 515,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 861,
+        "output": 3510,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 125188,
+        "output": 36869,
+        "calls": 9
+      },
+      "relevance_judge": {
+        "input": 3398,
+        "output": 1657,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 992,
+        "output": 494,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1476,
+        "output": 836,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 3894,
+        "output": 2397,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2923,
+        "output": 897,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:57:32.569038+00:00",
+    "end_time": "2026-08-23T17:59:22.669713+00:00",
+    "duration_ms": 110100,
+    "version": "2.0.0"
+  }
+}

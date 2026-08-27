@@ -1,0 +1,322 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604_4_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IN NICU spend spike is driven by a single very high-cost prematurity case",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "nicu_grouping_rules",
+          "label": "NICU Grouping Rules",
+          "type": "text"
+        },
+        {
+          "id": "level_of_care_support",
+          "label": "Level of Care Support",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "nicu_grouping_rules": "Sick-newborn DRGs group only with matching NICU revenue codes; otherwise normal newborn rules apply.",
+          "level_of_care_support": "Requires clinical support for Level IV NICU/extreme prematurity and matching newborn inpatient revenue codes."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "nicu_grouping_rules": "-",
+          "level_of_care_support": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00145",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "DRG Newborn Inpatient Stays C-18002",
+        "tags": [],
+        "effective_date": "12/18/2025",
+        "evidence": "Level IV neonatal intensive care includes extreme prematurity and the highest-acuity neonatal inpatient setting.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/DRG%20Newborn%20Inpatient%20Stays%20C-18002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0174",
+            "0170",
+            "0171",
+            "0172",
+            "0173"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "revenue code must match DRG"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "Maine: Section I does not apply",
+            "New York: Section I does not apply",
+            "Massachusetts: Section I does not apply",
+            "Virginia: Section I does not apply due to delayed implementation"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Section I does not apply in Maine",
+            "Section I does not apply in New York",
+            "Section I does not apply in Massachusetts",
+            "Section I does not apply in Virginia"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00045",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Hemoglobin A1c",
+        "tags": [],
+        "effective_date": "05/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986ac784e",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00048",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Thyroid Disease Testing",
+        "tags": [],
+        "effective_date": "05/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986ac7851",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: In the DRG program, allow newborn/NICU inpatient grouping only when revenue codes 0170, 0171, 0172, 0173, or 0174 are on the same claim and the revenue code must match DRG; do not apply this edit in Maine, New York, Massachusetts, or Virginia, where Section I does not apply (Virginia due to delayed implementation). Exempt: Section I does not apply in Maine, Section I does not apply in New York, Section I does not apply in Massachusetts, Section I does not apply in Virginia.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"0170\" [revenue_codes]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"0171\" [revenue_codes]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"0172\" [revenue_codes]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"0173\" [revenue_codes]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"0174\" [revenue_codes]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"same claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"revenue code must match DRG\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"Maine: Section I does not apply\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"New York: Section I does not apply\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"Massachusetts: Section I does not apply\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002: \"Virginia: Section I does not apply due to delayed implementation\" [state_specific_rules]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 DRG Newborn Inpatient Stays C-18002 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/DRG%20Newborn%20Inpatient%20Stays%20C-18002.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: IN NICU spend spike is driven by a single very high-cost prematurity case",
+    "pattern_rank": 4,
+    "pattern_title": "IN NICU spend spike is driven by a single very high-cost prematurity case",
+    "cpt_codes_requested": [
+      "Z3800"
+    ],
+    "drg_codes_requested": [
+      "Prematurity without Major Problems"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/5 policies quarantined (40%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_HUM_00065:Laboratory - Vitamin B12 Testing, RP_GBD_HUM_00159:Laboratory - Diabetes Mellitus Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 45335,
+    "output": 18831,
+    "breakdown": {
+      "search_keywords": {
+        "input": 522,
+        "output": 203,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 3696,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 385,
+        "output": 853,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 37729,
+        "output": 10844,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 1285,
+        "output": 372,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 810,
+        "output": 434,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 274,
+        "output": 243,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 344,
+        "output": 226,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2129,
+        "output": 1720,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1419,
+        "output": 240,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:42:43.423845+00:00",
+    "end_time": "2026-08-23T05:43:53.329736+00:00",
+    "duration_ms": 69905,
+    "version": "2.0.0"
+  }
+}

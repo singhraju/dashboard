@@ -1,0 +1,1424 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "TX DSNP acute hospital admissions surged in a narrow inpatient case mix",
+    "pattern_description": "TX DSNP HMO acute hospital spend increased sharply, led first by a large jump in admissions and then reinforced by higher paid per admit in key medical DRGs. The increase is concentrated in urinary infection, kidney, metabolic and electrolyte, and cardiac admissions rather than a broad-based inpatient rise. This is a combined utilization and unit-cost problem in a focused inpatient case mix.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "TX DSNP HMO acute hospital utilization added $48.3M, with 2,169 more admissions and 2,536 more claims. A further $2.3M of TX DSNP acute hospital pressure came from both volume and higher paid per admit, including about +$2.7K in metabolic/electrolyte DRGs and +$9.2K in kidney/UTI with MCC. TX clinical case mix added $3.2M, led by UTI SITE NOT SPECIFIED at $1.1M on 96 admissions and ACUTE CYSTITIS WITHOUT HEMATURIA at $0.5M."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "TX authorization code movement must be validated before business action",
+    "pattern_description": "A very large TX movement sits in authorization code distribution rather than a confirmed care delivery change. The signal indicates a PA classification or mapping shift that should be reconciled before using it to drive UM, reimbursement, or provider actions.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX authorization code movement must be validated before business action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "prior_auth_status",
+              "label": "Prior Auth",
+              "type": "badge"
+            },
+            {
+              "id": "coverage_limits",
+              "label": "Coverage Limits",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "prior_auth_status": "-",
+              "coverage_limits": "No coverage for asymptomatic urinary/prostatitis screening, prostate biopsy assessment, or post-resolution follow-up cultures."
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "prior_auth_status": "-",
+              "coverage_limits": "Only limited asymptomatic bacteriuria scenarios supported; all other indications, including molecular/multiplex UTI panels, denied."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "prior_auth_status": "-",
+              "coverage_limits": "No reimbursement for primary diagnoses of routine general encounters without abnormal findings."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082140004",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "2026-01-03",
+            "evidence": "Urine culture testing is reimbursable only when medical-necessity criteria are met, including pregnancy, certain urologic procedures that breach mucosa, signs or symptoms of UTI or bacteriuria, or evaluation for pyelonephritis. Asymptomatic cases outside those scenarios, follow-up cultures after uncomplicated UTI resolution, and screening or prognosis related to asymptomatic prostatitis or prostate biopsy are not reimbursable.",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab050-1-3-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "87077",
+                "87086",
+                "87088",
+                "87140",
+                "87147",
+                "87149",
+                "87181",
+                "87186"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "prior to the procedure",
+                "clinical resolution of infection"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "pregnant individuals",
+                "urological interventions which breach the mucosa",
+                "at least one sign or symptom",
+                "pyelonephritis"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082290004",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Pathogen Panel Testing",
+            "tags": [],
+            "effective_date": "2026-04-24",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab045-4-24-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00882",
+            "payer_name": "Centene",
+            "policy_title": "Genitourinary Lab Testing (TX.CP.MP.307)",
+            "tags": [],
+            "effective_date": "03/24",
+            "evidence": "Centene-affiliated health plan allows urine culture for asymptomatic bacteriuria only when the member is pregnant or before an endoscopic urologic procedure with mucosal trauma; otherwise the service is not supported.",
+            "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/TX.CP.MP.307.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "87086",
+                "87088",
+                "0321U",
+                "0371U",
+                "0372U",
+                "0374U",
+                "0416U"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "when pregnant",
+                "before endoscopic urologic procedure"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "For Medicare Advantage claims, urine culture testing codes are not reimbursable when billed for a primary diagnosis representing a general encounter without abnormal findings or a similar examination. The rule applies to several urine culture and susceptibility-related CPT codes, with a contractor-specific exception for CPT 87149 under certain Original Medicare LCDs.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [
+                "87076",
+                "87077",
+                "87140",
+                "87147",
+                "87149",
+                "87181",
+                "87186"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "primary diagnosis general encounter"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "87149 CGS Administrators",
+                "87149 Noridian Healthcare",
+                "87149 Palmetto GBA",
+                "87149 Wisconsin Physicians"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX AUTH_CODE_DISTRIBUTION accounts for about $44.1M of movement on its own. The validation signal also touches kidney and urinary tract infections with MCC, adding about $151K within the same authorization classification issue."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "TX site-of-care and facility classification pressure is concentrated in Not Mapped and rehab settings",
+    "pattern_description": "TX has a separate site-of-care problem outside standard acute hospital classification. Most of the pressure sits in Not Mapped facility rows with very high paid per admit, with smaller but related pressure in physical rehab at Texas Rehabilitation Hospital of Fort Wort. This looks like a blend of real site-of-care movement and facility classification weakness.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX site-of-care and facility classification pressure is concentrated in Not Mapped and rehab settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "site_of_care_rules",
+              "label": "Site of Care Rules",
+              "type": "text"
+            },
+            {
+              "id": "policy_takeaway",
+              "label": "Policy Takeaway",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "site_of_care_rules": "No site-of-care restrictions stated.",
+              "policy_takeaway": "Humana MA covers testing for AD/MCI patients; denies biomarker, DISCERN, and multianalyte assays otherwise."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00030",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biochemical Markers of Alzheimers Disease and Dementia",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "Covered under this Medicare Advantage laboratory policy when billed for an individual with Alzheimer\u2019s disease or mild cognitive impairment. The policy does not address Texas site-of-care, rehab setting, or facility classification.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d98",
+            "edit_rule_facts": {
+              "target_codes": [
+                "83520",
+                "0358U",
+                "0393U",
+                "0443U",
+                "0479U",
+                "0206U",
+                "0207U",
+                "0412U",
+                "0445U",
+                "0459U",
+                "0503U",
+                "0289U"
+              ],
+              "related_codes": [
+                "0443U",
+                "0479U",
+                "0393U",
+                "0207U",
+                "0206U",
+                "0445U",
+                "0459U",
+                "0503U",
+                "0412U"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "in addition to primary procedure"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [
+                "CGS jurisdictions excepted",
+                "Noridian jurisdictions excepted",
+                "Palmetto jurisdictions excepted",
+                "WPS jurisdictions excepted",
+                "First Coast jurisdictions excepted",
+                "Novitas jurisdictions excepted"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "CGS jurisdictions",
+                "Noridian jurisdictions",
+                "Palmetto jurisdictions",
+                "WPS jurisdictions",
+                "First Coast jurisdictions",
+                "Novitas jurisdictions"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX DSNP HMO Not Mapped facility spend added $8.3M on 190 admissions, with paid per admit up about $31.6K. Physical rehab at TEXAS REHABILITATION HOSPITAL OF FORT WORT added about $97K across DSNP HMO and CSNP HMO. All component groups carry PA indicators, and the largest one is explicitly flagged as unmapped or unknown facility data."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "VA inpatient growth is concentrated in heart failure, electrolyte, urinary, and GI cases",
+    "pattern_description": "VA cost growth is concentrated in a narrow inpatient case mix rather than a broad statewide trend. Heart failure, cardiac, metabolic-electrolyte, urinary, and GI admissions drove most of the increase, with additional paid-per-admit pressure in DSNP acute hospital stays. The same clinical themes recur across DSNP, CSNP, Medicare HMO, and smaller VA products.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA inpatient growth is concentrated in heart failure, electrolyte, urinary, and GI cases",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "coverage_rules",
+              "label": "Coverage Rules",
+              "type": "text"
+            },
+            {
+              "id": "billing_limits",
+              "label": "Billing Limits",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "coverage_rules": "Covered under Medicare Advantage criteria, except LCD jurisdictions; no outpatient or independent lab ACS coverage.",
+              "billing_limits": "Humana allows four CHF tests/year, four serial troponins; no outpatient or concurrent alternative biomarkers."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00059",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "Natriuretic peptide testing is reimbursable for dyspnea or shortness of breath and for specified chronic heart failure conditions, with a four-tests-per-365-days limit and jurisdictional LCD exceptions.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+            "edit_rule_facts": {
+              "target_codes": [
+                "83880",
+                "84484",
+                "84512",
+                "83006"
+              ],
+              "related_codes": [
+                "82553",
+                "82554",
+                "82550",
+                "82552",
+                "83625",
+                "83874",
+                "84588",
+                "86140",
+                "82725"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "dyspnea or shortness of breath",
+                "chronic heart failure presentation",
+                "first three days after presentation",
+                "acute coronary syndrome independent laboratory"
+              ],
+              "utilization_limits": [
+                "4 tests per 365 days",
+                "max 4 serial tests"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Listed LCD jurisdictions"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "VA clinical case mix added $5.3M, led by HTN heart or CKD with heart failure on AMI with MCC at $1.1M and FLUID OVERLOAD UNSPECIFIED on metabolic-electrolyte DRGs at $0.7M. VA DSNP HMO acute hospital mixed pressure added $1.0M, led by kidney/UTI and GI DRGs with paid per admit up about $1.4K. VA CSNP HMO and Medicare HMO acute hospital utilization added about $0.8M combined, mainly from AMI and kidney/UTI admissions."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "IN and VA show a separate authorization distribution issue that should not be operationalized yet",
+    "pattern_description": "IN and VA have a smaller but still material authorization distribution shift that mirrors the TX validation problem. The movement appears in the authorization classification itself, so it should be treated as a reporting and mapping issue until reconciled.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN and VA show a separate authorization distribution issue that should not be operationalized yet",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_mention",
+              "label": "Policy Mention",
+              "type": "badge"
+            },
+            {
+              "id": "authorization_status",
+              "label": "Auth Requirement",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_mention": "-",
+              "authorization_status": "Requires Auth"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_mention": "-",
+              "authorization_status": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00047",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "CAT Scan RETIRED",
+            "tags": [],
+            "effective_date": "08/16/06",
+            "evidence": "AMERIGROUP covers cardiac rehabilitation after a qualifying cardiac event; acute myocardial infarction is listed as an example qualifying event. Coverage is subject to medical necessity, authorization guidelines, facility-only delivery, and a 36-session limit.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/CAT%20Scan%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "within 12 months of event"
+              ],
+              "utilization_limits": [
+                "36 sessions"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Cardiac Rehabilitation"
+              ],
+              "state_specific_rules": [
+                "Texas Medicaid: not reimbursed",
+                "LTC: not reimbursed"
+              ],
+              "provider_role_restrictions": [
+                "Initial evaluation by physician"
+              ],
+              "exemptions": [
+                "Physical or occupational therapy for unrelated condition"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00059",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "Off-topic for this DRG; the policy addresses laboratory biomarkers for myocardial infarction and chronic heart failure, not DRG payment or state-specific authorization distribution rules.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00064",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Venous and Arterial Thrombosis Testing",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986393910",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN and VA AUTH_CODE_DISTRIBUTION movement totals about $3.3M. The largest affected DRGs are AMI with MCC at $1.7M and metabolic-electrolyte with MCC at $1.2M. A smaller kidney and urinary tract infections without MCC component adds about $350K within the same validation issue."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "DSNP acute hospital admissions are rising across CT, FL, LA, NJ, TN, VA, and WI",
+    "pattern_description": "Outside TX, DSNP HMO acute hospital growth is recurring across CT, FL, LA, NJ, TN, VA, and WI and is primarily driven by more admissions. VA contributes most of the pressure, with smaller pockets in the other states. This is a utilization-led pattern that may represent broader DSNP inpatient growth rather than a single market anomaly.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "DSNP acute hospital admissions are rising across CT, FL, LA, NJ, TN, VA, and WI",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "policy_scope": "Laboratory biomarker billing policy for myocardial infarction and heart failure; not inpatient DRG adjudication."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00059",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "Off-topic for DRG adjudication: this policy governs laboratory biomarker billing for myocardial infarction and chronic heart failure, not inpatient DRG payment or discharge-status logic.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "This multi-state DSNP HMO acute hospital pattern adds about $3.0M and is volume-led. VA alone contributes about $1.5M in AMI with MCC and $1.1M in metabolic-electrolyte with MCC within this multi-state segment. Smaller state pockets are present in CT, FL, and TN, but the common feature is more acute hospital admissions rather than a pure price spike."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "OH cost pressure is concentrated in Cleveland Clinic and UHCMC across acute and poorly classified settings",
+    "pattern_description": "Ohio pressure is concentrated in two providers and spans both standard acute hospital claims and facility rows that are not cleanly classified. The biggest operational pressure sits in Not Mapped Medicare HMO claims and DSNP HMO acute hospital admissions, while additional rare cardiothoracic and other high-cost episodes sit with the same providers. This is a provider-concentrated pattern that needs contract, utilization, and data-quality review together.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "OH cost pressure is concentrated in Cleveland Clinic and UHCMC across acute and poorly classified settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "site_rules",
+              "label": "Site Rules",
+              "type": "text"
+            },
+            {
+              "id": "bundling",
+              "label": "Bundling",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "site_rules": "-",
+              "bundling": "-"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "site_rules": "Restricted in independent labs for ACS symptoms; otherwise no special site rule, LCDs may supersede.",
+              "bundling": "Bundles"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "site_rules": "UB04 hospital facility claims cover room/board and procedure areas; routine services/supplies not separately reimbursed.",
+              "bundling": "Bundles"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Unlisted or Miscellaneous Codes",
+            "tags": [],
+            "effective_date": "11/04/2024",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00059",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Biomarkers for Myocardial Infarction and Chronic Heart Failure",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "Quantitative troponin is reimbursable for MI evaluation when the presentation is consistent with acute ischemic symptoms, and serial testing is limited. The policy is on-topic for acute cardiac workups but is not DRG-specific.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390b",
+            "edit_rule_facts": {
+              "target_codes": [
+                "84484",
+                "83880",
+                "82553",
+                "82554",
+                "82550",
+                "82552",
+                "83625",
+                "83874",
+                "84588",
+                "86140",
+                "82725",
+                "84512",
+                "83006"
+              ],
+              "related_codes": [
+                "82553",
+                "82554",
+                "82550",
+                "82552",
+                "83625",
+                "83874",
+                "84588",
+                "86140",
+                "82725",
+                "84484"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "first three days after presentation",
+                "in independent laboratory",
+                "dyspnea or shortness of breath",
+                "chronic heart failure",
+                "in conjunction with troponin",
+                "outpatient setting"
+              ],
+              "utilization_limits": [
+                "max 4 serial tests in 3 days",
+                "4 tests per 365 days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "CGS L33943",
+                "FCSO L33267",
+                "NGS L33573",
+                "Noridian L35526",
+                "Noridian L34038",
+                "Palmetto L33422",
+                "Palmetto L34410",
+                "WPS L36523"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "bundle",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00064",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Venous and Arterial Thrombosis Testing",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "Reimbursable antithrombin III testing when used for specified acute or thrombotic indications; not reimbursable for superficial venous thrombosis.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986393910",
+            "edit_rule_facts": {
+              "target_codes": [
+                "85300",
+                "85301",
+                "85302",
+                "85303",
+                "85305",
+                "85306",
+                "85307",
+                "0278U"
+              ],
+              "related_codes": [
+                "85302-85303",
+                "85305-85306",
+                "85307",
+                "85300-85301"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "superficial venous thrombosis, including superficial thrombophlebitis and varicosities",
+                "jurisdictions with listed local coverage determinations"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00159",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "The policy is not DRG-specific, but it broadly bundles routine hospital services and many facility components into room and board, facility, surgical, critical care, and ventilator/CPAP charges. No separate reimbursement is allowed for bundled routine services; ventilator/CPAP management owned by the facility is limited to one unit per day.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "250",
+                "260-269",
+                "270",
+                "279",
+                "300",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761",
+                "270-279",
+                "300-370"
+              ],
+              "pairing_conditions": [
+                "same claim line",
+                "UB04 facility claim"
+              ],
+              "utilization_limits": [
+                "1 unit per day ventilator/CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "UB04",
+                "facility claims"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "OH Medicare HMO Not Mapped spend added $1.1M across UHCMC and THE CLEVELAND CLINIC FOUNDATION, with paid per admit up about $37.5K to $40.8K. OH DSNP HMO acute hospital mixed pressure added $0.7M, led by AMI with MCC at $0.5M and kidney/UTI with MCC at $0.2M. OH rare clinical cases added about $0.6M more at THE CLEVELAND CLINIC FOUNDATION and UHCMC, including Not Mapped and major cardiothoracic episodes. An additional $25K sits in Invalid facility rows, reinforcing classification weakness in Ohio site-of-care data."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Rare catastrophic inpatient outliers need case-level review, not broad policy changes",
+    "pattern_description": "This pattern is driven by one-off or very low-frequency catastrophic inpatient cases rather than a recurring utilization trend. Several of the largest cases sit at UHCMC and THE CLEVELAND CLINIC FOUNDATION, with very high paid per admit on complex airway, hematology, and surgical admissions. These cases need claim-level confirmation and clinical review before any broader policy response.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare catastrophic inpatient outliers need case-level review, not broad policy changes",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Buckeye Health Plan (WellCare)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "CareSource",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "Off-topic: bundled facility and respiratory reimbursement policies, not DRG inpatient outlier adjudication."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "Molina bundles routine hospital services/supplies into room/board or procedure payments; no separate reimbursement or outliers."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_relevance": "United Health bundles routine facility services on UB04 claims, not catastrophic DRG outlier reviews."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Tracheostomy Supplies RETIRED",
+            "tags": [],
+            "effective_date": "11/07/06",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00016",
+            "payer_name": "Cigna",
+            "policy_title": "Emergency Room Services",
+            "tags": [],
+            "effective_date": "2021-08-14",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R36_Emergency_Room_Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00018",
+            "payer_name": "Cigna",
+            "policy_title": "Facility Services, Supplies and Equipment",
+            "tags": [],
+            "effective_date": "10/01/2010",
+            "evidence": "Off-topic for the requested DRG outlier pattern; this policy is a broad facility reimbursement policy about bundled supplies, services, and equipment, not DRG-level case review.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00052",
+            "payer_name": "Cigna",
+            "policy_title": "Respiratory Services and Supplies",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "Off-topic. This policy addresses respiratory services and supplies, not DRG inpatient outlier adjudication for connective tissue disorder cases.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_27067540000",
+            "payer_name": "Cigna",
+            "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+            "tags": [],
+            "effective_date": "10/30/2018",
+            "evidence": "Policy is unrelated to the requested DRG catastrophic inpatient outlier pattern. It governs global surgical package reimbursement and related modifiers for surgical services, not DRG-based inpatient outlier review.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00045",
+            "payer_name": "United Health",
+            "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00101",
+            "payer_name": "United Health",
+            "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00136",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-07-08",
+            "evidence": "Off-topic to the requested DRG outlier pattern. This policy addresses inclusive facility billing on UB04 claims, bundling routine room, board, facility, and surgical-room services rather than case-level review for catastrophic DRG outliers.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "UB04"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_BHP_00011",
+            "payer_name": "Buckeye Health Plan (WellCare)",
+            "policy_title": "Unbundling Adjustments on Clean Claim Reviews (PDF)",
+            "tags": [],
+            "effective_date": "9/1/22",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PI.10.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00788",
+            "payer_name": "Centene",
+            "policy_title": "Unbundling Adjustments on Clean Claim Reviews Corp Format",
+            "tags": [],
+            "effective_date": "9/1/22",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PI.10.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CRSC_27755360003",
+            "payer_name": "CareSource",
+            "policy_title": "Newborn and Neonatal Intensive Care Unit (NICU) Level of Care",
+            "tags": [],
+            "effective_date": "02/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.caresource.com/documents/medicaid-oh-policy-reimburse-py-1430-20260201.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00196",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2024-08-26",
+            "evidence": "Routine hospital supplies, services, equipment, and personnel are bundled into room, board, or procedure payment and are not separately reimbursable. These charges are also excluded from outlier calculations.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "Inpatient claims",
+                "Outpatient claims"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Immediate discharge DME"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00159",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": "12/1/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Rare high-cost cases across CA, OH, TX, and UNATTRIBUTED added $1.4M overall. The largest single case was UHCMC at $401K for tracheostomy with prolonged mechanical ventilation tied to ACQUIRED HEMOPHILIA. THE CLEVELAND CLINIC FOUNDATION added a separate $261K connective tissue disorder case, and KAWEAH DELTA HEALTH CARE added a $74K coronary bypass case."
+      }
+    }
+  }
+]

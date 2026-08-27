@@ -1,0 +1,622 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_8_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IN NICU and maternity emergence is small-volume but high-cost at IU Health Ball Memorial Hospital",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_ob_bundling",
+          "label": "Global OB Bundle",
+          "type": "badge"
+        },
+        {
+          "id": "claim_scope",
+          "label": "Claim Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Bundles",
+          "claim_scope": "Inpatient/outpatient maternity and labor-delivery claims, including bundled global obstetrical services."
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Bundles",
+          "claim_scope": "Professional maternal obstetric claims only; global package includes delivery-related observation/inpatient care, excluding newborn/facility."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "Bundles",
+          "claim_scope": "Included in global obstetric services across office and hospital settings under the same TIN."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_ob_bundling": "No Bundle",
+          "claim_scope": "Unbundled professional OB claims only; prenatal, delivery, and postpartum billed separately in all settings."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Routine Obstetrics",
+        "tags": [],
+        "effective_date": "07/19/19",
+        "evidence": "This diagnosis is listed as a normal pregnancy/high-risk obstetric code and is included within global obstetric services when antepartum, delivery, and postpartum care are provided under the same TIN.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "O09.892"
+          ],
+          "related_codes": [
+            "O80",
+            "Z33.1",
+            "Z34.00",
+            "Z39.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "first diagnosis field",
+            "global obstetric services"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "global obstetric services"
+          ],
+          "state_specific_rules": [
+            "GA/KY maternity ultrasounds included unless problem-oriented",
+            "OH/VA more than two ultrasounds per pregnancy/fetus limited"
+          ],
+          "provider_role_restrictions": [
+            "provider or provider group under same TIN"
+          ],
+          "exemptions": [
+            "problem oriented diagnosis",
+            "unrelated condition"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No rule is stated for prematurity DRGs, NICU, or newborn facility reimbursement. This policy addresses professional maternity/obstetric package billing after delivery.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59425",
+            "59426",
+            "59430"
+          ],
+          "related_codes": [
+            "81000",
+            "81002",
+            "59200",
+            "96365-96367",
+            "64430",
+            "64435",
+            "51701",
+            "51702",
+            "59414",
+            "96372",
+            "96360",
+            "96361",
+            "99202-99205",
+            "99212-99215",
+            "99381-99397",
+            "01967",
+            "59412",
+            "59025",
+            "76801-76817",
+            "76818-76819",
+            "76820",
+            "76821",
+            "76825-76828",
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "O09.00-O09.03",
+            "O09.10-O09.13",
+            "O09.211-O09.219",
+            "O09.291-O09.299",
+            "O09.30-O09.33",
+            "O09.40-O09.43",
+            "O09.511-O09.519",
+            "O09.521-O09.529",
+            "O09.611-O09.619",
+            "O09.621-O09.629",
+            "O09.70-O09.73",
+            "O09.811-O09.819",
+            "O09.821-O09.829",
+            "O09.891-O09.899",
+            "O09.90-O09.93",
+            "O34.211-O34.219",
+            "Z33.1",
+            "Z34.00-Z34.03",
+            "Z34.80-Z34.83",
+            "Z34.90-Z34.93",
+            "Z39.0-Z39.2"
+          ],
+          "required_modifiers": [
+            "25"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "after delivery only",
+            "same TIN",
+            "within 72 hours of delivery",
+            "after delivery",
+            "complication diagnosis only"
+          ],
+          "utilization_limits": [
+            "48 hours observation included",
+            "4-6 visits for 59425",
+            "7+ visits for 59426",
+            "report antepartum code once",
+            "13 routine prenatal visits",
+            "beyond 13 routine visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same TIN for full package",
+            "global diagnosis codes by maternity providers"
+          ],
+          "exemptions": [
+            "59409 delivery only",
+            "59410 delivery+postpartum",
+            "59425 antepartum only",
+            "59426 antepartum only",
+            "59430 postpartum only",
+            "complication E&M",
+            "unrelated condition E&M"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00277",
+        "payer_name": "Centene",
+        "policy_title": "Global Maternity Billing",
+        "tags": [],
+        "effective_date": "01/01/2013",
+        "evidence": "Global maternity care is bundled under the obstetrical package. For vaginal twin delivery, the policy cites 59400 for Twin A and requires modifier 22 on the global maternity package.",
+        "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59510",
+            "59514",
+            "96365-96367",
+            "12041-12047",
+            "13131-13133"
+          ],
+          "related_codes": [
+            "59409",
+            "59510",
+            "59514",
+            "59400",
+            "13131-13133",
+            "12041-12047"
+          ],
+          "required_modifiers": [
+            "22",
+            "51"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same physician group",
+            "multiple gestation",
+            "same claim line",
+            "one cesarean only",
+            "global OB code",
+            "time of delivery"
+          ],
+          "utilization_limits": [
+            "approximately 13 prenatal visits",
+            "one cesarean delivery"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "solo practice or same group",
+            "same physician group"
+          ],
+          "exemptions": [
+            "unrelated E/M services",
+            "state policy exception",
+            "contractual exception"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00446",
+        "payer_name": "United Health",
+        "policy_title": "Cesarean Delivery Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00490",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Indiana Medicaid does not cover global OB packages. The global maternity codes must be unbundled, with prenatal care, delivery, and postpartum care billed separately.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59425",
+            "59426",
+            "59409",
+            "59514",
+            "59612",
+            "59620",
+            "59430"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59409",
+            "59514",
+            "59612",
+            "59620",
+            "59430",
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59410",
+            "59515",
+            "59614",
+            "59622"
+          ],
+          "required_modifiers": [
+            "U1",
+            "U2",
+            "U3"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy episode",
+            "separate claims by component",
+            "same prenatal episode",
+            "each specific date of service",
+            "same delivery confinement",
+            "same date of service",
+            "after delivery",
+            "separate postpartum claim"
+          ],
+          "utilization_limits": [
+            "up to 14 prenatal visits",
+            "4-6 visits for 59425",
+            "7+ visits for 59426",
+            "60 days postpartum"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "IN global codes not covered",
+            "IN use U1/U2/U3",
+            "IN prenatal care billed separately"
+          ],
+          "provider_role_restrictions": [
+            "assistant surgeon for cesarean only"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "deny",
+            "allow_with_conditions",
+            "bundle",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Edit 59510 and 59514 to bundle into global obstetric services when billed by the provider or provider group under the 'same TIN' for the same pregnancy episode, and deny duplicate payment beyond 'one cesarean delivery' / 'one cesarean only'; allow separate payment only for a 'problem oriented diagnosis' or 'unrelated condition'. Apply to all states. Exempt: problem oriented diagnosis, unrelated condition. Peer: Centene and United Health both flag 59510/59514 in maternity component logic, and Centene limits payment to 'one cesarean delivery' / 'one cesarean only'..\n\nRecommendation 2: Edit 59409, 59410, and 59430 to pay separately only 'after delivery' and, for postpartum component review, apply the 'within 72 hours of delivery' and 'same TIN' checks; otherwise bundle these component codes back to the full maternity package. Apply to all states. Peer: Cigna and United Health both restrict these component claims to 'after delivery'; Cigna also adds a 'within 72 hours of delivery' check..\n\nIA \u2014 Implement utilization review on antepartum codes 59425 and 59426 using the peer thresholds '4-6 visits for 59425' and '7+ visits for 59426'; treat '13 routine prenatal visits' as routine global care and only consider separate payment for visits 'beyond 13 routine visits', except 'complication E&M' or 'unrelated condition E&M'. (all states) Cigna and United Health both use '4-6 visits for 59425' and '7+ visits for 59426' thresholds for antepartum-only billing.. Exempt: complication E&M, unrelated condition E&M.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Routine Obstetrics: \"same TIN\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Routine Obstetrics: \"provider or provider group under same TIN\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Routine Obstetrics: \"problem oriented diagnosis\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Routine Obstetrics: \"unrelated condition\" [exemptions]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"59510\" [target_codes]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"59514\" [target_codes]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"same pregnancy episode\" [pairing_conditions]",
+        "Centene \u00b7 Global Maternity Billing: \"one cesarean only\" [pairing_conditions]",
+        "Centene \u00b7 Global Maternity Billing: \"one cesarean delivery\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59425\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59426\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"4-6 visits for 59425\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"7+ visits for 59426\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"13 routine prenatal visits\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"beyond 13 routine visits\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"complication E&M\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"unrelated condition E&M\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59409\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59410\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59430\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"after delivery only\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same TIN\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"within 72 hours of delivery\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"after delivery\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59409 delivery only\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59410 delivery+postpartum\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59430 postpartum only\" [exemptions]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"59409\" [target_codes]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"59430\" [target_codes]",
+        "United Health \u00b7 Obstetrical Services Policy, Professional: \"after delivery\" [pairing_conditions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Centene and United Health both flag 59510/59514 in maternity component logic, and Centene limits payment to 'one cesarean delivery' / 'one cesarean only'.",
+        "Cigna and United Health both use '4-6 visits for 59425' and '7+ visits for 59426' thresholds for antepartum-only billing.",
+        "Cigna and United Health both restrict these component claims to 'after delivery'; Cigna also adds a 'within 72 hours of delivery' check."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Routine Obstetrics \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "United Health \u00b7 Obstetrical Services Policy, Professional \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "Centene \u00b7 Global Maternity Billing \u2014 https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: IN NICU and maternity emergence is small-volume but high-cost at IU Health Ball Memorial Hospital",
+    "pattern_rank": 8,
+    "pattern_title": "IN NICU and maternity emergence is small-volume but high-cost at IU Health Ball Memorial Hospital",
+    "cpt_codes_requested": [
+      "O99892",
+      "Z3800"
+    ],
+    "drg_codes_requested": [
+      "Prematurity without Major Problems",
+      "Vaginal Delivery without Sterilization or D&C with CC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 69462,
+    "output": 66412,
+    "breakdown": {
+      "search_keywords": {
+        "input": 537,
+        "output": 427,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 1978,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 432,
+        "output": 737,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 53286,
+        "output": 55161,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 1949,
+        "output": 798,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 1012,
+        "output": 599,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1516,
+        "output": 915,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 344,
+        "output": 181,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 7013,
+        "output": 4243,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2930,
+        "output": 1373,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:27:51.800822+00:00",
+    "end_time": "2026-08-23T05:32:45.819659+00:00",
+    "duration_ms": 294018,
+    "version": "2.0.0"
+  }
+}

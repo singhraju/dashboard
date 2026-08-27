@@ -1,0 +1,192 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R3-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Smaller provider and site-specific inpatient spikes are emerging in VA, ME, and MO",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_policy_status",
+          "label": "DRG Policy Status",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope_note",
+          "label": "Scope Note",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_policy_status": "-",
+          "policy_scope_note": "No DRG-specific rule; policy only addresses echocardiography CPT coding, not this inpatient DRG."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589970007",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Echocardiography",
+        "tags": [],
+        "effective_date": "11/1/2020",
+        "evidence": "Blue KC's echocardiography policy is off-topic for this inpatient DRG pattern and does not contain a DRG-specific adjudication rule for this code.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/echocardiography.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Smaller provider and site-specific inpatient spikes are emerging in VA, ME, and MO",
+    "pattern_rank": 8,
+    "pattern_title": "Smaller provider and site-specific inpatient spikes are emerging in VA, ME, and MO",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cellulitis without MCC",
+      "Craniotomy and Endovascular Intracranial Procedures without CC/MCC",
+      "Endovascular Cardiac Valve Replacement and Supplement Procedures without MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['VA', 'ME', 'MO'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 8913,
+    "output": 3731,
+    "breakdown": {
+      "search_keywords": {
+        "input": 552,
+        "output": 723,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 349,
+        "output": 234,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 5254,
+        "output": 1667,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 499,
+        "output": 185,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 653,
+        "output": 294,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 272,
+        "output": 154,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1334,
+        "output": 474,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:12:24.979148+00:00",
+    "end_time": "2026-08-23T17:12:51.442986+00:00",
+    "duration_ms": 26463,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 7,
+      "recommendations_generated": 7,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a claims-processing and contractual reprocessing audit for PPO Local and Medicare GRS AUTH_CODE_DISTRIBUTION and Not Mapped facility claims in GA, CA, ME, NY, OH, CT, and NH; reconcile authorization records to inpatient and post-acute claims for Good Samaritan Hospital, AdventHealth Palm Coast Parkway, Aftercare with CC/MCC, Kidney and Urinary Tract Infections without MCC, Cellulitis without MCC, and Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC, then reprocess mismatched claims.",
+        "evidence": [
+          "Validation needed because increase is tied to authorization-code movement and unmapped facility buckets.",
+          "GA authorization-code movement added about $2.2M.",
+          "CA authorization-code movement added about $0.9M.",
+          "Not Mapped facility claims concentrated at Good Samaritan Hospital and AdventHealth Palm Coast Parkway.",
+          "PPO Local and Medicare GRS inpatient and post-acute claims are impacted."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a CA PPO Local provider-specific contract compliance and site-of-care review at Good Samaritan Hospital and California Rehabilitation Institute for Aftercare with CC/MCC, Aftercare, Musculoskeletal System and Connective Tissue with CC, and Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC, validating PA-to-claim matching, rehab placement, discharge timing, and DRG coding on rare spine and trauma episodes.",
+        "evidence": [
+          "Aftercare with CC/MCC rose in CA Physical Rehab with more admissions and higher paid/admit.",
+          "Aftercare, Musculoskeletal System and Connective Tissue with CC rose in CA Acute Hospital.",
+          "HYPO-OSMOLALITY AND HYPONATREMIA repeatedly drove electrolyte-related inpatient spend.",
+          "Good Samaritan Hospital appears repeatedly in concentrated high-cost CA episodes.",
+          "Most major operational drivers were PA-required and flagged for auth-to-claim validation.",
+          "Rare spine and trauma cases were single-case high paid admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review GA PPO Local inpatient policy for UTI SITE NOT SPECIFIED, ACUTE CYSTITIS WITHOUT HEMATURIA, CELLULITIS OF LEFT LOWER LIMB, and Aftercare with CC/MCC by auditing Emory Hospital Perry and GA acute hospital and Physical Rehab claims for admission criteria, discharge routing, site-of-care, contract compliance, PA enforcement, and manual-adjudication edits.",
+        "evidence": [
+          "UTI SITE NOT SPECIFIED led GA clinical concentration.",
+          "ACUTE CYSTITIS WITHOUT HEMATURIA appears among key driver codes.",
+          "Cellulitis without MCC concentrated in lower-limb diagnoses.",
+          "Aftercare with CC/MCC increased in GA Physical Rehab.",
+          "Emory Hospital Perry appears in GA acute hospital provider concentration.",
+          "PA-required acute hospital and rehab cards are present."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted OH inpatient policy review for PPO Local and Medicare HMO acute hospital and physical rehab admissions: audit initial and concurrent review KPIs, confirm discharge-to-rehab criteria and prior authorization was obtained, and validate authorization-to-claim matching for Aftercare with CC/MCC, Aftercare, Musculoskeletal System and Connective Tissue with CC, DSPL IT FX RT FEMUR SUB CLOS FX RTN, and ENC FOR OTHER ORTHOPEDIC AFTERCARE.",
+        "evidence": [
+          "OH cost growth is primarily volume-led, not broad price escalation.",
+          "OH physical rehab added 17 PPO Local admissions; paid per admit fell.",
+          "OH acute hospital added admissions across electrolyte disorders, UTI, and cellulitis.",
+          "Orthopedic aftercare and femur fracture drivers added spend in musculoskeletal aftercare with CC.",
+          "A smaller Medicare HMO rehab cell added one admission.",
+          "Most key operational cells show PA required equals Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a joint prior-authorization-to-claim and reimbursement audit for KY PPO Local Medicare GRS ACUTE HOSPITAL admissions with pa_required_code = Y to verify authorized inpatient level of care matched actual diagnosis/DRG/service billed and confirm claims processed per contractual obligation.",
+        "evidence": [
+          "KY acute hospital spend rose about $1.0M in PPO Local.",
+          "Admissions increased by 49 and claims increased by 55.",
+          "Paid per admit rose by about $1.2K.",
+          "PA required code is Y.",
+          "Paid ratio stayed essentially unchanged."
+        ],
+        "peer_benchmarking": [
+          "United Health policy excludes inpatient DRG-based acute admissions; only professional surgical billing is addressed."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused policy audit for PA-required PPO Local inpatient admissions in OH, PA, ME, and CT across Acute Hospital, Physical Rehab, Critical Access, and Long Term Care Hospital to validate authorization-to-claim matching, confirm reimbursement is processing to contract, and pursue provider and site-of-care remediation for WELLSPAN EPHRATA COMMUNITY HOSPITAL and recurring Aftercare and Cellulitis admissions.",
+        "evidence": [
+          "PA-required PPO Local admissions increased across acute, rehab, critical access, and LTCH settings.",
+          "WELLSPAN EPHRATA COMMUNITY HOSPITAL is a named acute hospital outlier.",
+          "Aftercare, cellulitis, and metabolic disorder episodes recur in smaller segments.",
+          "High paid per admit is concentrated in localized low-count admissions.",
+          "ME critical access and CT long term care show recurring outliers."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate focused clinical validation, program-integrity, and case-management review for Good Samaritan Hospital, Emory Hospital Perry, AdventHealth Palm Coast Parkway, and California Rehabilitation Institute across Infectious and Parasitic Diseases with O.R. Procedures with MCC, Hip and Femur Procedures Except Major Joint with MCC, Degenerative Nervous System Disorders without MCC, Respiratory Infections and Inflammations with MCC, and Simple Pneumonia and Pleurisy with MCC; validate diagnosis and DRG assignment, audit authorization enforcement, review discharge step-down planning, and evaluate provider contract or site-of-care action.",
+        "evidence": [
+          "Paid per admit increased while volume was not material.",
+          "Good Samaritan Hospital concentrated sepsis O.R. outlier admissions.",
+          "California Rehabilitation Institute appears in OH fracture rehab outlier episodes.",
+          "All cited cards show pa_required_code Y.",
+          "Cards repeatedly flag small_n_admissions and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [
+          "Buckeye Health Plan may request pre/post-pay records to validate sepsis and DRG documentation.",
+          "Centene may request records validating sepsis, organ dysfunction, SOFA, and treatment.",
+          "Molina requires supporting medical records, correct coding, and sepsis evidence.",
+          "United Health states accurate ICD-10-CM diagnosis coding is required."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned because the pattern is explicitly driven by AUTH_CODE_DISTRIBUTION, auth status reassignment, and repeated guidance to validate auth-to-claim mapping before taking utilization or reimbursement action.; IP MedSurg (DNE) Trend 9: Highly relevant because the increase may reflect claims classification or reprocessing movement rather than real operating change, especially with Not Mapped facility buckets and the need to restate impacted claims.; IP MedSurg (DNE) Trend 1: Relevant since spend concentration is partly isolated to specific providers and facilities, including Good Samaritan Hospital and AdventHealth Palm Coast Parkway, which fits provider-level driver review.; IP MedSurg (DNE) Trend 3: Relevant because the variance is concentrated in a subset of diagnoses/DRGs such as Aftercare with CC/MCC, Kidney and Urinary Tract Infections without MCC, Cellulitis without MCC, and Miscellaneous Disorders with MCC.; IP MedSurg (DNE) Trend 4: Relevant because facility taxonomy issues are distorting inpatient versus post-acute service/site-of-care signals, so service-level isolation is important once mapping is validated."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Spend growth is concentrated in a small set of providers, especially Good Samaritan Hospital and California Rehabilitation Institute, which points to provider-level behavior and contracting/pricing review.; IP MedSurg (DNE) Trend 3: The increase is clearly concentrated in specific diagnoses and case-mix buckets, especially aftercare and electrolyte disorders, plus rare trauma and spine cases.; IP MedSurg (DNE) Trend 4: Variance is isolated to specific inpatient/post-acute services and settings\u2014acute hospital and physical rehab\u2014with explicit concern about rehab placement and site-of-care appropriateness.; IP MedSurg (DNE) Trend 8: Most major operational drivers are PA-required and flagged for auth-to-claim validation, making authorization enforcement and paid-claim alignment directly relevant.; IP MedSurg (DNE) Trend 10: Mixed unit-cost pressure and the recommendation to assess provider-specific pricing at Good Samaritan make reimbursement method review highly relevant."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is explicitly concentrated in a narrow diagnosis set\u2014UTI site not specified, acute cystitis without hematuria, and lower-limb cellulitis\u2014rather than broad inpatient growth, making diagnosis-driver review the strongest parent rule fit.; IP MedSurg (DNE) Trend 7: The pattern calls for review of admission criteria and discharge routing, with acute hospital admissions rising and rehab aftercare episodes increasing, which aligns closely to admission/discharge source and location analysis.; IP MedSurg (DNE) Trend 4: Variance is also concentrated in a subset of inpatient services/sites of care\u2014acute hospital medical admissions and physical rehab aftercare episodes\u2014so service-driver review is directly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased in both acute hospital and rehab cells, and the recommended next step specifically mentions assessing provider-specific reimbursement effects, matching reimbursement method review.; IP MedSurg (DNE) Trend 1: There is evidence of provider concentration, including mention of Emory Hospital Perry and specific hospital-level cells, so provider-driver analysis is relevant to determine whether behavior or contract dynamics are amplifying the trend."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow diagnosis/DRG set, especially orthopedic aftercare, femur fracture episodes, and acute hospital electrolyte/UTI/cellulitis admissions, which makes diagnosis-level driver analysis highly relevant.; IP MedSurg (DNE) Trend 4: Variance is concentrated in specific inpatient service settings\u2014acute hospital and physical rehab\u2014so service-level review is directly aligned to the observed utilization growth and post-acute placement pattern.; IP MedSurg (DNE) Trend 6: The pattern is explicitly volume-led with admissions up and recommended actions focused on tighter inpatient and rehab utilization management, making UM KPI/PAV review a strong parent rule match.; IP MedSurg (DNE) Trend 7: Pattern details emphasize discharge planning and confirming discharge-to-rehab criteria, so admission/discharge source and location review is highly relevant to the orthopedic aftercare and rehab placement surge.; IP MedSurg (DNE) Trend 8: Most key operational cells show PA required = Y and the recommendation calls for tighter authorization review, so auth-to-claim enforcement is a clear fit for this pattern."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 23,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern shows a clear utilization component, with admissions up by 49, so reviewing utilization management KPIs/PAV is central to explaining the volume side of the increase.; IP MedSurg (DNE) Trend 10: Paid per admit and allowed per admit both increased while paid ratio stayed essentially flat, which strongly points to reimbursement method or contractual pricing as a key driver of the unit-cost side.; IP MedSurg (DNE) Trend 8: The cases are explicitly flagged as PA required = Y, and the recommended next step is to audit those cases, making auth-to-claim enforcement a highly relevant parent rule.; IP MedSurg (DNE) Trend 3: The pattern calls for separating higher-acuity admission mix from reimbursement effects, so diagnosis mix is a relevant lens for explaining both admission growth and higher cost per admit.; IP MedSurg (DNE) Trend 4: Level-of-care and DRG/service mix are specifically implicated in the pattern details, making service-driver review relevant to understanding the higher paid per admit."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is concentrated in specific providers and localized markets, including named provider outliers like WELLSPAN EPHRATA COMMUNITY HOSPITAL, which matches a provider-driver investigation.; IP MedSurg (DNE) Trend 4: The pattern is explicitly a site-of-care issue across ACUTE HOSPITAL, Physical Rehab, CRITICAL ACCESS, and LONG TERM CARE HOSPITAL settings, making service/facility driver review highly relevant.; IP MedSurg (DNE) Trend 3: Variance is repeatedly tied to a small set of DRGs/diagnoses such as aftercare, cellulitis, and metabolic disorder admissions, indicating diagnosis-level concentration.; IP MedSurg (DNE) Trend 8: Most key cells are under PA required = Y, and the recommended next step specifically prioritizes auth-related review, aligning with auth-to-claim enforcement and matching.; IP MedSurg (DNE) Trend 10: High paid per admit and the recommendation for targeted contract review suggest reimbursement method or contractual payment setup may be contributing to the outlier costs."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Most direct fit: the increase is concentrated in specific rare diagnoses/DRGs such as sepsis with O.R. procedures, hip/femur procedures, degenerative neurologic disorders, and respiratory infections, and the recommended next step explicitly calls for diagnosis/DRG validation.; IP MedSurg (DNE) Trend 1: The outlier spend is tied to a limited set of facilities/providers such as Good Samaritan Hospital, Emory Hospital Perry, AdventHealth Palm Coast Parkway, and California Rehabilitation Institute, so provider-level concentration is important to investigate.; IP MedSurg (DNE) Trend 2: This pattern is driven by very small numbers of admissions and likely a handful of individual high-cost members/cases, making member-level review appropriate for catastrophic-event or case-management follow-up.; IP MedSurg (DNE) Trend 4: The variance is also isolated to narrow inpatient service/DRG groupings, especially O.R. procedure-based sepsis cases, hip/femur procedures, rehab-related episodes, and respiratory admissions, rather than broad utilization growth.; IP MedSurg (DNE) Trend 10: Paid per admit is unusually high and the pattern recommends checking case severity, classification, and possible stop-loss implications, so reimbursement method review is a relevant secondary validation step."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T17:38:16.951884+00:00"
+  }
+}

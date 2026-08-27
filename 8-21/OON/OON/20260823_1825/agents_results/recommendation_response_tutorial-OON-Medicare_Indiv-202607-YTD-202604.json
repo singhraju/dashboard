@@ -1,0 +1,192 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a claim-level IP Med/Surg policy audit for OH DSNP HMO acute hospital episodes at KETTERING HEALTH DAYTON and GOOD SAMARITAN HOSPITAL to validate contract pricing methodology, contractual claims processing, authorization enforcement, admission mix, and site-of-care steerage before contract remediation.",
+        "evidence": [
+          "Spend increase is concentrated in KETTERING HEALTH DAYTON and GOOD SAMARITAN HOSPITAL.",
+          "Claims increased at both hospitals.",
+          "Paid per admit increased at both hospitals.",
+          "Pattern requires claim-level validation before escalation."
+        ],
+        "peer_benchmarking": [
+          "Humana documents assistant surgery modifier rules; no comparable acute inpatient policy detail provided."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused contract-compliance review of CA DSNP HMO acute admissions at EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL, prioritizing Other O.R. Procedures for Multiple Significant Trauma with MCC to verify contractual claims processing, authorization denial enforcement, itemized bill review, and acute level-of-care/site-of-care appropriateness.",
+        "evidence": [
+          "EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL contributed about $0.6M of the increase.",
+          "El Camino claims rose by 213 and paid per admit also increased.",
+          "Trauma DRG admissions added about $0.4M with much higher paid per admit.",
+          "Pattern requires validation because concentrated, low-baseline, high-cost claims are present."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) bundles same-day and planned readmissions into one DRG; related unplanned readmissions within 30 days are denied."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform targeted itemized bill review, discharge-planning step-down review, and authorization-denial enforcement audit on CA DSNP HMO IP Med/Surg outlier admissions at CEDARS-SINAI MEDICAL CENTER and EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL for Other O.R. Procedures for Multiple Significant Trauma with MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC, focusing on S52551B, S82251C, S32592A, and A419.",
+        "evidence": [
+          "CA IP Med/Surg rare cases added about $0.9M.",
+          "Five trauma-related diagnoses contributed about $0.9M total.",
+          "Largest trauma cases were S52551B, S82251C, and S32592A.",
+          "Separate A419 sepsis admissions occurred at EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL.",
+          "Pattern flagged low_baseline_rows and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [
+          "Molina performs pre- and post-payment inpatient DRG sepsis clinical validation using Sepsis-3 criteria.",
+          "Centene reviews adult inpatient sepsis-related DRGs pre/post-pay and may deny unsupported sepsis diagnoses."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a reimbursement-policy review for the IN admission under Other O.R. Procedures for Multiple Significant Trauma with MCC and the OH GOOD SAMARITAN HOSPITAL IP Med/Surg admissions tied to A4101, A0472, and A419 to confirm claims processed per contractual obligation, complete itemized bill review, review discharge step-down timing, and determine whether provider-specific contract remediation or site-of-care controls are needed.",
+        "evidence": [
+          "IN Medicare HMO trauma admission drives isolated acute hospital spend increase.",
+          "GOOD SAMARITAN HOSPITAL concentrates rare OH IP Med/Surg infectious and digestive cases.",
+          "OH sepsis DRG with A419 appears as a one-case outlier.",
+          "Flags show low baseline and repeated delta concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a targeted case and claims review of the TX IP Med/Surg Q398, C439, L100, and K2101 admissions at BEN TAUB HOSPITAL and THE UNIVERSITY OF TEXAS M. D. ANDERSON CANCER CENTER, including member-level review, itemized bill review, interim and first-claim zero-out checks, final-claim adjudication, contractual reimbursement validation, and authorization enforcement.",
+        "evidence": [
+          "Four claims drive the full TX increase.",
+          "Q398 esophageal admission is the clearest outlier.",
+          "C439, L100, and K2101 are additional high-cost diagnoses.",
+          "BEN TAUB HOSPITAL and MD Anderson are identified providers.",
+          "Paid per admit was very high across identified cases."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Require claim-level validation and targeted reimbursement review for the TX DSNP HMO acute outlier admissions tied to Major Esophageal Disorders with MCC and Other O.R. Procedures for Multiple Significant Trauma with MCC, including provider-level contractual verification for BEN TAUB HOSPITAL and itemized bill review, and route the IN DSNP HMO SNF - FREE STANDING M069 connective-tissue case to diagnosis-specific post-acute clinical review before any broader contract or policy change.",
+        "evidence": [
+          "BEN TAUB HOSPITAL appears on the isolated TX Major Esophageal Disorders claim.",
+          "Separate TX Other O.R. Procedures for Multiple Significant Trauma claim drove acute outlier spend.",
+          "Acute groups carry low_baseline_rows, low_baseline_value, repeated_delta_concentration flags.",
+          "IN NF signal is a single M069 connective-tissue case."
+        ],
+        "peer_benchmarking": [
+          "Elevance bundles same or related readmissions within 30 days to one DRG."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 4,
+        "pattern": "Not Mapped transport claims are creating a validation gate",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 6,
+        "pattern": "Outpatient chemotherapy episodes are landing in Not Mapped buckets",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is overwhelmingly concentrated in two providers, KETTERING HEALTH DAYTON and GOOD SAMARITAN HOSPITAL, making provider-specific behavior, steerage, and contract changes the clearest parent driver.; IP MedSurg (DNE) Trend 10: Paid per admit increased at both hospitals and the pattern explicitly calls out reimbursement terms and provider mix, directly aligning to reimbursement method review.; IP MedSurg (DNE) Trend 6: Claim volume also rose materially, and the recommended next step includes UM review and avoidable acute utilization, which matches a PAV/utilization management KPI investigation.; IP MedSurg (DNE) Trend 9: Because the increase is concentrated, low-baseline, and requires claim-level validation before escalation, claims processing or reprocessing against contractual standards is an important parent rule to test.; IP MedSurg (DNE) Trend 7: The recommendation to validate admission mix and level of care suggests a possible shift in admission source/location or case mix, making this a secondary but relevant inpatient trend."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated in one provider: EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL drove about $0.6M of the increase with 213 more claims, making provider-specific behavior and contract review the top parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially overall and especially for trauma cases, and the recommended next step explicitly calls for contract performance and outlier payment behavior review, which aligns with reimbursement method investigation.; IP MedSurg (DNE) Trend 4: A large share of the increase is tied to a narrow set of acute inpatient services/DRGs, especially 'Other O.R. Procedures for Multiple Significant Trauma with MCC,' indicating service-level concentration.; IP MedSurg (DNE) Trend 3: The pattern includes emergence of trauma-related admissions and a specific skin disorder case, suggesting case-mix or diagnosis concentration is an important parent driver to test.; IP MedSurg (DNE) Trend 9: The signal is low-baseline, high-cost, and concentrated in a small number of claims, with validation explicitly needed before action; this makes claim processing/reprocessing and payment integrity review relevant."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend jump is highly concentrated in a small set of diagnoses and DRGs, especially multiple trauma diagnoses (S52551B, S82251C, S32592A) plus a smaller A419 sepsis signal, making diagnosis-level isolation the clearest parent rule.; IP MedSurg (DNE) Trend 2: The pattern is explicitly driven by a handful of one- and two-claim catastrophic admissions, so the variance is isolated to a very small subset of members and needs case-level clinical/UM review.; IP MedSurg (DNE) Trend 1: The largest trauma cases are concentrated at CEDARS-SINAI MEDICAL CENTER, with the sepsis signal at EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL, indicating provider concentration rather than a broad statewide shift.; IP MedSurg (DNE) Trend 4: The increase is concentrated in specific inpatient service patterns, notably trauma-related surgical stays under 'Other O.R. Procedures for Multiple Significant Trauma with MCC' and a specific sepsis DRG, supporting service/DRG-level review.; IP MedSurg (DNE) Trend 10: Although not the primary issue, the recommendation to confirm severity, level of care, and outlier payment drivers before any policy action makes reimbursement method review a relevant secondary check for these catastrophic admits."
+      },
+      {
+        "rank": 4,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 2: The spend increase is driven by a very small number of one-case inpatient admissions, indicating variance isolated to a subset of members rather than broad utilization growth.; IP MedSurg (DNE) Trend 3: The pattern is concentrated in specific high-cost diagnoses/DRGs, including trauma, septicemia/severe sepsis, infectious/parasitic O.R. cases, and digestive O.R. cases.; IP MedSurg (DNE) Trend 1: Several of the clinical outliers are concentrated at a limited provider set, especially GOOD SAMARITAN HOSPITAL in OH, supporting provider-focused review.; IP MedSurg (DNE) Trend 10: The recommended next step explicitly calls for review of outlier reimbursement terms on the trauma and sepsis stays, making reimbursement method highly relevant.; IP MedSurg (DNE) Trend 7: Case review is recommended for severity, LOS, and transfer pathway, which aligns with reviewing admission/discharge source and whether case mix reflects non-elective acute inpatient events."
+      },
+      {
+        "rank": 6,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is concentrated in a small set of diagnoses/DRGs (Q398, C439, L100, K2101; Major Esophageal and Major Skin Disorders), making diagnosis-driver analysis the best primary parent rule fit.; IP MedSurg (DNE) Trend 2: Only four claims account for the full increase, so the variance is isolated to a very small subset of members/admissions and supports targeted member-level case review.; IP MedSurg (DNE) Trend 1: The outlier claims are concentrated at a small number of providers, especially Ben Taub Hospital and MD Anderson, so provider concentration is relevant to explain the variance.; IP MedSurg (DNE) Trend 10: The pattern explicitly recommends reviewing outlier reimbursement mechanics and shows very high paid-per-admit amounts, which aligns directly with reimbursement method review.; IP MedSurg (DNE) Trend 9: Because the spike is driven by rare, very expensive claims with validation and data-quality follow-up, checking claim frequency/status and potential reprocessing issues is also relevant."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 23,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The acute variance is concentrated in a small number of hospital/provider-specific cases, especially the TX single-admission spikes, so provider-level isolation is a key parent rule.; IP MedSurg (DNE) Trend 3: The increase is driven by a narrow set of DRGs/diagnoses such as major esophageal disorders, trauma surgery, and vascular procedures rather than a broad inpatient shift.; IP MedSurg (DNE) Trend 10: Paid per admit rose sharply on a few high-cost acute claims, and the pattern explicitly recommends reimbursement review if confirmed, aligning with reimbursement method investigation.; IP MedSurg (DNE) Trend 2: Most of the delta comes from single-case or very small-run admissions, implying concentration in a very small subset of members that should be validated before broad action.; IP NF (DNE) Trend 3: The IN post-acute/NF signal is a single M069/connective-tissue case described as a new or rare high-cost case-mix event, which best fits a diagnosis-focused parent rule."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T19:50:59.567131+00:00"
+  }
+}

@@ -1,0 +1,5576 @@
+{
+  "context": {
+    "pattern": {
+      "pattern_rank": 8,
+      "top_pattern": "CO and MO have small-dollar unmapped ancillary claim emergence",
+      "pattern_type": "low_baseline_emergence",
+      "what_is_impacting": "CO EPO and MO PPO / Not Mapped",
+      "priority_entities": {
+        "states": [
+          "CO",
+          "MO"
+        ],
+        "providers": [
+          "LABORATORY CORPORATION OF AMERICA",
+          "VIRTUAL RADIOLOGIC PROFESSIONALS"
+        ],
+        "products": [
+          "EPO",
+          "PPO"
+        ],
+        "facility_types": [
+          "Not Mapped"
+        ],
+        "clinical_categories": []
+      },
+      "key_driver_codes": [
+        "LABORATORY CORPORATION OF AMERICA",
+        "VIRTUAL RADIOLOGIC PROFESSIONALS",
+        "Not Mapped"
+      ],
+      "impact_summary": {
+        "primary_metric": "total_paid",
+        "direction": "increase",
+        "estimated_delta": "+$5K",
+        "volume_signal": "claims up",
+        "unit_cost_signal": "mixed"
+      },
+      "pattern_details": "CO and MO each show very small unmapped ancillary claim increases with low baseline activity. One is centered on a single Labcorp EPO claim in CO, and the other on Virtual Radiologic PPO claims in MO. These are best treated as low-priority validation items unless they recur.",
+      "why_it_matters": "Low-dollar unmapped claim emergence can distract teams if it is mistaken for a broader operational or provider trend.",
+      "recommended_next_step": "Triage the CO and MO Not Mapped ancillary claims as data-quality validation items, confirm provider classification, and defer broader policy action unless repeat activity appears.",
+      "validation_needed": true,
+      "validation_reason": "Both signals are low baseline, low dollar, and flagged as unmapped, limiting confidence in broader business interpretation.",
+      "downstream_routes": [
+        "um_operations_agent",
+        "reimbursement_policy_agent",
+        "network_financial_agent",
+        "data_quality_agent"
+      ],
+      "evidence_summary": [
+        "CO and MO Not Mapped ancillary claims added about $5K combined.",
+        "CO EPO Labcorp contributed about $3K from a single low-baseline claim.",
+        "MO PPO Virtual Radiologic contributed about $2K with about 24 more claims.",
+        "Both signals are flagged as low baseline and unmapped, limiting confidence in operational conclusions."
+      ],
+      "source_group_ids": [
+        "60c5aea77764d85d3c7e",
+        "998e2846439b241de5e5"
+      ],
+      "source_card_ids": [
+        "bde9803c3bdecda43cef",
+        "cf2749811246fa08594c"
+      ],
+      "scope": {
+        "segment_by": [
+          "service_area_state"
+        ],
+        "segment_values": [
+          "CO",
+          "MO"
+        ],
+        "segment_signatures": [
+          "49408d60ab72e2fee04f",
+          "90c8d0083a5a2b19787c"
+        ],
+        "filters": {
+          "state": [
+            "CO",
+            "MO"
+          ]
+        },
+        "filters_attested": {
+          "state": true
+        }
+      }
+    },
+    "cards": [
+      {
+        "card_id": "cd969c3191bce8f9649b",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "BILLIONTOONE LABORATORY"
+        },
+        "source_trace": {
+          "run_id": "20260823T072251Z_where_did_change_happen_for_provider_bil_98485ec6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Pathology and Laboratory",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "Z3491"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "procedure_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 225.0,
+            "comparison": 31445.21,
+            "delta": 31220.21
+          },
+          "share_of_positive_delta": 0.8799583643256793,
+          "share_of_net_delta": 0.8800131803778111,
+          "raw_row_count": {
+            "baseline": 29.0,
+            "comparison": 33.0,
+            "delta": 4.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 13.0,
+              "comparison": 15.0,
+              "delta": 2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 17.30769231,
+              "comparison": 2096.34733333,
+              "delta": 2079.0396410199996
+            },
+            "total_paid": {
+              "baseline": 13.0,
+              "comparison": 15.0,
+              "delta": 2.0
+            },
+            "total_allowed": {
+              "baseline": 0.03272285,
+              "comparison": 0.69960316,
+              "delta": 0.66688031
+            },
+            "paid_ratio": {
+              "baseline": 0.03272285,
+              "comparison": 0.69960316,
+              "delta": 0.66688031
+            },
+            "pmpm": {
+              "baseline": 2.927e-05,
+              "comparison": 0.0049142,
+              "delta": 0.00488493
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3491",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 52823.425432953794,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "45af8d75210a5c17ee3f",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "BILLIONTOONE LABORATORY"
+        },
+        "source_trace": {
+          "run_id": "20260823T072251Z_where_did_change_happen_for_provider_bil_98485ec6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z3491",
+          "procedure_name": "Pathology and Laboratory"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Pathology and Laboratory",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "Z3491"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Mgmt Oth Misc"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z3491"
+          ],
+          "procedure": [
+            "Pathology and Laboratory"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 9482.05,
+            "delta": 9482.05
+          },
+          "share_of_positive_delta": 0.30368458221171013,
+          "share_of_net_delta": 0.267273313568404,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 1.0,
+            "delta": 1.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 9482.05,
+              "delta": 9482.05
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.80000017,
+              "delta": 0.80000017
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.80000017,
+              "delta": 0.80000017
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.06121766,
+              "delta": 0.06121766
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3491",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 8344.081615113368,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "1045045631b090e8393f",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "BILLIONTOONE LABORATORY"
+        },
+        "source_trace": {
+          "run_id": "20260823T072251Z_where_did_change_happen_for_provider_bil_98485ec6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Lab/Pthlgy",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z3481",
+          "procedure_name": "Pathology and Laboratory"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Pathology and Laboratory",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "Z3491"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Lab/Pthlgy"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z3481"
+          ],
+          "procedure": [
+            "Pathology and Laboratory"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 221.86,
+            "comparison": 7485.88,
+            "delta": 7264.02
+          },
+          "share_of_positive_delta": 0.23264704139690331,
+          "share_of_net_delta": 0.20475305395216842,
+          "raw_row_count": {
+            "baseline": 9.0,
+            "comparison": 7.0,
+            "delta": -2.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 5.0,
+              "comparison": 3.0,
+              "delta": -2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 44.372,
+              "comparison": 2495.29333333,
+              "delta": 2450.9213333300004
+            },
+            "total_paid": {
+              "baseline": 5.0,
+              "comparison": 3.0,
+              "delta": -2.0
+            },
+            "total_allowed": {
+              "baseline": 0.07026846,
+              "comparison": 0.84566721,
+              "delta": 0.77539875
+            },
+            "paid_ratio": {
+              "baseline": 0.07026846,
+              "comparison": 0.84566721,
+              "delta": 0.77539875
+            },
+            "pmpm": {
+              "baseline": 8.085e-05,
+              "comparison": 0.00797829,
+              "delta": 0.00789744
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3481",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 8058.575485483141,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "75484ca485ac05c09924",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "BILLIONTOONE LABORATORY"
+        },
+        "source_trace": {
+          "run_id": "20260823T072251Z_where_did_change_happen_for_provider_bil_98485ec6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z3401",
+          "procedure_name": "Pathology and Laboratory"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Pathology and Laboratory",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "Z3491"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Mgmt Oth Misc"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z3401"
+          ],
+          "procedure": [
+            "Pathology and Laboratory"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 6045.5,
+            "delta": 6045.5
+          },
+          "share_of_positive_delta": 0.1936211200912138,
+          "share_of_net_delta": 0.17040627471673178,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 2.0,
+            "delta": 2.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 3022.75,
+              "delta": 3022.75
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.69017127,
+              "delta": 0.69017127
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.69017127,
+              "delta": 0.69017127
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01116707,
+              "delta": 0.01116707
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3401",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 4870.824625020217,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "4c9cdb0c9fb82eb53c3d",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "BILLIONTOONE LABORATORY"
+        },
+        "source_trace": {
+          "run_id": "20260823T072251Z_where_did_change_happen_for_provider_bil_98485ec6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_004",
+          "artifact_row_ref": 4
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Lab/Pthlgy",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z3491",
+          "procedure_name": "Pathology and Laboratory"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Pathology and Laboratory",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "Z3491"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Lab/Pthlgy"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z3491"
+          ],
+          "procedure": [
+            "Pathology and Laboratory"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 4858.32,
+            "delta": 4858.32
+          },
+          "share_of_positive_delta": 0.1555989347715732,
+          "share_of_net_delta": 0.1369428852174001,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 5.0,
+            "delta": 5.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 2429.16,
+              "delta": 2429.16
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.71916725,
+              "delta": 0.71916725
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.71916725,
+              "delta": 0.71916725
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00393073,
+              "delta": 0.00393073
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3491",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 3789.6318563261148,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "d4fe899c1e65e997d70c",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "BILLIONTOONE LABORATORY"
+        },
+        "source_trace": {
+          "run_id": "20260823T072251Z_where_did_change_happen_for_provider_bil_98485ec6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_005",
+          "artifact_row_ref": 5
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Lab/Pthlgy",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z3401",
+          "procedure_name": "Pathology and Laboratory"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "procedure_name": "Pathology and Laboratory",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "Z3491"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Lab/Pthlgy"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z3401"
+          ],
+          "procedure": [
+            "Pathology and Laboratory"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 3462.85,
+            "delta": 3462.85
+          },
+          "share_of_positive_delta": 0.11090578044956739,
+          "share_of_net_delta": 0.09760836463532126,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 4.0,
+            "delta": 4.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 1154.28333333,
+              "delta": 1154.28333333
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.94804811,
+              "delta": 0.94804811
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.94804811,
+              "delta": 0.94804811
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00496816,
+              "delta": 0.00496816
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3401",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 2596.6575552351046,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "8e5692b11d22dfd0ae67",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "LABORATORY CORPORATION OF AMERICA"
+        },
+        "source_trace": {
+          "run_id": "20260823T072309Z_where_did_change_happen_for_provider_lab_e4e0db9d",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "procedure_name": "Pathology and Laboratory",
+          "service_area_state": "CA",
+          "product_description": "PPO",
+          "primary_diagnosis_code": "Z0001"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "Not Mapped",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 607.54,
+            "comparison": 7353.67,
+            "delta": 6746.13
+          },
+          "share_of_positive_delta": 0.5871320812848074,
+          "share_of_net_delta": 0.6805233452535269,
+          "raw_row_count": {
+            "baseline": 404.0,
+            "comparison": 1517.0,
+            "delta": 1113.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 76.0,
+              "comparison": 254.0,
+              "delta": 178.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 7.99394737,
+              "comparison": 28.95145669,
+              "delta": 20.95750932
+            },
+            "total_paid": {
+              "baseline": 76.0,
+              "comparison": 254.0,
+              "delta": 178.0
+            },
+            "total_allowed": {
+              "baseline": 0.13068355,
+              "comparison": 0.36835593,
+              "delta": 0.23767238
+            },
+            "paid_ratio": {
+              "baseline": 0.13068355,
+              "comparison": 0.36835593,
+              "delta": 0.23767238
+            },
+            "pmpm": {
+              "baseline": 4.82e-06,
+              "comparison": 2.155e-05,
+              "delta": 1.6729999999999997e-05
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z0001",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 9636.299412766091,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "bde9803c3bdecda43cef",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "LABORATORY CORPORATION OF AMERICA"
+        },
+        "source_trace": {
+          "run_id": "20260823T072309Z_where_did_change_happen_for_provider_lab_e4e0db9d",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "EPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CO",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "procedure_name": "Pathology and Laboratory",
+          "service_area_state": "CA",
+          "product_description": "PPO",
+          "primary_diagnosis_code": "Z0001"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "Not Mapped",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CO"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "EPO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CO"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 2797.21,
+            "delta": 2797.21
+          },
+          "share_of_positive_delta": 0.24344798115225713,
+          "share_of_net_delta": 0.28217166087469675,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 20.0,
+            "delta": 20.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 2797.21,
+              "delta": 2797.21
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.98667019,
+              "delta": 0.98667019
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.98667019,
+              "delta": 0.98667019
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01084385,
+              "delta": 0.01084385
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "EPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z0001",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 3130.366614623015,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "8dec3a8e0277a246c231",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "LABORATORY CORPORATION OF AMERICA"
+        },
+        "source_trace": {
+          "run_id": "20260823T072309Z_where_did_change_happen_for_provider_lab_e4e0db9d",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Lab/Pthlgy",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "Z0001",
+          "procedure_name": "Pathology and Laboratory"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP Lab/Pthlgy",
+          "procedure_name": "Pathology and Laboratory",
+          "service_area_state": "CA",
+          "product_description": "PPO",
+          "primary_diagnosis_code": "Z0001"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Lab/Pthlgy"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "Z0001"
+          ],
+          "procedure": [
+            "Pathology and Laboratory"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 3213.46,
+            "delta": 3213.46
+          },
+          "share_of_positive_delta": 0.3246109368023582,
+          "share_of_net_delta": 0.32416134124874535,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 52.0,
+            "delta": 52.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 6.0,
+              "delta": 6.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 535.57666667,
+              "delta": 535.57666667
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 6.0,
+              "delta": 6.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.92191126,
+              "delta": 0.92191126
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.92191126,
+              "delta": 0.92191126
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00092223,
+              "delta": 0.00092223
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Lab/Pthlgy",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z0001",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Pathology and Laboratory",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 3830.9258348792155,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "8b07432fd0ff8af81446",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "UCI MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260823T072330Z_where_did_change_happen_for_provider_uci_4d35e4bf",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "product_description": "HMO",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "C7951"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "drg_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 2324.29,
+            "comparison": 5074320.8,
+            "delta": 5071996.51
+          },
+          "share_of_positive_delta": 0.9474533510504741,
+          "share_of_net_delta": 0.9520629266574534,
+          "raw_row_count": {
+            "baseline": 31.0,
+            "comparison": 2693.0,
+            "delta": 2662.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 2.0,
+              "comparison": 238.0,
+              "delta": 236.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 1162.145,
+              "comparison": 21320.67563025,
+              "delta": 20158.53063025
+            },
+            "total_paid": {
+              "baseline": 2.0,
+              "comparison": 238.0,
+              "delta": 236.0
+            },
+            "total_allowed": {
+              "baseline": 0.86912414,
+              "comparison": 0.95185617,
+              "delta": 0.08273202999999996
+            },
+            "paid_ratio": {
+              "baseline": 0.86912414,
+              "comparison": 0.95185617,
+              "delta": 0.08273202999999996
+            },
+            "pmpm": {
+              "baseline": 0.00375755,
+              "comparison": 0.02587647,
+              "delta": 0.02211892
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "C7951",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 9877476.59991581,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "29d0585f542c2f51a2c4",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "UCI MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260823T072330Z_where_did_change_happen_for_provider_uci_4d35e4bf",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy with MCC",
+          "primary_diagnosis_code": "C7951",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "product_description": "HMO",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "C7951"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy with MCC"
+          ],
+          "diagnosis": [
+            "C7951"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 268245.96,
+            "delta": 268245.96
+          },
+          "share_of_positive_delta": 0.05288201619759645,
+          "share_of_net_delta": 0.05035236779798932,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 25.0,
+            "delta": 25.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 268245.96,
+              "delta": 268245.96
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.99906889,
+              "delta": 0.99906889
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.99906889,
+              "delta": 0.99906889
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.14086298,
+              "delta": 0.14086298
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy with MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "C7951",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 254188.21248149383,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "3da7ba7ca3fd0e80db20",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "UCI MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260823T072330Z_where_did_change_happen_for_provider_uci_4d35e4bf",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC",
+          "primary_diagnosis_code": "I352",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "product_description": "HMO",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "C7951"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC"
+          ],
+          "diagnosis": [
+            "I352"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 260692.0,
+            "delta": 260692.0
+          },
+          "share_of_positive_delta": 0.05139282830795965,
+          "share_of_net_delta": 0.048934416257353626,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 20.0,
+            "delta": 20.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 260692.0,
+              "delta": 260692.0
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.99655953,
+              "delta": 0.99655953
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.99655953,
+              "delta": 0.99655953
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.15341583,
+              "delta": 0.15341583
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "I352",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 246680.72927753278,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "ad0d7517277aba6029f0",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "UCI MEDICAL CENTER"
+        },
+        "source_trace": {
+          "run_id": "20260823T072330Z_where_did_change_happen_for_provider_uci_4d35e4bf",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+          "primary_diagnosis_code": "K529",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "product_description": "HMO",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "C7951"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "service_area_state": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC"
+          ],
+          "diagnosis": [
+            "K529"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 255643.88,
+            "delta": 255643.88
+          },
+          "share_of_positive_delta": 0.05039764178732236,
+          "share_of_net_delta": 0.04798683518314701,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 27.0,
+            "delta": 27.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 255643.88,
+              "delta": 255643.88
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.99902303,
+              "delta": 0.99902303
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.99902303,
+              "delta": 0.99902303
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.12258899,
+              "delta": 0.12258899
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K529",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 241674.95582042512,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "1ce1677765d5b568fd6e",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "VIRTUAL RADIOLOGIC PROFESSIONALS"
+        },
+        "source_trace": {
+          "run_id": "20260823T072351Z_where_did_change_happen_for_provider_vir_717d5b5a",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "NH",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP Hgh Tech Rdlgy",
+          "procedure_name": "Radiology",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "M542"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "Not Mapped",
+          "service_area_state": "NH",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "NH"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "NH"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 3789.39,
+            "delta": 3789.39
+          },
+          "share_of_positive_delta": 0.4000019000509847,
+          "share_of_net_delta": 0.575882008768797,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 68.0,
+            "delta": 68.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 34.0,
+              "delta": 34.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 111.45264706,
+              "delta": 111.45264706
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 34.0,
+              "delta": 34.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.83004366,
+              "delta": 0.83004366
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.83004366,
+              "delta": 0.83004366
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00300723,
+              "delta": 0.00300723
+            }
+          }
+        },
+        "driver_type": "volume_led",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "NH",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Hgh Tech Rdlgy",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Radiology",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "M542",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 4774.63788003078,
+        "business_terms": [
+          "site-of-care",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "267b040efce90094d9b1",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "VIRTUAL RADIOLOGIC PROFESSIONALS"
+        },
+        "source_trace": {
+          "run_id": "20260823T072351Z_where_did_change_happen_for_provider_vir_717d5b5a",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP Hgh Tech Rdlgy",
+          "procedure_name": "Radiology",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "M542"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "Not Mapped",
+          "service_area_state": "NH",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 2024.24,
+            "delta": 2024.24
+          },
+          "share_of_positive_delta": 0.21367551140400046,
+          "share_of_net_delta": 0.30762824555671225,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 19.0,
+            "delta": 19.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 16.0,
+              "delta": 16.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 126.515,
+              "delta": 126.515
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 16.0,
+              "delta": 16.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.82466868,
+              "delta": 0.82466868
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.82466868,
+              "delta": 0.82466868
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00030607,
+              "delta": 0.00030607
+            }
+          }
+        },
+        "driver_type": "volume_led",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Hgh Tech Rdlgy",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Radiology",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "M542",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 2211.0934654839907,
+        "business_terms": [
+          "site-of-care",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "cf2749811246fa08594c",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "VIRTUAL RADIOLOGIC PROFESSIONALS"
+        },
+        "source_trace": {
+          "run_id": "20260823T072351Z_where_did_change_happen_for_provider_vir_717d5b5a",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "MO",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "hcc_medium": "OP Hgh Tech Rdlgy",
+          "procedure_name": "Radiology",
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "primary_diagnosis_code": "M542"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "Not Mapped",
+          "service_area_state": "NH",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "MO"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "drg_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "MO"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 1882.21,
+            "delta": 1882.21
+          },
+          "share_of_positive_delta": 0.19868305355082583,
+          "share_of_net_delta": 0.2860436312242122,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 53.0,
+            "delta": 53.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 24.0,
+              "delta": 24.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 78.42541667,
+              "delta": 78.42541667
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 24.0,
+              "delta": 24.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.7722204,
+              "delta": 0.7722204
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.7722204,
+              "delta": 0.7722204
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.0012086,
+              "delta": 0.0012086
+            }
+          }
+        },
+        "driver_type": "volume_led",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "MO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Hgh Tech Rdlgy",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Radiology",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "M542",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 2030.5559072015103,
+        "business_terms": [
+          "site-of-care",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "3f55ef3bbea448141347",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072410Z_where_did_change_happen_for_drg_esophagi_0bfe16d6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "rendering_provider_name": "HUNTINGTON BEACH HOSPITAL",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "primary_diagnosis_code": "K2920"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 19227.21,
+            "delta": 19227.21
+          },
+          "share_of_positive_delta": 0.6953551635894936,
+          "share_of_net_delta": 1.031487187960696,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 18.0,
+            "delta": 18.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 19227.21,
+              "delta": 19227.21
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.76044969,
+              "delta": 0.76044969
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.76044969,
+              "delta": 0.76044969
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01247564,
+              "delta": 0.01247564
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "HUNTINGTON BEACH HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K2920",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 29337.254779427592,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "a427d2394f108703344b",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072410Z_where_did_change_happen_for_drg_esophagi_0bfe16d6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "rendering_provider_name": "HUNTINGTON BEACH HOSPITAL",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "primary_diagnosis_code": "K2920"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 8423.71,
+            "delta": 8423.71
+          },
+          "share_of_positive_delta": 0.3046448364105064,
+          "share_of_net_delta": 0.45190898419980813,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 16.0,
+            "delta": 16.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 8423.71,
+              "delta": 8423.71
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00135983,
+              "delta": 0.00135983
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "HUNTINGTON BEACH HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K2920",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 9890.954779427591,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "38bb7da9e3c095af4eaf",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072410Z_where_did_change_happen_for_drg_esophagi_0bfe16d6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "primary_diagnosis_code": "K2920",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "rendering_provider_name": "HUNTINGTON BEACH HOSPITAL",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "primary_diagnosis_code": "K2920"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "diagnosis": [
+            "K2920"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 19227.21,
+            "delta": 19227.21
+          },
+          "share_of_positive_delta": 0.6953551635894936,
+          "share_of_net_delta": 1.031487187960696,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 18.0,
+            "delta": 18.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 19227.21,
+              "delta": 19227.21
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.76044969,
+              "delta": 0.76044969
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.76044969,
+              "delta": 0.76044969
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01247564,
+              "delta": 0.01247564
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K2920",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "HUNTINGTON BEACH HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 29337.254779427592,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "85a099d632ac8bd2069e",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072410Z_where_did_change_happen_for_drg_esophagi_0bfe16d6",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "primary_diagnosis_code": "A084",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "rendering_provider_name": "HUNTINGTON BEACH HOSPITAL",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "primary_diagnosis_code": "K2920"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "diagnosis": [
+            "A084"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 8423.71,
+            "delta": 8423.71
+          },
+          "share_of_positive_delta": 0.3046448364105064,
+          "share_of_net_delta": 0.45190898419980813,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 16.0,
+            "delta": 16.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 8423.71,
+              "delta": 8423.71
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00135983,
+              "delta": 0.00135983
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "A084",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "HUNTINGTON BEACH HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 9890.954779427591,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "bc5d4f50286664b5be8c",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Appendix Procedures with CC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072429Z_where_did_change_happen_for_drg_appendix_9078a731",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "EPO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "NY",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "K3532",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "service_area_state": "NY",
+          "rendering_provider_name": "STONY BROOK UNIVERSITY MEDICAL CENTER",
+          "product_description": "EPO"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "EPO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "NY",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "NY"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "primary_diagnosis_code": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "rendering_provider_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "EPO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "NY"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 100240.35,
+            "delta": 100240.35
+          },
+          "share_of_positive_delta": 0.9829764450286758,
+          "share_of_net_delta": 1.3986691201894057,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 17.0,
+            "delta": 17.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 100240.35,
+              "delta": 100240.35
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.93438469,
+              "delta": 0.93438469
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.93438469,
+              "delta": 0.93438469
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.2084307,
+              "delta": 0.2084307
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "EPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "NY",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K3532",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "STONY BROOK UNIVERSITY MEDICAL CENTER",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 178896.8276022872,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "9eb6163c00df00b4b7a3",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Appendix Procedures with CC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072429Z_where_did_change_happen_for_drg_appendix_9078a731",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "primary_diagnosis_code": "K3532",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "K3532",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "service_area_state": "NY",
+          "rendering_provider_name": "STONY BROOK UNIVERSITY MEDICAL CENTER",
+          "product_description": "EPO"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "NY"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "facility_type": "drill_context",
+          "service_area_state": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "diagnosis": [
+            "K3532"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 100240.35,
+            "delta": 100240.35
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 1.3986691201894057,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 17.0,
+            "delta": 17.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 100240.35,
+              "delta": 100240.35
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.93438469,
+              "delta": 0.93438469
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.93438469,
+              "delta": 0.93438469
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.2084307,
+              "delta": 0.2084307
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K3532",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "NY",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "STONY BROOK UNIVERSITY MEDICAL CENTER",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "EPO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 180432.63,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "de7687932badd08d1133",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Chest Pain"
+        },
+        "source_trace": {
+          "run_id": "20260823T072445Z_where_did_change_happen_for_drg_chest_pa_b5797eb7",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "R0789",
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "rendering_provider_name": "ST. FRANCIS MEDICAL CENTER",
+          "product_description": "HMO"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "primary_diagnosis_code": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "rendering_provider_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 16788.36,
+            "comparison": 32630.33,
+            "delta": 15841.970000000001
+          },
+          "share_of_positive_delta": 0.6307460830124254,
+          "share_of_net_delta": 0.6307460830124255,
+          "raw_row_count": {
+            "baseline": 14.0,
+            "comparison": 30.0,
+            "delta": 16.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 1.0,
+              "comparison": 2.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 16788.36,
+              "comparison": 16315.165,
+              "delta": -473.1949999999997
+            },
+            "total_paid": {
+              "baseline": 1.0,
+              "comparison": 2.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.99407876,
+              "comparison": 0.82097142,
+              "delta": -0.17310733999999994
+            },
+            "paid_ratio": {
+              "baseline": 0.99407876,
+              "comparison": 0.82097142,
+              "delta": -0.17310733999999994
+            },
+            "pmpm": {
+              "baseline": 0.04283887,
+              "comparison": 0.01285784,
+              "delta": -0.02998103
+            }
+          }
+        },
+        "driver_type": "volume_led",
+        "flags": [
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "R0789",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "ST. FRANCIS MEDICAL CENTER",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 25834.230524700353,
+        "business_terms": [
+          "site-of-care",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "00c09bb99626751f0b35",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Chest Pain"
+        },
+        "source_trace": {
+          "run_id": "20260823T072445Z_where_did_change_happen_for_drg_chest_pa_b5797eb7",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "R0789",
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "rendering_provider_name": "ST. FRANCIS MEDICAL CENTER",
+          "product_description": "HMO"
+        },
+        "hard_filter_dimensions": {
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "primary_diagnosis_code": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "rendering_provider_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 7679.13,
+            "delta": 7679.13
+          },
+          "share_of_positive_delta": 0.305743614490067,
+          "share_of_net_delta": 0.30574361449006704,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 8.0,
+            "delta": 8.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 7679.13,
+              "delta": 7679.13
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.00005209,
+              "delta": 1.00005209
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.00005209,
+              "delta": 1.00005209
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01233474,
+              "delta": 0.01233474
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "R0789",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "ST. FRANCIS MEDICAL CENTER",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 9024.277466105197,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "d0d33282ac688b05915e",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Chest Pain"
+        },
+        "source_trace": {
+          "run_id": "20260823T072445Z_where_did_change_happen_for_drg_chest_pa_b5797eb7",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "primary_diagnosis_code": "R0789",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "R0789",
+          "service_area_state": "CA",
+          "hcc_medium": "IP Med/Surg",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "rendering_provider_name": "ST. FRANCIS MEDICAL CENTER",
+          "product_description": "HMO"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "diagnosis": [
+            "R0789"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 40309.46,
+            "delta": 40309.46
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 1.6049161817214679,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 38.0,
+            "delta": 38.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 13436.48666667,
+              "delta": 13436.48666667
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 3.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.8499671,
+              "delta": 0.8499671
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.8499671,
+              "delta": 0.8499671
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01275479,
+              "delta": 0.01275479
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "R0789",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "ST. FRANCIS MEDICAL CENTER",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 72557.028,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "3b45b6878ee4cf60e1ed",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Vaginal Delivery without Sterilization or D&C with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072502Z_where_did_change_happen_for_drg_vaginal__441cdba4",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "rendering_provider_name": "CEDARS-SINAI MEDICAL CENTER",
+          "hcc_medium": "IP OB Dlvry/Well NB",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "primary_diagnosis_code": "O480"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "rendering_provider_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 1950.0,
+            "comparison": 20507.24,
+            "delta": 18557.24
+          },
+          "share_of_positive_delta": 0.6691694537849217,
+          "share_of_net_delta": 0.8308193876541397,
+          "raw_row_count": {
+            "baseline": 10.0,
+            "comparison": 29.0,
+            "delta": 19.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 2.0,
+              "comparison": 2.0,
+              "delta": 0.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 975.0,
+              "comparison": 10253.62,
+              "delta": 9278.62
+            },
+            "total_paid": {
+              "baseline": 2.0,
+              "comparison": 2.0,
+              "delta": 0.0
+            },
+            "total_allowed": {
+              "baseline": 0.11285147,
+              "comparison": 0.50532847,
+              "delta": 0.392477
+            },
+            "paid_ratio": {
+              "baseline": 0.11285147,
+              "comparison": 0.50532847,
+              "delta": 0.392477
+            },
+            "pmpm": {
+              "baseline": 0.00059702,
+              "comparison": 0.00864073,
+              "delta": 0.008043709999999999
+            }
+          }
+        },
+        "driver_type": "unit_cost_led",
+        "flags": [
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "CEDARS-SINAI MEDICAL CENTER",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP OB Dlvry/Well NB",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "O480",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 30975.178154555706,
+        "business_terms": [
+          "site-of-care",
+          "unit cost"
+        ]
+      },
+      {
+        "card_id": "08065961adf6513a8fa3",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Vaginal Delivery without Sterilization or D&C with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072502Z_where_did_change_happen_for_drg_vaginal__441cdba4",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "PPO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "context_dimensions": {
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "rendering_provider_name": "CEDARS-SINAI MEDICAL CENTER",
+          "hcc_medium": "IP OB Dlvry/Well NB",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "primary_diagnosis_code": "O480"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "lob_description": "Commercial Local Group"
+        },
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "rendering_provider_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "PPO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CA"
+          ],
+          "line_of_business": [
+            "Commercial Local Group"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 9174.51,
+            "delta": 9174.51
+          },
+          "share_of_positive_delta": 0.3308305462150784,
+          "share_of_net_delta": 0.41074862319109845,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 7.0,
+            "delta": 7.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 9174.51,
+              "delta": 9174.51
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.8796827,
+              "delta": 0.8796827
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.8796827,
+              "delta": 0.8796827
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00338521,
+              "delta": 0.00338521
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Local Group",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "CEDARS-SINAI MEDICAL CENTER",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP OB Dlvry/Well NB",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "O480",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 10988.74633910013,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "01680023e9e20eedb04b",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "drgs",
+          "name": "Vaginal Delivery without Sterilization or D&C with MCC"
+        },
+        "source_trace": {
+          "run_id": "20260823T072502Z_where_did_change_happen_for_drg_vaginal__441cdba4",
+          "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP OB Dlvry/Well NB",
+          "primary_diagnosis_code": "O480",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "product_description": "PPO",
+          "service_area_state": "CA",
+          "rendering_provider_name": "CEDARS-SINAI MEDICAL CENTER",
+          "hcc_medium": "IP OB Dlvry/Well NB",
+          "facility_type": "ACUTE HOSPITAL",
+          "procedure_name": "Null or Blank",
+          "primary_diagnosis_code": "O480"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CA"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "product_description": "drill_context",
+          "service_area_state": "drill_context",
+          "rendering_provider_name": "drill_context",
+          "facility_type": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP OB Dlvry/Well NB"
+          ],
+          "diagnosis": [
+            "O480"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 27081.75,
+            "delta": 27081.75
+          },
+          "share_of_positive_delta": 0.9124040866862635,
+          "share_of_net_delta": 1.2124670991808315,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 24.0,
+            "delta": 24.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 13540.875,
+              "delta": 13540.875
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.76912012,
+              "delta": 0.76912012
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.76912012,
+              "delta": 0.76912012
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.00660246,
+              "delta": 0.00660246
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP OB Dlvry/Well NB",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "O480",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "PPO",
+            "source": "drill_context"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CA",
+            "source": "drill_context"
+          },
+          {
+            "field": "rendering_provider_name",
+            "operator": "=",
+            "value": "CEDARS-SINAI MEDICAL CENTER",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 46612.12443715415,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      }
+    ]
+  },
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604_8",
+  "query": "Analyze reimbursement policies for pattern 8",
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604_8_job"
+}

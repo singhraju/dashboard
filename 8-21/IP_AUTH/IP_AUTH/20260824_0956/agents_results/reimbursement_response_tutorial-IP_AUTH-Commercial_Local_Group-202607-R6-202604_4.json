@@ -1,0 +1,373 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA acute hospital spend is rising across PPO and HMO inpatient business",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "global_package_status",
+          "label": "Global Package",
+          "type": "badge"
+        },
+        {
+          "id": "postpartum_only_rules",
+          "label": "Postpartum-Only Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "Bundles",
+          "postpartum_only_rules": "Report CPT 59430 only for postpartum-only care, during the routine six-to-eight-week postpartum period."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "-",
+          "postpartum_only_rules": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "-",
+          "postpartum_only_rules": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "global_package_status": "-",
+          "postpartum_only_rules": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Postpartum care only is separately reimbursable when no antepartum or delivery services were provided. Routine postpartum care remains part of the global maternity package.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59430",
+            "Z39.0-Z39.2"
+          ],
+          "related_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59410",
+            "59515",
+            "59614",
+            "59622",
+            "59430",
+            "99202",
+            "99205",
+            "99212",
+            "99215"
+          ],
+          "required_modifiers": [
+            "25"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "postpartum care only",
+            "postpartum complication visit",
+            "same claim as E&M"
+          ],
+          "utilization_limits": [
+            "no antepartum care",
+            "no delivery services",
+            "6 weeks after vaginal delivery",
+            "8 weeks after cesarean delivery"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "postpartum care only",
+            "routine postpartum care only"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Allow CPT 59430 and Z39.0-Z39.2 only for postpartum-only care with no antepartum care and no delivery services; deny separate postpartum-only billing when delivery services such as 59510 or 59515 are present, and limit use to 8 weeks after cesarean delivery or 6 weeks after vaginal delivery. Exempt: postpartum care only, routine postpartum care only. Peer: Cigna Commercial bundles maternity globally and allows CPT 59430 only for postpartum-only care with no antepartum care or delivery services, limited to 6 weeks after vaginal delivery and 8 weeks after cesarean delivery..\n\nRecommendation 2: When CPT 59430 is billed for a postpartum complication visit on the same claim as E&M 99202, require modifier 25 on the E&M line; otherwise deny the separate E&M payment. Peer: Cigna Commercial requires modifier 25 when CPT 59430 is billed on the same claim as an E&M such as 99202 for a postpartum complication visit..",
+      "evidence": [
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59430\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"Z39.0-Z39.2\" [target_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59510\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59515\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"no antepartum care\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"no delivery services\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"6 weeks after vaginal delivery\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"8 weeks after cesarean delivery\" [utilization_limits]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"Commercial\" [program_scope]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"postpartum care only\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"routine postpartum care only\" [exemptions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"99202\" [related_codes]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"25\" [required_modifiers]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"postpartum complication visit\" [pairing_conditions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"same claim as E&M\" [pairing_conditions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna Commercial bundles maternity globally and allows CPT 59430 only for postpartum-only care with no antepartum care or delivery services, limited to 6 weeks after vaginal delivery and 8 weeks after cesarean delivery.",
+        "Cigna Commercial requires modifier 25 when CPT 59430 is billed on the same claim as an E&M such as 99202 for a postpartum complication visit."
+      ],
+      "citation": [
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: CA acute hospital spend is rising across PPO and HMO inpatient business",
+    "pattern_rank": 4,
+    "pattern_title": "CA acute hospital spend is rising across PPO and HMO inpatient business",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures",
+      "Ungroupable"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 33100,
+    "output": 12549,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 387,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 377,
+        "output": 508,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 25855,
+        "output": 6933,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 473,
+        "output": 145,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 816,
+        "output": 749,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 342,
+        "output": 288,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 370,
+        "output": 77,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2376,
+        "output": 2918,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1948,
+        "output": 544,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:47:28.552313+00:00",
+    "end_time": "2026-08-24T10:48:57.122145+00:00",
+    "duration_ms": 88569,
+    "version": "2.0.0"
+  }
+}

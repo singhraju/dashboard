@@ -1,0 +1,471 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Auth status and facility mapping shifts must be validated before action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "auth_requirement",
+          "label": "Auth Rule",
+          "type": "badge"
+        },
+        {
+          "id": "delivery_setting_bundle",
+          "label": "Delivery Setting/Bundle",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "CareFirst_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "delivery_setting_bundle": "Bundle maternity services globally; use the global maternity code instead of separate component codes."
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "delivery_setting_bundle": "Delivery admissions within 72 hours and full-care cesareans are generally included in the global package."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "Requires Auth",
+          "delivery_setting_bundle": "Professional and facility settings; included in global obstetric package, not separately reimbursable."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "delivery_setting_bundle": "-"
+        },
+        {
+          "payer_org": "Paramount Healthcare",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "No Auth",
+          "delivery_setting_bundle": "No DRG-specific delivery setting or bundling rules were identified by Paramount Healthcare."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "auth_requirement": "-",
+          "delivery_setting_bundle": "Not addressed; CMS-1500 professional claims policy with no DRG-specific bundling rule identified."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CAREFIRST_BCBS_MD_DC_NV_28594150225",
+        "payer_name": "CareFirst_BCBS",
+        "policy_title": "Global Obstetrical Services - Professional",
+        "tags": [],
+        "effective_date": "2024-07-01",
+        "evidence": "Professional global obstetrical care is reimbursed as a bundled maternity package; separate antepartum, delivery, postpartum, and some same-day postpartum/E/M services are denied. No prior authorization or facility-mapping shift rule is stated.",
+        "policy_url": "https://secure.compliance360.com/Common/ViewUploadedFile.aspx?PD=PbRt%2bA78MS6aX4gyyJkuJqrCy4gPVZqkKZNPXMk8dFAFqOsTmIMBEJLes1MexKXhvLlp5sXnWTzfTFt90%2bQpeDp3TTwx8ai0F8eKDVspyNqZX8WH%2flcglEIR6Jc6NJSqLTVx%2fjio4KLLhxW3JMcfFpQ9tOWZJyGNakZc2Qszx%2bEiKdxj6RA9Yllq1rESek5aOLX0qfe7l09zu9vfcIzMmfPzE8uIKSbiSb9rHG9W8qFW%2fMzyddz%2bst%2fV55CL5xmOZWFsOvZQ%2bgNJUEa84rCZdS20vXIfOO2DF5uYfoXNQvo%3d",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618"
+          ],
+          "related_codes": [
+            "59409",
+            "59612",
+            "59425",
+            "59426"
+          ],
+          "required_modifiers": [
+            "59",
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 42 days",
+            "five months after 59425/59426",
+            "same Tax ID and specialty"
+          ],
+          "utilization_limits": [
+            "42 days postpartum",
+            "5 months after 59425/59426"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Only delivering provider bills global code",
+            "Assistant surgeon once for multiples"
+          ],
+          "exemptions": [
+            "pregnancy confirmed during problem-oriented/preventive visit",
+            "intervening ectopic pregnancy or abortion"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Off-topic for this maternity/obstetric package policy; no transplant reimbursement rule is addressed.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "partial care",
+            "after delivery"
+          ],
+          "utilization_limits": [
+            "single gestation only",
+            "delivery admissions within 72 hours"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Global Maternity/Obstetric Package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "assistant surgeon for 59514/59620"
+          ],
+          "exemptions": [
+            "partial care billed separately"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "Off-topic; this policy addresses reimbursement for multiple-birth delivery services and does not address this DRG description.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "Global obstetric reimbursement is allowed once per pregnancy when one provider or group under the same TIN provides antepartum, delivery, and postpartum care. Cesarean delivery is included in the global package, and overlapping maternity claims may be denied or recouped.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59510"
+          ],
+          "related_codes": [
+            "59400",
+            "59430"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same pregnancy",
+            "same TIN",
+            "same claim sequence"
+          ],
+          "utilization_limits": [
+            "once per pregnancy"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider or provider group under same TIN"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PH_00017",
+        "payer_name": "Paramount Healthcare",
+        "policy_title": "RM-039 Maternity Care",
+        "tags": [],
+        "effective_date": "12/01/2024",
+        "evidence": "Paramount's maternity care reimbursement policy does not mention or govern this DRG. No DRG-specific prior authorization, bundling, or facility mapping rule is provided.",
+        "policy_url": "https://www.paramounthealthcare.com/-/media/ParamountHealth/Files/Providers/Reimbursement-Policies/RM039-Maternity-Care120124.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2/1/2026",
+        "evidence": "The policy is limited to obstetrical professional services and maternity care itemization; this DRG concept is not addressed.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: Auth status and facility mapping shifts must be validated before action",
+    "pattern_rank": 1,
+    "pattern_title": "Auth status and facility mapping shifts must be validated before action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Allogeneic Bone Marrow Transplant",
+      "Cesarean Section without Sterilization without CC/MCC",
+      "HIV with Extensive O.R. Procedures with MCC",
+      "Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NV', 'CA', 'OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped because they propose maternity/global OB billing edits rather than actions tied to validating authorization-status or facility-mapping shifts; item 2 also uses sources that explicitly disclaim the topic."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 3 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 58653,
+    "output": 45073,
+    "breakdown": {
+      "search_keywords": {
+        "input": 574,
+        "output": 1531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 514,
+        "output": 1202,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 45285,
+        "output": 34886,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 3014,
+        "output": 1266,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 1067,
+        "output": 643,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 962,
+        "output": 829,
+        "calls": 9
+      },
+      "elevance_summary": {
+        "input": 398,
+        "output": 170,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3360,
+        "output": 4077,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3479,
+        "output": 469,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:15:19.162043+00:00",
+    "end_time": "2026-08-24T11:17:43.971876+00:00",
+    "duration_ms": 144809,
+    "version": "2.0.0"
+  }
+}

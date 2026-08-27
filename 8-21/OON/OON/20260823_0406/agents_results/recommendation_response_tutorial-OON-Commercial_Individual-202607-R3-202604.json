@@ -1,0 +1,175 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 5,
+      "patterns_skipped": 3,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a TX Commercial Individual acute hospital HMO/POS inpatient policy workplan to verify prior-authorization-to-claim matching and denial enforcement, audit CUMG nurse and MD approval pathways, isolate provider concentration including MEDICAL CITY PLANO, review repeat same-diagnosis returns to the same facility, and redirect elective or avoidable IP Med/Surg admissions to lower-cost settings when appropriate.",
+        "evidence": [
+          "TX HMO acute hospital spend rose as claims increased and paid per admit fell.",
+          "TX POS acute hospital spend rose as claims increased and paid per admit fell.",
+          "Both source cards are tagged volume-led utilization.",
+          "Recommended next step is TX inpatient authorization and admission-management workplan.",
+          "Drill context shows IP Med/Surg at MEDICAL CITY PLANO."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX summary shows general facility unbundling only, without acute inpatient authorization detail.",
+          "Cigna summary lists No Auth in a general facility bundling policy, not DRG-specific inpatient rules.",
+          "United Health summary table provides no documented acute hospital policy scope."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a targeted claim-adjudication, contract-compliance, and utilization-management audit for Orange County Global Medical Center CA Commercial Individual HMO acute hospital admissions, and validate diagnosis-specific pricing and management for Otitis Media and Upper Respiratory Infection without MCC; if confirmed, pursue contract remediation and site-of-care action.",
+        "evidence": [
+          "Orange County Global Medical Center added $589K on 19 additional HMO acute claims.",
+          "Paid per claim increased about $31K at Orange County Global Medical Center.",
+          "Otitis Media and Upper Respiratory Infection without MCC added $26K at flat volume."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate claim-level payment integrity review for LAHEY HOSPITAL AND MEDICAL CENTER and EUCLID HOSPITAL IP Med/Surg outlier admissions with DRGs Liver Transplant without MCC, Intracranial Hemorrhage or Cerebral Infarction with MCC, and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC and diagnoses K7031, I6381, and A419 to validate contractual processing, authorization enforcement, DRG/MCC coding, and itemized billing.",
+        "evidence": [
+          "One liver transplant admission drove $486K.",
+          "A single stroke admission added $37K.",
+          "A single severe sepsis admission added $30K."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC directs resolved conditions be reported as history/status codes when relevant."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a case-level reimbursement and program-integrity audit of the CA IP Med/Surg outlier admissions tied to Orange County Global Medical Center, DRG Other Major Cardiovascular Procedures with MCC, and diagnoses I2109, J36, and J069, including re-adjudication against contractual terms, reimbursement methodology validation, DRG coding review, and itemized bill review.",
+        "evidence": [
+          "Orange County Global Medical Center cardiovascular admission drove $427K.",
+          "Two additional CA IP Med/Surg admissions added about $73K combined.",
+          "Diagnoses concentrated in I2109, J36, and J069.",
+          "Validation needed because increase is based on handful of low-volume admissions."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal summary notes same-day MPPR only and no I2109 relevance.",
+          "United Health summary addresses CMS-1500 same-day reductions, not DRG reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a pre-policy audit for ME Commercial Individual PPO IP Med/Surg non-acute claims: correct Not Mapped facility attribution, validate claims processing to contract, and review Physical Rehab prior-authorization, denial-enforcement, initial/concurrent review, referral, and alternate-discharge controls before changing utilization policy.",
+        "evidence": [
+          "ME PPO Not Mapped facility claims added $158K on 60 more claims.",
+          "ME PPO Physical Rehab added $134K on 48 more claims.",
+          "Pattern flagged validation_needed because facility attribution is unreliable.",
+          "Not Mapped source group includes unmapped_or_unknown_value flag."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "Not Mapped buckets are masking real provider and authorization signals",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 3,
+        "pattern": "ME, NH, and OH HMO acute spend is concentrated in a few very expensive admissions",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 7,
+        "pattern": "IU Health Ball Memorial Hospital is a concentrated IN cost driver",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Most directly matches the pattern: acute hospital spend increased because claim/admission volume rose while paid per admit fell, pointing to utilization management breakdowns and potentially avoidable inpatient variance rather than pricing.; IP MedSurg (DNE) Trend 7: Highly relevant because the recommended action is admission-management review, including preventable admits, level-of-care review, and redirecting avoidable cases to lower-cost settings; this aligns with elective/admission source-location analysis.; IP MedSurg (DNE) Trend 8: Relevant given the explicit recommendation to start an inpatient authorization workplan; auth-to-claim matching can determine whether authorization controls or denial enforcement failed as volume surged.; IP MedSurg (DNE) Trend 5: Important to test whether the higher claim volume reflects repeat admissions/readmissions among the same members, which would materially explain a utilization-led inpatient spike.; IP MedSurg (DNE) Trend 1: Relevant because the variance is concentrated in TX acute hospital across two products and may be driven by a subset of hospitals or admitting providers, making provider-level behavior a key parent investigation path."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated in a single provider, Orange County Global Medical Center, which is the dominant source of the spend increase and fits a provider-driver investigation.; IP MedSurg (DNE) Trend 6: The pattern is mixed volume and unit cost, with 19 additional acute claims and a recommended admission UM/level-of-care audit, aligning with utilization management KPI and PAV review.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended next step includes contract, payment accuracy, and outlier pricing review, which matches reimbursement method analysis.; IP MedSurg (DNE) Trend 9: Because the increase comes from a low-baseline, low-volume, concentrated provider run, validating claim processing or reprocessing behavior before broader action is highly relevant.; IP MedSurg (DNE) Trend 3: There is a secondary DRG-specific unit-cost spike in Otitis Media and Upper Respiratory Infection without MCC, indicating diagnosis-level concentration as a smaller layered driver."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Spend increase is concentrated in a few specific inpatient diagnoses/DRGs\u2014liver transplant, stroke with MCC, and severe sepsis with MCC\u2014rather than broad IP Med/Surg growth.; IP MedSurg (DNE) Trend 10: The recommended action is payment and reimbursement validation for catastrophic admits, including confirming reimbursement accuracy and any applicable outlier protections.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a very small provider set, notably Euclid Hospital and Lahey Hospital, so provider-specific billing or contract dynamics may be relevant.; IP MedSurg (DNE) Trend 9: Case-level claim validation is needed because a few extreme-cost admissions drove the change and part of the segment is unattributed, making claim processing or reprocessing accuracy important to confirm.; IP MedSurg (DNE) Trend 4: The variance is isolated to a narrow subset of inpatient Med/Surg services/DRGs, especially a transplant-sized admission, not a broad utilization shift across the category."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated in a small provider subset, with Orange County Global Medical Center alone driving about $427K of the roughly $500K total delta.; IP MedSurg (DNE) Trend 3: The variance is tied to a narrow diagnosis set (I2109, J36, J069), showing a diagnosis-specific pattern rather than broad inpatient deterioration.; IP MedSurg (DNE) Trend 4: The pattern is centered on a small set of IP Med/Surg services/cases, especially one high-cost cardiovascular DRG, so service-level isolation is directly relevant.; IP MedSurg (DNE) Trend 10: The recommended next step includes reviewing reimbursement exceptions and payment accuracy, which aligns most directly with reimbursement method review for outlier admissions.; IP MedSurg (DNE) Trend 9: Because the increase comes from a handful of very expensive claims with no baseline, claims processing or reprocessing against contractual standards should be validated case by case."
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is concentrated in specific non-acute facility/service buckets\u2014Physical Rehab and Not Mapped\u2014so service-level isolation is a direct fit for this pattern.; IP MedSurg (DNE) Trend 6: Both source cards are primarily driven by higher claim volume, making utilization management KPI review highly relevant for determining whether post-acute use is increasing beyond expected levels.; IP MedSurg (DNE) Trend 7: The pattern explicitly describes a site-of-care shift out of acute settings into rehab or other non-acute facilities, so reviewing admission/discharge source and location is central to confirming the migration.; IP MedSurg (DNE) Trend 8: The recommended next step calls for reviewing physical rehab referral and authorization patterns, which aligns directly with checking whether authorization controls are being enforced through auth-to-claim matching.; IP MedSurg (DNE) Trend 9: A large share of the increase is in Not Mapped facility claims, so before changing utilization policy, claims processing/classification should be validated; this is the closest parent rule for investigating unattributed or misprocessed claims."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T05:08:59.235353+00:00"
+  }
+}

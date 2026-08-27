@@ -1,0 +1,482 @@
+{
+  "success": true,
+  "result": {
+    "job_id": "c92454aa98d442ab87087030b3170196",
+    "conversation_id": null,
+    "agent": "recommendation_dtr",
+    "status": "partial_success",
+    "output": {
+      "metadata": {
+        "total_patterns": 8,
+        "recommendations_generated": 7,
+        "patterns_skipped": 1,
+        "approach": "llm_based_dtr_relevance",
+        "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Implement a ME Commercial Individual HMO acute hospital prior-authorization integrity and utilization audit for non-ER IP Med/Surg admissions, matching authorizations to paid claims, enforcing denied determinations, isolating repeat same-member admissions, and reviewing elective approval patterns at MaineHealth Maine Medical Center Portland.",
+          "evidence": [
+            "pa_required_code is Y for ME Commercial Individual HMO acute hospital admissions.",
+            "Admissions increased while paid per admit and allowed per admit declined.",
+            "er_admit_indicator is N in the drilled acute hospital inpatient context.",
+            "MaineHealth Maine Medical Center Portland appears in drill context.",
+            "Repeated delta concentration and auth dimension present flags were triggered."
+          ],
+          "peer_benchmarking": [
+            "United Health bundles ventilator/CPAP airway care and respiratory management; related procedures are not separately reimbursed."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 2,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Launch a joint reimbursement and UM review of prior-auth-required CT Commercial Individual PPO acute inpatient claims at YALE NEW HAVEN HOSPITAL, focused on Craniotomy and Endovascular Intracranial Procedures with MCC and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, to confirm contractual payment compliance, authorization enforcement, initial and concurrent review KPIs, and site-of-care opportunities.",
+          "evidence": [
+            "YALE NEW HAVEN HOSPITAL drove about $19.7M of the increase.",
+            "Admissions increased by 258 and paid per admit increased about $6.2K.",
+            "Craniotomy and Endovascular Intracranial Procedures with MCC added about $1.5M.",
+            "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC added about $0.3M.",
+            "All source cards show pa_required_code equals Y."
+          ],
+          "peer_benchmarking": [
+            "Elevance Health bundles facility chemotherapy and infusion administration with room and facility fees.",
+            "United Health applies 30-day same-facility readmission bundling; chemotherapy and immunotherapy are excluded."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 3,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Conduct a focused inpatient claims audit and reprocessing review for AUTH_CODE_DISTRIBUTION and Not Mapped Y-coded claims in CT, GA, ME, CA, CO, WI, and IN, prioritizing YALE NEW HAVEN HOSPITAL, WELLSTAR MCG HEALTH MEDICAL CENTER, and EMORY SAINT JOSEPH'S HOSPITAL to verify required prior authorization and apply contractual denial logic.",
+          "evidence": [
+            "CT AUTH_CODE_DISTRIBUTION affected about $11.5M at YALE NEW HAVEN HOSPITAL.",
+            "GA AUTH_CODE_DISTRIBUTION affected about $6.4M, led by WELLSTAR MCG HEALTH MEDICAL CENTER.",
+            "EMORY SAINT JOSEPH'S HOSPITAL was another major GA authorization driver.",
+            "Multi-state auth distribution issue touched about $3.3M across CA, CO, ME, WI.",
+            "Not Mapped facility buckets added about $2.7M across ME, CT, CA, IN."
+          ],
+          "peer_benchmarking": [
+            "Emblem Health summary table shows no documented policy scope or appeals process."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 4,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Conduct a provider-specific contract compliance and prior-authorization enforcement audit for WELLSTAR MCG HEALTH MEDICAL CENTER and EMORY SAINT JOSEPH'S HOSPITAL, prioritizing Craniotomy and Endovascular Intracranial Procedures with MCC for itemized bill review, contract remediation, and site-of-care review.",
+          "evidence": [
+            "GA HMO acute hospital spend increased about $14.9M.",
+            "WELLSTAR MCG HEALTH MEDICAL CENTER added about $7.7M.",
+            "EMORY SAINT JOSEPH'S HOSPITAL added about $5.4M.",
+            "Craniotomy and endovascular intracranial cases added about $1.6M.",
+            "Top provider source cards show pa_required_code = Y."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        },
+        {
+          "rank": 5,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Conduct a case-level audit of GA and UNATTRIBUTED PA-required catastrophic IP Med/Surg admissions at WELLSTAR MCG HEALTH MEDICAL CENTER and EMORY SAINT JOSEPH'S HOSPITAL for ECMO, prolonged ventilation, cardiac valve/cardiothoracic, and major cardiovascular DRGs to verify authorization enforcement, authorization-to-claim match, level of care, length of stay, and DRG coding, then escalate confirmed provider outliers for contract and site-of-care review.",
+          "evidence": [
+            "Rare catastrophic IP Med/Surg cases added about $9.8M.",
+            "ECMO and prolonged ventilation cases added about $4.9M across 4 admissions.",
+            "WELLSTAR MCG HEALTH MEDICAL CENTER aneurysm admissions added about $2.9M.",
+            "Additional GA cardiothoracic outliers appeared at EMORY SAINT JOSEPH'S HOSPITAL.",
+            "All highlighted admissions show PA-required code Y."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        },
+        {
+          "rank": 6,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Perform an auth-to-claim and reimbursement compliance audit for Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies at YALE NEW HAVEN HOSPITAL and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC inpatient admissions in WI and CA, then pursue site-of-care or contract remediation where acute inpatient payment is not contractually supported.",
+          "evidence": [
+            "YALE NEW HAVEN HOSPITAL CAR-T/immunotherapy admissions added about $2.6M on 4 admissions.",
+            "WI inpatient chemotherapy added about $1.6M with 52 more admissions.",
+            "CA acute hospital chemotherapy added about $0.3M on 2 admissions.",
+            "Paid per admit increased for WI and CA inpatient chemotherapy episodes."
+          ],
+          "peer_benchmarking": [
+            "EmblemHealth requires primary cancer diagnosis sequencing for chemotherapy/immunotherapy administration claims.",
+            "Elevance internal policies show no CAR T-specific inpatient DRG adjudication rules."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 8,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Conduct a targeted Commercial Individual IP Med/Surg post-acute policy audit across CA, TX, CT, CO, IN, VA, GA, and OH for Physical Rehab, SNF - FREE STANDING, LONG TERM CARE HOSPITAL, CHILDRENS, and CRITICAL ACCESS, including initial and concurrent review KPI checks, prior-auth-to-claim matching, alternate-discharge leakage review, and validation that HMO, EPO, PPO, and POS claims process per contract.",
+          "evidence": [
+            "These site-of-care settings added about $2.3M in total.",
+            "CA EPO Physical Rehab added about $0.5M on 10 admissions.",
+            "TX added about $0.3M in HMO Physical Rehab.",
+            "CA SNF, LTCH, and Children's settings added roughly $0.6M.",
+            "Source cards repeatedly flag auth_dimension_present and auth-to-claim validation."
+          ],
+          "peer_benchmarking": [
+            "Elevance external bundles integral inpatient/outpatient facility services and restricts separate billing with facility fees.",
+            "Elevance internal restricts separate billing for facility room, board, treatment, and recovery rooms."
+          ],
+          "citation": []
+        }
+      ],
+      "skipped_patterns": [
+        {
+          "rank": 7,
+          "pattern": "TX maternity acuity is rising in vaginal deliveries with complications",
+          "reason": "Could not fetch relevant rules"
+        }
+      ],
+      "processing_log": [
+        {
+          "rank": 1,
+          "status": "success",
+          "rules_used": 21,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 6: Most relevant because the pattern is explicitly volume-led: admissions rose by 676 and spend increased by about $26.0M while paid per admit fell, pointing first to utilization management and PAV-type drivers rather than unit price.; IP MedSurg (DNE) Trend 8: Highly relevant because this is a PA-required authorized inpatient pattern (auth = Y), and the pattern details specifically call for checking authorization workflow alignment and whether denials are being enforced through auth-to-claim matching.; IP MedSurg (DNE) Trend 5: Relevant because the recommended next step explicitly includes reviewing repeat admission patterns, which aligns with determining whether the same members are driving excess inpatient utilization through readmissions.; IP MedSurg (DNE) Trend 7: Relevant because the surge is in non-ER acute inpatient admissions (er_admit_indicator = N), so reviewing admission source/location and whether there was a shift toward more elective or scheduled admits is appropriate.; IP MedSurg (DNE) Trend 1: Relevant as a secondary path because the variance appears concentrated in acute hospital activity and the drill context points to a specific major hospital/provider, making provider-level behavior or referral pattern review important."
+        },
+        {
+          "rank": 2,
+          "status": "success",
+          "rules_used": 14,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is overwhelmingly concentrated at a single provider, YALE NEW HAVEN HOSPITAL, which drove about $19.7M of the $21.5M increase, making provider-specific behavior and contracting the clearest parent trend.; IP MedSurg (DNE) Trend 10: Average paid per admit increased materially overall and within key DRGs, and the recommended next step explicitly calls for review of reimbursement terms, pointing to reimbursement method/contract structure as a major driver.; IP MedSurg (DNE) Trend 3: The increase is not broad-based clinically; it is concentrated in specific inpatient DRGs, especially craniotomy/endovascular intracranial procedures and some chemotherapy admissions, supporting diagnosis-focused review.; IP MedSurg (DNE) Trend 6: Admissions rose significantly and the recommendation includes level-of-care and UM review, aligning with a utilization management KPI/PAV-style investigation into whether increased use was avoidable or differently managed.; IP MedSurg (DNE) Trend 4: The pattern highlights a narrow set of high-cost inpatient services/procedures, particularly complex neurosurgical cases and chemotherapy-related admissions, so service-driver review is also directly relevant."
+        },
+        {
+          "rank": 3,
+          "status": "success",
+          "rules_used": 9,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 8: Most direct match: the dominant signal is AUTH_CODE_DISTRIBUTION movement, and the source cards are explicitly framed as auth-to-claim validation that must be reconciled before action.; IP MedSurg (DNE) Trend 1: Variance is concentrated in a subset of inpatient providers, especially YALE NEW HAVEN HOSPITAL, WELLSTAR MCG HEALTH MEDICAL CENTER, and EMORY SAINT JOSEPH'S HOSPITAL.; IP MedSurg (DNE) Trend 10: Facility mapping and PA classification issues can distort reimbursement interpretation, so reimbursement-method conclusions should wait until Not Mapped facilities and auth coding are corrected.; IP MedSurg (DNE) Trend 9: The pattern reflects classification or processing shifts rather than a clean utilization change, making claims processing or reprocessing review relevant where spend may have been reassigned into incorrect buckets.; IP MedSurg (DNE) Trend 6: The narrative explicitly says not to change UM rules until coding is reconciled, indicating these auth shifts could falsely appear as utilization-management KPI movement."
+        },
+        {
+          "rank": 4,
+          "status": "success",
+          "rules_used": 15,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 1: Direct match to the pattern: most of the GA HMO acute hospital spend increase is concentrated in two providers, WELLSTAR MCG HEALTH MEDICAL CENTER and EMORY SAINT JOSEPH'S HOSPITAL, making provider-specific behavior and contract changes the primary parent trend to investigate.; IP MedSurg (DNE) Trend 10: Highly relevant because paid per admit increased materially, especially at WELLSTAR, indicating reimbursement method or contractual payment terms may be driving the unit-cost jump.; IP MedSurg (DNE) Trend 4: The pattern includes a meaningful concentration in a high-cost inpatient service/DRG, Craniotomy and Endovascular Intracranial Procedures with MCC, so service-level mix is an important parent driver.; IP MedSurg (DNE) Trend 8: Relevant because the dominant source cards are prior-auth required (pa_required_code = Y) and the business terms explicitly include auth-to-claim validation, so enforcement and matching of authorizations should be reviewed.; IP MedSurg (DNE) Trend 6: Admissions increased significantly at both hospitals, so utilization management KPI changes and potentially avoidable variance are relevant parent-level explanations alongside the provider and unit-cost effects."
+        },
+        {
+          "rank": 5,
+          "status": "success",
+          "rules_used": 13,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is tightly concentrated in a narrow set of catastrophic IP Med/Surg services/DRGs, especially ECMO, tracheostomy with prolonged ventilation, and major cardiothoracic/cardiovascular procedures.; IP MedSurg (DNE) Trend 2: The pattern is driven by very few admissions and is explicitly described as a case-level catastrophic outlier pattern, making concentration in a small subset of members highly relevant.; IP MedSurg (DNE) Trend 1: Spend is concentrated in a small number of providers, notably WELLSTAR MCG HEALTH MEDICAL CENTER and EMORY SAINT JOSEPH'S HOSPITAL, which supports provider-level investigation.; IP MedSurg (DNE) Trend 3: The increase is also isolated to specific severe diagnoses such as ascending aortic aneurysm/dissection, perforated ulcer, and advanced cardiac/renal conditions, supporting diagnosis-level review.; IP MedSurg (DNE) Trend 8: All highlighted cases are PA-required and the recommended next step includes case-level clinical validation, so confirming auth-to-claim alignment for these very high-cost admissions is a relevant secondary check."
+        },
+        {
+          "rank": 6,
+          "status": "success",
+          "rules_used": 17,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in a narrow set of oncology diagnoses, especially ENCOUNTER FOR ANTINEOPLASTIC CHEMO and ENC ANTINEOPLASTIC IMMUNOTHERAPY, making diagnosis-level isolation a primary parent rule.; IP MedSurg (DNE) Trend 4: The pattern is driven by highly specific inpatient oncology services/DRGs, notably CAR-T and inpatient chemotherapy admissions, rather than broad Med/Surg utilization, so service-driver review is highly relevant.; IP MedSurg (DNE) Trend 1: A large share of the increase is concentrated in specific providers, especially YALE NEW HAVEN HOSPITAL for CAR-T/immunotherapy and AURORA ST. LUKE'S MEDICAL CENTER for WI chemotherapy, indicating strong provider-level concentration.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially for these episodes, and the recommended next step explicitly calls for assessing reimbursement policy for CAR-T and inpatient chemotherapy, making reimbursement method review directly relevant.; IP MedSurg (DNE) Trend 8: Authorization is present on the contributing cards, including an operational card flagged with auth_dimension_present, and the pattern calls for inpatient appropriateness review, so auth-to-claim enforcement is an important supporting rule."
+        },
+        {
+          "rank": 7,
+          "status": "skipped",
+          "reason": "rules_fetch_failed"
+        },
+        {
+          "rank": 8,
+          "status": "success",
+          "rules_used": 13,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 7: The pattern is explicitly a discharge-destination and site-of-care shift into rehab, SNF, LTCH, children's, and critical access settings, so reviewing admission/discharge source and location is the strongest parent-rule fit.; IP MedSurg (DNE) Trend 4: Variance is concentrated in a subset of services/facility settings, especially Physical Rehab with added SNF, LTCH, Children's, and Critical Access pressure, making service-driver review highly relevant.; IP MedSurg (DNE) Trend 10: Unit-cost pressure is mixed but material, and the recommended next step includes contracted-rate review by setting, which aligns directly to reimbursement method research.; IP MedSurg (DNE) Trend 8: Authorization is repeatedly present in the source cards and auth-to-claim validation is called out in business terms, so enforcement or leakage between authorization and paid claims is relevant to test.; IP MedSurg (DNE) Trend 6: Admissions are up across multiple post-acute settings, and the recommended actions include admission criteria, discharge planning, and steerage, all of which map to utilization management KPI and PAV review."
+        }
+      ]
+    },
+    "recommended_action": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a ME Commercial Individual HMO acute hospital prior-authorization integrity and utilization audit for non-ER IP Med/Surg admissions, matching authorizations to paid claims, enforcing denied determinations, isolating repeat same-member admissions, and reviewing elective approval patterns at MaineHealth Maine Medical Center Portland.",
+        "evidence": [
+          "pa_required_code is Y for ME Commercial Individual HMO acute hospital admissions.",
+          "Admissions increased while paid per admit and allowed per admit declined.",
+          "er_admit_indicator is N in the drilled acute hospital inpatient context.",
+          "MaineHealth Maine Medical Center Portland appears in drill context.",
+          "Repeated delta concentration and auth dimension present flags were triggered."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles ventilator/CPAP airway care and respiratory management; related procedures are not separately reimbursed."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a joint reimbursement and UM review of prior-auth-required CT Commercial Individual PPO acute inpatient claims at YALE NEW HAVEN HOSPITAL, focused on Craniotomy and Endovascular Intracranial Procedures with MCC and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, to confirm contractual payment compliance, authorization enforcement, initial and concurrent review KPIs, and site-of-care opportunities.",
+        "evidence": [
+          "YALE NEW HAVEN HOSPITAL drove about $19.7M of the increase.",
+          "Admissions increased by 258 and paid per admit increased about $6.2K.",
+          "Craniotomy and Endovascular Intracranial Procedures with MCC added about $1.5M.",
+          "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC added about $0.3M.",
+          "All source cards show pa_required_code equals Y."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health bundles facility chemotherapy and infusion administration with room and facility fees.",
+          "United Health applies 30-day same-facility readmission bundling; chemotherapy and immunotherapy are excluded."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a focused inpatient claims audit and reprocessing review for AUTH_CODE_DISTRIBUTION and Not Mapped Y-coded claims in CT, GA, ME, CA, CO, WI, and IN, prioritizing YALE NEW HAVEN HOSPITAL, WELLSTAR MCG HEALTH MEDICAL CENTER, and EMORY SAINT JOSEPH'S HOSPITAL to verify required prior authorization and apply contractual denial logic.",
+        "evidence": [
+          "CT AUTH_CODE_DISTRIBUTION affected about $11.5M at YALE NEW HAVEN HOSPITAL.",
+          "GA AUTH_CODE_DISTRIBUTION affected about $6.4M, led by WELLSTAR MCG HEALTH MEDICAL CENTER.",
+          "EMORY SAINT JOSEPH'S HOSPITAL was another major GA authorization driver.",
+          "Multi-state auth distribution issue touched about $3.3M across CA, CO, ME, WI.",
+          "Not Mapped facility buckets added about $2.7M across ME, CT, CA, IN."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health summary table shows no documented policy scope or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a provider-specific contract compliance and prior-authorization enforcement audit for WELLSTAR MCG HEALTH MEDICAL CENTER and EMORY SAINT JOSEPH'S HOSPITAL, prioritizing Craniotomy and Endovascular Intracranial Procedures with MCC for itemized bill review, contract remediation, and site-of-care review.",
+        "evidence": [
+          "GA HMO acute hospital spend increased about $14.9M.",
+          "WELLSTAR MCG HEALTH MEDICAL CENTER added about $7.7M.",
+          "EMORY SAINT JOSEPH'S HOSPITAL added about $5.4M.",
+          "Craniotomy and endovascular intracranial cases added about $1.6M.",
+          "Top provider source cards show pa_required_code = Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a case-level audit of GA and UNATTRIBUTED PA-required catastrophic IP Med/Surg admissions at WELLSTAR MCG HEALTH MEDICAL CENTER and EMORY SAINT JOSEPH'S HOSPITAL for ECMO, prolonged ventilation, cardiac valve/cardiothoracic, and major cardiovascular DRGs to verify authorization enforcement, authorization-to-claim match, level of care, length of stay, and DRG coding, then escalate confirmed provider outliers for contract and site-of-care review.",
+        "evidence": [
+          "Rare catastrophic IP Med/Surg cases added about $9.8M.",
+          "ECMO and prolonged ventilation cases added about $4.9M across 4 admissions.",
+          "WELLSTAR MCG HEALTH MEDICAL CENTER aneurysm admissions added about $2.9M.",
+          "Additional GA cardiothoracic outliers appeared at EMORY SAINT JOSEPH'S HOSPITAL.",
+          "All highlighted admissions show PA-required code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform an auth-to-claim and reimbursement compliance audit for Chimeric Antigen Receptor (CAR) T-cell and Other Immunotherapies at YALE NEW HAVEN HOSPITAL and Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC inpatient admissions in WI and CA, then pursue site-of-care or contract remediation where acute inpatient payment is not contractually supported.",
+        "evidence": [
+          "YALE NEW HAVEN HOSPITAL CAR-T/immunotherapy admissions added about $2.6M on 4 admissions.",
+          "WI inpatient chemotherapy added about $1.6M with 52 more admissions.",
+          "CA acute hospital chemotherapy added about $0.3M on 2 admissions.",
+          "Paid per admit increased for WI and CA inpatient chemotherapy episodes."
+        ],
+        "peer_benchmarking": [
+          "EmblemHealth requires primary cancer diagnosis sequencing for chemotherapy/immunotherapy administration claims.",
+          "Elevance internal policies show no CAR T-specific inpatient DRG adjudication rules."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted Commercial Individual IP Med/Surg post-acute policy audit across CA, TX, CT, CO, IN, VA, GA, and OH for Physical Rehab, SNF - FREE STANDING, LONG TERM CARE HOSPITAL, CHILDRENS, and CRITICAL ACCESS, including initial and concurrent review KPI checks, prior-auth-to-claim matching, alternate-discharge leakage review, and validation that HMO, EPO, PPO, and POS claims process per contract.",
+        "evidence": [
+          "These site-of-care settings added about $2.3M in total.",
+          "CA EPO Physical Rehab added about $0.5M on 10 admissions.",
+          "TX added about $0.3M in HMO Physical Rehab.",
+          "CA SNF, LTCH, and Children's settings added roughly $0.6M.",
+          "Source cards repeatedly flag auth_dimension_present and auth-to-claim validation."
+        ],
+        "peer_benchmarking": [
+          "Elevance external bundles integral inpatient/outpatient facility services and restricts separate billing with facility fees.",
+          "Elevance internal restricts separate billing for facility room, board, treatment, and recovery rooms."
+        ],
+        "citation": []
+      }
+    ],
+    "visual_component": {},
+    "explanation": {
+      "summary": "Generated 7 recommendations from 8 patterns",
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "validation": {
+      "is_valid": true,
+      "checks": [
+        {
+          "check": "patterns_processed",
+          "passed": true,
+          "message": "Processed 8 patterns"
+        },
+        {
+          "check": "dtr_rules_loaded",
+          "passed": true,
+          "message": "DTR rules loaded from /app/configs/decision_tree_rules.yaml"
+        },
+        {
+          "check": "recommendations_generated",
+          "passed": true,
+          "message": "Generated 7 recommendations"
+        },
+        {
+          "check": "token_tracking",
+          "passed": true,
+          "message": "Tracked 319233 input + 75270 output tokens"
+        }
+      ],
+      "warnings": [
+        "1 pattern(s) skipped (not relevant to DTR rules). See skipped_patterns in output for details."
+      ],
+      "errors": []
+    },
+    "tokens": {
+      "input": 319233,
+      "output": 75270,
+      "breakdown": {
+        "per_pattern": {
+          "pattern_1": {
+            "relevance": {
+              "input": 13877,
+              "output": 6309
+            },
+            "recommendation": {
+              "input": 5223,
+              "output": 4011
+            }
+          },
+          "pattern_2": {
+            "relevance": {
+              "input": 22997,
+              "output": 6593
+            },
+            "recommendation": {
+              "input": 9246,
+              "output": 5368
+            }
+          },
+          "pattern_3": {
+            "relevance": {
+              "input": 37307,
+              "output": 6416
+            },
+            "recommendation": {
+              "input": 16264,
+              "output": 5125
+            }
+          },
+          "pattern_4": {
+            "relevance": {
+              "input": 24727,
+              "output": 4428
+            },
+            "recommendation": {
+              "input": 10149,
+              "output": 2989
+            }
+          },
+          "pattern_5": {
+            "relevance": {
+              "input": 30272,
+              "output": 7218
+            },
+            "recommendation": {
+              "input": 12899,
+              "output": 5136
+            }
+          },
+          "pattern_6": {
+            "relevance": {
+              "input": 25687,
+              "output": 4253
+            },
+            "recommendation": {
+              "input": 10852,
+              "output": 2760
+            }
+          },
+          "pattern_7": {
+            "relevance": {
+              "input": 28777,
+              "output": 3617
+            },
+            "recommendation": {
+              "input": 0,
+              "output": 0
+            }
+          },
+          "pattern_8": {
+            "relevance": {
+              "input": 48759,
+              "output": 6498
+            },
+            "recommendation": {
+              "input": 22197,
+              "output": 4549
+            }
+          }
+        },
+        "aggregated": {
+          "relevance_checks": {
+            "input": 232403,
+            "output": 45332,
+            "calls": 8
+          },
+          "recommendations": {
+            "input": 86830,
+            "output": 29938,
+            "calls": 7
+          }
+        }
+      }
+    },
+    "execution": {
+      "start_time": "2026-08-22T12:13:17.921748+00:00",
+      "end_time": "2026-08-22T12:16:36.596560+00:00",
+      "duration_ms": 198674,
+      "version": "1.0.0"
+    }
+  },
+  "execution_time": 198.67983293533325,
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T12:16:36.597658+00:00"
+  }
+}

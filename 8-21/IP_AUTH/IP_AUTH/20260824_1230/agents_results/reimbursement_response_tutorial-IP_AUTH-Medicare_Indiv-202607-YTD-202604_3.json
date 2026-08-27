@@ -1,0 +1,212 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX DSNP acute hospital growth is a broad utilization surge",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "reimbursement_conditions",
+          "label": "Reimbursement Conditions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "Denies",
+          "reimbursement_conditions": "Reimburses observation only if medically necessary, properly ordered, supervised, and meeting qualifying encounter criteria."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00097",
+        "payer_name": "Humana",
+        "policy_title": "Observation Services",
+        "tags": [],
+        "effective_date": "03/2019",
+        "evidence": "Observation services are reimbursable only when medically necessary, ordered by a qualified healthcare professional, and provided while the patient is under physician or qualified nonphysician practitioner care. At least one qualifying encounter condition must be present. If none apply, the facility observation charge is not reimbursed. Billable observation time is typically limited to 48 hours, and several intervals are excluded from the count. Documentation is required to support billing.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092982a0acfa",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "typically do not exceed 48 hours",
+            "standard recovery period 4 to 6 hours excluded"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "Commercial",
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Humana Medicaid plans follow state Medicaid guidelines when state rules are more restrictive"
+          ],
+          "provider_role_restrictions": [
+            "qualified healthcare professional required",
+            "physician or qualified nonphysician practitioner must oversee care"
+          ],
+          "exemptions": [
+            "Humana Medicaid plans when not permissible by state Medicaid guidelines"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: TX DSNP acute hospital growth is a broad utilization surge",
+    "pattern_rank": 3,
+    "pattern_title": "TX DSNP acute hospital growth is a broad utilization surge",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for scope drift because it addresses general observation-services policy rather than the pattern\u2019s cesarean or acute inpatient hospital utilization focus."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/2 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_INTERNAL_00004:Genetic Tests Once per Lifetime]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 12945,
+    "output": 7891,
+    "breakdown": {
+      "triage_policies": {
+        "input": 369,
+        "output": 556,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 7304,
+        "output": 4203,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 842,
+        "output": 312,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 875,
+        "output": 596,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 299,
+        "output": 255,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1651,
+        "output": 1573,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1605,
+        "output": 396,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T14:41:15.439768+00:00",
+    "end_time": "2026-08-24T14:42:12.190629+00:00",
+    "duration_ms": 56750,
+    "version": "2.0.0"
+  }
+}

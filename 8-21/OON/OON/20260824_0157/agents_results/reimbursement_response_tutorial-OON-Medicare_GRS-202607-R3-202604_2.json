@@ -1,0 +1,257 @@
+{
+  "job_id": "tutorial-OON-Medicare_GRS-202607-R3-202604_2_job",
+  "conversation_id": "tutorial-OON-Medicare_GRS-202607-R3-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "GA not-mapped inpatient claims are masking a major cost driver",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_relevance": "Off-topic: reimburses global obstetrical codes once per 279-day pregnancy period."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Professional Anesthesia Services",
+        "tags": [],
+        "effective_date": "11/14/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00020",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Emergency Department Leveling of Evaluation and Management Services",
+        "tags": [],
+        "effective_date": "01/16/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Emergency%20Department%20Leveling%20of%20Evaluation%20and%20Management%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00126",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "10/23/2025",
+        "evidence": "Off-topic for the requested DRG-style inpatient pattern. This policy governs maternity/global obstetrical reimbursement rather than DRG mapping.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Maternity%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "once per pregnancy period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Maternity services"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "single provider or same TIN"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: GA not-mapped inpatient claims are masking a major cost driver",
+    "pattern_rank": 2,
+    "pattern_title": "GA not-mapped inpatient claims are masking a major cost driver",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "4/7 policies quarantined (57%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "4 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_EXTERNAL_27755520003:Professional Anesthesia Services, RP_GBD_ELV_INTERNAL_00048:Emergency Services Non-Participating Providers and Facilities, RP_GBD_ELV_INTERNAL_00114:Prosthetic and Orthotic Devices, RP_GBD_HUM_00133:Common CPT and HCPCS Modifiers]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 48210,
+    "output": 13077,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 377,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 473,
+        "output": 925,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 42236,
+        "output": 8371,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2046,
+        "output": 1306,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 840,
+        "output": 388,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 220,
+        "output": 157,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 382,
+        "output": 293,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1493,
+        "output": 1260,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T02:27:37.602162+00:00",
+    "end_time": "2026-08-24T02:28:34.868613+00:00",
+    "duration_ms": 57266,
+    "version": "2.0.0"
+  }
+}

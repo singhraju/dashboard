@@ -1,0 +1,223 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-YTD-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_Indiv-202607-YTD-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Smaller segments show emerging acute and critical access pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "coverage_rule",
+          "label": "Coverage Rule",
+          "type": "badge"
+        },
+        {
+          "id": "dx_exclusion",
+          "label": "Dx Exclusion",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "coverage_rule": "Denies",
+          "dx_exclusion": "Exclude general exam diagnoses without abnormal findings; comply with applicable contractor LCD requirements."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00025",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "This Medicare Advantage laboratory policy denies the listed urine culture bacterial identification and susceptibility CPTs when the claim's primary diagnosis is a general encounter without abnormal findings or similar examination.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+        "edit_rule_facts": {
+          "target_codes": [
+            "87076",
+            "87077",
+            "87140",
+            "87147",
+            "87181",
+            "87186",
+            "87149"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "primary diagnosis on claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "CGS Administrators, LLC L39038",
+            "Noridian Healthcare Solutions, LLC L39003",
+            "Noridian Healthcare Solutions, LLC L39001",
+            "Palmetto GBA L38988",
+            "Wisconsin Physicians Service Insurance Corporation L39044"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Smaller segments show emerging acute and critical access pressure",
+    "pattern_rank": 8,
+    "pattern_title": "Smaller segments show emerging acute and critical access pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Kidney and Urinary Tract Infections with MCC",
+      "Kidney and Urinary Tract Infections without MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'KY', 'TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for clear scope drift because it addresses Medicare Advantage urine-culture lab testing rather than the pattern\u2019s hospital-focused scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 13093,
+    "output": 9638,
+    "breakdown": {
+      "search_keywords": {
+        "input": 541,
+        "output": 378,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 328,
+        "output": 177,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 7109,
+        "output": 6324,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 481,
+        "output": 102,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 728,
+        "output": 412,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 294,
+        "output": 199,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1886,
+        "output": 1444,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1726,
+        "output": 602,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T15:56:14.662147+00:00",
+    "end_time": "2026-08-23T15:57:29.019092+00:00",
+    "duration_ms": 74356,
+    "version": "2.0.0"
+  }
+}

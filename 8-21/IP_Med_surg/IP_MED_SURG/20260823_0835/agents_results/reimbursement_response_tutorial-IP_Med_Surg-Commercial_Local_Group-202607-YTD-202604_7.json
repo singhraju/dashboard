@@ -1,0 +1,456 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_7_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA acute hospital utilization is up, with smaller children\u2019s pockets and one unit-cost hotspot",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "care_setting",
+          "label": "Care Setting",
+          "type": "badge"
+        },
+        {
+          "id": "auth_documentation",
+          "label": "Auth & Documentation",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "auth_documentation": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Any Setting",
+          "auth_documentation": "Claims may undergo clinical review with record requests; inpatient claims need diagnosis POA indicators."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Inpatient Only",
+          "auth_documentation": "No prior authorization; require POA indicators and supporting admission documentation; additional PPC records possible."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "auth_documentation": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "05/21/2007",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00063",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "01/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-19004-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_00066",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "04/01/2026",
+        "evidence": "The health plan treats this never-event diagnosis as nonreimbursable when it reflects a wrong-body-part invasive procedure; related services are denied.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "related services",
+            "same procedure episode"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "professional",
+            "facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "Off-topic: this maternity services policy does not address the requested DRG utilization pattern, so no adjudication rule applies.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00185",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions C-23002",
+        "tags": [],
+        "effective_date": "09/01/2023",
+        "evidence": "General commercial policy does not reimburse provider preventable conditions. For inpatient DRG-based claims, HAC-related charges and days are removed from the DRG calculation when POA indicates the condition was not present on admission. Never events tied to wrong patient, wrong body part, wrong surgery, or retained foreign object are denied.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [
+            "PA",
+            "PB",
+            "PC"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA indicator present on claim",
+            "DRG reimbursement calculation"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition existed prior to treatment by that facility",
+            "secondary facility treated the HAC caused by another facility",
+            "provider, state, or federal contracts and/or mandates indicate otherwise"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": "Elevance has dedicated reimbursement policies for Maternity Services, including a current policy effective 01/01/2026 and a prior version, which directly applies to cesarean delivery claims. Elevance also maintains Provider Preventable Conditions policies that can affect inpatient maternity reimbursement when preventable conditions are present.",
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Apply the Y65.53, Y65.52, and Y65.51 DRG edit only to related services in the same procedure episode on the same inpatient claim, with the POA indicator present on claim; exclude cases where the condition existed prior to treatment by that facility, where a secondary facility treated the HAC caused by another facility, or where provider, state, or federal contracts and/or mandates indicate otherwise. Apply to CA. Exempt: condition existed prior to treatment by that facility, secondary facility treated the HAC caused by another facility, provider, state, or federal contracts and/or mandates indicate otherwise. Peer: Elevance Health (external) and Elevance Health (internal) both anchor these controls at the DRG level, supporting a single inpatient DRG edit for cesarean admissions..\n\nIA \u2014 For CA cesarean delivery inpatient DRG claims, require Y65.53, Y65.52, or Y65.51 to be reported on the same inpatient claim with modifier PA, PB, or PC and a POA indicator present on claim before it is used in the DRG reimbursement calculation. (CA) Elevance Health (external) and Elevance Health (internal) both place this Provider Preventable Conditions logic in DRG scope, so the cesarean control should run on the inpatient DRG claim..",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.53\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.52\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.51\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"PA\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"PB\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"PC\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"same inpatient claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"POA indicator present on claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"DRG reimbursement calculation\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"DRG\" [program_scope]",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions: \"Y65.53\" [target_codes]",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions: \"Y65.52\" [target_codes]",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions: \"Y65.51\" [target_codes]",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions: \"related services\" [pairing_conditions]",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions: \"same procedure episode\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"condition existed prior to treatment by that facility\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"secondary facility treated the HAC caused by another facility\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"provider, state, or federal contracts and/or mandates indicate otherwise\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Elevance Health (external) and Elevance Health (internal) both place this Provider Preventable Conditions logic in DRG scope, so the cesarean control should run on the inpatient DRG claim.",
+        "Elevance Health (external) and Elevance Health (internal) both anchor these controls at the DRG level, supporting a single inpatient DRG edit for cesarean admissions."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "Elevance Health (external) \u00b7 Provider Preventable Conditions \u2014 https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: CA acute hospital utilization is up, with smaller children\u2019s pockets and one unit-cost hotspot",
+    "pattern_rank": 7,
+    "pattern_title": "CA acute hospital utilization is up, with smaller children\u2019s pockets and one unit-cost hotspot",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other Digestive System Diagnoses with MCC",
+      "Other Heart Assist System Implant",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures",
+      "Pulmonary Embolism with MCC or Acute Cor Pulmonale"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 49029,
+    "output": 24733,
+    "breakdown": {
+      "search_keywords": {
+        "input": 562,
+        "output": 1240,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 487,
+        "output": 884,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 39238,
+        "output": 14178,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 1479,
+        "output": 560,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 990,
+        "output": 1753,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 450,
+        "output": 488,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 456,
+        "output": 440,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2459,
+        "output": 4740,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2908,
+        "output": 450,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T10:21:03.599325+00:00",
+    "end_time": "2026-08-23T10:22:50.928751+00:00",
+    "duration_ms": 107329,
+    "version": "2.0.0"
+  }
+}

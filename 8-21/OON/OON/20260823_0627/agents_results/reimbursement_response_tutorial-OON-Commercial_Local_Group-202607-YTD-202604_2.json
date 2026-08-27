@@ -1,0 +1,187 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604_2_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA rare high-cost inpatient Med/Surg cases are driving a focused outlier pattern",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_MOH_00190",
+        "payer_name": "Molina",
+        "policy_title": "Diagnosis Code Coding",
+        "tags": [],
+        "effective_date": "11/01/2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/DiagnosisCodeCodingPolicy12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00199",
+        "payer_name": "Molina",
+        "policy_title": "ICD-10 First Listed Diagnosis Coding Policy",
+        "tags": [],
+        "effective_date": "11/20/2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/ICD-10FirstListedDiagnosisCodingPolicy12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CA rare high-cost inpatient Med/Surg cases are driving a focused outlier pattern",
+    "pattern_rank": 2,
+    "pattern_title": "CA rare high-cost inpatient Med/Surg cases are driving a focused outlier pattern",
+    "cpt_codes_requested": [
+      "C7951"
+    ],
+    "drg_codes_requested": [
+      "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC",
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/2 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 9013,
+    "output": 8043,
+    "breakdown": {
+      "search_keywords": {
+        "input": 573,
+        "output": 452,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 2614,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 495,
+        "output": 934,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 6324,
+        "output": 3833,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1183,
+        "output": 210,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T07:28:27.510935+00:00",
+    "end_time": "2026-08-23T07:28:53.659006+00:00",
+    "duration_ms": 26148,
+    "version": "2.0.0"
+  }
+}

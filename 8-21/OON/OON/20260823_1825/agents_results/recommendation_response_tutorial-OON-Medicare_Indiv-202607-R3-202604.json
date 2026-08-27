@@ -1,0 +1,213 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a contract-standard claims reprocessing review for Not Mapped IN DSNP HMO claims linked to R69 and Temporary National Codes (Non-Medicare) in OP HH/DME, verifying contractual processing and reimbursement-method application, then extend the same review to TX, CA, and CO DSNP HMO and TX SNP Crossover claims, with provider-focused follow-up for BEN TAUB HOSPITAL IP Med/Surg claims.",
+        "evidence": [
+          "IN DSNP HMO Not Mapped increased by $50.5M across 94,559 claims.",
+          "Temporary National Codes (Non-Medicare) and diagnosis R69 appear in OP HH/DME context.",
+          "TX DSNP HMO Not Mapped includes BEN TAUB HOSPITAL IP Med/Surg claims.",
+          "TX SNP Crossover Not Mapped added $675K across 5,458 claims.",
+          "All contributing groups were flagged unmapped_or_unknown_value and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit contractual claims processing, attribution, diagnosis, and procedure mapping for UNATTRIBUTED OP HH/DME and OP Mgmt Oth Misc claims with R69, Temporary National Codes (Non-Medicare), National T Codes, and Not Mapped records; after cleanup, run the internal coverage and benefit-limit review only on validated services.",
+        "evidence": [
+          "Estimated delta +$42.4M in unattributed outpatient spend.",
+          "UNATTRIBUTED OP HH/DME tied to R69 and Temporary National Codes.",
+          "OP Mgmt Oth Misc concentrated in Temporary National Codes and National T Codes.",
+          "All source cards flagged unmapped_or_unknown_value and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [
+          "No payer in the reimbursement summary directly mentions this temporary-code or not-mapped outpatient pattern."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review Humana Indiana DSNP HMO HOME HEALTH - FREESTANDING management design and authorization-denial enforcement, and initiate SNF/NF provider behavior and contractual-change reviews for PROVENA SACRED HEART HOME and THE RENAISSANCE AT KESSLER PARK.",
+        "evidence": [
+          "Indiana DSNP HMO home health is the primary post-acute spend driver.",
+          "Claims increased and paid per admit increased for IN HOME HEALTH - FREESTANDING.",
+          "SNF outliers concentrate at PROVENA SACRED HEART HOME and THE RENAISSANCE AT KESSLER PARK.",
+          "Recommended next step starts with Indiana DSNP post-acute authorization pathway review."
+        ],
+        "peer_benchmarking": [
+          "Humana payer summary shows no documented site-of-service, bundling, or appeals policy for this pattern."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit TX DSNP HMO acute hospital contract compliance and claims processing at BEN TAUB HOSPITAL, and complete itemized bill review for IP Med/Surg DRGs Disorders of the Biliary Tract with MCC, Major Esophageal Disorders with MCC, Gastrointestinal Obstruction with MCC, and Other O.R. Procedures for Multiple Significant Trauma with MCC to identify reimbursement remediation opportunities.",
+        "evidence": [
+          "TX DSNP acute hospital paid per admit rose about $3,827.",
+          "Claim count fell by 208 while acute hospital spend increased.",
+          "BEN TAUB HOSPITAL recurs across high-cost biliary, esophageal, and GI obstruction admissions.",
+          "Several supporting admissions paid roughly $173K to $222K per admit."
+        ],
+        "peer_benchmarking": [
+          "United Health documents ICD-10-CM principal diagnosis sequencing requirements but no DRG reimbursement rule."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused Ohio DSNP HMO acute hospital payment and authorization compliance review for MIAMI VALLEY HOSPITAL and MERCY HEALTH- SAINT VINCENT MEDICAL CENTER, limited to IP Med/Surg admissions involving Gastrointestinal Obstruction with MCC, Infectious and Parasitic Diseases with O.R. Procedures with MCC, and Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours, and remediate any contract or adjudication variance before broader network action.",
+        "evidence": [
+          "MIAMI VALLEY HOSPITAL increased by +$827K across 507 claims.",
+          "MERCY HEALTH- SAINT VINCENT MEDICAL CENTER added +$370K across 61 claims.",
+          "Paid per admit rose at both providers.",
+          "Supporting OH and UNATTRIBUTED IP Med/Surg outliers added +$296K."
+        ],
+        "peer_benchmarking": [
+          "Humana documented only urine culture lab denials; DRG pattern unaddressed.",
+          "United Health shows no documented policy addressing this acute hospital pattern."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a case-level itemized bill, DRG coding, and contract adjudication review for EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL and the IP Med/Surg trauma admissions tied to Other O.R. Procedures for Multiple Significant Trauma with MCC, S52551B, and S82251C; verify interim claims are zeroed out, the final bill is adjudicated per contract, and any outlier reimbursement terms or concessions are escalated for targeted provider remediation.",
+        "evidence": [
+          "EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL is a listed key driver.",
+          "Other O.R. Procedures for Multiple Significant Trauma with MCC is a key driver.",
+          "Rare diagnoses S52551B and S82251C are listed key drivers.",
+          "Validation needed because one- to three-claim admissions drove the increase.",
+          "Recommended next step includes payment review and reimbursement validation."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health bundles unplanned related DRG inpatient readmissions within 30 days to the original admission."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Run focused claims processing, final adjudication, reimbursement methodology, and itemized bill audits for the CO Medicare HMO acute admissions tied to UCHEALTH YAMPA VALLEY MEDICAL CENTER and diagnosis S2242XA, the IN Other O.R. Procedures for Multiple Significant Trauma with MCC case, and the CA Major Esophageal Disorders with MCC cases.",
+        "evidence": [
+          "Validation is needed because few admissions drive most of the increase.",
+          "IN added one trauma admission in Medicare HMO acute hospital.",
+          "CA added two major esophageal disorder admissions.",
+          "CO increase centers on UCHEALTH YAMPA VALLEY MEDICAL CENTER, diagnosis S2242XA.",
+          "Paid per admit increased in the combined pattern."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health bundles unplanned 30-day related readmissions into the original admission; planned returns receive one DRG."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 7,
+        "pattern": "Outpatient oncology and chemotherapy claims show a small but distinct mapping issue",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP HH DME (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 9: Most directly matches the gating issue: high-dollar claims are concentrated in a Not Mapped facility bucket with blank/unmapped fields, so claims processing, reprocessing, and adjudication classification should be validated before downstream action.; OP HH DME (DNE) Trend 4: The largest driver is in an OP HH/DME context with Not Mapped facility and DRG values plus Temporary National Codes, making service-level coding and mapping review highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased and the pattern explicitly says reimbursement effects are blended into the unmapped bucket, so reimbursement method is a key parent rule once mapping is corrected.; IP MedSurg (DNE) Trend 1: A meaningful portion of the TX variance is concentrated at a specific provider, so provider-level concentration is a relevant secondary rule after the mapping issue is resolved.; OP HH DME (DNE) Trend 8: For the dominant OP component, missing facility attribution can distort site-of-care payment logic and contract application, making reimbursement-method review relevant after remapping."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "OP HH DME (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP HH DME (DNE) Trend 4: The largest outpatient delta is in OP HH/DME and is concentrated in a narrow procedure/service bucket: Temporary National Codes (Non-Medicare) with Not Mapped values, so service-driver review is the strongest direct parent rule.; OP Oth (DNE) Trend 4: OP Mgmt Oth Misc aligns best to OP Oth, and its increase is split across Temporary National Codes and National T Codes, making service/procedure concentration the key parent rule.; OP HH DME (DNE) Trend 3: The HH/DME spend spike is repeatedly tied to diagnosis R69, an unspecified diagnosis code, so diagnosis-driver review is highly relevant to confirm miscoding or mapping drift versus real clinical change.; OP Oth (DNE) Trend 3: The OP miscellaneous pattern is also concentrated in R69 across multiple temporary-code groupings, supporting diagnosis isolation as a core validation step.; IP MedSurg (DNE) Trend 9: Although cross-category, this is the closest parent rule to the pattern's likely claims feed or reprocessing issue: zero baseline, unattributed claims, and not-mapped temporary codes suggest claim-status or processing drift rather than true utilization."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 28,
+        "categories": [
+          "IP NF (DNE)",
+          "OP HH DME (DNE)"
+        ],
+        "relevance_reason": "OP HH DME (DNE) Trend 6: The pattern is explicitly a post-acute site-of-care shift, and the recommended action centers on discharge steering and placement pathways into home health and other post-acute settings.; OP HH DME (DNE) Trend 8: Unit cost is rising along with volume, and the next step calls for provider rate review and contracted rate accuracy, which aligns to reimbursement method review.; OP HH DME (DNE) Trend 4: The variance is isolated to a narrow subset of post-acute services, led overwhelmingly by Indiana freestanding home health rather than a broad acute or enterprise-wide trend.; OP HH DME (DNE) Trend 7: The pattern specifically recommends reviewing DSNP post-acute authorization pathways in Indiana, making auth-to-claim enforcement a relevant parent rule.; IP NF (DNE) Trend 1: The smaller SNF/NF component is concentrated in specific providers such as PROVENA SACRED HEART HOME and THE RENAISSANCE AT KESSLER PARK, supporting a provider-driver investigation."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Primary pattern is reimbursement/unit-cost led: total paid increased despite lower claim volume, paid per admit rose materially, and the recommended action is to audit TX acute hospital reimbursement and contract terms.; IP MedSurg (DNE) Trend 3: Variance is concentrated in a small set of diagnoses/DRGs, especially biliary, esophageal, gastrointestinal obstruction, and trauma cases, indicating strong diagnosis-level concentration rather than a broad inpatient trend.; IP MedSurg (DNE) Trend 1: The pressure appears concentrated in acute hospital provider settings, with repeated evidence tied to BEN TAUB HOSPITAL and a need to assess provider-specific pricing or contractual changes.; IP MedSurg (DNE) Trend 2: Rare one-claim high-cost admissions are adding meaningful spend, suggesting a small subset of members/cases is disproportionately driving the increase and should be reviewed for case-management opportunities.; IP MedSurg (DNE) Trend 4: The increase is isolated to a narrow service subset within inpatient med/surg acute hospital care, including specific high-cost DRGs and O.R. trauma-related admissions, making service-level review relevant."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in two providers, MIAMI VALLEY HOSPITAL and MERCY HEALTH- SAINT VINCENT MEDICAL CENTER, so provider-specific behavior and contract dynamics are the primary parent rule fit.; IP MedSurg (DNE) Trend 10: Paid per admit is rising and the recommended action includes provider-level contract review, which directly aligns to reviewing reimbursement method.; IP MedSurg (DNE) Trend 9: The pattern calls for payment accuracy validation in low-volume, high-cost inpatient cases, matching claims processing/reprocessing review against contractual standards.; IP MedSurg (DNE) Trend 3: Named inpatient DRGs and diagnoses, including gastrointestinal obstruction with MCC and severe sepsis-related cases, indicate variance is also concentrated in a subset of diagnoses/DRGs.; IP MedSurg (DNE) Trend 6: Claims volume is up alongside unit cost, and the next step includes admission and case-management review, making utilization management KPI review relevant as a secondary driver check."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is concentrated in a narrow provider subset, especially EL CAMINO HEALTH - MOUNTAIN VIEW HOSPITAL, and the recommended action includes targeted provider discussion and review of site-specific reimbursement.; IP MedSurg (DNE) Trend 3: The clinical signal is highly diagnosis-concentrated, driven by rare trauma diagnoses such as S52551B and S82251C and a small set of catastrophic inpatient cases rather than broad inpatient growth.; IP MedSurg (DNE) Trend 10: Paid per admit is sharply elevated and the pattern explicitly calls for validating outlier reimbursement terms, making reimbursement method review directly relevant.; IP MedSurg (DNE) Trend 9: Because the spend change comes from a handful of very high-cost admissions with validation needed for coding and payment accuracy, claims processing or reprocessing review is strongly indicated.; IP MedSurg (DNE) Trend 4: Variance is also isolated to specific inpatient surgical/trauma services and DRGs, especially 'Other O.R. Procedures for Multiple Significant Trauma with MCC,' so service-driver review is relevant."
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in specific inpatient diagnoses/DRGs, especially the single trauma case in IN and the two major esophageal disorder cases in CA, making diagnosis-level review the strongest fit.; IP MedSurg (DNE) Trend 2: The pattern is explicitly described as low volume and case-driven, with only a few admissions driving much of the increase, which aligns with checking whether variance is isolated to a small subset of members.; IP MedSurg (DNE) Trend 10: Paid per admit is up and the recommended action is focused payment audit, so reimbursement method review is highly relevant to confirm whether unit-cost growth reflects contractual/payment methodology issues.; IP MedSurg (DNE) Trend 1: The increase is localized to a few markets and likely a narrow provider set rather than a broad Medicare HMO trend, so provider-level behavior or contracting differences should be assessed.; IP MedSurg (DNE) Trend 9: Validation is specifically needed because the increase is driven by a small number of admissions and case classification/payment should be confirmed, which fits claims processing or reprocessing review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T19:07:02.734231+00:00"
+  }
+}

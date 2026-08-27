@@ -1,0 +1,209 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a provider-targeted prior-authorization and claims-processing policy audit for pa_required_code Y Commercial Individual HMO ACUTE HOSPITAL admissions in CO, GA, and ME, centered on UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, EMORY UNIVERSITY HOSPITAL, and MAINEHEALTH MAINE MEDICAL CENTER PORTLAND, to verify paid stays had valid authorizations, enforce denied-authorization edits, and review elective admitting pathways and UM KPI changes for site-of-care opportunity.",
+        "evidence": [
+          "CO HMO acute hospital spend rose on admissions growth; paid per admit fell.",
+          "GA growth concentrated in EMORY UNIVERSITY HOSPITAL, MIDTOWN, and SAINT JOSEPH'S.",
+          "ME HMO acute hospital spend increased with admissions up and paid per admit down.",
+          "Source cards include auth_dimension_present and auth-to-claim validation business terms.",
+          "GA shows mixed volume and unit-cost pressure at EMORY SAINT JOSEPH'S HOSPITAL."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a targeted auth-to-claim and claims processing audit for inpatient IP Med/Surg HMO claims tied to AUTH_CODE_DISTRIBUTION shifts or facility_type Not Mapped in CO, GA, CA, and ME; confirm prior authorization on Y-coded claims, correct facility classification, and review impacted claims for reprocessing for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, UCHEALTH MEMORIAL HOSPITAL CENTRAL, EMORY UNIVERSITY HOSPITAL, and MAINEHEALTH MAINE MEDICAL CENTER PORTLAND.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION accounted for inpatient variance across CO, GA, CA, and ME.",
+          "CO and ME showed inpatient spend in facility_type Not Mapped.",
+          "UCHEALTH UNIVERSITY OF COLORADO HOSPITAL and UCHEALTH MEMORIAL HOSPITAL CENTRAL were flagged.",
+          "GA validation concentrated at EMORY UNIVERSITY HOSPITAL.",
+          "MAINEHEALTH MAINE MEDICAL CENTER PORTLAND appeared in ME validation context."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted prior-authorization, site-of-care, and contract-compliance review for Commercial Individual IP Med/Surg admissions in CO HMO CHILDRENS, CA EPO CHILDRENS, and CA PPO Physical Rehab, starting with UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, HILLCREST MEDICAL CENTER, and ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER; confirm authorized level of care matched actual utilization, validate claims adjudication to contract terms, and pursue specialty-facility contract remediation where outlier payment is confirmed.",
+        "evidence": [
+          "CO HMO CHILDRENS card lists UCHEALTH UNIVERSITY OF COLORADO HOSPITAL.",
+          "CA EPO CHILDRENS card lists HILLCREST MEDICAL CENTER.",
+          "CA PPO Physical Rehab card lists ST. JOSEPH'S HOSPITAL AND MEDICAL CENTER.",
+          "All source cards show pa_required_code Y.",
+          "Business terms include auth-to-claim validation and site-of-care."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Route CA IP Med/Surg Coronary Bypass without Cardiac Catheterization with MCC and Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders with CC admissions tied to ASHD variants, ANTINEO CHEMO INDUCED PANCYTOPENIA, and NEUTROPENIA UNSPECIFIED to targeted clinical and UM review by facility and physician group, with prior-authorization confirmation and elective-admission screening at Marian Regional Medical Center and Hillcrest Medical Center.",
+        "evidence": [
+          "Variance is concentrated in a small number of DRG-diagnosis combinations.",
+          "Three cardiac surgery groupings contributed about +$5.4M combined.",
+          "Chemotherapy-induced pancytopenia added +$620K on +16 admissions.",
+          "Coronary bypass drivers were non-ER, PA-required acute hospital HMO admissions.",
+          "Named facilities include Marian Regional Medical Center and Hillcrest Medical Center."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a WI oncology UM and claims audit of IP Med/Surg admissions for DRG \"Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC\" with diagnosis \"ENCOUNTER FOR ANTINEOPLASTIC CHEMO\" at AURORA ST. LUKE'S MEDICAL CENTER to verify prior authorization was obtained, confirm authorized setting matches billed inpatient actuals, and implement site-of-care or contract remediation if not aligned to policy intent.",
+        "evidence": [
+          "PA required code is Y.",
+          "ER admit indicator is N.",
+          "Rendering provider is AURORA ST. LUKE'S MEDICAL CENTER.",
+          "Primary diagnosis is ENCOUNTER FOR ANTINEOPLASTIC CHEMO.",
+          "DRG is Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC."
+        ],
+        "peer_benchmarking": [
+          "Elevance internal: Facility chemotherapy administration generally bundled with room/facility fees, except Wisconsin.",
+          "United Health: policy not applicable to inpatient chemotherapy DRGs."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a GA/CO/CA catastrophic IP Med/Surg outlier review pathway for Liver Transplant without MCC, LIVER TRANSPLANT FAILURE, ALCOHOLIC CIRRHOSIS LIVER W/ASCITES, Infectious and Parasitic Diseases with O.R. Procedures with MCC, Other Major Cardiovascular Procedures with MCC, ST ELEVATION MI UNSPECIFIED SITE, and AGRANULOCYTOSIS SEC TO CANCER CHEMO admissions at Emory University Hospital, UCHealth University of Colorado Hospital, UCHealth Memorial Hospital Central, and Marian Regional Medical Center; require final-bill adjudication review and zero-out validation for interim and first claims, then route confirmed members to transplant or catastrophic care management.",
+        "evidence": [
+          "GA liver transplant without MCC added +$4.7M at Emory University Hospital.",
+          "CO transplant failure averaged about $788.9K per admit at UCHealth Colorado.",
+          "UCHealth Memorial sepsis O.R. MCC outlier added +$715.9K.",
+          "CA Marian Regional had a STEMI-related coronary bypass outlier.",
+          "CA included a chemo-related agranulocytosis outlier case."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles transplant services; no DRG-specific or state-concentration reimbursement rule was identified.",
+          "Elevance internal policy reviewed was unrelated and addresses robotic-assisted surgery reimbursement."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review initial and concurrent UM KPIs and P.A.V. for Commercial Individual acute hospital inpatient claims in CT PPO, CA EPO and HMO, OH HMO, WI POS and HMO, VA HMO, and TX POS across Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC, Coronary Bypass without Cardiac Catheterization with MCC, Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders with CC, Medical Back Problems without MCC, and Other O.R. Procedures for Injuries with CC; confirm prior authorization on Y claims, validate N exceptions against contract, match authorizations to actual claims, and verify reimbursement processing, chemotherapy bundling where applicable, and itemized bills.",
+        "evidence": [
+          "Auth-linked acute hospital pockets recur across CA, CT, OH, TX, VA, and WI.",
+          "Admissions increased in CT PPO, CA EPO/HMO, OH HMO, WI POS/HMO, VA HMO, TX POS.",
+          "Top DRGs include chemotherapy, CABG, hematology, medical back, and other O.R. procedures.",
+          "Several pockets show more admissions and higher paid per admit.",
+          "Business terms highlight auth-to-claim validation, site-of-care, unit cost, utilization."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health: facility bundling applies; chemotherapy administration generally not separately reimbursable.",
+          "Elevance Health (external): always bundled into facility or primary service payment."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 6,
+        "pattern": "CO maternity spend was driven by a very small number of high-cost C-section cases",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is heavily concentrated in a subset of providers and systems, especially UCHealth in CO and Emory hospitals in GA, making provider-level behavior and contracting review highly relevant.; IP MedSurg (DNE) Trend 6: This is a clear utilization-led inpatient pattern in an auth-linked setting, so reviewing UM KPI changes and the PAV waterfall is central to explaining the admissions surge.; IP MedSurg (DNE) Trend 8: The pattern explicitly centers on auth-linked admissions, with auth_dimension_present flags and auth-to-claim validation called out in the source cards, making authorization enforcement and match review a top parent rule.; IP MedSurg (DNE) Trend 7: The recommended next step focuses on admitting pathways, referral patterns, and admission patterns, which aligns directly with reviewing admission/discharge source-location and elective versus non-elective mix shifts.; IP MedSurg (DNE) Trend 10: Although the overall pattern is volume-driven, GA shows a secondary pocket of unit-cost pressure in acute inpatient care, so reimbursement method review is a relevant secondary rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned because the pattern is driven by AUTH_CODE_DISTRIBUTION shifts, PA flag assignment, and explicit auth-to-claim validation needs before changing UM policy.; IP MedSurg (DNE) Trend 10: Relevant because facility classification changes, including 'Not Mapped' inpatient claims, can distort reimbursement-method interpretation and should be reconciled before reimbursement action.; IP MedSurg (DNE) Trend 1: Relevant because the variance is concentrated in a subset of providers and facilities, especially UCHealth hospitals in CO and Emory University Hospital in GA.; IP MedSurg (DNE) Trend 9: Relevant because the observed increase may reflect claims processing, reprocessing, or status/mapping inconsistencies rather than true business movement.; IP MedSurg (DNE) Trend 6: Relevant because the pattern could be misread as a utilization-management change; validating PA labeling is necessary before interpreting UM KPI or PAV movement."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is concentrated in specific inpatient settings\u2014CHILDRENS and Physical Rehab\u2014so this is most directly a subset-of-services/site-of-care issue rather than broad inpatient utilization.; IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated in a small number of specialty facilities/providers, especially CO children's activity, which points to provider-specific behavior and contracting review.; IP MedSurg (DNE) Trend 10: Paid per admit increased sharply in these specialty facilities, and the recommended action explicitly includes contract review, making reimbursement method a key parent rule.; IP MedSurg (DNE) Trend 8: All source cards include prior auth required = Y and list auth-to-claim validation as a business term, so enforcement of authorization requirements is relevant to this inpatient spike.; IP MedSurg (DNE) Trend 7: The pattern type is a site_of_care_shift with admissions moving into high-cost specialty settings, so admission/discharge source-location review is relevant to understand why volume rose in these facilities."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is clearly concentrated in a small set of diagnoses and DRG-diagnosis combinations, especially coronary artery disease variants driving bypass cases and chemotherapy-related pancytopenia/neutropenia driving hematology admits.; IP MedSurg (DNE) Trend 1: The pattern explicitly recommends assessing concentration by facility or physician group, and the source cards show notable concentration at specific hospitals, making provider-level review highly relevant.; IP MedSurg (DNE) Trend 4: This is a focused case-mix shift within specific high-impact services/case types rather than a broad inpatient trend, especially coronary bypass surgery and major hematology/immunology admissions.; IP MedSurg (DNE) Trend 6: The recommended next step is targeted clinical and UM review for admission appropriateness and complications, which aligns with reviewing utilization management KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 7: Admissions are up, and the largest cardiac surgery drivers show non-ER inpatient admits, so a review of elective versus non-elective admission mix and admission source/location is relevant."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is highly concentrated in a single oncology diagnosis context: ENCOUNTER FOR ANTINEOPLASTIC CHEMO, making diagnosis-level isolation a primary parent rule.; IP MedSurg (DNE) Trend 4: The increase is tied to a specific inpatient chemotherapy DRG/service, and the pattern is explicitly described as a focused setting-of-care oncology utilization issue rather than broad Med/Surg growth.; IP MedSurg (DNE) Trend 6: The recommended action is to review inpatient chemotherapy admission criteria and confirm policy intent, which aligns directly with a utilization management KPI/PAV investigation.; IP MedSurg (DNE) Trend 1: The source context points to a specific acute hospital provider in WI, so provider-level concentration should be assessed to determine whether the variance is localized to provider behavior or contracting.; IP MedSurg (DNE) Trend 8: PA is required for these admissions, and the pattern calls for oncology UM review, making auth-to-claim matching and enforcement of authorization criteria highly relevant."
+      },
+      {
+        "rank": 6,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow set of diagnoses such as liver transplant failure, alcoholic cirrhosis with ascites, sepsis, STEMI-related cardiac surgery, and chemo-related agranulocytosis, so diagnosis-level isolation is a core driver.; IP MedSurg (DNE) Trend 4: The pattern is also concentrated in a small set of ultra-high-cost inpatient services/DRGs, especially liver transplant, infectious/O.R. cases with MCC, and major cardiovascular procedures, making service-level review highly relevant.; IP MedSurg (DNE) Trend 1: Spend is isolated to a subset of providers and hospitals, including Emory University Hospital, UCHealth University of Colorado Hospital, UCHealth Memorial Hospital Central, and Marian Regional Medical Center, indicating strong provider concentration.; IP MedSurg (DNE) Trend 2: The pattern is driven by very small-volume catastrophic admissions, implying variance is isolated to a small subset of members and supports case-level clinical engagement and catastrophic care management follow-up.; IP MedSurg (DNE) Trend 9: The recommended action explicitly calls for case-level claims review and validation of rare high-cost outliers, aligning with review of claims processing/reprocessing to confirm these admissions were paid and processed appropriately."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most pockets are explicitly auth-linked; source groups/cards are flagged auth_dimension_present and the business terms call out auth-to-claim validation, making authorization enforcement a primary parent rule.; IP MedSurg (DNE) Trend 10: The pattern shows selected paid-per-admit increases, mixed unit-cost pressure, and a recommended review of contract exposure, which aligns directly to reimbursement method investigation.; IP MedSurg (DNE) Trend 6: Admissions are up across multiple markets and the recommended next step specifically calls for inpatient UM opportunity review, suggesting utilization management KPI/PAV review is highly relevant.; IP MedSurg (DNE) Trend 3: The variance is concentrated in a short list of DRGs/diagnostic groupings such as chemotherapy, hematology, and medical back problems, so diagnosis-level concentration is a strong explanatory path.; IP MedSurg (DNE) Trend 4: The emerging spend is also isolated to specific inpatient services/procedures within acute hospitals, including CABG, chemotherapy admissions, and other O.R. procedures, supporting a service-driver review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T08:31:33.880198+00:00"
+  }
+}

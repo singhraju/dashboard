@@ -1,0 +1,197 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Require a pre-action validation and reprocessing review for Commercial Local Group IP claims in CA, NV, OH, VA, and KY by reconciling AUTH_CODE_DISTRIBUTION and Not Mapped facility records to claim-level authorization status, denial enforcement, and contractual processing logic for Lucile Packard, Hoag Hospital Newport Beach, Ohio State University Wexner Medical Center, Henrico Doctors' Hospital, and PPO cesarean claims.",
+        "evidence": [
+          "NV auth code distribution changes tied to Lucile Packard.",
+          "CA auth code distribution changes tied to Hoag.",
+          "OH auth code distribution changes tied to Ohio State.",
+          "VA AUTH_CODE_DISTRIBUTION group flagged requires_validation_before_action.",
+          "CA and KY claims recorded as Not Mapped facility type."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (external): Requires Auth; obstetric services included in a global package.",
+          "Cigna: Delivery admissions within 72 hours generally included in the global package.",
+          "Paramount Healthcare: No Auth; no DRG-specific delivery setting or bundling rule identified."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a focused contract compliance, itemized bill, and claims adjudication review for Lucile Packard, Hoag, NYU Langone, Ohio State, and Stanford Hospital catastrophic IP Med/Surg admissions tied to Allogeneic Bone Marrow Transplant, Ungroupable, Liver Transplant with MCC or Intestinal Transplant, Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC, HIV with Extensive O.R. Procedures with MCC, and Aftercare with CC/MCC; verify DRG grouping, reimbursement methodology, final-bill replacement of interim and first claims, and authorization enforcement.",
+        "evidence": [
+          "Lucile Packard allogeneic bone marrow transplant added +$6.5M on one admission.",
+          "CA ungroupable spinal cord injury and cirrhosis cases added about +$1.6M to +$2.7M.",
+          "NYU cardiac valve procedures added +$1.3M with paid per admit up.",
+          "Many spikes are low-volume or ungroupable, requiring case-level validation."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal): reimbursement summary shows no documented DRG-specific policy scope or appeals process.",
+          "Fidelis Care (Centene): reimbursement summary shows no documented DRG-specific policy scope or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted pre-pay review policy for Lucile Packard Children's Hospital Stanford PA-required CHILDRENS PPO/EPO inpatient episodes in Commercial Local Group across CA, NV, NY, and OH to verify authorization-to-claim match, contractual reimbursement, site-of-care appropriateness, and itemized billing for outlier admissions.",
+        "evidence": [
+          "Spend is concentrated at Lucile Packard Children's Hospital Stanford across multiple states.",
+          "Most impacted episodes are PA-required PPO children's inpatient admissions.",
+          "NV and NY cards show both utilization and unit-cost pressure.",
+          "OH card shows unit-cost-led pressure without admission growth.",
+          "Source cards flag auth-to-claim validation and repeated delta concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a targeted policy and claims audit for Commercial Local Group LTCH and Physical Rehab post-acute admissions in GA, VA, CA, and IN for Aftercare with CC/MCC, Ungroupable, and Medical Back Problems without MCC: review initial and concurrent review KPIs, confirm prior authorization was obtained for PA-required cases, validate auth-to-claim matching and contract overrides for PA-not-required LTCH claims, assess step-down timing and alternate discharge location leakage, and require itemized bill review plus contractual repricing validation for high-cost LTCH stays.",
+        "evidence": [
+          "GA POS LTCH ungroupable cases added +$2.9M; paid per admit rose about $696K.",
+          "VA POS LTCH aftercare added +$1.1M across 6 admissions.",
+          "CA PPO physical rehab aftercare added +$1.0M on 15 more admissions.",
+          "IN PPO LTCH ungroupable added +$1.6M on 2 admissions.",
+          "Source cards show PA required Y and N across impacted LTCH pathways."
+        ],
+        "peer_benchmarking": [
+          "No pattern-specific policy scope was documented for Elevance Health or United Health."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a provider-level contract compliance and claims-processing review for NYU LANGONE HOSPITAL TISCH HOSPITAL and OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER, separating PA-required from non-PA acute claims and auditing Ungroupable and Aftercare with CC/MCC for authorization-to-claim matching and reimbursement methodology.",
+        "evidence": [
+          "NYU PPO PA-required acute claims added +$1.8M on 19 more admissions.",
+          "Ohio State PPO PA-required acute claims added +$1.5M on 47 more admissions.",
+          "OH Ungroupable PPO paid per admit rose about $90K with fewer admissions.",
+          "NY EPO Aftercare with CC/MCC added +$544K at about $109K per admit."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Launch a targeted claim review for Commercial Local Group Cesarean Section without Sterilization without CC/MCC in NH HMO Critical Access and NH, WI, and VA acute pockets to reconcile authorizations to actual claims, confirm contract-compliant reimbursement, and assess site-of-care drivers.",
+        "evidence": [
+          "WI POS acute cesarean admissions increased in Commercial Local Group.",
+          "NH HMO critical access cesarean claims emerged with PA required.",
+          "VA POS acute paid per admit rose while admissions fell.",
+          "NH POS acute showed price pressure without volume change."
+        ],
+        "peer_benchmarking": [
+          "Elevance globally reimburses single-gestation cesarean maternity when one provider or TIN bills.",
+          "Medica pays either the global OB package or individual maternity components, not both.",
+          "United bundles routine delivery, postpartum, and included cesarean services with limited separate reimbursement."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "CA acute hospital spend is concentrated in a few commercial provider and auth segments",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 4,
+        "pattern": "Maternity and C-section episodes are a recurring multi-state cost driver",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best direct fit for the dominant signal: large dollar movement is driven by AUTH_CODE_DISTRIBUTION and PA required Y/N shifts, so auth-to-claim matching must be validated before UM or policy action.; IP MedSurg (DNE) Trend 9: Highly relevant because the pattern also points to coding/mapping distortion rather than true utilization change; claims processing or reprocessing issues could explain shifted auth/facility classification and paid variance.; IP OB Dlvry Well NB (DNE) Trend 9: Relevant to the CA and KY Not Mapped facility findings in cesarean-related claims, where facility classification or claim processing issues may be creating artificial variance.; IP OB Dlvry Well NB (DNE) Trend 8: Relevant because the OB delivery records include auth status dimensions alongside unmapped facility values, so auth-to-claim validation is needed there as well.; IP MedSurg (DNE) Trend 1: Secondary but relevant because most of the impact is concentrated in a small number of providers and states (for example Lucile Packard, Hoag, Ohio State, Henrico), which supports provider-focused validation after coding issues are checked."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated in a small set of specialty providers such as Lucile Packard, Hoag, NYU, and Ohio State, making provider-level investigation the strongest fit.; IP MedSurg (DNE) Trend 4: The pattern is driven by a narrow set of high-cost inpatient services/DRGs, including allogeneic bone marrow transplant, liver transplant, cardiac valve procedures, aftercare, and ungroupable stays rather than broad Med/Surg utilization.; IP MedSurg (DNE) Trend 3: The increase is also isolated to rare and catastrophic diagnoses such as hemophagocytic lymphohistiocytosis, HIV disease, cirrhosis, spinal cord injury, and mitral insufficiency, supporting diagnosis-focused review.; IP MedSurg (DNE) Trend 9: The pattern explicitly calls for payment validation, and several spikes involve ungroupable or potentially misclassified admissions, making claims processing/reprocessing review highly relevant.; IP MedSurg (DNE) Trend 10: Because recommended action includes confirming grouping and payment accuracy on very high-cost case-level stays, reimbursement method review is directly applicable."
+      },
+      {
+        "rank": 4,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is overwhelmingly concentrated in a single provider, Lucile Packard Children's Hospital Stanford, across multiple states, making provider-specific behavior, referral patterns, and contract terms the clearest parent driver.; IP MedSurg (DNE) Trend 10: Very large paid-per-admission increases, especially the pure unit-cost pressure in OH and extreme per-admit cost in NV, strongly suggest reviewing reimbursement method and contractual payment structure.; IP MedSurg (DNE) Trend 8: Most of the pattern sits in PA-required business and the source cards explicitly flag auth-to-claim validation, so it is important to confirm that authorized tertiary episodes were appropriately matched and enforced.; IP MedSurg (DNE) Trend 4: The pattern reflects a narrow set of tertiary pediatric inpatient episodes rather than broad pediatric utilization, so service-level review is relevant to separate unavoidable specialty care from steerable site-of-care use.; IP MedSurg (DNE) Trend 6: Recommended next steps include reviewing referral pathways and case eligibility, which aligns with checking whether utilization management processes or KPIs are allowing more high-cost tertiary admissions."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 21,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: Most directly matches the pattern\u2019s post-acute site-of-care shift after the initial inpatient stay; reviewing admission/discharge source and location is key for LTCH and rehab movement.; IP MedSurg (DNE) Trend 4: Variance is concentrated in a subset of services/settings\u2014LONG TERM CARE HOSPITAL and Physical Rehab\u2014making service-level review highly relevant.; IP MedSurg (DNE) Trend 8: Authorization is explicitly present in the pattern (PA required Y and N, auth_dimension_present, recommended audit of authorization criteria), so auth-to-claim enforcement is a core parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit is sharply higher, especially in LTCH, and the recommendation calls for provider rate review, making reimbursement method a strong fit.; IP MedSurg (DNE) Trend 6: The pattern shows both admissions up and unit cost up in post-acute care, suggesting utilization management and avoidable post-acute variance should be assessed through UM KPI/PAV review."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is highly concentrated in specific providers\u2014NYU Langone Tisch and Ohio State Wexner\u2014so provider-level behavior and contract dynamics are a primary parent trend.; IP MedSurg (DNE) Trend 8: PA-required acute admissions are a major driver in NY and OH, and the pattern explicitly calls for separating PA-required growth and reviewing auth-to-claim validation.; IP MedSurg (DNE) Trend 10: Several slices show higher paid per admit despite flat or lower volume, indicating selective reimbursement or reimbursement-method pressure rather than pure utilization.; IP MedSurg (DNE) Trend 4: The pattern includes concentrated DRG/service-level issues such as Ungroupable and Aftercare with CC/MCC, making service-level review directly relevant.; IP MedSurg (DNE) Trend 9: Ungroupable and aftercare claims, plus the data-quality routing, suggest possible claim processing, coding, or reprocessing issues that may be contributing to the paid increase."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 4: The pattern is concentrated in a single inpatient OB service/DRG\u2014Cesarean Section without Sterilization without CC/MCC\u2014appearing across multiple small state/product/facility slices, so service-level review is highly relevant.; IP OB Dlvry Well NB (DNE) Trend 1: The increase is localized to specific state and facility pockets, including acute and critical access settings, which points to provider/facility-specific behavior or local contract dynamics rather than a broad enterprise trend.; IP OB Dlvry Well NB (DNE) Trend 8: PA required Y/N is explicitly called out in the key drivers, all major cards carry auth-related flags, and UM operations is a recommended route, making auth-to-claim enforcement a key parent rule.; IP OB Dlvry Well NB (DNE) Trend 10: Several pockets are unit-cost or mixed-driven with low-volume price spikes, especially in critical access and maternity-related claims, so reimbursement method review is directly relevant before changing policy.; IP OB Dlvry Well NB (DNE) Trend 7: Admissions are rising in several local pockets and the pattern varies by site of care across acute versus critical access facilities, so admission/source/location review is relevant to distinguish true utilization shifts from local site-of-care changes."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T11:34:52.791331+00:00"
+  }
+}

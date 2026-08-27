@@ -1,0 +1,1194 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "CA authorization code distribution must be validated before action",
+    "pattern_description": "In CA, a material portion of the increase sits under authorization code distribution changes rather than a confirmed utilization or price shift. The signal is concentrated in a small set of inpatient medical DRGs, especially kidney and urinary infections and neurologic disorders. Business action should pause until authorization-to-claim mapping is reconciled.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA authorization code distribution must be validated before action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "auth_requirement",
+              "label": "Auth Requirement",
+              "type": "badge"
+            },
+            {
+              "id": "inpatient_scope",
+              "label": "Inpatient Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "inpatient_scope": "Denies never events and removes HAC-related charges or days from DRG inpatient reimbursement."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "inpatient_scope": "Applies to inpatient DRG hospital claims; POA-related preventable conditions reduce or deny reimbursement."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "inpatient_scope": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_requirement": "-",
+              "inpatient_scope": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00167",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Present on Admission HCAC RETIRED",
+            "tags": [],
+            "effective_date": "04/20/18",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_00066",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Provider Preventable Conditions",
+            "tags": [],
+            "effective_date": "04/01/2026",
+            "evidence": "The health plan denies or reduces reimbursement for provider preventable conditions. For inpatient claims, hospital acquired conditions identified by POA can remove charges or days from DRG reimbursement, and never events are denied for professional and facility claims.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-23002_CA.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "Y65.53",
+                "Y65.52",
+                "Y65.51"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [
+                "PC"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "POA indicator present"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "inpatient facility",
+                "professional services"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "preexisting at treatment start",
+                "secondary facility treating HAC",
+                "contracts or mandates override"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00185",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Provider Preventable Conditions C-23002",
+            "tags": [],
+            "effective_date": "09/01/2023",
+            "evidence": "This policy is on-topic for inpatient DRG reimbursement, but the named DRG is not explicitly listed. DRG claims may have reimbursement reduced when a present-on-admission review identifies a hospital acquired condition, and never-event procedures with related services are denied.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "Y65.53",
+                "Y65.52",
+                "Y65.51"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient claim",
+                "POA review on admission"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "condition defined as a HAC existed prior to treatment",
+                "secondary facility treated HAC caused by another facility"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Provider Preventable Conditions",
+            "tags": [],
+            "effective_date": "03/22/2023",
+            "evidence": "Applies to inpatient DRG claims generally. When a provider preventable condition is identified, POA reporting drives DRG adjustment: HCAC charges and days are removed from reimbursement, and OPPC wrong-patient/wrong-body-part/wrong-surgery events are denied or rejected.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "Y65.53",
+                "Y65.52",
+                "Y65.51"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "inpatient facility claims",
+                "same claim",
+                "during inpatient stay"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Condition existed before treatment",
+                "Secondary facility treated HCAC",
+                "Critical Access Hospitals",
+                "LTACs",
+                "Maryland Waiver Hospitals",
+                "Cancer hospitals",
+                "Childrens inpatient facilities",
+                "Religious non-medical health care institutions",
+                "Inpatient psychiatric hospitals",
+                "Inpatient rehabilitation facilities",
+                "VA/DoD hospitals"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01835",
+            "payer_name": "United Health",
+            "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA authorization code distribution accounts for +$2.4M across 4 validation findings. Kidney and Urinary Tract Infections without MCC contributes +$1.1M. Other Disorders of Nervous System with CC adds +$0.6M. All supporting findings are flagged as requiring validation before action."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "VA authorization code distribution also needs correction before operating action",
+    "pattern_description": "VA shows the same kind of authorization classification issue, but as a separate state-specific problem. The increase is concentrated in a single validation signal rather than a confirmed provider, facility, or clinical trend. Correcting the classification is the first step before any utilization or reimbursement intervention.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "VA authorization code distribution accounts for +$1.4M. The increase is tied to a validation-only finding rather than a confirmed utilization or unit-cost driver. The issue is state-specific to VA and should be corrected before downstream action."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA PPO Local spend is rising through a concentrated acute and SNF facility mix",
+    "pattern_description": "In CA PPO Local business, authorized spend is increasing across both acute hospital and SNF settings. UCI Medical Center is primarily a volume story, while Adventist Health Simi Valley and SNF nervous-system cases add meaningful per-admit pressure. This is best understood as a provider and site mix issue rather than a broad statewide rate change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA PPO Local spend is rising through a concentrated acute and SNF facility mix",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00027",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Lyme Disease",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9e54",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00060",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Hepatitis Testing",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390c",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01835",
+            "payer_name": "United Health",
+            "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA operational facility-mix groups total +$1.9M. UCI Medical Center drove +$0.7M with 45 more admissions while paid per admit fell about $5.4K. Adventist Health Simi Valley added +$0.4M with 18 more admissions and about +$2.1K paid per admit. CA SNF - FREE STANDING added +$0.3M, including 10 more neurologic admissions with about +$8.0K paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "VA PPO Local growth spans acute, SNF, and an unmapped facility bucket",
+    "pattern_description": "VA PPO Local spend is rising through higher authorized admissions in both acute hospital and SNF settings, while another large share sits in a Not Mapped facility bucket. Acute hospital and SNF growth are clearly volume-led, and the unmapped bucket adds both admissions and higher paid per admit. The immediate issue is site-of-care management, but the unmapped facility rows need cleanup so the true mix is visible.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "VA operational site-of-care groups total +$1.7M. VA acute hospital utilization added +$0.6M with 45 more admissions. VA SNF - FREE STANDING added +$0.4M with 37 more admissions. VA Not Mapped facilities added +$0.8M with 34 more admissions and about +$1.6K paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "GA PPO Local pressure is concentrated at one acute provider, with smaller spillover to unmapped and critical access settings",
+    "pattern_description": "In GA, the main operational story is provider concentration at Piedmont Cartersville Medical Center in authorized acute admissions. That acute hospital pressure reflects both more admissions and higher paid per admit, while smaller additional increases appear in Not Mapped and Critical Access settings. The business lever here is provider-specific economics first, with facility classification cleanup as a secondary need.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "GA PPO Local pressure is concentrated at one acute provider, with smaller spillover to unmapped and critical access settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "obstetrical_delivery_exclusion",
+              "label": "OB Delivery Excl.",
+              "type": "badge"
+            },
+            {
+              "id": "readmission_policy_scope",
+              "label": "Readmit Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "obstetrical_delivery_exclusion": "Excludes OB",
+              "readmission_policy_scope": "Broad DRG-based inpatient readmission policy: related unplanned 30-day readmissions generally not separately reimbursed."
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "obstetrical_delivery_exclusion": "-",
+              "readmission_policy_scope": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "obstetrical_delivery_exclusion": "-",
+              "readmission_policy_scope": "Applies only to acute inpatient IPPS hospitals; CAHs, rehab, psych, VA/DoD excluded."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Inpatient Readmissions",
+            "tags": [],
+            "effective_date": "2025-03-25",
+            "evidence": "This payer's inpatient readmissions policy applies broadly to DRG-based facility claims. It does not name this DRG, but unplanned same, similar, or related readmissions within 30 days are not separately reimbursed unless an exception applies. Same-day readmissions are treated as part of the original admission.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "within 30 days"
+              ],
+              "utilization_limits": [
+                "30-day readmission window"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "GA: 3 days, same or related problem"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider, state, federal, or CMS contract override",
+                "cancer",
+                "neonatal/newborn",
+                "obstetrical deliveries",
+                "behavioral health",
+                "rehabilitation care",
+                "sickle cell anemia",
+                "transplants",
+                "acute care hospital transfer",
+                "against medical advice"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Provider Preventable Conditions",
+            "tags": [],
+            "effective_date": "03/22/2023",
+            "evidence": "Wrong-body-part surgical events are nonreimbursable. The plan rejects or denies the erroneous procedure and all related services. Inpatient claims with HCACs can also have charges and days removed from DRG reimbursement when POA indicates the condition was not present on admission.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "Y65.53",
+                "Y65.52",
+                "Y65.51"
+              ],
+              "related_codes": [
+                "Y65.52",
+                "Y65.51",
+                "Y65.53"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [
+                "PC"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same inpatient stay",
+                "related services to erroneous surgery"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "OPPC",
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "professional providers",
+                "facilities"
+              ],
+              "exemptions": [
+                "condition existed prior to treatment by that facility",
+                "condition existed prior to treatment by another provider"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "GB Inpt Readmissions FINAL 05062025",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "The policy is not code-specific to this DRG label, but it applies to inpatient DRG-based claims and generally denies separate reimbursement for unplanned readmissions to the same hospital within 30 days when the readmission is for the same, similar, or related condition.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "within 30 days of discharge",
+                "same hospital",
+                "same, similar, or related condition"
+              ],
+              "utilization_limits": [
+                "30-day readmission review"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider, state, federal, or CMS contracts and/or requirements"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00029",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00058",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Testing for Diagnosis of Active or Latent Tuberculosis",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea9a",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00125",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Acquired Conditions Policy, Facility",
+            "tags": [],
+            "effective_date": "2008-10-01",
+            "evidence": "Applies to inpatient acute care claims. Selected hospital-acquired conditions that are not present on admission do not receive additional payment, and the case is paid as though the secondary diagnosis were not present. Applies only to IPPS hospitals, with listed facility exemptions.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Acquired-Conditions-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "inpatient admission",
+                "POA on diagnosis"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "IPPS",
+                "MS-DRG",
+                "UB-04"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "POA exempt codes",
+                "CAHs",
+                "LTCHs",
+                "Maryland Waiver Hospitals",
+                "Cancer Hospitals",
+                "Children's Inpatient Facilities",
+                "Religious Non-Medical Health Care Institutions",
+                "Inpatient Psychiatric Hospitals",
+                "Inpatient Rehabilitation Facilities",
+                "VA/DoD Hospitals"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01824",
+            "payer_name": "United Health",
+            "policy_title": "Diagnostic Testing for Influenza Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-12-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Diagnostic-Testing-Influenza-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01835",
+            "payer_name": "United Health",
+            "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "Off-topic. This policy governs molecular syndromic infectious disease laboratory panel coding, not inpatient DRG reimbursement for the requested grouping.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "GA operational groups total +$1.7M. Piedmont Cartersville Medical Center drove +$0.6M with 34 more admissions and about +$3.8K paid per admit. Cellulitis, kidney and urinary infections, and neurologic disorders together added about +$0.7M in GA acute hospital cases. GA Not Mapped and CRITICAL ACCESS settings added another +$0.4M combined."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "Secondary PPO Local growth is spread across acute hospitals, PA SNF, and a broad unmapped facility bucket",
+    "pattern_description": "Outside the main CA, VA, and GA concentrations, PPO Local growth recurs across mapped acute hospitals, a smaller PA SNF pocket, and a sizable Not Mapped facility bucket in CA / CT / GA / IN / OH / PA / NY. The mapped acute hospital portion is mostly admission-led, while PA shows provider concentration at Lehigh Valley Hospital - Cedar Crest and the Not Mapped bucket obscures the true facility mix. Treat this as a secondary but broad provider-mix issue that needs cleanup before full action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Secondary PPO Local growth is spread across acute hospitals, PA SNF, and a broad unmapped facility bucket",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_UHC_00116",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-05-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Secondary operational groups total +$1.7M. CT / GA / OH acute hospital utilization added +$0.6M, led by sepsis in GA at +$0.2M and kidney and urinary infections in OH at +$0.1M. Lehigh Valley Hospital - Cedar Crest in PA added +$0.4M with 14 more admissions and about +$4.8K paid per admit. Not Mapped facilities across CA / CT / GA / IN / OH / PA added +$0.5M, while PA SNF added another +$0.1M."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "CA clinical pressure is concentrated in infection, sepsis, UTI, and neurologic cases across inpatient and NF settings",
+    "pattern_description": "In CA, clinical pressure is concentrated in a narrow set of inpatient medical and NF conditions rather than spread across many unrelated cases. UTI, sepsis, digestive, and neurologic cases are the recurring drivers, with both more admissions and selected higher-cost stays. Some smaller rare cases are present, but the dominant signal is repeated infection and neurologic case mix across the acute and NF continuum.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA clinical pressure is concentrated in infection, sepsis, UTI, and neurologic cases across inpatient and NF settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "review_scope",
+              "label": "Review Scope",
+              "type": "text"
+            },
+            {
+              "id": "payment_impact",
+              "label": "Payment Impact",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "review_scope": "Adult inpatient facility claims only, excluding sepsis screening; review completed 60+ days after receipt.",
+              "payment_impact": "Denies"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "review_scope": "-",
+              "payment_impact": "-"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "review_scope": "Inpatient hospital claims reviewed pre- and post-payment, including clinical validation review.",
+              "payment_impact": "Adjusts Payment"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "review_scope": "Reviews inpatient/outpatient UB-04 and professional CMS-1500 claims; denials may affect entire or linked lines.",
+              "payment_impact": "Denies"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_UHC_00118",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-03-01",
+            "evidence": "This payer requires the correct principal or primary diagnosis to be submitted in the proper claim field. If the principal diagnosis is invalid or not sufficient for MS-DRG assignment, inpatient claims may deny or be assigned to DRG 998. For outpatient and professional claims, an inappropriate primary diagnosis can deny the affected line(s).",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "998"
+              ],
+              "related_codes": [
+                "R65",
+                "Z51.89"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MS-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00101",
+            "payer_name": "Centene",
+            "policy_title": "Sepsis Diagnosis - CC.PP.073",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Adult inpatient sepsis claims are subject to pre- or post-pay clinical validation. Payment may be adjusted, reinstated, or denied if the sepsis diagnosis is not supported by the medical record.",
+            "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "872"
+              ],
+              "related_codes": [
+                "870",
+                "871",
+                "A41.9",
+                "R65.20",
+                "R65.21",
+                "R78.81"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "pre- or post-pay review"
+              ],
+              "utilization_limits": [
+                "audit review within 60 days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "MS-DRG",
+                "APR-DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "physician or licensed independent practitioner"
+              ],
+              "exemptions": [
+                "sepsis screening"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00029",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+            "tags": [],
+            "effective_date": "06/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00202",
+            "payer_name": "Molina",
+            "policy_title": "Sepsis",
+            "tags": [],
+            "effective_date": "1/7/2022",
+            "evidence": "Sepsis-related diagnosis claims in this range are subject to DRG clinical validation review before or after payment, and payment may be adjusted if sepsis is unsupported under Sepsis-3 criteria.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+            "edit_rule_facts": {
+              "target_codes": [
+                "R65.2"
+              ],
+              "related_codes": [
+                "R65.2"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "pre-payment or post-payment review"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00116",
+            "payer_name": "United Health",
+            "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-05-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA clinical groups total +$1.9M. CA IP Med/Surg added +$1.1M, led by UTI site not specified in kidney and urinary infections at +$0.4M and sepsis without prolonged ventilation at +$0.4M. CA NF added +$0.4M from UTI and neurologic cases, including cord compression diagnoses totaling about +$0.2M. Sepsis and UTI-related diagnoses recur across both acute and NF settings."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Rare high-cost inpatient outliers need targeted case review, not broad policy changes",
+    "pattern_description": "Separate from the recurring medical admissions, there is a smaller but important pocket of rare, very high-cost IP Med/Surg cases across GA / OH / PA, CA / GA, and CA / PA. These are complex cardiac, major O.R., and severe sepsis cases where 1 to 3 admissions drive disproportionate spend. The right response is targeted case review and payment validation rather than broad utilization policy changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare high-cost inpatient outliers need targeted case review, not broad policy changes",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_relevance",
+              "label": "Pattern Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_relevance": "-",
+              "policy_scope": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00101",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Moderate Conscious Sedation C-25001",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Moderate%20Conscious%20Sedation%20C-25001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Rare high-cost IP Med/Surg groups total +$0.7M across low-count findings. UCI Medical Center added +$0.1M from 2 sepsis O.R. admissions. Lehigh Valley Hospital - Cedar Crest had single-admission cardiac and major O.R. cases of about +$95K and +$37K. Piedmont Cartersville Medical Center added about +$72K from 2 sepsis O.R. admissions."
+      }
+    }
+  }
+]

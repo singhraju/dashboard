@@ -1,0 +1,1046 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Authorization code assignment is distorting the spend signal in CA / VA / PA",
+    "pattern_description": "A large share of the apparent increase is tied to how authorization codes are landing on claims rather than a clean change in utilization or reimbursement. CA is the largest issue, with the same pattern also present in VA and PA. This needs to be corrected before using the results for provider action, UM policy changes, or reimbursement decisions.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA accounts for about +$2.0M of the issue, led by Kidney and Urinary Tract Infections without MCC (+$0.5M) and Other Disorders of Nervous System with MCC (+$0.5M). VA adds about +$0.6M and PA adds about +$0.3M under the same authorization code movement. Ungroupable and clinically mixed admissions are included, increasing the likelihood that classification is distorting the signal."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "Authorized post-acute spend is rising across SNF, NF, and rehab settings",
+    "pattern_description": "Post-acute spend growth is concentrated in free-standing SNF, nursing facility, and rehab settings rather than only in acute hospitals. The increase is being driven by a mix of more admissions and higher paid per admit, with the sharpest spikes in CA SNF/NF activity, VA SNF volume, and small but expensive Physical Rehab cases in CA / WI. This is a site-of-care management issue with network and UM levers, not just a single-provider hospital problem.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "CA SNF - FREE STANDING added about +$0.6M, including 18 more admissions in ungroupable stays with paid per admit up about $1.1K. VA SNF - FREE STANDING added about +$0.3M with 27 more admissions and paid per admit up about $1.9K. Physical Rehab in CA / WI added about +$0.5M, including small clusters with paid per admit up roughly $9.1K to $59.8K. CA NF added about +$0.4M across UTI, cellulitis, and neurologic cases."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "CA acute hospital spend is concentrating at Adventist and targeted IP Med/Surg cases",
+    "pattern_description": "CA acute hospital spend is being pushed by a concentrated mix of more admissions and higher severity in a small set of IP Med/Surg conditions. Adventist Health Simi Valley is the clearest provider concentration point, while UTI, cellulitis, neurologic, and toxic encephalopathy cases are driving much of the clinical lift. This is a focused provider-and-case-mix issue rather than broad statewide inpatient inflation.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA acute hospital spend is concentrating at Adventist and targeted IP Med/Surg cases",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_mention_status",
+              "label": "DRG Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mention_status": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mention_status": "-",
+              "policy_relevance": "United Health policy is not DRG-relevant; it only governs infectious disease molecular panel billing."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01835",
+            "payer_name": "United Health",
+            "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "Off-topic for this DRG description. The policy governs laboratory molecular syndromic panel billing and does not provide DRG-specific inpatient reimbursement rules.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Adventist Health Simi Valley added about +$0.2M in authorized CA acute hospital spend with 12 more admissions. UTI without MCC drove about +$0.2M clinically with roughly 30 more IP Med/Surg admissions and another +$0.1M operationally in acute hospital claims. Critical illness myopathy and other toxic encephalopathy added about +$0.3M combined in concentrated neurologic cases. CA acute hospital utilization also rose in Other Disorders of Nervous System with MCC and Cellulitis with MCC."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Acute hospital provider payment pressure is concentrated in PA / KY / CT / GA / OH",
+    "pattern_description": "Outside CA and VA, acute hospital pressure is concentrated in a small set of providers and expensive admission clusters rather than spread evenly across the network. PA and KY are the most actionable points, with additional small but high-cost spikes in CT / GA / OH. The business issue is provider economics on authorized inpatient cases, especially where paid per admit has moved materially higher.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Acute hospital provider payment pressure is concentrated in PA / KY / CT / GA / OH",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "readmission_policy",
+              "label": "Readmit Policy",
+              "type": "text"
+            },
+            {
+              "id": "obstetrical_exclusion",
+              "label": "OB Excluded?",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "readmission_policy": "Generally bundled and ineligible for separate reimbursement.",
+              "obstetrical_exclusion": "Denies"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "readmission_policy": "Unplanned readmissions within 30 days, including same-day, are bundled into the original admission.",
+              "obstetrical_exclusion": "OB Excluded"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "readmission_policy": "-",
+              "obstetrical_exclusion": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "readmission_policy": "-",
+              "obstetrical_exclusion": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_CT_29094460701",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Bundled Services and Supplies - Facility",
+            "tags": [],
+            "effective_date": "06/01/2026",
+            "evidence": "Chemotherapy administration is not separately reimbursable in facility claims when paired with a room or facility fee on the same date of service; Kentucky limits the denial to treatment-room claims and Wisconsin allows separate reimbursement.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/C-23001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "G0498",
+                "96521-96523"
+              ],
+              "related_codes": [
+                "99190-99192"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "room or facility fee",
+                "facility claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "facility"
+              ],
+              "state_specific_rules": [
+                "KY: only deny chemotherapy administration when submitted with a treatment room on same DOS",
+                "WI: chemotherapy administration allowed separately",
+                "KY: separate reimbursement allowed",
+                "OH: separate reimbursement allowed",
+                "IN: separate reimbursement allowed",
+                "WI: separate reimbursement allowed"
+              ],
+              "provider_role_restrictions": [
+                "facility provider"
+              ],
+              "exemptions": [
+                "KY treatment room on same DOS",
+                "WI chemotherapy administration",
+                "KY allows codes 96521-96523, 99190-99192",
+                "OH allows codes 96521-96523, 99190-99192"
+              ],
+              "action_types": [
+                "bundle",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_KY_29094290800",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Moderate (Conscious) Sedation \u2013 Professional and Facility",
+            "tags": [],
+            "effective_date": "10/1/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/C-00808-BCBS.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Inpatient Readmissions",
+            "tags": [],
+            "effective_date": "2025-03-25",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "GB Inpt Readmissions FINAL 05062025",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "General inpatient readmission policy: unplanned readmissions within 30 days to the same hospital for the same, similar, or related condition are not separately reimbursed; same-day readmissions are treated as a continuation of the original admission; planned readmission or leave of absence results in one admission and one DRG payment, subject to contract and market exceptions.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "within 30 days",
+                "same date of service",
+                "same hospital",
+                "same hospital system"
+              ],
+              "utilization_limits": [
+                "30-day readmission window",
+                "one DRG for planned readmission"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "GA: 3-day same/related problem",
+                "OH: 30-day same/similar diagnosis"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Colorado market",
+                "cancer",
+                "newborn",
+                "obstetrical",
+                "behavioral health",
+                "rehabilitation",
+                "sickle cell anemia",
+                "transplants",
+                "transfer",
+                "AMA"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00054",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - In Vitro Chemo-resistance and Chemo-sensitivities Assay",
+            "tags": [],
+            "effective_date": "2023-04",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea96",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00142",
+            "payer_name": "United Health",
+            "policy_title": "Non-Chemotherapy Injection and Infusion Services, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Non-Chemotherapy-Injection-Infusion-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_ALL_28593440000",
+            "payer_name": "United Health",
+            "policy_title": "In Vitro Chemotherapy Assays Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-09-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-In-Vitro-Chemotherapy-Assays-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Lehigh Valley Hospital - Cedar Crest drove about +$0.4M in PA with 12 more admissions and paid per admit up about $9.9K. University of Kentucky Albert B. Chandler Hospital added about +$0.2M in KY with 8 more admissions and paid per admit up about $8.4K. GA acute hospital UTI admissions added about +$0.2M on 24 more admissions, while CT showed a +$55K single high-cost ungroupable case. GA Critical Access added about +$26K on 2 admissions with paid per admit up about $13.0K."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "Rare high-cost IP Med/Surg outliers are creating one-off spikes across CA / PA / VA / KY",
+    "pattern_description": "A meaningful share of inpatient growth is coming from isolated, very expensive Med/Surg admissions rather than recurring utilization waves. The pattern spans CA and PA most visibly, with smaller related spikes in VA and KY across sepsis, chest procedures, revision joint cases, bowel surgery, cardiac procedures, and spinal cord cases. These are case-level outliers and should not be managed with broad policy changes until the individual cases are reviewed.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare high-cost IP Med/Surg outliers are creating one-off spikes across CA / PA / VA / KY",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "badge"
+            },
+            {
+              "id": "bundling_outlier_treatment",
+              "label": "Bundling/Outlier Rules",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Highmark_BCBS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "-",
+              "bundling_outlier_treatment": "-"
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_scope": "Bundles",
+              "bundling_outlier_treatment": "Routine supplies, services, and room-and-board items are bundled, not separately reimbursable, or outlier-eligible."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593510117",
+            "payer_name": "Highmark_BCBS",
+            "policy_title": "Facility Routine Supplies and Services",
+            "tags": [],
+            "effective_date": "2018-12-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-040.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00196",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2024-08-26",
+            "evidence": "Routine hospital supplies, equipment, personnel services, and many ancillary items are bundled into room and board or procedure reimbursement and are not separately reimbursable. For inpatient claims, these items are also excluded from outlier calculations.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim line",
+                "same inpatient or outpatient stay"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "inpatient",
+                "outpatient"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "medically necessary durable medical equipment at discharge"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA spinal cord-related outliers added about +$0.2M, including single admissions of about +$104.0K and +$53.2K. PA rare outliers included about +$94.6K for cardiac valve and catheterization with NSTEMI and about +$39.9K for bowel surgery. Additional one-case spikes appeared in sepsis O.R. procedures, major chest procedures, revision hip or knee cases, and sepsis admissions across CA / KY / PA / VA."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "Authorized acute hospital admissions are rising in VA and other emerging states",
+    "pattern_description": "This pattern is primarily about more authorized acute hospital use rather than pure price inflation. VA is the largest volume story, with additional emerging admission growth in OH and smaller clusters in GA / NY. Because unit cost is mixed, the first lever is admission management and provider-level utilization review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "VA acute hospital spend rose about +$0.6M, driven by roughly 30 more admissions and 32 more claims. OH added about +$0.3M with about 21 more admissions across Lehigh Valley, Lee Memorial, and cellulitis-related cases. GA / NY added about +$80K, led by GA cellulitis admissions, while paid per admit was not consistently higher across the cluster."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "Authorized claims in a Not Mapped facility bucket need a classification fix before site-of-care action",
+    "pattern_description": "A separate validation issue is sitting in the facility classification itself: authorized claims are being grouped into a Not Mapped bucket, especially in VA and smaller clusters in GA, OH, and PA. That means site-of-care comparisons may be overstated or misdirected because some spend is not landing in a valid facility category. Correct classification should happen before any SNF, rehab, or hospital steering action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorized claims in a Not Mapped facility bucket need a classification fix before site-of-care action",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "relevance_notes",
+              "label": "Relevance Notes",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "relevance_notes": "Off-topic: Humana limits urine culture reimbursement by diagnosis, not DRG/site-of-care classification."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00025",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Urine Culture Testing for Bacteria",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "Off-topic for the requested DRG/site-of-care pattern. This policy only addresses urine culture testing reimbursement and diagnosis-based limitations, not cardiac or DRG facility classification issues.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c4",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "VA Not Mapped claims added about +$0.3M with 21 more admissions and 25 more claims. GA Not Mapped added about +$92K, led by Kidney and Urinary Tract Infections without MCC (+$63K) and Ungroupable claims (+$29K). OH / PA Not Mapped added about +$83K and was concentrated at Lee Memorial Hospital."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "KY / VA inpatient oncology and specialty admissions are emerging at a small number of providers",
+    "pattern_description": "A distinct inpatient oncology and specialty case pattern is emerging in KY / VA, led by University of Kentucky Albert B. Chandler Hospital and supported by smaller high-cost specialty admissions at Carilion. The biggest driver is inpatient chemotherapy, with additional complex cancer and specialty surgical cases. This should be managed separately from general Med/Surg outliers because site-of-care, clinical pathways, and reimbursement options are different.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "KY / VA inpatient oncology and specialty admissions are emerging at a small number of providers",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_applicability",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "authorization_rule",
+              "label": "Auth Rule",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_applicability": "Not mentioned; provider/state/federal contract overrides and Kentucky carve-outs may apply.",
+              "authorization_rule": "No Specific Auth"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_applicability": "Excludes cancer-treatment admissions, planned readmissions, same-day continuations, transfers, AMA, and Virginia CAHs/market.",
+              "authorization_rule": "-"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_applicability": "-",
+              "authorization_rule": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_applicability": "-",
+              "authorization_rule": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00013",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Injection and Infusion Administration and Related Services and Supplies",
+            "tags": [],
+            "effective_date": "2024-09-25",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Injection%20and%20Infusion%20Administration%20and%20Related%20Services%20and%20Supplies.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Bundled Services and Supplies C-23001",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "This code is listed as always bundled and not separately reimbursable on facility claims. The policy states no modifier overrides apply. Virginia is excluded from this policy; Kentucky has a narrow chemotherapy/treatment-room exception, but no specific exception is stated for this code.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "G0498",
+                "96521-96523"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "076X"
+              ],
+              "pairing_conditions": [
+                "facility claim",
+                "same claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "facility"
+              ],
+              "state_specific_rules": [
+                "VA: policy not applicable",
+                "KY: separate reimbursement allowed for these codes",
+                "KY: no separate reimbursement with 076X"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "VA not subject to this policy",
+                "KY allows separate reimbursement for 96521-96523"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_KY_29094250802",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Bundled Services and Supplies - Facility",
+            "tags": [],
+            "effective_date": "06/01/2026",
+            "evidence": "No DRG-specific oncology admission rule is stated. For facility inpatient and outpatient claims, chemotherapy administration and other integral services are generally bundled into the facility fee. Kentucky narrows the chemotherapy-administration denial to treatment-room billing on the same date of service and separately identifies a blood-product rule tied to revenue code 076X; Virginia has no oncology-specific exemption in this policy. No provider-specific emerging-provider rule is identified.",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/C-23001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "G0498",
+                "96521-96523",
+                "76014-76019",
+                "76979",
+                "76983",
+                "77293",
+                "77387"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "076X"
+              ],
+              "pairing_conditions": [
+                "same date of service",
+                "same claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "KY: chemotherapy administration denied only with treatment room same date of service",
+                "KY: blood product administration denied with 076X same claim",
+                "KY: separate reimbursement for 96521-96523",
+                "VA: no state-specific exemption identified; default facility bundling applies",
+                "KY: separate reimbursement for Routine ECG, radiology guidance, and insertion of bladder catheters",
+                "KY: separate reimbursement for 76979, 76983, 77293, 77387"
+              ],
+              "provider_role_restrictions": [
+                "facility provider"
+              ],
+              "exemptions": [
+                "provider, state, federal contract and/or requirements indicate otherwise",
+                "KY: chemotherapy administration only denied with treatment room same date of service",
+                "KY: 96521-96523 allowed separately",
+                "KY: 76979, 76983, 77293, 77387 allowed separately"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Inpatient Readmissions",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "General DRG inpatient readmission policy. Separate reimbursement is denied for unplanned readmissions within 30 days for the same, similar, or related condition. Cancer treatment admissions are excluded from readmission review. Kentucky is no longer in scope. Virginia remains under a 30-day readmission rule with same-day consolidation and reduced payment for preventable day 6-30 readmissions.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same day of service",
+                "within 30 days of discharge",
+                "same or similar condition"
+              ],
+              "utilization_limits": [
+                "30-day readmission window",
+                "Virginia days 6-30 at 50%"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [
+                "discharge status 81 (planned readmission)"
+              ],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "KY removed from Exhibit A",
+                "VA 30-day readmission rule",
+                "VA days 1-5 one admission",
+                "VA days 6-30 pay 50%",
+                "VA CAH excluded"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "medical treatment of cancer",
+                "planned readmissions",
+                "acute care transfers",
+                "against medical advice"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "GB Inpt Readmissions FINAL 05062025",
+            "tags": [],
+            "effective_date": "2025-03-25",
+            "evidence": "The policy does not name this DRG, but it treats inpatient readmissions as one admission when they are planned or within the readmission window. Admissions for medical treatment of cancer are excluded from the readmission denial rule, and Virginia has specific 30-day readmission handling. Kentucky is no longer listed in Exhibit A.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "within 30 days",
+                "same day readmission",
+                "same hospital",
+                "same, similar, or related condition"
+              ],
+              "utilization_limits": [
+                "30-day readmission window",
+                "Virginia days 1-5 combined",
+                "Virginia days 6-30 paid at 50%"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "Inpatient"
+              ],
+              "state_specific_rules": [
+                "VA days 1-5 combined",
+                "KY exited Exhibit A 12/31/2024"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Admissions for the medical treatment of cancer"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00054",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - In Vitro Chemo-resistance and Chemo-sensitivities Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea96",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00142",
+            "payer_name": "United Health",
+            "policy_title": "Non-Chemotherapy Injection and Infusion Services, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Non-Chemotherapy-Injection-Infusion-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_ALL_28593440000",
+            "payer_name": "United Health",
+            "policy_title": "In Vitro Chemotherapy Assays Policy, Professional and Facility",
+            "tags": [],
+            "effective_date": "2026-09-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-In-Vitro-Chemotherapy-Assays-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "University of Kentucky Albert B. Chandler Hospital added about +$100.8K from chemotherapy without acute leukemia on 5 admissions at about $20.2K per admit. A single high-dose or leukemia-related chemotherapy admission added about +$36.1K, and a head-and-neck cancer surgery case added about +$32.1K. Carilion New River Valley Medical Center added about +$30.0K from a single complex respiratory O.R. admission."
+      }
+    }
+  }
+]

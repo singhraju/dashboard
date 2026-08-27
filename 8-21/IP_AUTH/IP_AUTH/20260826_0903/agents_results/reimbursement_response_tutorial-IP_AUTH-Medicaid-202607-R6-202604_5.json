@@ -1,0 +1,1217 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicaid-202607-R6-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicaid-202607-R6-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "IN / MD / MO authorization distribution shifts are obscuring market-specific actions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "service_scope",
+          "label": "Service Scope",
+          "type": "text"
+        },
+        {
+          "id": "auth_rule",
+          "label": "Auth Rule",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Neonatal critical/intensive care billing only; psychiatric and vaginal delivery DRGs not addressed.",
+          "auth_rule": "-"
+        },
+        {
+          "payer_org": "CareFirst_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Covers prenatal, postpartum, and delivery-attendance doula services with specified billing requirements.",
+          "auth_rule": "No Auth"
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Uses CPT-based global maternity package bundling, not DRG-based behavioral health or neonatal adjudication.",
+          "auth_rule": "No Auth"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Global maternity package includes routine obstetric care; limited partial-care and certain related services reimburse separately.",
+          "auth_rule": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Multiple-birth delivery reimbursement; no neonatal or psychiatric DRG-specific payment rule mentioned.",
+          "auth_rule": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Not mentioned; policy only addresses obstetric maternity services, not behavioral health or neonatal DRGs.",
+          "auth_rule": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_scope": "Covers global OB, delivery-only, and delivery-plus-postpartum; routine maternity is bundled.",
+          "auth_rule": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589930008",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Newborn and Neonatal Critical and Intensive Care Services",
+        "tags": [],
+        "effective_date": "11/1/2025",
+        "evidence": "Policy is limited to neonatal critical/intensive care billing and does not address psychiatric DRGs.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/newborn-neonatal-critical-intensive-care-serivce.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "99468",
+            "99469",
+            "99477",
+            "99478",
+            "99479",
+            "99480"
+          ],
+          "related_codes": [
+            "31500",
+            "36000",
+            "36140",
+            "36620",
+            "36400",
+            "36405",
+            "36406",
+            "36420",
+            "36600",
+            "36430",
+            "36440",
+            "36510",
+            "36555",
+            "36660",
+            "43752",
+            "51100",
+            "51701",
+            "51702",
+            "62270",
+            "94002-94004",
+            "94375",
+            "94610",
+            "94660",
+            "94760-94762",
+            "94780-94781",
+            "96360",
+            "96361"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0170",
+            "0171",
+            "0172",
+            "0173",
+            "0174"
+          ],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "same date of service",
+            "reported with neonatal critical care codes"
+          ],
+          "utilization_limits": [
+            "28 days of age or younger",
+            "present body weight less than 1,500 grams",
+            "present body weight 1,500-2,500 grams",
+            "present body weight 2,501-5,000 grams"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "bedside or immediately available",
+            "continuously available neonatologist"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589970006",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Maternity Services",
+        "tags": [],
+        "effective_date": "2019-07-01",
+        "evidence": "Off-topic for this policy. The policy is limited to maternity and newborn reimbursement and contains no behavioral health or psychiatric DRG adjudication rules. No IN, MD, or MO authorization variation is described.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/maternity-services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "99221-99223",
+            "99231-99233",
+            "99477",
+            "99478-99480",
+            "99468-99476",
+            "99238",
+            "99464",
+            "59400",
+            "59610",
+            "59425",
+            "59426",
+            "59409",
+            "59612",
+            "59410",
+            "59614",
+            "59430"
+          ],
+          "related_codes": [
+            "99460",
+            "99462",
+            "Z76.2",
+            "54150",
+            "54160",
+            "Z41.2",
+            "59510",
+            "59618",
+            "59514",
+            "59620",
+            "59515",
+            "59622",
+            "80055",
+            "59899"
+          ],
+          "required_modifiers": [
+            "25",
+            "59",
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same day as discharge",
+            "within 1 calendar day of delivery",
+            "day before childbirth admission",
+            "same day as childbirth admission",
+            "same physician or physician group"
+          ],
+          "utilization_limits": [
+            "99477 for 28 days or less",
+            "99478-99480 weight-based",
+            "59425 4-6 visits",
+            "59426 7 or more visits",
+            "59430 one time one unit",
+            "1-2 postpartum office visits"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "another physician requests 99464",
+            "no other patients during 99464",
+            "59430 only if another provider",
+            "same physician or group for twins"
+          ],
+          "exemptions": [
+            "pre-delivery complication inpatient care",
+            "initial visit E/M",
+            "80055",
+            "labs other than urinalysis"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Routine Obstetrics",
+        "tags": [],
+        "effective_date": "2019-07-19",
+        "evidence": "Off-topic for this obstetric reimbursement policy; no depression/neurosis or behavioral health DRG adjudication rules are provided.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "O80",
+            "Z34.00",
+            "Z39.2",
+            "Z36.9"
+          ],
+          "required_modifiers": [
+            "59"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same TIN",
+            "same pregnancy episode",
+            "additional vaginal delivery"
+          ],
+          "utilization_limits": [
+            "first vaginal delivery 100%",
+            "additional vaginal deliveries 50%",
+            "45-day postpartum period"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [
+            "GA: maternity ultrasounds included unless problem-oriented",
+            "KY: maternity ultrasounds included unless problem-oriented",
+            "OH: more than two ultrasounds per pregnancy/fetus not separately reimbursable unless problem-oriented",
+            "VA: more than two ultrasounds per pregnancy/fetus not separately reimbursable unless problem-oriented"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "problem oriented diagnosis",
+            "OB complication diagnoses"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CAREFIRST_BCBS_MD_DC_NV_28594150221",
+        "payer_name": "CareFirst_BCBS",
+        "policy_title": "Doula Services - Professional",
+        "tags": [],
+        "effective_date": "2026-01-01",
+        "evidence": "Covered prenatal doula service visits are reimbursable when billed in 15-minute units. The policy is specific to professional doula services, not DRG payment rules.",
+        "policy_url": "https://secure.compliance360.com/Common/ViewUploadedFile.aspx?PD=PbRt%2bA78MS6Cwhg5zbBTtprogPW3aVu04ezDgdjZOxXMkOOHtVfQIY0DC9B0qVCAIe6xKlQuTeXuGB4iHX5dDuACtwNF7AeY9gQWRLnwAHdO6M65pMi7ou6GPsIW3gjIZdauVGf%2b9%2fR795fPtkWPjJ1gsP5KQ5UAlv9AXJiwROCHXoVkZZf1eyGyF7fJnjKvwo%2fXp9Am0Dq3ubgsZRbkiYHOgmu5veu3LWo61LS2R%2bT6kyM01GibUnwrGf0od3uEUykJFiWP%2faGNWVm9gS2G2%2ba13gT6jVJpCNqv%2bGJbuek%3d",
+        "edit_rule_facts": {
+          "target_codes": [
+            "T1032",
+            "T1033"
+          ],
+          "related_codes": [
+            "T1033"
+          ],
+          "required_modifiers": [
+            "U9"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "during labor process",
+            "immediately before and after delivery"
+          ],
+          "utilization_limits": [
+            "15 min/unit"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "trained doula",
+            "non-clinical provider"
+          ],
+          "exemptions": [
+            "restricted from delivery room during actual birth"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00021",
+        "payer_name": "Cigna",
+        "policy_title": "Global Maternity/Obstetric Package",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Off-topic for this maternity reimbursement policy; no psychiatric DRG adjudication rule is described.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618",
+            "59409",
+            "59410",
+            "59425",
+            "59426",
+            "59430",
+            "59514",
+            "59515",
+            "59612",
+            "59614",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "59200",
+            "96365-96367",
+            "64430",
+            "64435",
+            "51701",
+            "51702",
+            "59414",
+            "96360",
+            "96361",
+            "96372",
+            "90384",
+            "90385",
+            "90460-90474",
+            "59000",
+            "59001",
+            "59015",
+            "59070",
+            "59012",
+            "59020",
+            "59025",
+            "59030",
+            "59412",
+            "01967",
+            "76801-76817",
+            "76820",
+            "76821",
+            "76825-76828",
+            "76818-76819",
+            "99202-99205",
+            "99212-99215",
+            "99381-99397",
+            "76813",
+            "76814",
+            "81000",
+            "81002",
+            "Z32.01",
+            "O10.011-O16.9",
+            "O34.211-O34.219",
+            "Z33.1",
+            "Z34.00-Z34.93",
+            "Z39.0-Z39.2"
+          ],
+          "required_modifiers": [
+            "25",
+            "80",
+            "81",
+            "82",
+            "AS",
+            "62",
+            "66"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "same claim line",
+            "post-delivery billing",
+            "after delivery only"
+          ],
+          "utilization_limits": [
+            "about 13 antepartum visits",
+            "48 hours observation",
+            "72 hours admission",
+            "6 weeks vaginal postpartum",
+            "8 weeks cesarean postpartum"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "multiple gestation",
+            "separate partial care codes",
+            "complication-related visits"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00037",
+        "payer_name": "Cigna",
+        "policy_title": "Multiple Births",
+        "tags": [],
+        "effective_date": "2007-05-21",
+        "evidence": "Multiple-birth deliveries with at least one vaginal delivery are reimbursed at 100% for the primary procedure and 50% for secondary procedures when a multiple gestation diagnosis code is reported.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59610",
+            "59612",
+            "59614",
+            "59510",
+            "59514",
+            "59515",
+            "59618",
+            "59620",
+            "59622"
+          ],
+          "related_codes": [
+            "O30.001-O30.099",
+            "O30.101-O30.199",
+            "O30.201-O30.299",
+            "O30.801-O30.899",
+            "O30.90-O30.93",
+            "Z37.2-Z37.4",
+            "Z37.50-Z37.59",
+            "Z37.60-Z37.69",
+            "Z37.7",
+            "Z38.30-Z38.31",
+            "Z38.4-Z38.5",
+            "Z38.61-Z38.69",
+            "Z38.7-Z38.8",
+            "59409",
+            "59612"
+          ],
+          "required_modifiers": [
+            "22"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "multiple gestation diagnosis",
+            "all deliveries cesarean",
+            "vaginal then cesarean"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "maternity benefits"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_01128",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Multiple Delivery Services",
+        "tags": [],
+        "effective_date": "2025-01-01",
+        "evidence": "This psychiatric DRG is not addressed by the multiple-delivery reimbursement policy.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-093390-25-Multiple-Delivery-Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "59"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same-delivery method",
+            "combined-delivery method",
+            "multiple births",
+            "subsequent vaginal delivery"
+          ],
+          "utilization_limits": [
+            "50% allowance for subsequent vaginal delivery"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [
+            "Florida",
+            "Maryland",
+            "Texas",
+            "Washington"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00128",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Multiple Delivery Services C-19005",
+        "tags": [],
+        "effective_date": "2022-04-29",
+        "evidence": "This is a maternity multiple-delivery policy and does not address this behavioral-health DRG.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "59"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same-delivery or combined-delivery method",
+            "multiple births"
+          ],
+          "utilization_limits": [
+            "each subsequent vaginal delivery at 50%"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00071",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "Global obstetric care is reimbursed as one bundled package when the same group provides antepartum, delivery, and postpartum care. Routine maternity services are included and not separately payable unless specifically excluded by policy.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59410",
+            "59514",
+            "59430"
+          ],
+          "related_codes": [
+            "59510",
+            "59610",
+            "59618",
+            "59425",
+            "59426",
+            "59430",
+            "59409",
+            "59410",
+            "59514",
+            "59515",
+            "59612",
+            "59620",
+            "59622",
+            "59400"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same group same tax ID",
+            "all antepartum delivery postpartum",
+            "single gestation",
+            "total OB package not provided",
+            "postpartum by another provider",
+            "delivery and postpartum only",
+            "limited antepartum care",
+            "non-global cesarean",
+            "assistant surgeon submitted",
+            "postpartum only",
+            "within 6 weeks of delivery"
+          ],
+          "utilization_limits": [
+            "one unit per pregnancy",
+            "one unit per delivery",
+            "one unit per delivery episode",
+            "one assistant-surgeon cesarean claim",
+            "one postpartum package"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same group physician or QHP",
+            "assistant surgeon role required"
+          ],
+          "exemptions": [
+            "confirmatory visit with Z32.01",
+            "separate non-OB conditions",
+            "global OB package already billed",
+            "postpartum included by same group",
+            "routine uncomplicated postpartum visits",
+            "contraception discussion",
+            "global cesarean OB codes",
+            "non-cesarean delivery",
+            "postpartum complications",
+            "problem-focused E/M after package"
+          ],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00277",
+        "payer_name": "Centene",
+        "policy_title": "Global Maternity Billing",
+        "tags": [],
+        "effective_date": "01/01/2013",
+        "evidence": "Off-topic for this behavioral health DRG description. This policy governs global maternity package reimbursement and does not provide adjudication or authorization rules for depressive neuroses.",
+        "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59409",
+            "59510",
+            "59514"
+          ],
+          "related_codes": [
+            "96365-96367",
+            "12041-12047",
+            "13131-13133"
+          ],
+          "required_modifiers": [
+            "22",
+            "51"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same physician/group provides total care",
+            "same global obstetrical period",
+            "calendar day prior to delivery",
+            "calendar day of delivery",
+            "claim billed separate from global"
+          ],
+          "utilization_limits": [
+            "approximately 13 antepartum visits",
+            "6 weeks following delivery",
+            "20 weeks 0 days threshold",
+            "60 days history review"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "global obstetrical package"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "same physician/group for global billing",
+            "split billing if care transferred",
+            "split billing if another physician delivers"
+          ],
+          "exemptions": [
+            "problem-oriented visit confirming pregnancy",
+            "preventive visit confirming pregnancy",
+            "unrelated medical problem management",
+            "pregnancy complication requiring higher complexity",
+            "tubal ligation procedure",
+            "IUD procedure",
+            "state or contractual exception",
+            "patient changes insurers",
+            "patient transfers practice",
+            "non-covering physician delivers"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_27755700011",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Modifier 63",
+        "tags": [],
+        "effective_date": "08/28/2020",
+        "evidence": "Allows reimbursement for eligible surgery on neonates and infants up to 4 kg when Modifier 63 is valid. Payment is at 100% of the applicable fee schedule or contracted/negotiated rate. Facility billing is excluded, and standard assistant surgeon and multiple procedure reductions still apply. The modifier is not allowed with E/M, anesthesia, radiology, pathology/lab, most medicine codes, modifier 22 on the same procedure, or codes that already include neonate or infant in the description.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/abcbsrp-0114-21.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "63"
+          ],
+          "excluded_modifiers": [
+            "22"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same operative session"
+          ],
+          "utilization_limits": [
+            "present body weight up to 4 kg"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [
+            "Applies in CO, CT, GA, IN, KY, ME, MO, NV, NH, NY, OH, VA, WI"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or CMS contracts"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00024",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Preadmission Services for Inpatient Stays",
+        "tags": [],
+        "effective_date": "09/11/2025",
+        "evidence": "Diagnostic and admission-related nondiagnostic preadmission services are bundled into the inpatient payment window for admitting hospitals, with specific hospital-type and state-based exceptions. Modifier PD identifies services subject to the window.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Preadmission%20Services%20for%20Inpatient%20Stays.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "PD"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "three days prior to admission",
+            "one day prior to admission",
+            "including day of admission",
+            "outpatient nondiagnostic service",
+            "related to inpatient admission"
+          ],
+          "utilization_limits": [
+            "3-day payment window",
+            "1-day payment window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "inpatient"
+          ],
+          "state_specific_rules": [
+            "IN: no payment window when inpatient stay is less than 24 hours, unless neonate expires within one day of birth",
+            "MD: outpatient preadmission services before midnight of the day following DOS must be billed with the inpatient claim",
+            "MO: market not subject to this policy"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "critical access hospitals",
+            "RHC/FQHC all-inclusive rate",
+            "unrelated nondiagnostic services",
+            "ambulance services",
+            "maintenance renal dialysis services",
+            "SNF services",
+            "home health services",
+            "hospice services",
+            "specific nondiagnostic services attested as unrelated"
+          ],
+          "action_types": [
+            "bundle",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00082",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Modifier 63",
+        "tags": [],
+        "effective_date": "08/28/2020",
+        "evidence": "The health plan reimburses eligible surgery on neonates and infants up to 4 kg when modifier 63 is valid, generally at 100% of the applicable fee schedule or contracted rate, subject to contract overrides and listed exclusions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Modifier%2063.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "63"
+          ],
+          "excluded_modifiers": [
+            "22"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same operative session"
+          ],
+          "utilization_limits": [
+            "up to 4 kg"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "Colorado Medicaid exempt",
+            "Missouri Medicaid exempt",
+            "Ohio Medicaid exempt",
+            "Louisiana Medicaid special payment rule"
+          ],
+          "provider_role_restrictions": [
+            "assistant surgeon reductions apply"
+          ],
+          "exemptions": [
+            "provider, state, federal, or CMS contracts/requirements",
+            "Colorado Medicaid",
+            "Missouri Medicaid",
+            "Ohio Medicaid"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00130",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Sterilization",
+        "tags": [],
+        "effective_date": "06/08/2026",
+        "evidence": "Off-topic. This policy addresses sterilization reimbursement in surgery and obstetric settings and does not govern behavioral health DRGs such as depressive neuroses.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Sterilization.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "58600",
+            "58605",
+            "58611",
+            "58615"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "performed in conjunction with delivery",
+            "multiple surgeries claim"
+          ],
+          "utilization_limits": [
+            "30-180 days before procedure",
+            "72 hours before procedure in premature delivery/emergency surgery"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "IN: consent form not required for illness or injury causing sterility when prior acknowledgement was not possible; alternative documentation required",
+            "IN: consent form not required if patient was already sterile prior to the procedure; alternative documentation required",
+            "IN: consent form not required if the procedure does not render the patient sterile, such as unilateral rather than bilateral; alternative documentation required",
+            "MD: consent form submission not required for claims processing",
+            "MO: no current state-specific exception is stated in the active policy body",
+            "TN: facility reimbursement denied for sterilization with caesarean delivery or vaginal delivery with sterilization when reimbursed under DRG methodology",
+            "WV: sterilization services carved out unless multiple surgeries include 58600, 58605, 58611, or 58615"
+          ],
+          "provider_role_restrictions": [
+            "physician performing sterilization signature required",
+            "person obtaining consent signature required",
+            "interpreter signature if applicable"
+          ],
+          "exemptions": [
+            "premature delivery or emergency abdominal surgery 72-hour wait",
+            "IN illness or injury when prior acknowledgement not possible",
+            "IN already sterile prior to procedure",
+            "IN unilateral or non-sterilizing procedure",
+            "MD consent form submission not required for claims processing",
+            "WV carved out unless multiple surgeries include 58600, 58605, 58611, or 58615"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00490",
+        "payer_name": "United Health",
+        "policy_title": "Obstetrical Services Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-02-01",
+        "evidence": "The policy is obstetrical and does not address psychiatric DRG payment or authorization rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "59400",
+            "59510",
+            "59610",
+            "59618"
+          ],
+          "related_codes": [
+            "59425",
+            "59426",
+            "59410",
+            "59515",
+            "59614",
+            "59622"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "state exception",
+            "delivery and postpartum"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid",
+            "CMS-1500"
+          ],
+          "state_specific_rules": [
+            "IN: global codes not covered",
+            "MD: global OB and 59425/59426 not reimbursed",
+            "MO: global codes not reimbursed effective 08-01-2022"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 15,
+    "policies_successful": 15,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For cesarean billing, require CPT 59510 when the \"same physician/group provides total care\" in the \"same global obstetrical period\"; reserve CPT 59514 for claims \"billed separate from global,\" with split billing if care is transferred or another physician delivers. Exempt: state or contractual exception, patient changes insurers, patient transfers practice, non-covering physician delivers. Peer: Cigna, Centene, and United Health all use 59510/59514 to separate global cesarean care from delivery-only cesarean billing..\n\nRecommendation 2: Limit CPT 59430 to \"59430 one time one unit\" / \"one postpartum package\" and allow it only for \"postpartum by another provider\" or \"59430 only if another provider\"; keep routine uncomplicated postpartum care included after the cesarean episode. Exempt: postpartum complications, problem-focused E/M after package. Peer: BCBS_KC, Cigna, and United Health all carve 59430 into a postpartum-only lane, with BCBS_KC and United Health limiting it to single-package use when another provider performs postpartum care..\n\nRecommendation 3: Bundle outpatient nondiagnostic services related to an inpatient cesarean admission when furnished \"three days prior to admission,\" \"one day prior to admission,\" or \"including day of admission\"; require modifier \"PD\" and enforce the \"3-day payment window\" / \"1-day payment window\". Exempt: critical access hospitals, RHC/FQHC all-inclusive rate, unrelated nondiagnostic services, ambulance services, maintenance renal dialysis services, SNF services, home health services, hospice services.",
+      "evidence": [
+        "Centene \u00b7 Global Maternity Billing: \"59510\" [target_codes]",
+        "Centene \u00b7 Global Maternity Billing: \"59514\" [target_codes]",
+        "Centene \u00b7 Global Maternity Billing: \"same physician/group provides total care\" [pairing_conditions]",
+        "Centene \u00b7 Global Maternity Billing: \"same global obstetrical period\" [pairing_conditions]",
+        "Centene \u00b7 Global Maternity Billing: \"claim billed separate from global\" [pairing_conditions]",
+        "Centene \u00b7 Global Maternity Billing: \"split billing if care transferred\" [provider_role_restrictions]",
+        "Centene \u00b7 Global Maternity Billing: \"split billing if another physician delivers\" [provider_role_restrictions]",
+        "Centene \u00b7 Global Maternity Billing: \"state or contractual exception\" [exemptions]",
+        "Centene \u00b7 Global Maternity Billing: \"patient changes insurers\" [exemptions]",
+        "Centene \u00b7 Global Maternity Billing: \"patient transfers practice\" [exemptions]",
+        "Centene \u00b7 Global Maternity Billing: \"non-covering physician delivers\" [exemptions]",
+        "BCBS_KC \u00b7 Maternity Services: \"59430\" [target_codes]",
+        "BCBS_KC \u00b7 Maternity Services: \"59430 one time one unit\" [utilization_limits]",
+        "BCBS_KC \u00b7 Maternity Services: \"59430 only if another provider\" [provider_role_restrictions]",
+        "Cigna \u00b7 Global Maternity/Obstetric Package: \"59430\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"59430\" [target_codes]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"postpartum by another provider\" [pairing_conditions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"one postpartum package\" [utilization_limits]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"routine uncomplicated postpartum visits\" [exemptions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"postpartum complications\" [exemptions]",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"problem-focused E/M after package\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"PD\" [required_modifiers]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"three days prior to admission\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"one day prior to admission\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"including day of admission\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"outpatient nondiagnostic service\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"related to inpatient admission\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"3-day payment window\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"1-day payment window\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"critical access hospitals\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"RHC/FQHC all-inclusive rate\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"unrelated nondiagnostic services\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"ambulance services\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"maintenance renal dialysis services\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"SNF services\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"home health services\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays: \"hospice services\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna, Centene, and United Health all use 59510/59514 to separate global cesarean care from delivery-only cesarean billing.",
+        "BCBS_KC, Cigna, and United Health all carve 59430 into a postpartum-only lane, with BCBS_KC and United Health limiting it to single-package use when another provider performs postpartum care."
+      ],
+      "citation": [
+        "Centene \u00b7 Global Maternity Billing \u2014 https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "BCBS_KC \u00b7 Maternity Services \u2014 https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/maternity-services.pdf",
+        "Cigna \u00b7 Global Maternity/Obstetric Package \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+        "United Health \u00b7 Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+        "Elevance Health (internal) \u00b7 Preadmission Services for Inpatient Stays \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Preadmission%20Services%20for%20Inpatient%20Stays.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: IN / MD / MO authorization distribution shifts are obscuring market-specific actions",
+    "pattern_rank": 5,
+    "pattern_title": "IN / MD / MO authorization distribution shifts are obscuring market-specific actions",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Depressive Neuroses",
+      "Full Term Neonate with Major Problems",
+      "Vaginal Delivery with O.R. Procedures Except Sterilization and/or D&C"
+    ],
+    "total_policies_found": 15,
+    "successful_extractions": 15,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 15 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "15 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['IN', 'MD', 'MO'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/15 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/15 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 130967,
+    "output": 170895,
+    "breakdown": {
+      "search_keywords": {
+        "input": 549,
+        "output": 663,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 704,
+        "output": 2244,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 99560,
+        "output": 158309,
+        "calls": 18
+      },
+      "relevance_judge": {
+        "input": 7206,
+        "output": 2950,
+        "calls": 15
+      },
+      "dynamic_columns": {
+        "input": 1136,
+        "output": 573,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 2153,
+        "output": 1250,
+        "calls": 14
+      },
+      "elevance_summary": {
+        "input": 467,
+        "output": 366,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 15609,
+        "output": 3941,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3583,
+        "output": 599,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-26T09:29:01.074784+00:00",
+    "end_time": "2026-08-26T09:34:42.273715+00:00",
+    "duration_ms": 341198,
+    "version": "2.0.0"
+  }
+}

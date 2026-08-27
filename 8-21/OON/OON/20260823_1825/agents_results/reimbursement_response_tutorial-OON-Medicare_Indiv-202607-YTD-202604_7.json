@@ -1,0 +1,155 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_7_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-YTD-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX IP Med/Surg has a small number of very high-cost outliers",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Mentioned?",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope_summary",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: TX IP Med/Surg has a small number of very high-cost outliers",
+    "pattern_rank": 7,
+    "pattern_title": "TX IP Med/Surg has a small number of very high-cost outliers",
+    "cpt_codes_requested": [
+      "K2101"
+    ],
+    "drg_codes_requested": [
+      "Major Esophageal Disorders with MCC",
+      "Major Skin Disorders without MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/1 policies quarantined (100%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_MOH_00103:Hydrolyzed Enteral Formula Diagnosis]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 9278,
+    "output": 8874,
+    "breakdown": {
+      "search_keywords": {
+        "input": 530,
+        "output": 532,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 5198,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 333,
+        "output": 300,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 6923,
+        "output": 935,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 435,
+        "output": 1555,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 619,
+        "output": 354,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:46:13.202135+00:00",
+    "end_time": "2026-08-23T19:46:44.750946+00:00",
+    "duration_ms": 31548,
+    "version": "2.0.0"
+  }
+}

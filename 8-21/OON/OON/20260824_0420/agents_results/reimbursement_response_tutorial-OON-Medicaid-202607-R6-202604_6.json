@@ -1,0 +1,153 @@
+{
+  "job_id": "tutorial-OON-Medicaid-202607-R6-202604_6_job",
+  "conversation_id": "tutorial-OON-Medicaid-202607-R6-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TANF Standard acute hospital spend is rising through scattered one-off admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_MOH_00599",
+        "payer_name": "Molina",
+        "policy_title": "Facility Emergency Department Evaluation and Management leveling",
+        "tags": [],
+        "effective_date": "01/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/FacilityEmergencyDepartmentEvaluationandManagementleveling12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: TANF Standard acute hospital spend is rising through scattered one-off admissions",
+    "pattern_rank": 6,
+    "pattern_title": "TANF Standard acute hospital spend is rising through scattered one-off admissions",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Inguinal and Femoral Hernia Procedures without CC/MCC",
+      "Other Musculoskeletal System and Connective Tissue O.R. Procedures with CC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'FL', 'CA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 8347,
+    "output": 2914,
+    "breakdown": {
+      "search_keywords": {
+        "input": 546,
+        "output": 533,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 516,
+        "output": 1439,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 6106,
+        "output": 760,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1179,
+        "output": 182,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T05:06:13.908983+00:00",
+    "end_time": "2026-08-24T05:06:39.105261+00:00",
+    "duration_ms": 25196,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a TX DSNP HMO acute inpatient policy review for PA-required ER admissions concentrated at BEN TAUB HOSPITAL and other highest-cost acute facilities, targeting Kidney and Urinary Tract Infections with MCC, Kidney and Urinary Tract Infections without MCC, Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC, and Acute Myocardial Infarction, Discharged Alive with MCC, to confirm prior authorization, enforce denials, review UM/P.A.V. criteria for UTI SITE NOT SPECIFIED and ACUTE CYSTITIS WITHOUT HEMATURIA admissions, and verify claims are processing per contractual reimbursement obligations with site-of-care or contract remediation action.",
+        "evidence": [
+          "TX DSNP acute hospital utilization added $48.3M with 2,169 more admissions.",
+          "Kidney/UTI with MCC paid per admit rose about $9.2K.",
+          "Metabolic/electrolyte DRGs paid per admit rose about $2.7K.",
+          "UTI SITE NOT SPECIFIED added $1.1M on 96 admissions.",
+          "ACUTE CYSTITIS WITHOUT HEMATURIA added $0.5M."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit TX AUTH_CODE_DISTRIBUTION PA mapping by reconciling prior-auth-required Y/N buckets to paid inpatient claims and denial enforcement, and review claims processing/reprocessing for BEN TAUB HOSPITAL DSNP HMO acute ER admits, prioritizing Kidney and Urinary Tract Infections with MCC before any UM or reimbursement policy change.",
+        "evidence": [
+          "TX AUTH_CODE_DISTRIBUTION accounts for about $44.1M of movement.",
+          "Kidney and Urinary Tract Infections with MCC adds about $151K.",
+          "Pattern flags auth_or_mapping_shift and requires_validation_before_action.",
+          "Largest affected context includes BEN TAUB HOSPITAL, DSNP HMO, acute hospital, ER admits.",
+          "Business terms include auth-to-claim validation and coding validation."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX excludes asymptomatic urinary screening, prostate biopsy assessment, and post-resolution follow-up cultures.",
+          "Centene limits asymptomatic bacteriuria coverage and denies molecular or multiplex UTI panels.",
+          "Humana denies routine general encounter primary diagnoses without abnormal findings."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a TX inpatient claims and contract remediation review for PA-required DSNP HMO Not Mapped claims and DSNP HMO/CSNP HMO Physical Rehab claims at TEXAS REHABILITATION HOSPITAL OF FORT WORT, including authorization-to-actual matching, payment reprocessing where contract logic failed, and site-of-care review for higher-cost utilization.",
+        "evidence": [
+          "TX DSNP HMO Not Mapped spend increased $8.3M across 190 admissions.",
+          "Not Mapped paid per admit increased about $31.6K.",
+          "Physical Rehab pressure includes TEXAS REHABILITATION HOSPITAL OF FORT WORT.",
+          "All component groups have PA required indicator Y."
+        ],
+        "peer_benchmarking": [
+          "Humana: No site-of-care restrictions stated in provided policy summary."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a VA PA-required acute-hospital inpatient exception review for Acute Myocardial Infarction, Discharged Alive with MCC; Kidney and Urinary Tract Infections with and without MCC; Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC; and Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC across impacted DSNP HMO, CSNP HMO, and Medicare HMO lines, confirming prior authorization, comparing provider paid-per-admit for SENTARA NORFOLK GENERAL HOSPITAL and other named facilities, and escalating outlier units for site-of-care, contract compliance, and contract remediation review.",
+        "evidence": [
+          "HTN HRT CKD W/HF STAGE 1-4/UNS CKD leads AMI with MCC growth.",
+          "FLUID OVERLOAD UNSPECIFIED and HYPERKALEMIA drive metabolic-electrolyte MCC admissions.",
+          "Kidney and Urinary Tract Infections with MCC shows mixed volume and unit-cost pressure.",
+          "PA-required acute hospital claims recur across DSNP HMO, CSNP HMO, and Medicare HMO.",
+          "SENTARA NORFOLK GENERAL HOSPITAL appears on a leading AMI with MCC card."
+        ],
+        "peer_benchmarking": [
+          "Humana applies Medicare Advantage criteria and limits CHF and serial troponin testing frequency."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Hold any IN and VA policy or UM changes tied to AUTH_CODE_DISTRIBUTION until a state- and provider-level auth-to-paid-claim reconciliation and contractual claims-processing review is completed for Acute Myocardial Infarction, Discharged Alive with MCC; Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC; and Kidney and Urinary Tract Infections without MCC.",
+        "evidence": [
+          "Flags show auth_or_mapping_shift and requires_validation_before_action.",
+          "IN and VA AUTH_CODE_DISTRIBUTION movement totals about $3.3M.",
+          "Largest affected DRGs are AMI with MCC and metabolic-electrolyte with MCC.",
+          "Recommended next step is reconcile authorization coding to paid claims."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) lists Requires Auth.",
+          "Humana shows no documented policy mention or auth detail."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a targeted DSNP HMO acute inpatient utilization management and prior-authorization enforcement review in VA first, then CT, FL, LA, NJ, TN, and WI, limited to Acute Myocardial Infarction, Discharged Alive with MCC; Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC; Kidney and Urinary Tract Infections with MCC; and Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC, and reconcile authorization records to actual admissions for claims-processing escalation where mismatches are found.",
+        "evidence": [
+          "Recurring DSNP HMO acute hospital growth spans CT, FL, LA, NJ, TN, VA, and WI.",
+          "Pattern is utilization-led, with admissions up and unit cost mixed.",
+          "VA contributes most pressure in AMI and metabolic-electrolyte DRGs.",
+          "Auth dimension present and business terms flag auth-to-claim validation.",
+          "Drill context names Sentara Norfolk General, Ben Taub, and Queens Hospital Center."
+        ],
+        "peer_benchmarking": [
+          "Humana summary shows no relevant inpatient DRG adjudication policy for this DSNP acute pattern."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a provider-specific contract compliance and claims-processing review for THE CLEVELAND CLINIC FOUNDATION and UHCMC, including auth-to-claim matching and site-of-care validation for Medicare HMO Not Mapped and DSNP HMO acute admissions involving Acute Myocardial Infarction, Discharged Alive with MCC; Kidney and Urinary Tract Infections with MCC; and Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC.",
+        "evidence": [
+          "OH spend pressure is concentrated in THE CLEVELAND CLINIC FOUNDATION and UHCMC.",
+          "Medicare HMO Not Mapped claims drove pressure across both providers.",
+          "DSNP HMO acute admissions rose for AMI with MCC.",
+          "Kidney/UTI with MCC also contributed to acute inpatient growth.",
+          "Invalid facility rows indicate classification weakness in OH site-of-care data.",
+          "PA-required claims carry auth-to-claim validation flags."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles UB04 hospital facility claims; routine services and supplies are not separate.",
+          "Humana bundles and documents restricted independent lab rules for ACS symptoms."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a case-level claims and contract compliance audit for UHCMC, THE CLEVELAND CLINIC FOUNDATION, and KAWEAH DELTA HEALTH CARE inpatient outliers tied to tracheostomy and prolonged mechanical ventilation, Connective Tissue Disorders with MCC, and coronary bypass with MCC; confirm eligibility, contractual adjudication, final-bill status, and zeroed interim or first claims before any broader inpatient policy action.",
+        "evidence": [
+          "UHCMC had a single tracheostomy and prolonged mechanical ventilation admission with ACQUIRED HEMOPHILIA.",
+          "THE CLEVELAND CLINIC FOUNDATION had a single Connective Tissue Disorders with MCC admission.",
+          "KAWEAH DELTA HEALTH CARE had a single coronary bypass with MCC admission.",
+          "Pattern flags include low_volume_run, repeated_delta_concentration, and small_n_admissions.",
+          "Validation needed because cases are low-volume and include unattributed admissions."
+        ],
+        "peer_benchmarking": [
+          "Cigna notes bundled facility and respiratory reimbursement is off-topic for DRG inpatient outlier adjudication.",
+          "Molina bundles routine hospital services and identifies no separate outlier reimbursement approach.",
+          "United Health bundles routine UB04 facility services, not catastrophic DRG outlier review."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The spend surge is concentrated in a narrow inpatient diagnosis/DRG mix\u2014kidney/UTI, metabolic-electrolyte, and cardiac admissions\u2014making diagnosis-level isolation the clearest parent trend.; IP MedSurg (DNE) Trend 6: The pattern is primarily admission-volume led with a recommended UM review of avoidable admissions, directly aligning to review of utilization management KPIs and the PAV waterfall.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially in key DRGs and the next step explicitly calls for reimbursement review of high-cost acute hospital facilities, fitting reimbursement method review.; IP MedSurg (DNE) Trend 1: The pattern points to acute hospital facility concentration and specific high-cost facility review, so provider-level variance is a relevant parent rule.; IP MedSurg (DNE) Trend 8: The pattern includes PA-required admissions, auth-related flags, and auth-to-claim validation business terms, making authorization enforcement a relevant supporting rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most direct match: the pattern is explicitly flagged as an auth_or_mapping_shift, includes 'auth-to-claim validation' as a business term, and recommends reconciling PA-required buckets to paid inpatient claims.; IP MedSurg (DNE) Trend 9: Highly relevant because the recommended next step includes auditing recent data loads and mapping; claim processing/reprocessing or status changes could be causing the AUTH_CODE_DISTRIBUTION movement rather than true care change.; IP MedSurg (DNE) Trend 6: Relevant because the issue can distort PA reporting and UM performance measures; reviewing UM KPI/PAV impacts helps determine whether this is reporting artifact versus true utilization management change.; IP MedSurg (DNE) Trend 1: Useful secondary scoping rule because the largest signal is concentrated in a specific provider context (BEN TAUB HOSPITAL), suggesting the mapping or submission issue may be provider-localized.; IP MedSurg (DNE) Trend 3: Useful secondary scoping rule because one validated affected area is the DRG 'Kidney and Urinary Tract Infections with MCC,' so diagnosis/DRG-level review can help reconcile where the authorization classification shift is appearing."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 7: The core issue is a TX site-of-care shift with rehab routing and uncertainty between acute, rehab, and unmapped facility classifications, which aligns directly to reviewing admission/discharge source and location.; IP MedSurg (DNE) Trend 10: Paid per admit increased sharply, especially in Not Mapped rows, and the recommended next step includes reviewing payment levels, making reimbursement method highly relevant.; IP MedSurg (DNE) Trend 8: All component groups are PA-required and the cards explicitly reference auth-to-claim validation, so authorization enforcement and matching are important to test.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a narrow TX provider/facility subset, including Texas Rehabilitation Hospital of Fort Wort and unmapped facility rows, supporting provider-driver review.; IP MedSurg (DNE) Trend 9: The largest spend sits in Not Mapped facility rows, so claims adjudication, reprocessing, or classification issues should be checked to confirm facilities are handled per contractual standards."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is explicitly concentrated in a narrow set of diagnoses\u2014heart failure/cardiac, electrolyte disorders, kidney/UTI, and GI\u2014making diagnosis-level isolation the strongest parent rule match.; IP MedSurg (DNE) Trend 6: Admissions are up and the recommended action is avoidable admission review plus targeted UM worklists, which aligns directly to reviewing utilization management KPIs and the PAV waterfall.; IP MedSurg (DNE) Trend 1: Several leading cards point to specific hospitals/providers and the recommendation includes provider comparison on highest-cost inpatient DRGs, so provider concentration is highly relevant.; IP MedSurg (DNE) Trend 4: Variance is also concentrated in a narrow set of inpatient DRGs/services such as AMI with MCC, metabolic/electrolyte MCC, kidney/UTI, and GI DRGs, supporting service-driver review.; IP MedSurg (DNE) Trend 7: Top drivers are acute hospital ER admits and the next step emphasizes discharge planning, so admission/discharge source and location review is relevant to determine whether utilization is being driven by emergent inpatient flow."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 9,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned. The pattern is explicitly an AUTH_CODE_DISTRIBUTION/auth mapping validation issue, flagged as requiring validation before action, and the recommended next step is to reconcile authorization coding to paid claims\u2014an exact match to Auth-to-Claim review.; IP MedSurg (DNE) Trend 9: Highly relevant secondary rule because the issue may reflect claims processing, reprocessing, or reporting/classification behavior rather than true utilization change. The pattern specifically warns against operationalizing until coding-to-claims reconciliation is complete.; IP MedSurg (DNE) Trend 3: Relevant because the variance is concentrated in a subset of inpatient DRGs/diagnosis groupings: AMI with MCC, metabolic-electrolyte disorders with MCC, and kidney/UTI without MCC. Diagnosis concentration helps scope the validation work.; IP MedSurg (DNE) Trend 10: Moderately relevant as a downstream check if auth classification appears correct but payment behavior still differs. Reimbursement method review can help determine whether auth status is being translated appropriately into payment outcomes.; IP MedSurg (DNE) Trend 1: Supportive but lower-priority rule because the variance is isolated to specific states and some provider contexts in the source cards, so provider concentration could help identify whether the mapping issue is localized to certain facilities or billing setups."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: This is the strongest fit because the pattern is explicitly utilization-led, with admissions driving most of the +$3.0M increase across DSNP acute inpatient settings; the recommended next step is also targeted UM review.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a subset of diagnoses/DRGs, especially AMI with MCC, metabolic-electrolyte disorders with MCC, kidney/UTI with MCC, and GI DRGs, making diagnosis-driver review highly relevant.; IP MedSurg (DNE) Trend 1: VA contributes the largest share of the increase and drill context points to specific hospitals, so testing whether growth is concentrated among certain providers is important.; IP MedSurg (DNE) Trend 8: Authorization-related review is relevant because the pattern includes auth dimensions, Y/N authorization splits, and business terms explicitly calling for auth-to-claim validation.; IP MedSurg (DNE) Trend 7: The admissions are acute and often ER-linked, so reviewing admission source/location to understand whether the rise reflects a shift in non-elective inpatient volume is appropriate."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small set of providers, primarily THE CLEVELAND CLINIC FOUNDATION and UHCMC, making provider-level behavior and contract review the top parent rule fit.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended next step includes comparing provider payment levels, which aligns directly to reimbursement method and contractual payment review.; IP MedSurg (DNE) Trend 3: The increase is also concentrated in specific inpatient diagnoses/DRGs such as AMI with MCC, kidney/UTI with MCC, and major cardiothoracic cases, supporting diagnosis-driver investigation.; IP MedSurg (DNE) Trend 4: Variance spans acute hospital claims plus Not Mapped and Invalid facility rows, so service/site-of-care concentration and classification of where care is billed are highly relevant.; IP MedSurg (DNE) Trend 8: Major operational drivers are PA-required claims with auth_dimension_present and auth-to-claim validation flagged, so authorization-to-claim enforcement should be checked as part of the utilization review."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: High spend is concentrated in a small set of providers, especially UHCMC and THE CLEVELAND CLINIC FOUNDATION, so provider-level isolation is a primary fit.; IP MedSurg (DNE) Trend 2: The increase is driven by single-admission catastrophic cases affecting very few members, matching a subset-of-members pattern that requires case-level review.; IP MedSurg (DNE) Trend 3: Rare diagnoses such as ACQUIRED HEMOPHILIA and OTHER THROMBOTIC MICROANGIOPATHY are explicit drivers, making diagnosis-level isolation highly relevant.; IP MedSurg (DNE) Trend 4: Specific inpatient DRGs/services, including prolonged mechanical ventilation tracheostomy and coronary bypass with MCC, are driving the variance, so service-level review is important.; IP MedSurg (DNE) Trend 9: The recommended action calls for claim-level confirmation of payment accuracy and provider contract application, which aligns directly with claims processing/reprocessing review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T15:33:12.098320+00:00"
+  }
+}

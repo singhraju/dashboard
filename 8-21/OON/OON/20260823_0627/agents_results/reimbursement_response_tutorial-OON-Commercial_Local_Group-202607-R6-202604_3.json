@@ -1,0 +1,336 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-R6-202604_3_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-R6-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "UNATTRIBUTED inpatient Med/Surg costs are being driven by rare catastrophic cases",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "payment_path",
+          "label": "Payment Path",
+          "type": "text"
+        },
+        {
+          "id": "outlier_rules",
+          "label": "Outlier Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_path": "-",
+          "outlier_rules": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_path": "-",
+          "outlier_rules": "-"
+        },
+        {
+          "payer_org": "State FFS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_path": "Usually paid in bundled DRG stay payments, with carve-outs, global fees, and per diem exceptions.",
+          "outlier_rules": "Outliers pay above thresholds; certain transplants reimburse billed charges up to global maximums."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00181",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Robotic Assisted Surgery RETIRED",
+        "tags": [],
+        "effective_date": "2006-10-17",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Robotic%20Assisted%20Surgery%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595760206",
+        "payer_name": "Point32Health",
+        "policy_title": "General Coding and Claims Editing",
+        "tags": [],
+        "effective_date": "01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/general-coding-and-claims-editing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_STATE_FFS_FL_28206630003",
+        "payer_name": "State FFS",
+        "policy_title": "Payment Methodology for Inpatient Hospital Services",
+        "tags": [],
+        "effective_date": "2017-07-01",
+        "evidence": "Florida Medicaid uses APR-DRGs for most acute inpatient hospital stays. The stay is generally paid as one bundled DRG payment, but unusually high-cost cases may qualify for outlier payment. Transfer status, non-covered days, charge cap, and HCAC repricing can change the final amount.",
+        "policy_url": "https://ahca.myflorida.com/content/download/7025/file/59G-6.020_Inpatient_Services_2018.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient stay",
+            "transplant phase"
+          ],
+          "utilization_limits": [
+            "annual DRG update",
+            "365 days transplant-related care"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "discharge status 02 (transferred to short-term general hospital for inpatient care)",
+            "discharge status 05 (transferred to designated cancer center or children's hospital)",
+            "discharge status 65 (transferred to psychiatric hospital or distinct part unit)",
+            "discharge status 66 (transferred to critical access hospital)",
+            "discharge status 82 (planned acute care hospital inpatient readmission)",
+            "discharge status 85 (planned readmission to cancer center or children's hospital)",
+            "discharge status 93 (planned readmission to psychiatric distinct part of a hospital)",
+            "discharge status 94 (planned readmission to critical access hospital)"
+          ],
+          "program_scope": [
+            "DRG",
+            "transplant global fee"
+          ],
+          "state_specific_rules": [
+            "Florida: APR-DRG v34 effective July 1, 2017",
+            "Florida: outlier threshold and marginal cost factor set annually",
+            "Florida: global transplant fee"
+          ],
+          "provider_role_restrictions": [
+            "approved transplant center"
+          ],
+          "exemptions": [
+            "state-owned psychiatric specialty facilities",
+            "global transplant fee",
+            "tuberculosis resistant to therapy",
+            "dually eligible crossover claims",
+            "standard DRG reimbursement"
+          ],
+          "action_types": [
+            "bundle",
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Adopt a DRG/transplant carve-out edit: keep rare catastrophic inpatient cases in bundled \"DRG\" payment by default, but route any case in the \"same inpatient stay\" and \"transplant phase\" to the \"transplant global fee\" for up to \"365 days transplant-related care\" only at an \"approved transplant center\" rather than repricing it as standard DRG reimbursement. Exempt: global transplant fee, standard DRG reimbursement.",
+      "evidence": [
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"same inpatient stay\" [pairing_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"transplant phase\" [pairing_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"365 days transplant-related care\" [utilization_limits]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"DRG\" [program_scope]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"transplant global fee\" [program_scope]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"approved transplant center\" [provider_role_restrictions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"standard DRG reimbursement\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services \u2014 https://ahca.myflorida.com/content/download/7025/file/59G-6.020_Inpatient_Services_2018.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: UNATTRIBUTED inpatient Med/Surg costs are being driven by rare catastrophic cases",
+    "pattern_rank": 3,
+    "pattern_title": "UNATTRIBUTED inpatient Med/Surg costs are being driven by rare catastrophic cases",
+    "cpt_codes_requested": [
+      "I69193"
+    ],
+    "drg_codes_requested": [
+      "Coronary Bypass with Cardiac Catheterization or Open Ablation with MCC",
+      "Degenerative Nervous System Disorders with MCC",
+      "Lung Transplant"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 3 of 3 source card(s) attest no state (segment scope: UNATTRIBUTED); searched without it rather than narrowing to []"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped the transfer/readmission edit as scope drift; the transplant carve-out remained aligned with the pattern's catastrophic inpatient cost drivers."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 55059,
+    "output": 20026,
+    "breakdown": {
+      "search_keywords": {
+        "input": 550,
+        "output": 531,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 544,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 823,
+        "output": 2954,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 46216,
+        "output": 12014,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 499,
+        "output": 144,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 890,
+        "output": 591,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 394,
+        "output": 401,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 360,
+        "output": 125,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2446,
+        "output": 2100,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2443,
+        "output": 622,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T07:09:08.649058+00:00",
+    "end_time": "2026-08-23T07:10:48.243053+00:00",
+    "duration_ms": 99593,
+    "version": "2.0.0"
+  }
+}

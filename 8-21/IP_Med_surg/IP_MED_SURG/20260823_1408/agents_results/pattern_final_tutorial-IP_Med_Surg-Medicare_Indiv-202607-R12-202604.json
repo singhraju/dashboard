@@ -1,0 +1,1068 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Validate authorization-code movement and unmapped facility buckets before acting",
+    "pattern_description": "A large share of apparent spend growth is tied to authorization classification movement and unmapped facility assignment rather than a clearly confirmed utilization trend. TX authorization-code redistribution is the largest issue, and additional dollars sit in Not Mapped facility buckets in TX, OH, and KY, with a smaller but still material validation signal in VA. Validate PA-to-claim mapping and facility assignment before tightening UM rules or changing reimbursement, because part of the increase may be administrative drift instead of true medical change.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Validate authorization-code movement and unmapped facility buckets before acting",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00053",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Immune Cell Function Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00151",
+            "payer_name": "Humana",
+            "policy_title": "Modifier 62",
+            "tags": [],
+            "effective_date": "06/2010",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX AUTH_CODE_DISTRIBUTION accounts for about +$65.2M of the apparent increase and is flagged for validation before action. TX DSNP HMO claims in Not Mapped facilities added about +$9.1M, with 225 more admissions and about +$24.0K higher paid per admit. VA AUTH_CODE_DISTRIBUTION adds about +$0.7M tied to Aftercare, Musculoskeletal System and Connective Tissue with MCC. OH and KY Not Mapped Medicare or DSNP HMO segments add about +$0.6M more and are also flagged as unmapped."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "TX special needs products are driving a major acute hospital admission surge",
+    "pattern_description": "TX special needs products are seeing a very large rise in authorized acute hospital spend driven mainly by more inpatient activity, not higher price per admission. DSNP HMO contributes most of the increase, and CSNP HMO adds a smaller but still material lift. This is an inpatient volume-management issue first, with thousands of added admissions despite slightly lower paid per admit.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX special needs products are driving a major acute hospital admission surge",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00004",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Genetic Tests Once per Lifetime",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Laboratory%20and%20Pathology/Genetic%20Tests%20Once%20per%20Lifetime.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00019",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Parathyroid Hormone, Phosphorus, Calcium and Magnesium Testing",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29bd",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00032",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Cardiovascular Disease Risk Assessment in Adults",
+            "tags": [],
+            "effective_date": "07/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9e4b",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00061",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Oral Screening Lesion Identification Systems",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298639390d",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00097",
+            "payer_name": "Humana",
+            "policy_title": "Observation Services",
+            "tags": [],
+            "effective_date": "03/2019",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092982a0acfa",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX DSNP HMO acute hospital spend increased about +$74.1M on 3,589 more admissions and 4,194 more claims. TX CSNP HMO acute hospital spend increased about +$9.6M on 437 more admissions and 540 more claims. In both products, paid per admit fell slightly, pointing to admission growth rather than pricing as the main driver."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "Atrial fibrillation ablation episodes are expanding in Medicare HMO acute hospitals",
+    "pattern_description": "A focused cardiac rhythm management pattern is expanding in Medicare HMO acute hospitals, led by concomitant left atrial appendage closure and cardiac ablation episodes. OH is the largest market and shows both more admissions and higher paid per admit, while similar smaller emergence appears in IN and NY. This looks like targeted case-mix expansion rather than broad inpatient inflation, and it includes some provider concentration at ADVOCATE SOUTH SUBURBAN HOSPITAL.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "OH atrial fibrillation cases tied to Concomitant Left Atrial Appendage Closure and Cardiac Ablation added about +$5.2M, including 94 more admissions across two AF diagnoses. OH Medicare HMO acute hospital spend for the same procedure added about +$3.1M on 61 more admissions with about +$8.0K higher paid per admit. IN added about +$1.3M and NY about +$1.2M for the same procedure, showing the pattern is spreading beyond OH. ADVOCATE SOUTH SUBURBAN HOSPITAL appears in both OH and IN as a smaller but recurring concentration point."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "TX DSNP acute hospital growth is concentrated in digestive and blood disorder episodes",
+    "pattern_description": "Within TX DSNP HMO acute hospital growth, a concentrated set of digestive complication and blood disorder episodes is adding both volume and cost intensity. Red blood cell disorder admissions, including sickle cell crisis and anemia-related cases, and digestive MCC admissions, including post-procedural complications and gastrostomy malfunction, are the key drivers. This is a focused clinical management issue inside the broader TX inpatient trend.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX DSNP acute hospital growth is concentrated in digestive and blood disorder episodes",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "readmission_bundling",
+              "label": "Readmit Bundling",
+              "type": "badge"
+            },
+            {
+              "id": "ob_delivery_exclusion",
+              "label": "OB Exclusion",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "readmission_bundling": "Bundles",
+              "ob_delivery_exclusion": "OB Excluded"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "readmission_bundling": "-",
+              "ob_delivery_exclusion": "Excludes"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Inpatient Readmissions",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "Broad inpatient readmission policy for DRG-based facility claims. It does not single out digestive or blood disorder DRGs, but it generally denies separate reimbursement for unplanned readmissions within 30 days for the same, similar, or related condition. Planned readmissions and leave of absence cases are treated as one admission, and several condition-based exclusions apply.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "within 30 days of discharge",
+                "same or related condition"
+              ],
+              "utilization_limits": [
+                "30 days from discharge"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "planned readmissions",
+                "leave of absence",
+                "cancer",
+                "neonatal/newborn",
+                "obstetrical deliveries",
+                "behavioral health",
+                "rehabilitation care",
+                "sickle cell anemia",
+                "transplants",
+                "acute care hospital transfers",
+                "against medical advice"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "GB Inpt Readmissions FINAL 05062025",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00043",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Diagnostic Testing of Iron Homeostasis and Metabolism",
+            "tags": [],
+            "effective_date": "05/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986ac784c",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00044",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Folate Testing",
+            "tags": [],
+            "effective_date": "05/2023",
+            "evidence": "Serum folate testing is reimbursable only when the patient has megaloblastic or folate-deficiency anemia, with an exception for jurisdictions governed by the referenced Original Medicare LCD.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986ac784d",
+            "edit_rule_facts": {
+              "target_codes": [
+                "82746",
+                "82747",
+                "0399U"
+              ],
+              "related_codes": [
+                "82747",
+                "0399U",
+                "82746"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim line"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Original Medicare LCD"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "states awarded to Novitas Solutions, Inc.",
+                "Original Medicare LCD L34914"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00052",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Helicobacter Pylori Testing",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "Humana reimburses H. pylori urea breath testing only when suspected infection is evaluated in one of the listed clinical situations, and repeat testing is allowed after one month.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea94",
+            "edit_rule_facts": {
+              "target_codes": [
+                "83013",
+                "83014",
+                "87338",
+                "83009",
+                "86318",
+                "86677",
+                "87339",
+                "87149",
+                "87150",
+                "87153",
+                "0008U"
+              ],
+              "related_codes": [
+                "87338",
+                "83013"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "repeat after one month"
+              ],
+              "utilization_limits": [
+                "repeat testing after one month"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00065",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Vitamin B12 Testing",
+            "tags": [],
+            "effective_date": "03/2023",
+            "evidence": "Vitamin B12 testing is reimbursable only when medical criteria are met, and only once every 90 days. Coverage is limited to documented vitamin B12 deficiency or listed clinical manifestations/risk factors, with a jurisdictional exception where an Original Medicare LCD applies.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986393cd1",
+            "edit_rule_facts": {
+              "target_codes": [
+                "82607"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "once every 90 days"
+              ],
+              "utilization_limits": [
+                "1 test every 90 days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "states awarded to Novitas Solutions, Inc."
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX HB-SS DISEASE WITH CRISIS UNS under Red Blood Cell Disorders without MCC added about +$1.2M on 96 more admissions. TX DSNP HMO Red Blood Cell Disorders without MCC added another +$0.8M on 42 more admissions with about +$3.1K higher paid per admit. Other Digestive System Diagnoses with MCC contributed about +$1.0M combined across post-procedural digestive complications and gastrostomy malfunction. ACUTE POSTHEMORRHAGIC ANEMIA added about +$0.4M with about +$6.6K higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "CHRIST HOSPITAL is showing unit-cost pressure across multiple OH products",
+    "pattern_description": "At CHRIST HOSPITAL, acute hospital spend is rising even as admissions decline across three products, indicating reimbursement or billing intensity pressure rather than demand growth. Medicare HMO is the largest contributor, with similar unit-cost patterns in PPO Regional and DSNP HMO. This is a provider economics issue, not a broad utilization wave.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CHRIST HOSPITAL is showing unit-cost pressure across multiple OH products",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "payment_status",
+              "label": "Payment Status",
+              "type": "badge"
+            },
+            {
+              "id": "auth_docs",
+              "label": "Auth/Docs",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "payment_status": "Generally Denied",
+              "auth_docs": "No modifier-specific PA; general authorization applies, and co-surgeon necessity must be documented."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00053",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Immune Cell Function Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "Denied as not reimbursable under this payer's Medicare Advantage policy for immune cell function assays.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+            "edit_rule_facts": {
+              "target_codes": [
+                "81560",
+                "86352",
+                "0018M"
+              ],
+              "related_codes": [
+                "86352",
+                "0018M",
+                "81560"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Original Medicare LCD"
+              ],
+              "state_specific_rules": [
+                "except states awarded to Novitas Solutions, Inc."
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "L34914"
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00151",
+            "payer_name": "Humana",
+            "policy_title": "Modifier 62",
+            "tags": [],
+            "effective_date": "Commercial: 06/2010; Medicare: 01/2008",
+            "evidence": "The requested DRG label is not explicitly listed. However, the policy is clinically relevant because heart transplant is cited as an example of surgery that may require co-surgeons. For professional claims only, two primary surgeons may be reimbursed separately when modifier 62 is appended and the underlying procedure has an MPFS co-surgeon indicator of 1 or 2; indicator 1 requires medical-necessity support, while indicator 0 does not allow co-surgeons.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "62"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same patient",
+                "same operative session",
+                "same procedure"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "two primary surgeons",
+                "not assistant surgeons"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "OH Medicare HMO at CHRIST HOSPITAL added about +$1.1M even with 50 fewer admissions, while paid per admit rose about +$3.7K. OH PPO Regional added about +$0.3M with 2 fewer admissions and about +$14.8K higher paid per admit. OH DSNP HMO added about +$0.2M with 15 fewer admissions and about +$2.7K higher paid per admit."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "VA aftercare and rehab episodes point to a post-acute site-of-care issue",
+    "pattern_description": "VA shows a focused aftercare pattern spanning physical rehab and related acute hospital stays. Medicare HMO physical rehab cases added both admissions and higher paid per admit, while DSNP HMO rehab growth was more volume-led. The underlying diagnoses are orthopedic aftercare and post-amputation aftercare, pointing to post-acute routing and rehab management rather than a broad inpatient issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "VA aftercare and rehab episodes point to a post-acute site-of-care issue",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "policy_scope",
+              "label": "Policy Scope",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "VA orthopedic aftercare diagnoses added about +$0.6M, including 17 more admissions in Aftercare, Musculoskeletal System and Connective Tissue with MCC. VA Medicare HMO Physical Rehab added about +$0.5M on 16 more admissions with about +$2.4K higher paid per admit. VA DSNP HMO Physical Rehab added about +$0.4M on 12 more admissions, but paid per admit fell about $0.9K, showing the change was volume-led."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "Rare catastrophic and transplant-related cases need individual case management, not broad policy changes",
+    "pattern_description": "This pattern is made up of one-off or very rare high-cost inpatient cases, including transplant aftercare, major cardiothoracic surgery, coronary bypass, amputation, and other severe episodes. Counts are very small, but the cost per case is high enough to create noticeable spend movement. These are best handled through individual case validation and large-case management, not through broad utilization policy changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare catastrophic and transplant-related cases need individual case management, not broad policy changes",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mentioned",
+              "label": "Pattern Mention",
+              "type": "badge"
+            },
+            {
+              "id": "applicable_rule",
+              "label": "Applicable Rule",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "applicable_rule": "-"
+            },
+            {
+              "payer_org": "Fallon Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "applicable_rule": "-"
+            },
+            {
+              "payer_org": "Healthfirst",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "applicable_rule": "Time-based reimbursement applies only to anesthesia CPT codes 00100-01999, 99100-99140, and G0500."
+            },
+            {
+              "payer_org": "Regence_BCBS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mentioned": "-",
+              "applicable_rule": "Does not reimburse preventable adverse events or related same/subsequent stay services."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00181",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Robotic Assisted Surgery RETIRED",
+            "tags": [],
+            "effective_date": "10/17/06",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Robotic%20Assisted%20Surgery%20RETIRED.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_FH_00022",
+            "payer_name": "Fallon Health",
+            "policy_title": "Dental services - Fallon Medicare Plus and NaviCare",
+            "tags": [],
+            "effective_date": "06/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/DentalServicesnonACO0626.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_REGENCE_BCBS_ID_OR_UT_28593710013",
+            "payer_name": "Regence_BCBS",
+            "policy_title": "Preventable Adverse Events",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "Off-topic for this DRG descriptor. This policy addresses preventable adverse events, HACs, POA indicators, and never events, but does not provide DRG-specific reimbursement rules.",
+            "policy_url": "https://www.regence.com/provider/library/policies-guidelines/reimbursement-policy/preventable-adverse-events",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "anticipated preventable adverse events in high-risk non-elective procedures such as repair of major trauma"
+              ],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00092",
+            "payer_name": "Healthfirst",
+            "policy_title": "Anesthesia Services",
+            "tags": [],
+            "effective_date": "7/1/2025",
+            "evidence": "Off-topic for the requested DRG/case-management pattern. This policy governs anesthesia reimbursement and coding rules, not DRG-based catastrophic or transplant case management.",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-095-Anesthesia-Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_NY_28595330000",
+            "payer_name": "Healthfirst",
+            "policy_title": "Medical Dental and Oral Health Coverage",
+            "tags": [],
+            "effective_date": "01/01/2024",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-169-Medical-Dental-and-Oral-Health-Coverage.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "A single lung transplant aftercare admission added about +$0.4M. Multi-organ transplant aftercare added about +$0.1M, and an aortic dissection case added about +$0.1M. OH rare one-case episodes included about +$46K for coronary bypass and about +$45K for amputation related to diabetic gangrene."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "Outside the core markets, smaller authorization-related pockets are adding up",
+    "pattern_description": "Outside the main TX and OH drivers, a dispersed set of smaller authorization-related increases is appearing across acute hospital, physical rehab, and long-term care settings. The pattern recurs across Medicare HMO, DSNP HMO, CSNP HMO, and PPO Local products, usually in digestive, red blood cell, or aftercare DRGs. Each local pocket is small, but together they add up and should be managed through targeted market-level UM and provider review rather than enterprise-wide changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Outside the core markets, smaller authorization-related pockets are adding up",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Policy Mention",
+              "type": "badge"
+            },
+            {
+              "id": "authorization_rule",
+              "label": "Auth Requirement",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "authorization_rule": "No prior authorization requirement stated."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_HUM_00053",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Immune Cell Function Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "The payer classifies this assay code as not reimbursable for Medicare Advantage claims.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+            "edit_rule_facts": {
+              "target_codes": [
+                "81560",
+                "86352",
+                "0018M"
+              ],
+              "related_codes": [
+                "86352",
+                "0018M",
+                "81560"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "Original Medicare LCD"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "states awarded to Novitas Solutions, Inc."
+              ],
+              "action_types": [
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00151",
+            "payer_name": "Humana",
+            "policy_title": "Modifier 62",
+            "tags": [],
+            "effective_date": "Commercial: 06/2010; Medicare: 01/2008",
+            "evidence": "This policy addresses co-surgeon billing under modifier 62 for professional services only and does not contain DRG-specific adjudication rules for this DRG label.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "AZ / CA / CT / MO / TX / VA Medicare HMO acute hospital mixed pressure added about +$1.4M. CT / VA DSNP HMO acute hospital utilization added about +$1.1M, largely from VA red blood cell and digestive admissions. FL / IN / NJ / NY / OH DSNP HMO acute hospital mixed pressure added about +$0.9M, led by NJ and NY Red Blood Cell Disorders without MCC. Smaller KY, OH, AZ, CT, and IN pockets across PPO Local, Physical Rehab, LONG TERM CARE HOSPITAL, and Acute Hospital added about +$0.8M more, many with low-baseline volume."
+      }
+    }
+  }
+]

@@ -1,0 +1,309 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R12-202604_5_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R12-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX DSNP HMO acute hospital costs face both volume and unit-cost pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "principal_diagnosis_rule",
+          "label": "Principal Dx Rule",
+          "type": "text"
+        },
+        {
+          "id": "denial_scope",
+          "label": "Denial Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "principal_diagnosis_rule": "-",
+          "denial_scope": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "principal_diagnosis_rule": "Requires correct principal diagnosis per ICD-10-CM sequencing rules, including sepsis and Excludes1 guidance.",
+          "denial_scope": "Entire inpatient claim or affected professional lines may be denied for inappropriate diagnoses."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_HUM_00013",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - General Inflammation Testing",
+        "tags": [],
+        "effective_date": "07/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29b7",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00029",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - B-Hemolytic Streptococcus Testing",
+        "tags": [],
+        "effective_date": "06/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d97",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00043",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Diagnostic Testing of Iron Homeostasis and Metabolism",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986ac784c",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00116",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "This DRG description is not explicitly cited, and no DRG-specific unit-cost, volume, or payment exception is stated. The policy instead applies a cross-cutting ICD-10-CM diagnosis edit to acute hospital and related claims: reimbursement depends on reporting the correct principal/primary diagnosis in the proper claim field and sequencing it per official coding guidelines. Improper diagnosis coding can deny the inpatient claim or affected professional line(s). No Texas- or DSNP-specific variation is stated.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Q21.0",
+            "T86",
+            "T51-T65",
+            "Z51.89",
+            "V00-Y99",
+            "R65"
+          ],
+          "related_codes": [
+            "I51.0",
+            "C80.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis in Box 67",
+            "primary diagnosis pointer Box 24E",
+            "underlying condition first",
+            "agent code first",
+            "sequela code second"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: TX DSNP HMO acute hospital costs face both volume and unit-cost pressure",
+    "pattern_rank": 5,
+    "pattern_title": "TX DSNP HMO acute hospital costs face both volume and unit-cost pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Lower Extremity and Humerus Procedures Except Hip, Foot, Femur with MCC",
+      "Major Chest Trauma with CC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "All items were dropped for scope drift because they are broad United Health Medicare Advantage diagnosis-sequencing edits rather than policies specific to the pattern's acute-hospital/cesarean scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/4 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 4 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 49970,
+    "output": 24736,
+    "breakdown": {
+      "search_keywords": {
+        "input": 559,
+        "output": 530,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 419,
+        "output": 608,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 42571,
+        "output": 19635,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 493,
+        "output": 122,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 971,
+        "output": 419,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 522,
+        "output": 242,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1916,
+        "output": 2475,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2519,
+        "output": 705,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T18:35:50.796692+00:00",
+    "end_time": "2026-08-23T18:39:10.875488+00:00",
+    "duration_ms": 200078,
+    "version": "2.0.0"
+  }
+}

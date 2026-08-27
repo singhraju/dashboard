@@ -1,0 +1,498 @@
+{
+  "success": true,
+  "result": {
+    "job_id": "b35958cff3ee4bc1a40b86d2997c5e4d",
+    "conversation_id": null,
+    "agent": "recommendation_dtr",
+    "status": "success",
+    "output": {
+      "metadata": {
+        "total_patterns": 8,
+        "recommendations_generated": 8,
+        "patterns_skipped": 0,
+        "approach": "llm_based_dtr_relevance",
+        "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Initiate a Yale New Haven Hospital-focused CT Commercial Individual PPO inpatient policy audit for prior-authorized acute admissions, targeting Craniotomy and Endovascular Intracranial Procedures with MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, to validate authorization-to-claim matching and denial enforcement, review initial and concurrent review KPIs, confirm claims are processing to contract, assess Yale contract remediation and site-of-care options, and tighten discharge-planning and long term care step-down criteria.",
+          "evidence": [
+            "Yale New Haven Hospital drove about +$12.8M.",
+            "Yale admissions increased by 150.",
+            "Yale paid per admit rose about +$17.4K.",
+            "Craniotomy and endovascular intracranial procedures with MCC added about +$1.3M.",
+            "Sepsis admissions added about +$350K.",
+            "CT long term care pocket added about +$235K."
+          ],
+          "peer_benchmarking": [
+            "Emblem Health: ASC grouper policy only; related CPTs do not address inpatient DRG rules.",
+            "United Health: microscope code pairing policy only; not inpatient DRG, CAR-T, or immunotherapy payment."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 2,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Implement a ME Commercial Individual HMO acute hospital PA-required inpatient utilization-management and claims-reconciliation policy at MaineHealth Maine Medical Center Portland requiring verified prior authorization, auth-to-claim matching, denial-override review, and same-member repeat-admission escalation.",
+          "evidence": [
+            "PA required equals Y for ME HMO acute hospital inpatient cases.",
+            "Admissions and claims increased while paid per admit decreased.",
+            "Repeated delta concentration flag is present.",
+            "Drill context names MaineHealth Maine Medical Center Portland."
+          ],
+          "peer_benchmarking": [
+            "Point32Health: inpatient cardiology is paid per facility contracted rates under a general cardiac services policy."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 3,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Perform a pre-policy auth-to-claim enforcement and claims-classification audit for AUTH_CODE_DISTRIBUTION in ME, CA, GA, and TX and for Not Mapped facility claims in KY, CT, and VA, prioritizing MaineHealth Maine Medical Center Portland, Santa Clara Valley Medical Center, Parkland Health and Hospital System, Craniotomy and Endovascular Intracranial Procedures with MCC, Aftercare, Musculoskeletal System and Connective Tissue with CC, and Degenerative Nervous System Disorders without MCC before any reimbursement or UM change.",
+          "evidence": [
+            "ME shows AUTH_CODE_DISTRIBUTION movement and requires_validation_before_action.",
+            "CA Craniotomy and Aftercare services lead AUTH_CODE_DISTRIBUTION movement.",
+            "GA and TX show AUTH_CODE_DISTRIBUTION shifts.",
+            "KY CT and VA contain Not Mapped facility buckets.",
+            "Norton Hospital card flagged unmapped_or_unknown_value in KY."
+          ],
+          "peer_benchmarking": [
+            "United Health reimbursement summary shows no applicable policy or authorization benchmark."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 4,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Launch a KY Commercial Individual inpatient policy audit that verifies prior authorization was obtained and enforced for HMO acute hospital and CHILDRENS admissions with PA required = Y, audits nurse and physician approval-denial pathways for admission management, and reviews PPO acute hospital claims with PA required = N for reimbursement-method compliance, authorization override terms, claims-processing accuracy, DRG coding, and itemized bill accuracy, prioritizing Uterine and Adnexa Procedures for Nonmalignancy without CC/MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC.",
+          "evidence": [
+            "Pattern spans KY HMO acute hospital, CHILDRENS, and PPO acute hospital.",
+            "KY HMO acute hospital spend rose with more admissions.",
+            "KY CHILDRENS paid per admit increased with more admissions.",
+            "KY PPO acute hospital paid per admit increased despite fewer admissions."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        },
+        {
+          "rank": 5,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Open a targeted inpatient policy review for MEMORIAL HOSPITAL and ELKHART GENERAL HOSPITAL to remediate contract terms, confirm PA-required claims process per contractual obligation, validate auth-to-claim and contract-override logic, and evaluate site-of-care management for recurring Craniotomy and Endovascular Intracranial Procedures with MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, and Aftercare, Musculoskeletal System and Connective Tissue with CC admissions in IN, GA, and CO.",
+          "evidence": [
+            "MEMORIAL HOSPITAL shows repeated delta concentration in IN Commercial Individual HMO acute hospital.",
+            "ELKHART GENERAL HOSPITAL shows repeated delta concentration in IN Commercial Individual acute hospital.",
+            "Craniotomy with MCC recurs in GA and CO PA-required acute hospital admissions.",
+            "Septicemia and Aftercare DRGs recur in source groups driving inpatient pressure.",
+            "Admissions are up and unit cost signals are mixed."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        },
+        {
+          "rank": 6,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Initiate case-level contract compliance, authorization, and itemized bill review for Liver Transplant, complex spinal fusion, craniotomy, CAR-T immunotherapy, and musculoskeletal aftercare admissions tied to YALE NEW HAVEN HOSPITAL, SANTA CLARA VALLEY MEDICAL CENTER, and NORTON HOSPITAL, and remediate any provider-specific reimbursement terms not aligned to contractual obligations.",
+          "evidence": [
+            "Rare high-cost IP Med/Surg outliers added about +$13.9M.",
+            "YALE NEW HAVEN HOSPITAL CAR-T cases added about +$1.3M.",
+            "NORTON HOSPITAL complex spine cases averaged about +$1.1M per admission.",
+            "CA craniotomy outliers repeatedly added about +$454K to +$959K."
+          ],
+          "peer_benchmarking": [
+            "Highmark_BCBS: no DRG-specific carve-out or payment rule is stated."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 7,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Launch a TX sepsis-focused policy audit for PA-required Commercial Individual inpatient episodes anchored at PARKLAND HEALTH AND HOSPITAL SYSTEM, confirming prior authorization and auth-to-claim matching and reviewing discharge placement to ACUTE HOSPITAL POS, Physical Rehab, and CRITICAL ACCESS for site-of-care, leakage, and P.A.V. opportunities across SEPSIS UNSPECIFIED ORGANISM, SEPSIS D/O ESCHERICHIA COLI E COLI, SEPSIS D/T METHICILLIN RSIST STAPH, and BACTEREMIA.",
+          "evidence": [
+            "Sepsis-related IP Med/Surg groups drove the Texas inpatient increase.",
+            "SEPSIS UNSPECIFIED ORGANISM is the largest inpatient diagnosis driver.",
+            "PARKLAND HEALTH AND HOSPITAL SYSTEM appears in the largest sepsis card context.",
+            "PA-required flags appear in downstream acute hospital and rehab claims.",
+            "Physical Rehab and CRITICAL ACCESS show downstream follow-on spend."
+          ],
+          "peer_benchmarking": [
+            "BCBS_TX reviews sepsis diagnosis sequencing and documentation; septic shock codes infection first."
+          ],
+          "citation": []
+        },
+        {
+          "rank": 8,
+          "priority": "HIGH",
+          "category": "Policy",
+          "description": "Conduct a CA Commercial Individual EPO prior-authorization and payment policy audit for Craniotomy and Endovascular Intracranial Procedures with MCC, Degenerative Nervous System Disorders without MCC, and Aftercare, Musculoskeletal System and Connective Tissue with CC across ACUTE HOSPITAL, LONG TERM CARE HOSPITAL, and Physical Rehab to tighten discharge routing, concurrent review, and contract-compliant claims payment by authorized level of care.",
+          "evidence": [
+            "Acute craniotomy added about +$2.1M on 8 more admissions.",
+            "Long term care hospital added about +$577K on 2 admissions.",
+            "Physical rehab added about +$343K on 6 more admissions."
+          ],
+          "peer_benchmarking": [],
+          "citation": []
+        }
+      ],
+      "skipped_patterns": [],
+      "processing_log": [
+        {
+          "rank": 1,
+          "status": "success",
+          "rules_used": 21,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is overwhelmingly concentrated in a single inpatient provider, Yale New Haven Hospital, which drove about $12.8M of the increase with both 150 more admissions and higher paid per admit.; IP MedSurg (DNE) Trend 4: Spend growth is concentrated in a narrow set of inpatient DRG/service lines, especially high-acuity craniotomy/endovascular intracranial procedures and sepsis-related admissions.; IP MedSurg (DNE) Trend 6: Admissions rose materially in an authorization-required PPO inpatient setting, and the recommended next step explicitly calls for UM review of admission appropriateness, severity mix, and long-term-care step-down criteria.; IP MedSurg (DNE) Trend 8: All major drivers carry pa_required_code = Y and the business terms include auth-to-claim validation, making authorization enforcement and matching highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased sharply, particularly at Yale and in neurosurgical DRGs, pointing to reimbursement method or contract terms as a key area to investigate."
+        },
+        {
+          "rank": 2,
+          "status": "success",
+          "rules_used": 16,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 6: This is the strongest fit because spend growth is clearly volume-led: admissions rose sharply while paid per admit fell, and the recommended next step is a Maine-specific UM review of admission criteria, pre-service authorization volume, and discharge planning.; IP MedSurg (DNE) Trend 8: PA is required (Y) for this HMO acute inpatient pattern, and the case explicitly points to front-end admission controls and auth-related oversight; auth-to-claim enforcement is therefore highly relevant.; IP MedSurg (DNE) Trend 7: The issue is a surge in inpatient admissions rather than worsening unit cost, so reviewing admission source/location and the mix of elective versus non-elective cases is directly aligned with the utilization story.; IP MedSurg (DNE) Trend 1: The pattern includes repeated delta concentration and a named acute hospital provider in drill context, suggesting the increase may be concentrated in a subset of providers or referral patterns.; IP MedSurg (DNE) Trend 5: Post-admit management and discharge planning are called out as business levers, making repeat admissions/readmissions a relevant hypothesis for part of the utilization increase."
+        },
+        {
+          "rank": 3,
+          "status": "success",
+          "rules_used": 9,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly aligned: the pattern is explicitly driven by AUTH_CODE_DISTRIBUTION shifts, PA-required code reassignment, and repeated 'auth-to-claim validation' flags, which map to reviewing whether authorization denials and auth matching are being applied correctly.; IP MedSurg (DNE) Trend 9: The 'Not Mapped' facility buckets in KY, CT, and VA suggest claims setup, classification, or reprocessing noise rather than a clean utilization change, making claim processing/status review highly relevant before any business action.; IP MedSurg (DNE) Trend 10: Facility reclassification issues can distort reimbursement logic and site-of-care interpretation, so reviewing reimbursement method is relevant once unmapped facilities and auth classifications are corrected.; IP MedSurg (DNE) Trend 4: The variance is concentrated in specific inpatient services/DRGs such as Craniotomy and Endovascular Intracranial Procedures with MCC, Aftercare Musculoskeletal with CC, and Degenerative Nervous System Disorders without MCC.; IP MedSurg (DNE) Trend 1: Several cards point to specific hospitals/providers and facility-level mapping behavior, indicating the variance may be localized to provider operational or contractual setup patterns."
+        },
+        {
+          "rank": 4,
+          "status": "success",
+          "rules_used": 22,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 6: Most relevant for the HMO acute and children's components because spend growth is driven in part by higher admissions, pointing to utilization management, avoidable variance, and admission management review.; IP MedSurg (DNE) Trend 10: Highly relevant for the PPO acute hospital component where admissions fell but paid per admit rose sharply, indicating reimbursement method, pricing, severity, or payment integrity review.; IP MedSurg (DNE) Trend 8: Relevant because PA required Y/N is a key driver, the cards are flagged with auth_dimension_present, and the business terms explicitly call for auth-to-claim validation.; IP MedSurg (DNE) Trend 1: Relevant because the pressure is concentrated in KY inpatient facilities and may be driven by a subset of hospitals/providers, especially given the need for network financial and reimbursement review.; IP MedSurg (DNE) Trend 4: Relevant because the pattern spans distinct inpatient service settings (acute hospital and children's), so service-level differences and site-of-care mix should be reviewed alongside product differences."
+        },
+        {
+          "rank": 5,
+          "status": "success",
+          "rules_used": 18,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated in a small set of repeat acute hospital providers, especially Memorial Hospital and Elkhart General Hospital, making provider-specific behavior and contracting review the strongest parent fit.; IP MedSurg (DNE) Trend 3: A narrow set of recurring inpatient DRG/diagnosis categories, including sepsis-related admissions, is driving spend rather than a broad inpatient shift, so diagnosis mix is directly relevant.; IP MedSurg (DNE) Trend 4: High-acuity procedural/service DRGs such as craniotomy and aftercare are repeatedly driving excess spend, indicating the variance is isolated to a subset of inpatient services.; IP MedSurg (DNE) Trend 8: Most highlighted cards carry PA-required acute hospital admissions and the recommended next step explicitly calls for reviewing authorization behavior, aligning with auth-to-claim enforcement review.; IP MedSurg (DNE) Trend 10: The pattern includes mixed unit-cost pressure, repeat-provider concentration, and an explicit recommendation to review contract terms, making reimbursement method and payment mechanics highly relevant."
+        },
+        {
+          "rank": 6,
+          "status": "success",
+          "rules_used": 15,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 2: The pattern is driven by a very small number of catastrophic admissions, with repeated low-baseline and small-n flags, so variance is effectively concentrated in a tiny subset of members and needs case-level member review.; IP MedSurg (DNE) Trend 4: Spend is concentrated in a narrow set of very high-cost inpatient services/DRGs, including liver transplant, complex spinal fusion, craniotomy, CAR-T immunotherapy, and musculoskeletal aftercare, making service-level isolation highly relevant.; IP MedSurg (DNE) Trend 3: The outlier spend is also tightly tied to specific diagnoses such as spinal device infection, chronic hepatic failure, antineoplastic immunotherapy encounter, subdural hematoma, and cerebral aneurysm, supporting diagnosis-driver review.; IP MedSurg (DNE) Trend 1: Several outliers are concentrated in named providers such as YALE NEW HAVEN HOSPITAL, SANTA CLARA VALLEY MEDICAL CENTER, and NORTON HOSPITAL, which makes provider-level behavior and contract review important.; IP MedSurg (DNE) Trend 10: The recommendation explicitly calls for review of transplant or specialty contract terms, stop-loss treatment, and outlier payment provisions, which aligns directly to reimbursement method review for unusually high paid-per-admit cases."
+        },
+        {
+          "rank": 7,
+          "status": "success",
+          "rules_used": 15,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 3: Most of the variance is clearly concentrated in a narrow diagnosis set, especially sepsis-related diagnoses such as sepsis unspecified organism, E. coli sepsis, MRSA sepsis, and bacteremia, making diagnosis drivers the primary parent rule.; IP MedSurg (DNE) Trend 6: The core inpatient sepsis cohorts are admissions-driven with lower paid per admit, which points to utilization management and potentially avoidable variance rather than pure unit-cost inflation.; IP MedSurg (DNE) Trend 7: The pattern explicitly describes downstream spillover into rehab, acute hospital POS, and critical access settings, so admission/discharge source and post-acute placement review is highly relevant to the site-of-care shift.; IP MedSurg (DNE) Trend 8: Several downstream operational pockets carry PA-required and auth-dimension-present flags, suggesting review of whether authorization controls and auth-to-claim matching are being enforced across acute and rehab settings.; IP MedSurg (DNE) Trend 1: The largest sepsis spike is tied to a specific acute hospital provider context and repeated delta concentration flags, so provider concentration should be checked to determine whether the variance is isolated to a subset of TX providers."
+        },
+        {
+          "rank": 8,
+          "status": "success",
+          "rules_used": 15,
+          "categories": [
+            "IP MedSurg (DNE)"
+          ],
+          "relevance_reason": "IP MedSurg (DNE) Trend 7: Most directly matches the pattern's core issue: members are being discharged or routed from acute hospital into higher-cost long term care hospital and physical rehab settings, so admission and discharge source/location should be reviewed.; IP MedSurg (DNE) Trend 4: The spend increase is explicitly spread across different inpatient service settings and levels of care, making service and site-of-care mix a primary driver to investigate.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially in acute, LTCH, and rehab, and the recommended action calls for reviewing reimbursement terms, so reimbursement method is highly relevant.; IP MedSurg (DNE) Trend 8: All source cards have prior authorization required and include auth-to-claim validation as a business term, so authorization enforcement and matching are important to confirm.; IP MedSurg (DNE) Trend 1: The pattern may be concentrated in a subset of acute and post-acute facilities/providers in CA EPO, which would affect both referral behavior and contracting leverage."
+        }
+      ]
+    },
+    "recommended_action": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a Yale New Haven Hospital-focused CT Commercial Individual PPO inpatient policy audit for prior-authorized acute admissions, targeting Craniotomy and Endovascular Intracranial Procedures with MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, to validate authorization-to-claim matching and denial enforcement, review initial and concurrent review KPIs, confirm claims are processing to contract, assess Yale contract remediation and site-of-care options, and tighten discharge-planning and long term care step-down criteria.",
+        "evidence": [
+          "Yale New Haven Hospital drove about +$12.8M.",
+          "Yale admissions increased by 150.",
+          "Yale paid per admit rose about +$17.4K.",
+          "Craniotomy and endovascular intracranial procedures with MCC added about +$1.3M.",
+          "Sepsis admissions added about +$350K.",
+          "CT long term care pocket added about +$235K."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health: ASC grouper policy only; related CPTs do not address inpatient DRG rules.",
+          "United Health: microscope code pairing policy only; not inpatient DRG, CAR-T, or immunotherapy payment."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a ME Commercial Individual HMO acute hospital PA-required inpatient utilization-management and claims-reconciliation policy at MaineHealth Maine Medical Center Portland requiring verified prior authorization, auth-to-claim matching, denial-override review, and same-member repeat-admission escalation.",
+        "evidence": [
+          "PA required equals Y for ME HMO acute hospital inpatient cases.",
+          "Admissions and claims increased while paid per admit decreased.",
+          "Repeated delta concentration flag is present.",
+          "Drill context names MaineHealth Maine Medical Center Portland."
+        ],
+        "peer_benchmarking": [
+          "Point32Health: inpatient cardiology is paid per facility contracted rates under a general cardiac services policy."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a pre-policy auth-to-claim enforcement and claims-classification audit for AUTH_CODE_DISTRIBUTION in ME, CA, GA, and TX and for Not Mapped facility claims in KY, CT, and VA, prioritizing MaineHealth Maine Medical Center Portland, Santa Clara Valley Medical Center, Parkland Health and Hospital System, Craniotomy and Endovascular Intracranial Procedures with MCC, Aftercare, Musculoskeletal System and Connective Tissue with CC, and Degenerative Nervous System Disorders without MCC before any reimbursement or UM change.",
+        "evidence": [
+          "ME shows AUTH_CODE_DISTRIBUTION movement and requires_validation_before_action.",
+          "CA Craniotomy and Aftercare services lead AUTH_CODE_DISTRIBUTION movement.",
+          "GA and TX show AUTH_CODE_DISTRIBUTION shifts.",
+          "KY CT and VA contain Not Mapped facility buckets.",
+          "Norton Hospital card flagged unmapped_or_unknown_value in KY."
+        ],
+        "peer_benchmarking": [
+          "United Health reimbursement summary shows no applicable policy or authorization benchmark."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a KY Commercial Individual inpatient policy audit that verifies prior authorization was obtained and enforced for HMO acute hospital and CHILDRENS admissions with PA required = Y, audits nurse and physician approval-denial pathways for admission management, and reviews PPO acute hospital claims with PA required = N for reimbursement-method compliance, authorization override terms, claims-processing accuracy, DRG coding, and itemized bill accuracy, prioritizing Uterine and Adnexa Procedures for Nonmalignancy without CC/MCC and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC.",
+        "evidence": [
+          "Pattern spans KY HMO acute hospital, CHILDRENS, and PPO acute hospital.",
+          "KY HMO acute hospital spend rose with more admissions.",
+          "KY CHILDRENS paid per admit increased with more admissions.",
+          "KY PPO acute hospital paid per admit increased despite fewer admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a targeted inpatient policy review for MEMORIAL HOSPITAL and ELKHART GENERAL HOSPITAL to remediate contract terms, confirm PA-required claims process per contractual obligation, validate auth-to-claim and contract-override logic, and evaluate site-of-care management for recurring Craniotomy and Endovascular Intracranial Procedures with MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, and Aftercare, Musculoskeletal System and Connective Tissue with CC admissions in IN, GA, and CO.",
+        "evidence": [
+          "MEMORIAL HOSPITAL shows repeated delta concentration in IN Commercial Individual HMO acute hospital.",
+          "ELKHART GENERAL HOSPITAL shows repeated delta concentration in IN Commercial Individual acute hospital.",
+          "Craniotomy with MCC recurs in GA and CO PA-required acute hospital admissions.",
+          "Septicemia and Aftercare DRGs recur in source groups driving inpatient pressure.",
+          "Admissions are up and unit cost signals are mixed."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate case-level contract compliance, authorization, and itemized bill review for Liver Transplant, complex spinal fusion, craniotomy, CAR-T immunotherapy, and musculoskeletal aftercare admissions tied to YALE NEW HAVEN HOSPITAL, SANTA CLARA VALLEY MEDICAL CENTER, and NORTON HOSPITAL, and remediate any provider-specific reimbursement terms not aligned to contractual obligations.",
+        "evidence": [
+          "Rare high-cost IP Med/Surg outliers added about +$13.9M.",
+          "YALE NEW HAVEN HOSPITAL CAR-T cases added about +$1.3M.",
+          "NORTON HOSPITAL complex spine cases averaged about +$1.1M per admission.",
+          "CA craniotomy outliers repeatedly added about +$454K to +$959K."
+        ],
+        "peer_benchmarking": [
+          "Highmark_BCBS: no DRG-specific carve-out or payment rule is stated."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a TX sepsis-focused policy audit for PA-required Commercial Individual inpatient episodes anchored at PARKLAND HEALTH AND HOSPITAL SYSTEM, confirming prior authorization and auth-to-claim matching and reviewing discharge placement to ACUTE HOSPITAL POS, Physical Rehab, and CRITICAL ACCESS for site-of-care, leakage, and P.A.V. opportunities across SEPSIS UNSPECIFIED ORGANISM, SEPSIS D/O ESCHERICHIA COLI E COLI, SEPSIS D/T METHICILLIN RSIST STAPH, and BACTEREMIA.",
+        "evidence": [
+          "Sepsis-related IP Med/Surg groups drove the Texas inpatient increase.",
+          "SEPSIS UNSPECIFIED ORGANISM is the largest inpatient diagnosis driver.",
+          "PARKLAND HEALTH AND HOSPITAL SYSTEM appears in the largest sepsis card context.",
+          "PA-required flags appear in downstream acute hospital and rehab claims.",
+          "Physical Rehab and CRITICAL ACCESS show downstream follow-on spend."
+        ],
+        "peer_benchmarking": [
+          "BCBS_TX reviews sepsis diagnosis sequencing and documentation; septic shock codes infection first."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a CA Commercial Individual EPO prior-authorization and payment policy audit for Craniotomy and Endovascular Intracranial Procedures with MCC, Degenerative Nervous System Disorders without MCC, and Aftercare, Musculoskeletal System and Connective Tissue with CC across ACUTE HOSPITAL, LONG TERM CARE HOSPITAL, and Physical Rehab to tighten discharge routing, concurrent review, and contract-compliant claims payment by authorized level of care.",
+        "evidence": [
+          "Acute craniotomy added about +$2.1M on 8 more admissions.",
+          "Long term care hospital added about +$577K on 2 admissions.",
+          "Physical rehab added about +$343K on 6 more admissions."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "visual_component": {},
+    "explanation": {
+      "summary": "Generated 8 recommendations from 8 patterns",
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "validation": {
+      "is_valid": true,
+      "checks": [
+        {
+          "check": "patterns_processed",
+          "passed": true,
+          "message": "Processed 8 patterns"
+        },
+        {
+          "check": "dtr_rules_loaded",
+          "passed": true,
+          "message": "DTR rules loaded from /app/configs/decision_tree_rules.yaml"
+        },
+        {
+          "check": "recommendations_generated",
+          "passed": true,
+          "message": "Generated 8 recommendations"
+        },
+        {
+          "check": "token_tracking",
+          "passed": true,
+          "message": "Tracked 323864 input + 85013 output tokens"
+        }
+      ],
+      "warnings": [],
+      "errors": []
+    },
+    "tokens": {
+      "input": 323864,
+      "output": 85013,
+      "breakdown": {
+        "per_pattern": {
+          "pattern_1": {
+            "relevance": {
+              "input": 27527,
+              "output": 8005
+            },
+            "recommendation": {
+              "input": 11818,
+              "output": 3470
+            }
+          },
+          "pattern_2": {
+            "relevance": {
+              "input": 13921,
+              "output": 6196
+            },
+            "recommendation": {
+              "input": 4999,
+              "output": 4004
+            }
+          },
+          "pattern_3": {
+            "relevance": {
+              "input": 31866,
+              "output": 6307
+            },
+            "recommendation": {
+              "input": 13600,
+              "output": 3389
+            }
+          },
+          "pattern_4": {
+            "relevance": {
+              "input": 24933,
+              "output": 7395
+            },
+            "recommendation": {
+              "input": 10537,
+              "output": 5318
+            }
+          },
+          "pattern_5": {
+            "relevance": {
+              "input": 38989,
+              "output": 8594
+            },
+            "recommendation": {
+              "input": 17505,
+              "output": 3309
+            }
+          },
+          "pattern_6": {
+            "relevance": {
+              "input": 32186,
+              "output": 8047
+            },
+            "recommendation": {
+              "input": 13922,
+              "output": 3590
+            }
+          },
+          "pattern_7": {
+            "relevance": {
+              "input": 33755,
+              "output": 5977
+            },
+            "recommendation": {
+              "input": 14857,
+              "output": 3002
+            }
+          },
+          "pattern_8": {
+            "relevance": {
+              "input": 23696,
+              "output": 6680
+            },
+            "recommendation": {
+              "input": 9753,
+              "output": 1730
+            }
+          }
+        },
+        "aggregated": {
+          "relevance_checks": {
+            "input": 226873,
+            "output": 57201,
+            "calls": 8
+          },
+          "recommendations": {
+            "input": 96991,
+            "output": 27812,
+            "calls": 8
+          }
+        }
+      }
+    },
+    "execution": {
+      "start_time": "2026-08-22T11:11:04.657979+00:00",
+      "end_time": "2026-08-22T11:14:36.432484+00:00",
+      "duration_ms": 211774,
+      "version": "1.0.0"
+    }
+  },
+  "execution_time": 211.78116536140442,
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-22T11:14:36.433461+00:00"
+  }
+}

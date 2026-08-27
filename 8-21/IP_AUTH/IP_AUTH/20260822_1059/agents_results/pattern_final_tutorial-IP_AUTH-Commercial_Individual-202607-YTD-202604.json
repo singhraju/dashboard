@@ -1,0 +1,1992 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "CT PPO spend is concentrated at Yale New Haven Hospital",
+    "pattern_description": "CT PPO inpatient spend rose sharply and is highly concentrated at Yale New Haven Hospital. The increase reflects both more admissions and higher paid per admission, with high-cost neurosurgical and chemotherapy-related stays adding to the pressure. A smaller secondary signal also shows more maternity volume in CT PPO acute hospitals.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CT PPO spend is concentrated at Yale New Haven Hospital",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "global_ob_package",
+              "label": "Global OB Package",
+              "type": "text"
+            },
+            {
+              "id": "partial_care_billing",
+              "label": "Partial Care Rules",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_package": "Cigna bundles routine antepartum, delivery, and postpartum care globally; partial obstetric care bills separately.",
+              "partial_care_billing": "Use partial obstetric codes by phase and visit count; bill global only for complete care."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_package": "-",
+              "partial_care_billing": "-"
+            },
+            {
+              "payer_org": "Point32Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_package": "Point32Health does not address Global OB Package in the provided policy.",
+              "partial_care_billing": "No applicable partial care rules, limitations, or code/DRG interactions were identified."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_package": "No applicable reimbursement guidance; policy excludes inpatient DRG-specific hospital payment methodology.",
+              "partial_care_billing": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "Full global obstetric care is bundled when the same physician or group TIN provides antepartum, delivery, and postpartum care. Routine maternity services are included in the package.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "59425",
+                "59426",
+                "59409",
+                "59410",
+                "59430",
+                "59514",
+                "59515",
+                "59612",
+                "59614",
+                "59620",
+                "59622",
+                "99202-99205",
+                "99212-99215",
+                "99381-99397",
+                "96365-96371",
+                "96373-96376",
+                "96372",
+                "90460-90474",
+                "59000",
+                "59001",
+                "59070",
+                "59012",
+                "59015",
+                "59020",
+                "59025",
+                "59030",
+                "59412",
+                "01967",
+                "76801-76817",
+                "76818-76819",
+                "76820",
+                "76821",
+                "76825-76828"
+              ],
+              "related_codes": [
+                "59200",
+                "59414",
+                "81000",
+                "81002",
+                "O09.00-O09.03",
+                "O09.10-O09.13",
+                "O09.211-O09.219",
+                "O09.291-O09.299",
+                "O09.30-O09.33",
+                "O09.40-O09.43",
+                "O09.511-O09.519",
+                "O09.521-O09.529",
+                "O09.611-O09.619",
+                "O09.621-O09.629",
+                "O09.70-O09.73",
+                "O09.811-O09.819",
+                "O09.821-O09.829",
+                "O09.891-O09.899",
+                "O09.90-O09.93",
+                "O34.211-O34.219",
+                "Z33.1",
+                "Z34.00-Z34.03",
+                "Z34.80-Z34.83",
+                "Z34.90-Z34.93",
+                "Z39.0-Z39.2",
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "Z32.01",
+                "O10.011-O16.9",
+                "59515",
+                "59622"
+              ],
+              "required_modifiers": [
+                "25",
+                "80",
+                "81",
+                "82",
+                "AS"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same TIN",
+                "all components provided",
+                "partial care only",
+                "same date of service",
+                "separate significant E&M service",
+                "same claim line"
+              ],
+              "utilization_limits": [
+                "59425 once for 4-6 visits",
+                "59426 once for 7+ visits"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "CMS-1500"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "assistant surgeon only"
+              ],
+              "exemptions": [
+                "partial care codes",
+                "full global package",
+                "significant separately identifiable E&M",
+                "global cesarean package"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "pay_separately"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00037",
+            "payer_name": "Cigna",
+            "policy_title": "Multiple Births",
+            "tags": [],
+            "effective_date": "2007-05-21",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00128",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Multiple Delivery Services C-19005",
+            "tags": [],
+            "effective_date": "2022-04-29",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595730203",
+            "payer_name": "Point32Health",
+            "policy_title": "Newborn Care",
+            "tags": [],
+            "effective_date": "05/01/2026",
+            "evidence": "Off-topic. This Point32Health policy addresses newborn care reimbursement, billing, and notification rules; it does not address CT PPO spend concentration or Yale New Haven Hospital.",
+            "policy_url": "https://wwwassets.point32health.org/documents/newborn-care-pp",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595780200",
+            "payer_name": "Point32Health",
+            "policy_title": "Obstetrics/Gynecology",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "Off-topic: this policy governs obstetrical and gynecology services and does not address this DRG pattern.",
+            "policy_url": "https://wwwassets.point32health.org/documents/obstetrics-gynecology-pp",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00071",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "Off-topic: this obstetrical professional policy does not contain reimbursement rules for this DRG description or any inpatient DRG-specific hospital payment methodology.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CT PPO acute hospital spend increased about $17.9M, with Yale New Haven Hospital accounting for about $16.7M of that change. At Yale New Haven Hospital, admissions rose by 176 and average paid per admission increased by about $18.3K. Craniotomy cases added about $0.9M in CT PPO acute hospitals on 10 more admissions. A smaller CT PPO non-authorized maternity signal added about $0.3M on 28 more admissions."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "Broad inpatient growth is pressuring HMO and PPO hospital spend",
+    "pattern_description": "Outside CT and ME, inpatient spend is rising across multiple markets through a combination of more admissions and selective unit-cost pressure. KY is the largest recurring market, while multistate HMO acute hospital growth is led by high-cost neurologic and maternity admissions. The pattern is broad enough to require standard inpatient management, but targeted enough to focus on neuro, maternity, and specific high-growth facilities.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Broad inpatient growth is pressuring HMO and PPO hospital spend",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "applicability_summary",
+              "label": "Applicability Note",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "KY HMO acute hospital spend increased about $5.9M with 196 more admissions, while KY Children's added about $1.6M on 16 more admissions. A separate KY PPO acute hospital pattern added about $2.1M even though admissions fell by 38, because average paid per admission rose by about $15.9K. Across CA / CO / GA / NH / NV / NY / TX, HMO acute hospital spend rose about $6.2M, led by craniotomy cases in GA (+$1.4M) and CO (+$1.3M). A smaller CA / IN / VA HMO acute hospital utilization pattern added about $1.4M, including admissions growth at Elkhart General Hospital and additional craniotomy and maternity volume."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "ME HMO acute hospital spend is being driven by admissions growth",
+    "pattern_description": "ME shows a clear utilization-led inpatient pattern. Spend increased because admissions and claims rose materially, even though paid and allowed per admission moved down. This points to a higher volume of hospital use rather than broad price escalation.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "ME HMO acute hospital spend is being driven by admissions growth",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "payment_model",
+              "label": "Payment Model",
+              "type": "text"
+            },
+            {
+              "id": "facility_scope",
+              "label": "Facility Scope",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Point32Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "payment_model": "Single all-inclusive negotiated transplant case rate; donor procurement and specified testing separately reimbursed.",
+              "facility_scope": "Contracted Only"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595800202",
+            "payer_name": "Point32Health",
+            "policy_title": "Transplants",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "Point32Health reimburses medically necessary bone marrow transplant services in contracted facilities at a single all-inclusive negotiated rate. The transplant case generally bundles surgery and postoperative outpatient services, while qualifying donor-related procurement and certain testing services may be reimbursed separately.",
+            "policy_url": "https://wwwassets.point32health.org/documents/transplants-pp",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "0811",
+                "0812",
+                "0819"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same transplant claim",
+                "donor-related claim",
+                "recipient claim using donor info"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Case rate",
+                "DRG",
+                "Per diem"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "outpatient immunosuppressive therapy drugs",
+                "donor-related procurement expenses"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "ME HMO acute hospital spend increased about $14.7M. Admissions rose by 410 and claims rose by 213 in the same pattern. Average paid per admission fell by about $36.6K, confirming that higher use, not higher unit cost, is the main driver."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Authorization and facility mapping shifts need to be fixed before acting on several markets",
+    "pattern_description": "Several markets show authorization-code redistribution or facility values falling into unmapped buckets. These shifts can distort where spend appears to sit and can make real utilization or reimbursement signals look larger or smaller than they are. This is a gating validation issue and should be resolved before using these segments for policy or contracting action.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorization and facility mapping shifts need to be fixed before acting on several markets",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "auth_required",
+              "label": "Auth Needed",
+              "type": "badge"
+            },
+            {
+              "id": "facility_restrictions",
+              "label": "Facility Rules",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Point32Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "auth_required": "Auth May Apply",
+              "facility_restrictions": "Only contracted transplant facilities covered, subject to eligibility, benefits, hospital terms, and negotiated case rates."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595800202",
+            "payer_name": "Point32Health",
+            "policy_title": "Transplants",
+            "tags": [],
+            "effective_date": "10/01/2025",
+            "evidence": "Covered when medically necessary and performed in a contracted transplant facility. Reimbursed under a single all-inclusive transplant case rate, with certain donor-related and ancillary items separately reimbursed.",
+            "policy_url": "https://wwwassets.point32health.org/documents/transplants-pp",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "0811",
+                "0812",
+                "0819"
+              ],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Transplants"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "ME shows an authorization-code distribution shift of about -$3.4M that requires validation before business action. GA / TX / WI and CA show additional authorization-code distribution movement of about +$1.3M each. KY has about +$1.2M of spend sitting in a 'Not Mapped' facility bucket, with smaller unmapped signals in CT and IN / TX. These mapping effects touch both high-cost neuro and chemotherapy-related inpatient categories, so they can misstate authorization and site-of-care conclusions."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "Rare catastrophic inpatient cases are creating outsized cost spikes",
+    "pattern_description": "A small number of very high-cost inpatient specialty cases are creating disproportionate spend increases. The pattern includes cellular therapy, transplant, complex spinal surgery, craniotomy, and severe neurologic recovery cases, often with very few admissions but extremely high paid amounts per stay. These should be handled as case-level catastrophic reviews, not as broad population trends.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Rare catastrophic inpatient cases are creating outsized cost spikes",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "inpatient_drg_scope",
+              "label": "Inpatient DRG Scope",
+              "type": "text"
+            },
+            {
+              "id": "carve_out_bundling",
+              "label": "Carve-Out/Bundling",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Fallon Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "Acute inpatient excluded under DRG, except APAD/APEC carve-out drugs from 04/01/2025.",
+              "carve_out_bundling": "Carve-out drugs are excluded from DRGs; Fallon separately reviews and pays related services."
+            },
+            {
+              "payer_org": "Highmark_BCBS",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "inpatient_drg_scope": "Inpatient DRG scope is not addressed in this policy.",
+              "carve_out_bundling": "OPPS bundles 38225-38227 into biologic; no LU reimbursement; inpatient drug excluded from DRG outliers."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_FH_00026",
+            "payer_name": "Fallon Health",
+            "policy_title": "Drugs and biologicals payment policy",
+            "tags": [],
+            "effective_date": "03/01/2026",
+            "evidence": "For inpatient hospital claims, Fallon Health excludes payments made as part of DRG methodology. For MassHealth ACO members, APAD/APEC carve-out drugs currently include CAR T-cell and gene therapies and are handled separately, with prior authorization submitted to the MassHealth DUR Program before administration and direct payment by MassHealth for the carve-out drug itself.",
+            "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/DrugsBio030126.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "before administration",
+                "related services separately handled"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [
+                "PA required for APAD/APEC carve-out drugs before administration"
+              ],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "MassHealth ACO"
+              ],
+              "state_specific_rules": [
+                "MA: APAD/APEC carve-outs move to MassHealth DUR effective 04/01/2025"
+              ],
+              "provider_role_restrictions": [
+                "Ordering provider submits PA request"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "pay_separately"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500106",
+            "payer_name": "Highmark_BCBS",
+            "policy_title": "Advanced Gene and Cellular Therapies",
+            "tags": [],
+            "effective_date": "2026-04-06",
+            "evidence": "This policy is on-topic for CAR-T and certain cellular immunotherapies. Professional claims pay at 100% of the CMS professional rate, or WAC/invoice cost if no Medicare professional rate exists. Outpatient facility claims pay at 100% of the CMS APC rate, or WAC/invoice cost if no APC exists. For inpatient claims, the therapy drug charge is carved out of the DRG cost outlier calculation and reimbursed separately under the outpatient methodology, unless inpatient payment is governed by a negotiated case rate or other contract-specific reimbursement method.",
+            "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-053.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "Q2041",
+                "Q2042",
+                "Q2053",
+                "Q2054",
+                "Q2055",
+                "Q2056",
+                "Q2057",
+                "Q2058",
+                "Q2043"
+              ],
+              "related_codes": [
+                "38228",
+                "38225",
+                "38226",
+                "38227"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [
+                "LU"
+              ],
+              "revenue_codes": [
+                "087X",
+                "0871",
+                "0872",
+                "0873",
+                "0874",
+                "0875",
+                "0891"
+              ],
+              "pairing_conditions": [
+                "Q-code only when HOPD administered",
+                "same date as administration",
+                "inpatient claim if infused inpatient"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "OPPS",
+                "APC",
+                "DRG",
+                "Case rate"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider contract states reimbursement method",
+                "negotiated case rate"
+              ],
+              "action_types": [
+                "pay_separately"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "In CT / IN / UNATTRIBUTED / WI, rare IP Med/Surg outliers added about $6.7M, including Yale New Haven Hospital CAR-T immunotherapy at about $2.6M on 4 more admissions. The same outlier set includes about $2.1M from spinal fusion with device infection on 2 admissions and about $1.4M from heart transplant or heart-assist admissions on 2 admissions. CA rare and complex craniotomy-related cases added about $4.1M, with individual diagnoses contributing roughly $0.7M to $1.0M each. TX severe neurologic and orthopedic recovery cases added about $4.2M across stroke-related hemiplegia and musculoskeletal aftercare patterns, including one stroke-related diagnosis at about $1.4M."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "Spend is shifting into post-acute and alternative inpatient settings",
+    "pattern_description": "Beyond acute hospitals, a meaningful share of spend growth is moving into long-term care hospitals, physical rehab, critical access hospitals, and nursing-facility-type recovery settings. The recurring clinical themes are neurologic recovery and orthopedic aftercare, with some markets showing more admissions and others showing very high paid per admission in low-volume cases. This looks like a care-pathway and site-of-care management opportunity.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Spend is shifting into post-acute and alternative inpatient settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_pattern_mentioned",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance_summary",
+              "label": "Relevance Summary",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_pattern_mentioned": "-",
+              "policy_relevance_summary": "-"
+            },
+            {
+              "payer_org": "Emblem Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_pattern_mentioned": "-",
+              "policy_relevance_summary": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082280000",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "General Inflammation Testing",
+            "tags": [],
+            "effective_date": "2025-11-07",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/cpcplab049-11-7-2025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_EMB_00079",
+            "payer_name": "Emblem Health",
+            "policy_title": "Biochemical Markers of Alzheimer Disease and Dementia (LBM)",
+            "tags": [],
+            "effective_date": "3/01/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/biochemical-markers-alzheimer-reimbursement-policy-emblemhealth.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_EMB_00116",
+            "payer_name": "Emblem Health",
+            "policy_title": "Vitamin B12 & Methylmalonic Acid Testing (LBM)",
+            "tags": [],
+            "effective_date": "2023-03-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/vitaminb12-emblemhealth.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA EPO long-term care hospital spend increased about $0.6M on 2 more admissions, with average paid per admission up about $288.5K. TX HMO physical rehab added about $0.4M on 20 more admissions even though paid per admission fell, pointing to more use of rehab beds. NH / NY HMO physical rehab added about $0.3M, including a NY case with about $94.3K higher paid per admission. CT and CA long-term care hospital patterns added about $0.6M combined, while TX critical access and NF recovery settings contributed another roughly $0.3M."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "WI inpatient chemotherapy is emerging as a focused oncology cost driver",
+    "pattern_description": "WI shows a focused inpatient chemotherapy pattern rather than broad inpatient inflation. The rise reflects both more chemotherapy-related admissions and higher paid per admission within the same oncology episode type. This is best addressed as an oncology pathway question, including whether some treatment intensity belongs in a different setting.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "WI inpatient chemotherapy is emerging as a focused oncology cost driver",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "facility_setting_rule",
+              "label": "Facility Setting Rule",
+              "type": "text"
+            },
+            {
+              "id": "bundling_status",
+              "label": "Bundling Status",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_setting_rule": "Facility chemotherapy administration is generally bundled with room/facility fees; Wisconsin allows separate reimbursement.",
+              "bundling_status": "Bundles"
+            },
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_setting_rule": "No applicable facility setting rule; policy only excludes chemo-resistance/sensitivity assays from reimbursement.",
+              "bundling_status": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00013",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Injection and Infusion Administration and Related Services and Supplies",
+            "tags": [],
+            "effective_date": "2024-09-25",
+            "evidence": "This commercial policy is not DRG-specific and does not establish inpatient DRG payment for the requested chemotherapy pattern. It governs professional injection and infusion administration, largely bundling related access/supply services and restricting separate reimbursement in facility settings.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Injection%20and%20Infusion%20Administration%20and%20Related%20Services%20and%20Supplies.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "78012-79999",
+                "96523"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same day as E/M",
+                "same claim with any other service",
+                "same date of service",
+                "when billed on CMS 1500"
+              ],
+              "utilization_limits": [
+                "frequency restrictions on a single date of service"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "Professional"
+              ],
+              "state_specific_rules": [
+                "California: delayed implementation",
+                "Virginia: delayed implementation"
+              ],
+              "provider_role_restrictions": [
+                "professional provider in facility setting"
+              ],
+              "exemptions": [
+                "separately identifiable and unrelated E/M service",
+                "radiopharmaceuticals or nuclear medicine related drugs",
+                "therapeutic IV hydration infused separately over prescribed time and rate"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Bundled Services and Supplies C-23001",
+            "tags": [],
+            "effective_date": "06/01/2026",
+            "evidence": "The DRG label is not explicitly named, but the policy is relevant to chemotherapy facility claims. The base rule bundles chemotherapy administration when billed by a facility on the same date as a room or facility fee or another procedure, while the Wisconsin market allows separate reimbursement for chemotherapy administration and infusion administration.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "G0498"
+              ],
+              "related_codes": [
+                "G0498",
+                "96521-96523"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "same date with room or facility fee",
+                "same date with another procedure",
+                "stand-alone service",
+                "with another service"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "WI: chemotherapy administration separately reimbursable",
+                "WI: infusion administration separately reimbursable",
+                "WI: 96521-96523 separately reimbursable",
+                "WI: category-level chemotherapy administration separately reimbursable"
+              ],
+              "provider_role_restrictions": [
+                "facility provider"
+              ],
+              "exemptions": [
+                "provider/state/federal requirements"
+              ],
+              "action_types": [
+                "allow_with_conditions",
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Inpatient Readmissions",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "This is a general inpatient readmissions policy, not a chemotherapy-specific policy. It excludes admissions for medical treatment of cancer from readmission review, and for Wisconsin Medicaid the first admission is not paid when a readmission is identified; the readmission stay is reimbursed.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same or related condition",
+                "within 30 days of discharge"
+              ],
+              "utilization_limits": [
+                "30-day readmission window"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG",
+                "Inpatient readmissions"
+              ],
+              "state_specific_rules": [
+                "WI: 30-day readmission review",
+                "WI: first admission not paid when readmission identified"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "medical treatment of cancer"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "GB Inpt Readmissions FINAL 05062025",
+            "tags": [],
+            "effective_date": "03/25/2025",
+            "evidence": "General inpatient readmissions policy for DRG-reimbursed facilities. Readmissions within 30 days are generally not separately reimbursed, but admissions for the medical treatment of cancer are excluded from the readmissions policy, so inpatient chemotherapy admissions are generally outside the readmission denial rule.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "within 30 days",
+                "same date of service"
+              ],
+              "utilization_limits": [
+                "30-day readmission window"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "WI: first admission is not paid when a readmission is identified; readmission stay is reimbursed."
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "medical treatment of cancer"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00054",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - In Vitro Chemo-resistance and Chemo-sensitivities Assay",
+            "tags": [],
+            "effective_date": "04/2023",
+            "evidence": "Humana's policy is off-topic to this inpatient chemotherapy DRG pattern. The policy only addresses in vitro chemo-resistance and chemo-sensitivity assays and states they are not reimbursable.",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea96",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "WI inpatient chemotherapy-related spend increased about $1.1M. Admissions rose by 42 and claims rose by 22 in this chemotherapy pattern. Average paid per admission increased by about $6.4K, showing both volume and intensity pressure within the same episode type."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "TX maternity complexity is lifting inpatient delivery spend",
+    "pattern_description": "TX maternity spend is rising through a concentrated set of higher-complexity delivery episodes. The main drivers are gestational diabetes, other third-trimester pregnancy complications, prior C-section-related care, and fetal heart-rate complications. This is a focused obstetric case-mix pattern and should be handled separately from general inpatient management.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "TX maternity complexity is lifting inpatient delivery spend",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "ob_bundling_status",
+              "label": "OB Bundle",
+              "type": "badge"
+            },
+            {
+              "id": "delivery_billing_rules",
+              "label": "Billing Rules",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_bundling_status": "Bundles",
+              "delivery_billing_rules": "Bill global only same QHP/TIN; otherwise separate split maternity services and newborns require modifier 59."
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_bundling_status": "Bundles",
+              "delivery_billing_rules": "Includes delivery globally; admissions within 72 hours bundled; mixed deliveries pay cesarean 100%, vaginal 50%."
+            },
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_bundling_status": "Partial Bundle",
+              "delivery_billing_rules": "Multiple births: subsequent vaginal deliveries pay 50%; modifier 59/22 applies; sterilization requires timed consent."
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_bundling_status": "Bundles",
+              "delivery_billing_rules": "Multiple births: first vaginal delivery 100%, additional 50% with modifier 59; cesareans use modifier 22."
+            },
+            {
+              "payer_org": "Moda Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_bundling_status": "Bundles",
+              "delivery_billing_rules": "Allows split OB billing; combined delivery/postpartum billing; multiple-procedure reductions, including 50% secondary deliveries."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "ob_bundling_status": "Bundles",
+              "delivery_billing_rules": "Bundle routine OB; bill one single-gestation unit, using delivery+postpartum when same group provides both."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_ELV_INTERNAL_00019",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Routine Obstetrics",
+            "tags": [],
+            "effective_date": "07/19/19",
+            "evidence": "On-topic maternity policy. Vaginal delivery is included in delivery reimbursement, and when global obstetric care is billed by the same provider or provider group under the same TIN, antepartum, delivery, and postpartum services are bundled into one global payment. Duplicate or overlapping maternity services are not separately reimbursed.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Routine%20Obstetrics.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "O09.511",
+                "O09.512",
+                "O09.513",
+                "O09.519",
+                "O09.521",
+                "O09.522",
+                "O09.523",
+                "O09.529",
+                "O09.611",
+                "O09.612",
+                "O09.613",
+                "O09.619",
+                "O09.621",
+                "O09.622",
+                "O09.623",
+                "O09.629",
+                "O09.70",
+                "O09.71",
+                "O09.72",
+                "O09.73",
+                "O09.811",
+                "O09.812",
+                "O09.813",
+                "O09.819",
+                "O09.821",
+                "O09.822",
+                "O09.823",
+                "O09.829",
+                "O09.891",
+                "O09.892",
+                "O09.893",
+                "O09.899",
+                "O80",
+                "Z33.1",
+                "Z34.00",
+                "Z34.01",
+                "Z34.02",
+                "Z34.03",
+                "Z34.80",
+                "Z34.81",
+                "Z34.82",
+                "Z34.83",
+                "Z34.90",
+                "Z34.91",
+                "Z34.92",
+                "Z34.93",
+                "Z36.1",
+                "Z36.2",
+                "Z36.3",
+                "Z36.4",
+                "Z36.5",
+                "Z36.81",
+                "Z36.82",
+                "Z36.83",
+                "Z36.84",
+                "Z36.85",
+                "Z36.86",
+                "Z36.87",
+                "Z36.88",
+                "Z36.89",
+                "Z36.9",
+                "Z39.0",
+                "Z39.1",
+                "Z39.2"
+              ],
+              "required_modifiers": [
+                "59",
+                "22"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same TIN",
+                "same claim line",
+                "same date of service"
+              ],
+              "utilization_limits": [
+                "45-day postpartum period",
+                "additional vaginal deliveries at 50%",
+                "maternity ultrasounds max 2 in OH/VA"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Routine Obstetric Services"
+              ],
+              "state_specific_rules": [
+                "GA: maternity ultrasounds included in global package unless problem-oriented",
+                "KY: maternity ultrasounds included in global package unless problem-oriented",
+                "OH: more than two ultrasounds not separately reimbursed unless problem-oriented",
+                "VA: more than two ultrasounds not separately reimbursed unless problem-oriented"
+              ],
+              "provider_role_restrictions": [
+                "global billing requires same TIN",
+                "provider or provider group"
+              ],
+              "exemptions": [
+                "maternity ultrasounds related to problem oriented diagnosis"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082140001",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Global Obstetrical/OB Maternity Services Policy",
+            "tags": [],
+            "effective_date": "2026-05-22",
+            "evidence": "Global vaginal delivery is bundled with antepartum, delivery, and postpartum maternity services when billed by the same qualified provider or same TIN.",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/rp044-5-22-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59410"
+              ],
+              "related_codes": [
+                "59409",
+                "59410",
+                "59425",
+                "59426",
+                "59430",
+                "59400",
+                "59612"
+              ],
+              "required_modifiers": [
+                "59"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same qualified provider",
+                "same TIN",
+                "global OB period",
+                "submitted upon delivery",
+                "subsequent newborn",
+                "same claim line",
+                "split maternity care",
+                "same delivery episode"
+              ],
+              "utilization_limits": [
+                "additional antepartum visits only if >13 visits",
+                "one code per subsequent newborn"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Professional Provider"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "same qualified provider or same TIN"
+              ],
+              "exemptions": [
+                "pregnancy confirmation visit when OB record is not initiated"
+              ],
+              "action_types": [
+                "bundle",
+                "pay_separately",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "Delivery-related inpatient maternity care is bundled into the global obstetric package and is not separately reimbursed. Routine vaginal delivery is included, while separate payment applies only when partial-care maternity CPTs are reported.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "59409",
+                "59410",
+                "59514",
+                "59515",
+                "59612",
+                "59614",
+                "59620",
+                "59622"
+              ],
+              "related_codes": [
+                "59425",
+                "59426",
+                "59430",
+                "59412",
+                "59414",
+                "01967",
+                "59200",
+                "96365-96367",
+                "64430",
+                "64435",
+                "51701",
+                "51702",
+                "76801-76817",
+                "76820",
+                "76821",
+                "76825-76828",
+                "76818-76819",
+                "59000",
+                "59001",
+                "59070",
+                "59015",
+                "59012",
+                "59020",
+                "59025",
+                "59030",
+                "O09.00-O09.03",
+                "O09.10-O09.13",
+                "O09.211-O09.219",
+                "O09.291-O09.299",
+                "O09.30-O09.33",
+                "O09.40-O09.43",
+                "O09.511-O09.519",
+                "O09.521-O09.529",
+                "O09.611-O09.619",
+                "O09.621-O09.629",
+                "O09.70-O09.73",
+                "O09.811-O09.819",
+                "O09.821-O09.829",
+                "O09.891-O09.899",
+                "O09.90-O09.93",
+                "O34.211-O34.219",
+                "Z33.1",
+                "Z34.00-Z34.03",
+                "Z34.80-Z34.83",
+                "Z34.90-Z34.93",
+                "Z39.0-Z39.2"
+              ],
+              "required_modifiers": [
+                "25"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same delivery admission",
+                "after delivery"
+              ],
+              "utilization_limits": [
+                "within 72 hours of delivery"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Global maternity package"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "complications of pregnancy",
+                "multiple gestation"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00037",
+            "payer_name": "Cigna",
+            "policy_title": "Multiple Births",
+            "tags": [],
+            "effective_date": "2007-05-21",
+            "evidence": "Multiple-birth vaginal delivery claims are reimbursed at 100% for the primary procedure and 50% for secondary procedures when a multiple gestation diagnosis is reported and at least one delivery is vaginal.",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R03_Multiple_Births.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59410",
+                "59610",
+                "59612",
+                "59614",
+                "59510",
+                "59514",
+                "59515",
+                "59618",
+                "59620",
+                "59622"
+              ],
+              "related_codes": [
+                "O30.001-O30.099",
+                "O30.101-O30.199",
+                "O30.201-O30.299",
+                "O30.801-O30.899",
+                "O30.90",
+                "O30.93",
+                "Z37.2-Z37.4",
+                "Z37.50-Z37.59",
+                "Z37.60-Z37.69",
+                "Z37.7",
+                "Z38.30-Z38.31",
+                "Z38.4",
+                "Z38.5",
+                "Z38.61-Z38.69",
+                "Z38.7",
+                "Z38.8",
+                "59409",
+                "59612"
+              ],
+              "required_modifiers": [
+                "22"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "at least one vaginal delivery",
+                "substantially increased time and complexity"
+              ],
+              "utilization_limits": [
+                "primary 100%",
+                "secondary 50%",
+                "cesarean once"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_01197",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Multiple Delivery Services",
+            "tags": [],
+            "effective_date": "01/01/2025",
+            "evidence": "The policy does not provide a DRG-based inpatient facility payment rule for this vaginal delivery DRG description. It does provide related professional maternity billing rules for multiple births: vaginal deliveries in multiple births are allowed when billed with modifier 59, and each subsequent vaginal delivery is reimbursed at 50% of the allowance. No separate Texas-specific reimbursement methodology beyond applicability/effective date is stated.",
+            "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-093390-25-Multiple-Delivery-Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "59"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "multiple births",
+                "same-delivery method",
+                "combined-delivery method",
+                "subsequent vaginal delivery"
+              ],
+              "utilization_limits": [
+                "50% of allowance for each subsequent vaginal delivery"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [
+                "TX: initial approval and effective 01/01/2025."
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "provider, state, or federal contracts/mandates indicate otherwise"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00128",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Multiple Delivery Services C-19005",
+            "tags": [],
+            "effective_date": "2022-04-29",
+            "evidence": "The policy is maternity-related but does not directly address this DRG title. It governs reimbursement for multiple births in vaginal or cesarean deliveries, requiring Modifier 59 for vaginal deliveries, paying subsequent vaginal deliveries at 50% of the allowance, and using Modifier 22 with documentation review for cesarean deliveries when additional reimbursement is warranted.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Multiple%20Delivery%20Services%20C-19005.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [
+                "59",
+                "22"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "multiple births",
+                "same-delivery method",
+                "combined-delivery method"
+              ],
+              "utilization_limits": [
+                "subsequent vaginal delivery paid at 50%"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Commercial",
+                "Professional"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_MDH_ALL_28595910106",
+            "payer_name": "Moda Health",
+            "policy_title": "Maternity Care",
+            "tags": [],
+            "effective_date": "1/1/2000",
+            "evidence": "This is a maternity reimbursement policy, not a DRG policy. Vaginal-delivery maternity services are paid under global OB rules, with antepartum, delivery, and postpartum care bundled unless split-package criteria apply.",
+            "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM020.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59410"
+              ],
+              "related_codes": [
+                "59409",
+                "59410",
+                "59425",
+                "59426",
+                "59430",
+                "59400",
+                "59414"
+              ],
+              "required_modifiers": [
+                "51",
+                "59"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim",
+                "delivery date as DOS",
+                "split OB package",
+                "same date of delivery",
+                "secondary newborn"
+              ],
+              "utilization_limits": [
+                "49-day global period",
+                "one unit per secondary newborn"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "maternity care",
+                "birthing center"
+              ],
+              "state_specific_rules": [
+                "Texas plans birthing center: report 59409 for all babies"
+              ],
+              "provider_role_restrictions": [
+                "one physician, one midwife, or same group practice",
+                "eligible delivery provider",
+                "eligible midwife providers",
+                "same physician group practice"
+              ],
+              "exemptions": [
+                "split OB package criteria",
+                "precipitous delivery",
+                "split package criteria"
+              ],
+              "action_types": [
+                "bundle",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_UHC_00071",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "This policy does not assign or price inpatient facility DRGs, but it governs the professional side of vaginal delivery through global OB CPT coding. When the same group provides antepartum, delivery, and postpartum care, 59400 is used and routine prenatal, delivery, inpatient within 24 hours of delivery, and routine postpartum services are bundled. Separate payment is allowed only for listed exclusions such as high-risk or complication E/M with modifier 25, confirmatory pregnancy visit with Z32.01 if no OB record is started, labs other than 81000/81002, ultrasound 76801-76828, non-OB care, inpatient E/M more than 24 hours before delivery, and unrelated critical care with modifier FT.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Obstetrical-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409",
+                "59410",
+                "59425",
+                "59426",
+                "59430",
+                "59050",
+                "59051",
+                "59200"
+              ],
+              "related_codes": [
+                "59409",
+                "59410",
+                "59425",
+                "59426",
+                "59430",
+                "59610",
+                "81000",
+                "81002",
+                "59200",
+                "76801-76828",
+                "Z32.01",
+                "59400",
+                "59612",
+                "59614"
+              ],
+              "required_modifiers": [
+                "22",
+                "25",
+                "FT"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same group physician/QHP",
+                "single date or date span",
+                "within 24 hours of delivery",
+                "same date as delivery",
+                "same global OB period",
+                "total OB package not provided",
+                "postpartum by another group",
+                "single gestation",
+                "delivery and postpartum only",
+                "minimal or no antepartum",
+                "4-6 antepartum visits",
+                "one date span",
+                "transfer or insurer change",
+                "7+ antepartum visits",
+                "postpartum care only",
+                "within 6 weeks of delivery",
+                "during labor",
+                "attending physician billing",
+                "same date of delivery",
+                ">24 hours before delivery"
+              ],
+              "utilization_limits": [
+                "1 unit per claim",
+                "~13 routine antepartum visits",
+                "6 weeks postpartum",
+                "single gestation delivery",
+                "4-6 visits",
+                "7 or more visits"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Case rate"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "same group provides all components",
+                "postpartum by another physician/group",
+                "same group provides delivery/postpartum",
+                "same group provides antepartum only",
+                "provider furnishes postpartum only",
+                "consulting physician only"
+              ],
+              "exemptions": [
+                "76801-76828",
+                "labs except 81000/81002",
+                "non-OB E/M with diagnosis",
+                "E/M >24 hours before delivery",
+                "unrelated critical care with FT",
+                "59200 other date of service",
+                "third/fourth-degree laceration with 22",
+                "limited antepartum with 59425",
+                "unrelated inpatient E/M",
+                "confirmatory visit with Z32.01",
+                "1-3 visits as E/M",
+                "pregnancy problems after 59430",
+                "non-OB E/M with 24",
+                "other date of service",
+                ">24 hours before delivery"
+              ],
+              "action_types": [
+                "bundle",
+                "allow_with_conditions",
+                "deny"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_EXTERNAL_TX_28833392601",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Sterilization",
+            "tags": [],
+            "effective_date": "07/17/2024",
+            "evidence": "This policy addresses sterilization reimbursement, not the delivery DRG itself. Sterilization is not reimbursable unless necessary for treatment of illness or injury or otherwise required by contract; if performed with delivery, multiple surgery guidelines apply and consent rules must be met.",
+            "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/medicare/government/reimbursement-policies/WLP_CARE_RP_Sterilization.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "in conjunction with delivery"
+              ],
+              "utilization_limits": [
+                "consent 30 to 180 days",
+                "72 hours for premature delivery"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [
+                "AZ",
+                "IA",
+                "NJ",
+                "SC",
+                "TN",
+                "TX",
+                "WA",
+                "WV"
+              ],
+              "provider_role_restrictions": [
+                "Physician performing sterilization"
+              ],
+              "exemptions": [
+                "necessary part of illness or injury",
+                "provider state federal CMS requirements"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_ELV_INTERNAL_00130",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Sterilization",
+            "tags": [],
+            "effective_date": "2026-06-08",
+            "evidence": "Sterilization procedures are reimbursable only with valid informed consent and required documentation. When sterilization is performed with delivery, multiple surgery rules apply. Tennessee Medicaid facility claims are not reimbursed when sterilization accompanies caesarean delivery or vaginal delivery under DRG methodology.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Sterilization.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "58600",
+                "58605",
+                "58611",
+                "58615"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "in conjunction with delivery",
+                "same claim with multiple surgery"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid",
+                "Medicare",
+                "DRG"
+              ],
+              "state_specific_rules": [
+                "TN: no facility reimbursement with delivery sterilization under DRG",
+                "WV: carveout unless multiple surgeries include 58600/58605/58611/58615"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "valid consent form",
+                "multiple surgeries involving 58600/58605/58611/58615"
+              ],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01317",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Services Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "Texas Medicaid professional OB billing requires unbundled maternity services rather than global OB billing. Vaginal delivery-only code 59409 is payable only under state-specific conditions, including required modifiers and same-day birthing center/provider claim rules.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59409"
+              ],
+              "related_codes": [
+                "59400",
+                "59410",
+                "59510",
+                "59515",
+                "59610",
+                "59612",
+                "59614",
+                "59618",
+                "59620",
+                "59622",
+                "59425",
+                "59426"
+              ],
+              "required_modifiers": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "excluded_modifiers": [
+                "U3"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "birthing center with provider claim"
+              ],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid",
+                "CMS-1500"
+              ],
+              "state_specific_rules": [
+                "TX: global OB codes not reimbursed",
+                "TX: prenatal E/M codes require TH",
+                "TX: delivery codes require U1, U2, or U3",
+                "TX: U3 is not reimbursable",
+                "TX: 59409 allowed with birthing center same DOS as provider claim"
+              ],
+              "provider_role_restrictions": [
+                "Same Group Physician and/or Other Qualified Health Care Professional",
+                "birthing center claim on CMS-1500"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "TX maternity-focused inpatient patterns added about $1.1M in total. Gestational diabetes in childbirth added about $0.3M on 10 more admissions, with average paid per admission up about $27.1K. Other third-trimester pregnancy-related conditions added about $0.3M on 6 more admissions, with average paid per admission up about $42.5K. Additional delivery complexity came from fetal heart-rate complications and prior C-section-related care."
+      }
+    }
+  }
+]

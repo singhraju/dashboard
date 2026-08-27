@@ -1,0 +1,413 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "WI inpatient chemotherapy is a distinct oncology utilization issue",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_addressed",
+          "label": "Pattern Addressed",
+          "type": "badge"
+        },
+        {
+          "id": "reimbursement_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_addressed": "Bundles",
+          "reimbursement_scope": "Professional infusion policy; facility chemotherapy administration generally bundled with room/facility fees, except Wisconsin."
+        },
+        {
+          "payer_org": "Medica",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_addressed": "-",
+          "reimbursement_scope": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_addressed": "-",
+          "reimbursement_scope": "Not applicable to inpatient chemotherapy DRGs; policy covers separate reimbursement for in vitro assays."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00013",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Injection and Infusion Administration and Related Services and Supplies",
+        "tags": [],
+        "effective_date": "2024-09-25",
+        "evidence": "Off-topic for inpatient DRG chemotherapy utilization. The policy governs professional injection and infusion administration services, not MS-DRG or inpatient chemotherapy payment rules.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Injection%20and%20Infusion%20Administration%20and%20Related%20Services%20and%20Supplies.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "For facility claims, chemotherapy administration is generally bundled with a room or facility fee when billed on the same date of service, but the Wisconsin market exemption allows separate reimbursement for chemotherapy administration and infusion administration.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "G0498"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "room or facility fee"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility"
+          ],
+          "state_specific_rules": [
+            "WI: chemo admin separately reimbursed"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Wisconsin market"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960320580015",
+        "payer_name": "Medica",
+        "policy_title": "Injection and Infusion Services",
+        "tags": [],
+        "effective_date": "01/01/1996",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/injection-and-infusion-services-policy.pdf?la=en&hash=1E4DFA8A26FDEA260292AF7B76A05F13",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "This is a general inpatient readmissions policy. For Wisconsin Medicaid, the text applies a 30-day readmission standard and indicates the readmission stay is reimbursed rather than the first admission when a readmission is identified. The policy does not state a chemotherapy-specific carveout for this DRG in Wisconsin.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "WI: 30-day readmission standard",
+            "WI: readmission stay reimbursed"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "This is a general inpatient readmissions policy, not a chemotherapy-specific reimbursement rule. For Wisconsin, readmissions within 30 days are generally subject to the policy, but admissions for the medical treatment of cancer are excluded from readmission review.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "30 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "WI: 30-day readmission standard",
+            "WI: first admission not paid when readmission identified"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "medical treatment of cancer"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_WI_29084580600",
+        "payer_name": "United Health",
+        "policy_title": "In Vitro Chemotherapy Assays, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-10-01",
+        "evidence": "Off-topic for the requested DRG pattern. The policy addresses in vitro chemotherapy assays and separate reimbursement for listed assay codes, not inpatient chemotherapy DRG billing.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-In-Vitro-Chemotherapy-Assays-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 10,
+    "policies_successful": 10,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For WI inpatient DRG stays within 30 days / 30-day readmission window, reimburse the readmission stay and do not pay the first admission when a readmission is identified; do not apply this 30-day rule to medical treatment of cancer. Apply to WI. Exempt: medical treatment of cancer.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"within 30 days\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"30 days\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"WI: 30-day readmission standard\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions: \"WI: readmission stay reimbursed\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"WI: first admission not paid when readmission identified\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"medical treatment of cancer\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: WI inpatient chemotherapy is a distinct oncology utilization issue",
+    "pattern_rank": 5,
+    "pattern_title": "WI inpatient chemotherapy is a distinct oncology utilization issue",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "10 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['WI'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 0 for scope drift because it addresses facility chemotherapy administration bundling rather than WI inpatient chemotherapy admissions; item 1 remained aligned."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "4/10 policies quarantined (40%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/10 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "4 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_UHC_00160:In Vitro Chemotherapy Assays Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange, RP_GBD_HUM_00054:Laboratory - In Vitro Chemo-resistance and Chemo-sensitivities Assay, RP_GBD_MOH_00562:Self Administered Drugs, RP_GBD_UHC_ALL_28593440000:In Vitro Chemotherapy Assays Policy, Professional and Facility]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 60068,
+    "output": 35166,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 149,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 720,
+        "output": 2014,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 48962,
+        "output": 25768,
+        "calls": 11
+      },
+      "relevance_judge": {
+        "input": 3991,
+        "output": 1804,
+        "calls": 9
+      },
+      "dynamic_columns": {
+        "input": 913,
+        "output": 552,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 617,
+        "output": 794,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 392,
+        "output": 402,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2149,
+        "output": 2598,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1796,
+        "output": 1085,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T08:19:14.405943+00:00",
+    "end_time": "2026-08-24T08:21:46.656820+00:00",
+    "duration_ms": 152250,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-YTD-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY postpartum preeclampsia admissions are rising as a distinct maternity issue",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "ob_delivery_exclusion",
+          "label": "OB Exclusion",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "Readmission Denies",
+          "ob_delivery_exclusion": "Excludes OB"
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mention": "-",
+          "ob_delivery_exclusion": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CNC_00718",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Pulmonary Function Testing",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.035-Pulmonary-Function-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "The policy does not name or price this postpartum/postabortion DRG category; it governs inpatient readmission reimbursement. For New York Medicaid, an unplanned readmission within 14 days for the same or closely related condition or procedure is not separately reimbursed when it occurs to the same or a different hospital within the same hospital system. Obstetrical deliveries are excluded, so postpartum/postabortion cases are implicated only if they are not treated as delivery admissions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 14 days of discharge",
+            "same or closely related condition",
+            "same or different hospital within same system",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "14 days from discharge"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "NY Medicaid: 14-day readmission window; same or closely related condition or procedure; same or different hospital within the same hospital system; planned readmissions excluded."
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "obstetrical deliveries",
+            "transfers from one acute care hospital to another",
+            "discharged against medical advice",
+            "major or metastatic malignancy",
+            "multiple trauma treatment",
+            "burns treatment",
+            "infants less than 12 months",
+            "Skilled Nursing (SNF)",
+            "Long Term Acute Care (LTAC)",
+            "Sickle Cell Anemia",
+            "planned readmissions"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The policy does not cite the requested maternity DRG category or postpartum preeclampsia specifically. For New York inpatient claims paid under DRG methodology, unplanned readmissions within 14 days to the same or a different hospital in the same hospital system for the same, similar, or related condition or procedure are not separately reimbursed unless an exclusion applies. Obstetrical deliveries are generally excluded, but postpartum or postabortion readmissions are not separately listed as excluded in the New York rule.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 14 days of discharge",
+            "same or closely related condition",
+            "same or different hospital same system",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "14 days from discharge"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "NY: readmission window is 14 days.",
+            "NY: same or closely related condition or procedure triggers review.",
+            "NY: no separate reimbursement for readmission to same or different hospital within same hospital system for same, similar, or related condition.",
+            "NY: no postpartum-specific exclusion is listed."
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "obstetrical deliveries",
+            "planned readmissions",
+            "transfers from one acute care hospital to another",
+            "member discharged from the hospital against medical advice",
+            "major or metastatic malignancy",
+            "multiple trauma treatment",
+            "burns treatment",
+            "infants less than 12 months of age",
+            "Skilled Nursing (SNF)",
+            "Long Term Acute Care (LTAC)",
+            "sickle cell anemia"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For DRG/Medicaid inpatient readmissions, apply the deny only to returns 'within 14 days of discharge' / '14 days from discharge' for the 'same or closely related condition' at the 'same or different hospital within same system,' and explicitly carve out 'obstetrical deliveries' and 'planned readmissions' so cesarean-delivery and related postpartum maternity stays are not swept into the edit. Exempt: obstetrical deliveries, planned readmissions.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions: \"within 14 days of discharge\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions: \"same or closely related condition\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions: \"same or different hospital within same system\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"14 days from discharge\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"Medicaid\" [program_scope]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"obstetrical deliveries\" [exemptions]",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025: \"planned readmissions\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "Elevance Health (internal) \u00b7 GB Inpt Readmissions FINAL 05062025 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: NY postpartum preeclampsia admissions are rising as a distinct maternity issue",
+    "pattern_rank": 8,
+    "pattern_title": "NY postpartum preeclampsia admissions are rising as a distinct maternity issue",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 0 for scope drift to California cesarean delivery; item 1 aligns with the New York postpartum readmission context."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 60813,
+    "output": 27787,
+    "breakdown": {
+      "search_keywords": {
+        "input": 530,
+        "output": 472,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 326,
+        "output": 176,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 51891,
+        "output": 21507,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 933,
+        "output": 357,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 1035,
+        "output": 530,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 534,
+        "output": 180,
+        "calls": 2
+      },
+      "elevance_summary": {
+        "input": 365,
+        "output": 228,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2876,
+        "output": 2929,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2323,
+        "output": 1408,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T10:22:55.946206+00:00",
+    "end_time": "2026-08-23T10:25:48.223092+00:00",
+    "duration_ms": 172276,
+    "version": "2.0.0"
+  }
+}

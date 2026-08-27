@@ -1,0 +1,224 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Hold UM-rule and reimbursement changes until a claims-processing reconciliation, starting in TX and then VA, OH, and KY, validates AUTH_CODE_DISTRIBUTION, PA-to-claim matching, denial enforcement, manual-adjudication overrides, and Not Mapped facility assignment for BEN TAUB HOSPITAL, CLEVELAND CLINIC MERCY HOSPITAL, CHRIST HOSPITAL, and METROHEALTH MEDICAL CTR.",
+        "evidence": [
+          "TX AUTH_CODE_DISTRIBUTION is flagged for validation before action.",
+          "Not Mapped facility buckets appear in TX, OH, and KY.",
+          "BEN TAUB HOSPITAL anchors the TX authorization validation drill.",
+          "VA Aftercare Musculoskeletal with MCC shows AUTH_CODE_DISTRIBUTION movement.",
+          "Other Digestive System Diagnoses with MCC and Red Blood Cell Disorders are impacted.",
+          "CHRIST HOSPITAL and METROHEALTH MEDICAL CTR appear in unmapped segments."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a TX SNP acute inpatient prior-authorization and readmission control policy for DSNP HMO and CSNP HMO: perform member-level repeat-admission review, trigger CTI discharge planning for same-facility returns, audit CUMG nurse and MD approval-denial pathways, and require prior-auth-to-claim match validation with denial enforcement.",
+        "evidence": [
+          "TX DSNP HMO acute hospital spend rose +$74.1M with 3,589 more admissions.",
+          "TX CSNP HMO acute hospital spend rose +$9.6M with 437 more admissions.",
+          "Paid per admit fell in both products, indicating utilization not pricing.",
+          "Both source cards require prior auth and show repeated delta concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a targeted inpatient management review for Concomitant Left Atrial Appendage Closure and Cardiac Ablation in Medicare HMO acute hospitals across OH, IN, and NY, limited to PAROXYSMAL ATRIAL FIBRILLATION and OTHR PERSISTENT ATRIAL FIBRILLATION, with PA-required authorization enforcement, auth-to-claim and claims-processing audits, and provider-specific contract and site-of-care review for ADVOCATE SOUTH SUBURBAN HOSPITAL and other concentrated facilities.",
+        "evidence": [
+          "OH added about +$5.2M with 94 more admissions across two AF diagnoses.",
+          "OH Medicare HMO acute hospital spend rose about +$3.1M on 61 admissions.",
+          "IN added about +$1.3M and NY about +$1.2M for the procedure.",
+          "PA required equals Y on operational cards in OH, IN, and NY.",
+          "ADVOCATE SOUTH SUBURBAN HOSPITAL recurs as a concentration point in OH and IN.",
+          "Paid per admit increased in OH, IN, and NY acute hospital episodes."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "For TX DSNP HMO acute hospital claims at BEN TAUB HOSPITAL tied to Red Blood Cell Disorders without MCC and Other Digestive System Diagnoses with MCC, especially HB-SS DISEASE WITH CRISIS UNS, ACUTE POSTHEMORRHAGIC ANEMIA, OTH POSTPROC COMP D/O DIGESTIVE SYS, and GASTROSTOMY MALFUNCTION, confirm required prior authorization, apply denial edits when authorization is missing, and screen complication claims for HAC or never-event recovery.",
+        "evidence": [
+          "HB-SS DISEASE WITH CRISIS UNS appears under Red Blood Cell Disorders without MCC.",
+          "ACUTE POSTHEMORRHAGIC ANEMIA is listed as a key driver code.",
+          "OTH POSTPROC COMP D/O DIGESTIVE SYS and GASTROSTOMY MALFUNCTION are key digestive drivers.",
+          "Operational cards show pa_required_code = Y and auth_dimension_present.",
+          "BEN TAUB HOSPITAL is the rendering provider in the driving episodes."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health (internal) shows inpatient readmission bundling in the summary table.",
+          "Humana shows no readmission bundling in the summary table."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a CHRIST HOSPITAL OH acute hospital reimbursement review across Medicare HMO, PPO Regional, and DSNP HMO to confirm contract-compliant payment methodology, authorization-to-claim matching, case-rate changes, and recurring edits or recovery for unbundling, DRG upcoding, outlier billing, and itemized bill exceptions.",
+        "evidence": [
+          "OH Medicare HMO at CHRIST HOSPITAL added about +$1.1M with 50 fewer admissions.",
+          "OH PPO Regional had 2 fewer admissions with about +$14.8K higher paid per admit.",
+          "OH DSNP HMO had 15 fewer admissions and about +$2.7K higher paid per admit.",
+          "All source cards show PA required equals Y and unit_cost_led."
+        ],
+        "peer_benchmarking": [
+          "Humana is Generally Denied; general authorization applies, and co-surgeon necessity must be documented."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Review VA prior-authorization and utilization-management policy for Physical Rehab and Acute Hospital aftercare tied to ENC FOR OTHER ORTHOPEDIC AFTERCARE and ENC ORTHOPED AFTERCARE FLW SURG AMP across Medicare HMO and DSNP HMO; audit initial and concurrent review KPIs, confirm required authorizations were obtained and matched the billed site of care, route authorization mismatches to claims processing, and evaluate alternate discharge-location leakage and P.A.V. opportunities.",
+        "evidence": [
+          "Orthopedic aftercare and post-amputation aftercare diagnoses drive the VA pattern.",
+          "Pattern is concentrated in Physical Rehab and Acute Hospital aftercare.",
+          "Medicare HMO Physical Rehab shows mixed volume and unit-cost pressure.",
+          "DSNP HMO Physical Rehab is primarily volume-led.",
+          "Major operational cards are marked pa_required_code Y."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Route isolated ENC AFTERCARE FLW LUNG TRANSPLANT, ENC AFTERCARE FLW MX ORGN TRANSPL, DISSECTION OF ASCENDING AORTA, Coronary Bypass without Cardiac Catheterization with MCC, and Amputation for Circulatory System Disorders Except Upper Limb and Toe with MCC admissions at Houston Methodist Hospital, Valleywise Health Medical Center, and MetroHealth Medical CTR to individual case management for contractual claims review, final-claim adjudication verification, and interim-claim zero-balance reconciliation.",
+        "evidence": [
+          "Single lung transplant aftercare admission at Houston Methodist Hospital added about +$0.4M.",
+          "Multi-organ transplant aftercare added about +$0.1M.",
+          "Ascending aortic dissection case at Valleywise Health Medical Center added about +$0.1M.",
+          "MetroHealth Medical CTR had one coronary bypass episode in OH.",
+          "MetroHealth Medical CTR had one amputation episode for diabetic gangrene in OH."
+        ],
+        "peer_benchmarking": [
+          "Healthfirst time-based reimbursement applies only to anesthesia CPT 00100-01999, 99100-99140, and G0500.",
+          "Regence_BCBS does not reimburse preventable adverse events or related same/subsequent stay services."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a market-level policy review in TX, VA, NJ, and KY for PA-required Acute Hospital, Physical Rehab, and LONG TERM CARE HOSPITAL admissions to perform auth-to-claim validation, enforce denial edits, and review provider and post-acute routing for Aftercare with CC/MCC, Red Blood Cell Disorders without MCC, and Other Digestive System Diagnoses with MCC, including HOUSTON METHODIST HOSPITAL and CHRIST HOSPITAL.",
+        "evidence": [
+          "Authorization-related increases recur across Acute Hospital, Physical Rehab, and LONG TERM CARE HOSPITAL.",
+          "Key driver codes include digestive, red blood cell, and aftercare DRGs.",
+          "TX Aftercare with CC/MCC and VA or NJ red blood cell pockets recur.",
+          "Source cards are tagged auth-to-claim validation and repeated delta concentration.",
+          "Recommended next step assigns segments to local UM and network teams.",
+          "Pattern requires targeted case-level confirmation before broad action."
+        ],
+        "peer_benchmarking": [
+          "Humana summary states no prior authorization requirement stated."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 11,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most directly matches the pattern: the largest driver is AUTH_CODE_DISTRIBUTION movement, and the pattern explicitly recommends validating PA-to-claim mapping and authorization status before taking UM or reimbursement action.; IP MedSurg (DNE) Trend 9: Highly relevant because the pattern describes administrative drift, coding/mapping validation, and unmapped facility buckets, all of which can reflect claims processing or reprocessing classification issues rather than true utilization change.; IP MedSurg (DNE) Trend 10: Relevant because facility-type assignment and authorization classification can alter reimbursement logic; the pattern specifically warns against changing reimbursement until facility mapping and auth movement are validated.; IP MedSurg (DNE) Trend 1: Relevant due to strong concentration in specific providers/facilities such as BEN TAUB HOSPITAL, CLEVELAND CLINIC MERCY HOSPITAL, CHRIST HOSPITAL, and METROHEALTH MEDICAL CTR, indicating provider-level investigation is needed.; IP MedSurg (DNE) Trend 3: Relevant because several diagnosis/DRG clusters are specifically called out as impacted entities, including Aftercare Musculoskeletal with MCC, Other Digestive System Diagnoses with MCC, and Red Blood Cell Disorders without MCC."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: This pattern is explicitly volume-led: acute hospital paid increased while paid per admit declined, so the strongest parent rule is to assess utilization management KPI shifts and the PAV waterfall driving excess inpatient admissions.; IP MedSurg (DNE) Trend 5: The recommended action directly calls out avoidable readmissions and repeat high-use members, making the readmission-rate rule highly relevant to explain whether the added admissions are concentrated in the same members.; IP MedSurg (DNE) Trend 2: DSNP and CSNP acute growth may be concentrated in a subset of medically complex SNP members; member-level analysis fits the pattern\u2019s focus on repeat high-use members and clinical engagement needs.; IP MedSurg (DNE) Trend 7: Admissions surged materially, and the source data includes ER admit context, so reviewing admission/discharge source and location is relevant to determine whether ER-driven or elective admission mix changed.; IP MedSurg (DNE) Trend 8: Both source cards are prior-auth related and flagged for auth dimension presence/auth-to-claim validation, so checking whether authorization denials and matches are being enforced is an important secondary operational rule."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is highly concentrated in a specific inpatient cardiac service/DRG: Concomitant Left Atrial Appendage Closure and Cardiac Ablation, making service-level review the strongest parent rule match.; IP MedSurg (DNE) Trend 3: The pattern is also isolated to a narrow diagnosis set, especially paroxysmal and other persistent atrial fibrillation, which fits diagnosis-driver review.; IP MedSurg (DNE) Trend 8: Operational cards consistently show PA required = Y with auth_dimension_present flags and auth-to-claim validation business terms, so authorization enforcement review is directly relevant.; IP MedSurg (DNE) Trend 1: There is recurring provider concentration, including ADVOCATE SOUTH SUBURBAN HOSPITAL and named hospital-level concentration in the source cards, supporting provider-driver analysis.; IP MedSurg (DNE) Trend 10: Paid per admit is increasing materially alongside admissions, and the pattern routes to reimbursement policy review, making reimbursement method review relevant for the unit-cost component."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 10,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Strongest fit: the variance is explicitly concentrated in a narrow diagnosis set within inpatient acute hospital care, especially digestive complications, sickle cell crisis, red blood cell disorders, anemia, and gastrostomy/post-procedural digestive cases.; IP MedSurg (DNE) Trend 5: Highly relevant because the pattern narrative and recommended actions focus on recurrent admission drivers, and the key episodes show meaningful admission growth consistent with possible repeat admissions/readmissions.; IP MedSurg (DNE) Trend 6: Relevant because the story centers on complication prevention, care-pathway management, and UM review; both admissions and paid per admit are rising, which fits a Potentially Avoidable Variance/utilization management investigation.; IP MedSurg (DNE) Trend 8: Relevant from the operational evidence: the driving episodes are tied to pa_required_code = Y and auth_dimension_present flags, so auth-to-claim enforcement should be checked alongside rising utilization and unit cost.; IP MedSurg (DNE) Trend 10: Useful secondary rule because paid per admit increased materially for the same TX DSNP acute hospital DRGs, so reimbursement method/site-of-care payment configuration should be reviewed as a contributor to the unit-cost component of the trend."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is tightly concentrated in a single inpatient provider, CHRIST HOSPITAL, across multiple OH products, so provider-specific behavior and contract changes are the first place to investigate.; IP MedSurg (DNE) Trend 10: Paid per admit increased while admissions declined, which strongly suggests reimbursement-method issues such as contract terms, case-rate changes, or payment logic differences rather than utilization growth.; IP MedSurg (DNE) Trend 9: The pattern explicitly raises billing intensity and outlier billing concerns, making claim processing/reprocessing and claim status review highly relevant to confirm payments followed contractual standards.; IP MedSurg (DNE) Trend 8: All source cards include PA required = Y and auth-to-claim validation is flagged, so confirming that authorized inpatient services matched paid claims is an appropriate parent rule.; IP MedSurg (DNE) Trend 4: If higher spend is being driven by a shift toward higher-paid DRGs, services, or outlier inpatient billing components within CHRIST HOSPITAL, service-driver review can isolate the exact unit-cost mechanism."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The increase is concentrated in specific services/sites of care\u2014Physical Rehab and Acute Hospital aftercare\u2014so the core issue is a narrow service and post-acute placement pattern rather than broad inpatient growth.; IP MedSurg (DNE) Trend 3: The pattern is tightly tied to orthopedic aftercare and post-amputation aftercare diagnoses, making diagnosis-level concentration a primary parent trend.; IP MedSurg (DNE) Trend 7: The top story is a post-acute site-of-care shift, and the recommended next step focuses on placement rules; this aligns well with reviewing admission/discharge source and routing/location decisions.; IP MedSurg (DNE) Trend 8: All major operational cards show PA-required rehab episodes and auth flags, and the recommendation explicitly calls for reviewing rehab authorization criteria, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 6: Admissions are up across products and the issue appears tied to utilization management and post-acute steering, so reviewing UM KPI changes/PAV is relevant to explain the utilization-driven portion of the variance."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 2: The pattern is driven by one-off or very rare catastrophic admissions with very small member counts, so variance is best investigated at the individual member/case level through large-case management and clinical review.; IP MedSurg (DNE) Trend 3: Spend is concentrated in a narrow set of severe diagnoses such as lung transplant aftercare, multi-organ transplant aftercare, ascending aortic dissection, and diabetic gangrene, making diagnosis-level isolation highly relevant.; IP MedSurg (DNE) Trend 4: The impact is also concentrated in a small set of inpatient services/DRGs, including transplant aftercare, major cardiothoracic surgery, coronary bypass, and amputation, which fits a service-driver review.; IP MedSurg (DNE) Trend 1: Several outlier cases are tied to identifiable hospitals/providers such as Houston Methodist Hospital, Valleywise Health Medical Center, and MetroHealth Medical Center, so provider concentration is relevant for validating whether this is localized rather than systemic.; IP MedSurg (DNE) Trend 9: The recommended next step explicitly calls for claim-level validation, severity confirmation, and review of rare high-cost admissions, which aligns with checking whether claim processing/payment is appropriate for these outlier cases."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Most direct fit: the pattern is explicitly authorization-related, heavily concentrated in pa_required_code=Y segments, and multiple source cards are tagged with auth-to-claim validation, pointing to review of whether authorization denials and matching are being enforced correctly.; IP MedSurg (DNE) Trend 6: Admissions are up across many small local pockets and products, and the recommended next step is targeted market-level UM review. That aligns with assessing whether utilization management KPIs or PAV performance changed in these segments.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a narrow diagnosis/DRG set, especially Other Digestive System Diagnoses with MCC, Red Blood Cell Disorders without MCC, and aftercare DRGs, making diagnosis-specific investigation highly relevant.; IP MedSurg (DNE) Trend 1: The pattern calls for market-by-market provider review, notes provider mix shifts, and includes specific provider-level pockets, so subset-of-provider behavior or contractual differences are important potential parent drivers.; IP MedSurg (DNE) Trend 4: Variance spans multiple inpatient/post-acute service settings\u2014Acute Hospital, Physical Rehab, and LONG TERM CARE HOSPITAL\u2014and the next step highlights post-acute routing and site-of-care review, which fits service-driver analysis."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T14:33:42.169019+00:00"
+  }
+}

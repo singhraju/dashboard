@@ -1,0 +1,1012 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Sepsis is a recurring inpatient case-mix driver in TX and VA",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "documentation_support",
+          "label": "Documentation Support",
+          "type": "text"
+        },
+        {
+          "id": "coding_review_limits",
+          "label": "Coding Review Limits",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_IL",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires documented infection, organ dysfunction, and consistent treatment; SIRS alone insufficient for sepsis.",
+          "coding_review_limits": "Case-by-case sepsis DRG reviews; R65.2 codes cannot be principal diagnoses."
+        },
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires records proving infection, organ dysfunction, appropriate treatment; may request additional documentation; SIRS alone insufficient.",
+          "coding_review_limits": "Reviews sepsis coding case-by-case, enforcing diagnosis sequencing rules; SIRS alone doesn\u2019t support sepsis."
+        },
+        {
+          "payer_org": "Buckeye Health Plan (WellCare)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires physician-documented guideline-based sepsis evidence: organ dysfunction, SOFA\u22652, treatment; excludes SIRS/SEP-1/qSOFA.",
+          "coding_review_limits": "Reviews adult inpatient sepsis coding, sequencing, and DRG assignments pre/post-pay within 60 days."
+        },
+        {
+          "payer_org": "Carolina Complete Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires physician/LIP sepsis documentation with SOFA\u22652 organ dysfunction and supporting treatment records.",
+          "coding_review_limits": "Adult inpatient sepsis claims reviewed within 60 days; SIRS, SEP-1, and qSOFA excluded."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Licensed provider documentation must support Sepsis-3 criteria, SOFA rise \u22652, and treatment records.",
+          "coding_review_limits": "Adult inpatient claims undergo pre- and post-pay coding review for incorrect sepsis-related DRGs."
+        },
+        {
+          "payer_org": "Coordinated Care",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires physician-documented sepsis with organ dysfunction, SOFA rise \u22652, and treatment; excludes SIRS/qSOFA/SEP-1.",
+          "coding_review_limits": "Adult inpatient facility claims may be pre/post-pay denied/adjusted for coding, discharge status, or DRG errors."
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires physician documentation plus SOFA\u22652 and treatment evidence; rejects SIRS, SEP-1, qSOFA validation.",
+          "coding_review_limits": "Adult inpatient sepsis claims require supported DRG/diagnosis coding or face denial/DRG adjustment."
+        },
+        {
+          "payer_org": "Florida Blue",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires Sepsis-3 documentation with infection-related SOFA increase \u22652; rejects SIRS, SEP-1, and qSOFA.",
+          "coding_review_limits": "Uses Sepsis-3, not SIRS/SEP-1/qSOFA; unsupported sepsis claims may trigger DRG adjustments."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires records supporting Sepsis-3 sepsis diagnosis/treatment; unsupported services may trigger payment adjustment.",
+          "coding_review_limits": "Reviews DRGs for Sepsis-3 and ICD-10 sepsis codes pre- and post-payment."
+        },
+        {
+          "payer_org": "Parkland Community Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Records must substantiate Sepsis-3 sepsis criteria and treatment appropriateness or payment may be adjusted.",
+          "coding_review_limits": "Reviews Sepsis-3-related claims pre- and post-payment; no specific coding review frequency limit stated."
+        },
+        {
+          "payer_org": "Premera Blue Cross",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires documented infection and SOFA\u22652/shock organ dysfunction for accurate sepsis DRG reimbursement.",
+          "coding_review_limits": "Adult facility sepsis admissions require detailed clinical documentation for DRG reimbursement review."
+        },
+        {
+          "payer_org": "Regence_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires clear, SOFA-supported linkage of organ dysfunction to infection; excludes local-infection SOFA points.",
+          "coding_review_limits": "Adult acute-care sepsis DRG validation uses Sepsis-3, SOFA, and ICD-10 guidelines."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "documentation_support": "Requires correct principal/primary diagnosis coding and sequencing per ICD-10-CM guidelines.",
+          "coding_review_limits": "United denies UB-04 inpatient claims with invalid principal diagnoses or prohibited Excludes1/sequencing combinations."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_IL_IL_28593820310",
+        "payer_name": "BCBS_IL",
+        "policy_title": "Sepsis Policy",
+        "tags": [],
+        "effective_date": "2026-04-30",
+        "evidence": "The policy is on-topic for sepsis-related inpatient DRG claims, but it does not list this specific DRG label. It states that sepsis-related DRGs may trigger validation review of the submitted principal and secondary diagnoses, and sepsis coding must be supported by medical record evidence of infection, organ dysfunction, and a consistent treatment course.",
+        "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/2026/cpcp041-4-30-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "R65.21",
+            "T81.12",
+            "R65.2",
+            "U07.1",
+            "U09.9"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "case-by-case review",
+            "principal and secondary diagnoses",
+            "septic shock sequencing"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082130000",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Sepsis Policy",
+        "tags": [],
+        "effective_date": "2026-04-30",
+        "evidence": "Sepsis-related DRG claims are subject to case-by-case diagnosis validation. The plan reviews principal and secondary diagnoses, medical-record support for infection and organ dysfunction, and whether the treatment course fits sepsis coding criteria. No automatic payment rule or bundling instruction is stated for this DRG label.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp041-4-30-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "R65.21",
+            "T81.12",
+            "R65.2",
+            "U07.1",
+            "U09.9",
+            "A00-B99"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "case-by-case review",
+            "principal and secondary diagnoses",
+            "upon request"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FLBL_FL_28206650004",
+        "payer_name": "Florida Blue",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2024-10-17",
+        "evidence": "Inpatient claims with a sepsis diagnosis are clinically validated using Sepsis-3. If the record does not support sepsis under Sepsis-3, the claim may be subject to DRG adjustment.",
+        "policy_url": "https://files.guidewell.com/m/322cfbb29fa83b4d/original/providers-payment-policies-sepsis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient claims",
+            "at discharge"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00099",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Inpatient Sepsis Coding",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Adult inpatient facility claims billed with a sepsis-related DRG may be denied unless the record supports a qualifying infection plus documented organ dysfunction consistent with sepsis or septic shock. The policy also states sepsis should not be coded when ruled out or easily explained by another infection or diagnosis, and non-DRG methodologies are exempt.",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_171676.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "inpatient facility claims reimbursed under a methodology other than DRGs",
+            "provider contract dictates otherwise"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_REGENCE_BCBS_ID_OR_UT_28593650009",
+        "payer_name": "Regence_BCBS",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "This policy addresses adult inpatient sepsis coding and documentation standards. Supported sepsis diagnoses may be considered for reimbursement, but unsupported sepsis is excluded from claim reimbursement and DRG validation decisions.",
+        "policy_url": "https://www.regence.com/provider/library/policies-guidelines/reimbursement-policy/sepsis",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "qualified healthcare professional"
+          ],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "This policy requires accurate ICD-10-CM principal/primary diagnosis coding. For inpatient UB-04 claims, an invalid principal diagnosis is assigned MS-DRG 998 and the entire claim is denied. Sepsis-related diagnoses must follow official ICD-10-CM sequencing and Excludes1 rules.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [
+            "R65",
+            "Z51.89"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis in Box 67",
+            "inpatient UB-04 claim",
+            "principal reason for admission"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_BHP_00067",
+        "payer_name": "Buckeye Health Plan (WellCare)",
+        "policy_title": "Sepsis Diagnosis (PDF)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "MS-DRG 871 is explicitly listed in a sepsis diagnosis policy that subjects inpatient sepsis claims to pre- or post-pay clinical validation. Payment can be denied or adjusted if the sepsis diagnosis is unsupported, documentation is incomplete, or DRG assignment is incorrect.",
+        "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/Buckeye/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "A41.9",
+            "R65.20",
+            "R65.21"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "pre- or post-pay review",
+            "with sepsis diagnosis"
+          ],
+          "utilization_limits": [
+            "age 18 or older",
+            "review within 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician documentation",
+            "licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CCH_00019",
+        "payer_name": "Carolina Complete Health",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": "09/2024",
+        "evidence": "Inpatient claims assigned to MS-DRG 871 are subject to pre- or post-pay clinical validation for sepsis diagnosis support and correct DRG assignment. Payment may be denied, adjusted, reinstated, or reprocessed depending on medical record support.",
+        "policy_url": "https://network.carolinacompletehealth.com/content/dam/centene/carolinacompletehealth/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "R65.20",
+            "R65.21",
+            "A41.9"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "pre- or post-pay review",
+            "after medical records received"
+          ],
+          "utilization_limits": [
+            "review within at least 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation required"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CC_00050",
+        "payer_name": "Coordinated Care",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": "2024-09",
+        "evidence": "MS-DRG 871 is reviewed for sepsis diagnosis validation on inpatient claims. Payment may be adjusted, denied, or reinstated depending on whether the record supports sepsis and the assigned DRG. Applies only to inpatient facility claims for adults age 18 or older, and does not apply to sepsis screening.",
+        "policy_url": "https://www.coordinatedcarehealth.com/content/dam/centene/Coordinated%20Care/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "pre- or post-pay review",
+            "inpatient claim submission"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00062",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "MS-DRG 871 for septicemia or severe sepsis without mechanical ventilation >96 hours with MCC is subject to inpatient sepsis diagnosis validation. The payer reviews claims pre- or post-pay and may deny, adjust, or reinstate payment if the sepsis diagnosis or DRG assignment is not supported by the medical record.",
+        "policy_url": "https://www.arkansastotalcare.com/content/dam/centene/artotalcare/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "pre- or post-pay review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00101",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis - CC.PP.073",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Inpatient sepsis claims, including MS-DRG 871, are subject to pre- or post-pay clinical validation; payment may be adjusted, denied, or reinstated based on medical record support.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "710",
+            "720",
+            "853",
+            "854",
+            "855",
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A41.9",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "pre- or post-pay review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00721",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Sepsis Diagnosis",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Inpatient MS-DRG 871 sepsis claims are subject to pre- or post-pay clinical validation. Payment depends on documentation supporting Sepsis-3/SOFA-based sepsis and related treatment; unsupported claims may be denied, reassigned, or adjusted.",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/CC.PP.073-Sepsis-Diagnosis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "710",
+            "720",
+            "853",
+            "854",
+            "855",
+            "A02.1",
+            "A20.7",
+            "A22.7",
+            "A26.7",
+            "A32.7",
+            "A39.1",
+            "A39.2",
+            "A39.3",
+            "A39.4",
+            "A39.89",
+            "A39.9",
+            "A40.0",
+            "A40.1",
+            "A40.3",
+            "A40.8",
+            "A40.9",
+            "A41.01",
+            "A41.02",
+            "A41.1",
+            "A41.2",
+            "A41.3",
+            "A41.4",
+            "A41.50",
+            "A41.51",
+            "A41.52",
+            "A41.53",
+            "A41.54",
+            "A41.59",
+            "A41.81",
+            "A41.89",
+            "A41.9",
+            "A42.7",
+            "A54.86",
+            "B00.7",
+            "B37.7",
+            "R57.1",
+            "R57.8",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "pre- or post-pay review",
+            "same inpatient claim"
+          ],
+          "utilization_limits": [
+            "review completed within 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "APR-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation",
+            "certified professional coders and clinicians validate"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_01051",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis CC.PP.073",
+        "tags": [],
+        "effective_date": "01/24",
+        "evidence": "This MS-DRG for septicemia or severe sepsis without mechanical ventilation greater than 96 hours with MCC is subject to inpatient pre- or post-pay review for sepsis diagnosis validation. Payment may be adjusted, denied, or reinstated based on medical record support.",
+        "policy_url": "https://www.mhswi.com/content/dam/centene/MHSWI/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "871"
+          ],
+          "related_codes": [
+            "870",
+            "872",
+            "R65.20",
+            "R65.21",
+            "A41.9"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "pre- or post-pay review",
+            "medical records requested"
+          ],
+          "utilization_limits": [
+            "inpatient claims age 18+",
+            "review within 60 days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or licensed independent practitioner documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00202",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2022-01-07",
+        "evidence": "Molina Healthcare reviews sepsis-related inpatient DRG claims using Sepsis-3 clinical validation. Payments may be adjusted when the medical record does not support sepsis or sepsis treatment services, and ICD-10 diagnosis codes R65.2, A40.x, and A41.x are subject to review.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "medical record review",
+            "pre-payment and post-payment",
+            "Sepsis-3 criteria"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_PRK_00012",
+        "payer_name": "Parkland Community Health Plan",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "5/15/2025",
+        "evidence": "The policy does not name the requested DRG description directly, but it applies sepsis clinical validation to inpatient DRG claims and may adjust payment when sepsis documentation does not meet Sepsis-3 criteria.",
+        "policy_url": "https://providers.parklandhealthplan.com/Uploads/Public/Documents/Provider/sepsis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "before and after payment",
+            "upon reviewing the medical record"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00195",
+        "payer_name": "United Health",
+        "policy_title": "Inappropriate Primary Diagnosis Codes Policy, Professional for Louisiana",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Off-topic for an inpatient DRG septicemia/severe sepsis pattern. The policy only addresses CMS-1500 professional claims and denies claims when an inappropriate diagnosis is reported as primary; it also reiterates ICD-10-CM sequencing rules for severe sepsis and other diagnosis categories.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/la/LA-Inappropriate-Primary-Diagnosis-Codes-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "Louisiana"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_CO_2960679860200",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-07-12",
+        "evidence": "Applies official ICD-10-CM sequencing rules to claims. Category R65 sepsis-related diagnoses are treated as mutually exclusive under Excludes1, so conflicting diagnosis combinations should not be billed together.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "do not bill with Excludes1 code",
+            "sequence per ICD-10-CM guidelines"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicaid"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 17,
+    "policies_successful": 17,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Sepsis is a recurring inpatient case-mix driver in TX and VA",
+    "pattern_rank": 6,
+    "pattern_title": "Sepsis is a recurring inpatient case-mix driver in TX and VA",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 17,
+    "successful_extractions": 17,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 17 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "17 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 2 of 3 source card(s) attest no state (segment scope: UNATTRIBUTED, TX, VA); searched without it rather than narrowing to ['TX']"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/17 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/17 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 120087,
+    "output": 79387,
+    "breakdown": {
+      "search_keywords": {
+        "input": 533,
+        "output": 261,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 1746,
+        "output": 13156,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 95153,
+        "output": 59446,
+        "calls": 17
+      },
+      "relevance_judge": {
+        "input": 7927,
+        "output": 2024,
+        "calls": 17
+      },
+      "dynamic_columns": {
+        "input": 996,
+        "output": 476,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 3637,
+        "output": 3879,
+        "calls": 26
+      },
+      "policy_recommendations": {
+        "input": 10095,
+        "output": 145,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T12:54:51.566663+00:00",
+    "end_time": "2026-08-24T12:58:23.715885+00:00",
+    "duration_ms": 212149,
+    "version": "2.0.0"
+  }
+}

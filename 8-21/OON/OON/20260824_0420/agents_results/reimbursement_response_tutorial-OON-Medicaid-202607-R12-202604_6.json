@@ -1,0 +1,253 @@
+{
+  "job_id": "tutorial-OON-Medicaid-202607-R12-202604_6_job",
+  "conversation_id": "tutorial-OON-Medicaid-202607-R12-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "VERACYTE lab spend is obscured by Not Mapped classification",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mentioned",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Carolina Complete Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "policy_relevance": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "policy_relevance": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CCH_00017",
+        "payer_name": "Carolina Complete Health",
+        "policy_title": "Reporting the Global Maternity Package",
+        "tags": [],
+        "effective_date": "01/01/2013",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://network.carolinacompletehealth.com/content/dam/centene/carolinacompletehealth/policies/payment-policies/CC.PP.016.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00950",
+        "payer_name": "Centene",
+        "policy_title": "Global Maternity Billing",
+        "tags": [],
+        "effective_date": "01/01/2013",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.coordinatedcarehealth.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_01101",
+        "payer_name": "Molina",
+        "policy_title": "Multiple Procedure Payment Reduction",
+        "tags": [],
+        "effective_date": "10/23/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/MultipleProcedurePaymentReduction12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 10,
+    "policies_successful": 10,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: VERACYTE lab spend is obscured by Not Mapped classification",
+    "pattern_rank": 6,
+    "pattern_title": "VERACYTE lab spend is obscured by Not Mapped classification",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 10 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "10 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NC', 'WA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "7/10 policies quarantined (70%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/10 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "7 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_CC_00015:Global Maternity Billing, RP_GBD_MOH_01042:Add-on Coding, RP_GBD_UHC_00849:Anesthesia Policy, Professional, RP_GBD_UHC_00851:Assistant at Surgery Services Policy, Professional, RP_GBD_UHC_00858:Cesarean Delivery Policy, Professional, RP_GBD_UHC_00895:Multiple Procedure Payment Reduction (MPPR) for Medical and Surgical Services Policy, Professional, RP_GBD_UHC_00903:Obstetrical Services Policy, Professional]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 72238,
+    "output": 13520,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 383,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 484,
+        "output": 1560,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 66013,
+        "output": 9772,
+        "calls": 10
+      },
+      "relevance_judge": {
+        "input": 2891,
+        "output": 1036,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 923,
+        "output": 388,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1407,
+        "output": 381,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T04:34:56.230783+00:00",
+    "end_time": "2026-08-24T04:35:30.508965+00:00",
+    "duration_ms": 34278,
+    "version": "2.0.0"
+  }
+}

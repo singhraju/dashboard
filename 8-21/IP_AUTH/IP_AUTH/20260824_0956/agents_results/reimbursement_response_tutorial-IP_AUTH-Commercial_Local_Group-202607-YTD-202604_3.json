@@ -1,0 +1,392 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY EPO acute hospital pressure is concentrated at NYU Langone and spine surgery",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "setting_scope",
+          "label": "Setting Scope",
+          "type": "badge"
+        },
+        {
+          "id": "bundling_rule",
+          "label": "Bundling Rule",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "setting_scope": "-",
+          "bundling_rule": "-"
+        },
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "setting_scope": "Hospital Settings",
+          "bundling_rule": "Bundles"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "setting_scope": "Professional Only",
+          "bundling_rule": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_00076",
+        "payer_name": "Emblem Health",
+        "policy_title": "Split Surgical Care (Modifiers 54/55/56) (Commercial)",
+        "tags": [],
+        "effective_date": "1/01/2021",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/EH_Split_Surgical_Modifiers_54_55_56_Reimbursement_Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593510117",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Facility Routine Supplies and Services",
+        "tags": [],
+        "effective_date": "2018-12-01",
+        "evidence": "Routine supplies, facility personnel, monitoring, equipment, and telemetry are bundled into hospital room/procedure charges. Separate reimbursement is denied for these items, which can affect surgical DRG claims involving spine surgery, cardiac procedures, tracheostomy care, and mechanical ventilation.",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-040.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "S2900"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "same room charge",
+            "same procedure charge"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Medicare Advantage",
+            "Inpatient",
+            "Outpatient"
+          ],
+          "state_specific_rules": [
+            "NY applicable market",
+            "PA applicable market",
+            "WV applicable market",
+            "DE applicable market"
+          ],
+          "provider_role_restrictions": [
+            "facility personnel included",
+            "nursing services not separately billed"
+          ],
+          "exemptions": [
+            "x-rays",
+            "dialysis"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00045",
+        "payer_name": "United Health",
+        "policy_title": "Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Off-topic. The policy addresses professional global days and postoperative bundling for CMS-1500 claims, not inpatient DRG adjudication for this procedure category.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Global-Days-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00101",
+        "payer_name": "United Health",
+        "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "Off-topic for the requested DRG-oriented pattern. This policy governs split surgical package reimbursement for professional claims using modifiers 54, 55, and 56, and does not address inpatient DRG hospital payment patterns.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "This payer bundles routine inpatient and outpatient facility services into room/board, facility, or surgical-room reimbursement. For major cardiothoracic surgery, routine supplies, equipment, anesthesia-related items, monitors, and bypass-related room components are not separately reimbursable.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270-279",
+            "300-370",
+            "410",
+            "412",
+            "419",
+            "460"
+          ],
+          "pairing_conditions": [
+            "same claim as room and board",
+            "same day of service",
+            "facility-owned ventilator or CPAP"
+          ],
+          "utilization_limits": [
+            "1 unit per day"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle S2900 when it is billed on the same claim line or with the same room charge or same procedure charge; treat facility personnel as included and nursing services not separately billed. Exempt: x-rays, dialysis.",
+      "evidence": [
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"S2900\" [target_codes]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"same claim line\" [pairing_conditions]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"same room charge\" [pairing_conditions]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"same procedure charge\" [pairing_conditions]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"facility personnel included\" [provider_role_restrictions]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"nursing services not separately billed\" [provider_role_restrictions]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"x-rays\" [exemptions]",
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services: \"dialysis\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Highmark_BCBS \u00b7 Facility Routine Supplies and Services \u2014 https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-040.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: NY EPO acute hospital pressure is concentrated at NYU Langone and spine surgery",
+    "pattern_rank": 3,
+    "pattern_title": "NY EPO acute hospital pressure is concentrated at NYU Langone and spine surgery",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC",
+      "Cervical Spinal Fusion with CC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 1 for scope drift because it targets ventilator/CPAP and cardiothoracic-inclusive billing rather than the pattern's spine-focused acute hospital pressure; item 0 remained aligned."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/6 policies quarantined (17%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593500128:Global Surgery and Subsequent Services]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 43284,
+    "output": 28074,
+    "breakdown": {
+      "search_keywords": {
+        "input": 574,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 567,
+        "output": 1234,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 32797,
+        "output": 20950,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 2549,
+        "output": 1415,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 985,
+        "output": 649,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 735,
+        "output": 272,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2594,
+        "output": 2071,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2483,
+        "output": 952,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:53:03.864720+00:00",
+    "end_time": "2026-08-24T11:55:04.686910+00:00",
+    "duration_ms": 120822,
+    "version": "2.0.0"
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R3-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R3-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT PPO acute-hospital pressure centered on Yale",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "critical_care_exclusion",
+          "label": "Vent Exclusion",
+          "type": "badge"
+        },
+        {
+          "id": "drg_bundling",
+          "label": "DRG Bundling",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "critical_care_exclusion": "-",
+          "drg_bundling": "-"
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "critical_care_exclusion": "-",
+          "drg_bundling": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "critical_care_exclusion": "Vent Excluded",
+          "drg_bundling": "Bundles"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "critical_care_exclusion": "Bundles",
+          "drg_bundling": "Bundles"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00047",
+        "payer_name": "Cigna",
+        "policy_title": "Procedure and Place of Service",
+        "tags": [],
+        "effective_date": "08/12/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R43_Procedure_and_Place_of_Service.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595770204",
+        "payer_name": "Point32Health",
+        "policy_title": "Observation Stay",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The policy does not specifically address this DRG pattern, but it governs observation stays in contracted acute care hospitals. Observation is excluded when the admission requires intensive critical care services such as mechanical ventilation, and otherwise observation services may be bundled into inpatient or DRG compensation.",
+        "policy_url": "https://wwwassets.point32health.org/documents/observation-stay-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "G0378",
+            "G0379",
+            "99221-99223",
+            "99231-99235"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0762",
+            "0769"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "same date of service",
+            "within three days of admission"
+          ],
+          "utilization_limits": [
+            "max 48 hours of observation",
+            "hours of observation on same claim line"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial Products",
+            "Public Plans",
+            "Senior Products",
+            "Medicare Advantage products"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "attending physician"
+          ],
+          "exemptions": [
+            "intubation and mechanical ventilation"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "For facility claims, routine room/board items, supplies, nursing services, and certain equipment are bundled into the room and board, facility, or ancillary charge and are not separately reimbursable. The policy also limits facility-owned ventilator or CPAP management to one unit per day.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260-269",
+            "270-279",
+            "300-370",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit per day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "professional charges"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Deny observation billing for G0378, G0379, 99221-99223, and 99231-99235 unless billed by the attending physician on the same claim and same date of service, within three days of admission, with hours of observation on same claim line, capped at max 48 hours of observation, and tied to revenue codes 0762 or 0769 across Commercial Products, Public Plans, Senior Products, and Medicare Advantage products. Exempt: intubation and mechanical ventilation. Peer: Point32Health denies observation services using G0378/G0379 and 99221-99223/99231-99235 unless they are on the same claim and same date of service, within three days of admission, capped at max 48 hours, and billed by the attending physician..\n\nRecommendation 2: Bundle UB04 facility charges reported under revenue codes 250, 260-269, 270-279, 300-370, 391, 410, 412, 419, 460, and 510, and limit ventilator or CPAP management to 1 unit per day; exempt professional charges. Exempt: professional charges. Peer: United Health bundles these UB04 facility revenue codes and caps ventilator or CPAP management at 1 unit per day while exempting professional charges..",
+      "evidence": [
+        "Point32Health \u00b7 Observation Stay: \"G0378\" [related_codes]",
+        "Point32Health \u00b7 Observation Stay: \"G0379\" [related_codes]",
+        "Point32Health \u00b7 Observation Stay: \"99221-99223\" [related_codes]",
+        "Point32Health \u00b7 Observation Stay: \"99231-99235\" [related_codes]",
+        "Point32Health \u00b7 Observation Stay: \"0762\" [revenue_codes]",
+        "Point32Health \u00b7 Observation Stay: \"0769\" [revenue_codes]",
+        "Point32Health \u00b7 Observation Stay: \"same claim\" [pairing_conditions]",
+        "Point32Health \u00b7 Observation Stay: \"same date of service\" [pairing_conditions]",
+        "Point32Health \u00b7 Observation Stay: \"within three days of admission\" [pairing_conditions]",
+        "Point32Health \u00b7 Observation Stay: \"max 48 hours of observation\" [utilization_limits]",
+        "Point32Health \u00b7 Observation Stay: \"hours of observation on same claim line\" [utilization_limits]",
+        "Point32Health \u00b7 Observation Stay: \"Commercial Products\" [program_scope]",
+        "Point32Health \u00b7 Observation Stay: \"Public Plans\" [program_scope]",
+        "Point32Health \u00b7 Observation Stay: \"Senior Products\" [program_scope]",
+        "Point32Health \u00b7 Observation Stay: \"Medicare Advantage products\" [program_scope]",
+        "Point32Health \u00b7 Observation Stay: \"attending physician\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"250\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"260-269\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"270-279\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"300-370\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"391\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"410\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"412\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"419\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"460\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"510\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"1 unit per day ventilator or CPAP management\" [utilization_limits]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB04\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"professional charges\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Point32Health denies observation services using G0378/G0379 and 99221-99223/99231-99235 unless they are on the same claim and same date of service, within three days of admission, capped at max 48 hours, and billed by the attending physician.",
+        "United Health bundles these UB04 facility revenue codes and caps ventilator or CPAP management at 1 unit per day while exempting professional charges."
+      ],
+      "citation": [
+        "Point32Health \u00b7 Observation Stay \u2014 https://wwwassets.point32health.org/documents/observation-stay-pp",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CT PPO acute-hospital pressure centered on Yale",
+    "pattern_rank": 2,
+    "pattern_title": "CT PPO acute-hospital pressure centered on Yale",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Major Chest Procedures with CC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/5 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 149137,
+    "output": 20316,
+    "breakdown": {
+      "search_keywords": {
+        "input": 550,
+        "output": 411,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 645,
+        "output": 1737,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 139440,
+        "output": 14237,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 934,
+        "output": 369,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 912,
+        "output": 647,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 639,
+        "output": 571,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2557,
+        "output": 1805,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3460,
+        "output": 539,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:14:36.275219+00:00",
+    "end_time": "2026-08-24T10:16:17.905362+00:00",
+    "duration_ms": 101630,
+    "version": "2.0.0"
+  }
+}

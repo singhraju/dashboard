@@ -1,0 +1,239 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_1_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R6-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization coding and facility mapping issues are inflating apparent spend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "facility_claim_scope",
+          "label": "Facility Scope",
+          "type": "text"
+        },
+        {
+          "id": "mapping_denial_trigger",
+          "label": "Mapping Denial",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "facility_claim_scope": "Facility inpatient/outpatient claims on bill types 012x\u2013014x, excluding no-pay bills.",
+          "mapping_denial_trigger": "Denies claims for no-pay bills, missing HCPCS, or revenue code/HCPCS mapping mismatches."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_NY_NJ_CT_2960293500000",
+        "payer_name": "Emblem Health",
+        "policy_title": "Coding Edits Policy (Commercial, Medicare, and Medicaid)",
+        "tags": [],
+        "effective_date": "7/29/2026",
+        "evidence": "No-pay bill types are denied, which can create facility mapping denials when claims are submitted on these inpatient or outpatient bill types.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0275",
+            "0276",
+            "0960-0989",
+            "0300-0319"
+          ],
+          "pairing_conditions": [
+            "same claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Claims Processing Parameters Policy",
+            "Revenue Code Policy",
+            "Professional, Technical, and Global Services Policy"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Adopt a same-claim deny/mapping edit for cesarean facility claims when revenue codes 0275, 0276, 0300-0319, or 0960-0989 appear on the same claim, following the Revenue Code Policy and Claims Processing Parameters Policy, and use the edit first to validate whether apparent California authorization-code and Not Mapped spend is classification-driven before taking rate or utilization action.",
+      "evidence": [
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"0275\" [revenue_codes]",
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"0276\" [revenue_codes]",
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"0960-0989\" [revenue_codes]",
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"0300-0319\" [revenue_codes]",
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"same claim\" [pairing_conditions]",
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"Claims Processing Parameters Policy\" [program_scope]",
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid): \"Revenue Code Policy\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Emblem Health \u00b7 Coding Edits Policy (Commercial, Medicare, and Medicaid) \u2014 https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/coding-edit-rules-emblemhealth.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: Authorization coding and facility mapping issues are inflating apparent spend",
+    "pattern_rank": 1,
+    "pattern_title": "Authorization coding and facility mapping issues are inflating apparent spend",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC",
+      "Heart Transplant or Implant of Heart Assist System without MCC",
+      "Postpartum and Postabortion Diagnoses without O.R. Procedures",
+      "Ungroupable"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA', 'NY', 'CO'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/2 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00055:Ambulatory Surgical Groupers]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 174869,
+    "output": 15238,
+    "breakdown": {
+      "search_keywords": {
+        "input": 563,
+        "output": 528,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 426,
+        "output": 619,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 168836,
+        "output": 10832,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 1010,
+        "output": 635,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 884,
+        "output": 598,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 271,
+        "output": 249,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1704,
+        "output": 1423,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1175,
+        "output": 354,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T09:40:00.971242+00:00",
+    "end_time": "2026-08-23T09:41:16.239967+00:00",
+    "duration_ms": 75268,
+    "version": "2.0.0"
+  }
+}

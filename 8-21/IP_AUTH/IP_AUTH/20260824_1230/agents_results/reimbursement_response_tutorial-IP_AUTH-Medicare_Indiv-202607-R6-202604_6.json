@@ -1,0 +1,211 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_6_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R6-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Unmapped facility classification is obscuring site-of-care decisions in TX and LA DSNP",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mentioned",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "dx_denial_rule",
+          "label": "Dx Denial Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_mentioned": "-",
+          "dx_denial_rule": "Denies claims with incorrect principal/primary diagnosis codes on UB-04 or CMS-1500."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_UHC_00116",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "This policy is not DRG-specific, but it can affect claims for sepsis-related admissions by requiring the correct principal or primary diagnosis. An incorrect principal diagnosis on UB-04 can deny the entire claim, and an incorrect primary diagnosis on CMS-1500 can deny the affected line. The policy also notes Excludes1 behavior for sepsis, severe sepsis, and septic shock diagnosis coding.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MR-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "principal diagnosis on UB-04",
+            "primary diagnosis on CMS-1500"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Unmapped facility classification is obscuring site-of-care decisions in TX and LA DSNP",
+    "pattern_rank": 6,
+    "pattern_title": "Unmapped facility classification is obscuring site-of-care decisions in TX and LA DSNP",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Septicemia or Severe Sepsis with Mechanical Ventilation >96 Hours"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX', 'LA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Item 0 was dropped for clear scope drift because it concerns a Medicare Advantage sepsis diagnosis editing rule rather than TX/LA DSNP facility-classification site-of-care decisions."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 9412,
+    "output": 5913,
+    "breakdown": {
+      "search_keywords": {
+        "input": 531,
+        "output": 189,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 395,
+        "output": 565,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 4387,
+        "output": 3358,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 474,
+        "output": 132,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 733,
+        "output": 540,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 243,
+        "output": 139,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1518,
+        "output": 647,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1131,
+        "output": 343,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T13:33:39.406008+00:00",
+    "end_time": "2026-08-24T13:34:30.203594+00:00",
+    "duration_ms": 50797,
+    "version": "2.0.0"
+  }
+}

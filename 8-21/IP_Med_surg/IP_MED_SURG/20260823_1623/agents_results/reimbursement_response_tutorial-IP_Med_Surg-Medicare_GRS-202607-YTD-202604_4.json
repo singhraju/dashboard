@@ -1,0 +1,352 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-YTD-202604_4_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-YTD-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA medical aftercare, sepsis, and electrolyte cases are concentrating",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "payment_review_action",
+          "label": "Payment Review",
+          "type": "text"
+        },
+        {
+          "id": "documentation_support",
+          "label": "Documentation Support",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_review_action": "Centene reviews inpatient sepsis DRGs pre/post-pay, denying or adjusting unsupported diagnoses or incorrect DRGs.",
+          "documentation_support": "Requires physician documentation clearly supporting sepsis with organ dysfunction and related treatment records."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_review_action": "Subjects sepsis DRGs to clinical validation review and may adjust unsupported hospital payments.",
+          "documentation_support": "Records must support Sepsis-3 sepsis treatment; SOFA \u22652 supports diagnosis; A40/A41/R65.2 reviewed."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_review_action": "United Health denies inpatient claims with invalid principal diagnoses, potentially assigning MS-DRG 998.",
+          "documentation_support": "Claims deny if principal diagnosis is invalid or incorrectly reported in Box 67/24E."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Diagnosis Code Requirement Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-03-01",
+        "evidence": "Invalid principal diagnosis reporting can trigger MS-DRG 998 and denial of the inpatient claim. The policy requires the correct principal or primary diagnosis to be submitted in the proper claim field.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-IEX-Diagnosis-Code-Requirement-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "998"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00101",
+        "payer_name": "Centene",
+        "policy_title": "Sepsis Diagnosis - CC.PP.073",
+        "tags": [],
+        "effective_date": "03/2024",
+        "evidence": "Inpatient sepsis DRG claims are subject to pre- or post-pay clinical validation. Payment depends on documentation supporting a true sepsis diagnosis and correct DRG assignment; unsupported sepsis coding or incorrect sequencing can result in denial or adjustment.",
+        "policy_url": "https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "872"
+          ],
+          "related_codes": [
+            "870",
+            "871",
+            "853",
+            "854",
+            "855",
+            "A41.9",
+            "R65.20",
+            "R65.21",
+            "R78.81"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "medical record review",
+            "pre- or post-pay review"
+          ],
+          "utilization_limits": [
+            "age 18 and older"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "physician or LIP documentation"
+          ],
+          "exemptions": [
+            "sepsis screening"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00202",
+        "payer_name": "Molina",
+        "policy_title": "Sepsis",
+        "tags": [],
+        "effective_date": "2022-01-07",
+        "evidence": "This policy subjects sepsis diagnosis codes to DRG clinical validation and may adjust hospital payments when the record does not support Sepsis-3 criteria and treatment.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "R65.2"
+          ],
+          "related_codes": [
+            "R65.2"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "pre- or post-payment review"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement pre- or post-pay medical record review for MS-DRG 872 on the same inpatient claim when paired with DRG 870, 871, 853, 854, or 855 and/or diagnosis codes A41.9, R65.20, R65.21, or R78.81; limit to age 18 and older, require physician or LIP documentation, and exempt sepsis screening. Centene and United Health both apply MS-DRG-scoped inpatient diagnosis-payment rules, supporting an MS-DRG-focused sepsis review.. Exempt: sepsis screening.\nIA \u2014 Add same-claim pre- or post-payment clinical validation review for DRG claims reporting R65.2.",
+      "evidence": [
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"872\" [target_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"870\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"871\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"853\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"854\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"855\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"A41.9\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"R65.20\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"R65.21\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"R78.81\" [related_codes]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"same inpatient claim\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"medical record review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"pre- or post-pay review\" [pairing_conditions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"age 18 and older\" [utilization_limits]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"MS-DRG\" [program_scope]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"physician or LIP documentation\" [provider_role_restrictions]",
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073: \"sepsis screening\" [exemptions]",
+        "Molina \u00b7 Sepsis: \"R65.2\" [target_codes]",
+        "Molina \u00b7 Sepsis: \"R65.2\" [related_codes]",
+        "Molina \u00b7 Sepsis: \"same claim\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"pre- or post-payment review\" [pairing_conditions]",
+        "Molina \u00b7 Sepsis: \"DRG\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Centene and United Health both apply MS-DRG-scoped inpatient diagnosis-payment rules, supporting an MS-DRG-focused sepsis review."
+      ],
+      "citation": [
+        "Centene \u00b7 Sepsis Diagnosis - CC.PP.073 \u2014 https://www.healthnet.com/content/dam/centene/policies/payment-policies/CC.PP.073.pdf",
+        "Molina \u00b7 Sepsis \u2014 https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Sepsis12172024.ashx"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: CA medical aftercare, sepsis, and electrolyte cases are concentrating",
+    "pattern_rank": 4,
+    "pattern_title": "CA medical aftercare, sepsis, and electrolyte cases are concentrating",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Item 2 was dropped for scope drift because it is a broad diagnosis-validity denial rather than a policy aimed at the pattern's aftercare, sepsis, or electrolyte concentrations."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 24840,
+    "output": 18613,
+    "breakdown": {
+      "search_keywords": {
+        "input": 561,
+        "output": 529,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 503,
+        "output": 879,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 15426,
+        "output": 12989,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1478,
+        "output": 394,
+        "calls": 3
+      },
+      "dynamic_columns": {
+        "input": 973,
+        "output": 757,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 787,
+        "output": 763,
+        "calls": 6
+      },
+      "policy_recommendations": {
+        "input": 2411,
+        "output": 1954,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2701,
+        "output": 348,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:52:41.763851+00:00",
+    "end_time": "2026-08-23T17:53:59.007798+00:00",
+    "duration_ms": 77243,
+    "version": "2.0.0"
+  }
+}

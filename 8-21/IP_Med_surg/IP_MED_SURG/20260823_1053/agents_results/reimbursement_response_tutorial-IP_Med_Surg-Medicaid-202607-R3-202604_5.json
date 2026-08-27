@@ -1,0 +1,1079 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicaid-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicaid-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare severe inpatient outliers and attribution gaps are materially moving spend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "ob_scope_status",
+          "label": "OB Scope",
+          "type": "badge"
+        },
+        {
+          "id": "inpatient_requirements",
+          "label": "Inpatient Requirements",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "BCBS_IL",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Fidelis Care (Centene)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "Excludes OB",
+          "inpatient_requirements": "No prior authorization stated; submit medical records for both stays, discharge planning, and readmission relatedness."
+        },
+        {
+          "payer_org": "Highmark Health Options",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Martins Point Health Care",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "Denies",
+          "inpatient_requirements": "Prior authorization required for acute inpatient admissions; conversion requires clinical review and UR concurrence."
+        },
+        {
+          "payer_org": "Medica",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "Denies",
+          "inpatient_requirements": "Requires legible, complete, signed, dated records supporting billed services and retained source documentation."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "-"
+        },
+        {
+          "payer_org": "Premera Blue Cross",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "Excludes OB",
+          "inpatient_requirements": "Claims must document readmission relationship and any same-day transfer using correct admission/discharge codes."
+        },
+        {
+          "payer_org": "Providence Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "Excludes Admissions",
+          "inpatient_requirements": "Requires covered, medically necessary procedures, pre-admission inpatient order, and documentation supporting inpatient criteria."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_scope_status": "-",
+          "inpatient_requirements": "No inpatient requirements stated for this DRG."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589980010",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Multiple Surgery Reduction",
+        "tags": [],
+        "effective_date": "3/1/2020",
+        "evidence": "Off-topic for the requested DRG. The policy addresses multiple surgery reduction for same-session procedures, not inpatient DRG outlier payment or attribution gaps.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/multiple-surgery-reduction.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00163",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Pest Control Services RETIRED",
+        "tags": [],
+        "effective_date": "TBD",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Pest%20Control%20Services%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_IL_IL_28593820308",
+        "payer_name": "BCBS_IL",
+        "policy_title": "Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "2026-04-24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/cpcplab/2026/cpcplab045-4-24-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082290004",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "2026-04-24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab045-4-24-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00024",
+        "payer_name": "Cigna",
+        "policy_title": "Hospital in the Home",
+        "tags": [],
+        "effective_date": "10/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R42_Hospital_in_the_Home.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595920111",
+        "payer_name": "Moda Health",
+        "policy_title": "Medical Records Documentation Standards",
+        "tags": [],
+        "effective_date": "2000-01-01",
+        "evidence": "Off-topic for this DRG. This policy is a general medical records documentation standard and does not contain DRG-specific inpatient outlier, severity, or attribution-gap payment rules.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM039.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MEDICA_WI_2960321580013",
+        "payer_name": "Medica",
+        "policy_title": "Place of Service Code Reference Guide",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://partner.medica.com/-/media/documents/provider/place-of-service-code-reference-guide.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595750209",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Pathogen Panel Testing",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-pathogen-panel-testing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PBC_WA_00053",
+        "payer_name": "Premera Blue Cross",
+        "policy_title": "Hospital or Hospital System Readmissions",
+        "tags": [],
+        "effective_date": "2025-09-05; 2026-05-08",
+        "evidence": "The plan may deny reimbursement for unplanned acute inpatient readmissions to the same hospital or hospital system when the readmission is for the same DRG-based condition within 30 calendar days of discharge, and starting 2026-05-08 for clinically related conditions. This DRG title is not explicitly listed, but it would be subject to the general readmission rule unless an exception applies.",
+        "policy_url": "https://www.premera.com/paymentpolicies/cmi_171621.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 calendar days of discharge",
+            "same hospital or hospital system",
+            "same-day transfer"
+          ],
+          "utilization_limits": [
+            "30 calendar days"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "discharge status 02",
+            "discharge status 05",
+            "discharge status 07",
+            "discharge status 20",
+            "discharge status 30",
+            "discharge status 81",
+            "discharge status 82",
+            "discharge status 83",
+            "discharge status 84",
+            "discharge status 85",
+            "discharge status 86",
+            "discharge status 87",
+            "discharge status 88",
+            "discharge status 89",
+            "discharge status 90",
+            "discharge status 91",
+            "discharge status 92",
+            "discharge status 93",
+            "discharge status 94",
+            "discharge status 95"
+          ],
+          "program_scope": [
+            "DRG",
+            "inpatient acute"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "planned chemotherapy",
+            "burns",
+            "cystic fibrosis",
+            "transfusions for chronic anemias",
+            "scheduled planned or delayed elective surgery",
+            "covered transplant services",
+            "behavioral health",
+            "acute physical rehabilitation",
+            "newborn/neonatal care",
+            "children less than 12 months old",
+            "pediatric oncology",
+            "same-day transfers"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00017",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Inpatient Hospital Admission and Length of Stay Reviews",
+        "tags": [],
+        "effective_date": "6/1/2026",
+        "evidence": "This policy governs inpatient admission and length-of-stay review for acute hospital cases paid under DRG-based methodologies. It supports payment when inpatient criteria are met, but reimbursement may be reduced or denied for delayed discharge, non-covered services, or days that are not medically necessary. Outlier calculations can be affected by SNF placement and custodial care rules.",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp7.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient stay",
+            "concurrent or post-service review"
+          ],
+          "utilization_limits": [
+            "delayed discharge days may be reduced or denied"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Modified DRG",
+            "IPPS",
+            "Medicare Advantage",
+            "Commercial",
+            "Medicaid/OHP",
+            "percentage of billed charges/per diem"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "RN review first",
+            "medical director review if criteria fail"
+          ],
+          "exemptions": [
+            "behavioral health inpatient admissions",
+            "SNF admissions",
+            "IRF admissions",
+            "acute hospital care at home subject to CMS initiative participation"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00022",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Observation Status",
+        "tags": [],
+        "effective_date": "1/1/2026",
+        "evidence": "This policy is off-topic to the listed DRG pattern. It governs facility outpatient observation status and related inpatient/outpatient conversion rules, but it does not establish DRG-specific adjudication for this code.",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp69.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_AHC_00145",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Repeat Procedure Modifiers 76 and 77",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.amerihealthcaritasdc.com/content/dam/amerihealth-caritas/acdc/pdf/provider/resources/reimbursement-policies/20260112/Repeat%20Procedure%20Modifiers%2076%20and%2077%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_AHC_00317",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Repeat Procedure Modifiers 76 and 77 .pdf",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Repeat%20Procedure%20Modifiers%2076%20and%2077%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00052",
+        "payer_name": "Centene",
+        "policy_title": "Polymerase Chain Reaction Respiratory Viral Panel Testing",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "Off-topic for this DRG. The policy governs respiratory viral panel PCR testing medical necessity and does not address inpatient DRG reimbursement, MS-DRG outliers, or trauma DRG payment rules.",
+        "policy_url": "https://www.arkansastotalcare.com/content/dam/centene/artotalcare/policies/payment-policies/CP.MP.181.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00662",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Review of NOS, NEC, and Unlisted Codes: CPP-107",
+        "tags": [],
+        "effective_date": "1/1/2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/Prov/policies/NA_ALL_Prov_CPP_107_NOS_NEC_Unlisted_Codes_Eng_9_2020.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00683",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "14 Day Readmission (Medicaid)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "Fidelis Care's Medicaid 14-day readmission policy generally combines related readmissions, but readmissions associated with multiple trauma are excluded from review.",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.003_Readmission_MD.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 14 days",
+            "same or related diagnosis"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MEDICAID",
+            "14 Day Readmission"
+          ],
+          "state_specific_rules": [
+            "New York readmission regulation criteria"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "multiple trauma",
+            "malignancy",
+            "burns",
+            "planned readmission",
+            "day 15+ readmission",
+            "staged surgical procedures"
+          ],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00703",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Infectious Disease Respiratory Testing",
+        "tags": [],
+        "effective_date": "11/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.CG.PP.01-Infectious-Disease-Respiratory-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00760",
+        "payer_name": "Centene",
+        "policy_title": "Polymerase Chain Reaction Respiratory Viral Panel Testing (CP.MP.181)",
+        "tags": [],
+        "effective_date": "03/24",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.ambetterhealth.com/content/dam/centene/ambetternc/policies/payment-policies/CP.MP.181.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HHO_00079",
+        "payer_name": "Highmark Health Options",
+        "policy_title": "General - Observation to Inpatient",
+        "tags": [],
+        "effective_date": "Mar 01, 2026",
+        "evidence": "Off-topic for this requested DRG description. The policy addresses observation-to-inpatient medical necessity and reimbursement, not DRG-specific outlier payment or attribution-gap logic.",
+        "policy_url": "https://securecms.highmark.com/content/medpolicy/en/highmark-wholecare/wv/medicaid/policy/hho-wv-mp-2001-observation-to-inpatient-/hho-wv-mp-2001-001-observation-to-inpatient-.html",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HIGHMARK_WV_28595500004",
+        "payer_name": "Highmark Health Options",
+        "policy_title": "All Policies-Respiratory Infection Pathogen Panel (RIPP) Molecular Testing",
+        "tags": [],
+        "effective_date": "2026-06-29",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://securecms.highmark.com/content/medpolicy/en/highmark-wholecare/wv/medicaid/policy/hho-wv-mp-2267-respiratory-infection-pathogen-panel--ripp--molec/hho-wv-mp-2267-001-respiratory-infection-pathogen-panel--ripp--m.html",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00189",
+        "payer_name": "Molina",
+        "policy_title": "Critical Care Codes when Discharging Home from the Emergency Department",
+        "tags": [],
+        "effective_date": "08/19/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/CriticalCareCodesWhenDischargingHome12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00931",
+        "payer_name": "Molina",
+        "policy_title": "Repeat Procedure Modifiers 76 77",
+        "tags": [],
+        "effective_date": "2016-04-04",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/RepeatProcedureModifiers767712172024.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MPHC_ME_2960214980011",
+        "payer_name": "Martins Point Health Care",
+        "policy_title": "Part B Inpatient Services",
+        "tags": [],
+        "effective_date": "1/1/2025",
+        "evidence": "Acute inpatient admissions require prior authorization. If the inpatient admission is approved, professional services during the stay are reimbursable. If the inpatient stay is denied as not medically necessary, associated professional services are not payable, but limited Part B inpatient services may be billed when the stay should have been outpatient or conversion criteria were not met before discharge.",
+        "policy_url": "https://martinspoint.org/-/media/Providers/Documents/Payment-Policy/Part-B-Inpatient-Services-Payment-Policy-GA-USFHP.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "before discharge",
+            "before claim submission",
+            "same inpatient episode"
+          ],
+          "utilization_limits": [
+            "limited Part B inpatient services only",
+            "Medicare-covered services only"
+          ],
+          "prior_auth_thresholds": [
+            "all acute inpatient admissions"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Inpatient Part B",
+            "OPPS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "UR committee concurrence required",
+            "practitioner concurrence required"
+          ],
+          "exemptions": [
+            "urgent/emergent",
+            "unable to know",
+            "not enough time"
+          ],
+          "action_types": [
+            "require_auth"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01835",
+        "payer_name": "United Health",
+        "policy_title": "Molecular Syndromic Panels for Infectious Disease Pathogen Identification Testing Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "Off-topic for the requested DRG pattern. This payer policy addresses molecular syndromic infectious disease laboratory panels, not inpatient trauma DRG reimbursement.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-MSPIDPIT-Pro-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 30,
+    "policies_successful": 30,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Rare severe inpatient outliers and attribution gaps are materially moving spend",
+    "pattern_rank": 5,
+    "pattern_title": "Rare severe inpatient outliers and attribution gaps are materially moving spend",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other Multiple Significant Trauma with MCC",
+      "Simple Pneumonia and Pleurisy with MCC",
+      "Stomach, Esophageal and Duodenal Procedures without CC/MCC"
+    ],
+    "total_policies_found": 30,
+    "successful_extractions": 30,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 30 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "30 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 2 of 3 source card(s) attest no state (segment scope: UNATTRIBUTED, IA, IN, OH); searched without it rather than narrowing to ['IA']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for clear scope drift because it targets California cesarean delivery rather than the pattern\u2019s specified states and severe inpatient outlier/attribution scenario."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "4/30 policies quarantined (13%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/30 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "4 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_BCBS_KC_MO_28589920012:Pathogen Panel Testing, RP_COM_PBC_WA_00057:Place of Service Codes, RP_GBD_BHP_00037:Infectious Disease: Respiratory Testing (PDF), RP_GBD_HF_00043:Pathogen Panel Testing]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 256851,
+    "output": 74878,
+    "breakdown": {
+      "search_keywords": {
+        "input": 551,
+        "output": 532,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 1785,
+        "output": 10411,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 236786,
+        "output": 54960,
+        "calls": 30
+      },
+      "relevance_judge": {
+        "input": 6693,
+        "output": 3564,
+        "calls": 14
+      },
+      "dynamic_columns": {
+        "input": 895,
+        "output": 655,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1831,
+        "output": 1420,
+        "calls": 15
+      },
+      "elevance_summary": {
+        "input": 409,
+        "output": 240,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 4721,
+        "output": 2911,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 3180,
+        "output": 185,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T12:08:30.134467+00:00",
+    "end_time": "2026-08-23T12:11:36.501810+00:00",
+    "duration_ms": 186367,
+    "version": "2.0.0"
+  }
+}

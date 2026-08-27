@@ -1,0 +1,383 @@
+{
+  "job_id": "tutorial-OON-Medicare_GRS-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-OON-Medicare_GRS-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Low-volume provider pockets are creating acute hospital cost leakage",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "ob_delivery_exclusion",
+          "label": "OB Delivery Exclusion",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_delivery_exclusion": "-",
+          "policy_scope": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_delivery_exclusion": "OB Excluded",
+          "policy_scope": "Bundles unplanned same-hospital inpatient readmissions within 30 days for related conditions."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "ob_delivery_exclusion": "-",
+          "policy_scope": "Humana has only a general modifier policy, with no code-specific rule for this DRG pattern."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589990004",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Anesthesia Processing",
+        "tags": [],
+        "effective_date": "07/01/2019",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/Anesthesia-Processing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00014",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Professional Anesthesia Services",
+        "tags": [],
+        "effective_date": "11/14/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Anesthesia/Professional%20Anesthesia%20Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00022",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "Facility-level inpatient readmission policy. Unplanned readmissions within 30 days to the same hospital for the same, similar, or related condition are not separately reimbursed. Planned readmission and leave-of-absence cases are treated as one admission with a single DRG payment, subject to exclusions and state-specific exceptions.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Facilities/Inpatient%20Readmissions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service",
+            "within 30 days",
+            "same hospital",
+            "same or related condition"
+          ],
+          "utilization_limits": [
+            "30-day readmission window",
+            "same-day continuation"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "varies by state per Exhibit A",
+            "some states use same-day rules",
+            "some states have shorter readmission windows"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "provider, state, federal, or CMS requirements",
+            "transfers from acute care hospital",
+            "against medical advice"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00130",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Sterilization",
+        "tags": [],
+        "effective_date": "06/08/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Sterilization.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_ALL_2960259020000",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "GB Inpt Readmissions FINAL 05062025",
+        "tags": [],
+        "effective_date": "03/25/2025",
+        "evidence": "The policy bundles unplanned inpatient readmissions within 30 days when the subsequent stay is for the same, similar, or related condition. Same-day readmissions are treated as part of the original admission, and planned readmission or leave-of-absence cases are paid as one admission with one DRG.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/GB%20Inpt%20Readmissions%20FINAL%2005062025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge",
+            "same date of service",
+            "same hospital",
+            "same hospital system"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "CO: not subject to policy",
+            "IA: CAHs excluded",
+            "WA: CAHs excluded; 14-day readmission standard",
+            "TX: same-day means within 24 hours"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Colorado market not subject to policy",
+            "Critical Access Hospitals in Iowa",
+            "Critical Access Hospitals in Virginia",
+            "Critical Access Hospitals in Washington",
+            "Same-day readmission continuation rule for same-condition cases"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00133",
+        "payer_name": "Humana",
+        "policy_title": "Common CPT and HCPCS Modifiers",
+        "tags": [],
+        "effective_date": "01/2026",
+        "evidence": "This is a general modifier policy and does not provide a code-specific rule for the requested DRG pattern.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092981b18f38",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 9,
+    "policies_successful": 9,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: Low-volume provider pockets are creating acute hospital cost leakage",
+    "pattern_rank": 6,
+    "pattern_title": "Low-volume provider pockets are creating acute hospital cost leakage",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 9,
+    "successful_extractions": 9,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 9 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "9 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['MO', 'NY', 'VA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "3/9 policies quarantined (33%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/9 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "3 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_EXTERNAL_27755680011:Maternity Services, RP_GBD_ELV_INTERNAL_00126:Maternity Services, RP_GBD_HUM_00137:Assistant at Surgery Reimbursement]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 67756,
+    "output": 18692,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 172,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 399,
+        "output": 911,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 59704,
+        "output": 14823,
+        "calls": 9
+      },
+      "relevance_judge": {
+        "input": 2475,
+        "output": 1140,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 1002,
+        "output": 528,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 700,
+        "output": 368,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 400,
+        "output": 304,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 2556,
+        "output": 446,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T02:29:56.776880+00:00",
+    "end_time": "2026-08-24T02:30:47.193437+00:00",
+    "duration_ms": 50416,
+    "version": "2.0.0"
+  }
+}

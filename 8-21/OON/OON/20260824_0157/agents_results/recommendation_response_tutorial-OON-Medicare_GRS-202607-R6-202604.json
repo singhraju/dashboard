@@ -1,0 +1,197 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a GA PPO Local ACUTE HOSPITAL UM review that stratifies admissions by facility, member, and elective status, prioritizes TANNER MEDICAL CENTER CARROLLTON, and deploys discharge-planning outreach for same-member repeat admissions.",
+        "evidence": [
+          "GA PPO Local ACUTE HOSPITAL spend increased.",
+          "Driver type is volume-led.",
+          "Claims increased while average paid per admit changed minimally.",
+          "Drill context references TANNER MEDICAL CENTER CARROLLTON.",
+          "Downstream routing includes UM operations."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health bundles unplanned related same-hospital readmissions within 3 days into one DRG reimbursement; excludes OB."
+        ],
+        "citation": [
+          "Policy: Elevance Health (internal) - N/A"
+        ]
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a GA PPO Local post-acute policy review for SNF - FREE STANDING, DIALYSIS, Physical Rehab, and CRITICAL ACCESS to tighten discharge routing, enforce authorization denials, identify leakage to higher-cost facilities, and audit reimbursement methodology, claims processing, and provider contract terms for Aftercare, Musculoskeletal System and Connective Tissue with CC.",
+        "evidence": [
+          "GA SNF spend increased about $1.3M with 247 more claims.",
+          "GA dialysis added about $646K with 53 more claims.",
+          "GA physical rehab added about $160K with paid per admit up.",
+          "GA critical access showed smaller but similar mixed volume and unit-cost growth.",
+          "Aftercare, Musculoskeletal System and Connective Tissue with CC appears across impacted settings."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a focused provider-, diagnosis-, and service-level review of UNATTRIBUTED Not Mapped outpatient claims by separating N186 Medicine activity at Tanner Medical Center Carrollton and Buffalo General Medical Center from Z5112 Drugs and OP IV Thrpy/Oncology activity at MU Health University Hospital for management-design review and provider behavior assessment.",
+        "evidence": [
+          "UNATTRIBUTED N186 OP Mgmt Oth Misc at Tanner Medical Center Carrollton drove largest increase.",
+          "A second UNATTRIBUTED N186 Medicine pattern recurred at Buffalo General Medical Center.",
+          "UNATTRIBUTED Z5112 Drugs appeared in OP Mgmt Oth Misc at MU Health University Hospital.",
+          "UNATTRIBUTED Z5112 also appeared in OP IV Thrpy/Oncology Not Mapped claims."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC, Centene, Horizon NJ Health, and United Health show no documented relevant policy or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Build PPO Local state-level action lists for SNF - FREE STANDING in CA, NY, and IN; DIALYSIS in NY, IN, and OH; Physical Rehab in CA; CRITICAL ACCESS in NY; and ACUTE HOSPITAL in OH/GA to investigate provider-specific behavior and contractual changes, review service-specific management design, validate alternate-discharge leakage, and check authorization-denial enforcement before broader rollout.",
+        "evidence": [
+          "CA post-acute settings added about $277K across SNF and Physical Rehab.",
+          "NY added about $169K across SNF, DIALYSIS, and CRITICAL ACCESS.",
+          "IN added about $83K across SNF and DIALYSIS.",
+          "OH and GA/OH acute pockets added about $129K.",
+          "Higher paid per admit is the most common signal."
+        ],
+        "peer_benchmarking": [
+          "Humana policy reviewed was unrelated to DRG payments; no comparable peer rule identified."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a targeted VA PPO Local ACUTE HOSPITAL inpatient audit for MU HEALTH UNIVERSITY HOSPITAL, DRG Other Heart Assist System Implant, and diagnosis I2109 to confirm contractual reimbursement processing, prior authorization enforcement, itemized bill accuracy, and discharge-planning controls.",
+        "evidence": [
+          "VA PPO Local acute hospital spend increased about $249K.",
+          "Claim count increased by 38 in VA acute hospital.",
+          "Average paid per admit increased about $2.9K.",
+          "Drill context isolates MU HEALTH UNIVERSITY HOSPITAL and DRG Other Heart Assist System Implant.",
+          "Downstream routes include UM operations and reimbursement policy review."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a provider-specific policy audit for CARDIAC RMS LLC, HEALTHROM, DVT DIAGNOSTIC SERVICES, and THE DIALYSIS CENTER OF PORTAGE LLC to move Not Mapped outpatient claims into the correct OP Oth or HH DME pathway, confirm contract or OON status, and activate matching authorization and claims edits for OP Mgmt Oth Misc and Medicine billing in CA, IN, PA, and NY.",
+        "evidence": [
+          "CARDIAC RMS LLC and HEALTHROM recur in multistate Not Mapped PPO Local activity.",
+          "CA Not Mapped claims include DVT DIAGNOSTIC SERVICES and HEALTHROM.",
+          "THE DIALYSIS CENTER OF PORTAGE LLC appears in IN OP Mgmt Oth Misc.",
+          "Source cards repeatedly flag unmapped_or_unknown_value and repeated_delta_concentration."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 2,
+        "pattern": "GA Not Mapped spend needs validation before policy or network action",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 4,
+        "pattern": "Rare inpatient outliers are adding concentrated high-cost clinical spend",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 22,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The pattern is explicitly volume-led acute inpatient growth, and the recommended next step is UM review of admissions, inpatient days, avoidable utilization, and discharge planning, which aligns directly to PAV and UM KPI review.; IP MedSurg (DNE) Trend 7: Claims increased substantially while paid per admit stayed nearly flat, suggesting more inpatient episodes rather than price change; admission source/location and elective mix are key to explaining this utilization rise.; IP MedSurg (DNE) Trend 5: A sharp increase in acute hospital claims may reflect repeat admissions among the same members, making readmission review highly relevant to the observed volume growth.; IP MedSurg (DNE) Trend 1: The variance is concentrated in GA PPO Local acute hospital spend, and the drill context references a specific hospital, so provider-level concentration is an important parent hypothesis.; IP MedSurg (DNE) Trend 2: Because the increase is driven by higher claim volume, it is important to test whether a subset of members or high utilizers is responsible and may need targeted clinical engagement."
+      },
+      {
+        "rank": 2,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 16,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: Most directly fits the pattern: the narrative explicitly cites site-of-care mix, discharge destination, and recommended review of discharge routing to SNF and rehab. Rising post-acute use points to admission/discharge source-location shifts.; IP NF (DNE) Trend 10: Paid per admit is rising across SNF, dialysis, rehab, and critical access settings, and the recommendation calls for reviewing pricing terms. That makes reimbursement method a core parent rule.; IP NF (DNE) Trend 6: Claims are up alongside unit cost, and the next step is a joint UM review. This aligns with testing whether utilization management KPI changes are allowing more avoidable or higher-intensity post-acute utilization.; IP NF (DNE) Trend 4: Variance is clearly concentrated in a subset of services/site settings\u2014SNF, dialysis, physical rehab, and critical access\u2014so a service-driver review is highly relevant to explain the site-of-care shift.; IP NF (DNE) Trend 1: The pattern may be concentrated in specific GA facilities or contracted entities within SNF, dialysis, rehab, and critical access. Provider-level review is relevant for both behavior and contractual changes behind the unit-cost increase."
+      },
+      {
+        "rank": 4,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "OP IV Thrpy - Oncly (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 4: Most of the pattern sits in OP Mgmt Oth Misc with Not Mapped groupings, and the recommended action is to validate outpatient classification plus medicine-versus-drug routing, which aligns directly to service-driver review.; OP Oth (DNE) Trend 3: The variance is highly concentrated in specific diagnoses, especially N186 and also Z5112, so diagnosis-driver review is a strong fit once unattributed and mapping issues are cleaned up.; OP Oth (DNE) Trend 1: The largest deltas are concentrated at a small set of acute hospital providers such as Tanner Medical Center Carrollton and Buffalo General Medical Center, making provider isolation relevant after attribution validation.; OP IV Thrpy - Oncly (DNE) Trend 4: The oncology-related portion of the pattern is specifically drug and IV therapy outpatient activity under Z5112 and Not Mapped buckets, so service-driver review is needed to validate oncology/drug routing and classification.; OP IV Thrpy - Oncly (DNE) Trend 3: The OP IV therapy/oncology spend increase is tightly tied to diagnosis Z5112, making diagnosis-driver review relevant for the oncology subset after data-quality cleanup."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 34,
+        "categories": [
+          "IP NF (DNE)",
+          "IP MedSurg (DNE)",
+          "OP PT OT ST (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 1: SNF is the largest recurring driver across CA, NY, and IN, and the pattern is concentrated in smaller local pockets, making provider-level behavior and contract changes a primary parent hypothesis.; IP NF (DNE) Trend 10: Most SNF/post-acute growth is paid-per-admit driven, and the recommended next step explicitly calls for contract review, so reimbursement method is highly relevant.; IP MedSurg (DNE) Trend 7: The pattern is framed as site-of-care spread and specifically recommends discharge-routing review; this aligns with reviewing admission/discharge source and location for acute and critical access spillover into post-acute settings.; OP Oth (DNE) Trend 1: Dialysis pressure appears in NY, IN, and OH and is localized to smaller markets, including provider-concentrated pockets, so provider-driver review is a strong fit.; OP PT OT ST (DNE) Trend 4: Physical rehab is one of the named key driver settings, and the issue is spreading across specific services/site-of-care types rather than broadly across all outpatient spend, making service-driver review relevant."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 27,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is described as a targeted local acute hospital issue and the next step explicitly calls for review of key hospitals and possible contract terms, making provider-level concentration and contracting behavior highly relevant.; IP MedSurg (DNE) Trend 10: Paid per admit increased by about $2.9K, so reimbursement method and pricing/contract structure are directly relevant to the unit-cost side of the pattern.; IP MedSurg (DNE) Trend 6: Claim volume rose materially in an inpatient setting, and the pattern is routed to UM operations, so utilization management KPI review is relevant to determine whether avoidable inpatient use is contributing.; IP MedSurg (DNE) Trend 3: The recommendation highlights case mix review, and the drill context includes a specific diagnosis and DRG, indicating diagnosis concentration could be driving both volume and higher paid per admit.; IP MedSurg (DNE) Trend 4: The pattern may reflect differences in inpatient service mix, DRG mix, or length of stay, so service-level review is relevant to explain the combined utilization and unit-cost increase."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 30,
+        "categories": [
+          "OP HH DME (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP Oth (DNE) Trend 1: The variance is highly concentrated in a recurring set of named ancillary vendors (CARDIAC RMS LLC, HEALTHROM, DVT DIAGNOSTIC SERVICES, THE DIALYSIS CENTER OF PORTAGE LLC) across multiple states, making provider-driver research the clearest first parent rule.; OP Oth (DNE) Trend 4: The core issue is unclear service classification within Not Mapped outpatient buckets; the pattern explicitly calls for deciding whether these claims belong in standard facility categories, DME pathways, or other managed ancillary service groupings.; OP Oth (DNE) Trend 8: The pattern centers on unclear billing and contract pathways, so reimbursement-method review is directly relevant to determine whether these ancillary vendors are being paid under the correct contractual and payment logic.; OP Oth (DNE) Trend 7: The pattern notes these vendors may bypass standard UM controls through Not Mapped routing, so checking whether authorization requirements are being matched and enforced is an important follow-on rule once classification is validated.; OP HH DME (DNE) Trend 4: Remote monitoring and equipment-adjacent vendors are specifically called out, and the recommended action explicitly mentions possible DME routing, making a home health/DME service-driver rule especially relevant for proper categorization."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T02:57:04.672888+00:00"
+  }
+}

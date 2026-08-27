@@ -1,0 +1,198 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 6,
+      "patterns_skipped": 2,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Run a targeted auth-to-claim and facility-mapping claims processing reconciliation for CA, NY, and CO segments keyed to AUTH_CODE_DISTRIBUTION and facility_type Not Mapped, focused on Stanford Hospital, New York-Presbyterian Weill Cornell Medical Center, UCHealth University of Colorado Hospital, and UC Irvine Medical Center, then restate the impacted segments before reimbursement or site-of-care action.",
+        "evidence": [
+          "CA AUTH_CODE_DISTRIBUTION flagged requires_validation_before_action.",
+          "NY postpartum AUTH_CODE_DISTRIBUTION shows same validation pattern.",
+          "CO PPO facility_type Not Mapped added admissions while paid per admit fell.",
+          "CA Not Mapped buckets concentrate at UC IRVINE MEDICAL CENTER."
+        ],
+        "peer_benchmarking": [
+          "Emblem Health denies facility claims for missing HCPCS or revenue code/HCPCS mapping mismatches."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a targeted CA inpatient outlier-payment audit for Ungroupable admissions at Stanford Hospital, UC IRVINE MEDICAL CENTER, LOMPOC VALLEY MEDICAL CENTER, and CROUSE HEALTH HOSPITAL; validate DRG grouping and contractual payment handling for CMPL LESION C2 LEVEL C-SPN CORD SUB and OTHER CIRRHOSIS OF LIVER, then reprocess claims and pursue provider contract remediation when discrepancies are confirmed.",
+        "evidence": [
+          "Two ungroupable case clusters account for about +$5.3M.",
+          "CMPL LESION C2 LEVEL C-SPN CORD SUB appears under Ungroupable at Stanford Hospital.",
+          "OTHER CIRRHOSIS OF LIVER appears under Ungroupable at Stanford Hospital.",
+          "Provider concentration appears at UC IRVINE, LOMPOC VALLEY, and CROUSE HEALTH.",
+          "Pattern flagged for small numbers and ungroupable case classification."
+        ],
+        "peer_benchmarking": [
+          "Cigna includes postoperative pain pump catheter insertion in the primary surgical procedure allowance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a CA PPO acute-hospital biliary admission policy audit that confirms prior authorization for Laparoscopic Cholecystectomy without C.D.E. with CC admissions tied to BILIARY ACUTE PANCREATIT WO NEC/INF and ACUTE CHOLECYSTITIS, matches authorizations to claims, enforces denial mismatches, and reviews contractual reimbursement and site-of-care opportunity at concentrated facilities including LOMPOC VALLEY MEDICAL CENTER and UCI MEDICAL CENTER.",
+        "evidence": [
+          "Authorized CA PPO acute hospital admissions increased in the PA-required segment.",
+          "Paid per admit increased in authorized CA PPO acute hospital claims.",
+          "Biliary acute pancreatitis drove laparoscopic cholecystectomy growth at UCI MEDICAL CENTER.",
+          "Acute cholecystitis showed higher paid per admit for laparoscopic cholecystectomy.",
+          "Provider-level concentration appears at LOMPOC VALLEY MEDICAL CENTER."
+        ],
+        "peer_benchmarking": [
+          "Cigna: no applicable biliary surgery DRG rule in provided payer summary.",
+          "United Health policy scope is obstetric professional billing, not inpatient DRG payment."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a GA/VA/WI post-acute claims and reimbursement policy audit for LONG TERM CARE HOSPITAL and Physical Rehab PA-required POS/PPO episodes to confirm contractual LTCH reimbursement, validate authorization-to-claim and denial matching, and review discharge planning and step-down timing for Aftercare with CC/MCC and ENC SURG AFTRCARE FLW SURG CIRC SYS.",
+        "evidence": [
+          "GA POS LTCH increased by $2.5M with no admission growth.",
+          "VA LTCH adds POS and PPO pressure with high paid per admit.",
+          "WI aftercare cases are led by ENC SURG AFTRCARE FLW SURG CIRC SYS.",
+          "WI Physical Rehab shows new admissions and elevated paid per admit.",
+          "PA required equals Y on LTCH and Physical Rehab operational cards."
+        ],
+        "peer_benchmarking": [
+          "Reviewed payers show no directly relevant DRG aftercare or inpatient LTCH site-of-care policy.",
+          "Elevance internal may request documentation to validate DRG payment and deny absent records."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a cross-market CUMG approval/denial, authorization-to-claim, and contract-processing audit for pa_required_code Y ACUTE HOSPITAL admissions in KY, NY, OH, NH, GA, and VA across PPO, EPO, HMO, and POS to confirm admission necessity, level of care, and reimbursement methodology, and route outlier providers or DRGs such as THE QUEEN'S MEDICAL CENTER, cholecystectomy, postpartum/postabortion, and aftercare for contract remediation or site-of-care review.",
+        "evidence": [
+          "pa_required_code Y appears in many highest-impact acute hospital cells.",
+          "THE QUEEN'S MEDICAL CENTER is a highest-impact provider in OH PPO.",
+          "Cholecystectomy recurs in KY PPO, NY EPO, NH HMO, and GA POS.",
+          "Postpartum/postabortion and aftercare drive NY, KY, and VA acute admissions."
+        ],
+        "peer_benchmarking": [
+          "Paramount Healthcare is the only listed payer with bundle policy relevance."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a case-level claims, coding, and authorization audit for UNATTRIBUTED and provider-specific inpatient claims involving Heart Transplant or Implant of Heart Assist System without MCC, Other Heart Assist System Implant, CORONARY ARTERY DISSECTION, HTN HEART DISEASE W/HEART FAIL, and DEEP PHLEBOTHROMBOSIS PUERPERIUM; verify diagnosis-to-DRG alignment, prior authorization-to-actual service matching, denial enforcement, and contractual claim processing for UCHEALTH UNIVERSITY OF COLORADO HOSPITAL, THE QUEEN'S MEDICAL CENTER, and NEW YORK-PRESBYTERIAN WEILL CORNELL MEDICAL CENTER.",
+        "evidence": [
+          "Heart transplant and heart assist activity accounts for most of the increase.",
+          "The pattern includes UNATTRIBUTED exposure and requires validation.",
+          "PA required code is Y on highlighted inpatient cases.",
+          "CORONARY ARTERY DISSECTION and HTN HEART DISEASE W/HEART FAIL are highlighted."
+        ],
+        "peer_benchmarking": [
+          "Fallon Health separately reimburses ventricular assist devices when prior authorized; prior authorization is required."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 5,
+        "pattern": "CO facility economics show reimbursement pressure across acute, children's, and rehab settings",
+        "reason": "Could not fetch relevant rules"
+      },
+      {
+        "rank": 7,
+        "pattern": "NY postpartum complications are growing through utilization, not broad price inflation",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: This is the strongest fit because the pattern is explicitly driven by AUTH_CODE_DISTRIBUTION movement, PA-required coding shifts, and repeated 'auth-to-claim validation' flags in CA and NY.; IP MedSurg (DNE) Trend 9: The 'Not Mapped' facility buckets in CA and CO point to claims processing, reprocessing, or mapping integrity issues rather than true utilization change, aligning with claim status/processing review.; IP MedSurg (DNE) Trend 1: The variance is concentrated in a limited set of facilities/providers, including Stanford Hospital, New York-Presbyterian Weill Cornell, UCHealth University of Colorado Hospital, and UC Irvine Medical Center.; IP MedSurg (DNE) Trend 10: Authorization coding and facility classification can affect how denials and payment logic are applied, so reimbursement method review is relevant after the data-quality reconciliation.; IP OB Dlvry Well NB (DNE) Trend 8: A material NY driver is a postpartum DRG with AUTH_CODE_DISTRIBUTION shift, making the OB-specific auth-to-claim match rule directly applicable to that subpattern."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The variance is most clearly concentrated in a narrow set of rare diagnoses, especially the spinal cord injury and cirrhosis ungroupable cases that account for most of the dollar increase.; IP MedSurg (DNE) Trend 4: The pattern is also isolated to a small set of inpatient DRGs/services, led by Ungroupable plus a few major bowel, chest, infection, kidney, and circulatory case types.; IP MedSurg (DNE) Trend 1: Provider concentration is present across a few facilities such as Stanford Hospital, UC Irvine Medical Center, Lompoc Valley Medical Center, and Crouse Health Hospital, making provider-level outlier review relevant.; IP MedSurg (DNE) Trend 2: A very small number of catastrophic admissions are driving the spike, so member/case-level concentration is important and aligns with the recommendation for individual case management review.; IP MedSurg (DNE) Trend 9: The recommended next step includes claim-level clinical and coding validation and confirmation of grouping accuracy for ungroupable cases, which makes claims processing/reprocessing review a relevant secondary parent rule."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: Clinical variance is concentrated in specific biliary diagnoses, especially biliary acute pancreatitis and acute cholecystitis, which are repeatedly driving laparoscopic cholecystectomy admissions.; IP MedSurg (DNE) Trend 6: The pattern explicitly shows more authorized acute hospital admissions, making utilization-management KPI review highly relevant to explain the volume increase.; IP MedSurg (DNE) Trend 10: Per-admit paid and allowed amounts increased materially, and the recommended action includes provider-level reimbursement review, aligning to reimbursement method research.; IP MedSurg (DNE) Trend 1: Spend appears partly concentrated in specific facilities/providers such as LOMPOC VALLEY MEDICAL CENTER and UCI MEDICAL CENTER, supporting provider-driver analysis.; IP MedSurg (DNE) Trend 8: Authorization is a key dimension in the pattern, so checking whether auth-to-claim matching and denial enforcement are working appropriately is directly relevant."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 4: The variance is concentrated in specific post-acute service/facility types\u2014LONG TERM CARE HOSPITAL and Physical Rehab\u2014so a service-driver review is the most direct parent rule match.; IP MedSurg (DNE) Trend 7: The pattern is explicitly a site-of-care and discharge-pathway issue, making admission/discharge source-location review highly relevant for LTCH and rehab placement.; IP MedSurg (DNE) Trend 10: GA and VA show strong paid-per-admit inflation and the recommendation calls out LTCH/rehab contract terms, aligning closely with reimbursement method review.; IP MedSurg (DNE) Trend 8: The key operational cards all include PA required = Y and auth-to-claim validation business terms, so checking whether authorization controls and denials were enforced is relevant.; IP MedSurg (DNE) Trend 3: WI has concentrated clinical aftercare diagnoses driving spend, including circulatory surgical aftercare and spinal cord injury aftercare, so diagnosis-driver review is also important."
+      },
+      {
+        "rank": 5,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Most directly fits the repeated increase in authorized acute hospital admissions across products and states; the pattern is volume-led in several markets and the recommended next step explicitly calls for review of admission necessity and level of care, which aligns to UM KPI/PAV review.; IP MedSurg (DNE) Trend 8: Authorization is present in many of the highest-impact cells (pa_required_code = Y), and multiple source cards include 'auth-to-claim validation' as a business term, making auth-to-claim enforcement a core parent rule.; IP MedSurg (DNE) Trend 10: Unit cost is mixed, with several cells showing materially higher paid per admit and the pattern routing to reimbursement and network financial review, so reimbursement method/contract application is highly relevant.; IP MedSurg (DNE) Trend 3: The increase repeats around specific DRG/episode types such as laparoscopic cholecystectomy, postpartum/postabortion, and aftercare, indicating diagnosis-level concentration rather than purely broad utilization drift.; IP MedSurg (DNE) Trend 1: Some of the largest deltas are concentrated in named providers, especially THE QUEEN'S MEDICAL CENTER, suggesting provider-specific behavior or contractual dynamics are contributing within the broader cross-market pattern."
+      },
+      {
+        "rank": 7,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The increase is concentrated in a small number of isolated catastrophic inpatient cases tied to a few specific providers/facilities, so provider-level driver review is highly relevant.; IP MedSurg (DNE) Trend 3: The pattern is heavily concentrated in rare diagnoses such as coronary artery dissection and hypertensive heart disease with heart failure, making diagnosis-driver analysis central.; IP MedSurg (DNE) Trend 4: Specific high-cost inpatient services/DRGs drive the variance, especially heart transplant and heart assist system implant cases, so service-driver review directly fits the pattern.; IP MedSurg (DNE) Trend 8: Key source cases show prior authorization required, and the recommendation calls for claim validation first; auth-to-claim matching is therefore directly relevant for these rare transplant/assist device admissions.; IP MedSurg (DNE) Trend 9: The pattern includes UNATTRIBUTED exposure and explicitly calls for attribution and coding validation before action, which aligns with reviewing claim status/processing integrity."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T09:56:15.287995+00:00"
+  }
+}

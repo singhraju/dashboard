@@ -1,0 +1,317 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_1_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX acute hospital volume surge in HMO and POS",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "auth_required",
+          "label": "Auth Required",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "General inpatient/outpatient facility unbundling policy; routine supplies, services, and certain implants not separately reimbursable.",
+          "auth_required": "-"
+        },
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "General facility bundling policy; not applicable to requested DRG-specific inpatient grouping or payment rules.",
+          "auth_required": "No Auth"
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Not applicable\u2014respiratory therapy reimbursement policy, not DRG-based acute hospital volume surge adjudication.",
+          "auth_required": "No Auth"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "-",
+          "auth_required": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082150004",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Inpatient/Outpatient Unbundling Policy-Facility",
+        "tags": [],
+        "effective_date": "2026-03-13",
+        "evidence": "General facility unbundling policy for inpatient and outpatient claims. It does not contain a DRG-specific rule for the requested acute hospital volume surge pattern.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp002-3-13-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "The policy is a general facility bundling and reimbursement policy. It does not contain a DRG-specific adjudication rule, Texas acute hospital volume-surge rule, or HMO/POS-specific payment instruction for the requested DRG description.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00052",
+        "payer_name": "Cigna",
+        "policy_title": "Respiratory Services and Supplies",
+        "tags": [],
+        "effective_date": "07/15/2010",
+        "evidence": "Off-topic for the requested DRG pattern. The policy addresses reimbursement for ventilator, CPAP, and BiPAP charges plus related routine respiratory services and supplies, not DRG-based inpatient surgical/mecanical ventilation grouping rules.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R15_Respiratory_Services_and_Supplies.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595950102",
+        "payer_name": "Moda Health",
+        "policy_title": "Facility Reimbursement of Respiratory Therapy Services",
+        "tags": [],
+        "effective_date": "2017-04-19",
+        "evidence": "Off-topic for the requested DRG pattern. This policy addresses inpatient respiratory therapy reimbursement, bundling, and documentation requirements rather than DRG-based acute hospital volume surge adjudication in HMO and POS.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM047_FacilityRTxServices.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: TX acute hospital volume surge in HMO and POS",
+    "pattern_rank": 1,
+    "pattern_title": "TX acute hospital volume surge in HMO and POS",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/6 policies quarantined (17%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_MDH_ALL_28595920110:Medical, Surgical, and Routine Supplies (including but not limited to 99070)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 98496,
+    "output": 18786,
+    "breakdown": {
+      "search_keywords": {
+        "input": 546,
+        "output": 307,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 635,
+        "output": 1238,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 91881,
+        "output": 14095,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2242,
+        "output": 1764,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 992,
+        "output": 524,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 677,
+        "output": 559,
+        "calls": 5
+      },
+      "policy_recommendations": {
+        "input": 1523,
+        "output": 299,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T04:51:29.304745+00:00",
+    "end_time": "2026-08-23T04:52:59.944907+00:00",
+    "duration_ms": 90640,
+    "version": "2.0.0"
+  }
+}

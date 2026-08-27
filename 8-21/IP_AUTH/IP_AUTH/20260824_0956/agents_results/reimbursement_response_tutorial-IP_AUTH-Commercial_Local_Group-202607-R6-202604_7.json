@@ -1,0 +1,528 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_7_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R6-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT and OH have catastrophic trach and respiratory outliers in IP Med/Surg",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "inpatient_drg_scope",
+          "label": "IP DRG Scope",
+          "type": "text"
+        },
+        {
+          "id": "bundling_status",
+          "label": "Bundling Status",
+          "type": "badge"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_drg_scope": "Inpatient/outpatient facility DRGs bundle routine room, nursing, and supplies; no separate reimbursement.",
+          "bundling_status": "Bundles"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_drg_scope": "No specific IP DRG guidance; standard coding and applicable regulatory requirements govern.",
+          "bundling_status": "Conditionally Bundles"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_drg_scope": "No DRG-specific inpatient scope; bundled facility and nursing routine services aren\u2019t separately payable.",
+          "bundling_status": "Bundles"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_drg_scope": "Inpatient DRG payment methodology is not addressed by this policy.",
+          "bundling_status": "No Bundling"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "inpatient_drg_scope": "Broad facility settings included; routine tracheostomy, nursing, respiratory, and supply components not separately payable.",
+          "bundling_status": "Bundles"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Tracheostomy Supplies RETIRED",
+        "tags": [],
+        "effective_date": "11/07/06",
+        "evidence": "Policy allows reimbursement for tracheostomy care supplies with conditions. In provider or facility settings, the supplies are included in the E&M visit or facility charge. In home health, they are separately reimbursed based on the applicable fee schedule or negotiated rate. One care kit per day is the default limit unless additional documentation supports more.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 kit per day",
+            "starter kit first 2 weeks",
+            "established kit after 2 weeks"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DME and Supplies"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "incident to physician services",
+            "ordered by physician"
+          ],
+          "exemptions": [
+            "home health setting",
+            "additional documentation supports need"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "10/01/2010",
+        "evidence": "Tracheostomy care and listed tracheostomy/respiratory supplies are bundled into facility reimbursement. Routine nursing, room and board, and associated supplies are not separately reimbursed; only documented incremental nursing beyond standard care may be payable.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "A4625"
+          ],
+          "related_codes": [
+            "A4481",
+            "A4483",
+            "A4605",
+            "A4615-A4620",
+            "A4623",
+            "A4624",
+            "A4626",
+            "A4629",
+            "A7501-A7509",
+            "A7520-A7527"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0230-0239"
+          ],
+          "pairing_conditions": [
+            "same facility claim",
+            "routine room and board",
+            "same level of care"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "facility reimbursement"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "incremental nursing charges with physician order and documentation"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595790203",
+        "payer_name": "Point32Health",
+        "policy_title": "Durable Medical Equipment (DME)",
+        "tags": [],
+        "effective_date": "11/01/2025",
+        "evidence": "This is a durable medical equipment policy focused on home-use equipment and supplies. It does not contain DRG inpatient payment rules for tracheostomy with prolonged mechanical ventilation or related inpatient outlier adjudication. Relevant respiratory items are addressed only as DME, oxygen, ventilators, and tracheostomy supplies for covered use cases.",
+        "policy_url": "https://wwwassets.point32health.org/documents/h1-dme-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "The payer's hospital inclusive-charges policy bundles routine tracheostomy care, respiratory therapy/nursing tasks, and routine ventilator/CPAP components into room, board, or facility charges. Facility-owned ventilator or CPAP management is reimbursable at one unit per day, but bundled components are not separately paid.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "250",
+            "300",
+            "309",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761",
+            "270-279",
+            "300-370"
+          ],
+          "pairing_conditions": [
+            "same facility claim"
+          ],
+          "utilization_limits": [
+            "1 unit/day ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Hospital Inclusive Charges",
+            "UB04",
+            "inpatient facility claims",
+            "outpatient facility claims"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "bedside nurses",
+            "respiratory therapists",
+            "CNA",
+            "perfusionists",
+            "technicians"
+          ],
+          "exemptions": [
+            "facility-owned ventilator or CPAP management",
+            "ancillary ventilator or CPAP services"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Unlisted or Miscellaneous Codes",
+        "tags": [],
+        "effective_date": "11/04/2024",
+        "evidence": "This is a general unlisted or miscellaneous code policy, not a DRG-specific reimbursement rule. It requires claim-by-claim review and supporting documentation when no established code exists.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00077",
+        "payer_name": "Molina",
+        "policy_title": "Hospital Routine Supplies Services",
+        "tags": [],
+        "effective_date": "2023-06-15",
+        "evidence": "Routine hospital supplies, services, equipment, and facility personnel are bundled into room and board charges and are not separately reimbursable; these items are also excluded from outlier calculations.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00971",
+        "payer_name": "Molina",
+        "policy_title": "NF Ventilator Pre-Payment Medical Necessity Review",
+        "tags": [],
+        "effective_date": "04/01/2025",
+        "evidence": "Off-topic for this DRG pattern. The policy applies to nursing facility ventilator-dependent and ventilator-weaning services, with review of claims billed under revenue codes 0419 and 0410, rather than inpatient DRG payment for tracheostomy or respiratory outliers.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/NF-Vent-Payment-Medical-Necessity-Review-Policy-for-Medicaid-Line-of-Business.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: Bundle facility-billed A4625 and related tracheostomy supply codes A4481, A4483, A4605, A4615-A4620, A4623, A4624, A4626, A4629, A7501-A7509, and A7520-A7527 under facility reimbursement when reported on revenue codes 0230-0239 on the same facility claim with routine room and board at the same level of care; keep an exception only for incremental nursing charges with physician order and documentation. Exempt: incremental nursing charges with physician order and documentation. Peer: Cigna and United Health both use same facility claim bundling as the trigger for inclusive facility charges..\n\nRecommendation 2: Bundle ventilator or CPAP management to Hospital Inclusive Charges on UB04 inpatient facility claims and outpatient facility claims when billed on the same facility claim under revenue codes 260-269, 270, 279, 250, 300, 309, 361, 391, 410, or 412, and enforce the limit of 1 unit/day; apply this to bedside nurses, respiratory therapists, CNA, perfusionists, and technicians, while exempting facility-owned ventilator or CPAP management and ancillary ventilator or CPAP services. Exempt: facility-owned ventilator or CPAP management, ancillary ventilator or CPAP services. Peer: Cigna and United Health both use same facility claim bundling as the trigger for inclusive facility charges..",
+      "evidence": [
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4625\" [target_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4481\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4483\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4605\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4615-A4620\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4623\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4624\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4626\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A4629\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A7501-A7509\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"A7520-A7527\" [related_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"0230-0239\" [revenue_codes]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"same facility claim\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"routine room and board\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"same level of care\" [pairing_conditions]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"facility reimbursement\" [program_scope]",
+        "Cigna \u00b7 Facility Services, Supplies and Equipment: \"incremental nursing charges with physician order and documentation\" [exemptions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"260-269\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"270\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"279\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"250\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"300\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"309\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"361\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"391\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"410\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"412\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same facility claim\" [pairing_conditions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"1 unit/day ventilator or CPAP management\" [utilization_limits]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"Hospital Inclusive Charges\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"UB04\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"inpatient facility claims\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"outpatient facility claims\" [program_scope]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"bedside nurses\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"respiratory therapists\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"CNA\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"perfusionists\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"technicians\" [provider_role_restrictions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"facility-owned ventilator or CPAP management\" [exemptions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"ancillary ventilator or CPAP services\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Cigna and United Health both use same facility claim bundling as the trigger for inclusive facility charges."
+      ],
+      "citation": [
+        "Cigna \u00b7 Facility Services, Supplies and Equipment \u2014 https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: CT and OH have catastrophic trach and respiratory outliers in IP Med/Surg",
+    "pattern_rank": 7,
+    "pattern_title": "CT and OH have catastrophic trach and respiratory outliers in IP Med/Surg",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT', 'OH'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped only Item 1 for scope drift because it addresses DME/home-health physician supply rules rather than inpatient Med/Surg facility reimbursement."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 80841,
+    "output": 40345,
+    "breakdown": {
+      "search_keywords": {
+        "input": 543,
+        "output": 218,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 886,
+        "output": 4078,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 64059,
+        "output": 29427,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 3318,
+        "output": 1327,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 1006,
+        "output": 653,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1244,
+        "output": 1062,
+        "calls": 10
+      },
+      "elevance_summary": {
+        "input": 375,
+        "output": 183,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3739,
+        "output": 2720,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 5671,
+        "output": 677,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:50:29.675184+00:00",
+    "end_time": "2026-08-24T10:52:48.579000+00:00",
+    "duration_ms": 138903,
+    "version": "2.0.0"
+  }
+}

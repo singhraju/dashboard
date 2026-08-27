@@ -1,0 +1,150 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Several inpatient segments are rising mainly because admissions increased, not because rates worsened",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "inpatient_drg_addressed",
+          "label": "DRG Addressed",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope_summary",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Several inpatient segments are rising mainly because admissions increased, not because rates worsened",
+    "pattern_rank": 5,
+    "pattern_title": "Several inpatient segments are rising mainly because admissions increased, not because rates worsened",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Acute Myocardial Infarction, Discharged Alive with CC",
+      "Other Digestive System Diagnoses with MCC",
+      "Other Disorders of Nervous System with MCC",
+      "Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH', 'CA', 'VA', 'WI'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/1 policies quarantined (100%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_OPTUM_ALL_28595840100:Documentation Requirements for Reimbursement of Evaluation Management (E/M) Services (99201-99205 and 99212-99215)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 10439,
+    "output": 4039,
+    "breakdown": {
+      "search_keywords": {
+        "input": 574,
+        "output": 534,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 386,
+        "output": 184,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 8187,
+        "output": 2785,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 528,
+        "output": 197,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 764,
+        "output": 339,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:56:48.067085+00:00",
+    "end_time": "2026-08-24T11:57:18.413828+00:00",
+    "duration_ms": 30346,
+    "version": "2.0.0"
+  }
+}

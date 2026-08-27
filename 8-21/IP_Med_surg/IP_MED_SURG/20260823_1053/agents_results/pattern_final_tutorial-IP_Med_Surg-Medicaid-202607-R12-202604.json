@@ -1,0 +1,1206 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Authorized acute hospital spend is surging in MO and recurring in other TANF Standard markets",
+    "pattern_description": "MO is the dominant driver of authorized acute hospital spend growth, and the increase is not purely a volume story. Admissions rose materially and paid per admission also increased, with additional recurring pressure in CA, FL, KS, MD, OH, NC, LA, and NY. The pattern shows broad inpatient pressure in TANF Standard rather than a single isolated case.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorized acute hospital spend is surging in MO and recurring in other TANF Standard markets",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "postpartum_payment_status",
+              "label": "Postpartum Payment",
+              "type": "badge"
+            },
+            {
+              "id": "included_ob_codes",
+              "label": "Included OB Codes",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "postpartum_payment_status": "Conditional Separate",
+              "included_ob_codes": "Includes OB codes 59400, 59510, 59610, 59618, 59410, 59515, 59614, and 59622."
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "postpartum_payment_status": "-",
+              "included_ob_codes": "No applicable OB code interactions identified for the requested DRG pattern."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "postpartum_payment_status": "-",
+              "included_ob_codes": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589970006",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Maternity Services",
+            "tags": [],
+            "effective_date": "7/1/2019",
+            "evidence": "Postpartum care package code 59430 is separately payable only when a different provider performed the delivery. It must be billed once on the delivery date and is otherwise included in global obstetrical or delivery codes that already include postpartum care.",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/maternity-services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59430"
+              ],
+              "related_codes": [
+                "59400",
+                "59510",
+                "59610",
+                "59618",
+                "59410",
+                "59515",
+                "59614",
+                "59622"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "different provider delivered",
+                "same delivery date"
+              ],
+              "utilization_limits": [
+                "1 unit per claim"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00523",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing (PDF}",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "Off-topic. This policy governs global obstetrical package billing and unbundling rules for maternity care; it does not address the requested bowel DRG pattern.",
+            "policy_url": "https://www.homestatehealth.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00543",
+            "payer_name": "Centene",
+            "policy_title": "Non-Obstetrical and Obstetrical Transabdominal and Transvaginal Ultrasounds",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.homestatehealth.com/content/dam/centene/home-state-health/pdfs/CC.PP.061NonOB%26OBUltrasond.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00651",
+            "payer_name": "United Health",
+            "policy_title": "Cesarean Delivery Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00670",
+            "payer_name": "United Health",
+            "policy_title": "Global Days Policy, Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Global-Days-Policy-(R0005).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00697",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Services Policy, Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MO TANF Standard acute hospital claims increased about $28.6M, with 887 more admissions and about $1.4K higher paid per admission. A broader CA, FL, KS, MD, and OH acute hospital group added about $3.9M, showing the pattern is recurring outside MO. CA also had a separate volume-led increase of about $1.9M in TANF Standard acute hospital admissions, including 66 more admissions in major bowel procedures. NC and LA/NY added roughly $1.0M combined, again led by higher authorized inpatient volume."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "Large facility mapping gap is obscuring where authorized spend is actually occurring",
+    "pattern_description": "A large share of growth is sitting in a Not Mapped facility bucket, especially in MO and DC, which makes site-of-care and provider attribution unreliable. The same issue recurs across multiple products and also appears in provider-concentrated settings such as SENTARA NORFOLK GENERAL HOSPITAL and SAINT THOMAS WEST HOSPITAL. Business action should wait until these claims are reclassified to the correct facility setting.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Large facility mapping gap is obscuring where authorized spend is actually occurring",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "facility_scope",
+              "label": "Facility Scope",
+              "type": "text"
+            },
+            {
+              "id": "routine_service_bundling",
+              "label": "Routine Bundling",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "Primarily inpatient; bundles related outpatient, ASC, and residential services within admission payment windows.",
+              "routine_service_bundling": "Routine services, supplies, reusable equipment, and respiratory/ventilator care are bundled, not separately reimbursed."
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "Institutional facility claims bundle many ancillary items into high-acuity inpatient stays/procedure charges.",
+              "routine_service_bundling": "Routine, integral, OTC, reusable, and undocumented items are bundled; only non-routine services may separate."
+            },
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "Applies to inpatient/outpatient hospital facilities, with all-inclusive room, panel, and operating-room billing rules.",
+              "routine_service_bundling": "Routine supplies, services, equipment, and personnel are bundled and not separately reimbursable."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "facility_scope": "Covers inpatient/outpatient hospital facilities and associated rooms, supplies, nursing, and procedural services.",
+              "routine_service_bundling": "Routine services are bundled; no separate reimbursement; facility-owned ventilator/CPAP management limited to one daily unit."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589900008",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Facility Routine Supplies and Services",
+            "tags": [],
+            "effective_date": "9/1/2018",
+            "evidence": "The requested inpatient ventilation/tracheostomy admission category is not named, but this policy broadly bundles routine facility supplies, nursing, respiratory support components, and room-based recovery services into room and board, facility, or procedure reimbursement. For mechanically ventilated or tracheostomy patients, ventilator or CPAP setup/checks, tracheostomy supplies and care, respiratory assessment, suctioning, weaning, and extubation are not separately reimbursed. Ventilator management 94002 and 94003 is allowed once per day when billed by a physician, advanced practice provider, or respiratory therapist. Related outpatient services in the 3-day payment window must be included on the inpatient claim and are not separately reimbursed.",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/facility-routine-supplies-and-services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [
+                "94002",
+                "94003"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "410",
+                "412",
+                "419",
+                "460",
+                "260",
+                "300",
+                "309",
+                "361",
+                "391",
+                "510",
+                "761",
+                "260-269",
+                "270-279",
+                "250",
+                "300-370"
+              ],
+              "pairing_conditions": [
+                "same date of inpatient admission",
+                "during 3-day payment window"
+              ],
+              "utilization_limits": [
+                "1 per day for 94002/94003"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "94002/94003 by physician, APP, or respiratory therapist"
+              ],
+              "exemptions": [
+                "ambulance services",
+                "maintenance renal dialysis services",
+                "radiopharmaceuticals Medicare Advantage"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00565",
+            "payer_name": "Centene",
+            "policy_title": "Unbundling Adjustments on Clean Claim Reviews",
+            "tags": [],
+            "effective_date": "09/2022",
+            "evidence": "The policy does not identify this DRG label specifically. For institutional facility claims, the health plan's clean claim review bundles routine or integral supplies and services into room, procedure, pharmacy, laboratory, and operating room charges. Only medically necessary, physician-directed, non-routine items supported by documentation may qualify for separate payment.",
+            "policy_url": "https://www.homestatehealth.com/content/dam/centene/home-state-health/policies/payment-policies/CC.PI.10-Unbundling-Adjustments-on-Clean-Claim-Reviews-Corp-Format.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same room and board acuity level",
+                "same underlying procedure",
+                "same underlying blood sample analysis",
+                "billed with anesthesia time charges",
+                "billed with perfusionist time charges",
+                "inpatient claim"
+              ],
+              "utilization_limits": [
+                "1 reimbursement per blood sample analysis"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "distinct physician order required"
+              ],
+              "exemptions": [
+                "oxygen unless exclusive respiratory therapy"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00389",
+            "payer_name": "Molina",
+            "policy_title": "Hospital Routine Supplies Services",
+            "tags": [],
+            "effective_date": "2023-06-15",
+            "evidence": "General hospital routine supplies/services policy bundles routine room-and-board items, critical care room charges, and many facility personnel services into the facility payment. It does not name the requested DRG pattern, but it indicates these hospital services are not separately reimbursable when included in inpatient or outpatient facility care.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "medically necessary durable medical equipment required for immediate inpatient or outpatient discharge"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00270",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": "12/01/2024",
+            "evidence": "This hospital inclusive charges policy bundles routine room, board, nursing, supplies, equipment, and certain ventilator, CPAP, and surgical-room components into facility reimbursement. No DRG-specific mapping rule is stated, but the policy applies broadly to inpatient and outpatient UB-04 claims.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "250",
+                "260-269",
+                "270",
+                "279",
+                "270-279",
+                "300",
+                "300-370",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [
+                "same claim",
+                "during inpatient stay",
+                "during outpatient visit"
+              ],
+              "utilization_limits": [
+                "one unit per day ventilator or CPAP"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "UB-04",
+                "Medicaid"
+              ],
+              "state_specific_rules": [
+                "Hawaii: waitlist/COB claims use OC 74-76",
+                "Virginia: listed medications allowed",
+                "Colorado exempt",
+                "Kentucky exempt",
+                "Maryland exempt",
+                "Minnesota exempt",
+                "Mississippi exempt",
+                "Missouri exempt",
+                "Nebraska exempt",
+                "New Mexico exempt",
+                "North Carolina exempt",
+                "Texas exempt"
+              ],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "Colorado",
+                "Kentucky",
+                "Maryland",
+                "Minnesota",
+                "Mississippi",
+                "Missouri",
+                "Nebraska",
+                "New Mexico",
+                "North Carolina",
+                "Texas"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MO Not Mapped TANF Standard claims increased about $7.6M, with 446 more admissions and about $7.6K higher paid per admission. DC Not Mapped TANF Standard claims increased about $5.2M, with 119 more admissions and about $26.1K higher paid per admission. DC also showed additional Not Mapped growth in ABD Non Dual and CHIP Standard, adding about $0.9M combined. VA, TN, IN, and CO each showed smaller but recurring Not Mapped increases, confirming this is not isolated to one market."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "Authorization code movement is a gating issue across multiple states",
+    "pattern_description": "Several states show cost movement tied to authorization code distribution rather than a clean utilization or reimbursement pattern. The issue touches rehabilitation, maternity, bowel surgery, pneumothorax, and nerve disorder episodes across both state- and provider-level views. These are validation cases first, because policy or provider action could be misdirected if the authorization flag moved or was reclassified.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorization code movement is a gating issue across multiple states",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_MDH_ALL_28595910106",
+            "payer_name": "Moda Health",
+            "policy_title": "Maternity Care",
+            "tags": [],
+            "effective_date": "1/1/2000",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM020.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN showed about $3.0M tied to authorization code distribution in Rehabilitation with CC/MCC. NY added about $1.9M tied to authorization code distribution in postpartum cases. TX added about $1.7M tied to authorization code distribution in major bowel procedures. CA added about $1.6M tied to authorization code distribution across cranial/nerve and pneumothorax cases, with another $1.2M across FL and VA provider-level shifts."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "IN rehabilitation spend is rising through both case mix and rehab setting growth",
+    "pattern_description": "IN has a concentrated rehabilitation pattern that spans both clinical case mix and rehab-oriented sites of care. Aftercare, weakness, and other rehab-related diagnoses are increasing alongside operational growth in Physical Rehab and CHILDRENS settings across several products. Some segments are volume-led while others show higher paid per admission, so this needs coordinated clinical, UM, and payment review.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "IN rehabilitation spend is rising through both case mix and rehab setting growth",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_relevance",
+              "label": "Pattern Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "key_rule_summary",
+              "label": "Key Rule Summary",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Molina",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_relevance": "-",
+              "key_rule_summary": "No DRG rehab rule; outpatient rehab claims require GN/GO/GP modifiers and appropriate place-of-service codes."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_relevance": "Setting Limits",
+              "key_rule_summary": "UnitedHealth caps same-specialty outpatient timed therapy reimbursement at four daily codes, excluding home/rehab."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_MOH_00383",
+            "payer_name": "Molina",
+            "policy_title": "Therapy Modifier Coding",
+            "tags": [],
+            "effective_date": "9/1/20",
+            "evidence": "Off-topic for the requested DRG pattern. This policy applies to outpatient rehabilitation therapy HCPCS claims and requires GN/GO/GP modifiers; it does not address inpatient rehabilitation DRG adjudication or CC/MCC logic.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/508-Approved-PDF/T/Therapy-Modifier.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00844",
+            "payer_name": "Molina",
+            "policy_title": "Physical Therapy Max Units Per Day",
+            "tags": [],
+            "effective_date": "10/23/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/PhysicalTherapyMaxUnitsPerDay21325.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00846",
+            "payer_name": "Molina",
+            "policy_title": "Procedure to Place of Service Policy Professional",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Off-topic for DRG rehabilitation payment. This policy governs place-of-service restrictions for CPT and HCPCS professional claims under Medicaid, not DRG reimbursement. It does mention rehabilitation facility place of service codes, but no DRG-specific rule for rehabilitation with CC/MCC.",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/ProceduretoPlaceofServicePolicyProfessional.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00848",
+            "payer_name": "Molina",
+            "policy_title": "PT OT Initial Evaluations",
+            "tags": [],
+            "effective_date": "09/08/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/PTOTSTYearlyLimit12172024.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00500",
+            "payer_name": "United Health",
+            "policy_title": "Physical Medicine & Rehabilitation: PT, OT and Evaluation & Management Policy, Professional",
+            "tags": [],
+            "effective_date": "2020-05-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Physical-Medicine-Rehab-PT-OT-EM-Professional.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01427",
+            "payer_name": "United Health",
+            "policy_title": "Outpatient Rehabilitation Therapy Service Policy, Facility",
+            "tags": [],
+            "effective_date": "2025-10-01",
+            "evidence": "This policy addresses outpatient rehabilitation therapy billing rules for PT, OT, and speech-language pathology using CPT/HCPCS, therapy modifiers, and revenue codes. It does not contain DRG-specific adjudication for rehabilitation with CC/MCC, so no DRG payment rule is identified.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Outpatient-Rehabilitation-Therapy-Services-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "outpatient hospital"
+              ],
+              "state_specific_rules": [
+                "AZ exempt",
+                "IN exempt",
+                "LA exempt",
+                "MO exempt",
+                "NJ exempt for G0515 with modifier 96",
+                "NC exempt",
+                "TN exempt",
+                "WI exempt"
+              ],
+              "provider_role_restrictions": [
+                "qualified therapist under certified therapy plan of care"
+              ],
+              "exemptions": [
+                "Arizona exempt",
+                "Indiana exempt",
+                "Louisiana exempt",
+                "Missouri exempt",
+                "New Jersey exempt for G0515 with modifier 96",
+                "North Carolina exempt",
+                "Tennessee exempt",
+                "Wisconsin exempt"
+              ],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_01429",
+            "payer_name": "United Health",
+            "policy_title": "Physical Medicine & Rehabilitation: Maximum Combined Frequency Per Day Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-04-01",
+            "evidence": "Timed physical medicine and rehabilitation codes are reimbursed only up to a combined daily cap for the same specialty; services beyond the standard cap may be reconsidered. Home and rehab facility settings are excluded, and several state-specific exceptions alter the unit limits.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Physical-Med-Rehab-Max-Combined-Frequency-Per-Day-Policy-(R0101).pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "97032",
+                "97113",
+                "97533",
+                "97761",
+                "97033",
+                "97116",
+                "97535",
+                "97763",
+                "97034",
+                "97124",
+                "97537",
+                "G0237",
+                "97035",
+                "97129",
+                "97542",
+                "G0238",
+                "97036",
+                "97130",
+                "97750",
+                "S8948",
+                "97110",
+                "97140",
+                "97755",
+                "97112",
+                "97530",
+                "97760"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "same specialty",
+                "same TIN",
+                "multi-specialty group"
+              ],
+              "utilization_limits": [
+                "max 4 timed codes per DOS",
+                "one hour of therapy per DOS",
+                "at least 8 minutes for 1 unit",
+                "AZ max 8 units",
+                "CO max 5 PT units",
+                "CO max 5 OT units",
+                "MO max 5 units Medicaid",
+                "WI max 6 units Medicaid"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicaid",
+                "CMS-1500"
+              ],
+              "state_specific_rules": [
+                "AZ: max 8 units.",
+                "CO: max 5 PT units.",
+                "CO: max 5 OT units.",
+                "IN: exempt.",
+                "KS: exempt.",
+                "MI: exempt.",
+                "MO: max 5 units Medicaid.",
+                "NJ: 97535, 97110 excluded with U2-U5.",
+                "NJ: 97535, 97129, 97130 excluded with 96.",
+                "NY: 97530, 97542 exempt.",
+                "WI: max 6 units Medicaid."
+              ],
+              "provider_role_restrictions": [
+                "Same Specialty Physician or QHP",
+                "Multi-specialty group same TIN",
+                "GN/GO/GP distinguish specialties"
+              ],
+              "exemptions": [
+                "home services",
+                "comprehensive inpatient/outpatient rehab",
+                "Indiana",
+                "Kansas",
+                "Michigan",
+                "97535, 97110 with U2-U5",
+                "97535, 97129, 97130 with 96",
+                "97530 and 97542"
+              ],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "IN clinical rehab case mix added about $4.2M, led by aftercare diagnoses that contributed about $2.9M and 104 more admissions. A separate weakness-related rehab pattern added about $765K with 46 more admissions. IN ABD Non Dual Physical Rehab added about $862K from higher volume, while LTSS Non Dual Physical Rehab added about $465K with both volume and unit-cost pressure. IN CHILDRENS rehab-related spend added about $749K combined across mixed and unit-cost patterns."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "A small number of hospitals are disproportionately driving spend growth",
+    "pattern_description": "Provider concentration is visible in two different ways. In NY, MAIMONIDES MEDICAL CTR appears repeatedly across products in Not Mapped claims with higher admission activity and mixed cost pressure. In VA, SENTARA NORFOLK GENERAL HOSPITAL stands out for higher paid per admission in acute hospital claims even as admissions declined, indicating a different provider economics issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "A small number of hospitals are disproportionately driving spend growth",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "policy_focus",
+              "label": "Policy Focus",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Fidelis Care (Centene)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention": "-",
+              "policy_focus": "Reimburses pharmaceuticals, devices, and therapies only for FDA-approved indications."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00715",
+            "payer_name": "Fidelis Care (Centene)",
+            "policy_title": "Plan Benefit",
+            "tags": [],
+            "effective_date": "10/2024",
+            "evidence": "Off-topic to the requested DRG pattern. The policy governs reimbursement for specified pharmaceuticals/devices and therapies based on FDA-approved indications, not DRG payment rules or hospital spend concentration.",
+            "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.PP.039-Payment-Policy-Plan-Benefit.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": {
+              "flags": [
+                "policy_topic_irrelevant"
+              ],
+              "severity": "warn",
+              "reasons": [
+                "relevance judge: relevant=false confidence='medium': This is a generic coverage policy for pharmaceuticals/devices/therapies based on FDA-approved use, not a hospital DRG or procedure-payment rule for ECMO, tracheostomy, spinal fusion, or similar inpatient spend patterns."
+              ]
+            }
+          }
+        ]
+      },
+      "claims": {
+        "summary": "MAIMONIDES MEDICAL CTR drove about $1.6M in NY TANF Standard Not Mapped volume growth, with 36 more admissions. MAIMONIDES MEDICAL CTR added about $1.0M in NY ABD Non Dual Not Mapped claims and about $0.9M in NY Family Care Not Mapped claims. SENTARA NORFOLK GENERAL HOSPITAL drove about $1.6M in VA TANF Standard acute hospital spend while admissions fell by 21, showing a clear unit-cost issue. Across these two hospitals, the pattern spans both provider concentration and misclassified site-of-care exposure."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "DC is showing a shift into non-acute settings, especially OTHER and long-term care hospital",
+    "pattern_description": "DC growth is not limited to acute hospital care. Spend is moving into OTHER, long-term care hospital, physical rehab, and community mental health center settings, with the largest increases in OTHER facility claims for TANF Standard and ABD Non Dual. Some settings are primarily volume-led, while long-term care hospital and mental health center episodes also show meaningful per-admission cost increases.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "DC is showing a shift into non-acute settings, especially OTHER and long-term care hospital",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "setting_scope",
+              "label": "Setting Scope",
+              "type": "text"
+            },
+            {
+              "id": "drg_mention",
+              "label": "DRG Mention",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "setting_scope": "Applies to UB-04 inpatient/outpatient facilities, bundling routine room, board, and integral services.",
+              "drg_mention": "Bundles"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_UHC_00270",
+            "payer_name": "United Health",
+            "policy_title": "Hospital Inclusive Charges Policy, Facility",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "This policy bundles routine room, board, nursing, supply, respiratory, tracheostomy, and ventilator/CPAP components into the facility charge; separate reimbursement is not allowed for routine or integral components.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [
+                "260-269",
+                "250",
+                "270-279",
+                "300-370",
+                "300",
+                "309",
+                "361",
+                "391",
+                "410",
+                "412",
+                "419",
+                "460",
+                "510",
+                "761"
+              ],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 unit/day for ventilator or CPAP management"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "UB-04",
+                "Medicaid"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "DC TANF Standard OTHER facility claims increased about $2.2M with 104 more admissions and only minimal change in paid per admission. DC ABD Non Dual OTHER facility claims added about $1.1M with 54 more admissions, again showing a strong volume signal. DC TANF Standard long-term care hospital claims added about $519K with only 3 more admissions but about $23.8K higher paid per admission. DC ABD Non Dual community mental health center claims added about $176K from a single additional admission with very high paid per admission, making it a targeted setting review item."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "Rare catastrophic inpatient cases are creating sharp but low-volume spikes",
+    "pattern_description": "These increases come from a small number of very high-cost inpatient events rather than broad utilization growth. The pattern includes tracheostomy with prolonged ventilation, craniotomy, spinal fusion, sepsis, and a few unmapped rare cases across FL, NY, TN, and UNATTRIBUTED. Because the spend is concentrated in single admissions or very small runs, each case needs individual review rather than broad policy changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {},
+        "individual_policies": []
+      },
+      "claims": {
+        "summary": "One DC tracheostomy with prolonged ventilation admission contributed about $1.3M by itself. A single DC craniotomy case added about $667K, and rare provider-level spinal fusion and respiratory procedure cases added more high-cost outliers. A separate sepsis subset across FL, NY, and TN added about $336K, mostly at MAIMONIDES MEDICAL CTR. An additional Not Mapped rare-case group in TN and UNATTRIBUTED added about $107K and reinforces the need for claim-level review."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "CA maternity complications are a distinct inpatient case-mix driver",
+    "pattern_description": "CA has a maternity-led inpatient complexity pattern centered on postpartum and puerperal complications. The increase is driven by both more admissions and higher paid per admission in severe pre-eclampsia and other postpartum complication cases. This is a distinct maternity action path and should not be managed as generic inpatient growth.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA maternity complications are a distinct inpatient case-mix driver",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_CIG_00021",
+            "payer_name": "Cigna",
+            "policy_title": "Global Maternity/Obstetric Package",
+            "tags": [],
+            "effective_date": "07/15/2010",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R11_Global_Maternity_Obstetric_Package.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA clinical case-mix change added about $2.4M overall. Severe pre-eclampsia in postpartum cases contributed about $500K with 58 more admissions. Other mental disorders complicating the puerperium added about $229K with higher paid per admission. Puerperal sepsis added about $160K with 15 more admissions."
+      }
+    }
+  }
+]

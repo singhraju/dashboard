@@ -1,0 +1,386 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R3-202604_3_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_Indiv-202607-R3-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Authorization code movement must be validated before policy or provider action",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "direct_policy_support",
+          "label": "Direct Policy Support",
+          "type": "badge"
+        },
+        {
+          "id": "auth_and_docs",
+          "label": "Auth/Docs Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "direct_policy_support": "-",
+          "auth_and_docs": "Document solid organ transplantation indication when billing the assay."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "direct_policy_support": "-",
+          "auth_and_docs": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "direct_policy_support": "Denies",
+          "auth_and_docs": "No specific authorization or documentation requirements specified."
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "direct_policy_support": "-",
+          "auth_and_docs": "No general prior auth; supporting documentation required for co-/team-surgery indicator 1 procedures."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082190001",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "2026-05-01",
+        "evidence": "This policy does not address the DRG directly. It covers immune cell function assay billing after solid organ transplantation and excludes use for other indications.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab028-5-1-2026.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "81560",
+            "86352",
+            "0018M"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "after solid organ transplantation"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "lab management"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595920110",
+        "payer_name": "Moda Health",
+        "policy_title": "Medical, Surgical, and Routine Supplies (including but not limited to 99070)",
+        "tags": [],
+        "effective_date": "1/1/2002",
+        "evidence": "This policy governs reimbursement for medical, surgical, and routine supplies, including flushes, capital equipment, and 99070 reporting. It does not contain a DRG-specific authorization or movement-validation rule for the requested DRG.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM021.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595940104",
+        "payer_name": "Moda Health",
+        "policy_title": "Modifiers 62 & 66 - Co-surgery (Two Surgeons) and Team Surgery (More Than Two Surgeons)",
+        "tags": [],
+        "effective_date": "1/1/2000",
+        "evidence": "This surgical modifier policy explicitly cites heart transplant as an example where co-surgery may be appropriate. When applicable, surgeons must bill the same procedure code combination with modifier 62, or modifier 66 for team surgery when more than two surgeons of different specialties are required. Claims must agree across surgeons or they may be denied or pended, and reduced pricing applies to modifier 62/66 lines.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM035.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "62",
+            "66"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same operative session",
+            "same claim line",
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "one primary surgical procedure per co-surgery case",
+            "no assistant claims with modifier 66"
+          ],
+          "prior_auth_thresholds": [
+            "supporting documentation required for indicator 1 procedures"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "professional providers only"
+          ],
+          "exemptions": [
+            "indicator 2 procedures with two specialties",
+            "heart transplant same-specialty co-surgery"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00883",
+        "payer_name": "Centene",
+        "policy_title": "Holter Monitors (CP.MP.113)",
+        "tags": [],
+        "effective_date": "09/23",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/CP.MP.113.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "The assay is denied as not reimbursable under the policy.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [
+            "81560",
+            "86352",
+            "0018M"
+          ],
+          "related_codes": [
+            "86352",
+            "0018M",
+            "81560"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage",
+            "Original Medicare LCD"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "states awarded to Novitas Solutions, Inc."
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00151",
+        "payer_name": "Humana",
+        "policy_title": "Modifier 62",
+        "tags": [],
+        "effective_date": "06/2010",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: Authorization code movement must be validated before policy or provider action",
+    "pattern_rank": 3,
+    "pattern_title": "Authorization code movement must be validated before policy or provider action",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Heart Transplant or Implant of Heart Assist System with MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX', 'VA'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/7 policies quarantined (14%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_CNC_00916:Pulmonary Function Testing (TX.CP.MP.242)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 65069,
+    "output": 25957,
+    "breakdown": {
+      "search_keywords": {
+        "input": 546,
+        "output": 352,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 500,
+        "output": 1618,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 57032,
+        "output": 21406,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2395,
+        "output": 1146,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 1015,
+        "output": 389,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 820,
+        "output": 435,
+        "calls": 6
+      },
+      "policy_recommendations": {
+        "input": 2761,
+        "output": 611,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T12:51:43.407181+00:00",
+    "end_time": "2026-08-24T12:53:05.076969+00:00",
+    "duration_ms": 81669,
+    "version": "2.0.0"
+  }
+}

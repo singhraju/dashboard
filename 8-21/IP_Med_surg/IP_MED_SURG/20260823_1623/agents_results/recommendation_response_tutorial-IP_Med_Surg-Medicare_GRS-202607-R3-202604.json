@@ -1,0 +1,234 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 8,
+      "patterns_skipped": 0,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a pre-policy claims-processing audit for Y-authorized PPO Local inpatient claims in GA and PA that reconciles AUTH_CODE_DISTRIBUTION and Not Mapped facility values to the original authorization, provider/facility crosswalk, and contract adjudication logic for Hip and Femur Procedures Except Major Joint with CC, Kidney and Urinary Tract Infections without MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, and Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC, including ATLANTICARE REGIONAL MEDICAL CTR, before changing denial, site-of-care, or reimbursement rules.",
+        "evidence": [
+          "GA AUTH_CODE_DISTRIBUTION accounts for about $1.8M across hip/femur, UTI, metabolic, and sepsis admissions.",
+          "GA Not Mapped PPO Local authorized claims add about $213K.",
+          "PA Not Mapped PPO Local claims include ATLANTICARE REGIONAL MEDICAL CTR and sepsis."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a joint UM, claims, and contract compliance audit for GA PPO Local ACUTE HOSPITAL admissions with pa_required_code Y, starting with DCH REGIONAL MEDICAL CENTER and the DRGs Kidney and Urinary Tract Infections without MCC, Cellulitis without MCC, Hip and Femur Procedures Except Major Joint with CC, and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, to validate prior authorization-to-claim matching, denial enforcement, admission appropriateness, reimbursement processing, and site-of-care or contract remediation opportunities.",
+        "evidence": [
+          "Authorized GA PPO Local acute hospital admissions increased.",
+          "DCH REGIONAL MEDICAL CENTER is the main provider concentration.",
+          "UTI, cellulitis, hip/femur, and sepsis are the concentrated DRGs.",
+          "Pattern identifies a direct UM and provider-performance issue."
+        ],
+        "peer_benchmarking": [
+          "Humana policy cited is off-topic and does not address inpatient DRG admission rules.",
+          "United Health policy cited addresses molecular panel reimbursement, not inpatient DRG admissions."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a focused GA inpatient review policy requiring targeted UM review of admission appropriateness, prior-authorization verification, auth-to-claim matching, and denial enforcement for Kidney and Urinary Tract Infections without MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, Cellulitis without MCC, and Hip and Femur Procedures Except Major Joint with CC when billed with UTI SITE NOT SPECIFIED, ACUTE CYSTITIS WITHOUT HEMATURIA, SEPSIS UNSPECIFIED ORGANISM, CELLULITIS OF LEFT LOWER LIMB, or DSPL IT FX LT FEMUR INITIAL CLOS FX, prioritizing NGMC GAINESVILLE, PIEDMONT FAYETTE HOSPITAL, MOUNT DESERT ISLAND HOSPITAL, and UNIVERSITY OF MARYLAND BALTIMORE WASHINGTON MEDICAL CENTER.",
+        "evidence": [
+          "UTI SITE NOT SPECIFIED adds about $245K with 30 more admissions.",
+          "ACUTE CYSTITIS WITHOUT HEMATURIA is a top dimension in the GA group.",
+          "SEPSIS UNSPECIFIED ORGANISM adds about $196K with 21 more admissions.",
+          "CELLULITIS OF LEFT LOWER LIMB shows about $2.7K higher paid per admit.",
+          "DSPL IT FX LT FEMUR INITIAL CLOS FX adds about $198K.",
+          "All highlighted cards show pa_required_code Y in ACUTE HOSPITAL.",
+          "Source cards link diagnoses to NGMC GAINESVILLE and PIEDMONT FAYETTE HOSPITAL."
+        ],
+        "peer_benchmarking": [
+          "Centene reviews sepsis claims pre/post-pay and may deny, adjust, or reinstate.",
+          "Centene requires physician-documented sepsis, organ dysfunction, SOFA increase, cultures, antibiotics, fluids, and SEP-1 screening."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement targeted pre-admit authorization confirmation, concurrent and post-admit review, and auth-to-claim enforcement for PPO Local prior-authorization acute hospital admissions in CA, CT, MO, NY, and PA across Hip and Femur Procedures Except Major Joint with CC, Kidney and Urinary Tract Infections without MCC, Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC, and Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC, with provider outreach to SSM HEALTH DEPAUL HOSPITAL - ST. LOUIS.",
+        "evidence": [
+          "Outside GA, recurring theme is admission growth in authorized acute hospital cases.",
+          "CA hip/femur admissions increased while paid per admit declined slightly.",
+          "CA UTI admissions increased in prior-auth-required acute hospital cases.",
+          "SSM HEALTH DEPAUL HOSPITAL - ST. LOUIS shows recurring admission growth in MO.",
+          "NY hip/femur and metabolic disorder clusters both show higher inpatient volume."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit the CUMG decision tree, prior-authorization enforcement, and auth-to-claim matching for PPO Local / ACUTE HOSPITAL / pa_required_code Y inpatient admissions in OH, concentrating on MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL and the Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC, Kidney and Urinary Tract Infections without MCC, Cellulitis without MCC, and Hip and Femur Procedures Except Major Joint with CC DRGs, then confirm claims are processing per contractual obligation for higher-paid-per-admit Kidney and Urinary Tract Infections without MCC in OH and Cellulitis without MCC in NY.",
+        "evidence": [
+          "OH metabolic disorder admissions added about $117K with 10 more admissions.",
+          "MERCY HEALTH ST. JOSEPH WARREN HOSPITAL added about $63K with 7 more admissions.",
+          "OH UTI had more admissions and higher paid per admit.",
+          "NY cellulitis had more admissions and higher paid per admit."
+        ],
+        "peer_benchmarking": [
+          "Humana summary shows no DRG bundling rule; biomarker reimbursement policy is unrelated.",
+          "United Health summary shows no site-of-service or DRG bundling rule for these inpatient admissions."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Establish an OH inpatient electrolyte and fluid-balance admission policy that routes eligible PA-required ER cases to observation or other lower-intensity settings, confirms prior authorization before payment, and applies initial and concurrent review criteria for HYPO-OSMOLALITY AND HYPONATREMIA, FLUID OVERLOAD UNSPECIFIED, HYPOKALEMIA, and HYPEROSMOLALITY AND HYPERNATREMIA.",
+        "evidence": [
+          "Hyponatremia added about $109K with 10 more admissions.",
+          "Fluid overload added about $38K with 6 more admissions.",
+          "Hypokalemia added about $75K with 6 more admissions.",
+          "Hypernatremia added about $55K with higher paid per admit.",
+          "All source cards are PA-required ER admissions in OH acute hospitals."
+        ],
+        "peer_benchmarking": [
+          "Buckeye Health Plan (WellCare) lists Inpatient Only and Bundles.",
+          "Centene lists Inpatient and Denies."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open provider-level case reviews and itemized bill audits for rare inpatient outliers at MARY WASHINGTON HOSPITAL INC, DCH REGIONAL MEDICAL CENTER, and MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL, prioritizing Endovascular Cardiac Valve Replacement and Supplement Procedures without MCC, Infectious and Parasitic Diseases with O.R. Procedures with MCC, Heart Failure and Shock with MCC, Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC, and Hip and Femur Procedures Except Major Joint with CC to validate CANDIDAL SEPSIS and SEPSIS UNSPECIFIED ORGANISM clinical support, DRG and principal-diagnosis sequencing, final adjudication, contractual processing, and itemized billing.",
+        "evidence": [
+          "MARY WASHINGTON HOSPITAL INC flagged for cardiac valve replacement and sepsis outliers.",
+          "DCH REGIONAL MEDICAL CENTER shows candidal sepsis and dialysis catheter surgery outliers.",
+          "MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL shows Heart Failure and Shock with MCC outliers.",
+          "Most signals are one to three admissions with paid per admit up.",
+          "Reviewed cases are acute hospital PPO Local admissions with PA required code Y."
+        ],
+        "peer_benchmarking": [
+          "Buckeye Health Plan validates sepsis using documentation, SOFA criteria, treatment evidence, coding, and DRG review.",
+          "Centene clinically validates sepsis using physician documentation, SOFA-supported organ dysfunction, and documented treatment.",
+          "Molina validates sepsis claims using Sepsis-3/SOFA evidence, treatment support, and admission/discharge coding details.",
+          "United Health validates principal diagnosis sequencing under ICD-10-CM and may trigger DRG 998."
+        ],
+        "citation": [
+          "Policy: Buckeye Health Plan (WellCare) - N/A",
+          "Policy: Centene - N/A",
+          "Policy: Molina - N/A",
+          "Policy: United Health - N/A"
+        ]
+      },
+      {
+        "rank": 8,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit authorized inpatient claims for PPO Local MARY WASHINGTON HOSPITAL INC in VA, PPO Local Cellulitis without MCC admissions at ME CRITICAL ACCESS and MOUNT DESERT ISLAND HOSPITAL, and Medicare HMO SSM HEALTH DEPAUL HOSPITAL - ST. LOUIS in MO for authorization denial enforcement and contractual payment accuracy; if sustained, open provider-specific site-of-care, contract remediation, and CAH preventive reviews.",
+        "evidence": [
+          "MARY WASHINGTON HOSPITAL INC drove most authorized VA inpatient increase.",
+          "ME CRITICAL ACCESS cellulitis cases concentrated at MOUNT DESERT ISLAND HOSPITAL.",
+          "SSM HEALTH DEPAUL HOSPITAL ST LOUIS drove MO Medicare HMO emergence.",
+          "All source cards include auth-to-claim validation business term."
+        ],
+        "peer_benchmarking": [
+          "BCBS_KC lists no DRG-specific inpatient rule; only echocardiography CPT policy is documented."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Direct match to the core issue: the pattern is explicitly an auth-to-claim validation problem driven by AUTH_CODE_DISTRIBUTION and authorized inpatient claims that need mapping confirmation before UM or denial action.; IP MedSurg (DNE) Trend 9: The recurring 'Not Mapped' facility bucket in both GA and PA points to potential claim classification, processing, or reprocessing issues, making claim-status review highly relevant.; IP MedSurg (DNE) Trend 10: If authorization or facility mapping is wrong, reimbursement method assignment and denial logic may also be wrong, so reimbursement-method review is relevant after validation.; IP MedSurg (DNE) Trend 3: The variance is concentrated in specific inpatient DRGs/diagnostic groupings such as hip/femur, UTI, sepsis, and metabolic disorders, so diagnosis-level scoping is relevant to focus the audit.; IP MedSurg (DNE) Trend 1: Part of the increase is concentrated in specific hospitals/providers, including ATLANTICARE REGIONAL MEDICAL CTR in PA and named GA facilities, so provider-level review helps validate crosswalk and attribution issues."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 19,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is highly concentrated at DCH REGIONAL MEDICAL CENTER, making provider-level behavior and contract performance a primary research path.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a small set of inpatient DRGs such as UTI, cellulitis, hip/femur, and sepsis, which aligns directly to diagnosis-driven variance review.; IP MedSurg (DNE) Trend 6: Admissions are up in prior-authorized acute inpatient care, and the pattern is described as a direct UM issue, so reviewing utilization management KPIs and avoidable variance is highly relevant.; IP MedSurg (DNE) Trend 8: All key drivers are in the authorization-required population (pa_required_code = Y), so auth-to-claim matching and denial enforcement should be checked.; IP MedSurg (DNE) Trend 10: Paid per admit is also rising, especially at DCH, and the recommended next step includes reimbursement term review, making reimbursement method a strong parent rule match."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: The pattern is explicitly concentrated in a narrow diagnosis set\u2014UTI/cystitis, sepsis, cellulitis, and femur fracture\u2014so diagnosis-level isolation is the clearest parent trend match.; IP MedSurg (DNE) Trend 6: Admissions are increasing and the recommended actions focus on admission appropriateness, observation vs inpatient use, and discharge planning, which aligns closely to reviewing UM KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 4: The increase is also clustered in a small set of inpatient DRGs/services, including kidney and urinary tract infections, sepsis, cellulitis, and hip/femur procedures, making service-driver review highly relevant.; IP MedSurg (DNE) Trend 1: Several of the highest-delta cards are tied to specific acute hospital providers, so testing whether the variance is concentrated in a subset of providers could materially narrow the root-cause investigation.; IP MedSurg (DNE) Trend 8: All highlighted cases show PA required and route to UM/data quality review, so confirming auth-to-claim matching and whether denials are being enforced is a reasonable secondary check."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Most aligned because the pattern is explicitly volume-led admission growth in authorized inpatient cases, and the recommended action is tighter pre-admit and post-admit utilization management review.; IP MedSurg (DNE) Trend 3: The increase is concentrated in a short list of DRGs/diagnosis groupings, including hip/femur, UTI, metabolic disorders, and sepsis, which fits diagnosis-driver investigation.; IP MedSurg (DNE) Trend 1: Part of the variance is concentrated in specific providers, especially SSM HEALTH DEPAUL HOSPITAL - ST. LOUIS in MO, making provider-level behavior and engagement highly relevant.; IP MedSurg (DNE) Trend 8: All major drivers are prior-authorization-required cases (pa_required_code = Y), so reviewing whether authorization controls and auth-to-claim enforcement are working as intended is directly relevant.; IP MedSurg (DNE) Trend 4: The variance is scoped to authorized acute hospital inpatient services within PPO Local rather than broad cross-setting inflation, so service-level isolation is a useful secondary parent rule."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: Best fit for the core signal: the pattern is primarily volume-led, with acute inpatient admissions rising in OH, so utilization management KPI and PAV review is the highest-priority parent rule.; IP MedSurg (DNE) Trend 10: Directly relevant to the smaller unit-cost component: UTI and cellulitis stays show higher paid per admit, matching the recommended focused reimbursement method review.; IP MedSurg (DNE) Trend 8: All major drivers are in required-authorization inpatient acute hospital claims (pa_required_code = Y), and the pattern explicitly points to UM and auth-sensitive operational follow-up, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 1: There is clear provider concentration at MERCY HEALTH - ST. JOSEPH WARREN HOSPITAL, so provider-driver research is important to determine whether the growth reflects localized behavior, referral shifts, or contractual effects.; IP MedSurg (DNE) Trend 3: The increase is concentrated in specific diagnoses/DRGs such as metabolic disorders, UTI, cellulitis, and hip/femur procedures, so diagnosis-driver review is strongly relevant to isolate which clinical buckets are expanding."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 3: This pattern is explicitly concentrated in a narrow diagnosis set within inpatient Med/Surg\u2014hyponatremia, fluid overload, hypokalemia, hypernatremia, and related metabolic/electrolyte DRG activity\u2014so diagnosis-driver review is the strongest parent rule fit.; IP MedSurg (DNE) Trend 6: The increase is driven mainly by more admissions, and the recommended action is UM review of admission criteria, observation use, and care pathways, which aligns closely with reviewing utilization management KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 4: The pattern points to possible management in lower-intensity settings rather than inpatient admission for some cases, making service-driver review relevant, especially around inpatient versus observation/service setting decisions.; IP MedSurg (DNE) Trend 7: All cited drivers are ER-admit inpatient cases, and the business question includes whether these admissions should have occurred at inpatient level of care, so admission/discharge source-location review is a relevant secondary rule.; IP MedSurg (DNE) Trend 8: The source cards show PA required and the pattern routes to UM operations; if rising inpatient volume reflects weak enforcement or mismatch between authorization intent and paid claims, auth-to-claim review is a reasonable follow-up."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is concentrated in a small set of named inpatient providers across VA, GA, OH, MO, and PA, with one- to three-admission spikes, making provider-level isolation the clearest parent rule.; IP MedSurg (DNE) Trend 4: The pattern is heavily tied to specific inpatient DRGs/procedures such as cardiac valve replacement, infectious disease O.R. procedures, sepsis DRGs, heart failure with MCC, and hip/femur procedures, so service-level concentration is highly relevant.; IP MedSurg (DNE) Trend 3: Specific diagnoses like NONRHEUMATIC AORTIC VALVE STENOSIS, CANDIDAL SEPSIS, and SEPSIS UNSPECIFIED ORGANISM are repeatedly called out as drivers, indicating diagnosis-level concentration that warrants targeted review.; IP MedSurg (DNE) Trend 10: Paid per admit is elevated and the recommendation emphasizes payment validation and separating true catastrophic cases from payment issues, making reimbursement method review relevant for unusually high-cost inpatient outliers.; IP MedSurg (DNE) Trend 9: The pattern explicitly calls for payment integrity and case-level validation, so checking for claims processing or reprocessing issues against contractual standards is also relevant, especially for rare high-cost cases."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is explicitly concentrated in a small set of named inpatient providers/sites across VA, ME, and MO, making provider-specific referral, behavior, or contract changes the primary parent rule.; IP MedSurg (DNE) Trend 8: All three spikes are in PA-required authorized inpatient activity, and the cards repeatedly flag auth-to-claim validation, so checking whether authorization controls are matching paid claims is highly relevant.; IP MedSurg (DNE) Trend 10: Two of the emerging spikes are small-volume but high-cost per admit events, which makes reimbursement method or contract payment application an important parent rule to review.; IP MedSurg (DNE) Trend 3: One source card is clearly diagnosis-concentrated around Cellulitis without MCC, so diagnosis-level concentration is relevant even though the broader story is mainly provider/site driven.; IP MedSurg (DNE) Trend 9: Because these are low-baseline, low-volume isolated inpatient spikes with validation needed and data-quality routing, claim frequency/status or reprocessing should be checked before treating them as durable utilization trends."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T17:16:05.225821+00:00"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_7_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-R12-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare transplant and catastrophic Med/Surg outliers are concentrated in CO, GA, and CA",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Pattern Mentioned",
+          "type": "badge"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_relevance": "Only transplant services are bundled; no DRG-specific or state-concentration reimbursement rules identified."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_relevance": "Policy unrelated to requested DRG patterns; denies separate reimbursement for robotic-assisted surgery."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_relevance": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00181",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Robotic Assisted Surgery RETIRED",
+        "tags": [],
+        "effective_date": "10/17/06",
+        "evidence": "Off-topic for the requested DRG pattern. This policy addresses robotic-assisted surgery reimbursement and denies separate payment for robotic assistance; it does not address DRG outlier logic or this transplant/cardiac DRG concept.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Robotic%20Assisted%20Surgery%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_00041",
+        "payer_name": "Cigna",
+        "policy_title": "Omnibus Reimbursement Policy",
+        "tags": [],
+        "effective_date": "11/01/2014",
+        "evidence": "No DRG-specific reimbursement rule found for this cardiac DRG. The policy only contains a general transplant bundling rule and does not address coronary bypass or state-concentrated outlier patterns.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R24_Omnibus_Reimbursement_Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Transplant"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00053",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Immune Cell Function Assay",
+        "tags": [],
+        "effective_date": "04/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929867dea95",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Rare transplant and catastrophic Med/Surg outliers are concentrated in CO, GA, and CA",
+    "pattern_rank": 7,
+    "pattern_title": "Rare transplant and catastrophic Med/Surg outliers are concentrated in CO, GA, and CA",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Coronary Bypass without Cardiac Catheterization with MCC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Liver Transplant without MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA', 'CO', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 24537,
+    "output": 10709,
+    "breakdown": {
+      "search_keywords": {
+        "input": 555,
+        "output": 353,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 365,
+        "output": 394,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 19314,
+        "output": 8316,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 978,
+        "output": 493,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 762,
+        "output": 399,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 601,
+        "output": 371,
+        "calls": 4
+      },
+      "elevance_summary": {
+        "input": 379,
+        "output": 140,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1583,
+        "output": 243,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T08:25:08.000934+00:00",
+    "end_time": "2026-08-24T08:26:09.748722+00:00",
+    "duration_ms": 61747,
+    "version": "2.0.0"
+  }
+}

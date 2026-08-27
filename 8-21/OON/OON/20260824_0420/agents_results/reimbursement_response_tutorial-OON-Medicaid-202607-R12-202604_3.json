@@ -1,0 +1,464 @@
+{
+  "job_id": "tutorial-OON-Medicaid-202607-R12-202604_3_job",
+  "conversation_id": "tutorial-OON-Medicaid-202607-R12-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare inpatient Med/Surg cases emerging in CA / IN / KS",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "payment_status",
+          "label": "Payment Status",
+          "type": "badge"
+        },
+        {
+          "id": "auth_documentation",
+          "label": "Auth/Docs",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_status": "Bundles",
+          "auth_documentation": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_status": "Bundles",
+          "auth_documentation": "No specific auth stated; submit compliant codes with full medical record/office note support."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_status": "-",
+          "auth_documentation": "No prior authorization or documentation requirements stated."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "payment_status": "Bundles",
+          "auth_documentation": "Requires supported abnormal findings; denies reimbursement for systemic lupus or connective tissue diagnoses."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00052",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Chiropractic Manipulation RETIRED",
+        "tags": [],
+        "effective_date": "08/16/06",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Chiropractic%20Manipulation%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_CA_29085730301",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Bundled Services and Supplies",
+        "tags": [],
+        "effective_date": "10/01/2026",
+        "evidence": "Always bundled and not separately reimbursable when reported as a stand-alone service or with another service.",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-26001-CA.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "15851",
+            "76014-76019",
+            "76979",
+            "76983",
+            "77293",
+            "77387",
+            "87913",
+            "96521-96523",
+            "97010",
+            "99070",
+            "99072",
+            "99190-99192",
+            "C1734",
+            "C1762",
+            "C1763",
+            "C1781",
+            "G0498",
+            "G2211",
+            "K1034",
+            "L8699",
+            "T1040",
+            "G6012-G6014",
+            "G6015",
+            "G6017"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_ALL_29084861302",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Bundled Services and Supplies C-23001",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "M3110 is not explicitly addressed. This policy does not adjudicate the musculoskeletal/connective-tissue inpatient pattern by DRG label or M-code, but it does impose line-item facility bundling rules that can affect related implant/connective-tissue supplies. Relevant connective tissue and implant HCPCS codes C1734, C1762, C1763, C1781, C1889, and L8699 are generally always bundled and not separately reimbursable on facility claims. California history shows delayed-implementation reimbursement for those codes; Indiana has no matching carve-out for them; Kansas has no stated exception.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "C1734",
+            "C1762",
+            "C1763",
+            "C1781",
+            "C1889",
+            "L8699"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "stand-alone service",
+            "with another service"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial"
+          ],
+          "state_specific_rules": [
+            "California: delayed implementation history allows reimbursement for C1734/C1762/C1763/C1781/C1889/L8699 effective 10/01/2026",
+            "Indiana: no carve-out stated for these connective tissue or implant codes",
+            "Kansas: no state-specific exception stated"
+          ],
+          "provider_role_restrictions": [
+            "facility provider"
+          ],
+          "exemptions": [
+            "provider, state, federal contract requirements",
+            "California delayed implementation for C1734/C1762/C1763/C1781/C1889/L8699"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00138",
+        "payer_name": "United Health",
+        "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-09-01",
+        "evidence": "Denied when ANA/ENA testing is billed for a general encounter without abnormal findings.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Autoimmune-Rheumatic-Disease-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "86038",
+            "86039",
+            "86235",
+            "0312U",
+            "0062U",
+            "0446U",
+            "0447U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "general encounter without abnormal findings",
+            "submitted for SLE",
+            "submitted for connective tissue disease"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00160",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Biomarker Testing for Autoimmune Rheumatic Disease",
+        "tags": [],
+        "effective_date": "05/2023",
+        "evidence": "Off-topic for the requested inpatient DRG/Med-Surg pattern. This policy addresses laboratory biomarker testing for autoimmune rheumatic disease and does not provide a reimbursement rule for this diagnosis code in an inpatient DRG context.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986dc9d96",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_01818",
+        "payer_name": "United Health",
+        "policy_title": "Autoimmune Rheumatic Disease Policy, Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-12-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Autoimmune-Rheumatic-Disease-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For Commercial facility provider claims, bundle C1734, C1762, C1763, C1781, C1889, and L8699 whether billed as a \"stand-alone service\" or \"with another service\"; in California, preserve the delayed-implementation exception and reimburse C1734/C1762/C1763/C1781/C1889/L8699 effective 10/01/2026, while Indiana has no carve-out stated and Kansas has no state-specific exception stated. Apply to all states. Exempt: provider, state, federal contract requirements, California delayed implementation for C1734/C1762/C1763/C1781/C1889/L8699. Peer: Elevance external and internal both target C1734/C1762/C1763/C1781/L8699 for bundling in Commercial, with the internal policy adding the California delayed-implementation carve-out..",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"C1734\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"C1762\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"C1763\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"C1781\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"C1889\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"L8699\" [target_codes]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"stand-alone service\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"with another service\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Commercial\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"California: delayed implementation history allows reimbursement for C1734/C1762/C1763/C1781/C1889/L8699 effective 10/01/2026\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Indiana: no carve-out stated for these connective tissue or implant codes\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"Kansas: no state-specific exception stated\" [state_specific_rules]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"facility provider\" [provider_role_restrictions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"provider, state, federal contract requirements\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001: \"California delayed implementation for C1734/C1762/C1763/C1781/C1889/L8699\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Elevance external and internal both target C1734/C1762/C1763/C1781/L8699 for bundling in Commercial, with the internal policy adding the California delayed-implementation carve-out."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Bundled Services and Supplies C-23001 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Bundled%20Services%20and%20Supplies%20%20C-23001.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: Rare inpatient Med/Surg cases emerging in CA / IN / KS",
+    "pattern_rank": 3,
+    "pattern_title": "Rare inpatient Med/Surg cases emerging in CA / IN / KS",
+    "cpt_codes_requested": [
+      "M3110",
+      "M3119"
+    ],
+    "drg_codes_requested": [
+      "Connective Tissue Disorders with MCC",
+      "Other Musculoskeletal System and Connective Tissue O.R. Procedures with CC"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['KS', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped item 1 for scope drift; item 0 remained aligned because its facility implant/connective-tissue bundling rules can affect the targeted inpatient Med/Surg cases."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/6 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 52262,
+    "output": 58060,
+    "breakdown": {
+      "search_keywords": {
+        "input": 539,
+        "output": 951,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 2371,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 439,
+        "output": 771,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 39067,
+        "output": 46741,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 1969,
+        "output": 1281,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 876,
+        "output": 1407,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 854,
+        "output": 601,
+        "calls": 7
+      },
+      "elevance_summary": {
+        "input": 399,
+        "output": 155,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3651,
+        "output": 3177,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4025,
+        "output": 605,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T04:28:42.566720+00:00",
+    "end_time": "2026-08-24T04:33:16.599526+00:00",
+    "duration_ms": 274032,
+    "version": "2.0.0"
+  }
+}

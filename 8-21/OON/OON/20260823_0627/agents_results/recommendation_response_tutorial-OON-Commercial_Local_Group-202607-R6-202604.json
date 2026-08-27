@@ -1,0 +1,207 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a UCI MEDICAL CENTER contract remediation, contract-compliance, and site-of-care review for CA Commercial Local Group HMO acute hospital admissions, with authorization enforcement, discharge step-down review, and itemized bill audit for Degenerative Nervous System Disorders without MCC.",
+        "evidence": [
+          "UCI MEDICAL CENTER accounts for about $5.2M of the increase.",
+          "Claim count increased by 247 in CA HMO acute hospital.",
+          "Paid per admit increased about $19.7K.",
+          "Degenerative Nervous System Disorders without MCC added about $226K."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate a WI Commercial Local Group POS acute hospital IP Med/Surg facility review, including NORTHWESTERN MEMORIAL HOSPITAL, to validate contract processing, review initial and concurrent admission management KPIs, verify authorization-denial enforcement, and assess elective site-of-care opportunities.",
+        "evidence": [
+          "WI POS acute hospital spend increased by about $1.1M.",
+          "Claim count rose by 10.",
+          "Paid per admit increased by about $2.7K.",
+          "Increase warrants targeted facility-level follow-up.",
+          "Drill context includes NORTHWESTERN MEMORIAL HOSPITAL."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Perform a catastrophic inpatient payment integrity review for UNATTRIBUTED IP Med/Surg claims at Northwestern Memorial Hospital tied to Lung Transplant/J849, Coronary Bypass with Cardiac Catheterization or Open Ablation with MCC/I214, and Degenerative Nervous System Disorders with MCC/I69193 to verify authorization enforcement, itemized billing, and contract-based outlier/transplant claim processing.",
+        "evidence": [
+          "Lung Transplant/J849 added about $777K from one admission.",
+          "Coronary Bypass with MCC/I214 added about $208K from one admission.",
+          "Degenerative Nervous System Disorders with MCC/I69193 added about $146K across two claims.",
+          "All source cards reference Northwestern Memorial Hospital acute inpatient Med/Surg."
+        ],
+        "peer_benchmarking": [
+          "State FFS usually pays inpatient stays under bundled DRGs with carve-outs and per diem exceptions.",
+          "State FFS applies outlier thresholds, and certain transplants reimburse billed charges up to global maximums."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit UCI MEDICAL CENTER CA HMO IP Med/Surg outlier claims for C7951, I352, and G7001 with itemized bill review, contract-compliance adjudication checks, DRG upcoding validation, and authorization denial enforcement review.",
+        "evidence": [
+          "UCI MEDICAL CENTER C7951 case added about $268K.",
+          "UCI MEDICAL CENTER I352 cardiothoracic case added about $261K.",
+          "G7001 neurologic case added about $185K.",
+          "Volume signal not material; paid per admit increased."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a ME Commercial Local Group PPO post-acute site-of-care and prior-authorization policy review for Physical Rehab and OTHER, auditing provider-concentrated rehab referrals, covered service subsets, and authorization-to-paid-claim matching for BIOSCRIP INFUSION SRVCS claims with Drugs / OP Mgmt Oth Misc / Q812.",
+        "evidence": [
+          "ME PPO Physical Rehab is the main post-acute driver.",
+          "Physical rehab shows higher claim volume and higher paid per admit.",
+          "OTHER added a new non-acute facility claim.",
+          "Repeated delta concentration flagged both post-acute drivers."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health internal: reimbursement table shows no documented policy scope or pattern mention.",
+          "Point32Health: reimbursement table shows no documented policy scope or appeals process."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Audit Cedars-Sinai Medical Center CA PPO acute hospital reimbursement for Cesarean Section without Sterilization with MCC claims tied to O1404 and O368130 to verify MCC severity support, global maternity bundle versus separate-pay eligibility, and contract-compliant claim pricing; remediate unsupported reimbursement terms or processing.",
+        "evidence": [
+          "One CA O1404 MCC C-section case at Cedars-Sinai added about $74K.",
+          "Second CA O368130 MCC C-section case added about $5K.",
+          "CA PPO same DRG had flat claim count and paid per admit up."
+        ],
+        "peer_benchmarking": [
+          "United Health allows separate pay with supporting diagnoses, modifier 22 documentation, and unrelated high-risk conditions.",
+          "Elevance internal allows assistant cesarean delivery-only payment with appropriate modifier and documentation.",
+          "Cigna globally bundles maternity but separately pays 59514/59620 with assistant surgeon modifier."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 8,
+        "priority": "MEDIUM",
+        "category": "Policy",
+        "description": "Audit CA EPO musculoskeletal aftercare SNF/NF claims tied to VINTAGE ESTATES OF RICHMOND and diagnoses Z4789/S42321D for contract-compliant reimbursement, and activate preferred contracted post-acute placement steerage for comparable future discharges.",
+        "evidence": [
+          "CA EPO SNF - FREE STANDING spend increased about $57K on 4 claims.",
+          "Paid per admit increased about $14.4K in SNF - FREE STANDING.",
+          "Three Z4789 NF aftercare cases and one S42321D case added related spend.",
+          "VINTAGE ESTATES OF RICHMOND is the named rendering provider in concentrated SNF claims."
+        ],
+        "peer_benchmarking": [
+          "Cigna bundles SNF services into facility reimbursement and does not separately pay UB-04 SNF claims.",
+          "Elevance internal summary found no SNF payment or bundling rule for this pattern."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 5,
+        "pattern": "Not-mapped facility and clinical buckets are masking true drivers across multiple segments",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The pattern is overwhelmingly concentrated at one acute hospital provider, UCI MEDICAL CENTER, which accounts for about $5.2M of the $5.4M increase, making provider-level behavior and contracting the primary parent rule.; IP MedSurg (DNE) Trend 10: Paid per admit increased materially and the recommended action explicitly includes contract terms and reimbursement review, aligning closely with reimbursement method as a likely driver of the unit-cost increase.; IP MedSurg (DNE) Trend 6: The increase reflects both more claims and higher cost per case, and the next step calls for admission and level-of-care management, which fits review of utilization management KPIs and avoidable variance.; IP MedSurg (DNE) Trend 3: A small number of very high-cost neurological DRG cases contributed additional spend, so diagnosis concentration is a relevant secondary lens even though it is not the main driver.; IP MedSurg (DNE) Trend 7: Because inpatient utilization rose sharply, reviewing admission source/location and case mix is relevant to determine whether the added volume reflects changes in admission patterns that could be managed or redirected."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 20,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Most relevant because the pattern is concentrated enough for targeted facility-level follow-up, and the card context points to an acute hospital/provider, making provider-specific behavior or contract terms a key likely driver.; IP MedSurg (DNE) Trend 10: Highly relevant because paid per admit increased materially and the recommended action explicitly includes reimbursement analysis on highest-cost facilities, which aligns with reviewing reimbursement method.; IP MedSurg (DNE) Trend 6: Relevant because utilization is also rising, so the increase may reflect changes in utilization management performance, avoidable admissions, or level-of-care control that would surface in a PAV/UM KPI review.; IP MedSurg (DNE) Trend 4: Relevant because the unit-cost increase could be driven by changes in inpatient service mix or level of care within acute hospital stays, and the pattern is not tied to one diagnosis.; IP MedSurg (DNE) Trend 7: Relevant because the higher inpatient volume may be explained by shifts in admission source, discharge patterns, or elective/non-elective mix, which is important when admits and spend are both increasing."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 13,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 10: Most directly aligned because the pattern is driven by catastrophic inpatient cases, especially a lung transplant, and the recommended action is to confirm catastrophic claim handling; transplant/outlier reimbursement method review is therefore critical.; IP MedSurg (DNE) Trend 3: The increase is clearly concentrated in a small set of diagnoses and high-severity clinical conditions (J849, I214, I69193), matching the rule for diagnosis-isolated variance.; IP MedSurg (DNE) Trend 4: The spend spike is concentrated in a narrow set of services/DRGs such as Lung Transplant and Coronary Bypass with MCC, which fits the service-level isolation rule.; IP MedSurg (DNE) Trend 2: The pattern is based on very few catastrophic episodes with small claim counts, indicating variance isolated to a tiny subset of members rather than broad population growth.; IP MedSurg (DNE) Trend 1: The source cards show concentration at a single acute facility/provider context (Northwestern Memorial Hospital), making provider concentration a relevant parent rule to investigate alongside case review."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 12,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Strongest fit because the spend increase is concentrated in a subset of providers, especially multiple outlier admissions at UCI MEDICAL CENTER.; IP MedSurg (DNE) Trend 3: Strong fit because the pattern is driven by a narrow set of diagnoses/DRGs such as malignancy, cardiothoracic, and degenerative neurologic cases, with severity and coding validation specifically called out.; IP MedSurg (DNE) Trend 10: Relevant because the recommended next step includes reimbursement review on specific high-cost episodes, suggesting reimbursement method or payment mechanics may be contributing to high paid per admit.; IP MedSurg (DNE) Trend 9: Relevant secondary rule because a small number of very large claims should be checked for claim status, rebilling, or reprocessing issues as part of the targeted episode review.; IP MedSurg (DNE) Trend 4: Moderately relevant because the outliers cluster in specific high-acuity inpatient clinical services/DRGs, especially major cardiothoracic and oncology-related admissions, rather than across broad Med/Surg utilization."
+      },
+      {
+        "rank": 5,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 46,
+        "categories": [
+          "OP PT OT ST (DNE)",
+          "OP Oth (DNE)"
+        ],
+        "relevance_reason": "OP PT OT ST (DNE) Trend 4: Physical rehab is the main driver of the increase, so reviewing service drivers is the best fit to isolate which rehab services, placements, or site-of-care changes caused the spend growth.; OP PT OT ST (DNE) Trend 5: The pattern shows both higher utilization and higher paid per case in rehab, and the recommended next step calls for intensity management; that aligns closely with reviewing utilization management KPIs/PAV.; OP PT OT ST (DNE) Trend 7: Authorization criteria and enforcement are explicitly called out in the pattern, making an auth-to-claim review highly relevant for post-acute rehab utilization.; OP PT OT ST (DNE) Trend 1: The pattern points to referral pathways and repeated delta concentration, which suggests provider-specific behavior or network steering into rehab settings should be assessed.; OP Oth (DNE) Trend 8: The OTHER non-acute setting contributed a smaller but meaningful spike, including a new high-cost claim with no baseline, so reviewing reimbursement method is relevant to rule out payment mechanics or contract effects."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP OB Dlvry Well NB (DNE) Trend 3: The variance is tightly concentrated in specific obstetric diagnoses, especially O1404 and O368130, making diagnosis-level severity review the strongest parent rule fit.; IP OB Dlvry Well NB (DNE) Trend 10: The operational signal shows flat volume but much higher paid per admit for the same C-section MCC DRG in CA PPO acute hospital settings, directly aligning to reimbursement method review.; IP OB Dlvry Well NB (DNE) Trend 1: The high-cost cases appear concentrated at a specific acute hospital provider context, suggesting provider-specific billing, contracting, or practice-pattern review is relevant.; IP OB Dlvry Well NB (DNE) Trend 2: The increase is driven by a very small number of mothers/cases rather than broad delivery volume growth, so member-level concentration and maternity case-management review are relevant.; IP OB Dlvry Well NB (DNE) Trend 4: The pattern is concentrated in a specific maternity service/DRG\u2014Cesarean Section without Sterilization with MCC\u2014so service-level review is also applicable."
+      },
+      {
+        "rank": 8,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP NF (DNE)"
+        ],
+        "relevance_reason": "IP NF (DNE) Trend 7: The core pattern is a post-acute site-of-care shift into SNF/NF settings, so reviewing admission/discharge source and location is the strongest parent rule match.; IP NF (DNE) Trend 1: The variance appears concentrated in a narrow provider/facility footprint, including a named SNF provider, which makes provider behavior and contracting review highly relevant.; IP NF (DNE) Trend 3: The spend increase is tightly tied to specific aftercare diagnoses and musculoskeletal case mix, especially Z4789 and S42321D, indicating diagnosis-level concentration.; IP NF (DNE) Trend 4: The change is isolated to specific post-acute services/settings\u2014SNF free-standing and nursing facility aftercare\u2014supporting a focused service-driver review.; IP NF (DNE) Trend 10: Paid per admit increased materially, and the recommended follow-up includes assessing reimbursement on high-cost stays, which aligns with reimbursement method review."
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-23T07:22:39.918925+00:00"
+  }
+}

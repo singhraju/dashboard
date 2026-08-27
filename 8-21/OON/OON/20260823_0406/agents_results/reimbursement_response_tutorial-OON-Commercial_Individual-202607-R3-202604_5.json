@@ -1,0 +1,316 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH and UNATTRIBUTED show rare catastrophic IP Med/Surg cases",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "billing_restriction",
+          "label": "Billing Restriction",
+          "type": "text"
+        },
+        {
+          "id": "resolved_dx_reporting",
+          "label": "Resolved Dx Reporting",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_restriction": "-",
+          "resolved_dx_reporting": "-"
+        },
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_restriction": "Restricted to office POS 11; not separately payable there for acute inpatient diagnoses.",
+          "resolved_dx_reporting": "Document resolved conditions as history of and use status codes when relevant."
+        },
+        {
+          "payer_org": "Highmark Health Options",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_restriction": "-",
+          "resolved_dx_reporting": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "billing_restriction": "-",
+          "resolved_dx_reporting": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589900002",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Risk Adjustment and Acute Inpatient Diagnosis",
+        "tags": [],
+        "effective_date": "1/1/2022",
+        "evidence": "This policy restricts reporting acute inpatient diagnoses in the office setting and says resolved conditions should be documented as history; no code-specific mention of this diagnosis code was found.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/risk-adjustment-and-acute-inpatient-diagnosis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim with POS 11"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_AHC_00118",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Inappropriate Diagnosis Coding",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.amerihealthcaritasdc.com/content/dam/amerihealth-caritas/acdc/pdf/provider/resources/reimbursement-policies/20260112/Inappropriate%20Diagnosis%20Coding.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HHO_00089",
+        "payer_name": "Highmark Health Options",
+        "policy_title": "General - Long-Term Acute Care Hospital (LTAC)",
+        "tags": [],
+        "effective_date": "2025-06-16",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://securecms.highmark.com/content/medpolicy/en/highmark-wholecare/wv/medicaid/policy/folder-hho-wv-rp-2262-long-term-acute-care-hospital--ltac-/hho-wv-rp-2262-001-long-term-acute-care-hospital--ltac-.html",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00189",
+        "payer_name": "Molina",
+        "policy_title": "Critical Care Codes when Discharging Home from the Emergency Department",
+        "tags": [],
+        "effective_date": "2022-08-19",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/CriticalCareCodesWhenDischargingHome12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: OH and UNATTRIBUTED show rare catastrophic IP Med/Surg cases",
+    "pattern_rank": 5,
+    "pattern_title": "OH and UNATTRIBUTED show rare catastrophic IP Med/Surg cases",
+    "cpt_codes_requested": [
+      "I6381",
+      "K7031"
+    ],
+    "drg_codes_requested": [
+      "Intracranial Hemorrhage or Cerebral Infarction with MCC",
+      "Liver Transplant without MCC",
+      "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours with MCC"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 3 source card(s) attest no state (segment scope: OH, UNATTRIBUTED); searched without it rather than narrowing to ['OH']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item for scope drift because it targets office-based acute-inpatient diagnosis reporting rather than rare catastrophic inpatient Med/Surg cases."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/5 policies quarantined (20%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_ALL_ELV_INTERNAL_00148:Modifier 59 Distinct Procedural Service RETIRED]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 27401,
+    "output": 29648,
+    "breakdown": {
+      "search_keywords": {
+        "input": 558,
+        "output": 528,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 2551,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 1964,
+        "output": 13891,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 20252,
+        "output": 10275,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 1015,
+        "output": 673,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 735,
+        "output": 599,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 197,
+        "output": 205,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1542,
+        "output": 632,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 695,
+        "output": 294,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T04:59:49.854706+00:00",
+    "end_time": "2026-08-23T05:02:31.735119+00:00",
+    "duration_ms": 161880,
+    "version": "2.0.0"
+  }
+}

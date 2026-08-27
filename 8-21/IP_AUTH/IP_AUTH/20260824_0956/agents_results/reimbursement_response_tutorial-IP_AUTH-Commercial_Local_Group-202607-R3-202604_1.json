@@ -1,0 +1,213 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R3-202604_1_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R3-202604_1",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 1,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NH HMO acute-hospital spike at Dartmouth",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope_note",
+          "label": "Scope Note",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_scope_note": "Laboratory thrombosis risk testing policy only; unrelated to acute-hospital DRG reimbursement rules."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595690205",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Venous and Arterial Thrombosis Risk Testing",
+        "tags": [],
+        "effective_date": "Nov. 1, 2025",
+        "evidence": "Point32Health's policy addresses laboratory thrombosis risk testing and is unrelated to the requested acute-hospital DRG pattern.",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-venous-and-arterial-thrombosis-risk-testing-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Place Dartmouth under 100% prepay and postpay review for the NH HMO acute-hospital pocket that drove about +$4.5M, prioritizing the cohort with 85 added admissions and 49 added claims and any admit pattern where paid per admit increased by about $51.6K until the utilization, case-mix, and contract/rate drivers are validated. (NH)",
+      "evidence": [
+        "NH"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": []
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 1: NH HMO acute-hospital spike at Dartmouth",
+    "pattern_rank": 1,
+    "pattern_title": "NH HMO acute-hospital spike at Dartmouth",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders with CC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 1 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NH'] - attested by all 1 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 11943,
+    "output": 5407,
+    "breakdown": {
+      "search_keywords": {
+        "input": 538,
+        "output": 531,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 340,
+        "output": 269,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 7854,
+        "output": 2221,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 420,
+        "output": 299,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 586,
+        "output": 453,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 206,
+        "output": 154,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1300,
+        "output": 1314,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 699,
+        "output": 166,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T10:13:39.361094+00:00",
+    "end_time": "2026-08-24T10:14:31.709117+00:00",
+    "duration_ms": 52348,
+    "version": "2.0.0"
+  }
+}

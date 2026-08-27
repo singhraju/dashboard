@@ -1,0 +1,148 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_4_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Local_Group-202607-R12-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Post-acute inpatient settings are a major site-of-care cost driver",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_mention",
+          "label": "Pattern Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Post-acute inpatient settings are a major site-of-care cost driver",
+    "pattern_rank": 4,
+    "pattern_title": "Post-acute inpatient settings are a major site-of-care cost driver",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Ungroupable"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['GA', 'VA', 'CA', 'IN'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/2 policies quarantined (100%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_UHC_00045:Global Days Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange, RP_COM_UHC_00101:Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 14020,
+    "output": 3759,
+    "breakdown": {
+      "search_keywords": {
+        "input": 528,
+        "output": 253,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 356,
+        "output": 319,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 11329,
+        "output": 2351,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 915,
+        "output": 314,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 892,
+        "output": 522,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T08:49:55.283415+00:00",
+    "end_time": "2026-08-23T08:50:15.387742+00:00",
+    "duration_ms": 20104,
+    "version": "2.0.0"
+  }
+}

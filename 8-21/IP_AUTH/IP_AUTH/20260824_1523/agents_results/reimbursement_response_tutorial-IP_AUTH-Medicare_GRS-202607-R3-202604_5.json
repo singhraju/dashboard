@@ -1,0 +1,239 @@
+{
+  "job_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R3-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Medicare_GRS-202607-R3-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare high-cost IP Med/Surg outliers are creating one-off spikes across CA / PA / VA / KY",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "badge"
+        },
+        {
+          "id": "bundling_outlier_treatment",
+          "label": "Bundling/Outlier Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Highmark_BCBS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "-",
+          "bundling_outlier_treatment": "-"
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_scope": "Bundles",
+          "bundling_outlier_treatment": "Routine supplies, services, and room-and-board items are bundled, not separately reimbursable, or outlier-eligible."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_HIGHMARK_BCBS_DE_PA_NY_WV_28593510117",
+        "payer_name": "Highmark_BCBS",
+        "policy_title": "Facility Routine Supplies and Services",
+        "tags": [],
+        "effective_date": "2018-12-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://providers.highmark.com/content/dam/highmark/en/providerresourcecenter/pdfs/claims/reimbursement-policies/rp-040.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00196",
+        "payer_name": "Molina",
+        "policy_title": "Hospital Routine Supplies Services",
+        "tags": [],
+        "effective_date": "2024-08-26",
+        "evidence": "Routine hospital supplies, equipment, personnel services, and many ancillary items are bundled into room and board or procedure reimbursement and are not separately reimbursable. For inpatient claims, these items are also excluded from outlier calculations.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HospitalRoutineSuppliesServicesReimbursement_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim line",
+            "same inpatient or outpatient stay"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "inpatient",
+            "outpatient"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "medically necessary durable medical equipment at discharge"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Rare high-cost IP Med/Surg outliers are creating one-off spikes across CA / PA / VA / KY",
+    "pattern_rank": 5,
+    "pattern_title": "Rare high-cost IP Med/Surg outliers are creating one-off spikes across CA / PA / VA / KY",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Cardiac Valve and Other Major Cardiothoracic Procedures with Cardiac Catheterization with MCC",
+      "Infectious and Parasitic Diseases with O.R. Procedures with MCC",
+      "Other Disorders of Nervous System without CC/MCC",
+      "Revision of Hip or Knee Replacement with CC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA', 'PA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/3 policies quarantined (33%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_ELV_INTERNAL_00101:Moderate Conscious Sedation C-25001]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 20654,
+    "output": 10147,
+    "breakdown": {
+      "search_keywords": {
+        "input": 575,
+        "output": 1726,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 575,
+        "output": 824,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 15683,
+        "output": 6093,
+        "calls": 3
+      },
+      "relevance_judge": {
+        "input": 1011,
+        "output": 469,
+        "calls": 2
+      },
+      "dynamic_columns": {
+        "input": 918,
+        "output": 654,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 262,
+        "output": 163,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1630,
+        "output": 218,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T15:42:52.384351+00:00",
+    "end_time": "2026-08-24T15:43:35.282555+00:00",
+    "duration_ms": 42898,
+    "version": "2.0.0"
+  }
+}

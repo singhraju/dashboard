@@ -1,0 +1,468 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R12-202604_7_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R12-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "TX IP Med/Surg trend is being shaped by rare high-cost admissions",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_relevance",
+          "label": "Policy Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "payment_rule",
+          "label": "Payment Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "BCBS_TX (Health Care Service Corporation)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_rule": "No applicable payment rule; policy addresses thrombophilia testing, not this code set."
+        },
+        {
+          "payer_org": "Centene",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_rule": "-"
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_rule": "Denies professional and facility claims for wrong-patient, wrong-body-part, or wrong-surgery never events."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_rule": "Requires POA reporting; HAC/HCAC/PPC-related inpatient claims may face reduced or denied reimbursement."
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_relevance": "-",
+          "payment_rule": "Covers limited thrombosis plasma testing; excludes superficial thrombosis, APC resistance assays, and multigene panels."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00167",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Present on Admission HCAC RETIRED",
+        "tags": [],
+        "effective_date": "04/20/18",
+        "evidence": "Inpatient facility claims require POA indicators for all primary and secondary diagnoses. If a secondary diagnosis is identified as an HCAC, reimbursement may be reduced or denied. No exact rule is stated for this DRG label.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Inpatient facility claims"
+          ],
+          "state_specific_rules": [
+            "Georgia, Nevada, Tennessee use Medicare POA methodology for applicable facilities",
+            "Louisiana requires HCAC-related additional days on TOB 0110",
+            "Iowa exempts certain facilities from HCAC reporting"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Critical Access Hospitals",
+            "Children\u2019s Inpatient Facilities",
+            "Indian Health Services",
+            "Veterans Administration/Department of Defense Hospitals",
+            "Long-Term Acute Care hospitals",
+            "Inpatient psychiatric hospitals",
+            "Inpatient rehabilitation facilities",
+            "Maryland waiver hospitals",
+            "Cancer hospitals",
+            "Religious non-medical health care institutions"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_BCBS_TX_TX_29082210003",
+        "payer_name": "BCBS_TX (Health Care Service Corporation)",
+        "policy_title": "Venous and Arterial Thrombosis Risk Testing",
+        "tags": [],
+        "effective_date": "2025-08-08",
+        "evidence": "Policy is off-topic for this code. It addresses thrombophilia risk testing and does not provide adjudication rules for this diagnosis/code set.",
+        "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/cpcplab058-8-8-2025.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": {
+          "flags": [
+            "policy_topic_irrelevant"
+          ],
+          "severity": "warn",
+          "reasons": [
+            "relevance judge: relevant=false confidence='medium': The policy is about reimbursement criteria for venous/arterial thrombosis risk testing (thrombophilia lab work), not inpatient DRG adjudication or the GI/trauma/surgical admission codes in this pattern, despite a loose clinical link to pulmonary embolism."
+          ]
+        }
+      },
+      {
+        "policy_id": "RP_COM_ELV_EXTERNAL_01182",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "01/01/2025",
+        "evidence": "Wrong-body-part never event diagnosis; related services are denied for professional and facility claims.",
+        "policy_url": "https://www.wellpoint.com/content/dam/digital/wellpoint/documents/provider/commercial/reimbursement-policies/MULTI-WP-CM-RP-067382-24-SRS66354 Provider Preventable Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "related_codes": [
+            "Y65.52",
+            "Y65.51",
+            "Y65.53"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [
+            "PC"
+          ],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00185",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions C-23002",
+        "tags": [],
+        "effective_date": "2023-09-01",
+        "evidence": "Commercial reimbursement policy for provider preventable conditions on inpatient and surgical claims. This code is not specifically named. Relevant claims may be denied or reduced if a hospital acquired condition is present or if a major surgical never event occurs.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "when POA identifies HAC"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Professional",
+            "Facility"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_CNC_00884",
+        "payer_name": "Centene",
+        "policy_title": "Homocysteine Testing (CP.MP.121)",
+        "tags": [],
+        "effective_date": "03/23",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/payment-policies/CP.MP.121.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "2023-03-22",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00064",
+        "payer_name": "Humana",
+        "policy_title": "Laboratory - Venous and Arterial Thrombosis Testing",
+        "tags": [],
+        "effective_date": "03/2023",
+        "evidence": "Thrombosis-related plasma testing is reimbursable only for listed acute thrombotic conditions and selected inherited deficiency workups; it is not reimbursable for superficial venous thrombosis.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=0900092986393910",
+        "edit_rule_facts": {
+          "target_codes": [
+            "85300",
+            "85301",
+            "85302",
+            "85303",
+            "85305",
+            "85306",
+            "85307",
+            "0278U"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare Advantage Products"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 8,
+    "policies_successful": 8,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: TX IP Med/Surg trend is being shaped by rare high-cost admissions",
+    "pattern_rank": 7,
+    "pattern_title": "TX IP Med/Surg trend is being shaped by rare high-cost admissions",
+    "cpt_codes_requested": [
+      "I2699",
+      "K5000"
+    ],
+    "drg_codes_requested": [
+      "Inflammatory Bowel Disease with CC",
+      "Lower Extremity and Humerus Procedures Except Hip, Foot, Femur with MCC",
+      "Major Chest Trauma with CC",
+      "Pulmonary Embolism without MCC"
+    ],
+    "total_policies_found": 8,
+    "successful_extractions": 8,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 8 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Dropped the item because it addresses California cesarean delivery rather than the Texas inpatient med/surg pattern in scope."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/8 policies quarantined (12%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "1/8 policies warning-flagged (12%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_BCBS_TX_TX_29082230003:Pneumatic Compression Devices]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "1 policy/ies flagged with contamination warnings (kept in output): [RP_COM_BCBS_TX_TX_29082210003:Venous and Arterial Thrombosis Risk Testing].",
+      "Validator dropped 1 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 57889,
+    "output": 50704,
+    "breakdown": {
+      "search_keywords": {
+        "input": 560,
+        "output": 1034,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 443,
+        "output": 3063,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 574,
+        "output": 1177,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 45537,
+        "output": 39018,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 3046,
+        "output": 2084,
+        "calls": 6
+      },
+      "dynamic_columns": {
+        "input": 924,
+        "output": 1324,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1323,
+        "output": 573,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 442,
+        "output": 142,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3078,
+        "output": 2068,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1962,
+        "output": 221,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T18:40:27.757986+00:00",
+    "end_time": "2026-08-23T18:42:57.092768+00:00",
+    "duration_ms": 149334,
+    "version": "2.0.0"
+  }
+}

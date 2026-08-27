@@ -1,0 +1,2592 @@
+{
+  "context": {
+    "pattern": {
+      "pattern_rank": 6,
+      "top_pattern": "IN maternity spend increased from a single delivery outlier",
+      "pattern_type": "low_baseline_emergence",
+      "what_is_impacting": "IN / IP OB Dlvry/Well NB",
+      "priority_entities": {
+        "states": [
+          "IN"
+        ],
+        "providers": [
+          "IU HEALTH BALL MEMORIAL HOSPITAL"
+        ],
+        "products": [],
+        "facility_types": [],
+        "clinical_categories": [
+          "IP OB Dlvry/Well NB"
+        ]
+      },
+      "key_driver_codes": [
+        "Vaginal Delivery without Sterilization or D&C with CC",
+        "O99892",
+        "IU HEALTH BALL MEMORIAL HOSPITAL"
+      ],
+      "impact_summary": {
+        "primary_metric": "total_paid",
+        "direction": "increase",
+        "estimated_delta": "+$24K",
+        "volume_signal": "claims up",
+        "unit_cost_signal": "paid per admit up"
+      },
+      "pattern_details": "IN maternity cost growth reflects a single delivery-related inpatient outlier at IU Health Ball Memorial Hospital. This is not evidence of broad maternity utilization growth, but it is a distinct maternity case that merits targeted review because maternity actions differ from other inpatient categories. The correct response is a case review, not broad utilization tightening.",
+      "why_it_matters": "Maternity outliers need dedicated review because the clinical and payment levers differ from general inpatient admissions.",
+      "recommended_next_step": "Review the single maternity admission at IU Health Ball Memorial Hospital for clinical severity, billing accuracy, and any maternity-specific care management opportunities.",
+      "validation_needed": true,
+      "validation_reason": "The signal is a one-claim low-baseline emergence, so it should be validated at the case level before any broader conclusion is drawn.",
+      "downstream_routes": [
+        "clinical_agent",
+        "data_quality_agent"
+      ],
+      "evidence_summary": [
+        "A single IN maternity delivery case added about $24K at IU Health Ball Memorial Hospital.",
+        "The driver was Vaginal Delivery without Sterilization or D&C with CC with diagnosis O99892.",
+        "This was a 1-claim low-baseline emergence."
+      ],
+      "source_group_ids": [
+        "ee54c3c509c53dbf23e6"
+      ],
+      "source_card_ids": [
+        "b8fe7199a312ef05721f"
+      ],
+      "scope": {
+        "segment_by": [
+          "service_area_state"
+        ],
+        "segment_values": [
+          "IN"
+        ],
+        "segment_signatures": [
+          "f5dbefe998f205d9c7c5"
+        ],
+        "filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "filters_attested": {
+          "state": true
+        }
+      }
+    },
+    "cards": [
+      {
+        "card_id": "8b2f2bbf6852a7e8a4d2",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "CORAM CVS SPECIALTY INFUSION SERVICES"
+        },
+        "source_trace": {
+          "run_id": "20260823T053511Z_where_did_change_happen_for_provider_cor_d1e400af",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CO",
+          "lob_description": "Commercial Individual"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "E8801",
+          "service_area_state": "CO",
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "product_description": "HMO",
+          "procedure_name": "Drugs"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "HMO",
+          "facility_type": "Not Mapped",
+          "service_area_state": "CO",
+          "lob_description": "Commercial Individual"
+        },
+        "segment_filters": {
+          "state": [
+            "CO"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "primary_diagnosis_code": "drill_context",
+          "hcc_medium": "drill_context",
+          "drg_name": "drill_context",
+          "procedure_name": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "Not Mapped"
+          ],
+          "state": [
+            "CO"
+          ],
+          "line_of_business": [
+            "Commercial Individual"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 610.0,
+            "comparison": 96131.26,
+            "delta": 95521.26
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 2.107147662954353,
+          "raw_row_count": {
+            "baseline": 4.0,
+            "comparison": 44.0,
+            "delta": 40.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 1.0,
+              "comparison": 4.0,
+              "delta": 3.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 610.0,
+              "comparison": 24032.815,
+              "delta": 23422.815
+            },
+            "total_paid": {
+              "baseline": 1.0,
+              "comparison": 4.0,
+              "delta": 3.0
+            },
+            "total_allowed": {
+              "baseline": 1.0,
+              "comparison": 0.83502769,
+              "delta": -0.16497231
+            },
+            "paid_ratio": {
+              "baseline": 1.0,
+              "comparison": 0.83502769,
+              "delta": -0.16497231
+            },
+            "pmpm": {
+              "baseline": 0.00289792,
+              "comparison": 0.0474679,
+              "delta": 0.04456998
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Individual",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "E8801",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Drugs",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 171938.26799999998,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "cb496f707080fbaacfd9",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "CORAM CVS SPECIALTY INFUSION SERVICES"
+        },
+        "source_trace": {
+          "run_id": "20260823T053511Z_where_did_change_happen_for_provider_cor_d1e400af",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "E8801",
+          "procedure_name": "Drugs"
+        },
+        "context_dimensions": {
+          "primary_diagnosis_code": "E8801",
+          "service_area_state": "CO",
+          "hcc_medium": "OP Mgmt Oth Misc",
+          "facility_type": "Not Mapped",
+          "drg_name": "Not Mapped",
+          "product_description": "HMO",
+          "procedure_name": "Drugs"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "CO"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP Mgmt Oth Misc"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "E8801"
+          ],
+          "procedure": [
+            "Drugs"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 94766.4,
+            "delta": 94766.4
+          },
+          "share_of_positive_delta": 0.9858021209750085,
+          "share_of_net_delta": 2.090495857012328,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 14.0,
+            "delta": 14.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 4.0,
+              "delta": 4.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 23691.6,
+              "delta": 23691.6
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 4.0,
+              "delta": 4.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.83391807,
+              "delta": 0.83391807
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.83391807,
+              "delta": 0.83391807
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.14732222,
+              "delta": 0.14732222
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "low_volume_run",
+          "repeated_delta_concentration",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP Mgmt Oth Misc",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "E8801",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Drugs",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "CO",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 169368.58630544943,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "d2694c1c789c1448cb0b",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053547Z_where_did_change_happen_for_provider_tex_cb00c98e",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "TX",
+          "lob_description": "Commercial Individual"
+        },
+        "context_dimensions": {
+          "service_area_state": "TX",
+          "facility_type": "ACUTE HOSPITAL",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "K7469"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "TX",
+          "lob_description": "Commercial Individual"
+        },
+        "segment_filters": {
+          "state": [
+            "TX"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "hcc_medium": "drill_context",
+          "procedure_name": "drill_context",
+          "drg_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "TX"
+          ],
+          "line_of_business": [
+            "Commercial Individual"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 16907.86,
+            "comparison": 241428.56,
+            "delta": 224520.7
+          },
+          "share_of_positive_delta": 0.8464163922884212,
+          "share_of_net_delta": 1.6928327845768427,
+          "raw_row_count": {
+            "baseline": 348.0,
+            "comparison": 2504.0,
+            "delta": 2156.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 12.0,
+              "comparison": 82.0,
+              "delta": 70.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 1408.98833333,
+              "comparison": 2944.25073171,
+              "delta": 1535.26239838
+            },
+            "total_paid": {
+              "baseline": 12.0,
+              "comparison": 82.0,
+              "delta": 70.0
+            },
+            "total_allowed": {
+              "baseline": 0.52468537,
+              "comparison": 0.58974584,
+              "delta": 0.06506046999999993
+            },
+            "paid_ratio": {
+              "baseline": 0.52468537,
+              "comparison": 0.58974584,
+              "delta": 0.06506046999999993
+            },
+            "pmpm": {
+              "baseline": 0.00337924,
+              "comparison": 0.00267526,
+              "delta": -0.0007039799999999999
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "TX",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Individual",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "drill_context"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K7469",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 414558.700888071,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "73a7c6cd134e7254a773",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053547Z_where_did_change_happen_for_provider_tex_cb00c98e",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Cirrhosis and Alcoholic Hepatitis with MCC",
+          "primary_diagnosis_code": "K7469",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "TX",
+          "facility_type": "ACUTE HOSPITAL",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "K7469"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "TX"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Cirrhosis and Alcoholic Hepatitis with MCC"
+          ],
+          "diagnosis": [
+            "K7469"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 26400.1,
+            "delta": 26400.1
+          },
+          "share_of_positive_delta": 0.1111167698140653,
+          "share_of_net_delta": 0.19905048753236163,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 32.0,
+            "delta": 32.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 26400.1,
+              "delta": 26400.1
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.65767564,
+              "delta": 0.65767564
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.65767564,
+              "delta": 0.65767564
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.02266619,
+              "delta": 0.02266619
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Cirrhosis and Alcoholic Hepatitis with MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K7469",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "TX",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 26400.234451291475,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "b514790f5bc861af24b5",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053547Z_where_did_change_happen_for_provider_tex_cb00c98e",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Poisoning and Toxic Effects of Drugs with MCC",
+          "primary_diagnosis_code": "T40411A",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "TX",
+          "facility_type": "ACUTE HOSPITAL",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "K7469"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "TX"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Poisoning and Toxic Effects of Drugs with MCC"
+          ],
+          "diagnosis": [
+            "T40411A"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 23761.62,
+            "delta": 23761.62
+          },
+          "share_of_positive_delta": 0.10001153253015294,
+          "share_of_net_delta": 0.17915697461595656,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 36.0,
+            "delta": 36.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 23761.62,
+              "delta": 23761.62
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.74283987,
+              "delta": 0.74283987
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.74283987,
+              "delta": 0.74283987
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01721492,
+              "delta": 0.01721492
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Poisoning and Toxic Effects of Drugs with MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "T40411A",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "TX",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 23524.25042843922,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "6b07a1a463e24ca27d48",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053547Z_where_did_change_happen_for_provider_tex_cb00c98e",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC",
+          "primary_diagnosis_code": "A409",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "TX",
+          "facility_type": "ACUTE HOSPITAL",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "K7469"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "TX"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC"
+          ],
+          "diagnosis": [
+            "A409"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 20870.26,
+            "delta": 20870.26
+          },
+          "share_of_positive_delta": 0.08784193531008196,
+          "share_of_net_delta": 0.15735680652448836,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 34.0,
+            "delta": 34.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 20870.26,
+              "delta": 20870.26
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01949707,
+              "delta": 0.01949707
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Septicemia or Severe Sepsis without Mechanical Ventilation >96 Hours without MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "A409",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "TX",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 20433.18962594213,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "544df08375e09abb1f0a",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053547Z_where_did_change_happen_for_provider_tex_cb00c98e",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_004",
+          "artifact_row_ref": 4
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Disorders of Liver Except Malignancy, Cirrhosis, or Alcoholic Hepatitis with CC",
+          "primary_diagnosis_code": "K7210",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "TX",
+          "facility_type": "ACUTE HOSPITAL",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "K7469"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "TX"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Disorders of Liver Except Malignancy, Cirrhosis, or Alcoholic Hepatitis with CC"
+          ],
+          "diagnosis": [
+            "K7210"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 19687.32,
+            "delta": 19687.32
+          },
+          "share_of_positive_delta": 0.0828629969089452,
+          "share_of_net_delta": 0.14843771971339553,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 36.0,
+            "delta": 36.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 19687.32,
+              "delta": 19687.32
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01502474,
+              "delta": 0.01502474
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Disorders of Liver Except Malignancy, Cirrhosis, or Alcoholic Hepatitis with CC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K7210",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "TX",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 19186.803302674874,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "fcddcabb8c00789c630c",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "TEXAS HEALTH PRESBYTERIAN HOSPITAL ROCKWAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053547Z_where_did_change_happen_for_provider_tex_cb00c98e",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_005",
+          "artifact_row_ref": 5
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP ER",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "O034",
+          "procedure_name": "Maternity Care/Delivery"
+        },
+        "context_dimensions": {
+          "service_area_state": "TX",
+          "facility_type": "ACUTE HOSPITAL",
+          "hcc_medium": "IP Med/Surg",
+          "procedure_name": "Null or Blank",
+          "product_description": "HMO",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "K7469"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "TX"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP ER"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "O034"
+          ],
+          "procedure": [
+            "Maternity Care/Delivery"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 13917.2,
+            "delta": 13917.2
+          },
+          "share_of_positive_delta": 0.05857683527169631,
+          "share_of_net_delta": 0.10493238453965642,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 4.0,
+            "delta": 4.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 6958.6,
+              "delta": 6958.6
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 2.0,
+              "delta": 2.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.69028115,
+              "delta": 0.69028115
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.69028115,
+              "delta": 0.69028115
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.0935973,
+              "delta": 0.0935973
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP ER",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "O034",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Maternity Care/Delivery",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "TX",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 9944.387233994195,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "9ae279acbf17dae3ff1d",
+        "card_type": "interaction_cell",
+        "stage": "operational",
+        "source_entity": {
+          "type": "providers",
+          "name": "IU HEALTH BALL MEMORIAL HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053604Z_where_did_change_happen_for_provider_iu__357f3d2b",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "op_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "IN",
+          "lob_description": "Commercial Individual"
+        },
+        "context_dimensions": {
+          "service_area_state": "IN",
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "HMO",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP NICU",
+          "drg_name": "Prematurity without Major Problems",
+          "primary_diagnosis_code": "Z3800"
+        },
+        "hard_filter_dimensions": {
+          "product_description": "HMO",
+          "facility_type": "ACUTE HOSPITAL",
+          "service_area_state": "IN",
+          "lob_description": "Commercial Individual"
+        },
+        "segment_filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "dimension_sources": {
+          "product_description": "interaction_cell",
+          "facility_type": "interaction_cell",
+          "service_area_state": "interaction_cell",
+          "lob_description": "interaction_cell",
+          "procedure_name": "drill_context",
+          "hcc_medium": "drill_context",
+          "drg_name": "drill_context",
+          "primary_diagnosis_code": "drill_context"
+        },
+        "canonical_dimensions": {
+          "product": [
+            "HMO"
+          ],
+          "facility": [
+            "ACUTE HOSPITAL"
+          ],
+          "state": [
+            "IN"
+          ],
+          "line_of_business": [
+            "Commercial Individual"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 6321.6,
+            "comparison": 312235.9,
+            "delta": 305914.30000000005
+          },
+          "share_of_positive_delta": 1.0,
+          "share_of_net_delta": 2.0049193269055268,
+          "raw_row_count": {
+            "baseline": 44.0,
+            "comparison": 118.0,
+            "delta": 74.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 1.0,
+              "comparison": 10.0,
+              "delta": 9.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 6321.6,
+              "comparison": 31223.59,
+              "delta": 24901.989999999998
+            },
+            "total_paid": {
+              "baseline": 1.0,
+              "comparison": 10.0,
+              "delta": 9.0
+            },
+            "total_allowed": {
+              "baseline": 0.8,
+              "comparison": 0.81698282,
+              "delta": 0.016982819999999954
+            },
+            "paid_ratio": {
+              "baseline": 0.8,
+              "comparison": 0.81698282,
+              "delta": 0.016982819999999954
+            },
+            "pmpm": {
+              "baseline": 0.00268755,
+              "comparison": 0.05545903,
+              "delta": 0.05277148
+            }
+          }
+        },
+        "driver_type": "mixed_volume_unit_cost",
+        "flags": [
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "IN",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "lob_description",
+            "operator": "=",
+            "value": "Commercial Individual",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "drill_context"
+          },
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP NICU",
+            "source": "drill_context"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Prematurity without Major Problems",
+            "source": "drill_context"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3800",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": false,
+          "um_operations_agent": true,
+          "reimbursement_policy_agent": true,
+          "network_financial_agent": true,
+          "data_quality_agent": true
+        },
+        "rank_score": 611828.6000000001,
+        "business_terms": [
+          "site-of-care",
+          "unit cost",
+          "utilization"
+        ]
+      },
+      {
+        "card_id": "59237587dd72c86bc906",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "IU HEALTH BALL MEMORIAL HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053604Z_where_did_change_happen_for_provider_iu__357f3d2b",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_001",
+          "artifact_row_ref": 1
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP NICU",
+          "drg_name": "Prematurity without Major Problems",
+          "primary_diagnosis_code": "Z3800",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "IN",
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "HMO",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP NICU",
+          "drg_name": "Prematurity without Major Problems",
+          "primary_diagnosis_code": "Z3800"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP NICU"
+          ],
+          "drg": [
+            "Prematurity without Major Problems"
+          ],
+          "diagnosis": [
+            "Z3800"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 222571.26,
+            "delta": 222571.26
+          },
+          "share_of_positive_delta": 0.7128304592777448,
+          "share_of_net_delta": 1.4587007563481502,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 2.0,
+            "delta": 2.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 222571.26,
+              "delta": 222571.26
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.91641662,
+              "delta": 0.91641662
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.91641662,
+              "delta": 0.91641662
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 2.50042547,
+              "delta": 2.50042547
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP NICU",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Prematurity without Major Problems",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "Z3800",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "IN",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 257328.1126042828,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "b8fe7199a312ef05721f",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "IU HEALTH BALL MEMORIAL HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053604Z_where_did_change_happen_for_provider_iu__357f3d2b",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_002",
+          "artifact_row_ref": 2
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP OB Dlvry/Well NB",
+          "drg_name": "Vaginal Delivery without Sterilization or D&C with CC",
+          "primary_diagnosis_code": "O99892",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "IN",
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "HMO",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP NICU",
+          "drg_name": "Prematurity without Major Problems",
+          "primary_diagnosis_code": "Z3800"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP OB Dlvry/Well NB"
+          ],
+          "drg": [
+            "Vaginal Delivery without Sterilization or D&C with CC"
+          ],
+          "diagnosis": [
+            "O99892"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 24168.14,
+            "delta": 24168.14
+          },
+          "share_of_positive_delta": 0.07740346321483212,
+          "share_of_net_delta": 0.15839459280379678,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 20.0,
+            "delta": 20.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 24168.14,
+              "delta": 24168.14
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.78561853,
+              "delta": 0.78561853
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.78561853,
+              "delta": 0.78561853
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.02729736,
+              "delta": 0.02729736
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP OB Dlvry/Well NB",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Vaginal Delivery without Sterilization or D&C with CC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "O99892",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "IN",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 23434.953961914824,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "62f3b3c444665dc6f354",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "IU HEALTH BALL MEMORIAL HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053604Z_where_did_change_happen_for_provider_iu__357f3d2b",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_003",
+          "artifact_row_ref": 3
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "IP Med/Surg",
+          "drg_name": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+          "primary_diagnosis_code": "K5720",
+          "procedure_name": "Null or Blank"
+        },
+        "context_dimensions": {
+          "service_area_state": "IN",
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "HMO",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP NICU",
+          "drg_name": "Prematurity without Major Problems",
+          "primary_diagnosis_code": "Z3800"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "IP Med/Surg"
+          ],
+          "drg": [
+            "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC"
+          ],
+          "diagnosis": [
+            "K5720"
+          ],
+          "procedure": [
+            "Null or Blank"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 19066.32,
+            "delta": 19066.32
+          },
+          "share_of_positive_delta": 0.061063830264232906,
+          "share_of_net_delta": 0.12495798156858105,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 30.0,
+            "delta": 30.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 19066.32,
+              "delta": 19066.32
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.59942504,
+              "delta": 0.59942504
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.59942504,
+              "delta": 0.59942504
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.01119223,
+              "delta": 0.01119223
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "IP Med/Surg",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "K5720",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Null or Blank",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "IN",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 18207.524275419197,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      },
+      {
+        "card_id": "83efbada5192d919d0ec",
+        "card_type": "interaction_cell",
+        "stage": "clinical",
+        "source_entity": {
+          "type": "providers",
+          "name": "IU HEALTH BALL MEMORIAL HOSPITAL"
+        },
+        "source_trace": {
+          "run_id": "20260823T053604Z_where_did_change_happen_for_provider_iu__357f3d2b",
+          "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604",
+          "source": "selected_cells",
+          "cell_id": "cl_004",
+          "artifact_row_ref": 4
+        },
+        "root_metric": "expense_detail.total_paid",
+        "period_window": {
+          "time_dimension": "expense_detail.incurred_month",
+          "start_time": 202601,
+          "end_time": 202604,
+          "baseline_start_time": 202501,
+          "baseline_end_time": 202504,
+          "comparison_strategy": "prior_year_same_window",
+          "baseline_months": [
+            202501,
+            202502,
+            202503,
+            202504
+          ],
+          "comparison_months": [
+            202601,
+            202602,
+            202603,
+            202604
+          ],
+          "data_type": "number"
+        },
+        "dimensions": {
+          "hcc_medium": "OP IV Thrpy/Oncology",
+          "drg_name": "Not Mapped",
+          "primary_diagnosis_code": "D509",
+          "procedure_name": "Q Codes (Temporary)"
+        },
+        "context_dimensions": {
+          "service_area_state": "IN",
+          "facility_type": "ACUTE HOSPITAL",
+          "product_description": "HMO",
+          "procedure_name": "Null or Blank",
+          "hcc_medium": "IP NICU",
+          "drg_name": "Prematurity without Major Problems",
+          "primary_diagnosis_code": "Z3800"
+        },
+        "hard_filter_dimensions": {},
+        "segment_filters": {
+          "state": [
+            "IN"
+          ]
+        },
+        "dimension_sources": {
+          "hcc_medium": "interaction_cell",
+          "drg_name": "interaction_cell",
+          "primary_diagnosis_code": "interaction_cell",
+          "procedure_name": "interaction_cell",
+          "service_area_state": "drill_context",
+          "facility_type": "drill_context",
+          "product_description": "drill_context"
+        },
+        "canonical_dimensions": {
+          "clinical_category": [
+            "OP IV Thrpy/Oncology"
+          ],
+          "drg": [
+            "Not Mapped"
+          ],
+          "diagnosis": [
+            "D509"
+          ],
+          "procedure": [
+            "Q Codes (Temporary)"
+          ]
+        },
+        "metrics": {
+          "value": {
+            "baseline": 0.0,
+            "comparison": 18487.26,
+            "delta": 18487.26
+          },
+          "share_of_positive_delta": 0.05920927093905601,
+          "share_of_net_delta": 0.12116290371364613,
+          "raw_row_count": {
+            "baseline": 0.0,
+            "comparison": 2.0,
+            "delta": 2.0
+          },
+          "explainer": {
+            "claim_count": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "avg_paid_per_admit": {
+              "baseline": 0.0,
+              "comparison": 18487.26,
+              "delta": 18487.26
+            },
+            "total_paid": {
+              "baseline": 0.0,
+              "comparison": 1.0,
+              "delta": 1.0
+            },
+            "total_allowed": {
+              "baseline": 0.0,
+              "comparison": 0.76997141,
+              "delta": 0.76997141
+            },
+            "paid_ratio": {
+              "baseline": 0.0,
+              "comparison": 0.76997141,
+              "delta": 0.76997141
+            },
+            "pmpm": {
+              "baseline": 0.0,
+              "comparison": 0.20880939,
+              "delta": 0.20880939
+            }
+          }
+        },
+        "driver_type": "clinical_case_mix_validation",
+        "flags": [
+          "low_baseline_rows",
+          "low_baseline_value",
+          "repeated_delta_concentration",
+          "small_n_rows",
+          "unmapped_or_unknown_value"
+        ],
+        "filters": [
+          {
+            "field": "hcc_medium",
+            "operator": "=",
+            "value": "OP IV Thrpy/Oncology",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "drg_name",
+            "operator": "=",
+            "value": "Not Mapped",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "primary_diagnosis_code",
+            "operator": "=",
+            "value": "D509",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "procedure_name",
+            "operator": "=",
+            "value": "Q Codes (Temporary)",
+            "source": "interaction_cell"
+          },
+          {
+            "field": "service_area_state",
+            "operator": "=",
+            "value": "IN",
+            "source": "drill_context"
+          },
+          {
+            "field": "facility_type",
+            "operator": "=",
+            "value": "ACUTE HOSPITAL",
+            "source": "drill_context"
+          },
+          {
+            "field": "product_description",
+            "operator": "=",
+            "value": "HMO",
+            "source": "drill_context"
+          }
+        ],
+        "downstream_routes": {
+          "clinical_agent": true,
+          "um_operations_agent": false,
+          "reimbursement_policy_agent": false,
+          "network_financial_agent": false,
+          "data_quality_agent": true
+        },
+        "rank_score": 13217.76710072602,
+        "business_terms": [
+          "case-mix",
+          "clinical review"
+        ]
+      }
+    ]
+  },
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604_6",
+  "query": "Analyze reimbursement policies for pattern 6",
+  "job_id": "tutorial-OON-Commercial_Individual-202607-YTD-202604_6_job"
+}

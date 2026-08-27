@@ -1,0 +1,359 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_2_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-YTD-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT PPO acute hospital spend is concentrated at Yale with both more admissions and higher paid per admit",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_relevance",
+          "label": "Pattern Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "scope_note",
+          "label": "Scope Note",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "scope_note": "-"
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "scope_note": "Short inpatient stays are reclassified to observation, generally limited to 48 hours."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "scope_note": "Routine inpatient and outpatient facility services and supplies are bundled, not separately reimbursable."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_CIG_00018",
+        "payer_name": "Cigna",
+        "policy_title": "Facility Services, Supplies and Equipment",
+        "tags": [],
+        "effective_date": "2010-10-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R12_Facility_Routine_Services_Supplies_and_Equipment.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595770204",
+        "payer_name": "Point32Health",
+        "policy_title": "Observation Stay",
+        "tags": [],
+        "effective_date": "2026-08-01",
+        "evidence": "Observation services are reimbursed when medically appropriate in contracted acute care hospitals. Observation is generally limited to 48 hours, and short-stay inpatient admissions of 48 hours or less are reclassified to observation unless an exception applies. For DRG admissions, related observation services within three days are included in inpatient payment.",
+        "policy_url": "https://wwwassets.point32health.org/documents/observation-stay-pp",
+        "edit_rule_facts": {
+          "target_codes": [
+            "G0378"
+          ],
+          "related_codes": [
+            "G0379",
+            "99221-99223",
+            "99231-99235"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0762"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "same day inpatient",
+            "within 3 days of DRG admission",
+            "ED or SDC origin"
+          ],
+          "utilization_limits": [
+            "max 48 hours",
+            "units billed in hours"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Public Plans",
+            "Senior Products",
+            "Dual-eligible"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "attending physician every 24 hours"
+          ],
+          "exemptions": [
+            "mechanical ventilation",
+            "behavioral health admission",
+            "obstetrical delivery",
+            "neonatal admission",
+            "AMA or death",
+            "higher level transfer"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "On-topic as a general facility reimbursement policy, but the requested DRG pattern is not explicitly named. Routine services, supplies, equipment, and nursing components are bundled into room and board, facility, or related service charges for inpatient and outpatient UB04 claims. Ventilator or CPAP management owned by the facility may be reimbursed at one unit per day.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "260-269",
+            "270",
+            "279",
+            "410",
+            "412",
+            "250",
+            "300",
+            "309",
+            "361",
+            "391",
+            "460",
+            "510",
+            "761",
+            "270-279",
+            "300-370",
+            "419"
+          ],
+          "pairing_conditions": [
+            "same claim line",
+            "same inpatient or outpatient visit"
+          ],
+          "utilization_limits": [
+            "1 unit per day for ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 5,
+    "policies_successful": 5,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For California cesarean delivery, do not apply a G0378 observation-stay reclassification on revenue code 0762 even though observation is limited to max 48 hours, because Point32Health expressly exempts obstetrical delivery. Exempt: obstetrical delivery.\n\nRecommendation 2: Bundle routine facility revenue codes 250, 260-269, 270, 279, 300, 309, 361, 391, 410, and 412 when they are billed on the same claim line for the same inpatient or outpatient visit.",
+      "evidence": [
+        "Point32Health \u00b7 Observation Stay: \"G0378\" [target_codes]",
+        "Point32Health \u00b7 Observation Stay: \"0762\" [revenue_codes]",
+        "Point32Health \u00b7 Observation Stay: \"max 48 hours\" [utilization_limits]",
+        "Point32Health \u00b7 Observation Stay: \"obstetrical delivery\" [exemptions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"250\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"260-269\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"270\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"279\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"300\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"309\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"361\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"391\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"410\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"412\" [revenue_codes]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same claim line\" [pairing_conditions]",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange: \"same inpatient or outpatient visit\" [pairing_conditions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Point32Health \u00b7 Observation Stay \u2014 https://wwwassets.point32health.org/documents/observation-stay-pp",
+        "United Health \u00b7 Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange \u2014 https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CT PPO acute hospital spend is concentrated at Yale with both more admissions and higher paid per admit",
+    "pattern_rank": 2,
+    "pattern_title": "CT PPO acute hospital spend is concentrated at Yale with both more admissions and higher paid per admit",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Other Digestive System Diagnoses with MCC",
+      "Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures"
+    ],
+    "total_policies_found": 5,
+    "successful_extractions": 5,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 5 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "5 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "2/5 policies quarantined (40%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/5 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "2 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00016:Emergency Room Services, RP_COM_CIG_00047:Procedure and Place of Service]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 79336,
+    "output": 26165,
+    "breakdown": {
+      "search_keywords": {
+        "input": 553,
+        "output": 442,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 657,
+        "output": 1250,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 69220,
+        "output": 19305,
+        "calls": 5
+      },
+      "relevance_judge": {
+        "input": 1945,
+        "output": 925,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 1022,
+        "output": 590,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 542,
+        "output": 315,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 2927,
+        "output": 2636,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2470,
+        "output": 702,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:50:45.694293+00:00",
+    "end_time": "2026-08-24T11:52:57.779042+00:00",
+    "duration_ms": 132084,
+    "version": "2.0.0"
+  }
+}

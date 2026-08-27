@@ -1,0 +1,190 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_7_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Local_Group-202607-R12-202604_7",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 7,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Outside CA, acute hospital growth is coming from a mix of volume at key providers and selective price pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_mention_status",
+          "label": "DRG Mention",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Policy Scope",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_mention_status": "-",
+          "policy_scope": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_UHC_00056",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Microsurgery-Policy-Professional.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 2,
+    "policies_successful": 2,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 7: Outside CA, acute hospital growth is coming from a mix of volume at key providers and selective price pressure",
+    "pattern_rank": 7,
+    "pattern_title": "Outside CA, acute hospital growth is coming from a mix of volume at key providers and selective price pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Craniotomy and Endovascular Intracranial Procedures with MCC",
+      "Ungroupable",
+      "Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC"
+    ],
+    "total_policies_found": 2,
+    "successful_extractions": 2,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 2 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "2 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 7 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY', 'OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "1/2 policies quarantined (50%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/2 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_EMB_00055:Ambulatory Surgical Groupers]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 98655,
+    "output": 4523,
+    "breakdown": {
+      "search_keywords": {
+        "input": 566,
+        "output": 509,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 388,
+        "output": 388,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 95205,
+        "output": 2839,
+        "calls": 2
+      },
+      "relevance_judge": {
+        "input": 518,
+        "output": 296,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 648,
+        "output": 320,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1330,
+        "output": 171,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T11:26:03.396879+00:00",
+    "end_time": "2026-08-24T11:26:35.610286+00:00",
+    "duration_ms": 32213,
+    "version": "2.0.0"
+  }
+}

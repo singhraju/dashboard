@@ -1,0 +1,154 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicare_GRS-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "OH utilization growth is concentrated in acute hospital and physical rehab, especially orthopedic aftercare",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00132",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Technology Assisted Surgical Procedures",
+        "tags": [],
+        "effective_date": "09/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Surgery/Technology%20Assisted%20Surgical%20Procedures.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: OH utilization growth is concentrated in acute hospital and physical rehab, especially orthopedic aftercare",
+    "pattern_rank": 4,
+    "pattern_title": "OH utilization growth is concentrated in acute hospital and physical rehab, especially orthopedic aftercare",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare with CC/MCC",
+      "Aftercare, Musculoskeletal System and Connective Tissue with CC",
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes with MCC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['OH'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 6201,
+    "output": 1521,
+    "breakdown": {
+      "search_keywords": {
+        "input": 557,
+        "output": 507,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 4030,
+        "output": 507,
+        "calls": 1
+      },
+      "elevance_summary": {
+        "input": 372,
+        "output": 192,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1242,
+        "output": 315,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T17:30:31.018986+00:00",
+    "end_time": "2026-08-23T17:30:45.422018+00:00",
+    "duration_ms": 14403,
+    "version": "2.0.0"
+  }
+}

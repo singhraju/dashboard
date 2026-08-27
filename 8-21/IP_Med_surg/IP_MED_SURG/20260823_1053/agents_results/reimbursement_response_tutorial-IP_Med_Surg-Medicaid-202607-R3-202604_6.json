@@ -1,0 +1,367 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Medicaid-202607-R3-202604_6_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Medicaid-202607-R3-202604_6",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 6,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "MO and TX inpatient pediatric and GI/metabolic admissions are showing combined volume and unit-cost pressure",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_relevance",
+          "label": "DRG Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "coding_restrictions",
+          "label": "Coding Restrictions",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "coding_restrictions": "Coverage requires listed ICD-10 diagnoses and compliant sequencing; manifestation/external cause codes cannot be primary."
+        },
+        {
+          "payer_org": "Parkland Community Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "Sequencing Rules",
+          "coding_restrictions": "Underlying/toxic-agent codes must be first; manifestations/residuals cannot be primary on outpatient claims."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_MOH_00103",
+        "payer_name": "Molina",
+        "policy_title": "Hydrolyzed Enteral Formula Diagnosis",
+        "tags": [],
+        "effective_date": "2020-11-20",
+        "evidence": "Not a DRG inpatient payment rule; this policy covers HCPCS enteral formula reimbursement and pays B4161 only when a covered definitive diagnosis is present on the claim, including cystic fibrosis, amino acid/organic acid/fatty acid metabolic disorders, food protein allergy syndromes, and eosinophilic GI disease.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/HydrolyzedEternalFormula-Diagnosis12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "B4161",
+            "B4153"
+          ],
+          "related_codes": [
+            "K52.2",
+            "K52.21",
+            "K52.22",
+            "K52.81",
+            "K52.82",
+            "E70",
+            "E70.0",
+            "E70.1",
+            "E70.2",
+            "E70.20",
+            "E70.21",
+            "E70.29",
+            "E70.330",
+            "E70.331",
+            "E70.40",
+            "E70.41",
+            "E70.49",
+            "E70.5",
+            "E70.8",
+            "E70.9",
+            "E71",
+            "E71.0",
+            "E71.1",
+            "E71.11",
+            "E71.110",
+            "E71.111",
+            "E71.118",
+            "E71.12",
+            "E71.120",
+            "E71.121",
+            "E71.128",
+            "E71.19",
+            "E71.2",
+            "E71.3",
+            "E71.30",
+            "E71.31",
+            "E71.310",
+            "E71.311",
+            "E71.312",
+            "E71.313",
+            "E71.314",
+            "E71.318",
+            "E72",
+            "E72.0",
+            "E72.00",
+            "E72.01",
+            "E72.02",
+            "E72.03",
+            "E72.04",
+            "E72.09",
+            "E72.1",
+            "E72.10",
+            "E72.11",
+            "E72.12",
+            "E72.19",
+            "E72.2",
+            "E72.20",
+            "E72.21",
+            "E72.22",
+            "E72.23",
+            "E72.29",
+            "E72.3",
+            "E72.4",
+            "E72.5",
+            "E72.50",
+            "E72.51",
+            "E72.52",
+            "E72.53",
+            "E72.59",
+            "E72.8",
+            "E72.9",
+            "E84",
+            "E84.0",
+            "E84.1",
+            "E84.11",
+            "E84.19",
+            "E84.8",
+            "E84.9"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "HCPCS",
+            "DMEPOS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00126",
+        "payer_name": "Molina",
+        "policy_title": "ICD-10 First Listed Diagnosis Coding Policy",
+        "tags": [],
+        "effective_date": "11/20/2020",
+        "evidence": "General diagnosis-coding policy only; no DRG-specific adjudication rule identified for this DRG description.",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/ICD-10FirstListedDiagnosisCodingPolicy12162024_R.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_PRK_00010",
+        "payer_name": "Parkland Community Health Plan",
+        "policy_title": "ICD-10 First Billed Diagnosis",
+        "tags": [],
+        "effective_date": "2025-05-15",
+        "evidence": "Manifestation code cannot be first listed; the underlying disease must be sequenced first.",
+        "policy_url": "https://providers.parklandhealthplan.com/Uploads/Public/Documents/Provider/icd-10-first-billed-diagnosis.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "L62",
+            "K52.1",
+            "Z16",
+            "V00-Y99"
+          ],
+          "related_codes": [
+            "M89.4",
+            "M24.271",
+            "T51-T65"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "ICD-10"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "sequela of cerebrovascular disease"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 4,
+    "policies_successful": 4,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 6: MO and TX inpatient pediatric and GI/metabolic admissions are showing combined volume and unit-cost pressure",
+    "pattern_rank": 6,
+    "pattern_title": "MO and TX inpatient pediatric and GI/metabolic admissions are showing combined volume and unit-cost pressure",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC",
+      "Miscellaneous Disorders of Nutrition, Metabolism, and Fluids and Electrolytes without MCC"
+    ],
+    "total_policies_found": 4,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 4 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "4 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 6 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['MO', 'TX'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift from the inpatient pediatric GI/metabolic admission pattern, and item 0 was also disclaimed by its source as not an inpatient DRG rule."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/4 policies quarantined (25%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/4 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_CNC_00888:Infectious Disease: Gastroenterologic Lab Testing (TX.CP.MP.304)]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 31630,
+    "output": 23732,
+    "breakdown": {
+      "search_keywords": {
+        "input": 553,
+        "output": 297,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 436,
+        "output": 887,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 21121,
+        "output": 18060,
+        "calls": 4
+      },
+      "relevance_judge": {
+        "input": 1953,
+        "output": 862,
+        "calls": 4
+      },
+      "dynamic_columns": {
+        "input": 938,
+        "output": 958,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 709,
+        "output": 387,
+        "calls": 4
+      },
+      "policy_recommendations": {
+        "input": 3959,
+        "output": 1836,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1961,
+        "output": 445,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T12:11:39.737680+00:00",
+    "end_time": "2026-08-23T12:13:11.467554+00:00",
+    "duration_ms": 91729,
+    "version": "2.0.0"
+  }
+}

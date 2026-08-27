@@ -1,0 +1,803 @@
+{
+  "job_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_2_job",
+  "conversation_id": "tutorial-OON-Commercial_Individual-202607-R6-202604_2",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 2,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CT inpatient behavioral health growth is concentrated in substance-use diagnoses",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "care_setting",
+          "label": "Care Setting",
+          "type": "badge"
+        },
+        {
+          "id": "bundling_rule",
+          "label": "Bundling Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "bundling_rule": "-"
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Inpatient Only",
+          "bundling_rule": "Unplanned readmissions within 30-day bundled into original admission; only original reimbursed, excluding substance abuse."
+        },
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Outpatient Only",
+          "bundling_rule": "No direct bundling rule; unrelated drug testing limits of 24 tests annually apply."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "Setting Limits",
+          "bundling_rule": "OTP uses weekly bundled MAT codes, with methadone services separate and limited add-ons allowed."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "care_setting": "-",
+          "bundling_rule": "Validity testing bundled; one presumptive and one definitive test daily, with definitive CPTs nonreimbursable."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00213",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Guidelines for Psychotherapy Services ",
+        "tags": [],
+        "effective_date": "07/23/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Retired%20Reimbursement%20Policies/Documentation%20Guidelines%20for%20Psychotherapy%20Services%20.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00044",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Standards for Episodes of Care C-20003",
+        "tags": [],
+        "effective_date": "2025-07-23",
+        "evidence": "General documentation policy only; no DRG-specific reimbursement or behavioral-health-specific adjudication rule identified for this pattern.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Documentation%20Standards%20for%20Episodes%20of%20Care%20C-20003.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00085",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Inpatient Readmissions C-17002",
+        "tags": [],
+        "effective_date": "2025-03-25",
+        "evidence": "The policy generally allows reimbursement only for the original inpatient admission when there is an unplanned readmission within 30 days for the same or related diagnosis. Admissions for the medical treatment of substance abuse are excluded from this readmission policy.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Inpatient%20Readmissions%20C-17002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "within 30 days of discharge",
+            "same or related diagnosis"
+          ],
+          "utilization_limits": [
+            "30-day readmission window"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Inpatient readmissions",
+            "DRG",
+            "Case rate"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Admissions for the medical treatment of substance abuse",
+            "Admissions for rehabilitation",
+            "Cancer",
+            "Transplants",
+            "Transfers from one facility to another",
+            "Discharge against medical advice",
+            "Planned readmissions",
+            "Leave of absence"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00019",
+        "payer_name": "Emblem Health",
+        "policy_title": "Drug Alcohol Testing (Commercial/Medicaid)",
+        "tags": [],
+        "effective_date": "7/01/2020",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/drug-alcohol-testing-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00091",
+        "payer_name": "Emblem Health",
+        "policy_title": "Gamma-Glutamyl Transferase (LBM)",
+        "tags": [],
+        "effective_date": "2023-03-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/transferase-reimbursement-policy-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_EMB_00106",
+        "payer_name": "Emblem Health",
+        "policy_title": "Prescription Medication and Illicit Drug Testing in Outpatient Setting (LBM)",
+        "tags": [],
+        "effective_date": "2023-03-01",
+        "evidence": "No direct DRG-based reimbursement rule is stated for this inpatient behavioral health DRG. The policy is limited to outpatient clinical toxicology and drug testing; substance use disorder appears only as a clinical indication for covered testing.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/prescription-medication-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "outpatient drug testing claim"
+          ],
+          "utilization_limits": [
+            "24 times per year"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Outpatient lab benefit"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595700204",
+        "payer_name": "Point32Health",
+        "policy_title": "Laboratory: Gamma-glutamyl Transferase Testing in Adults",
+        "tags": [],
+        "effective_date": "2025-11-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/laboratory-gamma-glutamyl-transferase-testing-adults-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595710203",
+        "payer_name": "Point32Health",
+        "policy_title": "Opioid Use Disorder (OUD) Services and Medication Assisted Treatment (MAT)",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "No direct DRG or MS-DRG adjudication rule is stated for this inpatient substance-use description. The policy is clinically related because it covers medically necessary opioid use disorder treatment and medication assisted treatment, including inpatient, outpatient, ED, observation, OTP, and office-based services, but Tufts Health Plan adjudicates these claims with specific OUD/MAT CPT/HCPCS codes rather than a DRG rule.",
+        "policy_url": "https://wwwassets.point32health.org/documents/ort-mat-thpp-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "H0001",
+            "H0020",
+            "H0033",
+            "H0047",
+            "T1015",
+            "96372",
+            "99199",
+            "99202-99205",
+            "99211-99215",
+            "99221-99223",
+            "99238-99239",
+            "99281-99285",
+            "J0571",
+            "J0572",
+            "J0573",
+            "J0574",
+            "J0575",
+            "S0109",
+            "J1230",
+            "J2315",
+            "J3490",
+            "G2067-G2080",
+            "G2082-G2083",
+            "G2086-G2088"
+          ],
+          "required_modifiers": [
+            "U1",
+            "U2",
+            "U3"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "POS 58 on One Care OTP claims",
+            "same week add-on to primary MAT",
+            "provider drug claim includes NDC",
+            "paper claim for unlisted CPT",
+            "H0033 not with U2",
+            "H0047 not with H0033"
+          ],
+          "utilization_limits": [
+            "H0001 U1 max 1/year",
+            "H0033 once during induction",
+            "J0571 max 32 mg/day",
+            "J0572 max 1 unit/day",
+            "J0573 max 1 unit/day",
+            "J0574 max 4 units/day",
+            "J0575 max 2 units/day",
+            "J2315 max 380 mg/month",
+            "G2086 at least 70 min first month",
+            "G2087 at least 60 min subsequent month",
+            "G2088 each addl 30 min"
+          ],
+          "prior_auth_thresholds": [
+            "J0571 prior authorization required"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [
+            "MA: one opioid agonist no PA",
+            "MA: one partial agonist no PA",
+            "MA: Together OTPs follow MassHealth drug lists",
+            "MA: J0574/J0575 Direct only"
+          ],
+          "provider_role_restrictions": [
+            "licensed and qualified providers only",
+            "methadone maintenance program providers",
+            "OTP enrolled in Medicare",
+            "SAMHSA certification required",
+            "SAMHSA-approved accreditation required",
+            "42 CFR 489 agreement required"
+          ],
+          "exemptions": [
+            "one opioid agonist without PA",
+            "one partial agonist without PA"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595730201",
+        "payer_name": "Point32Health",
+        "policy_title": "Urine Drug Testing",
+        "tags": [],
+        "effective_date": "2025-12",
+        "evidence": "Definitive drug testing codes in this range are nonreimbursable. Use the HCPCS definitive testing codes instead when medically necessary and supported by the policy criteria. Testing tied to per-diem inpatient, skilled nursing, or behavioral health facility programs is excluded.",
+        "policy_url": "https://wwwassets.point32health.org/documents/urine-drug-testing-pp",
+        "edit_rule_facts": {
+          "target_codes": [
+            "80320-80377",
+            "83992",
+            "G0480-G0483",
+            "G0659"
+          ],
+          "related_codes": [
+            "83992",
+            "G0480-G0483",
+            "G0659",
+            "80320-80377"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "after presumptive screening",
+            "same DOS limits",
+            "after presumptive positive"
+          ],
+          "utilization_limits": [
+            "1 unit per DOS",
+            "20 DOS/year"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Urine Drug Testing"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "no commercially available presumptive test",
+            "unexpected negative presumptive result"
+          ],
+          "action_types": [
+            "deny",
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595760203",
+        "payer_name": "Point32Health",
+        "policy_title": "Outpatient Behavioral Health & Substance Use Disorder",
+        "tags": [],
+        "effective_date": "07/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/bh-sud-outpt-sp-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00040",
+        "payer_name": "United Health",
+        "policy_title": "Drug Testing Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial Plans and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-04-26",
+        "evidence": "Presumptive drug testing is limited to one service per day per patient and includes specimen validity testing. H0003 is treated as a presumptive drug testing code.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Drug-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "80305",
+            "80306",
+            "80307",
+            "H0003",
+            "80320-80377",
+            "G0480",
+            "G0481",
+            "G0482",
+            "G0483",
+            "G0659",
+            "0007U",
+            "0011U",
+            "0082U",
+            "0328U",
+            "0517U",
+            "0518U",
+            "0519U",
+            "0520U",
+            "0587U",
+            "81000",
+            "81001",
+            "81002",
+            "81003",
+            "81005",
+            "82542",
+            "82570",
+            "83516",
+            "83518",
+            "83519",
+            "83520",
+            "83789",
+            "83986",
+            "84156",
+            "84311"
+          ],
+          "related_codes": [
+            "81000",
+            "81001",
+            "81002",
+            "81003",
+            "81005",
+            "82542",
+            "82570",
+            "83516",
+            "83518",
+            "83519",
+            "83520",
+            "83789",
+            "83986",
+            "84156",
+            "84311",
+            "G0480",
+            "G0481",
+            "G0482",
+            "G0483",
+            "G0659",
+            "0007U",
+            "0011U",
+            "0082U",
+            "0328U",
+            "0517U",
+            "0518U",
+            "0519U",
+            "0520U",
+            "0587U",
+            "80320-80377",
+            "80305",
+            "80306",
+            "80307",
+            "H0003"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same date of service"
+          ],
+          "utilization_limits": [
+            "1 presumptive test per day",
+            "1 definitive test per day",
+            "not separately reimbursable on same DOS"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "laboratory service distinctly separate and not related to drug testing"
+          ],
+          "action_types": [
+            "limit",
+            "deny",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_CT_29094510702",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Documentation Standards for Episodes of Care \u2013 Professional and Facility",
+        "tags": [],
+        "effective_date": "2025-07-23",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/C-20003_ABS.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00042",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Documentation Standards for Episodes of Care",
+        "tags": [],
+        "effective_date": "12/30/2024",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Documentation%20Standards%20for%20Episodes%20of%20Care.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00118",
+        "payer_name": "United Health",
+        "policy_title": "Drug Testing Policy",
+        "tags": [],
+        "effective_date": "2025-05-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Drug-Testing-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 15,
+    "policies_successful": 15,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Immediately audit inpatient substance-use readmissions that occur within 30 days of discharge for a same or related diagnosis, because the current Inpatient readmissions DRG/Case rate policy uses a 30-day readmission window but exempts Admissions for the medical treatment of substance abuse. Exempt: Admissions for the medical treatment of substance abuse.",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"within 30 days of discharge\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"same or related diagnosis\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"30-day readmission window\" [utilization_limits]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"Inpatient readmissions\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"Case rate\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002: \"Admissions for the medical treatment of substance abuse\" [exemptions]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Inpatient Readmissions C-17002 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Inpatient%20Readmissions%20C-17002.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 2: CT inpatient behavioral health growth is concentrated in substance-use diagnoses",
+    "pattern_rank": 2,
+    "pattern_title": "CT inpatient behavioral health growth is concentrated in substance-use diagnoses",
+    "cpt_codes_requested": [
+      "F1020",
+      "F10239",
+      "F1120",
+      "F1520"
+    ],
+    "drg_codes_requested": [
+      "Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC"
+    ],
+    "total_policies_found": 15,
+    "successful_extractions": 15,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 15 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "15 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 2 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CT'] - attested by all 3 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "Dropped items 1 and 2 because they are outpatient/professional urine drug-testing controls rather than inpatient behavioral-health reimbursement, and item 1's cited source explicitly excludes inpatient behavioral health facility testing."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "1/15 policies quarantined (7%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/15 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "1 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_GBD_ELV_EXTERNAL_CT_29094240700:Inpatient Readmissions - Facility]. See per-policy `contamination` field on reimbursement_policies for flags + reasons.",
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 141238,
+    "output": 89966,
+    "breakdown": {
+      "search_keywords": {
+        "input": 529,
+        "output": 443,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 453,
+        "output": 2731,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 743,
+        "output": 2361,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 122715,
+        "output": 75458,
+        "calls": 16
+      },
+      "relevance_judge": {
+        "input": 3368,
+        "output": 1799,
+        "calls": 7
+      },
+      "dynamic_columns": {
+        "input": 900,
+        "output": 890,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1241,
+        "output": 973,
+        "calls": 8
+      },
+      "elevance_summary": {
+        "input": 427,
+        "output": 336,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 7978,
+        "output": 4296,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2884,
+        "output": 679,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T05:14:56.400173+00:00",
+    "end_time": "2026-08-23T05:19:37.934084+00:00",
+    "duration_ms": 281533,
+    "version": "2.0.0"
+  }
+}

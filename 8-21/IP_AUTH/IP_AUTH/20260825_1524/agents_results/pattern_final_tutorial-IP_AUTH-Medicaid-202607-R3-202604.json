@@ -1,0 +1,1638 @@
+[
+  {
+    "rank": 1,
+    "pattern_title": "Authorization status coding shifts are the largest gating issue",
+    "pattern_description": "A large share of the increase is tied to authorization status movement rather than a confirmed change in underlying care. The issue recurs across IN, CO, MD, CA, and VA, with the largest impact in IN and additional concentration at RILEY'S CHILDREN'S HEALTH. This should be treated as a gating data and workflow issue before UM, reimbursement, or network actions are taken.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Authorization status coding shifts are the largest gating issue",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "authorization_rule",
+              "label": "Auth Rule",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "DRG Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "authorization_rule": "No prior authorization or notification requirements are stated in this reimbursement policy.",
+              "policy_relevance": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_UHC_00159",
+            "payer_name": "United Health",
+            "policy_title": "Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-06-01 and 2026-09-01",
+            "evidence": "No DRG-specific or authorization-status rule is stated. For the alcoholic hepatitis/cirrhosis clinical area, hepatic fibrosis multianalyte assays 81517 and 81596 are reimbursable only when billed no more than once every six months; listed alternative assays are not separately reimbursable.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hepatic-Fibrosis-Testing-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "81517",
+                "81596"
+              ],
+              "related_codes": [
+                "0002M",
+                "0003M",
+                "0166U",
+                "0344U",
+                "0468U"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "1 unit every 180 days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_ALL_28593510000",
+            "payer_name": "United Health",
+            "policy_title": "MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy",
+            "tags": [],
+            "effective_date": "2026-09-01",
+            "evidence": "This policy is clinically relevant only to liver disease testing within the request. Code 81517 is separately reimbursable when used to distinguish hepatic cirrhosis from non-cirrhosis for listed liver conditions, limited to once every 180 days per member regardless of billing or rendering provider. No authorization rule is stated.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hepatic-Fibrosis-Testing-Chronic-Liver-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "81517",
+                "81596",
+                "0002M",
+                "0003M",
+                "0166U",
+                "0344U",
+                "0468U"
+              ],
+              "related_codes": [
+                "81596",
+                "81517",
+                "0003M",
+                "0166U",
+                "0344U",
+                "0468U",
+                "0002M"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "per member regardless of provider"
+              ],
+              "utilization_limits": [
+                "1 unit every 180 days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions",
+                "bundle"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "Authorization status movement accounts for about +$6.3M across IN, CO, MD, CA, and VA before any policy action. IN contributes +$2.0M, including about +$1.3M tied to Major Small and Large Bowel Procedures with CC and +$0.8M at RILEY'S CHILDREN'S HEALTH. CO adds +$1.3M and MD +$1.2M, while CA and VA each contribute about +$1.0M."
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "pattern_title": "Recurring Medicaid acute hospital pressure is showing up in multiple states",
+    "pattern_description": "Acute hospital spend is rising across several Medicaid products because admissions are up and, in the largest markets, paid per admit is also higher. CA is the largest driver, but similar patterns repeat in MO, TN, OH, NC, IN, and MD, which makes this a recurring hospital economics and utilization issue rather than a one-off spike. The pattern is concentrated in bowel, liver, and behavioral health-related inpatient DRGs.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Recurring Medicaid acute hospital pressure is showing up in multiple states",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589950000",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Esketamine (SPRAVATO)",
+            "tags": [],
+            "effective_date": "08/01/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/esketamine.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589990004",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Anesthesia Processing",
+            "tags": [],
+            "effective_date": "07/01/2019",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/Anesthesia-Processing.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_AHC_00251",
+            "payer_name": "AmeriHealth Caritas",
+            "policy_title": "Behavioral Health Readmissions",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Behavioral%20Health%20Readmissions%20(7700).pdf.coredownload.inline.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_AHC_00330",
+            "payer_name": "AmeriHealth Caritas",
+            "policy_title": "Transcranial Magnetic Stimulation",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Transcranial%20Magnetic%20Stimulation%20.pdf.coredownload.inline.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_BHP_00045",
+            "payer_name": "Buckeye Health Plan (WellCare)",
+            "policy_title": "Moderate Conscious Sedation (PDF)",
+            "tags": [],
+            "effective_date": "06/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CC.PP.015.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00532",
+            "payer_name": "Centene",
+            "policy_title": "Moderate Conscious Sedation",
+            "tags": [],
+            "effective_date": "06/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.homestatehealth.com/content/dam/centene/policies/payment-policies/CC.PP.015.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CRSC_00025",
+            "payer_name": "CareSource",
+            "policy_title": "Dental Services Rendered in a Hospital or Ambulatory Surgery Center",
+            "tags": [],
+            "effective_date": "06/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.caresource.com/documents/medicaid-oh-policy-reimburse-py-1244-20260601.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CRSC_00049",
+            "payer_name": "CareSource",
+            "policy_title": "General Anesthesia and Monitored Anesthesia Care for Oral and Maxillofacial Surgery and Dental Services",
+            "tags": [],
+            "effective_date": "11/01/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.caresource.com/documents/medicaid-oh-policy-reimburse-py-1593-20251101.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA TANF Standard acute hospital spend rose +$1.9M, led by +37 admissions in Major Small and Large Bowel Procedures with CC and paid per admit up about $30K. MO added +$0.8M and TN +$0.6M in similar acute hospital patterns; OH and NC add another +$0.6M largely from admission growth. IN, MD, and TN show the same pressure in Family Care or ABD Non Dual acute hospital segments, indicating the pattern is recurring rather than isolated."
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "pattern_title": "Inpatient behavioral health case mix is rising across NC, VA, GA, and UNATTRIBUTED",
+    "pattern_description": "Inpatient behavioral health spend is increasing through a concentrated set of depression, psychosis, PTSD, and stress-related diagnoses rather than a broad-based trend. NC and VA are the largest identified markets, GA is concentrated at RIDGEVIEW INSTITUTE MONROE, and a material share remains UNATTRIBUTED, limiting clear local ownership. This is a focused inpatient BH utilization and intensity issue that needs clinical and UM action together.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Inpatient behavioral health case mix is rising across NC, VA, GA, and UNATTRIBUTED",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "pattern_mention_status",
+              "label": "Pattern Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "inpatient_facility_rule",
+              "label": "Facility Billing Rule",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "AmeriHealth Caritas",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "Applies to outpatient facility billing only; no DRG bundling rule specified."
+            },
+            {
+              "payer_org": "BCBS_IL",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            },
+            {
+              "payer_org": "BCBS_KC",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            },
+            {
+              "payer_org": "BCBS_TX (Health Care Service Corporation)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "Included in Fee",
+              "inpatient_facility_rule": "In facility settings, testing is bundled into facility fees and not separately reimbursed."
+            },
+            {
+              "payer_org": "Buckeye Health Plan (WellCare)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            },
+            {
+              "payer_org": "Cigna",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            },
+            {
+              "payer_org": "Elevance Health (external)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            },
+            {
+              "payer_org": "Elevance Health (internal)",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "Bundles",
+              "inpatient_facility_rule": "Not site-specific; bundled into office/outpatient E/M services before or after direct care."
+            },
+            {
+              "payer_org": "Healthfirst",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "pattern_mention_status": "-",
+              "inpatient_facility_rule": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589920004",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Psychological and Neuropsychological Testing and Evaluation Services",
+            "tags": [],
+            "effective_date": "11/1/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/physhological-neuropsychological-testing-evaluation-services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_ALL_BCBS_KC_MO_28589950000",
+            "payer_name": "BCBS_KC",
+            "policy_title": "Esketamine (SPRAVATO)",
+            "tags": [],
+            "effective_date": "08/01/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/esketamine.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_IL_IL_28593770310",
+            "payer_name": "BCBS_IL",
+            "policy_title": "Psychological and Neuropsychological Testing",
+            "tags": [],
+            "effective_date": "2026-03-02",
+            "evidence": "Off-topic for the requested inpatient behavioral health DRG pattern. The policy governs psychological and neuropsychological testing services, not inpatient DRG reimbursement, so no direct payment rule applies to the requested codes.",
+            "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/2026/cpcp008-3-2-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_IL_IL_28593780304",
+            "payer_name": "BCBS_IL",
+            "policy_title": "Prescription Medication and Illicit Drug Testing",
+            "tags": [],
+            "effective_date": "2026-09-04",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.bcbsil.com/docs/provider/il/standards/cpcp/cpcplab/2026/rplab070-9-4-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082190006",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Psychological and Neuropsychological Testing",
+            "tags": [],
+            "effective_date": "2026-03-02",
+            "evidence": "No DRG-specific adjudication rule found. The policy is limited to billing and coding guidance for psychological and neuropsychological testing CPT services, not inpatient behavioral health DRG payment or case mix rules.",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/2026/cpcp008-3-2-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "licensed provider oversight required",
+                "QHP billing only for 96130-96133"
+              ],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_BCBS_TX_TX_29082210005",
+            "payer_name": "BCBS_TX (Health Care Service Corporation)",
+            "policy_title": "Prescription Medication and Illicit Drug Testing in the Outpatient Setting",
+            "tags": [],
+            "effective_date": "2026-04-24",
+            "evidence": "This policy is not DRG-specific, but it does apply to inpatient and outpatient facility claims. Drug testing is reimbursable only when medical-necessity criteria are met; in facility settings it is not separately billable and is included in the facility fee. Definitive testing is limited to seven drug classes, proprietary tests are noncovered, and unsupported or routine testing is denied.",
+            "policy_url": "https://www.bcbstx.com/docs/provider/tx/standards/clinical-pay-coding/lab-mgmt/2026/cpcplab070-4-24-2026.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "80305",
+                "80306",
+                "80307",
+                "80320-80377",
+                "0007U",
+                "0011U",
+                "0051U",
+                "0054U",
+                "0079U",
+                "0082U",
+                "0093U",
+                "0227U",
+                "0328U",
+                "0517U",
+                "0518U",
+                "0519U",
+                "0520U",
+                "0587U",
+                "0603U",
+                "G0480",
+                "G0481",
+                "G0482",
+                "G0483",
+                "G0659"
+              ],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same date of service",
+                "same specimen",
+                "facility setting",
+                "same claim line"
+              ],
+              "utilization_limits": [
+                "up to 7 drug classes",
+                "no more than 1 presumptive test per DOS",
+                "max 3 definitive tests per month",
+                "max 3 definitive tests per 3 months"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "facility fee"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [
+                "state, federally regulated, and legally mandated drug testing",
+                "non-forensic commercial driver testing",
+                "urgent or emergency situation",
+                "blood specimens for anuric Chronic Renal Failure"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_CIG_00008",
+            "payer_name": "Cigna",
+            "policy_title": "Care Integration Services",
+            "tags": [],
+            "effective_date": "11/14/2019",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R32_Care_Integration_Services.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_00038",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Prolonged Services",
+            "tags": [],
+            "effective_date": "01/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-08011_CA.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_EXTERNAL_CA_28833533400",
+            "payer_name": "Elevance Health (external)",
+            "policy_title": "Moderate (Conscious) Sedation",
+            "tags": [],
+            "effective_date": "07/01/2026",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.anthem.com/content/dam/digital/docs/anthembluecross/provider/commercial/policy/reimb/C-08008_CA1.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_COM_ELV_INTERNAL_00182",
+            "payer_name": "Elevance Health (internal)",
+            "policy_title": "Prolonged Services C-08011",
+            "tags": [],
+            "effective_date": "2025-06-03",
+            "evidence": "Prolonged E/M before or after direct patient care is part of the primary E/M service and is not separately reimbursable.",
+            "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Prolonged%20Services%20C-08011.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "99358",
+                "99359",
+                "99415",
+                "99416",
+                "99417",
+                "99418"
+              ],
+              "related_codes": [
+                "99205",
+                "99215"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "before or after direct patient care",
+                "during an E/M service",
+                "direct patient contact",
+                "primary service selected using total time",
+                "after required time exceeded",
+                "same inpatient or observation claim"
+              ],
+              "utilization_limits": [
+                "first hour",
+                "each additional 30 minutes",
+                "each additional 15 minutes"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Professional",
+                "Evaluation and Management"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "Clinical staff with physician supervision"
+              ],
+              "exemptions": [],
+              "action_types": [
+                "bundle",
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_AHC_00330",
+            "payer_name": "AmeriHealth Caritas",
+            "policy_title": "Transcranial Magnetic Stimulation",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "Off-topic for the requested inpatient behavioral health DRG pattern. This policy addresses outpatient TMS for severe major depressive disorder, not inpatient psychiatric DRG reimbursement.",
+            "policy_url": "https://www.amerihealthcaritasoh.com/content/dam/amerihealth-caritas/acoh/pdf/provider/resources/reimbursement/policies-20260112/Transcranial%20Magnetic%20Stimulation%20.pdf.coredownload.inline.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_BHP_00005",
+            "payer_name": "Buckeye Health Plan (WellCare)",
+            "policy_title": "Attention Deficit Hyperactivity Disorder Assessment and Treatment (PDF)",
+            "tags": [],
+            "effective_date": "03/24",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.buckeyehealthplan.com/content/dam/centene/policies/payment-policies/CP.BH.124_03.24.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_00007",
+            "payer_name": "Centene",
+            "policy_title": "Attention Deficit Hyperactivity Disorder Assessment and Treatment",
+            "tags": [],
+            "effective_date": "02/23",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.arkansastotalcare.com/content/dam/centene/artotalcare/policies/payment-policies/CP.BH.124.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00077",
+            "payer_name": "Healthfirst",
+            "policy_title": "Prescription Medication and Illicit Drug Testing in the Outpatient Setting",
+            "tags": [],
+            "effective_date": "07/01/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-066-Prescription-Medication.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "NC IP BH rose +$1.2M, led by Neuroses Except Depressive with +30 admissions for adjustment disorder and +11 admissions for PTSD. UNATTRIBUTED IP BH adds about +$1.4M, centered on Psychoses and Depressive Neuroses, which limits clear market ownership until attribution is resolved. VA contributes +$0.8M, mostly major depressive disorder and depression unspecified. GA adds about +$0.7M, concentrated at RIDGEVIEW INSTITUTE MONROE across Psychoses and Depressive Neuroses diagnoses."
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "pattern_title": "Acute psych admissions are a recurring Medicaid cost driver",
+    "pattern_description": "Acute psych spend is rising across multiple Medicaid products and states, with both more admissions and higher paid per admit in the largest markets. CO and NC are the biggest drivers, while GA is heavily concentrated at RIDGEVIEW INSTITUTE MONROE. CO also has a sizable Not Mapped facility bucket, so part of the increase may reflect classification issues alongside real utilization and reimbursement pressure.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Acute psych admissions are a recurring Medicaid cost driver",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "badge"
+            },
+            {
+              "id": "applicability_note",
+              "label": "Applicability Note",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "AmeriHealth Caritas",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "applicability_note": "-"
+            },
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "policy_relevance": "-",
+              "applicability_note": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_AHC_00238",
+            "payer_name": "AmeriHealth Caritas",
+            "policy_title": "Transcranial Magnetic Stimulation",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.amerihealthcaritasnc.com/content/dam/amerihealth-caritas/acnc/pdf/provider/resources/reimbursement-policies/policies-202601/Transcranial%20Magnetic%20Stimulation%20.pdf.coredownload.inline.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_CNC_01068",
+            "payer_name": "Centene",
+            "policy_title": "Attention Deficit Hyperactivity Disorder Assessment and Treatment",
+            "tags": [],
+            "effective_date": null,
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.pshpgeorgia.com/content/dam/centene/peachstate/policies/payment-policies/CP.BH.124.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CO Family Care acute psych adds +$0.8M from +33 admissions, and another +$0.5M sits in Not Mapped facility records with paid per admit up about $19K. NC TANF Foster Care acute psych rises +$0.8M with +28 admissions and paid per admit up about $29K. GA acute psych adds about +$0.9M across TANF Standard and TANF Foster Care, heavily concentrated at RIDGEVIEW INSTITUTE MONROE. NY and AR contribute another +$0.7M across ABD Non Dual, TANF Standard, and LTSS Non Dual acute psych stays."
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "pattern_title": "Children's hospital spend is concentrated at two providers in IN and NY",
+    "pattern_description": "Children's hospital spend is concentrated at two named providers and is being driven mainly by higher admission volume, not broad unit-cost inflation. IN is led by RILEY'S CHILDREN'S HEALTH, and NY is led by JOHN R. OISHEI CHILDRENS HOSPITAL. This creates a focused provider concentration issue where network, referral, and pediatric site-of-care levers are more relevant than across-the-board pricing changes.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "Children's hospital spend is concentrated at two providers in IN and NY",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "global_ob_bundling",
+              "label": "Global OB Bundle",
+              "type": "text"
+            },
+            {
+              "id": "separate_billing_exceptions",
+              "label": "Separate Billing Exceptions",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Centene",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_bundling": "Global OB bundle includes antepartum, delivery, postpartum; routine pregnancy-related E/M not separately reimbursed.",
+              "separate_billing_exceptions": "Separate billing allowed for severe laceration repair and unrelated/complication services with supporting documentation."
+            },
+            {
+              "payer_org": "Healthfirst",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_bundling": "Not a global OB bundle; delivery/partial postpartum only, one delivery modifier, deleted after 1/1/2027.",
+              "separate_billing_exceptions": "Same-day immediate postpartum care is included in delivery and not separately billable; use U7/U8/U9."
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "global_ob_bundling": "-",
+              "separate_billing_exceptions": "-"
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_CNC_00277",
+            "payer_name": "Centene",
+            "policy_title": "Global Maternity Billing",
+            "tags": [],
+            "effective_date": "01/01/2013",
+            "evidence": "Off-topic for this policy. The policy is limited to global maternity/obstetrical package reimbursement and does not provide adjudication rules for cardiac valve or major cardiothoracic inpatient DRG services.",
+            "policy_url": "https://www.mhsindiana.com/content/dam/centene/policies/payment-policies/CC.PP.016.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59400",
+                "59409"
+              ],
+              "related_codes": [
+                "59510",
+                "59514",
+                "96365-96367",
+                "12041-12047",
+                "13131-13133"
+              ],
+              "required_modifiers": [
+                "22",
+                "51"
+              ],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "services billed separately from global service",
+                "same physician or group practice",
+                "calendar day prior to delivery",
+                "calendar day of delivery",
+                "vaginal delivery of twins",
+                "one vaginal and one cesarean",
+                "both delivered via cesarean"
+              ],
+              "utilization_limits": [
+                "approximately 13 antepartum visits",
+                "6 weeks following delivery",
+                "after 20 weeks 0 days",
+                "prior to 20 weeks 0 days",
+                "60 days history reviewed"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [
+                "same physician provides total care",
+                "same group practice provides total care"
+              ],
+              "exemptions": [
+                "state, contractual or health plan exception",
+                "diagnosis unrelated to maternity services",
+                "pregnancy complications needing higher complexity",
+                "tubal ligation procedure",
+                "IUD procedure",
+                "problem-oriented visit pregnancy confirmation",
+                "preventative visit pregnancy confirmation",
+                "patient transfers into or out",
+                "delivery by another physician",
+                "patient changes insurers during pregnancy"
+              ],
+              "action_types": [
+                "bundle"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HF_00045",
+            "payer_name": "Healthfirst",
+            "policy_title": "Obstetric Billing Guidelines",
+            "tags": [],
+            "effective_date": "10/01/2025",
+            "evidence": "Healthfirst treats vaginal delivery-only obstetric billing as a limited delivery code that requires a U7, U8, or U9 modifier and is deleted for dates of service on or after January 1, 2027.",
+            "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-132-Obstetric-Billing-Guidelines.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "59409",
+                "59410"
+              ],
+              "related_codes": [
+                "59400",
+                "59410",
+                "59430",
+                "59431",
+                "59432",
+                "59409"
+              ],
+              "required_modifiers": [
+                "U7",
+                "U8",
+                "U9"
+              ],
+              "excluded_modifiers": [
+                "P"
+              ],
+              "revenue_codes": [],
+              "pairing_conditions": [
+                "same claim line",
+                "delivery service date"
+              ],
+              "utilization_limits": [
+                "deleted on/after 2027-01-01"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "limit"
+              ]
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00446",
+            "payer_name": "United Health",
+            "policy_title": "Cesarean Delivery Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Cesarean-Delivery-Policy-Professional-(R7122).pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_00490",
+            "payer_name": "United Health",
+            "policy_title": "Obstetrical Services Policy, Professional",
+            "tags": [],
+            "effective_date": "2026-02-01",
+            "evidence": "Off-topic policy. This obstetrical services reimbursement policy does not address cardiac DRG reimbursement or pediatric hospital spend patterns.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Obstetrical-Services-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "RILEY'S CHILDREN'S HEALTH in IN drives about +$1.0M across TANF Standard and Family Care children's admissions, including +86 admissions in the largest volume-led segment. JOHN R. OISHEI CHILDRENS HOSPITAL in NY adds about +$0.7M across TANF Standard and CHIP Standard, with +89 admissions in the main TANF Standard segment. In both states, spend growth is primarily volume-led while paid per admit is flat to down in the largest segments."
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "pattern_title": "CA has a small number of very high-cost Med/Surg outlier cases",
+    "pattern_description": "CA has a rare-case Med/Surg outlier pattern where a very small number of admissions account for a large share of spend. The biggest driver is anoxic brain damage, with extremely high cost per admit, alongside smaller clusters in alcoholic hepatitis and isolated high-cost bowel surgery cases. This is not a broad utilization trend; it is a case-level severity and payment exposure issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA has a small number of very high-cost Med/Surg outlier cases",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "drg_mention_status",
+              "label": "DRG Mentioned",
+              "type": "badge"
+            },
+            {
+              "id": "relevance_note",
+              "label": "Relevance Note",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "drg_mention_status": "-",
+              "relevance_note": "United Health\u2019s policy covers hepatic fibrosis serum test reimbursement limits, not DRG or outlier payments."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_UHC_00159",
+            "payer_name": "United Health",
+            "policy_title": "Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "2026-06-01",
+            "evidence": "Off-topic for the requested DRG pattern. This policy addresses reimbursement and frequency limits for hepatic fibrosis serum testing, not DRG reimbursement or inpatient Med/Surg outlier payment rules.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hepatic-Fibrosis-Testing-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_ALL_28593510000",
+            "payer_name": "United Health",
+            "policy_title": "MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy",
+            "tags": [],
+            "effective_date": "2026-09-01",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hepatic-Fibrosis-Testing-Chronic-Liver-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA rare IP Med/Surg cases add about +$1.1M from a very small number of admissions. Two admissions for ANOXIC BRAIN DAMAGE NEC account for about +$0.5M, with paid per admit about $232K. Alcoholic hepatitis with and without ascites add about +$0.3M across 15 admissions, and two single bowel surgery cases add another +$0.3M."
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "pattern_title": "CA neurologic members are shifting into high-cost post-acute settings",
+    "pattern_description": "CA shows a post-acute neurologic cost pattern spanning NF and SNF - FREE STANDING settings. The increase is concentrated in severe neurologic conditions, suggesting higher-cost placement and longer post-acute needs rather than routine SNF utilization. This is a site-of-care management and post-acute contracting issue.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA neurologic members are shifting into high-cost post-acute settings",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date",
+              "type": "date"
+            }
+          ],
+          "rows": []
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_GBD_MOH_00244",
+            "payer_name": "Molina",
+            "policy_title": "Autonomic FunctionTesting",
+            "tags": [],
+            "effective_date": "2023-10-23",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/AutonomicFunctionTesting12162024_R.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_MOH_00964",
+            "payer_name": "Molina",
+            "policy_title": "Radiology Frequency for Simple Syncope Policy",
+            "tags": [],
+            "effective_date": "02/17/2025",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/Radiology-Frequency-for-Simple-Syncope-PolicyR.ashx",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA post-acute neurologic care adds about +$1.1M across NF and SNF - FREE STANDING settings. SNF - FREE STANDING contributes +$0.4M with +22 admissions for Other Disorders of Nervous System with MCC and paid per admit up about $20K. NF adds about +$0.7M, including AV MALFORMATION CEREBRAL VESSELS (+$0.2M), CEREBRAL PALSY UNSPECIFIED (+$0.2M), and ANOXIC BRAIN DAMAGE NEC (+$0.3M)."
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "pattern_title": "CA has a broader Med/Surg case-mix shift beyond the rare outliers",
+    "pattern_description": "Separate from the rare catastrophic cases, CA also has a broader recurring Med/Surg mix shift in liver disease and bowel surgery-related admissions. The main drivers are more admissions, with some diagnoses also showing higher paid per admit. This is a focused clinical pathway issue rather than a general inpatient trend across all Med/Surg care.",
+    "explanation": {
+      "reimbursement": {
+        "summary_table": {
+          "title": "Payer Policy Summary",
+          "subtitle": "CA has a broader Med/Surg case-mix shift beyond the rare outliers",
+          "columns": [
+            {
+              "id": "payer_org",
+              "label": "Payer Organization",
+              "type": "text"
+            },
+            {
+              "id": "mention_status",
+              "label": "Mentioned?",
+              "type": "badge"
+            },
+            {
+              "id": "policy_relevance",
+              "label": "Policy Relevance",
+              "type": "text"
+            },
+            {
+              "id": "appeals_process",
+              "label": "Appeals Process\n(Documented)",
+              "type": "badge"
+            },
+            {
+              "id": "policy_effective_date",
+              "label": "Policy Effective Date\n(Last Updated)",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "payer_org": "Humana",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance": "-"
+            },
+            {
+              "payer_org": "United Health",
+              "appeals_process": "-",
+              "policy_effective_date": "N/A",
+              "mention_status": "-",
+              "policy_relevance": "Covers hepatic fibrosis assays for alcoholic hepatitis every six months; not relevant to DRG reimbursement."
+            }
+          ]
+        },
+        "individual_policies": [
+          {
+            "policy_id": "RP_COM_UHC_00159",
+            "payer_name": "United Health",
+            "policy_title": "Hepatic Fibrosis Testing for Chronic Liver Disease Policy, Professional and Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+            "tags": [],
+            "effective_date": "6/1/2026",
+            "evidence": "Off-topic for the requested DRG pattern. The policy governs serum hepatic fibrosis testing reimbursement and frequency limits, not inpatient DRG reimbursement or case-mix shifts.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hepatic-Fibrosis-Testing-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_HUM_00021",
+            "payer_name": "Humana",
+            "policy_title": "Laboratory - Testing for Alpha1 Anti-trypsin Deficiency",
+            "tags": [],
+            "effective_date": "07/2023",
+            "evidence": "No specific policy rules documented",
+            "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=09000929871b29c0",
+            "edit_rule_facts": {
+              "target_codes": [],
+              "related_codes": [],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": []
+            },
+            "contamination": null
+          },
+          {
+            "policy_id": "RP_GBD_UHC_ALL_28593510000",
+            "payer_name": "United Health",
+            "policy_title": "MEDADV Hepatic Fibrosis Testing Chronic Liver Disease Policy",
+            "tags": [],
+            "effective_date": "2026-09-01",
+            "evidence": "The policy is clinically relevant to alcoholic hepatitis because it allows reimbursement of specific hepatic fibrosis assay codes for that diagnosis, but it does not address the DRG label itself.",
+            "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hepatic-Fibrosis-Testing-Chronic-Liver-Disease-Policy.pdf",
+            "edit_rule_facts": {
+              "target_codes": [
+                "81517",
+                "81596"
+              ],
+              "related_codes": [
+                "0002M",
+                "0003M",
+                "0166U",
+                "0344U",
+                "0468U"
+              ],
+              "required_modifiers": [],
+              "excluded_modifiers": [],
+              "revenue_codes": [],
+              "pairing_conditions": [],
+              "utilization_limits": [
+                "once every 6 months",
+                "1 unit every 180 calendar days"
+              ],
+              "prior_auth_thresholds": [],
+              "discharge_status_conditions": [],
+              "program_scope": [
+                "Medicare Advantage",
+                "CMS 1500",
+                "UB04"
+              ],
+              "state_specific_rules": [],
+              "provider_role_restrictions": [],
+              "exemptions": [],
+              "action_types": [
+                "allow_with_conditions"
+              ]
+            },
+            "contamination": null
+          }
+        ]
+      },
+      "claims": {
+        "summary": "CA broader IP Med/Surg case mix adds about +$0.9M outside the rare outlier cases. ALCOHOLIC CIRRHOSIS LIVER W/ASCITES contributes +$0.3M with +25 admissions. ENCOUNTER FOR ATTENTION ILEOSTOMY adds +$0.3M with +9 admissions and paid per admit up about $4K. UNSPECIFIED CIRRHOSIS OF LIVER and diverticular bowel cases add another +$0.3M, pointing to a recurring liver and bowel surgery mix shift."
+      }
+    }
+  }
+]

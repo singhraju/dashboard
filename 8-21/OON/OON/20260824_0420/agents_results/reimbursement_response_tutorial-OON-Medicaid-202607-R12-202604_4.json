@@ -1,0 +1,236 @@
+{
+  "job_id": "tutorial-OON-Medicaid-202607-R12-202604_4_job",
+  "conversation_id": "tutorial-OON-Medicaid-202607-R12-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Post-acute nursing facility pressure in CA / NY, with NY SNF concentration",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date",
+          "type": "date"
+        }
+      ],
+      "rows": []
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_GBD_CNC_NY_28206820100",
+        "payer_name": "Fidelis Care (Centene)",
+        "policy_title": "Non-Genetic Immunology and Rheumatology Testing",
+        "tags": [],
+        "effective_date": "02/26",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.fideliscare.org/Portals/0/Providers/FC.CG.PP.11-Non-Genetic-Immunology-and-Rheumatology-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00061",
+        "payer_name": "Healthfirst",
+        "policy_title": "General Inflammation Testing",
+        "tags": [],
+        "effective_date": "10/15/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-063-Inflammation-Testing.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00078",
+        "payer_name": "Healthfirst",
+        "policy_title": "Biomarker Testing for Autoimmune Rheumatic Disease",
+        "tags": [],
+        "effective_date": "08/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-Re-060-Autoimmune-Rheumatic-Disease.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 3,
+    "policies_successful": 3,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement prepay medical-necessity review on any CA / NY NF claim that includes T148XXS or M069, because these codes were tied to about +$180K across 11 claims and +$110K across 5 claims in the observed pattern. (CA, NY)\nIA \u2014 Immediately audit the NY SNF - FREE STANDING segment for ABD Non Dual and TANF Standard membership, prioritizing the cluster associated with +$161K across 10 claims and the additional +$18K identified in the same setting. (NY)",
+      "evidence": [
+        "CA",
+        "NY"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": []
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Post-acute nursing facility pressure in CA / NY, with NY SNF concentration",
+    "pattern_rank": 4,
+    "pattern_title": "Post-acute nursing facility pressure in CA / NY, with NY SNF concentration",
+    "cpt_codes_requested": [
+      "M0579"
+    ],
+    "drg_codes_requested": [
+      "Connective Tissue Disorders with MCC",
+      "Traumatic Injury without MCC"
+    ],
+    "total_policies_found": 3,
+    "successful_extractions": 3,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 3 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "3 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY', 'CA'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/3 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/3 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 57593,
+    "output": 8912,
+    "breakdown": {
+      "search_keywords": {
+        "input": 530,
+        "output": 1047,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 2099,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 432,
+        "output": 897,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 54207,
+        "output": 2510,
+        "calls": 3
+      },
+      "policy_recommendations": {
+        "input": 1204,
+        "output": 1974,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 782,
+        "output": 385,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T04:33:51.835633+00:00",
+    "end_time": "2026-08-24T04:34:32.959097+00:00",
+    "duration_ms": 41123,
+    "version": "2.0.0"
+  }
+}

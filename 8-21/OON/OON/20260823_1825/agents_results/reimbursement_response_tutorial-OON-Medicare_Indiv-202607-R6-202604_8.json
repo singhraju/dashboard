@@ -1,0 +1,220 @@
+{
+  "job_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_8_job",
+  "conversation_id": "tutorial-OON-Medicare_Indiv-202607-R6-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "CA outpatient oncology spend rose in a small number of chemotherapy claims",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "mention_status",
+          "label": "Mentioned?",
+          "type": "badge"
+        },
+        {
+          "id": "policy_scope",
+          "label": "Scope Summary",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "mention_status": "-",
+          "policy_scope": "-"
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00096",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Maternity Services C-19004",
+        "tags": [],
+        "effective_date": "09/08/2022",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Maternity%20Services%20C-19004.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 6,
+    "policies_successful": 6,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "IA \u2014 Implement prepay review for California outpatient chemotherapy drug claims in the Not Mapped grouping when billed with diagnosis Z5111 or C180, and escalate facility-level utilization review when a provider shows 21 or more additional chemotherapy claims in the review period.",
+      "evidence": [],
+      "story_alignment": [],
+      "peer_benchmarking": [],
+      "citation": []
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: CA outpatient oncology spend rose in a small number of chemotherapy claims",
+    "pattern_rank": 8,
+    "pattern_title": "CA outpatient oncology spend rose in a small number of chemotherapy claims",
+    "cpt_codes_requested": [
+      "Z5111"
+    ],
+    "drg_codes_requested": [
+      "Not Mapped"
+    ],
+    "total_policies_found": 6,
+    "successful_extractions": 6,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 6 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "6 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['CA'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": false,
+        "message": "5/6 policies quarantined (83%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/6 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "5 policy/ies quarantined for contamination (excluded from peer benchmarks and summary-table summarization): [RP_COM_CIG_00021:Global Maternity/Obstetric Package, RP_COM_CIG_00044:Postoperative Continuous Local Delivery of Analgesia, RP_COM_ELV_EXTERNAL_00063:Maternity Services, RP_COM_UHC_00071:Obstetrical Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange, RP_GBD_ELV_INTERNAL_00126:Maternity Services]. See per-policy `contamination` field on reimbursement_policies for flags + reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 41210,
+    "output": 10811,
+    "breakdown": {
+      "search_keywords": {
+        "input": 520,
+        "output": 190,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 1928,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 372,
+        "output": 560,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 34758,
+        "output": 5625,
+        "calls": 6
+      },
+      "relevance_judge": {
+        "input": 2056,
+        "output": 629,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 758,
+        "output": 392,
+        "calls": 1
+      },
+      "elevance_summary": {
+        "input": 344,
+        "output": 150,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 1287,
+        "output": 1152,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 677,
+        "output": 185,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T19:25:31.379577+00:00",
+    "end_time": "2026-08-23T19:26:10.357455+00:00",
+    "duration_ms": 38977,
+    "version": "2.0.0"
+  }
+}

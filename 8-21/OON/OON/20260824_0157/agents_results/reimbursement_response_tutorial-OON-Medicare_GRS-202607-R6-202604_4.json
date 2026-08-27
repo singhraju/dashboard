@@ -1,0 +1,1094 @@
+{
+  "job_id": "tutorial-OON-Medicare_GRS-202607-R6-202604_4_job",
+  "conversation_id": "tutorial-OON-Medicare_GRS-202607-R6-202604_4",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 4,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare inpatient outliers are adding concentrated high-cost clinical spend",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "policy_match",
+          "label": "Policy Match",
+          "type": "badge"
+        },
+        {
+          "id": "payment_effect",
+          "label": "Payment Effect",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "AmeriHealth Caritas",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "HCAC Reduction",
+          "payment_effect": "Removes non-POA HCAC from DRG, reducing payment and triggering outlier review if applicable."
+        },
+        {
+          "payer_org": "BCBS_KC",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "-",
+          "payment_effect": "No reimbursement for serious adverse events, including never events and CMS hospital-acquired conditions."
+        },
+        {
+          "payer_org": "Elevance Health (external)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "Reduces DRG",
+          "payment_effect": "HCAC charges/days removed from DRG; OPPC procedures and related services denied."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "POA Required",
+          "payment_effect": "HAC and HCAC charges are excluded from DRG payment; never-event services are denied."
+        },
+        {
+          "payer_org": "Fallon Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "-",
+          "payment_effect": "Denies SRE/PPC-related services; reimburses ventricular assist devices only with prior authorization."
+        },
+        {
+          "payer_org": "Paramount Healthcare",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "-",
+          "payment_effect": "Never Events and HACs are non-reimbursable; related charges, days, and CC/MCC excluded."
+        },
+        {
+          "payer_org": "Parkland Community Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "HAC Penalties",
+          "payment_effect": "HAC charges/days excluded from DRG; PPC-related services denied or not reimbursed."
+        },
+        {
+          "payer_org": "Point32Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "-",
+          "payment_effect": "-"
+        },
+        {
+          "payer_org": "Providence Health Plan",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "Clinical Review",
+          "payment_effect": "Unsupported higher-acuity room-and-board days are reduced to lower-acuity or average-rate reimbursement."
+        },
+        {
+          "payer_org": "State FFS",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "Pays Outliers",
+          "payment_effect": "DRG bundles the stay; qualifying high-cost cases receive separate outlier payments."
+        },
+        {
+          "payer_org": "The Health Plan of West Virginia",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "Denies HACs",
+          "payment_effect": "No reimbursement for never events; HAC-related payments follow Medicare and exclude non-POA treatment."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "policy_match": "-",
+          "payment_effect": "No extra payment for HACs not POA; missing POA codes cause claim return."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_28589940010",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Serious Adverse Events, formerly Never Events",
+        "tags": [],
+        "effective_date": "5/15/2021",
+        "evidence": "This DRG label is not specifically addressed. The policy only denies reimbursement for listed serious adverse events, never events, and hospital-acquired conditions.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/serious-adverse-events-hospital-acquired-illness.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_BCBS_KC_MO_29095021801",
+        "payer_name": "BCBS_KC",
+        "policy_title": "Joint Replacement C1776",
+        "tags": [],
+        "effective_date": "7/1/2026",
+        "evidence": "Off-topic for this policy. The policy addresses joint replacement implant coding for HCPCS C1776 and related anchor/screw codes, not inpatient DRG outlier payment rules.",
+        "policy_url": "https://bluekcmemberportal.azureedge.net/pdf/paymentpolicies/joint-replacement-c1776.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00167",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Present on Admission HCAC RETIRED",
+        "tags": [],
+        "effective_date": "04/20/18",
+        "evidence": "For inpatient facility claims, POA indicators are required for primary and secondary diagnoses. If a secondary diagnosis is an HCAC, reimbursement may be reduced or denied.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same claim",
+            "inpatient discharge"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "Medicare",
+            "Medicaid"
+          ],
+          "state_specific_rules": [
+            "Georgia uses Medicare POA methodology",
+            "Nevada uses Medicare POA methodology",
+            "Tennessee uses Medicare POA methodology",
+            "Louisiana requires no-pay claim handling",
+            "Iowa HCAC exemptions apply"
+          ],
+          "provider_role_restrictions": [
+            "Facility claims only",
+            "primary and secondary diagnoses required"
+          ],
+          "exemptions": [
+            "Critical Access Hospitals",
+            "Long-Term Acute Care hospitals",
+            "Inpatient psychiatric hospitals",
+            "Inpatient rehabilitation facilities",
+            "Maryland waiver hospitals",
+            "Cancer hospitals",
+            "Children\u2019s inpatient facilities",
+            "Religious non-medical health care institutions",
+            "Veterans Administration/Department of Defense hospitals"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_ELV_INTERNAL_00185",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions C-23002",
+        "tags": [],
+        "effective_date": "09/01/2023",
+        "evidence": "Applies to inpatient facility DRG reimbursement when a provider preventable condition is present. If a hospital acquired condition is identified by POA reporting, related charges and/or days are removed from DRG calculation; major surgical never events are denied.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient facility claim",
+            "UB-04 claim",
+            "POA indicator"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "UB-04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition existed prior to treatment",
+            "secondary facility treated the HAC"
+          ],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FH_00046",
+        "payer_name": "Fallon Health",
+        "policy_title": "MassHealth provider preventable conditions payment policy",
+        "tags": [],
+        "effective_date": "2020-06-01",
+        "evidence": "This policy is off-topic for DRG outlier reimbursement. It governs provider preventable conditions, not payment rules for this DRG category.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/MHProviderPrevCondPayPol060120.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FH_00075",
+        "payer_name": "Fallon Health",
+        "policy_title": "Serious reportable events payment policy",
+        "tags": [],
+        "effective_date": "03/01/2026",
+        "evidence": "Off-topic for this DRG pattern. The policy addresses nonpayment for SREs, PPCs, and SADEs, not DRG-specific inpatient reimbursement rules.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/SeriousReportableEvents030126.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FH_00087",
+        "payer_name": "Fallon Health",
+        "policy_title": "Ventricular assist devices payment policy",
+        "tags": [],
+        "effective_date": "09/01/2019",
+        "evidence": "Prior authorization is required for ventricular assist device procedures; reimbursement is conditional on prior authorization and the related clinical coverage criteria.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/VentricularAssistDevices0919.ashx",
+        "edit_rule_facts": {
+          "target_codes": [
+            "33975",
+            "33976",
+            "33977",
+            "33978",
+            "33979",
+            "33980",
+            "33981",
+            "33982",
+            "33983",
+            "33990",
+            "33991",
+            "33992",
+            "33993",
+            "33999"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "require_auth"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_P32_CT_MA_ME_NH_28595790206",
+        "payer_name": "Point32Health",
+        "policy_title": "Serious Reportable Events, Serious Reportable Adverse Events and Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "06/01/2026",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://wwwassets.point32health.org/documents/sre-and-ppc-pp",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00016",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Inpatient Acuity Level",
+        "tags": [],
+        "effective_date": "10/1/2025",
+        "evidence": "Not DRG-specific. The policy subjects inpatient facility claims to clinical review and reduces room-and-board reimbursement when the billed acuity level is not supported by documentation. For this inpatient DRG, payment is conditioned on documented acuity throughout the stay.",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp19.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "0200",
+            "0201",
+            "0202",
+            "0203",
+            "0208",
+            "0206",
+            "012X",
+            "013X",
+            "015X",
+            "0732",
+            "174",
+            "173",
+            "172",
+            "171"
+          ],
+          "pairing_conditions": [
+            "throughout the inpatient stay"
+          ],
+          "utilization_limits": [
+            "daily NICU acuity evaluation"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Modified DRG",
+            "Percentage of billed charges/per diem",
+            "UB04"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PHP_00025",
+        "payer_name": "Providence Health Plan",
+        "policy_title": "Preventable Adverse Events",
+        "tags": [],
+        "effective_date": "10/1/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp73.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_PH_00008",
+        "payer_name": "Paramount Healthcare",
+        "policy_title": "RM-018 Serious Adverse Events (Never Events & Hospital Acquired Conditions)",
+        "tags": [],
+        "effective_date": "01/01/2025",
+        "evidence": "Not specifically addressed by this policy. The policy denies reimbursement for serious adverse events, including never events and hospital acquired conditions, on inpatient and outpatient claims, and excludes HAC-related charges and days from MS-DRG payment calculations when applicable.",
+        "policy_url": "https://www.paramounthealthcare.com/-/media/ParamountHealth/Files/Providers/Reimbursement-Policies/rm018-serious-adverse-events.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.51",
+            "Y65.52",
+            "Y65.53"
+          ],
+          "required_modifiers": [
+            "PC",
+            "PB",
+            "PA"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same hospitalization",
+            "matching Statement Covers Period",
+            "same claim line"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MS-DRG",
+            "IPPS",
+            "OPPS",
+            "ASC"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "operating room providers",
+            "surgeon",
+            "assistant",
+            "anesthesia",
+            "perfusionist",
+            "radiology"
+          ],
+          "exemptions": [
+            "CAHs",
+            "LTCHs",
+            "cancer hospitals",
+            "children's inpatient facilities",
+            "religious non-medical health care institutions",
+            "inpatient psychiatric hospitals",
+            "inpatient rehabilitation facilities",
+            "VA/DoD hospitals"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_AHC_00112",
+        "payer_name": "AmeriHealth Caritas",
+        "policy_title": "Health Care-Acquired Conditions",
+        "tags": [],
+        "effective_date": "07/2025",
+        "evidence": "This is a general inpatient DRG payment-reduction rule for selected health care-acquired conditions. When an HCAC is not present on admission, the diagnosis is removed from the DRG calculation and the higher CC/MCC DRG payment is not paid; outlier days or covered charges related to the HCAC may also be denied after review.",
+        "policy_url": "https://www.amerihealthcaritasdc.com/content/dam/amerihealth-caritas/acdc/pdf/provider/resources/reimbursement-policies/20260112/Health%20Care-Acquired%20Conditions%20.pdf.coredownload.inline.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "260",
+            "261",
+            "262"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "diagnosis not present on admission",
+            "after discharge coding"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "HAC-POA"
+          ],
+          "state_specific_rules": [
+            "District of Columbia Medicaid HCAC policy"
+          ],
+          "provider_role_restrictions": [
+            "physician reviewer final determination for HCAC-related days/charges"
+          ],
+          "exemptions": [
+            "Critical Access Hospitals",
+            "Long-term Care Hospitals",
+            "Maryland Waiver Hospitals",
+            "Cancer Hospitals",
+            "Children's Inpatient Facilities",
+            "Religious Non-Medical Health Care Institutions",
+            "Inpatient Psychiatric Hospitals",
+            "Inpatient Rehabilitation Facilities",
+            "Veterans Administration/Department of Defense Hospitals"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_00859",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "For inpatient claims, provider preventable condition rules can reduce DRG reimbursement when a health care-acquired condition is not present on admission, and erroneous surgical events are denied or rejected. The policy is not specific to the listed DRGs, but it applies to inpatient DRG-based reimbursement when these conditions are present.",
+        "policy_url": "https://provider.summitcommunitycare.com/docs/gpp/ARAR_CAID_RP_PreventableConditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "Y65.51",
+            "Y65.52",
+            "Y65.53"
+          ],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient admission",
+            "same claim",
+            "POA indicator on diagnosis",
+            "erroneous surgical event during inpatient stay"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "Inpatient",
+            "PPC"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "professional provider and facility claims"
+          ],
+          "exemptions": [
+            "admitting diagnosis",
+            "Medicare-exempt facilities",
+            "condition existed prior to treatment",
+            "secondary facility when another facility caused HCAC"
+          ],
+          "action_types": [
+            "deny"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_EXTERNAL_VA_29094050100",
+        "payer_name": "Elevance Health (external)",
+        "policy_title": "Provider Preventable Conditions \u2013 Professional and Facility",
+        "tags": [],
+        "effective_date": "12/01/2023",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.anthem.com/content/dam/digital/docs/provider/commercial/policy/reimb/-C-23002.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00062",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "03/22/2023",
+        "evidence": "This policy is not specific to the listed DRG, but it applies to inpatient DRG reimbursement generally. Health Care-Acquired Conditions identified by POA status are removed from DRG payment calculation; missing POA can cause denial or rejection. Non-HCAC CC/MCC may still affect DRG assignment.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "POA-based adjudication"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "MS-DRG"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition existed prior to treatment",
+            "secondary facility caused by another facility",
+            "Medicare-exempt facilities",
+            "DVT/PE pediatric and obstetric Medicaid exceptions"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_PRK_00013",
+        "payer_name": "Parkland Community Health Plan",
+        "policy_title": "Health Acquired Conditions and POA",
+        "tags": [],
+        "effective_date": "2025-05-15",
+        "evidence": "This inpatient DRG is not named in the policy, but DRG reimbursement is reduced when a POA-reported HAC is present, and erroneous wrong-site/wrong-patient/wrong-procedure events are denied as provider preventable conditions.",
+        "policy_url": "https://providers.parklandhealthplan.com/Uploads/Public/Documents/Provider/health-acquired-conditions-and-poa.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [
+            "Y65.53",
+            "Y65.52",
+            "Y65.51"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "inpatient claim",
+            "POA indicator submitted"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG",
+            "inpatient"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "condition existed prior to treatment initiation",
+            "POA-exempt facilities"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_STATE_FFS_FL_28206630003",
+        "payer_name": "State FFS",
+        "policy_title": "Payment Methodology for Inpatient Hospital Services",
+        "tags": [],
+        "effective_date": "2017-07-01",
+        "evidence": "Florida Medicaid uses APR-DRGs for inpatient hospital claims and pays an additional outlier amount when estimated hospital losses exceed the AHCA-set threshold. The rule is claim-level, cost-driven, and applies within the DRG payment methodology.",
+        "policy_url": "https://ahca.myflorida.com/content/download/7025/file/59G-6.020_Inpatient_Services_2018.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same inpatient claim",
+            "estimated hospital loss above threshold"
+          ],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [
+            "discharge status 02 (short-term general hospital)",
+            "discharge status 05 (designated cancer center)",
+            "discharge status 65 (psychiatric hospital)",
+            "discharge status 66 (critical access hospital)",
+            "discharge status 82 (planned readmission)",
+            "discharge status 85 (planned cancer center readmission)",
+            "discharge status 93 (psychiatric distinct unit)",
+            "discharge status 94 (planned CAH readmission)"
+          ],
+          "program_scope": [
+            "DRG",
+            "APR-DRG"
+          ],
+          "state_specific_rules": [
+            "Florida: outlier parameters updated annually",
+            "Florida: APR-DRG version 34 effective July 1, 2017"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "transplant global fee",
+            "resistant tuberculosis",
+            "dual eligible crossover claims",
+            "state-owned psychiatric facilities"
+          ],
+          "action_types": [
+            "pay_separately"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_THPWV_00018",
+        "payer_name": "The Health Plan of West Virginia",
+        "policy_title": "Never Events, Adverse Events, Hospital Acquired Conditions, Serious Reportable Conditions & Provider Preventable Conditions",
+        "tags": [],
+        "effective_date": "2022-08-01",
+        "evidence": "This policy is not specific to the named DRG description. It broadly denies reimbursement for services related to never events, adverse events, hospital acquired conditions, serious reportable events, and provider preventable conditions, and it reduces DRG-based payment when a HAC was not present on admission.",
+        "policy_url": "https://www.healthplan.org/download_file/view/2846/14442",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "DRG"
+          ],
+          "state_specific_rules": [
+            "WV: MHT PPC payments prohibited"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00125",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Acquired Conditions Policy, Facility",
+        "tags": [],
+        "effective_date": "2008-10-01",
+        "evidence": "Off-topic for this pattern. The policy is an inpatient hospital-acquired conditions and present-on-admission rule, not a DRG outlier reimbursement policy, and it does not specifically address this DRG.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-reimbursement/MEDADV-Hospital-Acquired-Conditions-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00226",
+        "payer_name": "United Health",
+        "policy_title": "Provider Preventable Conditions: Health Care Acquired Conditions and Present on Admission Policy, Facility for Louisiana",
+        "tags": [],
+        "effective_date": "2012-07-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/la/LA-Health-Care-Acquired-Conditions-Present-Admission-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00406",
+        "payer_name": "United Health",
+        "policy_title": "Provider Preventable Conditions: Health Care Acquired Conditions and Present on Admission Policy, Facility",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "This policy governs inpatient provider-preventable conditions on UB-04 Medicaid claims, not DRG-specific reimbursement for this DRG. No code-level adjustment rule was identified for this DRG.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Health-Care-Acquired-Conditions-Present-Admission-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 21,
+    "policies_successful": 21,
+    "policies_failed": 0
+  },
+  "recommended_action": [
+    {
+      "rank": 1,
+      "priority": "MEDIUM",
+      "category": "Policy",
+      "description": "Recommendation 1: For CA cesarean-delivery inpatient facility claims, require POA-based adjudication on the same inpatient claim / UB-04 claim whenever Y65.51, Y65.52, or Y65.53 is reported with a POA indicator on the inpatient facility claim. Apply to CA. Exempt: condition existed prior to treatment, secondary facility treated the HAC, Critical Access Hospitals, Medicare-exempt facilities. Peer: Paramount Healthcare and Parkland Community Health Plan also apply inpatient PPC/HAC guardrails to Y65.51, Y65.52, and Y65.53; Paramount ties the event to modifiers PC, PB, or PA during the same hospitalization..\n\nIA \u2014 Add a same inpatient claim manual outlier review for CA cesarean-delivery stays before separate DRG/APR-DRG consideration when estimated hospital loss is above threshold or discharge status 02, 05, 65, 66, 82, 85, 93, or 94 is present. (CA) Elevance internal and State FFS both anchor inpatient adjudication to the same inpatient claim in DRG workflows, supporting a claim-level outlier trigger..\nIA \u2014 Require daily NICU acuity evaluation for revenue codes 0200, 0201, 0202, 0203, 0206, 0208, 012X, 013X, 015X, and 0732 throughout the inpatient stay before paying higher-acuity inpatient days on cesarean-delivery outliers. (CA)",
+      "evidence": [
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.53\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.52\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"Y65.51\" [related_codes]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"inpatient facility claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"UB-04 claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"POA indicator\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"same inpatient claim\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"POA-based adjudication\" [pairing_conditions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"DRG\" [program_scope]",
+        "Elevance Health (internal) \u00b7 Present on Admission HCAC RETIRED: \"Critical Access Hospitals\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"condition existed prior to treatment\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002: \"secondary facility treated the HAC\" [exemptions]",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions: \"Medicare-exempt facilities\" [exemptions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"same inpatient claim\" [pairing_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"estimated hospital loss above threshold\" [pairing_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 02 (short-term general hospital)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 05 (designated cancer center)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 65 (psychiatric hospital)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 66 (critical access hospital)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 82 (planned readmission)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 85 (planned cancer center readmission)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 93 (psychiatric distinct unit)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"discharge status 94 (planned CAH readmission)\" [discharge_status_conditions]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"DRG\" [program_scope]",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services: \"APR-DRG\" [program_scope]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0200\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0201\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0202\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0203\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0208\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0206\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"012X\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"013X\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"015X\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"0732\" [revenue_codes]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"throughout the inpatient stay\" [pairing_conditions]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"daily NICU acuity evaluation\" [utilization_limits]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"DRG\" [program_scope]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"Modified DRG\" [program_scope]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"Percentage of billed charges/per diem\" [program_scope]",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level: \"UB04\" [program_scope]"
+      ],
+      "story_alignment": [],
+      "peer_benchmarking": [
+        "Paramount Healthcare and Parkland Community Health Plan also apply inpatient PPC/HAC guardrails to Y65.51, Y65.52, and Y65.53; Paramount ties the event to modifiers PC, PB, or PA during the same hospitalization.",
+        "Elevance internal and State FFS both anchor inpatient adjudication to the same inpatient claim in DRG workflows, supporting a claim-level outlier trigger."
+      ],
+      "citation": [
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions C-23002 \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/Commercial%20Policies%20by%20Category/Provider%20Preventable%20Conditions%20C-23002.pdf",
+        "Elevance Health (internal) \u00b7 Provider Preventable Conditions \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Reimbursement%20Administration%20%20General%20Information/Provider%20Preventable%20Conditions.pdf",
+        "Elevance Health (internal) \u00b7 Present on Admission HCAC RETIRED \u2014 https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Present%20on%20Admission%20HCAC%20RETIRED.pdf",
+        "State FFS \u00b7 Payment Methodology for Inpatient Hospital Services \u2014 https://ahca.myflorida.com/content/download/7025/file/59G-6.020_Inpatient_Services_2018.pdf",
+        "Providence Health Plan \u00b7 Inpatient Acuity Level \u2014 https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/reimbursement-policies/rp19.pdf"
+      ]
+    }
+  ],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 4: Rare inpatient outliers are adding concentrated high-cost clinical spend",
+    "pattern_rank": 4,
+    "pattern_title": "Rare inpatient outliers are adding concentrated high-cost clinical spend",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Degenerative Nervous System Disorders without MCC",
+      "Hip Replacement with Principal Diagnosis of Hip Fracture without MCC",
+      "Other Heart Assist System Implant"
+    ],
+    "total_policies_found": 21,
+    "successful_extractions": 21,
+    "failed_extractions": 0,
+    "recommendations_generated": 1,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 21 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "21 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 4 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 4 source card(s) attest no state (segment scope: CA, PA, UNATTRIBUTED, GA); searched without it rather than narrowing to ['CA', 'GA']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": true,
+        "message": "all items aligned with pattern"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/21 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/21 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 169262,
+    "output": 98666,
+    "breakdown": {
+      "search_keywords": {
+        "input": 546,
+        "output": 826,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 957,
+        "output": 3874,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 141710,
+        "output": 80402,
+        "calls": 21
+      },
+      "relevance_judge": {
+        "input": 8134,
+        "output": 3319,
+        "calls": 17
+      },
+      "dynamic_columns": {
+        "input": 987,
+        "output": 468,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 3778,
+        "output": 2599,
+        "calls": 22
+      },
+      "elevance_summary": {
+        "input": 445,
+        "output": 181,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 8194,
+        "output": 6260,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 4511,
+        "output": 737,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T02:46:51.267307+00:00",
+    "end_time": "2026-08-24T02:50:13.863316+00:00",
+    "duration_ms": 202596,
+    "version": "2.0.0"
+  }
+}

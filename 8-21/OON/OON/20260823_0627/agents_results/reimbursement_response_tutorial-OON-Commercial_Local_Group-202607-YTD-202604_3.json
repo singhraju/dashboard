@@ -1,0 +1,212 @@
+{
+  "job_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604_3_job",
+  "conversation_id": "tutorial-OON-Commercial_Local_Group-202607-YTD-202604_3",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 3,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "NY EPO results are being moved by a single appendix admission",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "service_setting",
+          "label": "Service Setting",
+          "type": "badge"
+        },
+        {
+          "id": "asc_grouper_rule",
+          "label": "ASC Grouper Rule",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "service_setting": "ASC Setting",
+          "asc_grouper_rule": "ASC payments follow grouper assignments; group 0 procedures receive no separate reimbursement."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_00055",
+        "payer_name": "Emblem Health",
+        "policy_title": "Ambulatory Surgical Groupers",
+        "tags": [],
+        "effective_date": null,
+        "evidence": "The ASC grouper table includes appendix removal and assigns it grouper 3.",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/asc-groupers-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [
+            "44950",
+            "44955",
+            "44970",
+            "44979"
+          ],
+          "related_codes": [
+            "44955",
+            "44970",
+            "44979",
+            "44950"
+          ],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "ASC"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 1,
+    "policies_successful": 1,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 3: NY EPO results are being moved by a single appendix admission",
+    "pattern_rank": 3,
+    "pattern_title": "NY EPO results are being moved by a single appendix admission",
+    "cpt_codes_requested": [
+      "K3532"
+    ],
+    "drg_codes_requested": [
+      "Appendix Procedures with CC"
+    ],
+    "total_policies_found": 1,
+    "successful_extractions": 1,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": true,
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 1 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "1 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 3 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['NY'] - attested by all 2 source card(s)"
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/1 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/1 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "tokens": {
+    "input": 95197,
+    "output": 13359,
+    "breakdown": {
+      "search_keywords": {
+        "input": 522,
+        "output": 140,
+        "calls": 1
+      },
+      "title_anchors": {
+        "input": 438,
+        "output": 1735,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 503,
+        "output": 922,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 90810,
+        "output": 8426,
+        "calls": 1
+      },
+      "relevance_judge": {
+        "input": 486,
+        "output": 137,
+        "calls": 1
+      },
+      "dynamic_columns": {
+        "input": 623,
+        "output": 546,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 223,
+        "output": 255,
+        "calls": 2
+      },
+      "policy_recommendations": {
+        "input": 1592,
+        "output": 1198,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-23T07:29:13.535633+00:00",
+    "end_time": "2026-08-23T07:30:26.709575+00:00",
+    "duration_ms": 73173,
+    "version": "2.0.0"
+  }
+}

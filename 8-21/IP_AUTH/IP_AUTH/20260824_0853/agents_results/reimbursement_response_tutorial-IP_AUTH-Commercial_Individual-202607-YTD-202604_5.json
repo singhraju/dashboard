@@ -1,0 +1,444 @@
+{
+  "job_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_5_job",
+  "conversation_id": "tutorial-IP_AUTH-Commercial_Individual-202607-YTD-202604_5",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 5,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic Med/Surg cases created oversized spend spikes",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "drg_relevance",
+          "label": "DRG Addressed?",
+          "type": "badge"
+        },
+        {
+          "id": "co_surgery_rules",
+          "label": "Co-Surgery Rules",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Emblem Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "co_surgery_rules": "-"
+        },
+        {
+          "payer_org": "Fallon Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "co_surgery_rules": "Co-surgeon/team surgeon lines reimbursed separately; modifiers 62/66 pay 57.5\u201362.5%, 66 requires 3+ surgeons."
+        },
+        {
+          "payer_org": "Healthfirst",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "co_surgery_rules": "-"
+        },
+        {
+          "payer_org": "Humana",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "co_surgery_rules": "No DRG-specific co-surgery bundling rules or limitations are stated."
+        },
+        {
+          "payer_org": "Moda Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "co_surgery_rules": "Allows modifier 62 co-surgery for qualifying procedures; disallows same-specialty tag-team primary billing."
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "drg_relevance": "-",
+          "co_surgery_rules": "No DRG-specific co-surgery rule; only CPT 64727/69990 microsurgery services are addressed."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_COM_EMB_00061",
+        "payer_name": "Emblem Health",
+        "policy_title": "Co-Surgeon/Team Surgeon-Modifiers 62/66",
+        "tags": [],
+        "effective_date": "1/1/2021",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/reimbursement-policies/co-surgeon-emblemhealth.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_FH_00016",
+        "payer_name": "Fallon Health",
+        "policy_title": "Co-surgeon and team surgeon payment policy",
+        "tags": [],
+        "effective_date": "03/01/2026",
+        "evidence": "Not specifically named; qualifying surgical claims may be reimbursed under co-surgeon or team surgeon rules when MPFS indicators allow, with reduced payment and documentation/prior authorization conditions.",
+        "policy_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PaymentPolicies/CoSurgTeamSurg030126.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [
+            "62",
+            "66"
+          ],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [
+            "same surgical session",
+            "same procedure code"
+          ],
+          "utilization_limits": [
+            "62.5% allowed amount",
+            "57.5% allowed amount"
+          ],
+          "prior_auth_thresholds": [
+            "prior authorization for non-contracted providers"
+          ],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "MPFS"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [
+            "Only physicians MD/DO"
+          ],
+          "exemptions": [
+            "different specialties different CPT codes"
+          ],
+          "action_types": [
+            "limit"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_MDH_ALL_28595940104",
+        "payer_name": "Moda Health",
+        "policy_title": "Modifiers 62 & 66 - Co-surgery (Two Surgeons) and Team Surgery (More Than Two Surgeons)",
+        "tags": [],
+        "effective_date": "1/1/2000",
+        "evidence": "Off-topic for this DRG concept. The policy governs professional surgical claims using modifiers 62 and 66, not DRG-based inpatient reimbursement.",
+        "policy_url": "https://www.modahealth.com/-/media/modahealth/shared/Provider/Policies/RPM035.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": [
+            "allow_with_conditions",
+            "deny",
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00056",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2025-10-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Microsurgery-Policy-Professional.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HF_00092",
+        "payer_name": "Healthfirst",
+        "policy_title": "Anesthesia Services",
+        "tags": [],
+        "effective_date": "7/1/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://hfproviders.org/documents/Reimbursement-Policy-PO-RE-095-Anesthesia-Services.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_HUM_00151",
+        "payer_name": "Humana",
+        "policy_title": "Modifier 62",
+        "tags": [],
+        "effective_date": "06/2010; Medicare 01/2008",
+        "evidence": "Off-topic. This policy addresses co-surgeon billing with modifier 62 for professional services only and does not provide DRG payment rules for this case type.",
+        "policy_url": "https://dctm.humana.com/Mentor/Web/v.aspx?chronicleID=090009298184a152",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00203",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional for Louisiana",
+        "tags": [],
+        "effective_date": "2024-02-02",
+        "evidence": "Off-topic for the requested DRG pattern. This policy addresses microsurgery reimbursement for specific CPT procedures, not DRG-based inpatient catastrophic cases.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/la/LA-Microsurgery-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00373",
+        "payer_name": "United Health",
+        "policy_title": "Microsurgery Policy, Professional",
+        "tags": [],
+        "effective_date": "2026-02-13",
+        "evidence": "Off-topic for the requested DRG pattern; the policy addresses microsurgery add-on reimbursement on professional CMS-1500 claims, not DRG-based inpatient case grouping.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Microsurgery-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 8,
+    "policies_successful": 8,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 5: Rare catastrophic Med/Surg cases created oversized spend spikes",
+    "pattern_rank": 5,
+    "pattern_title": "Rare catastrophic Med/Surg cases created oversized spend spikes",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Craniotomy and Endovascular Intracranial Procedures with MCC",
+      "Heart Transplant or Implant of Heart Assist System with MCC",
+      "Spinal Fusion Except Cervical with Spinal Curvature, Malignancy, Infection or Extensive Fusions with CC"
+    ],
+    "total_policies_found": 8,
+    "successful_extractions": 8,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 8 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "8 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 5 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": false,
+        "message": "state filter suppressed: 1 of 3 source card(s) attest no state (segment scope: CT, IN, UNATTRIBUTED, WI, CA); searched without it rather than narrowing to ['CT', 'CA']"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped for scope drift because they propose broad co-/team-surgeon MPFS policies rather than case-level actions targeted to the pattern's rare catastrophic Med/Surg admissions."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/8 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/8 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 55029,
+    "output": 27856,
+    "breakdown": {
+      "search_keywords": {
+        "input": 568,
+        "output": 610,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 859,
+        "output": 2246,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 44947,
+        "output": 19906,
+        "calls": 8
+      },
+      "relevance_judge": {
+        "input": 2503,
+        "output": 1382,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 1022,
+        "output": 595,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 1274,
+        "output": 768,
+        "calls": 8
+      },
+      "policy_recommendations": {
+        "input": 2152,
+        "output": 1692,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 1704,
+        "output": 657,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-24T09:14:46.419362+00:00",
+    "end_time": "2026-08-24T09:16:38.107112+00:00",
+    "duration_ms": 111687,
+    "version": "2.0.0"
+  }
+}

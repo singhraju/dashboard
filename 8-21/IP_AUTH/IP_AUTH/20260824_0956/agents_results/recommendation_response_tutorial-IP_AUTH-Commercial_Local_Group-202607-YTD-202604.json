@@ -1,0 +1,214 @@
+{
+  "success": true,
+  "output": {
+    "metadata": {
+      "total_patterns": 8,
+      "recommendations_generated": 7,
+      "patterns_skipped": 1,
+      "approach": "llm_based_dtr_relevance",
+      "dtr_rules_path": "/app/configs/decision_tree_rules.yaml"
+    },
+    "recommendations": [
+      {
+        "rank": 1,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Conduct a Commercial Local Group inpatient auth-to-claim, authorization enforcement, and claims reprocessing audit for AUTH_CODE_DISTRIBUTION and CA PPO Not Mapped claims in NY, CT, CA, GA, OH, and VA, reconciling PA-required and facility-type logic for NYU LANGONE HOSPITAL TISCH HOSPITAL, YALE NEW HAVEN HOSPITAL, IU HEALTH METHODIST UNIVERSITY, HENRICO DOCTORS' HOSPITAL, Cervical Spinal Fusion with CC, and Postpartum and Postabortion Diagnoses without O.R. Procedures, then rerun provider, DRG, and product comparisons before UM or reimbursement action.",
+        "evidence": [
+          "AUTH_CODE_DISTRIBUTION drove change across NY, CT, CA, GA, OH, and VA.",
+          "NYU LANGONE HOSPITAL TISCH HOSPITAL led NY provider concentration.",
+          "YALE NEW HAVEN HOSPITAL concentrated CT AUTH_CODE_DISTRIBUTION change.",
+          "CA PPO facility_type Not Mapped indicates facility classification cleanup.",
+          "Cervical Spinal Fusion with CC and postpartum DRGs were named drivers.",
+          "IU HEALTH METHODIST UNIVERSITY and HENRICO DOCTORS' HOSPITAL led other state concentrations."
+        ],
+        "peer_benchmarking": [
+          "Point32Health marks authorization required under general editing, eligibility, benefits, and authorization rules.",
+          "Emblem Health applies broad coding edits across obstetric, surgical, and facility services.",
+          "United Health applies general facility inclusive-charges bundling rules."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 2,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Open a CT PPO acute inpatient policy audit centered on Yale New Haven Hospital and Other Digestive System Diagnoses with MCC to validate PA-required and non-PA claim matching, enforce authorization outcomes, review admission, level-of-care, and site-of-care controls, and confirm reimbursement compliance.",
+        "evidence": [
+          "Yale PA-required PPO acute cases added about $3.8M.",
+          "PA-required Yale admissions rose 38; paid per admit rose about $9K.",
+          "Yale non-PA admissions rose 43; paid per admit rose about $3K.",
+          "Other Digestive System Diagnoses with MCC added about $235K on four admissions."
+        ],
+        "peer_benchmarking": [
+          "Point32Health reclassifies short inpatient stays to observation, generally limited to 48 hours.",
+          "United Health bundles routine inpatient and outpatient facility services and supplies."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 3,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Launch a focused inpatient reimbursement and program-integrity audit for NYU LANGONE HOSPITAL TISCH HOSPITAL on PA-required EPO acute hospital admissions, starting with Cervical Spinal Fusion with CC, to validate authorization-to-claim matching, DRG classification, contract-compliant payment, and reprocessing or contract remediation where mismatches are found.",
+        "evidence": [
+          "Spend increase is heavily concentrated at NYU Langone Hospital Tisch Hospital.",
+          "All key cells are PA-required NY EPO acute hospital admissions.",
+          "Cervical Spinal Fusion with CC is the largest clinical driver.",
+          "Validation note calls for PA status and claim classification confirmation."
+        ],
+        "peer_benchmarking": [
+          "Highmark_BCBS applies hospital-setting bundling for inpatient claims."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 4,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Create a targeted inpatient provider-product watchlist for GA POS IU HEALTH METHODIST UNIVERSITY, VA PPO HENRICO DOCTORS' HOSPITAL, CA PPO IU HEALTH METHODIST UNIVERSITY and NYU LANGONE HOSPITAL TISCH HOSPITAL, and NH POS OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER; confirm prior authorization on PA-required admissions, enforce authorization denials, and verify claims processed per contractual obligation before contract remediation or site-of-care action.",
+        "evidence": [
+          "GA POS IU Health Methodist added admissions with sharply higher paid per admit.",
+          "VA PPO Henrico Doctors' Hospital added admissions and higher paid per admit.",
+          "CA PPO pressure concentrated at IU Health Methodist, NYU Langone, and Henrico.",
+          "Many contributing cells were PA-required and flagged for auth dimension presence."
+        ],
+        "peer_benchmarking": [
+          "United Health bundles routine services and supplies into facility charges."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 5,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Implement a provider- and diagnosis-specific acute inpatient utilization management policy review that separates pa_required_code Y from N, confirms authorization on Y admissions, and audits referral and elective-admission pathways for PPO and POS acute hospital segments in OH, CA, VA, WI, CT, MO, and IN, prioritizing Ohio State University Wexner Medical Center, Henrico Doctors' Hospital, Acute Myocardial Infarction, Other Digestive System Diagnoses with MCC, and Postpartum and Postabortion Diagnoses without O.R. Procedures.",
+        "evidence": [
+          "OH Ohio State PPO acute hospital added $0.8M with 23 more admissions.",
+          "CA PPO digestive, AMI, postpartum DRGs rose with flat to down unit cost.",
+          "VA Henrico POS acute hospital added 23 admissions with paid per admit down.",
+          "WI POS AMI admissions increased from one to six while paid per admit fell."
+        ],
+        "peer_benchmarking": [],
+        "citation": []
+      },
+      {
+        "rank": 6,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate provider-level outlier review and payment-integrity audit for NYU LANGONE HOSPITAL TISCH HOSPITAL, OHIO STATE UNIVERSITY WEXNER MEDICAL CENTER, and HENRICO DOCTORS' HOSPITAL IP Med/Surg episodes tied to Coronary Bypass without Cardiac Catheterization with MCC, Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC, Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC, Cervical Spinal Fusion with CC, and Other Digestive System Diagnoses with MCC, including DRG/diagnosis validation, itemized bill review, and contract remediation assessment.",
+        "evidence": [
+          "NY rare IP Med/Surg outliers added about $2.6M.",
+          "NYU Langone coronary bypass paid about $448K.",
+          "Ohio State wound debridement and skin graft paid about $401K.",
+          "Cardiac valve without cath with MCC added about $1.0M.",
+          "Most contributing cases involved 1 to 3 admissions."
+        ],
+        "peer_benchmarking": [
+          "Elevance Health: no separate reimbursement for robotic surgical assistance; no DRG-specific limitation identified."
+        ],
+        "citation": []
+      },
+      {
+        "rank": 7,
+        "priority": "HIGH",
+        "category": "Policy",
+        "description": "Initiate case-level audit of Yale New Haven Hospital, Henrico Doctors' Hospital, and IU Health Methodist University admissions for Tracheostomy with Mechanical Ventilation >96 Hours and Kidney Transplant in CT, GA, and VA to verify prior authorization enforcement, authorization-to-actual matching, contract carve-outs, inpatient bundling, and itemized bill accuracy.",
+        "evidence": [
+          "PA required indicator is Y on Yale, IU Health Methodist, and Henrico cases.",
+          "Variance is concentrated in Yale New Haven, Henrico Doctors', and IU Health Methodist.",
+          "Drivers are tracheostomy with prolonged ventilation and kidney transplant DRGs.",
+          "Diagnoses include sepsis unspecified organism, MSSA sepsis, and end stage renal disease."
+        ],
+        "peer_benchmarking": [
+          "Elevance bundles admission-related outpatient services into inpatient payment, excluding ambulance, dialysis, SNF, and home health.",
+          "United Health bundles routine services and supplies; separate reimbursement limited to daily facility-owned ventilator or CPAP management."
+        ],
+        "citation": []
+      }
+    ],
+    "skipped_patterns": [
+      {
+        "rank": 8,
+        "pattern": "Maternity and NICU acuity is emerging through C-section-linked neonatal severity and maternal complications",
+        "reason": "Could not fetch relevant rules"
+      }
+    ],
+    "processing_log": [
+      {
+        "rank": 1,
+        "status": "success",
+        "rules_used": 8,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 8: Best fit for the pattern: repeated AUTH_CODE_DISTRIBUTION shifts, explicit auth_or_mapping_shift flags, and the recommendation to reconcile PA-required logic all point to Auth-to-Claim match validation before action.; IP MedSurg (DNE) Trend 9: The CA Not Mapped facility bucket and broader facility mapping concerns suggest claims processing or reprocessing logic may be driving variance, making claim status/processing review highly relevant.; IP MedSurg (DNE) Trend 1: The spend change is concentrated in a subset of providers, especially NYU Langone Hospital Tisch Hospital and Yale New Haven Hospital, with additional concentration at IU Health Methodist and Henrico Doctors' Hospital.; IP MedSurg (DNE) Trend 4: Specific inpatient service/DRG clusters are named as key drivers, including Cervical Spinal Fusion with CC and Postpartum and Postabortion Diagnoses without O.R. Procedures, so service-level isolation is relevant after validation.; IP MedSurg (DNE) Trend 10: Facility type and PA classification shifts can alter reimbursement handling; since reimbursement action is explicitly deferred until logic is reconciled, reimbursement method review is a relevant secondary parent rule."
+      },
+      {
+        "rank": 2,
+        "status": "success",
+        "rules_used": 14,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is highly concentrated at a single provider, Yale New Haven Hospital, making provider-specific behavior and contract dynamics the primary parent rule.; IP MedSurg (DNE) Trend 6: Admissions increased materially in both PA-required and non-PA inpatient cases, so utilization management performance, admission criteria, and level-of-care controls are directly implicated.; IP MedSurg (DNE) Trend 10: Paid per admit rose significantly, and the pattern narrative explicitly points to a reimbursement/network term issue in addition to utilization.; IP MedSurg (DNE) Trend 8: Both PA-required and non-PA claims contributed at the same provider, and the pattern specifically calls for PA flag validation and auth-to-claim review.; IP MedSurg (DNE) Trend 3: A digestive diagnosis/DRG subset contributed incremental high-cost admissions, so diagnosis-level concentration is a relevant secondary driver to investigate."
+      },
+      {
+        "rank": 3,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is heavily concentrated at NYU Langone, which contributed the majority of the positive delta, making provider-specific practice patterns, contracting, or billing behavior the top parent hypothesis.; IP MedSurg (DNE) Trend 4: The pattern is explicitly concentrated in a surgical service/DRG, especially Cervical Spinal Fusion with CC, so service-line review is directly aligned to the identified procedure pressure point.; IP MedSurg (DNE) Trend 8: All key cells are PA-required and the pattern recommends confirming PA status and performing medical-necessity review, which strongly maps to auth-to-claim enforcement review.; IP MedSurg (DNE) Trend 10: Paid per admit rose materially at both the provider and procedure level, and the recommended next step includes reimbursement review, making reimbursement method a highly relevant parent rule.; IP MedSurg (DNE) Trend 9: The validation note specifically calls for confirmation of claim classification before broader contract action, suggesting claims processing or claim-status issues may be contributing to the apparent unit-cost increase."
+      },
+      {
+        "rank": 4,
+        "status": "success",
+        "rules_used": 26,
+        "categories": [
+          "IP NICU (DNE)",
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The variance is concentrated in a small set of hospitals such as IU Health Methodist, Henrico, NYU Langone, and Ohio State, making provider-specific behavior or contract differences the strongest parent hypothesis.; IP MedSurg (DNE) Trend 8: Many contributing cells are PA-required, auth flags are present, and the recommendation explicitly calls for stronger pre-service controls and auth-to-claim validation.; IP MedSurg (DNE) Trend 10: Paid per admit spiked across several provider-product cells, and the pattern is described as provider economics/contract review pressure, which aligns closely to reimbursement method review.; IP MedSurg (DNE) Trend 6: Admissions increased along with unit cost, so changes in utilization management performance and potentially avoidable variance are relevant parent drivers to test.; IP NICU (DNE) Trend 1: One of the largest source cells is the Henrico VA PPO acute hospital spike with IP NICU context, again isolated to a specific provider with materially higher paid per admit."
+      },
+      {
+        "rank": 5,
+        "status": "success",
+        "rules_used": 18,
+        "categories": [
+          "IP MedSurg (DNE)",
+          "IP OB Dlvry Well NB (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 6: The core pattern is volume-led inpatient growth: admissions and claims increased while paid per admit was flat or down, which aligns best to reviewing utilization management KPIs and potentially avoidable variance.; IP MedSurg (DNE) Trend 7: Pattern details explicitly point to UM, referral, and admission management rather than rate pressure, making admission source/location or elective-case mix review highly relevant.; IP MedSurg (DNE) Trend 1: A large portion of the increase is concentrated in specific hospitals such as Ohio State University Wexner Medical Center and Henrico Doctors' Hospital, so provider-driver analysis is important.; IP MedSurg (DNE) Trend 3: Several named inpatient DRGs are driving the increase, especially Acute Myocardial Infarction and Other Digestive System Diagnoses with MCC, which fits diagnosis-level variance review.; IP OB Dlvry Well NB (DNE) Trend 3: Postpartum and postabortion admissions are specifically called out as rising in California, so an OB diagnosis-driver rule is relevant for that subset of the pattern."
+      },
+      {
+        "rank": 6,
+        "status": "success",
+        "rules_used": 15,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: The spend increase is concentrated in a small set of named hospitals such as NYU Langone, Ohio State Wexner, and Henrico, so provider-level outlier review is highly relevant.; IP MedSurg (DNE) Trend 2: The pattern is driven by a handful of rare case-level episodes with only 1 to 3 admissions, indicating variance is isolated to a very small subset of members/cases.; IP MedSurg (DNE) Trend 3: Variance is tightly tied to specific rare diagnoses and complex clinical presentations, matching the need to confirm diagnosis accuracy and understand diagnosis-level case-mix shifts.; IP MedSurg (DNE) Trend 4: Specific high-cost DRGs/services such as coronary bypass, cardiac valve procedures, wound debridement/skin graft, and cervical spinal fusion are the direct spend drivers, making service-level review central.; IP MedSurg (DNE) Trend 10: Six-figure paid per admit and the recommendation to assess stop-loss or catastrophic exposure make reimbursement method review relevant for explaining extreme payment levels on these outlier cases."
+      },
+      {
+        "rank": 7,
+        "status": "success",
+        "rules_used": 17,
+        "categories": [
+          "IP MedSurg (DNE)"
+        ],
+        "relevance_reason": "IP MedSurg (DNE) Trend 1: Spend increase is concentrated in a small set of providers (Yale New Haven, Henrico Doctors', IU Health Methodist), making provider-level behavior, site-of-care, and contract review highly relevant.; IP MedSurg (DNE) Trend 3: The pattern is tied to a narrow diagnosis subset\u2014sepsis, ESRD, and transplant-related conditions\u2014so diagnosis-level drivers are central to understanding the variance.; IP MedSurg (DNE) Trend 4: Variance is also isolated to specific catastrophic services/DRGs, especially tracheostomy with prolonged ventilation and kidney transplant, which fits a service-driver review.; IP MedSurg (DNE) Trend 8: All highlighted cases show PA-required indicators, and the recommended next step explicitly includes transplant authorization review, making auth-to-claim enforcement highly relevant.; IP MedSurg (DNE) Trend 10: Very high paid per admit plus the recommendation to validate contract carve-outs and specialized reimbursement workflows strongly aligns with reviewing reimbursement method."
+      },
+      {
+        "rank": 8,
+        "status": "skipped",
+        "reason": "rules_fetch_failed"
+      }
+    ]
+  },
+  "metadata": {
+    "agent_name": "recommendation_synthesis",
+    "timestamp": "2026-08-24T12:08:40.079004+00:00"
+  }
+}

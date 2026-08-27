@@ -1,0 +1,469 @@
+{
+  "job_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R12-202604_8_job",
+  "conversation_id": "tutorial-IP_Med_Surg-Commercial_Individual-202607-R12-202604_8",
+  "agent": "reimbursement_policy",
+  "status": "success",
+  "output": {
+    "pattern_rank": 8,
+    "summary_table": {
+      "title": "Payer Policy Summary",
+      "subtitle": "Rare catastrophic and other low-volume high-cost cases are emerging across multiple states",
+      "columns": [
+        {
+          "id": "payer_org",
+          "label": "Payer Organization",
+          "type": "text"
+        },
+        {
+          "id": "pattern_relevance",
+          "label": "Pattern Relevance",
+          "type": "badge"
+        },
+        {
+          "id": "claim_review",
+          "label": "Claim Review",
+          "type": "text"
+        },
+        {
+          "id": "appeals_process",
+          "label": "Appeals Process\n(Documented)",
+          "type": "badge"
+        },
+        {
+          "id": "policy_effective_date",
+          "label": "Policy Effective Date\n(Last Updated)",
+          "type": "date"
+        }
+      ],
+      "rows": [
+        {
+          "payer_org": "Cigna",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "claim_review": "Not applicable to the requested DRG pattern."
+        },
+        {
+          "payer_org": "Elevance Health (internal)",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "claim_review": "Requires supporting documentation/invoices/NDC; reviews claims individually, subject to provider and regulatory limits."
+        },
+        {
+          "payer_org": "Molina",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "claim_review": "-"
+        },
+        {
+          "payer_org": "United Health",
+          "appeals_process": "-",
+          "policy_effective_date": "N/A",
+          "pattern_relevance": "-",
+          "claim_review": "Reviews claims and itemized bills; reimburses facility-owned ventilator/CPAP management one unit daily."
+        }
+      ]
+    },
+    "reimbursement_policies": [
+      {
+        "policy_id": "RP_ALL_ELV_INTERNAL_00201",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Tracheostomy Supplies RETIRED",
+        "tags": [],
+        "effective_date": "11/07/06",
+        "evidence": "Off-topic to the requested DRG pattern. This policy addresses reimbursement for tracheostomy care supplies and does not contain a DRG-specific adjudication rule for rare catastrophic or low-volume high-cost cases.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Retired%20Reimbursement%20Policies/Tracheostomy%20Supplies%20RETIRED.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_CIG_27067540000",
+        "payer_name": "Cigna",
+        "policy_title": "Global Surgical Package and Related Modifiers (24, 54, 55, 56, 57, 58, 76, 77, 78, and 79)",
+        "tags": [],
+        "effective_date": "10/30/2018",
+        "evidence": "Off-topic to the requested DRG pattern. This policy governs global surgical package reimbursement and modifier usage, not DRG-based catastrophic case grouping.",
+        "policy_url": "https://static.cigna.com/assets/chcp/secure/pdf/resourceLibrary/clinReimPolsModifiers/R23_Global_Surgical_Package_and_Related_Modifiers.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00101",
+        "payer_name": "United Health",
+        "policy_title": "Split Surgical Package Policy, Professional - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-06-01",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Split-Surgical-Package-Policy.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_COM_UHC_00136",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility - Reimbursement Policy - UnitedHealthcare Commercial and Individual Exchange",
+        "tags": [],
+        "effective_date": "2026-07-08",
+        "evidence": "This policy is a general facility inclusive-charges rule. It applies to inpatient and outpatient facility claims and bundles routine room/board, supplies, equipment, and nursing services into the facility payment, but it does not specifically address this DRG description.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-reimbursement/COMM-Hospital-Inclusive-Review-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260-269",
+            "270",
+            "279",
+            "270-279",
+            "300",
+            "300-370",
+            "309",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [
+            "same claim",
+            "same facility visit"
+          ],
+          "utilization_limits": [
+            "one unit per day for facility-owned ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB04",
+            "Commercial",
+            "Individual Exchange"
+          ],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Pre- and Post-Anesthesia Recovery Room"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_ELV_INTERNAL_00112",
+        "payer_name": "Elevance Health (internal)",
+        "policy_title": "Unlisted or Miscellaneous Codes",
+        "tags": [],
+        "effective_date": "11/04/2024",
+        "evidence": "Off-topic for the requested DRG pattern. This policy governs reimbursement for unlisted or miscellaneous CPT/HCPCS items and does not provide a DRG-specific adjudication rule.",
+        "policy_url": "https://collaborate.wellpoint.com/sites/ReimbursementPolicy/policies/Coding/Unlisted%20or%20Miscellaneous%20Codes.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "when an established code does not exist",
+            "provider, state, federal, or CMS requirements"
+          ],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_MOH_00971",
+        "payer_name": "Molina",
+        "policy_title": "NF Ventilator Pre-Payment Medical Necessity Review",
+        "tags": [],
+        "effective_date": "04/01/2025",
+        "evidence": "No specific policy rules documented",
+        "policy_url": "https://www.molinahealthcare.com/-/media/Molina/PublicWebsite/PDF/Providers/common/PIA-Payment-Policies/Molina-PI-Policy-Website/2025-Policies/508-Approved/NF-Vent-Payment-Medical-Necessity-Review-Policy-for-Medicaid-Line-of-Business.ashx",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [],
+          "pairing_conditions": [],
+          "utilization_limits": [],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [],
+          "state_specific_rules": [],
+          "provider_role_restrictions": [],
+          "exemptions": [],
+          "action_types": []
+        },
+        "contamination": null
+      },
+      {
+        "policy_id": "RP_GBD_UHC_00364",
+        "payer_name": "United Health",
+        "policy_title": "Hospital Inclusive Charges Policy, Facility",
+        "tags": [],
+        "effective_date": "2024-12-01",
+        "evidence": "This UB-04 facility policy does not name this DRG group specifically. For hospital claims, routine room-and-board items, supplies, equipment, nursing, and surgical-room components are packaged into the facility payment and are not separately reimbursable; only limited non-routine ancillary services may be separately considered.",
+        "policy_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan-reimbursement/UHCCP-Hospital-Inclusive-Charges-Policy-Facility.pdf",
+        "edit_rule_facts": {
+          "target_codes": [],
+          "related_codes": [],
+          "required_modifiers": [],
+          "excluded_modifiers": [],
+          "revenue_codes": [
+            "250",
+            "260",
+            "260-269",
+            "270",
+            "279",
+            "270-279",
+            "300",
+            "309",
+            "300-370",
+            "361",
+            "391",
+            "410",
+            "412",
+            "419",
+            "460",
+            "510",
+            "761"
+          ],
+          "pairing_conditions": [],
+          "utilization_limits": [
+            "1 unit/day for ventilator or CPAP management"
+          ],
+          "prior_auth_thresholds": [],
+          "discharge_status_conditions": [],
+          "program_scope": [
+            "UB-04",
+            "Medicaid products"
+          ],
+          "state_specific_rules": [
+            "Colorado exempt",
+            "Hawaii: waitlist/COB claims use OC 74-76",
+            "Kentucky exempt",
+            "Maryland exempt",
+            "Minnesota exempt",
+            "Mississippi exempt",
+            "Missouri exempt",
+            "Nebraska exempt",
+            "New Mexico exempt",
+            "North Carolina exempt",
+            "Texas exempt",
+            "Virginia: J0401, J0578, J2315, J2426, J2794, J2798, Q9991, Q9992 allowed"
+          ],
+          "provider_role_restrictions": [],
+          "exemptions": [
+            "Colorado",
+            "Kentucky",
+            "Maryland",
+            "Minnesota",
+            "Mississippi",
+            "Missouri",
+            "Nebraska",
+            "New Mexico",
+            "North Carolina",
+            "Texas"
+          ],
+          "action_types": [
+            "bundle"
+          ]
+        },
+        "contamination": null
+      }
+    ],
+    "elevance_executive_summary": null,
+    "policies_processed": 7,
+    "policies_successful": 7,
+    "policies_failed": 0
+  },
+  "recommended_action": [],
+  "visual_component": {},
+  "explanation": {
+    "summary": "Processed reimbursement policies for pattern 8: Rare catastrophic and other low-volume high-cost cases are emerging across multiple states",
+    "pattern_rank": 8,
+    "pattern_title": "Rare catastrophic and other low-volume high-cost cases are emerging across multiple states",
+    "cpt_codes_requested": [],
+    "drg_codes_requested": [
+      "Aftercare, Musculoskeletal System and Connective Tissue with CC",
+      "Cirrhosis and Alcoholic Hepatitis with MCC",
+      "ECMO or Tracheostomy with Mechanical Ventilation >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures",
+      "Other Digestive System Diagnoses with MCC"
+    ],
+    "total_policies_found": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "recommendations_generated": 0,
+    "extraction_method": "LLM-based structured extraction from policy text",
+    "data_sources": [
+      "Carelon Policy Comparison API",
+      "Snowflake Policy Database (environment-aware table registry)"
+    ]
+  },
+  "validation": {
+    "is_valid": "valid_with_warnings",
+    "checks": [
+      {
+        "check": "policies_found",
+        "passed": true,
+        "message": "Found 7 policies"
+      },
+      {
+        "check": "extractions_successful",
+        "passed": true,
+        "message": "7 successful extractions"
+      },
+      {
+        "check": "pattern_identified",
+        "passed": true,
+        "message": "Pattern 8 identified"
+      },
+      {
+        "check": "state_filter_attested",
+        "passed": true,
+        "message": "state filter applied as ['TX', 'OH', 'CO', 'IN'] - attested by all 4 source card(s)"
+      },
+      {
+        "check": "recommendation_pattern_aligned",
+        "passed": false,
+        "message": "Both items were dropped because they address California cesarean-delivery billing rather than the pattern's rare catastrophic high-cost cases, and each also includes an off-topic miscellaneous-codes citation."
+      },
+      {
+        "check": "cross_payer_contamination_detected",
+        "passed": true,
+        "message": "no cross-payer name leakage detected"
+      },
+      {
+        "check": "policy_relevance_pass_rate",
+        "passed": true,
+        "message": "0/7 policies quarantined (0%); threshold 30%"
+      },
+      {
+        "check": "policy_warning_rate",
+        "passed": true,
+        "message": "0/7 policies warning-flagged (0%); threshold 50%"
+      }
+    ],
+    "warnings": [
+      "Validator dropped 2 recommendation item(s) for scope drift or source-disclaimed citations. See recommendation_validation in graph state for per-item reasons."
+    ],
+    "errors": []
+  },
+  "tokens": {
+    "input": 43813,
+    "output": 32498,
+    "breakdown": {
+      "search_keywords": {
+        "input": 583,
+        "output": 1854,
+        "calls": 1
+      },
+      "triage_policies": {
+        "input": 795,
+        "output": 2441,
+        "calls": 1
+      },
+      "extract_rules": {
+        "input": 31749,
+        "output": 22696,
+        "calls": 7
+      },
+      "relevance_judge": {
+        "input": 2467,
+        "output": 1177,
+        "calls": 5
+      },
+      "dynamic_columns": {
+        "input": 1034,
+        "output": 540,
+        "calls": 1
+      },
+      "cell_summarization": {
+        "input": 835,
+        "output": 521,
+        "calls": 6
+      },
+      "elevance_summary": {
+        "input": 448,
+        "output": 178,
+        "calls": 1
+      },
+      "policy_recommendations": {
+        "input": 3636,
+        "output": 2380,
+        "calls": 1
+      },
+      "validate_recommendation": {
+        "input": 2266,
+        "output": 711,
+        "calls": 1
+      }
+    }
+  },
+  "execution": {
+    "start_time": "2026-08-22T19:38:05.467717+00:00",
+    "end_time": "2026-08-22T19:39:58.745969+00:00",
+    "duration_ms": 113278,
+    "version": "2.0.0"
+  }
+}
