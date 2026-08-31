@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<!-- saved from url=(0128)file:///C:/Users/AM65008/OneDrive%20-%20Elevance%20Health/Desktop/Cumulative%20Agent%20Run%20Analyzer%20%E2%80%94%20DR_PROD.html -->
+<html lang="en" data-theme=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cumulative Agent Run Analyzer — DR_PROD</title>
+<style>
+:root {
+  --ink:#1a1626;--ink-2:#3d3a52;--ground:#f6f5f8;--surface:#ffffff;--surface-2:#f0eef5;
+  --border:#e2e0eb;--muted:#7c7a8a;--accent:#5b4af7;--accent-lt:#ede9ve;
+  --amber:#e8900c;--amber-lt:#fef3c7;--emerald:#0da974;--emerald-lt:#d1fae5;
+  --font:'Neue Helvetica','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --mono:'Cascadia Code','Consolas','Courier New',monospace;
+  --radius:8px;--shadow:0 1px 3px rgba(26,22,38,.08),0 4px 16px rgba(26,22,38,.06);
+}
+:root{--accent-lt:#ede9fe}
+@media(prefers-color-scheme:dark){:root{
+  --ink:#f0eef8;--ink-2:#b0adca;--ground:#141220;--surface:#1e1b2e;--surface-2:#252238;
+  --border:#2e2b44;--muted:#6b688a;--accent:#7c6bff;--accent-lt:#2d2660;
+  --amber:#f5a623;--amber-lt:#3b2c00;--emerald:#10c97f;--emerald-lt:#063328;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --ink:#f0eef8;--ink-2:#b0adca;--ground:#141220;--surface:#1e1b2e;--surface-2:#252238;
+  --border:#2e2b44;--muted:#6b688a;--accent:#7c6bff;--accent-lt:#2d2660;
+  --amber:#f5a623;--amber-lt:#3b2c00;--emerald:#10c97f;--emerald-lt:#063328;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+:root[data-theme="light"]{
+  --ink:#1a1626;--ink-2:#3d3a52;--ground:#f6f5f8;--surface:#ffffff;--surface-2:#f0eef5;
+  --border:#e2e0eb;--muted:#7c7a8a;--accent:#5b4af7;--accent-lt:#ede9fe;
+  --amber:#e8900c;--amber-lt:#fef3c7;--emerald:#0da974;--emerald-lt:#d1fae5;
+  --shadow:0 1px 3px rgba(26,22,38,.08),0 4px 16px rgba(26,22,38,.06);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;font-family:var(--font);background:var(--ground);color:var(--ink);font-size:14px;line-height:1.5}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.page{max-width:1320px;margin:0 auto;padding:32px 24px 80px}
+
+/* HEADER */
+.page-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:36px;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:40px;height:40px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand-name{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
+.brand-sub{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;margin-top:2px}
+.hdr-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{font-size:10px;font-family:var(--mono);color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:3px 8px;border-radius:4px;white-space:nowrap}
+.tag strong{color:var(--ink-2)}
+
+/* SECTION LABEL */
+.slabel{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* PRICING PANEL */
+.ppanel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:28px}
+.ptoggle{width:100%;background:none;border:none;cursor:pointer;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--ink);font-family:var(--font);text-align:left}
+.ptoggle-title{font-size:13px;font-weight:800}
+.ptoggle-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.pchevron{transition:transform .2s;color:var(--muted);flex-shrink:0}
+.ptoggle.open .pchevron{transform:rotate(180deg)}
+.pbody{display:none;border-top:1px solid var(--border)}
+.pbody.open{display:block}
+.p2col{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.pnote{padding:12px 20px;font-size:11px;color:var(--muted);line-height:1.7}
+.pnote code{font-family:var(--mono);font-size:10px}
+
+/* TABLES */
+.ptbl{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+.ptbl th{padding:8px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);background:var(--surface-2);border-bottom:1px solid var(--border);white-space:nowrap}
+.ptbl th.r{text-align:right}
+.ptbl td{padding:8px 14px;border-bottom:1px solid var(--border);white-space:nowrap}
+.ptbl tr:last-child td{border-bottom:none}
+.ptbl td.r{text-align:right;font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+.ptbl td.rh{text-align:right;font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:700}
+.ptbl td.cost{text-align:right;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--amber)}
+.mchip{display:inline-block;font-size:10px;font-family:var(--mono);font-weight:700;padding:2px 7px;border-radius:3px;background:var(--accent-lt);color:var(--accent)}
+.mchip.nano{background:var(--emerald-lt);color:var(--emerald)}
+.mchip.mini{background:var(--amber-lt);color:var(--amber)}
+.bkey{font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+
+/* UPLOAD ZONES */
+.upload-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.drop-zone{border:2px dashed var(--border);border-radius:12px;background:var(--surface);padding:28px 20px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s}
+.drop-zone:hover,.drop-zone.dragging{border-color:var(--accent);background:var(--accent-lt)}
+.drop-zone.loaded{padding:14px 16px;border-style:solid;border-color:var(--emerald);background:var(--emerald-lt);text-align:left;cursor:default}
+.dz-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.drop-zone.loaded .dz-label{color:var(--emerald)}
+.drop-icon{width:36px;height:36px;margin:0 auto 10px;background:var(--accent-lt);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.drop-title{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.drop-sub{font-size:11px;color:var(--muted);line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:8px 18px;border-radius:6px;font-size:12px;font-weight:700;font-family:var(--font);cursor:pointer;transition:background .15s;margin-top:10px}
+.btn:hover{background:#4a39e6}
+.btn-ghost{background:var(--surface);border:1px solid var(--border);color:var(--ink-2);margin-top:6px}
+.btn-ghost:hover{background:var(--surface-2)}
+.btn-sm{padding:5px 12px;font-size:11px;margin-top:4px}
+
+/* PROGRESS */
+.progress-wrap{display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px}
+.progress-wrap.visible{display:block}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.progress-label{font-size:12px;font-weight:700;color:var(--ink-2)}
+.progress-count{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.progress-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:3px;width:0%;transition:width .25s}
+.ppills{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.mpill{font-size:10px;font-family:var(--mono);font-weight:700;padding:2px 9px;border-radius:4px;background:var(--surface-2);color:var(--muted);border:1px solid var(--border);transition:all .2s}
+.mpill.active{background:var(--accent-lt);color:var(--accent);border-color:var(--accent)}
+.mpill.done{background:var(--emerald-lt);color:var(--emerald);border-color:var(--emerald)}
+
+/* KPI STRIP */
+.kpi-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px;display:none}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.kpi-val{font-size:22px;font-weight:800;letter-spacing:-.5px;font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink);line-height:1}
+.ca{color:var(--accent)}.cb{color:var(--amber)}.cm{color:var(--muted)}.ce{color:var(--emerald)}
+.kpi-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.9px;font-weight:700;margin-top:7px}
+
+/* RESULTS SECTION */
+.results-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:20px}
+.rtbar{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.rt-title{font-size:13px;font-weight:800;color:var(--ink)}
+.rt-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.icon-btn{display:inline-flex;align-items:center;gap:5px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2);padding:6px 13px;border-radius:5px;font-size:11px;font-weight:700;font-family:var(--font);cursor:pointer;transition:all .15s;white-space:nowrap}
+.icon-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+thead th{background:var(--surface-2);color:var(--muted);padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;border-bottom:1px solid var(--border);white-space:nowrap}
+thead th.r{text-align:right}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:var(--surface-2)}
+td{padding:10px 14px;vertical-align:middle;white-space:nowrap}
+td.r{text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+td.hi{color:var(--ink);font-weight:700}
+td.cost-cell{text-align:right;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--amber)}
+tfoot tr{background:var(--surface-2);border-top:2px solid var(--border)}
+tfoot td{padding:10px 14px}
+tfoot td.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:700}
+tfoot td.r{text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink);font-weight:700}
+tfoot td.cost-cell{text-align:right;font-family:var(--mono);font-size:12px;color:var(--amber);font-weight:700}
+
+/* STAT MODEL + LOB BADGES */
+.mb{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:700}
+.mb-auth{background:#ede9fe;color:#5b4af7}
+.mb-med{background:#e0f2fe;color:#0369a1}
+.mb-oon{background:#d1fae5;color:#0da974}
+.lob-chip{display:inline-block;font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--border)}
+
+/* GROUP HEADER ROW */
+.group-row td{background:var(--surface-2);font-size:11px;font-weight:800;color:var(--ink-2);padding:8px 14px;border-top:2px solid var(--border)}
+.section-row td{background:var(--surface-2);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);padding:5px 14px}
+
+/* BAR */
+.bar-wrap{display:flex;align-items:center;gap:8px;min-width:100px}
+.bar-track{flex:1;height:5px;background:var(--border);border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px}
+.bar-pct{font-size:10px;font-family:var(--mono);color:var(--muted);width:30px;text-align:right}
+
+/* GRAND TOTAL BANNER */
+.grand-total{background:linear-gradient(135deg,var(--accent) 0%,#7c6bff 100%);border-radius:var(--radius);padding:20px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px;display:none;box-shadow:var(--shadow)}
+.gt-item{text-align:center}
+.gt-val{font-size:26px;font-weight:800;color:#fff;font-family:var(--mono);letter-spacing:-.5px;line-height:1}
+.gt-lbl{font-size:10px;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-top:5px}
+.gt-divider{width:1px;height:48px;background:rgba(255,255,255,.25)}
+
+/* HIDDEN FILE INPUTS */
+.hidden-input{display:none}
+
+@media(max-width:900px){.upload-grid{grid-template-columns:1fr}.kpi-strip{grid-template-columns:repeat(3,1fr)}.p2col{grid-template-columns:1fr}}
+@media(max-width:480px){.kpi-strip{grid-template-columns:repeat(2,1fr)}.page{padding:20px 14px 60px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M3 11h4l2-6 2 10 2-6 2 3h2" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle cx="17.5" cy="5.5" r="2" fill="#a5f3c8"></circle>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">Cumulative Agent Run Analyzer</div>
+      <div class="brand-sub">DR_PROD · All Stat Models · Cross-Model Cost &amp; Performance</div>
+    </div>
+  </div>
+  <div class="hdr-tags">
+    <span class="tag"><strong>Models</strong> IP AUTH · IP MED/SURG · OON</span>
+    <span class="tag"><strong>LLM</strong> gpt-5.4 · nano · mini</span>
+    <span class="tag"><strong>Period</strong> 202607 · Base 202604</span>
+  </div>
+</header>
+
+<!-- PRICING REFERENCE -->
+<div class="slabel">Pricing Model</div>
+<div class="ppanel">
+  <button class="ptoggle" id="ptoggle" onclick="toggleP()">
+    <div>
+      <div class="ptoggle-title">LLM Pipeline Pricing — Per Breakdown Step</div>
+      <div class="ptoggle-sub" id="ptoggle-sub">9 steps · blended $1.79/1M in · $10.78/1M out</div>
+    </div>
+    <svg class="pchevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <div class="pbody" id="pbody">
+    <div class="p2col">
+      <div>
+        <table class="ptbl">
+          <thead><tr><th>Breakdown Step</th><th>Model</th><th class="r">$/1M Input</th><th class="r">$/1M Output</th></tr></thead>
+          <tbody id="p-step-rows"><tr><td class="bkey">search_keywords</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td></tr><tr><td class="bkey">extract_rules_primary</td><td><span class="mchip nano">gpt-5.4-nano</span></td><td class="r">$0.20</td><td class="rh">$1.25</td></tr><tr><td class="bkey">extract_rules_retry</td><td><span class="mchip mini">gpt-5.4-mini</span></td><td class="r">$0.75</td><td class="rh">$4.50</td></tr><tr><td class="bkey">relevance_judge</td><td><span class="mchip nano">gpt-5.4-nano</span></td><td class="r">$0.20</td><td class="rh">$1.25</td></tr><tr><td class="bkey">dynamic_columns</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td></tr><tr><td class="bkey">cell_summarization</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td></tr><tr><td class="bkey">elevance_summary</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td></tr><tr><td class="bkey">policy_recommendations</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td></tr><tr><td class="bkey">validate_recommendation</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td></tr></tbody>
+        </table>
+      </div>
+      <div style="border-left:1px solid var(--border)">
+        <table class="ptbl">
+          <thead><tr><th>Model</th><th class="r">$/1M Input</th><th class="r">$/1M Output</th><th class="r">Steps</th></tr></thead>
+          <tbody id="p-model-rows"><tr><td><span class="mchip ">gpt-5.4</span></td><td class="r">$2.50</td><td class="rh">$15.00</td><td class="r">6</td></tr><tr><td><span class="mchip nano">gpt-5.4-nano</span></td><td class="r">$0.20</td><td class="rh">$1.25</td><td class="r">2</td></tr><tr><td><span class="mchip mini">gpt-5.4-mini</span></td><td class="r">$0.75</td><td class="rh">$4.50</td><td class="r">1</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pnote">
+      <strong>Token data source:</strong>
+      <code>reimbursement_response_*.json</code> → <code>tokens.breakdown.{step}</code> ·
+      <code>recommendation_response_*.json</code> → <code>result.tokens.breakdown.aggregated</code> ·
+      correlation &amp; pattern files → execution time only.
+    </div>
+  </div>
+</div>
+
+<!-- UPLOAD — 3 ZONES -->
+<div class="slabel">Step 1 — Upload Stat Model Folders (agents_results / payload / final_result)</div>
+<div class="upload-grid">
+
+  <!-- IP AUTH -->
+  <div>
+    <div class="dz-label">IP AUTH</div>
+    <div class="drop-zone loaded" id="dz-IP_AUTH" ondragover="onDragOver(event,&#39;IP_AUTH&#39;)" ondragleave="onDragLeave(&#39;IP_AUTH&#39;)" ondrop="onDrop(event,&#39;IP_AUTH&#39;)" onclick="triggerPicker(&#39;IP_AUTH&#39;)"><div style="display:flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11.5l5 5 11-11" stroke="var(--emerald)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><div><div class="drop-title" style="font-size:13px">732 files loaded</div><div class="drop-sub" style="font-size:11px;margin:0"><span class="mb mb-auth">IP AUTH</span></div></div></div><button class="btn btn-ghost btn-sm" style="margin-top:0;margin-left:auto" onclick="document.getElementById(&#39;fi-IP_AUTH&#39;).click()">Change</button></div>
+    <input type="file" id="fi-IP_AUTH" class="hidden-input" webkitdirectory="" multiple="" onchange="handleFiles(this.files,&#39;IP_AUTH&#39;)">
+  </div>
+
+  <!-- IP MED/SURG -->
+  <div>
+    <div class="dz-label">IP MED/SURG</div>
+    <div class="drop-zone loaded" id="dz-IP_Med_Surg" ondragover="onDragOver(event,&#39;IP_Med_Surg&#39;)" ondragleave="onDragLeave(&#39;IP_Med_Surg&#39;)" ondrop="onDrop(event,&#39;IP_Med_Surg&#39;)" onclick="triggerPicker(&#39;IP_Med_Surg&#39;)"><div style="display:flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11.5l5 5 11-11" stroke="var(--emerald)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><div><div class="drop-title" style="font-size:13px">498 files loaded</div><div class="drop-sub" style="font-size:11px;margin:0"><span class="mb mb-med">IP MED/SURG</span></div></div></div><button class="btn btn-ghost btn-sm" style="margin-top:0;margin-left:auto" onclick="document.getElementById(&#39;fi-IP_Med_Surg&#39;).click()">Change</button></div>
+    <input type="file" id="fi-IP_Med_Surg" class="hidden-input" webkitdirectory="" multiple="" onchange="handleFiles(this.files,&#39;IP_Med_Surg&#39;)">
+  </div>
+
+  <!-- OON -->
+  <div>
+    <div class="dz-label">OON</div>
+    <div class="drop-zone loaded" id="dz-OON" ondragover="onDragOver(event,&#39;OON&#39;)" ondragleave="onDragLeave(&#39;OON&#39;)" ondrop="onDrop(event,&#39;OON&#39;)" onclick="triggerPicker(&#39;OON&#39;)"><div style="display:flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11.5l5 5 11-11" stroke="var(--emerald)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><div><div class="drop-title" style="font-size:13px">496 files loaded</div><div class="drop-sub" style="font-size:11px;margin:0"><span class="mb mb-oon">OON</span></div></div></div><button class="btn btn-ghost btn-sm" style="margin-top:0;margin-left:auto" onclick="document.getElementById(&#39;fi-OON&#39;).click()">Change</button></div>
+    <input type="file" id="fi-OON" class="hidden-input" webkitdirectory="" multiple="" onchange="handleFiles(this.files,&#39;OON&#39;)">
+  </div>
+
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap visible" id="progress-wrap">
+  <div class="progress-header">
+    <span class="progress-label" id="progress-label">Complete — 3452 files processed</span>
+    <span class="progress-count" id="progress-count">3452 / 3452</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width: 100%;"></div></div>
+  <div class="ppills" id="ppills"><span class="mpill done" id="pill-IP_AUTH">IP AUTH</span><span class="mpill done" id="pill-IP_Med_Surg">IP MED/SURG</span><span class="mpill done" id="pill-OON">OON</span></div>
+</div>
+
+<!-- KPI STRIP -->
+<div class="kpi-strip" id="kpi-strip" style="display: grid;">
+  <div class="kpi"><div class="kpi-val ca" id="k-files">1,593</div><div class="kpi-lbl">Total Files</div></div>
+  <div class="kpi"><div class="kpi-val" id="k-runs">567</div><div class="kpi-lbl">HCC State Runs</div></div>
+  <div class="kpi"><div class="kpi-val cm" id="k-tokens">34.3M</div><div class="kpi-lbl">Total Tokens</div></div>
+  <div class="kpi"><div class="kpi-val cm" id="k-time">24h 52m</div><div class="kpi-lbl">Total Execution</div></div>
+  <div class="kpi"><div class="kpi-val cb" id="k-cost">$42.50</div><div class="kpi-lbl">Est. Total Cost</div></div>
+  <div class="kpi"><div class="kpi-val ce" id="k-models">3 / 3</div><div class="kpi-lbl">Stat Models Loaded</div></div>
+</div>
+
+<!-- GRAND TOTAL BANNER -->
+<div class="grand-total" id="grand-total" style="display: flex;">
+  <div class="gt-item"><div class="gt-val" id="gt-files">1,593</div><div class="gt-lbl">Total Files</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-runs">567</div><div class="gt-lbl">HCC Runs</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-tokens">34.3M</div><div class="gt-lbl">Total Tokens</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-time">24h 52m</div><div class="gt-lbl">Execution Time</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-cost">$42.50</div><div class="gt-lbl">Grand Total Cost</div></div>
+</div>
+
+<!-- RESULTS -->
+<div id="results-section" style="display: block;">
+
+  <div class="slabel" style="margin-top:8px">Step 2 — Execution &amp; Cost Summary</div>
+
+  <!-- SUMMARY BY STAT MODEL + LOB -->
+  <div class="results-wrap">
+    <div class="rtbar">
+      <div>
+        <div class="rt-title">Summary by Stat Model &amp; LOB</div>
+        <div class="rt-sub" id="rt-sub1">Generated Aug 31, 2026 · Token source: reimbursement_response + recommendation_response</div>
+      </div>
+      <button class="icon-btn" onclick="exportCSV()">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M6 1v5.5M3.5 4.5L6 7 8.5 4.5M1 9v.5A1.5 1.5 0 002.5 11h7A1.5 1.5 0 0011 9.5V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>Export CSV
+      </button>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr>
+          <th>Stat Model</th>
+          <th>LOB</th>
+          <th class="r">Files</th>
+          <th class="r">HCC Runs</th>
+          <th class="r">Execution Time</th>
+          <th class="r">Input Tokens</th>
+          <th class="r">Output Tokens</th>
+          <th class="r">Total Tokens</th>
+          <th class="r" style="min-width:100px">Share</th>
+          <th class="r">Est. Cost</th>
+        </tr></thead>
+        <tbody id="lob-body"><tr class="group-row"><td colspan="10"><span class="mb mb-auth">IP AUTH</span> &nbsp; <span style="font-size:10px;font-weight:400;color:var(--muted)">679 files · 12h 39m · $18.92</span></td></tr><tr><td></td><td><span class="lob-chip">Commercial Individual</span></td><td class="r">207</td><td class="r">81</td><td class="r">4h 1m</td><td class="r">4.7M</td><td class="r">1.7M</td><td class="r hi">6.3M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:19%;background:#5b4af7"></div></div><span class="bar-pct">19%</span></div></td><td class="cost-cell">$9.32</td></tr><tr><td></td><td><span class="lob-chip">Commercial Local Group</span></td><td class="r">94</td><td class="r">34</td><td class="r">1h 54m</td><td class="r">2.2M</td><td class="r">747.5K</td><td class="r hi">2.9M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:9%;background:#5b4af7"></div></div><span class="bar-pct">9%</span></div></td><td class="cost-cell">$3.38</td></tr><tr><td></td><td><span class="lob-chip">Medicaid</span></td><td class="r">194</td><td class="r">41</td><td class="r">3h 13m</td><td class="r">1.4M</td><td class="r">775.8K</td><td class="r hi">2.2M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:6%;background:#5b4af7"></div></div><span class="bar-pct">6%</span></div></td><td class="cost-cell">$2.89</td></tr><tr><td></td><td><span class="lob-chip">Medicare Indiv</span></td><td class="r">92</td><td class="r">42</td><td class="r">2h 3m</td><td class="r">1.1M</td><td class="r">456.8K</td><td class="r hi">1.6M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:5%;background:#5b4af7"></div></div><span class="bar-pct">5%</span></div></td><td class="cost-cell">$2.01</td></tr><tr><td></td><td><span class="lob-chip">Medicare GRS</span></td><td class="r">92</td><td class="r">22</td><td class="r">1h 26m</td><td class="r">843.3K</td><td class="r">274.4K</td><td class="r hi">1.1M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:3%;background:#5b4af7"></div></div><span class="bar-pct">3%</span></div></td><td class="cost-cell">$1.33</td></tr><tr class="group-row"><td colspan="10"><span class="mb mb-med">IP MED/SURG</span> &nbsp; <span style="font-size:10px;font-weight:400;color:var(--muted)">458 files · 7h 53m · $12.31</span></td></tr><tr><td></td><td><span class="lob-chip">Commercial Individual</span></td><td class="r">92</td><td class="r">39</td><td class="r">1h 36m</td><td class="r">1.6M</td><td class="r">521.1K</td><td class="r hi">2.1M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:6%;background:#0369a1"></div></div><span class="bar-pct">6%</span></div></td><td class="cost-cell">$2.44</td></tr><tr><td></td><td><span class="lob-chip">Commercial Local Group</span></td><td class="r">92</td><td class="r">35</td><td class="r">1h 37m</td><td class="r">2.4M</td><td class="r">652.3K</td><td class="r hi">3.1M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:9%;background:#0369a1"></div></div><span class="bar-pct">9%</span></div></td><td class="cost-cell">$3.06</td></tr><tr><td></td><td><span class="lob-chip">Medicaid</span></td><td class="r">92</td><td class="r">42</td><td class="r">1h 45m</td><td class="r">1.1M</td><td class="r">539.3K</td><td class="r hi">1.7M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:5%;background:#0369a1"></div></div><span class="bar-pct">5%</span></div></td><td class="cost-cell">$2.55</td></tr><tr><td></td><td><span class="lob-chip">Medicare Indiv</span></td><td class="r">92</td><td class="r">41</td><td class="r">1h 34m</td><td class="r">1.2M</td><td class="r">427.0K</td><td class="r hi">1.6M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:5%;background:#0369a1"></div></div><span class="bar-pct">5%</span></div></td><td class="cost-cell">$2.13</td></tr><tr><td></td><td><span class="lob-chip">Medicare GRS</span></td><td class="r">90</td><td class="r">25</td><td class="r">1h 18m</td><td class="r">1.2M</td><td class="r">463.6K</td><td class="r hi">1.7M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:5%;background:#0369a1"></div></div><span class="bar-pct">5%</span></div></td><td class="cost-cell">$2.12</td></tr><tr class="group-row"><td colspan="10"><span class="mb mb-oon">OON</span> &nbsp; <span style="font-size:10px;font-weight:400;color:var(--muted)">456 files · 4h 19m · $11.27</span></td></tr><tr><td></td><td><span class="lob-chip">Commercial Individual</span></td><td class="r">92</td><td class="r">31</td><td class="r">1h 2m</td><td class="r">2.2M</td><td class="r">900.2K</td><td class="r hi">3.1M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:9%;background:#0da974"></div></div><span class="bar-pct">9%</span></div></td><td class="cost-cell">$3.28</td></tr><tr><td></td><td><span class="lob-chip">Commercial Local Group</span></td><td class="r">90</td><td class="r">33</td><td class="r">47m 6s</td><td class="r">1.0M</td><td class="r">424.2K</td><td class="r hi">1.5M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:4%;background:#0da974"></div></div><span class="bar-pct">4%</span></div></td><td class="cost-cell">$2.19</td></tr><tr><td></td><td><span class="lob-chip">Medicaid</span></td><td class="r">90</td><td class="r">22</td><td class="r">33m 50s</td><td class="r">803.9K</td><td class="r">224.1K</td><td class="r hi">1.0M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:3%;background:#0da974"></div></div><span class="bar-pct">3%</span></div></td><td class="cost-cell">$1.03</td></tr><tr><td></td><td><span class="lob-chip">Medicare Indiv</span></td><td class="r">92</td><td class="r">41</td><td class="r">1h 3m</td><td class="r">1.8M</td><td class="r">539.9K</td><td class="r hi">2.3M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:7%;background:#0da974"></div></div><span class="bar-pct">7%</span></div></td><td class="cost-cell">$2.51</td></tr><tr><td></td><td><span class="lob-chip">Medicare GRS</span></td><td class="r">92</td><td class="r">38</td><td class="r">52m 2s</td><td class="r">1.5M</td><td class="r">515.1K</td><td class="r hi">2.0M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:6%;background:#0da974"></div></div><span class="bar-pct">6%</span></div></td><td class="cost-cell">$2.26</td></tr></tbody>
+        <tfoot id="lob-foot" style=""><tr>
+          <td class="lbl" colspan="2">Grand Total</td>
+          <td class="r" id="lf-files">1,593</td>
+          <td class="r" id="lf-runs">567</td>
+          <td class="r" id="lf-time">24h 52m</td>
+          <td class="r" id="lf-input">25.1M</td>
+          <td class="r" id="lf-output">9.1M</td>
+          <td class="r hi" id="lf-total">34.3M</td>
+          <td></td>
+          <td class="cost-cell" id="lf-cost">$42.50</td>
+        </tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- COST BREAKDOWN BY STEP -->
+  <div class="results-wrap">
+    <div class="rtbar">
+      <div>
+        <div class="rt-title">Cost Breakdown by Pipeline Step</div>
+        <div class="rt-sub">Aggregated across all stat models and LOBs</div>
+      </div>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr>
+          <th>Pipeline Step</th>
+          <th>Model</th>
+          <th class="r">Calls</th>
+          <th class="r">Input Tokens</th>
+          <th class="r">Output Tokens</th>
+          <th class="r">$/1M In</th>
+          <th class="r">$/1M Out</th>
+          <th class="r">Est. Cost</th>
+        </tr></thead>
+        <tbody id="step-body"><tr class="section-row"><td colspan="8">gpt-5.4</td></tr><tr><td class="bkey">search_keywords</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">878</td><td class="r">479.0K</td><td class="r">450.1K</td><td class="r">$2.50</td><td class="r">$15.00</td><td class="cost-cell">$7.95</td></tr><tr class="section-row"><td colspan="8">gpt-5.4-nano</td></tr><tr><td class="bkey">extract_rules_primary</td><td><span class="mchip nano">gpt-5.4-nano</span></td><td class="r">4,684</td><td class="r">41.0M</td><td class="r">14.2M</td><td class="r">$0.20</td><td class="r">$1.25</td><td class="cost-cell">$25.98</td></tr><tr class="section-row"><td colspan="8">gpt-5.4-mini</td></tr><tr><td class="bkey">extract_rules_retry</td><td><span class="mchip mini">gpt-5.4-mini</span></td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">$0.75</td><td class="r">$4.50</td><td class="cost-cell">$0.00</td></tr><tr class="section-row"><td colspan="8">gpt-5.4-nano</td></tr><tr><td class="bkey">relevance_judge</td><td><span class="mchip nano">gpt-5.4-nano</span></td><td class="r">3,086</td><td class="r">3.6M</td><td class="r">1.2M</td><td class="r">$0.20</td><td class="r">$1.25</td><td class="cost-cell">$2.21</td></tr><tr class="section-row"><td colspan="8">gpt-5.4</td></tr><tr><td class="bkey">dynamic_columns</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">774</td><td class="r">654.1K</td><td class="r">436.9K</td><td class="r">$2.50</td><td class="r">$15.00</td><td class="cost-cell">$8.19</td></tr><tr><td class="bkey">cell_summarization</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">2,964</td><td class="r">440.4K</td><td class="r">320.9K</td><td class="r">$2.50</td><td class="r">$15.00</td><td class="cost-cell">$5.91</td></tr><tr><td class="bkey">elevance_summary</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">324</td><td class="r">123.7K</td><td class="r">71.1K</td><td class="r">$2.50</td><td class="r">$15.00</td><td class="cost-cell">$1.38</td></tr><tr><td class="bkey">policy_recommendations</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">906</td><td class="r">3.0M</td><td class="r">1.4M</td><td class="r">$2.50</td><td class="r">$15.00</td><td class="cost-cell">$27.98</td></tr><tr><td class="bkey">validate_recommendation</td><td><span class="mchip ">gpt-5.4</span></td><td class="r">414</td><td class="r">922.4K</td><td class="r">207.0K</td><td class="r">$2.50</td><td class="r">$15.00</td><td class="cost-cell">$5.41</td></tr></tbody>
+        <tfoot id="step-foot" style=""><tr>
+          <td class="lbl" colspan="3">Total</td>
+          <td class="r" id="sf-input">50.3M</td>
+          <td class="r" id="sf-output">18.3M</td>
+          <td colspan="2"></td>
+          <td class="cost-cell" id="sf-cost">$85.00</td>
+        </tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- PER-MODEL COST BREAKDOWN -->
+  <div class="results-wrap">
+    <div class="rtbar">
+      <div>
+        <div class="rt-title">Cost by Stat Model</div>
+        <div class="rt-sub">Side-by-side comparison of IP AUTH vs IP MED/SURG vs OON</div>
+      </div>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr>
+          <th>Stat Model</th>
+          <th class="r">Files</th>
+          <th class="r">HCC Runs</th>
+          <th class="r">Execution Time</th>
+          <th class="r">Input Tokens</th>
+          <th class="r">Output Tokens</th>
+          <th class="r">Total Tokens</th>
+          <th class="r" style="min-width:100px">Share</th>
+          <th class="r">Est. Cost</th>
+        </tr></thead>
+        <tbody id="model-body"><tr><td><span class="mb mb-auth">IP AUTH</span></td><td class="r">679</td><td class="r">220</td><td class="r">12h 39m</td><td class="r">10.2M</td><td class="r">3.9M</td><td class="r hi">14.2M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:41%;background:#5b4af7"></div></div><span class="bar-pct">41%</span></div></td><td class="cost-cell">$18.92</td></tr><tr><td><span class="mb mb-med">IP MED/SURG</span></td><td class="r">458</td><td class="r">182</td><td class="r">7h 53m</td><td class="r">7.6M</td><td class="r">2.6M</td><td class="r hi">10.2M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:30%;background:#0369a1"></div></div><span class="bar-pct">30%</span></div></td><td class="cost-cell">$12.31</td></tr><tr><td><span class="mb mb-oon">OON</span></td><td class="r">456</td><td class="r">165</td><td class="r">4h 19m</td><td class="r">7.3M</td><td class="r">2.6M</td><td class="r hi">9.9M</td><td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:29%;background:#0da974"></div></div><span class="bar-pct">29%</span></div></td><td class="cost-cell">$11.27</td></tr></tbody>
+        <tfoot id="model-foot" style=""><tr>
+          <td class="lbl">Total</td>
+          <td class="r" id="f-files">1,593</td>
+          <td class="r" id="f-runs">567</td>
+          <td class="r" id="f-time">24h 52m</td>
+          <td class="r" id="f-input">25.1M</td>
+          <td class="r" id="f-output">9.1M</td>
+          <td class="r hi" id="f-total">34.3M</td>
+          <td></td>
+          <td class="cost-cell" id="f-cost">$42.50</td>
+        </tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /results-section -->
+
+</div><!-- /page -->
+
+<script>
+/* ─── PRICING ─── */
+var PRICING_STEPS = [
+  { key:'search_keywords',        model:'gpt-5.4',      in:2.50, out:15.0,  cls:'' },
+  { key:'extract_rules_primary',  model:'gpt-5.4-nano', in:0.20, out:1.25,  cls:'nano' },
+  { key:'extract_rules_retry',    model:'gpt-5.4-mini', in:0.75, out:4.50,  cls:'mini' },
+  { key:'relevance_judge',        model:'gpt-5.4-nano', in:0.20, out:1.25,  cls:'nano' },
+  { key:'dynamic_columns',        model:'gpt-5.4',      in:2.50, out:15.0,  cls:'' },
+  { key:'cell_summarization',     model:'gpt-5.4',      in:2.50, out:15.0,  cls:'' },
+  { key:'elevance_summary',       model:'gpt-5.4',      in:2.50, out:15.0,  cls:'' },
+  { key:'policy_recommendations', model:'gpt-5.4',      in:2.50, out:15.0,  cls:'' },
+  { key:'validate_recommendation',model:'gpt-5.4',      in:2.50, out:15.0,  cls:'' }
+];
+var KEY_MAP = {
+  'search_keywords':        'search_keywords',
+  'extract_rules':          'extract_rules_primary',
+  'relevance_judge':        'relevance_judge',
+  'dynamic_columns':        'dynamic_columns',
+  'cell_summarization':     'cell_summarization',
+  'elevance_summary':       'elevance_summary',
+  'policy_recommendations': 'policy_recommendations',
+  'validate_recommendation':'validate_recommendation',
+  'relevance_checks':       'relevance_judge',
+  'recommendations':        'policy_recommendations'
+};
+var PRICE = {};
+PRICING_STEPS.forEach(function(p){ PRICE[p.key]=p; });
+var BLD_IN  = PRICING_STEPS.reduce(function(s,p){return s+p.in;},0)/PRICING_STEPS.length;
+var BLD_OUT = PRICING_STEPS.reduce(function(s,p){return s+p.out;},0)/PRICING_STEPS.length;
+
+/* ─── STAT MODELS ─── */
+var STAT_MODELS = {
+  'IP_AUTH':    { label:'IP AUTH',     cls:'mb-auth', color:'#5b4af7' },
+  'IP_Med_Surg':{ label:'IP MED/SURG', cls:'mb-med',  color:'#0369a1' },
+  'OON':        { label:'OON',         cls:'mb-oon',  color:'#0da974'  }
+};
+
+/* LOBs in display order */
+var LOB_ORDER = ['Commercial_Individual','Commercial_Local_Group','Medicaid','Medicare_Indiv','Medicare_GRS'];
+var LOB_LABELS = {
+  'Commercial_Individual':  'Commercial Individual',
+  'Commercial_Local_Group': 'Commercial Local Group',
+  'Medicaid':               'Medicaid',
+  'Medicare_Indiv':         'Medicare Indiv',
+  'Medicare_GRS':           'Medicare GRS'
+};
+
+/* ─── STATE ─── */
+/* lobStats[statModel][lob] = { files, runs, durationMs, steps:{} } */
+var lobStats = {};
+var globalSteps = {};
+
+function initStep(){ var o={}; PRICING_STEPS.forEach(function(p){o[p.key]={in:0,out:0,calls:0};}); return o; }
+
+function resetAll(){
+  lobStats = {};
+  globalSteps = initStep();
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    lobStats[sm] = {};
+  });
+}
+resetAll();
+
+function ensureLOB(sm, lob){
+  if(!lobStats[sm]) lobStats[sm]={};
+  if(!lobStats[sm][lob]) lobStats[sm][lob]={ files:0, runs:0, durationMs:0, steps:initStep() };
+}
+
+/* ─── PRICING PANEL INIT ─── */
+(function(){
+  var rows = PRICING_STEPS.map(function(p){
+    return '<tr><td class="bkey">'+p.key+'</td><td><span class="mchip '+p.cls+'">'+p.model+'</span></td>'+
+      '<td class="r">$'+p.in.toFixed(2)+'</td><td class="rh">$'+p.out.toFixed(2)+'</td></tr>';
+  });
+  document.getElementById('p-step-rows').innerHTML = rows.join('');
+  var byModel = {};
+  PRICING_STEPS.forEach(function(p){
+    if(!byModel[p.model]) byModel[p.model]={in:p.in,out:p.out,cls:p.cls,count:0};
+    byModel[p.model].count++;
+  });
+  document.getElementById('p-model-rows').innerHTML = Object.keys(byModel).map(function(m){
+    var d=byModel[m];
+    return '<tr><td><span class="mchip '+d.cls+'">'+m+'</span></td>'+
+      '<td class="r">$'+d.in.toFixed(2)+'</td><td class="rh">$'+d.out.toFixed(2)+'</td><td class="r">'+d.count+'</td></tr>';
+  }).join('');
+  document.getElementById('ptoggle-sub').textContent =
+    '9 steps · blended $'+BLD_IN.toFixed(2)+'/1M in · $'+BLD_OUT.toFixed(2)+'/1M out';
+})();
+
+function toggleP(){
+  var b=document.getElementById('pbody'),t=document.getElementById('ptoggle');
+  b.classList.toggle('open'); t.classList.toggle('open',b.classList.contains('open'));
+}
+
+/* ─── DRAG/DROP ─── */
+function triggerPicker(sm){ document.getElementById('fi-'+sm).click(); }
+function onDragOver(e,sm){ e.preventDefault(); document.getElementById('dz-'+sm).classList.add('dragging'); }
+function onDragLeave(sm){ document.getElementById('dz-'+sm).classList.remove('dragging'); }
+function onDrop(e,sm){ e.preventDefault(); document.getElementById('dz-'+sm).classList.remove('dragging'); handleFiles(e.dataTransfer.files,sm); }
+
+/* ─── HANDLE FILES ─── */
+var _loadedModels = {};
+var _totalFilesGlobal = 0;
+var _doneFilesGlobal  = 0;
+
+function handleFiles(fileList, sm){
+  var files = Array.from(fileList).filter(function(f){
+    var p=(f.webkitRelativePath||f.name).replace(/\\/g,'/');
+    return (p.indexOf('agents_results/')!==-1 || p.indexOf('payload/')!==-1 || p.indexOf('final_result/')!==-1) && f.name.endsWith('.json');
+  });
+  if(!files.length){ alert('No agents_results/, payload/, or final_result/ JSON files found.\nSelect the root folder for '+sm+'.'); return; }
+
+  /* Mark model as loaded in drop zone */
+  var dz = document.getElementById('dz-'+sm);
+  var smCfg = STAT_MODELS[sm]||{label:sm,cls:'',color:'#888'};
+  dz.classList.add('loaded'); dz.onclick=null;
+  dz.innerHTML = '<div style="display:flex;align-items:center;gap:10px">'+
+    '<svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11.5l5 5 11-11" stroke="var(--emerald)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
+    '<div><div class="drop-title" style="font-size:13px">'+files.length+' files loaded</div>'+
+    '<div class="drop-sub" style="font-size:11px;margin:0"><span class="mb '+smCfg.cls+'">'+smCfg.label+'</span></div></div></div>'+
+    '<button class="btn btn-ghost btn-sm" style="margin-top:0;margin-left:auto" onclick="document.getElementById(\'fi-'+sm+'\').click()">Change</button>';
+
+  _loadedModels[sm] = true;
+
+  /* Reset this model's LOB data */
+  lobStats[sm] = {};
+
+  /* Progress pills */
+  var pw = document.getElementById('progress-wrap');
+  pw.classList.add('visible');
+  var pillsEl = document.getElementById('ppills');
+  var existing = document.getElementById('pill-'+sm);
+  if(!existing){
+    var sp = document.createElement('span');
+    sp.className='mpill active';
+    sp.id='pill-'+sm;
+    sp.textContent=smCfg.label;
+    pillsEl.appendChild(sp);
+  } else {
+    existing.className='mpill active';
+  }
+
+  _totalFilesGlobal += files.length;
+  processFiles(files, sm);
+}
+
+/* ─── PROCESS ─── */
+function processFiles(files, sm){
+  var total=files.length, done=0, BATCH=10;
+  function batch(start){
+    var end=Math.min(start+BATCH,total), pend=end-start;
+    if(!pend){ onModelDone(sm,total); return; }
+    for(var i=start;i<end;i++){
+      (function(file){
+        var r=new FileReader();
+        r.onload=function(ev){
+          try{ parseFile(ev.target.result, sm, file.name); }catch(e){}
+          done++; _doneFilesGlobal++;
+          tick(_doneFilesGlobal, _totalFilesGlobal, sm);
+          if(!--pend){ done<total?setTimeout(function(){batch(done);},0):onModelDone(sm,total); }
+        };
+        r.onerror=function(){ done++; _doneFilesGlobal++; if(!--pend){ done<total?setTimeout(function(){batch(done);},0):onModelDone(sm,total); } };
+        r.readAsText(file);
+      })(files[i]);
+    }
+  }
+  batch(0);
+}
+
+/* ─── PARSE ─── */
+function parseLOB(fname){
+  /* e.g. reimbursement_response_tutorial-IP_AUTH-Medicaid-202607-R12-202604_3.json */
+  var base = fname.replace(/^(reimbursement|recommendation|correlation|pattern)_response_/,'').replace('.json','');
+  var parts = base.split('-');
+  /* parts: tutorial, IP_AUTH, <LOB>, <period>, <trend>, <base>[_N] */
+  return parts.length >= 3 ? parts[2] : '';
+}
+
+function parseFile(text, sm, fname){
+  var obj;
+  try{ obj=JSON.parse(text); }catch(e){ return; }
+  if(!obj || typeof obj !== 'object' || Array.isArray(obj)) return;
+
+  var lob = parseLOB(fname);
+  if(!lob) return;
+  ensureLOB(sm, lob);
+  var s = lobStats[sm][lob];
+  s.files++;
+
+  if(fname.startsWith('reimbursement') && obj.tokens){
+    var bdown=obj.tokens.breakdown||{};
+    Object.keys(bdown).forEach(function(fk){
+      var pk=KEY_MAP[fk]; if(!pk) return;
+      var d=bdown[fk];
+      var inp=d.input||0, out=d.output||0, calls=d.calls||0;
+      s.steps[pk].in+=inp; s.steps[pk].out+=out; s.steps[pk].calls+=calls;
+      globalSteps[pk].in+=inp; globalSteps[pk].out+=out; globalSteps[pk].calls+=calls;
+    });
+    if(obj.execution && obj.execution.duration_ms){ s.durationMs+=obj.execution.duration_ms; s.runs++; }
+  }
+  else if(fname.startsWith('recommendation') && obj.result && obj.result.tokens){
+    var agg=(obj.result.tokens.breakdown||{}).aggregated||{};
+    Object.keys(agg).forEach(function(fk){
+      var pk=KEY_MAP[fk]; if(!pk) return;
+      var d=agg[fk];
+      var inp=d.input||0, out=d.output||0, calls=d.calls||0;
+      s.steps[pk].in+=inp; s.steps[pk].out+=out; s.steps[pk].calls+=calls;
+      globalSteps[pk].in+=inp; globalSteps[pk].out+=out; globalSteps[pk].calls+=calls;
+    });
+    if(obj.result.execution && obj.result.execution.duration_ms){ s.durationMs+=obj.result.execution.duration_ms; }
+  }
+  else {
+    ['states','providers','drgs','procs'].forEach(function(sec){
+      var section=obj[sec];
+      if(!section||typeof section!=='object') return;
+      Object.values(section).forEach(function(entry){
+        if(entry && entry.execution && entry.execution.duration_ms){
+          s.durationMs+=entry.execution.duration_ms;
+          if(sec==='states') s.runs++;
+        }
+      });
+    });
+    if(obj.execution && obj.execution.duration_ms && !obj.states){ s.durationMs+=obj.execution.duration_ms; }
+  }
+}
+
+var _lastRender=0;
+function tick(done,total,sm){
+  var pct=total>0?Math.round(done/total*100):0;
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-count').textContent=done+' / '+total;
+  document.getElementById('progress-label').textContent='Processing… '+pct+'%';
+  if(Date.now()-_lastRender>300){ _lastRender=Date.now(); renderAll(); }
+}
+
+function onModelDone(sm, count){
+  var pill=document.getElementById('pill-'+sm);
+  if(pill){ pill.classList.remove('active'); pill.classList.add('done'); }
+  var allDone = Object.keys(_loadedModels).every(function(k){
+    return document.getElementById('pill-'+k) && document.getElementById('pill-'+k).classList.contains('done');
+  });
+  if(allDone){
+    document.getElementById('progress-label').textContent='Complete — '+_doneFilesGlobal+' files processed';
+    document.getElementById('progress-fill').style.width='100%';
+  }
+  renderAll();
+  updateKPIs();
+  document.getElementById('results-section').style.display='block';
+  document.getElementById('kpi-strip').style.display='grid';
+  document.getElementById('grand-total').style.display='flex';
+}
+
+/* ─── COST HELPERS ─── */
+function stepCost(pkey,inp,out){ var p=PRICE[pkey]; if(!p) return 0; return (inp/1e6)*p.in+(out/1e6)*p.out; }
+function lobTotalIn(s){ return Object.values(s.steps).reduce(function(a,v){return a+v.in;},0); }
+function lobTotalOut(s){ return Object.values(s.steps).reduce(function(a,v){return a+v.out;},0); }
+function lobCost(s){ return Object.keys(s.steps).reduce(function(a,k){return a+stepCost(k,s.steps[k].in,s.steps[k].out);},0); }
+
+/* ─── FORMAT ─── */
+function fN(n){return n.toLocaleString();}
+function fMs(ms){var s=Math.round(ms/1000),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sc=s%60;return h>0?h+'h '+m+'m':m>0?m+'m '+sc+'s':sc+'s';}
+function fT(n){if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return String(n);}
+function fC(c){return '$'+c.toFixed(2);}
+
+/* ─── RENDER ─── */
+function renderAll(){ renderLOBTable(); renderModelTable(); renderStepTable(); }
+
+function renderLOBTable(){
+  /* Compute grand total tokens for share bar */
+  var grandTok=0;
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      grandTok+=lobTotalIn(s)+lobTotalOut(s);
+    });
+  });
+
+  var html='';
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    var smCfg=STAT_MODELS[sm];
+    var smLOBs=Object.keys(lobStats[sm]);
+    if(!smLOBs.length) return;
+
+    /* Stat model group header */
+    var smFiles=0,smRuns=0,smDur=0,smIn=0,smOut=0,smCost=0;
+    smLOBs.forEach(function(lob){
+      var s=lobStats[sm][lob];
+      smFiles+=s.files; smRuns+=s.runs; smDur+=s.durationMs;
+      smIn+=lobTotalIn(s); smOut+=lobTotalOut(s); smCost+=lobCost(s);
+    });
+
+    html+='<tr class="group-row"><td colspan="10"><span class="mb '+smCfg.cls+'">'+smCfg.label+'</span>'+
+      ' &nbsp; <span style="font-size:10px;font-weight:400;color:var(--muted)">'+smFiles+' files · '+fMs(smDur)+' · '+fC(smCost)+'</span></td></tr>';
+
+    /* LOB rows under this stat model */
+    LOB_ORDER.concat(smLOBs.filter(function(l){return LOB_ORDER.indexOf(l)===-1;})).forEach(function(lob){
+      if(!lobStats[sm][lob]) return;
+      var s=lobStats[sm][lob];
+      var inp=lobTotalIn(s), out=lobTotalOut(s), tok=inp+out, cost=lobCost(s);
+      var pct=grandTok>0?Math.round(tok/grandTok*100):0;
+      html+='<tr>'+
+        '<td></td>'+
+        '<td><span class="lob-chip">'+(LOB_LABELS[lob]||lob)+'</span></td>'+
+        '<td class="r">'+fN(s.files)+'</td>'+
+        '<td class="r">'+fN(s.runs)+'</td>'+
+        '<td class="r">'+fMs(s.durationMs)+'</td>'+
+        '<td class="r">'+fT(inp)+'</td>'+
+        '<td class="r">'+fT(out)+'</td>'+
+        '<td class="r hi">'+fT(tok)+'</td>'+
+        '<td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+smCfg.color+'"></div></div><span class="bar-pct">'+pct+'%</span></div></td>'+
+        '<td class="cost-cell">'+fC(cost)+'</td>'+
+      '</tr>';
+    });
+  });
+  document.getElementById('lob-body').innerHTML=html;
+
+  /* Footer totals */
+  var tf=0,tr=0,td=0,ti=0,to=0,tc=0;
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      tf+=s.files; tr+=s.runs; td+=s.durationMs;
+      ti+=lobTotalIn(s); to+=lobTotalOut(s); tc+=lobCost(s);
+    });
+  });
+  document.getElementById('lf-files').textContent=fN(tf);
+  document.getElementById('lf-runs').textContent=fN(tr);
+  document.getElementById('lf-time').textContent=fMs(td);
+  document.getElementById('lf-input').textContent=fT(ti);
+  document.getElementById('lf-output').textContent=fT(to);
+  document.getElementById('lf-total').textContent=fT(ti+to);
+  document.getElementById('lf-cost').textContent=fC(tc);
+  document.getElementById('lob-foot').style.display='';
+
+  var d=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  document.getElementById('rt-sub1').textContent='Generated '+d+' · Token source: reimbursement_response + recommendation_response';
+}
+
+function renderModelTable(){
+  var grandTok=0;
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    Object.keys(lobStats[sm]).forEach(function(lob){var s=lobStats[sm][lob];grandTok+=lobTotalIn(s)+lobTotalOut(s);});
+  });
+
+  var html=Object.keys(STAT_MODELS).map(function(sm){
+    var smCfg=STAT_MODELS[sm];
+    if(!lobStats[sm]) return '';
+    var files=0,runs=0,dur=0,inp=0,out=0,cost=0;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      files+=s.files; runs+=s.runs; dur+=s.durationMs;
+      inp+=lobTotalIn(s); out+=lobTotalOut(s); cost+=lobCost(s);
+    });
+    var tok=inp+out, pct=grandTok>0?Math.round(tok/grandTok*100):0;
+    return '<tr>'+
+      '<td><span class="mb '+smCfg.cls+'">'+smCfg.label+'</span></td>'+
+      '<td class="r">'+fN(files)+'</td>'+
+      '<td class="r">'+fN(runs)+'</td>'+
+      '<td class="r">'+fMs(dur)+'</td>'+
+      '<td class="r">'+fT(inp)+'</td>'+
+      '<td class="r">'+fT(out)+'</td>'+
+      '<td class="r hi">'+fT(tok)+'</td>'+
+      '<td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+smCfg.color+'"></div></div><span class="bar-pct">'+pct+'%</span></div></td>'+
+      '<td class="cost-cell">'+fC(cost)+'</td>'+
+    '</tr>';
+  }).join('');
+  document.getElementById('model-body').innerHTML=html;
+
+  var tf=0,tr=0,td=0,ti=0,to=0,tc=0;
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      tf+=s.files; tr+=s.runs; td+=s.durationMs;
+      ti+=lobTotalIn(s); to+=lobTotalOut(s); tc+=lobCost(s);
+    });
+  });
+  document.getElementById('f-files').textContent=fN(tf);
+  document.getElementById('f-runs').textContent=fN(tr);
+  document.getElementById('f-time').textContent=fMs(td);
+  document.getElementById('f-input').textContent=fT(ti);
+  document.getElementById('f-output').textContent=fT(to);
+  document.getElementById('f-total').textContent=fT(ti+to);
+  document.getElementById('f-cost').textContent=fC(tc);
+  document.getElementById('model-foot').style.display='';
+}
+
+function renderStepTable(){
+  var html='', lastModel=null;
+  PRICING_STEPS.forEach(function(p){
+    var g=globalSteps[p.key]||{in:0,out:0,calls:0};
+    var cost=stepCost(p.key,g.in,g.out);
+    if(p.model!==lastModel){
+      html+='<tr class="section-row"><td colspan="8">'+p.model+'</td></tr>';
+      lastModel=p.model;
+    }
+    html+='<tr>'+
+      '<td class="bkey">'+p.key+'</td>'+
+      '<td><span class="mchip '+p.cls+'">'+p.model+'</span></td>'+
+      '<td class="r">'+fN(g.calls)+'</td>'+
+      '<td class="r">'+fT(g.in)+'</td>'+
+      '<td class="r">'+fT(g.out)+'</td>'+
+      '<td class="r">$'+p.in.toFixed(2)+'</td>'+
+      '<td class="r">$'+p.out.toFixed(2)+'</td>'+
+      '<td class="cost-cell">'+fC(cost)+'</td>'+
+    '</tr>';
+  });
+  document.getElementById('step-body').innerHTML=html;
+  var ti=Object.values(globalSteps).reduce(function(s,v){return s+v.in;},0);
+  var to=Object.values(globalSteps).reduce(function(s,v){return s+v.out;},0);
+  var tc=PRICING_STEPS.reduce(function(s,p){return s+stepCost(p.key,globalSteps[p.key].in,globalSteps[p.key].out);},0);
+  document.getElementById('sf-input').textContent=fT(ti);
+  document.getElementById('sf-output').textContent=fT(to);
+  document.getElementById('sf-cost').textContent=fC(tc);
+  document.getElementById('step-foot').style.display='';
+}
+
+function updateKPIs(){
+  var tf=0,tr=0,td=0,ti=0,to=0,tc=0;
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      tf+=s.files; tr+=s.runs; td+=s.durationMs;
+      ti+=lobTotalIn(s); to+=lobTotalOut(s); tc+=lobCost(s);
+    });
+  });
+  var numModels=Object.keys(_loadedModels).length;
+  document.getElementById('k-files').textContent=fN(tf);
+  document.getElementById('k-runs').textContent=fN(tr);
+  document.getElementById('k-tokens').textContent=fT(ti+to)||'0';
+  document.getElementById('k-time').textContent=fMs(td);
+  document.getElementById('k-cost').textContent=fC(tc);
+  document.getElementById('k-models').textContent=numModels+' / 3';
+  /* Grand total banner */
+  document.getElementById('gt-files').textContent=fN(tf);
+  document.getElementById('gt-runs').textContent=fN(tr);
+  document.getElementById('gt-tokens').textContent=fT(ti+to)||'0';
+  document.getElementById('gt-time').textContent=fMs(td);
+  document.getElementById('gt-cost').textContent=fC(tc);
+}
+
+/* ─── EXPORT CSV ─── */
+function exportCSV(){
+  var rows=[['Stat Model','LOB','Files','HCC Runs','Execution (s)','Input Tokens','Output Tokens','Total Tokens','Est. Cost']];
+  Object.keys(STAT_MODELS).forEach(function(sm){
+    if(!lobStats[sm]) return;
+    LOB_ORDER.concat(Object.keys(lobStats[sm]).filter(function(l){return LOB_ORDER.indexOf(l)===-1;})).forEach(function(lob){
+      if(!lobStats[sm][lob]) return;
+      var s=lobStats[sm][lob];
+      var inp=lobTotalIn(s), out=lobTotalOut(s);
+      rows.push([STAT_MODELS[sm].label, LOB_LABELS[lob]||lob, s.files, s.runs, Math.round(s.durationMs/1000), inp, out, inp+out, fC(lobCost(s))]);
+    });
+  });
+  rows.push([]);
+  rows.push(['Pipeline Step','Model','Calls','Input Tokens','Output Tokens','$/1M In','$/1M Out','Est. Cost']);
+  PRICING_STEPS.forEach(function(p){
+    var g=globalSteps[p.key]||{in:0,out:0,calls:0};
+    rows.push([p.key,p.model,g.calls,g.in,g.out,'$'+p.in,'$'+p.out,fC(stepCost(p.key,g.in,g.out))]);
+  });
+  var blob=new Blob([rows.map(function(r){return r.join(',');}).join('\n')],{type:'text/csv;charset=utf-8;'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='cumulative_agent_cost_'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+
+
+</body></html>
