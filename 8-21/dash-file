@@ -1,0 +1,177 @@
+<dashboard version="1.1" theme="light">
+  <label>Agent Run Analyzer — DR_PROD</label>
+  <description>Self-contained cost/performance view of the DR_PROD_0702 agent batch. Figures baked into searches via makeresults — no index or data upload required. Tokens counted canonically (top-level usage; breakdown sub-totals excluded).</description>
+  <row>
+    <panel>
+      <title>Agent Files</title>
+      <single>
+        <search>
+          <query>| makeresults | eval v=841 | table v</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="colorMode">block</option>
+        <option name="rangeColors">["0x5b4af7","0x5b4af7"]</option>
+      </single>
+    </panel>
+    <panel>
+      <title>LLM Calls</title>
+      <single>
+        <search>
+          <query>| makeresults | eval v=10617 | table v</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </single>
+    </panel>
+    <panel>
+      <title>Total Tokens</title>
+      <single>
+        <search>
+          <query>| makeresults | eval v=55.8 | table v</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="unit">M</option>
+        <option name="drilldown">none</option>
+      </single>
+    </panel>
+    <panel>
+      <title>Execution Time</title>
+      <single>
+        <search>
+          <query>| makeresults | eval v=16.3 | table v</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="unit">h</option>
+        <option name="drilldown">none</option>
+      </single>
+    </panel>
+    <panel>
+      <title>Est. Cost (corrected)</title>
+      <single>
+        <search>
+          <query>| makeresults | eval v=267.38 | table v</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="unit">$</option>
+        <option name="unitPosition">before</option>
+        <option name="drilldown">none</option>
+        <option name="colorMode">block</option>
+        <option name="rangeColors">["0xe8900c","0xe8900c"]</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Model Execution Summary — $$3/1M input, $$15/1M output  (corrected: $$267.38, not $$583.35)</title>
+      <table>
+        <search>
+          <query>| makeresults format=csv data="Model,Files,LLM Calls,Time,Input,Output,Total Tokens,Token Share,Est. Cost
+IP AUTH,163,2497,4.1h,10.2M,2.0M,12.2M,22%,$$60.42
+IP MED/SURG,228,2427,4.4h,11.4M,2.1M,13.5M,24%,$$65.38
+OON,230,3316,4.5h,13.5M,2.5M,16.0M,29%,$$77.94
+OP OTH BH,220,2377,3.3h,12.4M,1.8M,14.2M,25%,$$63.65
+TOTAL,841,10617,16.3h,47.4M,8.3M,55.8M,100%,$$267.38"
+| table Model Files "LLM Calls" Time Input Output "Total Tokens" "Token Share" "Est. Cost"</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="count">10</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Token Share by Model (millions)</title>
+      <chart>
+        <search>
+          <query>| makeresults format=csv data="model,tokens
+OON,16.0
+OP_Oth_BH,14.2
+IP_Med_Surg,13.5
+IP_AUTH,12.2"
+| fields model tokens</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">bar</option>
+        <option name="charting.legend.placement">none</option>
+        <option name="drilldown">none</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>Est. Cost by Model ($)</title>
+      <chart>
+        <search>
+          <query>| makeresults format=csv data="model,cost
+OON,77.94
+IP_Med_Surg,65.38
+OP_Oth_BH,63.65
+IP_AUTH,60.42"
+| fields model cost</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">bar</option>
+        <option name="charting.legend.placement">none</option>
+        <option name="drilldown">none</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Cost by Agent Sub-step</title>
+      <table>
+        <search>
+          <query>| makeresults format=csv data="Agent Sub-step,Files,Total Tokens,Est. Cost
+reimbursement_response,545,48.3M,$$218.81
+recommendation_response,74,7.5M,$$48.58
+correlation_response,75,0,$$0.00
+pattern_response,74,0,$$0.00
+pattern_final,73,0,$$0.00"
+| table "Agent Sub-step" Files "Total Tokens" "Est. Cost"</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Cost by Line of Business</title>
+      <table>
+        <search>
+          <query>| makeresults format=csv data="Line of Business,Files,Total Tokens,Est. Cost
+Medicaid,176,15.2M,$$73.91
+Commercial_Individual,172,12.4M,$$59.35
+Commercial_Local_Group,177,12.4M,$$56.33
+Medicare_GRS,159,8.0M,$$39.84
+Medicare_Indiv,157,7.7M,$$37.95"
+| table "Line of Business" Files "Total Tokens" "Est. Cost"</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <div style="padding:8px 14px;font-size:12px;line-height:1.6">
+          <b>Token methodology.</b> Each agent file logs usage once at the top level
+          (<code>tokens.input</code> / <code>result.tokens.input</code>) and re-lists the same tokens under
+          <code>tokens.breakdown</code>. This dashboard counts only the top-level figure. The original HTML analyzer
+          summed both, inflating the batch to $583.35. Canonical cost for DR_PROD_0702 is <b>$267.38</b>
+          (47.4M input / 8.3M output, 10,617 model calls, 841 of 842 files). This is a self-contained snapshot; the
+          live version (index=agent_runs sourcetype=agent_run) is in the delivered agent_run_dashboard.xml.
+        </div>
+      </html>
+    </panel>
+  </row>
+</dashboard>
