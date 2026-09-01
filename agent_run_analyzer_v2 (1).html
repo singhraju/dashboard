@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cumulative Agent Run Analyzer — DR_PROD (v2)</title>
+<style>
+:root {
+  --ink:#1a1626;--ink-2:#3d3a52;--ground:#f6f5f8;--surface:#ffffff;--surface-2:#f0eef5;
+  --border:#e2e0eb;--muted:#7c7a8a;--accent:#5b4af7;--accent-lt:#ede9fe;
+  --amber:#e8900c;--amber-lt:#fef3c7;--emerald:#0da974;--emerald-lt:#d1fae5;
+  --red:#d41f1f;--red-lt:#fee2e2;
+  --font:'Neue Helvetica','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --mono:'Cascadia Code','Consolas','Courier New',monospace;
+  --radius:8px;--shadow:0 1px 3px rgba(26,22,38,.08),0 4px 16px rgba(26,22,38,.06);
+}
+@media(prefers-color-scheme:dark){:root{
+  --ink:#f0eef8;--ink-2:#b0adca;--ground:#141220;--surface:#1e1b2e;--surface-2:#252238;
+  --border:#2e2b44;--muted:#6b688a;--accent:#7c6bff;--accent-lt:#2d2660;
+  --amber:#f5a623;--amber-lt:#3b2c00;--emerald:#10c97f;--emerald-lt:#063328;
+  --red:#f87171;--red-lt:#3b0d0d;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --ink:#f0eef8;--ink-2:#b0adca;--ground:#141220;--surface:#1e1b2e;--surface-2:#252238;
+  --border:#2e2b44;--muted:#6b688a;--accent:#7c6bff;--accent-lt:#2d2660;
+  --amber:#f5a623;--amber-lt:#3b2c00;--emerald:#10c97f;--emerald-lt:#063328;
+  --red:#f87171;--red-lt:#3b0d0d;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+:root[data-theme="light"]{
+  --ink:#1a1626;--ink-2:#3d3a52;--ground:#f6f5f8;--surface:#ffffff;--surface-2:#f0eef5;
+  --border:#e2e0eb;--muted:#7c7a8a;--accent:#5b4af7;--accent-lt:#ede9fe;
+  --amber:#e8900c;--amber-lt:#fef3c7;--emerald:#0da974;--emerald-lt:#d1fae5;
+  --red:#d41f1f;--red-lt:#fee2e2;
+  --shadow:0 1px 3px rgba(26,22,38,.08),0 4px 16px rgba(26,22,38,.06);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;font-family:var(--font);background:var(--ground);color:var(--ink);font-size:14px;line-height:1.5}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.page{max-width:1320px;margin:0 auto;padding:32px 24px 80px}
+
+.page-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:36px;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:40px;height:40px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand-name{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
+.brand-sub{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;font-weight:600;margin-top:2px}
+.hdr-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{font-size:10px;font-family:var(--mono);color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:3px 8px;border-radius:4px;white-space:nowrap}
+.tag strong{color:var(--ink-2)}
+
+.slabel{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.ppanel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:28px}
+.ptoggle{width:100%;background:none;border:none;cursor:pointer;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--ink);font-family:var(--font);text-align:left}
+.ptoggle-title{font-size:13px;font-weight:800}
+.ptoggle-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.pchevron{transition:transform .2s;color:var(--muted);flex-shrink:0}
+.ptoggle.open .pchevron{transform:rotate(180deg)}
+.pbody{display:none;border-top:1px solid var(--border)}
+.pbody.open{display:block}
+.p2col{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.pnote{padding:12px 20px;font-size:11px;color:var(--muted);line-height:1.7}
+.pnote code{font-family:var(--mono);font-size:10px}
+.pnote strong{color:var(--ink-2)}
+
+.ptbl{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+.ptbl th{padding:8px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);background:var(--surface-2);border-bottom:1px solid var(--border);white-space:nowrap}
+.ptbl th.r{text-align:right}
+.ptbl td{padding:8px 14px;border-bottom:1px solid var(--border);white-space:nowrap}
+.ptbl tr:last-child td{border-bottom:none}
+.ptbl td.r{text-align:right;font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+.ptbl td.rh{text-align:right;font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:700}
+.mchip{display:inline-block;font-size:10px;font-family:var(--mono);font-weight:700;padding:2px 7px;border-radius:3px;background:var(--accent-lt);color:var(--accent)}
+.mchip.nano{background:var(--emerald-lt);color:var(--emerald)}
+.mchip.mini{background:var(--amber-lt);color:var(--amber)}
+.bkey{font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+.newkey{display:inline-block;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:var(--amber-lt);color:var(--amber);margin-left:6px;vertical-align:middle}
+
+.upload-grid{display:block;margin-bottom:24px}
+.drop-zone{border:2px dashed var(--border);border-radius:12px;background:var(--surface);padding:28px 20px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;display:flex;align-items:center;justify-content:center}
+.drop-zone:hover,.drop-zone.dragging{border-color:var(--accent);background:var(--accent-lt)}
+.drop-zone.loaded{padding:14px 16px;border-style:solid;border-color:var(--emerald);background:var(--emerald-lt);text-align:left;cursor:default;justify-content:flex-start}
+.dz-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.drop-zone.loaded .dz-label{color:var(--emerald)}
+.drop-icon{width:36px;height:36px;margin:0 auto 10px;background:var(--accent-lt);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.drop-title{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.drop-sub{font-size:11px;color:var(--muted);line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:8px 18px;border-radius:6px;font-size:12px;font-weight:700;font-family:var(--font);cursor:pointer;transition:background .15s;margin-top:10px}
+.btn:hover{background:#4a39e6}
+.btn-ghost{background:var(--surface);border:1px solid var(--border);color:var(--ink-2);margin-top:6px}
+.btn-ghost:hover{background:var(--surface-2)}
+.btn-sm{padding:5px 12px;font-size:11px;margin-top:4px}
+
+.progress-wrap{display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px}
+.progress-wrap.visible{display:block}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.progress-label{font-size:12px;font-weight:700;color:var(--ink-2)}
+.progress-count{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.progress-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:3px;width:0%;transition:width .25s}
+.ppills{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.mpill{font-size:10px;font-family:var(--mono);font-weight:700;padding:2px 9px;border-radius:4px;background:var(--surface-2);color:var(--muted);border:1px solid var(--border);transition:all .2s}
+.mpill.active{background:var(--accent-lt);color:var(--accent);border-color:var(--accent)}
+.mpill.done{background:var(--emerald-lt);color:var(--emerald);border-color:var(--emerald)}
+
+.kpi-strip{display:none;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.kpi-val{font-size:22px;font-weight:800;letter-spacing:-.5px;font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink);line-height:1}
+.ca{color:var(--accent)}.cb{color:var(--amber)}.cm{color:var(--muted)}.ce{color:var(--emerald)}.cr{color:var(--red)}
+.kpi-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.9px;font-weight:700;margin-top:7px}
+
+.results-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:20px}
+.rtbar{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.rt-title{font-size:13px;font-weight:800;color:var(--ink)}
+.rt-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.icon-btn{display:inline-flex;align-items:center;gap:5px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2);padding:6px 13px;border-radius:5px;font-size:11px;font-weight:700;font-family:var(--font);cursor:pointer;transition:all .15s;white-space:nowrap}
+.icon-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+thead th{background:var(--surface-2);color:var(--muted);padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;border-bottom:1px solid var(--border);white-space:nowrap}
+thead th.r{text-align:right}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:var(--surface-2)}
+td{padding:10px 14px;vertical-align:middle;white-space:nowrap}
+td.r{text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+td.hi{color:var(--ink);font-weight:700}
+td.cost-cell{text-align:right;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--amber)}
+td.warn{text-align:right;font-family:var(--mono);font-size:12px;color:var(--red)}
+tfoot tr{background:var(--surface-2);border-top:2px solid var(--border)}
+tfoot td{padding:10px 14px}
+tfoot td.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:700}
+tfoot td.r{text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink);font-weight:700}
+tfoot td.cost-cell{text-align:right;font-family:var(--mono);font-size:12px;color:var(--amber);font-weight:700}
+
+.mb{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:700}
+.mb-auth{background:#ede9fe;color:#5b4af7}
+.mb-med{background:#e0f2fe;color:#0369a1}
+.mb-oon{background:#d1fae5;color:#0da974}
+.lob-chip{display:inline-block;font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--border)}
+
+.group-row td{background:var(--surface-2);font-size:11px;font-weight:800;color:var(--ink-2);padding:8px 14px;border-top:2px solid var(--border)}
+.section-row td{background:var(--surface-2);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);padding:5px 14px}
+
+.bar-wrap{display:flex;align-items:center;gap:8px;min-width:100px}
+.bar-track{flex:1;height:5px;background:var(--border);border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px}
+.bar-pct{font-size:10px;font-family:var(--mono);color:var(--muted);width:30px;text-align:right}
+
+.grand-total{background:linear-gradient(135deg,var(--accent) 0%,#7c6bff 100%);border-radius:var(--radius);padding:20px 28px;display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px;box-shadow:var(--shadow)}
+.gt-item{text-align:center}
+.gt-val{font-size:26px;font-weight:800;color:#fff;font-family:var(--mono);letter-spacing:-.5px;line-height:1}
+.gt-lbl{font-size:10px;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-top:5px}
+.gt-divider{width:1px;height:48px;background:rgba(255,255,255,.25)}
+
+.dq{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:0 var(--radius) var(--radius) 0;padding:14px 20px;margin-bottom:20px;font-size:12px;line-height:1.8;color:var(--ink-2)}
+.dq strong{color:var(--ink)}
+.dq code{font-family:var(--mono);font-size:11px}
+
+.hidden-input{display:none}
+@media(max-width:900px){.kpi-strip{grid-template-columns:repeat(3,1fr)}.p2col{grid-template-columns:1fr}}
+@media(max-width:480px){.kpi-strip{grid-template-columns:repeat(2,1fr)}.page{padding:20px 14px 60px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="page-header">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M3 11h4l2-6 2 10 2-6 2 3h2" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle cx="17.5" cy="5.5" r="2" fill="#a5f3c8"></circle>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">Cumulative Agent Run Analyzer <span class="newkey">v2</span></div>
+      <div class="brand-sub">DR_PROD · All Stat Models · Cross-Model Cost &amp; Performance</div>
+    </div>
+  </div>
+  <div class="hdr-tags">
+    <span class="tag"><strong>Models</strong> IP AUTH · IP MED/SURG · OON</span>
+    <span class="tag"><strong>LLM</strong> gpt-5.4 · nano · mini</span>
+    <span class="tag"><strong>Period</strong> 202607 · Base 202604</span>
+  </div>
+</header>
+
+<div class="dq">
+  <strong>Changes from v1.</strong>
+  Only <code>agents_results/</code> is counted — <code>payload/</code> inputs and <code>final_result/</code> rows
+  no longer inflate the file count.
+  <code>pattern_response</code> top-level usage is now read and priced (v1 treated pattern files as execution time only).
+  <code>triage_policies</code> and <code>title_anchors</code> were missing from the step map and were silently dropped;
+  both are now priced.
+  <code>pattern_final</code> files are JSON arrays and were being discarded before counting; they now count as files.
+  <code>globalSteps</code> is recomputed from scratch on every render, so re-uploading no longer double-counts the step table.
+  One upload zone replaces three: the stat model is read from the <code>_tutorial-&lt;MODEL&gt;-</code> segment of each
+  filename, so a stat model that isn't in the registry yet registers itself instead of being dropped.
+</div>
+
+<div class="slabel">Pricing Model</div>
+<div class="ppanel">
+  <button class="ptoggle" id="ptoggle" onclick="toggleP()">
+    <div>
+      <div class="ptoggle-title">LLM Pipeline Pricing — Per Breakdown Step</div>
+      <div class="ptoggle-sub" id="ptoggle-sub">&nbsp;</div>
+    </div>
+    <svg class="pchevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <div class="pbody" id="pbody">
+    <div class="p2col">
+      <div><table class="ptbl">
+        <thead><tr><th>Breakdown Step</th><th>Model</th><th class="r">$/1M Input</th><th class="r">$/1M Output</th></tr></thead>
+        <tbody id="p-step-rows"></tbody>
+      </table></div>
+      <div style="border-left:1px solid var(--border)"><table class="ptbl">
+        <thead><tr><th>Model</th><th class="r">$/1M Input</th><th class="r">$/1M Output</th><th class="r">Steps</th></tr></thead>
+        <tbody id="p-model-rows"></tbody>
+      </table></div>
+    </div>
+    <div class="pnote">
+      <strong>Token source:</strong>
+      <code>reimbursement_response_*.json</code> → <code>tokens.breakdown.{step}</code> ·
+      <code>recommendation_response_*.json</code> → <code>result.tokens.breakdown.aggregated</code> ·
+      <code>pattern_response_*.json</code> → top-level <code>tokens.input</code> / <code>tokens.output</code> ·
+      <code>correlation_response</code> and <code>pattern_final</code> report no usage — execution time only.
+      <br><strong>Assumed tiers, confirm with pipeline owners:</strong> <code>triage_policies</code> and
+      <code>title_anchors</code> priced at nano; <code>pattern_analysis</code> priced at full gpt-5.4.
+      Nothing in the JSON records which deployment served each step.
+    </div>
+  </div>
+</div>
+
+<div class="slabel">Step 1 — Upload the batch folder (agents_results is the only folder read)</div>
+<div class="upload-grid">
+  <div>
+    <div class="drop-zone" id="dz-root" ondragover="onDragOver(event)" ondragleave="onDragLeave()" ondrop="onDrop(event)" onclick="triggerPicker()">
+      <div><div class="drop-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 12V3M5.5 6.5L9 3l3.5 3.5M2.5 12v1.5A1.5 1.5 0 004 15h10a1.5 1.5 0 001.5-1.5V12" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="drop-title">Drop the batch folder</div>
+      <div class="drop-sub">e.g. <code style="font-family:var(--mono)">8-21/</code> — every stat model underneath is picked up automatically.<br>Stat model is read from each filename, not the folder name.</div></div>
+    </div>
+    <input type="file" id="fi-root" class="hidden-input" webkitdirectory multiple onchange="handleFiles(this.files)">
+  </div>
+</div>
+
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-header">
+    <span class="progress-label" id="progress-label">Waiting for files…</span>
+    <span class="progress-count" id="progress-count">0 / 0</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="ppills" id="ppills"></div>
+</div>
+
+<div class="kpi-strip" id="kpi-strip">
+  <div class="kpi"><div class="kpi-val ca" id="k-files">0</div><div class="kpi-lbl">Agent Files</div></div>
+  <div class="kpi"><div class="kpi-val" id="k-runs">0</div><div class="kpi-lbl">Runs</div></div>
+  <div class="kpi"><div class="kpi-val cm" id="k-tokens">0</div><div class="kpi-lbl">Total Tokens</div></div>
+  <div class="kpi"><div class="kpi-val cm" id="k-time">0s</div><div class="kpi-lbl">Agent Execution</div></div>
+  <div class="kpi"><div class="kpi-val cb" id="k-cost">$0.00</div><div class="kpi-lbl">Est. Total Cost</div></div>
+  <div class="kpi"><div class="kpi-val cr" id="k-fail">0</div><div class="kpi-lbl">Failed Calls</div></div>
+</div>
+
+<div class="grand-total" id="grand-total">
+  <div class="gt-item"><div class="gt-val" id="gt-files">0</div><div class="gt-lbl">Agent Files</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-runs">0</div><div class="gt-lbl">Runs</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-tokens">0</div><div class="gt-lbl">Total Tokens</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-time">0s</div><div class="gt-lbl">Execution Time</div></div>
+  <div class="gt-divider"></div>
+  <div class="gt-item"><div class="gt-val" id="gt-cost">$0.00</div><div class="gt-lbl">Grand Total Cost</div></div>
+</div>
+
+<div id="results-section" style="display:none">
+
+  <div class="slabel" style="margin-top:8px">Step 2 — Execution &amp; Cost Summary</div>
+
+  <div class="results-wrap">
+    <div class="rtbar">
+      <div><div class="rt-title">Summary by Stat Model &amp; LOB</div>
+      <div class="rt-sub" id="rt-sub1">&nbsp;</div></div>
+      <button class="icon-btn" onclick="exportCSV()">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v5.5M3.5 4.5L6 7 8.5 4.5M1 9v.5A1.5 1.5 0 002.5 11h7A1.5 1.5 0 0011 9.5V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Export CSV
+      </button>
+    </div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Stat Model</th><th>LOB</th><th class="r">Files</th><th class="r">Runs</th><th class="r">Execution Time</th><th class="r">Input Tokens</th><th class="r">Output Tokens</th><th class="r">Total Tokens</th><th class="r" style="min-width:100px">Share</th><th class="r">Est. Cost</th></tr></thead>
+      <tbody id="lob-body"></tbody>
+      <tfoot id="lob-foot" style="display:none"><tr>
+        <td class="lbl" colspan="2">Grand Total</td>
+        <td class="r" id="lf-files">0</td><td class="r" id="lf-runs">0</td><td class="r" id="lf-time">0s</td>
+        <td class="r" id="lf-input">0</td><td class="r" id="lf-output">0</td><td class="r hi" id="lf-total">0</td>
+        <td></td><td class="cost-cell" id="lf-cost">$0.00</td>
+      </tr></tfoot>
+    </table></div>
+  </div>
+
+  <div class="results-wrap">
+    <div class="rtbar"><div><div class="rt-title">Cost Breakdown by Pipeline Step</div>
+    <div class="rt-sub">Aggregated across all stat models and LOBs</div></div></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Pipeline Step</th><th>Model</th><th class="r">Calls</th><th class="r">Input Tokens</th><th class="r">Output Tokens</th><th class="r">$/1M In</th><th class="r">$/1M Out</th><th class="r">Est. Cost</th></tr></thead>
+      <tbody id="step-body"></tbody>
+      <tfoot id="step-foot" style="display:none"><tr>
+        <td class="lbl" colspan="3">Total</td>
+        <td class="r" id="sf-input">0</td><td class="r" id="sf-output">0</td>
+        <td colspan="2"></td><td class="cost-cell" id="sf-cost">$0.00</td>
+      </tr></tfoot>
+    </table></div>
+  </div>
+
+  <div class="results-wrap">
+    <div class="rtbar"><div><div class="rt-title">Cost by Stat Model</div>
+    <div class="rt-sub">Side-by-side comparison of IP AUTH vs IP MED/SURG vs OON</div></div></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Stat Model</th><th class="r">Files</th><th class="r">Runs</th><th class="r">Execution Time</th><th class="r">Input Tokens</th><th class="r">Output Tokens</th><th class="r">Total Tokens</th><th class="r" style="min-width:100px">Share</th><th class="r">Est. Cost</th></tr></thead>
+      <tbody id="model-body"></tbody>
+      <tfoot id="model-foot" style="display:none"><tr>
+        <td class="lbl">Total</td><td class="r" id="f-files">0</td><td class="r" id="f-runs">0</td><td class="r" id="f-time">0s</td>
+        <td class="r" id="f-input">0</td><td class="r" id="f-output">0</td><td class="r hi" id="f-total">0</td>
+        <td></td><td class="cost-cell" id="f-cost">$0.00</td>
+      </tr></tfoot>
+    </table></div>
+  </div>
+
+  <div class="results-wrap">
+    <div class="rtbar"><div><div class="rt-title">Data Quality</div>
+    <div class="rt-sub">Files that produced no usable usage figures</div></div></div>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Agent Sub-step</th><th class="r">Files</th><th class="r">Failed Calls</th><th class="r">No Usage Reported</th><th class="r">Total Tokens</th><th class="r">Est. Cost</th></tr></thead>
+      <tbody id="dq-body"></tbody>
+    </table></div>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+var FULL={model:'gpt-5.4',in:2.50,out:15.00,cls:''};
+var NANO={model:'gpt-5.4-nano',in:0.20,out:1.25,cls:'nano'};
+var MINI={model:'gpt-5.4-mini',in:0.75,out:4.50,cls:'mini'};
+
+var PRICING_STEPS=[
+  {key:'search_keywords',        p:FULL},
+  {key:'triage_policies',        p:NANO, added:true},
+  {key:'extract_rules_primary',  p:NANO},
+  {key:'extract_rules_retry',    p:MINI},
+  {key:'relevance_judge',        p:NANO},
+  {key:'title_anchors',          p:NANO, added:true},
+  {key:'dynamic_columns',        p:FULL},
+  {key:'cell_summarization',     p:FULL},
+  {key:'elevance_summary',       p:FULL},
+  {key:'policy_recommendations', p:FULL},
+  {key:'validate_recommendation',p:FULL},
+  {key:'pattern_analysis',       p:FULL, added:true}
+];
+
+var KEY_MAP={
+  'search_keywords':'search_keywords',
+  'triage_policies':'triage_policies',
+  'extract_rules':'extract_rules_primary',
+  'extract_rules_retry':'extract_rules_retry',
+  'relevance_judge':'relevance_judge',
+  'relevance_checks':'relevance_judge',
+  'title_anchors':'title_anchors',
+  'dynamic_columns':'dynamic_columns',
+  'cell_summarization':'cell_summarization',
+  'elevance_summary':'elevance_summary',
+  'policy_recommendations':'policy_recommendations',
+  'recommendations':'policy_recommendations',
+  'validate_recommendation':'validate_recommendation'
+};
+
+var PRICE={};
+PRICING_STEPS.forEach(function(s){PRICE[s.key]=s.p;});
+
+var STAT_MODELS={
+  'IP_AUTH':    {label:'IP AUTH',     cls:'mb-auth', color:'#5b4af7'},
+  'IP_Med_Surg':{label:'IP MED/SURG', cls:'mb-med',  color:'#0369a1'},
+  'OON':        {label:'OON',         cls:'mb-oon',  color:'#0da974'}
+};
+/* filename spellings -> registry key */
+var MODEL_ALIAS={'IP_AUTH':'IP_AUTH','IP_MED_SURG':'IP_Med_Surg','IP_Med_Surg':'IP_Med_Surg',
+  'IP_Med_surg':'IP_Med_Surg','OON':'OON','OP_OTH_BH':'OP_Oth_BH','OP_Oth_BH':'OP_Oth_BH'};
+var SPARE_COLORS=['#b45309','#7c3aed','#be185d','#0f766e','#a16207'];
+var _modelOrder=[];
+
+/* Stat model comes from the filename segment after _tutorial-, falling back to
+   the folder path. Unknown models register themselves so a new stat model in a
+   future drop appears without a code change. */
+function resolveModel(fname,relPath){
+  var raw=null;
+  var m=fname.split('_tutorial-')[1];
+  if(m){var seg=m.replace('.json','').split('-'); if(seg.length)raw=seg[0];}
+  if(!raw&&relPath){
+    var parts=relPath.replace(/\\/g,'/').split('/');
+    var i=parts.indexOf('agents_results');
+    if(i>1)raw=parts[i-2];
+  }
+  if(!raw)return null;
+  var key=MODEL_ALIAS[raw]||raw;
+  if(!STAT_MODELS[key]){
+    STAT_MODELS[key]={label:key.replace(/_/g,' '),cls:'',
+      color:SPARE_COLORS[Object.keys(STAT_MODELS).length%SPARE_COLORS.length]};
+  }
+  if(_modelOrder.indexOf(key)===-1)_modelOrder.push(key);
+  return key;
+}
+function modelKeys(){
+  return _modelOrder.length?_modelOrder:Object.keys(STAT_MODELS);
+}
+var LOB_ORDER=['Commercial_Individual','Commercial_Local_Group','Medicaid','Medicare_Indiv','Medicare_GRS'];
+var LOB_LABELS={'Commercial_Individual':'Commercial Individual','Commercial_Local_Group':'Commercial Local Group',
+  'Medicaid':'Medicaid','Medicare_Indiv':'Medicare Indiv','Medicare_GRS':'Medicare GRS'};
+
+var SUBSTEPS=['reimbursement_response','recommendation_response','correlation_response','pattern_response','pattern_final'];
+
+var lobStats={}, globalSteps={}, dq={}, runSets={};
+
+function initStep(){var o={};PRICING_STEPS.forEach(function(s){o[s.key]={in:0,out:0,calls:0};});return o;}
+function initDQ(){var o={};SUBSTEPS.forEach(function(s){o[s]={files:0,failed:0,nousage:0,in:0,out:0,cost:0};});return o;}
+function rebuildGlobals(){
+  globalSteps=initStep(); dq=initDQ();
+  Object.keys(lobStats).forEach(function(sm){
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      Object.keys(s.steps).forEach(function(k){
+        globalSteps[k].in+=s.steps[k].in; globalSteps[k].out+=s.steps[k].out; globalSteps[k].calls+=s.steps[k].calls;
+      });
+      Object.keys(s.dq).forEach(function(k){
+        dq[k].files+=s.dq[k].files; dq[k].failed+=s.dq[k].failed; dq[k].nousage+=s.dq[k].nousage;
+        dq[k].in+=s.dq[k].in; dq[k].out+=s.dq[k].out; dq[k].cost+=s.dq[k].cost;
+      });
+    });
+  });
+}
+
+globalSteps=initStep(); dq=initDQ();
+
+function ensureLOB(sm,lob){
+  if(!lobStats[sm])lobStats[sm]={};
+  if(!lobStats[sm][lob])lobStats[sm][lob]={files:0,runs:{},durationMs:0,steps:initStep(),dq:initDQ()};
+  return lobStats[sm][lob];
+}
+
+(function(){
+  document.getElementById('p-step-rows').innerHTML=PRICING_STEPS.map(function(s){
+    return '<tr><td class="bkey">'+s.key+(s.added?'<span class="newkey">new</span>':'')+'</td>'+
+      '<td><span class="mchip '+s.p.cls+'">'+s.p.model+'</span></td>'+
+      '<td class="r">$'+s.p.in.toFixed(2)+'</td><td class="rh">$'+s.p.out.toFixed(2)+'</td></tr>';
+  }).join('');
+  var byModel={};
+  PRICING_STEPS.forEach(function(s){
+    if(!byModel[s.p.model])byModel[s.p.model]={p:s.p,count:0};
+    byModel[s.p.model].count++;
+  });
+  document.getElementById('p-model-rows').innerHTML=Object.keys(byModel).map(function(m){
+    var d=byModel[m];
+    return '<tr><td><span class="mchip '+d.p.cls+'">'+m+'</span></td><td class="r">$'+d.p.in.toFixed(2)+
+      '</td><td class="rh">$'+d.p.out.toFixed(2)+'</td><td class="r">'+d.count+'</td></tr>';
+  }).join('');
+  var bi=PRICING_STEPS.reduce(function(a,s){return a+s.p.in;},0)/PRICING_STEPS.length;
+  var bo=PRICING_STEPS.reduce(function(a,s){return a+s.p.out;},0)/PRICING_STEPS.length;
+  document.getElementById('ptoggle-sub').textContent=
+    PRICING_STEPS.length+' steps · blended $'+bi.toFixed(2)+'/1M in · $'+bo.toFixed(2)+'/1M out';
+})();
+
+function toggleP(){
+  var b=document.getElementById('pbody'),t=document.getElementById('ptoggle');
+  b.classList.toggle('open'); t.classList.toggle('open',b.classList.contains('open'));
+}
+
+function triggerPicker(){document.getElementById('fi-root').click();}
+function onDragOver(e){e.preventDefault();document.getElementById('dz-root').classList.add('dragging');}
+function onDragLeave(){document.getElementById('dz-root').classList.remove('dragging');}
+function onDrop(e){e.preventDefault();document.getElementById('dz-root').classList.remove('dragging');handleFiles(e.dataTransfer.files);}
+
+var _totalFiles=0, _doneFiles=0;
+
+function handleFiles(fileList){
+  var files=Array.from(fileList).filter(function(f){
+    var p=(f.webkitRelativePath||f.name).replace(/\\/g,'/');
+    return p.indexOf('agents_results/')!==-1 && f.name.endsWith('.json');
+  });
+  if(!files.length){alert('No agents_results/ JSON files found.\nSelect the batch folder (the one containing the stat model folders).');return;}
+
+  /* full reset - one upload is the whole batch */
+  lobStats={}; runSets={}; _modelOrder=[];
+  globalSteps=initStep(); dq=initDQ();
+  _totalFiles=files.length; _doneFiles=0;
+
+  var dz=document.getElementById('dz-root');
+  dz.classList.add('loaded'); dz.onclick=null;
+  dz.innerHTML='<div style="display:flex;align-items:center;gap:10px;width:100%">'+
+    '<svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11.5l5 5 11-11" stroke="var(--emerald)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
+    '<div><div class="drop-title" style="font-size:13px">'+files.length+' agent files</div>'+
+    '<div class="drop-sub" id="dz-models" style="font-size:11px;margin:0">reading stat models\u2026</div></div>'+
+    '<button class="btn btn-ghost btn-sm" style="margin-top:0;margin-left:auto" onclick="event.stopPropagation();document.getElementById(\'fi-root\').click()">Change</button></div>';
+
+  document.getElementById('progress-wrap').classList.add('visible');
+  document.getElementById('ppills').innerHTML='';
+  processFiles(files);
+}
+
+function processFiles(files){
+  var total=files.length,done=0,BATCH=20;
+  function batch(start){
+    var end=Math.min(start+BATCH,total),pend=end-start;
+    if(!pend){onAllDone();return;}
+    for(var i=start;i<end;i++){
+      (function(file){
+        var r=new FileReader();
+        r.onload=function(ev){
+          try{parseFile(ev.target.result,file.name,file.webkitRelativePath||'');}catch(e){}
+          done++;_doneFiles++;tick();
+          if(!--pend){done<total?setTimeout(function(){batch(done);},0):onAllDone();}
+        };
+        r.onerror=function(){done++;_doneFiles++;if(!--pend){done<total?setTimeout(function(){batch(done);},0):onAllDone();}};
+        r.readAsText(file);
+      })(files[i]);
+    }
+  }
+  batch(0);
+}
+
+function renderPills(){
+  var el=document.getElementById('ppills');
+  el.innerHTML=modelKeys().map(function(sm){
+    var n=0;
+    if(lobStats[sm])Object.keys(lobStats[sm]).forEach(function(l){n+=lobStats[sm][l].files;});
+    return '<span class="mpill done">'+STAT_MODELS[sm].label+' \u00b7 '+n+'</span>';
+  }).join('');
+  var dm=document.getElementById('dz-models');
+  if(dm)dm.innerHTML=modelKeys().map(function(sm){
+    return '<span class="mb '+STAT_MODELS[sm].cls+'" style="'+(STAT_MODELS[sm].cls?'':'background:var(--surface-2);color:'+STAT_MODELS[sm].color)+'">'+STAT_MODELS[sm].label+'</span>';
+  }).join(' ');
+}
+
+function parseLOB(fname){
+  var base=fname.replace(/^(reimbursement|recommendation|correlation|pattern)_(response|final)_/,'').replace('.json','');
+  var parts=base.split('-');
+  return parts.length>=3?parts[2]:'';
+}
+function subStepOf(fname){
+  for(var i=0;i<SUBSTEPS.length;i++){if(fname.indexOf(SUBSTEPS[i])===0)return SUBSTEPS[i];}
+  return 'other';
+}
+function runIdOf(relPath){
+  var m=(relPath||'').match(/(\d{8}_\d{4})/);
+  return m?m[1]:null;
+}
+function addStep(s,pk,inp,out,calls){
+  if(!s.steps[pk])return;
+  s.steps[pk].in+=inp; s.steps[pk].out+=out; s.steps[pk].calls+=calls;
+}
+function isFailure(o){
+  if(!o||typeof o!=='object')return false;
+  var k=Object.keys(o);
+  return (k.length===1&&k[0]==='detail')||('error_type' in o);
+}
+
+function parseFile(text,fname,relPath){
+  var obj;
+  try{obj=JSON.parse(text);}catch(e){return;}
+  var lob=parseLOB(fname);
+  if(!lob)return;
+  var sm=resolveModel(fname,relPath);
+  if(!sm)return;
+  var step=subStepOf(fname);
+  var s=ensureLOB(sm,lob);
+
+  s.files++;
+  s.dq[step]&&(s.dq[step].files++);
+  var rid=runIdOf(relPath);
+  if(rid)s.runs[rid]=1;
+
+  if(Array.isArray(obj)){return;}                 /* pattern_final: counted, no usage */
+  if(!obj||typeof obj!=='object')return;
+  if(isFailure(obj)){s.dq[step]&&s.dq[step].failed++;return;}
+
+  if(step==='reimbursement_response'&&obj.tokens){
+    var bd=obj.tokens.breakdown||{},any=false;
+    Object.keys(bd).forEach(function(fk){
+      var pk=KEY_MAP[fk];
+      var d=bd[fk];
+      if(!d||typeof d!=='object')return;
+      if(!pk){console.warn('unmapped breakdown step: '+fk);return;}
+      var inp=d.input||0,out=d.output||0,calls=d.calls||0;
+      addStep(s,pk,inp,out,calls);
+      s.dq[step].in+=inp; s.dq[step].out+=out;
+      s.dq[step].cost+=(inp/1e6)*PRICE[pk].in+(out/1e6)*PRICE[pk].out;
+      any=true;
+    });
+    if(!any)s.dq[step].nousage++;
+    if(obj.execution&&obj.execution.duration_ms)s.durationMs+=obj.execution.duration_ms;
+  }
+  else if(step==='recommendation_response'){
+    var agg=(obj.result&&obj.result.tokens&&obj.result.tokens.breakdown&&obj.result.tokens.breakdown.aggregated)||null;
+    if(agg){
+      Object.keys(agg).forEach(function(fk){
+        var pk=KEY_MAP[fk],d=agg[fk];
+        if(!d||typeof d!=='object')return;
+        if(!pk){console.warn('unmapped aggregated step: '+fk);return;}
+        var inp=d.input||0,out=d.output||0,calls=d.calls||0;
+        addStep(s,pk,inp,out,calls);
+        s.dq[step].in+=inp; s.dq[step].out+=out;
+        s.dq[step].cost+=(inp/1e6)*PRICE[pk].in+(out/1e6)*PRICE[pk].out;
+      });
+      if(obj.result.execution&&obj.result.execution.duration_ms)s.durationMs+=obj.result.execution.duration_ms;
+      else if(obj.execution_time)s.durationMs+=obj.execution_time*1000;
+    } else {
+      s.dq[step].nousage++;                        /* new success/output/metadata shape */
+      if(obj.execution_time)s.durationMs+=obj.execution_time*1000;
+    }
+  }
+  else if(step==='pattern_response'){
+    var t=obj.tokens;
+    if(t&&(t.input||t.output)){
+      var pi=t.input||0,po=t.output||0;
+      addStep(s,'pattern_analysis',pi,po,1);
+      s.dq[step].in+=pi; s.dq[step].out+=po;
+      s.dq[step].cost+=(pi/1e6)*PRICE['pattern_analysis'].in+(po/1e6)*PRICE['pattern_analysis'].out;
+    } else { s.dq[step].nousage++; }
+    if(obj.execution&&obj.execution.duration_ms)s.durationMs+=obj.execution.duration_ms;
+  }
+  else if(step==='correlation_response'){
+    var found=false;
+    ['states','providers','drgs','procs'].forEach(function(sec){
+      var sect=obj[sec];
+      if(!sect||typeof sect!=='object')return;
+      Object.keys(sect).forEach(function(k){
+        var e=sect[k];
+        if(!e||typeof e!=='object')return;
+        var t=e.tokens||{};
+        var inp=t.input||0,out=t.output||0;
+        if(inp||out){
+          addStep(s,'pattern_analysis',inp,out,1);
+          s.dq[step].in+=inp; s.dq[step].out+=out;
+          s.dq[step].cost+=(inp/1e6)*PRICE['pattern_analysis'].in+(out/1e6)*PRICE['pattern_analysis'].out;
+          found=true;
+        }
+        if(e.execution&&e.execution.duration_ms)s.durationMs+=e.execution.duration_ms;
+      });
+    });
+    if(!found)s.dq[step].nousage++;
+  }
+  else if(obj.execution&&obj.execution.duration_ms){
+    s.durationMs+=obj.execution.duration_ms;
+  }
+}
+
+var _lastRender=0;
+function tick(){
+  var pct=_totalFiles>0?Math.round(_doneFiles/_totalFiles*100):0;
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-count').textContent=_doneFiles+' / '+_totalFiles;
+  document.getElementById('progress-label').textContent='Processing… '+pct+'%';
+  if(Date.now()-_lastRender>300){_lastRender=Date.now();rebuildGlobals();renderAll();renderPills();}
+}
+
+function onAllDone(){
+  document.getElementById('progress-label').textContent=
+    'Complete — '+_doneFiles+' agent files across '+modelKeys().length+' stat models';
+  document.getElementById('progress-fill').style.width='100%';
+  rebuildGlobals(); renderAll(); renderPills(); updateKPIs();
+  document.getElementById('results-section').style.display='block';
+  document.getElementById('kpi-strip').style.display='grid';
+  document.getElementById('grand-total').style.display='flex';
+}
+
+function stepCost(pk,inp,out){var p=PRICE[pk];return p?(inp/1e6)*p.in+(out/1e6)*p.out:0;}
+function lobIn(s){return Object.keys(s.steps).reduce(function(a,k){return a+s.steps[k].in;},0);}
+function lobOut(s){return Object.keys(s.steps).reduce(function(a,k){return a+s.steps[k].out;},0);}
+function lobCost(s){return Object.keys(s.steps).reduce(function(a,k){return a+stepCost(k,s.steps[k].in,s.steps[k].out);},0);}
+function lobRuns(s){return Object.keys(s.runs).length;}
+
+function fN(n){return n.toLocaleString();}
+function fMs(ms){var s=Math.round(ms/1000),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sc=s%60;return h>0?h+'h '+m+'m':m>0?m+'m '+sc+'s':sc+'s';}
+function fT(n){if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return String(n);}
+function fC(c){return '$'+c.toFixed(2);}
+
+function grandTotals(){
+  var t={files:0,runs:0,dur:0,in:0,out:0,cost:0};
+  modelKeys().forEach(function(sm){
+    if(!lobStats[sm])return;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      t.files+=s.files; t.runs+=lobRuns(s); t.dur+=s.durationMs;
+      t.in+=lobIn(s); t.out+=lobOut(s); t.cost+=lobCost(s);
+    });
+  });
+  return t;
+}
+
+function renderAll(){renderLOBTable();renderModelTable();renderStepTable();renderDQTable();}
+
+function renderLOBTable(){
+  var G=grandTotals(),grandTok=G.in+G.out,html='';
+  modelKeys().forEach(function(sm){
+    if(!lobStats[sm])return;
+    var cfg=STAT_MODELS[sm],keys=Object.keys(lobStats[sm]);
+    if(!keys.length)return;
+    var f=0,r=0,d=0,c=0;
+    keys.forEach(function(lob){var s=lobStats[sm][lob];f+=s.files;r+=lobRuns(s);d+=s.durationMs;c+=lobCost(s);});
+    html+='<tr class="group-row"><td colspan="10"><span class="mb '+cfg.cls+'">'+cfg.label+'</span>'+
+      ' &nbsp; <span style="font-size:10px;font-weight:400;color:var(--muted)">'+f+' files · '+r+' runs · '+fMs(d)+' · '+fC(c)+'</span></td></tr>';
+    LOB_ORDER.concat(keys.filter(function(l){return LOB_ORDER.indexOf(l)===-1;})).forEach(function(lob){
+      if(!lobStats[sm][lob])return;
+      var s=lobStats[sm][lob],inp=lobIn(s),out=lobOut(s),tok=inp+out;
+      var pct=grandTok>0?Math.round(tok/grandTok*100):0;
+      html+='<tr><td></td><td><span class="lob-chip">'+(LOB_LABELS[lob]||lob)+'</span></td>'+
+        '<td class="r">'+fN(s.files)+'</td><td class="r">'+fN(lobRuns(s))+'</td><td class="r">'+fMs(s.durationMs)+'</td>'+
+        '<td class="r">'+fT(inp)+'</td><td class="r">'+fT(out)+'</td><td class="r hi">'+fT(tok)+'</td>'+
+        '<td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+cfg.color+'"></div></div><span class="bar-pct">'+pct+'%</span></div></td>'+
+        '<td class="cost-cell">'+fC(lobCost(s))+'</td></tr>';
+    });
+  });
+  document.getElementById('lob-body').innerHTML=html;
+  document.getElementById('lf-files').textContent=fN(G.files);
+  document.getElementById('lf-runs').textContent=fN(G.runs);
+  document.getElementById('lf-time').textContent=fMs(G.dur);
+  document.getElementById('lf-input').textContent=fT(G.in);
+  document.getElementById('lf-output').textContent=fT(G.out);
+  document.getElementById('lf-total').textContent=fT(G.in+G.out);
+  document.getElementById('lf-cost').textContent=fC(G.cost);
+  document.getElementById('lob-foot').style.display='';
+  var d=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  document.getElementById('rt-sub1').textContent='Generated '+d+' · agents_results only · reimbursement + recommendation + pattern usage';
+}
+
+function renderModelTable(){
+  var G=grandTotals(),grandTok=G.in+G.out;
+  document.getElementById('model-body').innerHTML=modelKeys().map(function(sm){
+    if(!lobStats[sm]||!Object.keys(lobStats[sm]).length)return '';
+    var cfg=STAT_MODELS[sm],f=0,r=0,d=0,inp=0,out=0,c=0;
+    Object.keys(lobStats[sm]).forEach(function(lob){
+      var s=lobStats[sm][lob];
+      f+=s.files;r+=lobRuns(s);d+=s.durationMs;inp+=lobIn(s);out+=lobOut(s);c+=lobCost(s);
+    });
+    var tok=inp+out,pct=grandTok>0?Math.round(tok/grandTok*100):0;
+    return '<tr><td><span class="mb '+cfg.cls+'">'+cfg.label+'</span></td>'+
+      '<td class="r">'+fN(f)+'</td><td class="r">'+fN(r)+'</td><td class="r">'+fMs(d)+'</td>'+
+      '<td class="r">'+fT(inp)+'</td><td class="r">'+fT(out)+'</td><td class="r hi">'+fT(tok)+'</td>'+
+      '<td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+cfg.color+'"></div></div><span class="bar-pct">'+pct+'%</span></div></td>'+
+      '<td class="cost-cell">'+fC(c)+'</td></tr>';
+  }).join('');
+  document.getElementById('f-files').textContent=fN(G.files);
+  document.getElementById('f-runs').textContent=fN(G.runs);
+  document.getElementById('f-time').textContent=fMs(G.dur);
+  document.getElementById('f-input').textContent=fT(G.in);
+  document.getElementById('f-output').textContent=fT(G.out);
+  document.getElementById('f-total').textContent=fT(G.in+G.out);
+  document.getElementById('f-cost').textContent=fC(G.cost);
+  document.getElementById('model-foot').style.display='';
+}
+
+function renderStepTable(){
+  var html='',last=null;
+  PRICING_STEPS.forEach(function(st){
+    var g=globalSteps[st.key]||{in:0,out:0,calls:0};
+    if(st.p.model!==last){html+='<tr class="section-row"><td colspan="8">'+st.p.model+'</td></tr>';last=st.p.model;}
+    html+='<tr><td class="bkey">'+st.key+(st.added?'<span class="newkey">new</span>':'')+'</td>'+
+      '<td><span class="mchip '+st.p.cls+'">'+st.p.model+'</span></td>'+
+      '<td class="r">'+fN(g.calls)+'</td><td class="r">'+fT(g.in)+'</td><td class="r">'+fT(g.out)+'</td>'+
+      '<td class="r">$'+st.p.in.toFixed(2)+'</td><td class="r">$'+st.p.out.toFixed(2)+'</td>'+
+      '<td class="cost-cell">'+fC(stepCost(st.key,g.in,g.out))+'</td></tr>';
+  });
+  document.getElementById('step-body').innerHTML=html;
+  var ti=0,to=0,tc=0;
+  PRICING_STEPS.forEach(function(st){
+    var g=globalSteps[st.key];ti+=g.in;to+=g.out;tc+=stepCost(st.key,g.in,g.out);
+  });
+  document.getElementById('sf-input').textContent=fT(ti);
+  document.getElementById('sf-output').textContent=fT(to);
+  document.getElementById('sf-cost').textContent=fC(tc);
+  document.getElementById('step-foot').style.display='';
+}
+
+function renderDQTable(){
+  document.getElementById('dq-body').innerHTML=SUBSTEPS.map(function(k){
+    var d=dq[k];
+    return '<tr><td class="bkey">'+k+'</td><td class="r">'+fN(d.files)+'</td>'+
+      '<td class="'+(d.failed?'warn':'r')+'">'+fN(d.failed)+'</td>'+
+      '<td class="'+(d.nousage?'warn':'r')+'">'+fN(d.nousage)+'</td>'+
+      '<td class="r">'+fT(d.in+d.out)+'</td><td class="cost-cell">'+fC(d.cost)+'</td></tr>';
+  }).join('');
+}
+
+function updateKPIs(){
+  var G=grandTotals();
+  var fail=SUBSTEPS.reduce(function(a,k){return a+dq[k].failed;},0);
+  document.getElementById('k-files').textContent=fN(G.files);
+  document.getElementById('k-runs').textContent=fN(G.runs);
+  document.getElementById('k-tokens').textContent=fT(G.in+G.out);
+  document.getElementById('k-time').textContent=fMs(G.dur);
+  document.getElementById('k-cost').textContent=fC(G.cost);
+  document.getElementById('k-fail').textContent=fN(fail);
+  document.getElementById('gt-files').textContent=fN(G.files);
+  document.getElementById('gt-runs').textContent=fN(G.runs);
+  document.getElementById('gt-tokens').textContent=fT(G.in+G.out);
+  document.getElementById('gt-time').textContent=fMs(G.dur);
+  document.getElementById('gt-cost').textContent=fC(G.cost);
+}
+
+function exportCSV(){
+  var rows=[['Stat Model','LOB','Files','Runs','Execution (s)','Input Tokens','Output Tokens','Total Tokens','Est. Cost']];
+  modelKeys().forEach(function(sm){
+    if(!lobStats[sm])return;
+    LOB_ORDER.concat(Object.keys(lobStats[sm]).filter(function(l){return LOB_ORDER.indexOf(l)===-1;})).forEach(function(lob){
+      if(!lobStats[sm][lob])return;
+      var s=lobStats[sm][lob],inp=lobIn(s),out=lobOut(s);
+      rows.push([STAT_MODELS[sm].label,LOB_LABELS[lob]||lob,s.files,lobRuns(s),Math.round(s.durationMs/1000),inp,out,inp+out,fC(lobCost(s))]);
+    });
+  });
+  rows.push([]);
+  rows.push(['Pipeline Step','Model','Calls','Input Tokens','Output Tokens','$/1M In','$/1M Out','Est. Cost']);
+  PRICING_STEPS.forEach(function(st){
+    var g=globalSteps[st.key];
+    rows.push([st.key,st.p.model,g.calls,g.in,g.out,'$'+st.p.in,'$'+st.p.out,fC(stepCost(st.key,g.in,g.out))]);
+  });
+  rows.push([]);
+  rows.push(['Agent Sub-step','Files','Failed Calls','No Usage Reported','Total Tokens','Est. Cost']);
+  SUBSTEPS.forEach(function(k){
+    var d=dq[k];rows.push([k,d.files,d.failed,d.nousage,d.in+d.out,fC(d.cost)]);
+  });
+  var blob=new Blob([rows.map(function(r){return r.join(',');}).join('\n')],{type:'text/csv;charset=utf-8;'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='agent_cost_v2_'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>
